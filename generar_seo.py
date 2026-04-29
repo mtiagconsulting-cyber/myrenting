@@ -314,7 +314,7 @@ def main():
         modelos[key].append(o)
 
     # Filtrar modelos con suficientes ofertas (mínimo 3)
-    modelos_validos = {k: v for k, v in modelos.items() if len(v) >= 3}
+    modelos_validos = {k: v for k, v in modelos.items() if len(v) >= 1}
     print(f"Modelos con 3+ ofertas: {len(modelos_validos)}")
 
     # Generar páginas
