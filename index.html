@@ -1009,6 +1009,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const fuelBadges  = [...m.fuels].map(f => `<span class="fuel-badge">${f}</span>`).join('');
     const count       = m.offers.length;
     const keySafe     = m.key.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    const slugKey     = 'renting-' + m.name.toLowerCase()
+      .replace(/[áàä]/g,'a').replace(/[éèë]/g,'e')
+      .replace(/[íìï]/g,'i').replace(/[óòö]/g,'o').replace(/[úùü]/g,'u')
+      .replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
     return `
     <div class="model-card">
       <div class="model-img">
@@ -1025,7 +1029,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="model-footer">
           <span class="offer-count">${count} oferta${count !== 1 ? 's' : ''}</span>
-          <button class="btn-comparar" onclick="handleComparar('${keySafe}')">Ver comparativa →</button>
+          <a href="/renting-${slugKey}.html" class="btn-comparar" style="text-decoration:none;display:inline-block;text-align:center;" aria-label="Ver página de renting ${m.name}">Ver página →</a>
+          <button class="btn-comparar" onclick="handleComparar('${keySafe}')" style="margin-left:6px;">Comparar →</button>
         </div>
       </div>
     </div>`;
