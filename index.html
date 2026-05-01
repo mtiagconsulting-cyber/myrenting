@@ -313,12 +313,25 @@
     .model-footer { display: flex; align-items: center; justify-content: space-between; }
     .offer-count { font-size: .78rem; color: var(--ink-4); font-weight: 500; }
     .btn-comparar {
-      background: var(--ink); color: #fff; border: none;
+      background: var(--accent); color: #fff; border: none;
       padding: 9px 16px; border-radius: var(--radius-sm);
       font-size: .82rem; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;
-      cursor: pointer; transition: background .15s;
+      cursor: pointer; transition: background .15s, transform .1s, box-shadow .15s;
+      box-shadow: 0 2px 8px rgba(232,56,13,.3);
+      text-decoration: none; display: inline-block; text-align: center;
     }
-    .btn-comparar:hover { background: var(--accent); }
+    .btn-comparar:hover { background: var(--accent-2); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(232,56,13,.4); }
+    /* Gestora badge sobre imagen */
+    .card-gestora-badge {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(17,19,24,.65); backdrop-filter: blur(6px);
+      color: rgba(255,255,255,.9); font-size: .65rem; font-weight: 700;
+      padding: 3px 8px; border-radius: 6px; pointer-events: none;
+    }
+    /* Precio más dominante */
+    .price-amount { font-size: 2.1rem; font-weight: 800; color: var(--accent); letter-spacing: -1.5px; line-height: 1; }
+    /* Footer tarjeta */
+    .model-footer { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 
     /* ── NO RESULTS ── */
     .no-results { text-align: center; padding: 72px 20px; color: var(--ink-4); grid-column: 1/-1; }
@@ -618,21 +631,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="search-box">
       <div class="search-box-label">Buscar ofertas</div>
       <div class="filters-grid">
-        <div class="filter-group" style="grid-column: span 2">
-          <label>Marca o modelo</label>
-          <input type="text" id="search-text" placeholder="Ej: Seat Arona, BMW Serie 1, Toyota...">
-        </div>
+
         <div class="filter-group">
-          <label>Cuota máxima</label>
-          <select id="filter-cuota">
-            <option value="">Cualquier cuota</option>
-            <option value="200">Hasta 200 €/mes</option>
-            <option value="300">Hasta 300 €/mes</option>
-            <option value="400">Hasta 400 €/mes</option>
-            <option value="500">Hasta 500 €/mes</option>
-            <option value="750">Hasta 750 €/mes</option>
+          <label>Marca</label>
+          <select id="filter-make" onchange="onMakeChange()">
+            <option value="">Todas las marcas</option>
           </select>
         </div>
+
+        <div class="filter-group">
+          <label>Modelo</label>
+          <select id="filter-model" onchange="applyFilters()">
+            <option value="">Todos los modelos</option>
+          </select>
+        </div>
+
+        <div class="filter-group" style="grid-column: span 2;">
+          <label>
+            Precio máximo:
+            <strong id="slider-label" style="color:var(--accent)">Cualquier precio</strong>
+          </label>
+          <input type="range" id="filter-cuota-slider" min="150" max="1500" step="25" value="1500"
+                 style="width:100%; accent-color:var(--accent); cursor:pointer; height:4px;">
+          <input type="hidden" id="filter-cuota" value="">
+        </div>
+
         <div class="filter-group">
           <label>Combustible</label>
           <select id="filter-combustible">
@@ -659,6 +682,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="Arval">Arval</option>
             <option value="Ayvens">Ayvens</option>
             <option value="Alphabet">Alphabet</option>
+            <option value="Kinto">Kinto</option>
           </select>
         </div>
         <div class="filter-group">
@@ -822,9 +846,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
         <div class="footer-links-col">
           <h4>Categorías Populares</h4>
-          <a href="#modelos" onclick="document.getElementById('search-text').value='SUV'; applyFilters();">Renting de SUV</a>
-          <a href="#modelos" onclick="document.getElementById('search-text').value='Híbrido'; applyFilters();">Renting Eco/Híbrido</a>
-          <a href="#modelos" onclick="document.getElementById('filter-cuota').value='300'; applyFilters();">Renting menos de 300€</a>
+          <a href="#modelos" onclick="document.getElementById('filter-combustible').value=''; document.getElementById('filter-cuota').value=''; document.getElementById('filter-cuota-slider').value=1500; document.getElementById('slider-label').textContent='Cualquier precio'; applyFilters();">Renting de SUV</a>
+          <a href="#modelos" onclick="document.getElementById('filter-combustible').value='híbrido'; applyFilters();">Renting Eco/Híbrido</a>
+          <a href="#modelos" onclick="document.getElementById('filter-cuota-slider').value=300; document.getElementById('filter-cuota').value=300; document.getElementById('slider-label').textContent='Hasta 300 €/mes'; applyFilters();">Renting menos de 300€</a>
         </div>
         <div class="footer-links-col">
           <h4>Modelos populares</h4>
@@ -847,12 +871,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="https://www.ayvens.com/es-es" target="_blank" rel="noopener">Ayvens</a>
       <a href="https://www.alphabet.com/es-es" target="_blank" rel="noopener">Alphabet</a>
     </div>
-    <div class="footer-links-col">
-      <h4>Legal</h4>
-      <a href="/aviso-legal.html">Aviso Legal</a>
-      <a href="/politica-privacidad.html">Política de Privacidad</a>
-      <a href="/politica-cookies.html">Política de Cookies</a>
-    </div>
   </div>
   
         <div class="footer-links-col">
@@ -873,13 +891,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/renting-seat-leon.html">Renting Seat Leon</a>
           <a href="/renting-cupra-formentor.html">Renting Cupra Formentor</a>
         </div>
-  <div class="footer-bottom" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-    <span>© 2025 mtiagconsulting · Las ofertas son responsabilidad de cada gestora. MiRenting actúa como plataforma de comparación.</span>
-    <span style="display:flex; gap:16px;">
-      <a href="/aviso-legal.html" style="color:rgba(255,255,255,.4); text-decoration:none; transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Aviso Legal</a>
-      <a href="/politica-privacidad.html" style="color:rgba(255,255,255,.4); text-decoration:none; transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Privacidad</a>
-      <a href="/politica-cookies.html" style="color:rgba(255,255,255,.4); text-decoration:none; transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Cookies</a>
-    </span>
+  <div class="footer-bottom">
+    Las ofertas son responsabilidad de cada gestora. MiRenting actúa como plataforma de comparación.
   </div>
 </footer>
 
@@ -968,6 +981,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     allOffers = _OFERTAS;
     buildGroups();
     filteredModels = [...groupedModels];
+    buildMakeSelect();
     renderModels(filteredModels);
     document.getElementById('stat-models').textContent = groupedModels.length;
     document.getElementById('stat-total').textContent  = allOffers.length;
@@ -1024,13 +1038,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       .replace(/[áàä]/g,'a').replace(/[éèë]/g,'e')
       .replace(/[íìï]/g,'i').replace(/[óòö]/g,'o').replace(/[úùü]/g,'u')
       .replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+    const gestoraBadge = fuentesList
+      ? `<div class="card-gestora-badge">${fuentesList}</div>` : '';
     return `
     <div class="model-card">
-      <div class="model-img">
-        ${m.image ? `<img src="${m.image}" alt="${m.name}" loading="lazy">` : '<div class="model-img-placeholder">🚗</div>'}
+      <div class="model-img" style="position:relative;">
+        ${m.image
+          ? `<picture><source srcset="${m.image.replace('.png','.webp').replace('.jpg','.webp').replace('.JPG','.webp')}" type="image/webp"><img src="${m.image}" alt="${m.name}" loading="lazy" decoding="async"></picture>`
+          : '<div class="model-img-placeholder">🚗</div>'}
+        ${gestoraBadge}
       </div>
       <div class="model-body">
-        <div class="model-meta">${fuentesList}</div>
         <h3 class="model-name">${m.name}</h3>
         <div class="model-badges">${fuelBadges}</div>
         <div class="model-price">
@@ -1040,15 +1058,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="model-footer">
           <span class="offer-count">${count} oferta${count !== 1 ? 's' : ''}</span>
-          <a href="/${slugKey}.html" class="btn-comparar" style="text-decoration:none;display:inline-block;text-align:center;" aria-label="Ver página de renting ${m.name}">Ver página →</a>
-          <button class="btn-comparar" onclick="handleComparar('${keySafe}')" style="margin-left:6px;">Comparar →</button>
+          <a href="/${slugKey}.html" class="btn-comparar" style="text-decoration:none;display:inline-block;text-align:center;" aria-label="Ver página de renting ${m.name}">Ver ofertas →</a>
         </div>
       </div>
     </div>`;
   }
 
   function applyFilters() {
-    const text   = document.getElementById('search-text').value.toLowerCase().trim();
+    const make   = document.getElementById('filter-make').value.toUpperCase().trim();
+    const model  = document.getElementById('filter-model').value.toUpperCase().trim();
     const cuota  = parseFloat(document.getElementById('filter-cuota').value) || Infinity;
     const comb   = document.getElementById('filter-combustible').value.toLowerCase();
     const tipo   = document.getElementById('filter-tipo').value.toLowerCase();
@@ -1056,7 +1074,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const dgt    = document.getElementById('filter-dgt').value;
 
     filteredModels = groupedModels.filter(m => {
-      if (text   && !m.name.toLowerCase().includes(text)) return false;
+      const mMake  = (m.offers[0]?.make  || '').toUpperCase();
+      const mModel = (m.offers[0]?.model || '').toUpperCase();
+      if (make  && mMake  !== make)  return false;
+      if (model && mModel !== model) return false;
       if (m.minPrice > cuota) return false;
       if (comb   && ![...m.fuels].some(f => f.toLowerCase().includes(comb))) return false;
       if (tipo   && ![...m.tipos].some(t => t.toLowerCase() === tipo)) return false;
@@ -1073,9 +1094,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     renderModels(filteredModels);
   }
 
-  ['search-text','filter-cuota','filter-combustible','filter-tipo','filter-fuente','filter-dgt'].forEach(id => {
+  ['filter-combustible','filter-tipo','filter-fuente','filter-dgt'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener(id === 'search-text' ? 'input' : 'change', applyFilters);
+    if (el) el.addEventListener('change', applyFilters);
+  });
+
+  // ── Selectores Marca / Modelo en cascada ──────────────────────────────────
+  function buildMakeSelect() {
+    const makes = [...new Set(
+      groupedModels.map(m => (m.offers[0]?.make || '').trim())
+                   .filter(Boolean)
+    )].sort((a, b) => a.localeCompare(b, 'es'));
+
+    const sel = document.getElementById('filter-make');
+    makes.forEach(make => {
+      const opt = document.createElement('option');
+      opt.value = make;
+      opt.textContent = make.charAt(0).toUpperCase() + make.slice(1).toLowerCase();
+      sel.appendChild(opt);
+    });
+  }
+
+  function onMakeChange() {
+    const make = document.getElementById('filter-make').value.toUpperCase();
+    const modelSel = document.getElementById('filter-model');
+
+    // Limpiar modelos
+    modelSel.innerHTML = '<option value="">Todos los modelos</option>';
+
+    if (make) {
+      const models = [...new Set(
+        groupedModels
+          .filter(m => (m.offers[0]?.make || '').toUpperCase() === make)
+          .map(m => (m.offers[0]?.model || '').trim())
+          .filter(Boolean)
+      )].sort((a, b) => a.localeCompare(b, 'es'));
+
+      models.forEach(model => {
+        const opt = document.createElement('option');
+        opt.value = model.toUpperCase();
+        opt.textContent = model.charAt(0).toUpperCase() + model.slice(1).toLowerCase();
+        modelSel.appendChild(opt);
+      });
+      modelSel.disabled = false;
+    } else {
+      modelSel.disabled = false;
+    }
+    applyFilters();
+  }
+
+  // ── Slider de precio ───────────────────────────────────────────────────────
+  const slider      = document.getElementById('filter-cuota-slider');
+  const sliderLabel = document.getElementById('slider-label');
+  const cuotaHidden = document.getElementById('filter-cuota');
+
+  slider.addEventListener('input', () => {
+    const val = parseInt(slider.value);
+    if (val >= 1500) {
+      sliderLabel.textContent = 'Cualquier precio';
+      cuotaHidden.value = '';
+    } else {
+      sliderLabel.textContent = `Hasta ${val} €/mes`;
+      cuotaHidden.value = val;
+    }
+    applyFilters();
   });
 
   // ── Comparativa ───────────────────────────────────────
@@ -1243,110 +1325,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   init();
 </script>
-
-<!-- ── COOKIE BANNER ── -->
-<style>
-  #cookie-banner {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 48px);
-    max-width: 780px;
-    background: #111318;
-    color: rgba(255,255,255,.85);
-    border-radius: 14px;
-    padding: 18px 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    box-shadow: 0 8px 40px rgba(0,0,0,.35);
-    z-index: 9999;
-    animation: bannerIn .3s ease;
-    border: 1px solid rgba(255,255,255,.08);
-  }
-  @keyframes bannerIn {
-    from { transform: translateX(-50%) translateY(16px); opacity: 0; }
-    to   { transform: translateX(-50%) translateY(0);    opacity: 1; }
-  }
-  #cookie-banner.hidden {
-    animation: bannerOut .25s ease forwards;
-  }
-  @keyframes bannerOut {
-    to { transform: translateX(-50%) translateY(16px); opacity: 0; }
-  }
-  .cookie-text { font-size: .85rem; line-height: 1.5; flex: 1; min-width: 200px; }
-  .cookie-text strong { color: #fff; }
-  .cookie-text a { color: rgba(255,255,255,.5); text-decoration: underline; font-size: .8rem; }
-  .cookie-text a:hover { color: #fff; }
-  .cookie-btns { display: flex; gap: 8px; flex-shrink: 0; }
-  .cookie-btn-reject {
-    background: transparent;
-    color: rgba(255,255,255,.55);
-    border: 1px solid rgba(255,255,255,.18);
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: .82rem;
-    font-weight: 600;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    cursor: pointer;
-    transition: all .15s;
-  }
-  .cookie-btn-reject:hover { border-color: rgba(255,255,255,.4); color: #fff; }
-  .cookie-btn-accept {
-    background: #e8380d;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 18px;
-    font-size: .82rem;
-    font-weight: 700;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    cursor: pointer;
-    transition: background .15s;
-  }
-  .cookie-btn-accept:hover { background: #c42e0a; }
-  @media (max-width: 540px) {
-    #cookie-banner { bottom: 0; left: 0; transform: none; width: 100%; border-radius: 14px 14px 0 0; }
-    #cookie-banner.hidden { animation: bannerOutMobile .25s ease forwards; }
-    @keyframes bannerOutMobile { to { transform: translateY(100%); opacity: 0; } }
-  }
-</style>
-
-<div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" style="display:none;">
-  <p class="cookie-text">
-    <strong>Usamos cookies</strong> para analizar el tráfico y mejorar tu experiencia. Puedes aceptar todas o solo las necesarias.
-    <br><a href="/politica-cookies.html">Más información sobre nuestra política de cookies</a>
-  </p>
-  <div class="cookie-btns">
-    <button class="cookie-btn-reject" onclick="setCookieConsent('rejected')">Solo necesarias</button>
-    <button class="cookie-btn-accept" onclick="setCookieConsent('accepted')">Aceptar todas</button>
-  </div>
-</div>
-
-<script>
-  (function() {
-    var consent = localStorage.getItem('mr_consent');
-    if (!consent) {
-      var banner = document.getElementById('cookie-banner');
-      banner.style.display = 'flex';
-    }
-  })();
-
-  function setCookieConsent(value) {
-    localStorage.setItem('mr_consent', value);
-    var banner = document.getElementById('cookie-banner');
-    banner.classList.add('hidden');
-    setTimeout(function() { banner.style.display = 'none'; }, 280);
-
-    // Si acepta, activar GA (GTM ya cargado, solo habilitamos)
-    if (value === 'accepted' && typeof dataLayer !== 'undefined') {
-      dataLayer.push({ event: 'cookie_consent_accepted' });
-    }
-  }
-</script>
-
 </body>
 </html>
