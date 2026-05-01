@@ -92,7 +92,75 @@
     .no-results-filter{padding:32px;text-align:center;color:var(--ink-4);font-size:.9rem}
     .link-btn{background:none;border:none;color:var(--accent);cursor:pointer;font-size:.9rem;font-weight:600;font-family:inherit;text-decoration:underline}
     .comp-table tbody tr.hidden-row{display:none}
-    @media(max-width:600px){.filter-bar-inner{gap:8px}.filter-group-inline{min-width:calc(50% - 4px)}.filter-results-wrap{width:100%;margin-left:0}}
+    @media(max-width:768px){
+      .hero-model{padding:32px 16px}
+      .hero-inner{grid-template-columns:1fr;gap:20px}
+      .hero-img{display:none}
+      .hero-stats{gap:8px}
+      .hero-stat{padding:10px 12px;flex:1;min-width:calc(50% - 4px)}
+      main{padding:0 16px;margin:20px auto}
+      .section-title{font-size:1rem}
+      .seo-section,.faq-section{padding:20px 16px}
+      .cta-section{padding:28px 16px}
+      .filter-bar-inner{gap:8px}
+      .filter-group-inline{min-width:calc(50% - 4px)}
+      .filter-results-wrap{width:100%;margin-left:0}
+    }
+    @media(max-width:640px){
+      .comp-table-wrap{overflow-x:unset}
+      .comp-table thead{display:none}
+      .comp-table tbody tr{
+        display:block;
+        border-bottom:none;
+        margin-bottom:10px;
+        border-radius:var(--radius-sm);
+        border:1px solid var(--border);
+        padding:14px 16px;
+        background:var(--surface);
+        position:relative;
+      }
+      .comp-table tbody tr.best-row{border-color:var(--green);border-width:2px}
+      .comp-table tbody tr.hidden-row{display:none}
+      .comp-table tbody td{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:5px 0;
+        font-size:.85rem;
+        border:none;
+      }
+      .comp-table tbody td::before{
+        content:attr(data-label);
+        font-size:.68rem;
+        font-weight:700;
+        text-transform:uppercase;
+        letter-spacing:.4px;
+        color:var(--ink-4);
+        flex-shrink:0;
+        margin-right:8px;
+      }
+      .comp-table tbody td:first-child{
+        position:absolute;top:14px;left:16px;padding:0;width:auto;
+      }
+      .comp-table tbody td:first-child::before{display:none}
+      .comp-table tbody td:nth-child(2){
+        font-size:1rem;font-weight:800;padding-top:0;
+        padding-left:36px;padding-bottom:10px;
+        border-bottom:1px solid var(--border);margin-bottom:6px;
+      }
+      .comp-table tbody td:nth-child(2)::before{display:none}
+      .comp-table tbody td:nth-child(3){display:none}
+      .comp-table tbody td:nth-child(7){display:none}
+      .comp-table tbody td:last-child{
+        padding-top:10px;border-top:1px solid var(--border);
+        margin-top:6px;justify-content:flex-end;
+      }
+      .comp-table tbody td:last-child::before{display:none}
+      .btn-ver{width:100%;text-align:center;padding:10px;font-size:.85rem}
+      .price-strong{font-size:1.1rem}
+      .best-badge{font-size:.68rem}
+      .version-cell{max-width:none;font-size:.8rem}
+    }
     </style>
 <script>
   function filtrarTabla() {
@@ -216,24 +284,24 @@
         <tbody id="comp-tbody">
         <tr class="best-row" data-fuente="arval" data-tipo="empresa" data-fuel="gasolina" data-plazo="72">
           <td class="rank-cell"><span class="rank-star">★</span></td>
-          <td><strong>Arval</strong></td>
-          <td><span class="tipo-badge">empresa</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>72 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Essential SCe 65</td>
-          <td><span class="best-badge">✓ Mejor precio</span><br><span class="price-strong">217.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Arval</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">empresa</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">72 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Essential SCe 65</td>
+          <td data-label="Precio"><span class="best-badge">✓ Mejor precio</span><br><span class="price-strong">217.0 €/mes</span></td>
           <td><a href="/ofertas/renting-empresas-largo-plazo/dacia/sandero" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="arval" data-tipo="particular" data-fuel="gasolina" data-plazo="72">
           <td class="rank-cell"><span class="rank-num">2</span></td>
-          <td><strong>Arval</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>72 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Essential SCe 65</td>
-          <td><span class="price-strong">262.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Arval</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">72 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Essential SCe 65</td>
+          <td data-label="Precio"><span class="price-strong">262.0 €/mes</span></td>
           <td><a href="/ofertas/renting-particulares-largo-plazo/dacia/sandero" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr></tbody>
       </table>

@@ -92,7 +92,75 @@
     .no-results-filter{padding:32px;text-align:center;color:var(--ink-4);font-size:.9rem}
     .link-btn{background:none;border:none;color:var(--accent);cursor:pointer;font-size:.9rem;font-weight:600;font-family:inherit;text-decoration:underline}
     .comp-table tbody tr.hidden-row{display:none}
-    @media(max-width:600px){.filter-bar-inner{gap:8px}.filter-group-inline{min-width:calc(50% - 4px)}.filter-results-wrap{width:100%;margin-left:0}}
+    @media(max-width:768px){
+      .hero-model{padding:32px 16px}
+      .hero-inner{grid-template-columns:1fr;gap:20px}
+      .hero-img{display:none}
+      .hero-stats{gap:8px}
+      .hero-stat{padding:10px 12px;flex:1;min-width:calc(50% - 4px)}
+      main{padding:0 16px;margin:20px auto}
+      .section-title{font-size:1rem}
+      .seo-section,.faq-section{padding:20px 16px}
+      .cta-section{padding:28px 16px}
+      .filter-bar-inner{gap:8px}
+      .filter-group-inline{min-width:calc(50% - 4px)}
+      .filter-results-wrap{width:100%;margin-left:0}
+    }
+    @media(max-width:640px){
+      .comp-table-wrap{overflow-x:unset}
+      .comp-table thead{display:none}
+      .comp-table tbody tr{
+        display:block;
+        border-bottom:none;
+        margin-bottom:10px;
+        border-radius:var(--radius-sm);
+        border:1px solid var(--border);
+        padding:14px 16px;
+        background:var(--surface);
+        position:relative;
+      }
+      .comp-table tbody tr.best-row{border-color:var(--green);border-width:2px}
+      .comp-table tbody tr.hidden-row{display:none}
+      .comp-table tbody td{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:5px 0;
+        font-size:.85rem;
+        border:none;
+      }
+      .comp-table tbody td::before{
+        content:attr(data-label);
+        font-size:.68rem;
+        font-weight:700;
+        text-transform:uppercase;
+        letter-spacing:.4px;
+        color:var(--ink-4);
+        flex-shrink:0;
+        margin-right:8px;
+      }
+      .comp-table tbody td:first-child{
+        position:absolute;top:14px;left:16px;padding:0;width:auto;
+      }
+      .comp-table tbody td:first-child::before{display:none}
+      .comp-table tbody td:nth-child(2){
+        font-size:1rem;font-weight:800;padding-top:0;
+        padding-left:36px;padding-bottom:10px;
+        border-bottom:1px solid var(--border);margin-bottom:6px;
+      }
+      .comp-table tbody td:nth-child(2)::before{display:none}
+      .comp-table tbody td:nth-child(3){display:none}
+      .comp-table tbody td:nth-child(7){display:none}
+      .comp-table tbody td:last-child{
+        padding-top:10px;border-top:1px solid var(--border);
+        margin-top:6px;justify-content:flex-end;
+      }
+      .comp-table tbody td:last-child::before{display:none}
+      .btn-ver{width:100%;text-align:center;padding:10px;font-size:.85rem}
+      .price-strong{font-size:1.1rem}
+      .best-badge{font-size:.68rem}
+      .version-cell{max-width:none;font-size:.8rem}
+    }
     </style>
 <script>
   function filtrarTabla() {
@@ -216,431 +284,431 @@
         <tbody id="comp-tbody">
         <tr class="best-row" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-star">★</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Edition 2.0 TDI 85kW (115CV)</td>
-          <td><span class="best-badge">✓ Mejor precio</span><br><span class="price-strong">343.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Edition 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="best-badge">✓ Mejor precio</span><br><span class="price-strong">343.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53794460" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">2</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Edition 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">356.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Edition 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">356.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53767039" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">3</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">359.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">359.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53768698" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">4</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">359.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">359.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53944522" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">5</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">360.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">360.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53851245" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">6</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">360.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">360.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53759190" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">7</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">360.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">360.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53888193" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">8</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">361.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">361.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53960420" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">9</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">361.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">361.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53946046" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">10</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">361.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">361.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53993371" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">11</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">361.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">361.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53985953" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">12</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">361.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">361.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-54015201" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">13</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">361.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">361.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53960428" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">14</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">366.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">366.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-54035158" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">15</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">373.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">373.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53944519" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">16</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 1.6 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">373.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 1.6 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">373.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53785471" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">17</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Life 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">378.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Life 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">378.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53851384" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">18</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">378.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">378.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53799833" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">19</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">378.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">378.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53785410" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">20</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">378.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">378.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53785425" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">21</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">378.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">378.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53830536" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">22</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 1.6 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">379.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 1.6 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">379.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53874164" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">23</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 1.6 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">380.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 1.6 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">380.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53960491" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">24</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">380.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">380.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53993004" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">25</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">380.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">(O) Advance R-Line 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">380.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53931293" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">26</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">398.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">398.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53815562" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">27</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">399.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">399.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53993421" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">28</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Sport 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">403.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Sport 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">403.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53851515" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">29</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 110kW (150CV)</td>
-          <td><span class="price-strong">406.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 110kW (150CV)</td>
+          <td data-label="Precio"><span class="price-strong">406.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53960398" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="arval" data-tipo="empresa" data-fuel="híbrido" data-plazo="72">
           <td class="rank-cell"><span class="rank-num">30</span></td>
-          <td><strong>Arval</strong></td>
-          <td><span class="tipo-badge">empresa</span></td>
-          <td>Híbrido 🔵 ECO</td>
-          <td>72 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">''Más'' 1.5 eTSI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">410.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Arval</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">empresa</span></td>
+          <td data-label="Combustible">Híbrido 🔵 ECO</td>
+          <td data-label="Plazo">72 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">''Más'' 1.5 eTSI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">410.0 €/mes</span></td>
           <td><a href="/ofertas/renting-empresas-largo-plazo/volkswagen/t-roc" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">31</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">413.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">413.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53851494" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">32</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance Style 2.0 TDI 110kW DSG</td>
-          <td><span class="price-strong">415.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance Style 2.0 TDI 110kW DSG</td>
+          <td data-label="Precio"><span class="price-strong">415.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53780990" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">33</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Advance Style 2.0 TDI 85kW (115CV)</td>
-          <td><span class="price-strong">417.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Advance Style 2.0 TDI 85kW (115CV)</td>
+          <td data-label="Precio"><span class="price-strong">417.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53888299" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">34</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Gasolina 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Life 1.0 TSI 81kW (110CV)</td>
-          <td><span class="price-strong">423.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Gasolina 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Life 1.0 TSI 81kW (110CV)</td>
+          <td data-label="Precio"><span class="price-strong">423.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-54013177" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">35</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Life 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">445.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Life 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">445.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53944574" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">36</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">Life 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">454.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">Life 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">454.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53775937" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="arval" data-tipo="particular" data-fuel="híbrido" data-plazo="72">
           <td class="rank-cell"><span class="rank-num">37</span></td>
-          <td><strong>Arval</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Híbrido 🔵 ECO</td>
-          <td>72 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">''Más'' 1.5 eTSI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">496.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Arval</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Híbrido 🔵 ECO</td>
+          <td data-label="Plazo">72 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">''Más'' 1.5 eTSI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">496.0 €/mes</span></td>
           <td><a href="/ofertas/renting-particulares-largo-plazo/volkswagen/t-roc" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">38</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">"Más" 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">524.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">"Más" 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">524.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53916261" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr>
         <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
           <td class="rank-cell"><span class="rank-num">39</span></td>
-          <td><strong>Ayvens</strong></td>
-          <td><span class="tipo-badge">particular</span></td>
-          <td>Diésel 🟡 C</td>
-          <td>24 meses</td>
-          <td>10.000 km/año</td>
-          <td class="version-cell">"Más" 2.0 TDI 110kW (150CV) DSG</td>
-          <td><span class="price-strong">526.0 €/mes</span></td>
+          <td data-label="Gestora"><strong>Ayvens</strong></td>
+          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
+          <td data-label="Combustible">Diésel 🟡 C</td>
+          <td data-label="Plazo">24 meses</td>
+          <td data-label="Km/año">10.000 km/año</td>
+          <td class="version-cell" data-label="Versión">"Más" 2.0 TDI 110kW (150CV) DSG</td>
+          <td data-label="Precio"><span class="price-strong">526.0 €/mes</span></td>
           <td><a href="https://ofertas-renting.ayvens.es/ofertas/t-roc-53790018" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
         </tr></tbody>
       </table>
