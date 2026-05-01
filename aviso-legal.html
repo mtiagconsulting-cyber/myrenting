@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso Legal | MiRenting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5F3EE;
+      --ink: #1A1A18;
+      --muted: #6B6B63;
+      --accent: #1E5CFF;
+      --accent-light: #E8EEFF;
+      --border: #DEDAD2;
+      --white: #FFFFFF;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-back {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent); }
+
+    /* HEADER */
+    .page-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2.5rem;
+    }
+    .page-header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .page-meta {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .toc-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+    }
+    .toc ol li {
+      counter-increment: toc-counter;
+      margin-bottom: 0.35rem;
+    }
+    .toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero) ". ";
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 80px;
+    }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    p { margin-bottom: 0.85rem; color: var(--ink); }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--accent); }
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+    .data-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .data-table td:first-child {
+      font-weight: 500;
+      color: var(--muted);
+      width: 40%;
+      white-space: nowrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+    }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .data-table td:first-child { white-space: normal; width: 35%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://myrenting.es/" class="nav-logo">Mi<span>Renting</span></a>
+  <a href="https://myrenting.es/" class="nav-back">← Volver al comparador</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="https://myrenting.es/">MiRenting</a>
+      <span>›</span>
+      <span>Aviso Legal</span>
+    </div>
+    <h1>Aviso Legal</h1>
+    <p class="page-meta">Última actualización: mayo de 2025</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <nav class="toc" aria-label="Índice de contenidos">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#titular">Datos del titular</a></li>
+      <li><a href="#objeto">Objeto y ámbito de aplicación</a></li>
+      <li><a href="#condiciones">Condiciones de uso</a></li>
+      <li><a href="#propiedad-intelectual">Propiedad intelectual</a></li>
+      <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+      <li><a href="#enlaces">Enlaces a terceros</a></li>
+      <li><a href="#legislacion">Legislación aplicable</a></li>
+    </ol>
+  </nav>
+
+  <section id="titular">
+    <h2><span class="section-num">01</span> Datos del titular</h2>
+    <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos identificativos del titular de este sitio web:</p>
+    <table class="data-table">
+      <tr><td>Denominación</td><td>mtiagconsulting</td></tr>
+      <tr><td>Domicilio</td><td>Barcelona, España</td></tr>
+      <tr><td>Correo electrónico</td><td><a href="mailto:mtiagconsulting@gmail.com">mtiagconsulting@gmail.com</a></td></tr>
+      <tr><td>Sitio web</td><td><a href="https://myrenting.es">https://myrenting.es</a></td></tr>
+      <tr><td>Actividad</td><td>Comparador de ofertas de renting de vehículos en España</td></tr>
+    </table>
+  </section>
+
+  <section id="objeto">
+    <h2><span class="section-num">02</span> Objeto y ámbito de aplicación</h2>
+    <p>El presente Aviso Legal regula el acceso y uso del sitio web <strong>myrenting.es</strong> (en adelante, "el Sitio"), del que es titular mtiagconsulting.</p>
+    <p>El acceso al Sitio implica la aceptación plena y sin reservas de las presentes condiciones. Si no está de acuerdo con alguna de ellas, le rogamos que se abstenga de utilizar el Sitio.</p>
+    <div class="highlight-box">
+      MiRenting actúa exclusivamente como plataforma de comparación. Las ofertas publicadas son responsabilidad de cada gestora de renting (Arval, Ayvens, Alphabet y otras). MiRenting no es parte en ningún contrato de renting celebrado entre el usuario y una gestora.
+    </div>
+  </section>
+
+  <section id="condiciones">
+    <h2><span class="section-num">03</span> Condiciones de uso</h2>
+    <p>El usuario se compromete a hacer un uso adecuado del Sitio y de sus contenidos, sin incurrir en actividades ilícitas o contrarias a la buena fe, al orden público y a la legislación vigente.</p>
+    <p>Queda prohibido el uso del Sitio con fines que puedan dañar, inutilizar, sobrecargar o deteriorar el Sitio o los sistemas informáticos, así como realizar cualquier tipo de extracción masiva de datos (<em>scraping</em>) sin autorización expresa del titular.</p>
+    <p>El titular se reserva el derecho a suspender, modificar o dar de baja el Sitio o cualquiera de sus servicios en cualquier momento, sin previo aviso.</p>
+  </section>
+
+  <section id="propiedad-intelectual">
+    <h2><span class="section-num">04</span> Propiedad intelectual e industrial</h2>
+    <p>Todos los contenidos del Sitio —incluyendo, sin carácter limitativo, textos, gráficos, logotipos, código fuente y diseño— son propiedad de mtiagconsulting o de sus proveedores de contenido, y están protegidos por la legislación española e internacional sobre propiedad intelectual e industrial.</p>
+    <p>Queda expresamente prohibida su reproducción, distribución, comunicación pública o transformación total o parcial sin autorización escrita del titular.</p>
+  </section>
+
+  <section id="responsabilidad">
+    <h2><span class="section-num">05</span> Limitación de responsabilidad</h2>
+    <p>MiRenting pone los medios razonables para mantener la información actualizada, pero no garantiza la exactitud, completitud ni actualidad de las ofertas mostradas, las cuales son suministradas directamente por las gestoras.</p>
+    <p>El titular no será responsable de los daños derivados de interrupciones del servicio, errores de acceso, virus o fallos de telecomunicaciones ajenos a su control.</p>
+    <p>En ningún caso el titular será responsable de las condiciones, precios o términos contractuales de los contratos de renting formalizados entre el usuario y las gestoras.</p>
+  </section>
+
+  <section id="enlaces">
+    <h2><span class="section-num">06</span> Enlaces a sitios de terceros</h2>
+    <p>El Sitio contiene enlaces a sitios web de terceros (gestoras de renting). Estos enlaces se facilitan únicamente con fines informativos. mtiagconsulting no tiene control sobre dichos sitios ni se hace responsable de su contenido, política de privacidad o prácticas comerciales.</p>
+  </section>
+
+  <section id="legislacion">
+    <h2><span class="section-num">07</span> Legislación aplicable y jurisdicción</h2>
+    <p>Las presentes condiciones se rigen e interpretan de conformidad con la legislación española. Para la resolución de cualquier controversia derivada del acceso o uso del Sitio, las partes se someten a los Juzgados y Tribunales de Barcelona, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 MiRenting · mtiagconsulting · Barcelona, España</p>
+  <p style="margin-top:0.5rem;">
+    <a href="aviso-legal.html">Aviso Legal</a> ·
+    <a href="politica-privacidad.html">Privacidad</a> ·
+    <a href="politica-cookies.html">Cookies</a>
+  </p>
+</footer>
+
+</body>
+</html>

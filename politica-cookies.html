@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Cookies | MiRenting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5F3EE;
+      --ink: #1A1A18;
+      --muted: #6B6B63;
+      --accent: #1E5CFF;
+      --accent-light: #E8EEFF;
+      --border: #DEDAD2;
+      --white: #FFFFFF;
+      --amber: #B45309;
+      --amber-light: #FEF3C7;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-back {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent); }
+    .page-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2.5rem;
+    }
+    .page-header-inner { max-width: 800px; margin: 0 auto; }
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .page-meta { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
+    .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .toc-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .toc ol { list-style: none; counter-reset: toc-counter; }
+    .toc ol li { counter-increment: toc-counter; margin-bottom: 0.35rem; }
+    .toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero) ". ";
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .toc a { color: var(--ink); text-decoration: none; font-size: 0.9rem; transition: color 0.15s; }
+    .toc a:hover { color: var(--accent); }
+    section { margin-bottom: 3rem; scroll-margin-top: 80px; }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--accent); }
+    .warning-box {
+      background: var(--amber-light);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+      color: var(--amber);
+    }
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    .cookie-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 1rem 0; }
+    .cookie-table th {
+      background: var(--ink);
+      color: var(--white);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .cookie-table th:first-child { border-radius: 6px 0 0 0; }
+    .cookie-table th:last-child { border-radius: 0 6px 0 0; }
+    .cookie-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .badge-required { background: #DCFCE7; color: #166534; }
+    .badge-analytics { background: var(--accent-light); color: var(--accent); }
+    .badge-third { background: #FEE2E2; color: #991B1B; }
+
+    /* Banner preview */
+    .banner-preview {
+      background: var(--ink);
+      color: white;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .banner-preview p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
+    .banner-preview p strong { color: white; }
+    .banner-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .btn-accept {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-reject {
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .preview-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+    }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .banner-preview { flex-direction: column; align-items: flex-start; }
+      .cookie-table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://myrenting.es/" class="nav-logo">Mi<span>Renting</span></a>
+  <a href="https://myrenting.es/" class="nav-back">← Volver al comparador</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="https://myrenting.es/">MiRenting</a>
+      <span>›</span>
+      <span>Política de Cookies</span>
+    </div>
+    <h1>Política de Cookies</h1>
+    <p class="page-meta">Última actualización: mayo de 2025 · Ley 34/2002 (LSSI) · RGPD</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <nav class="toc" aria-label="Índice">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#que-son">¿Qué son las cookies?</a></li>
+      <li><a href="#tipos">Tipos de cookies utilizadas</a></li>
+      <li><a href="#tabla">Tabla de cookies</a></li>
+      <li><a href="#consentimiento">Consentimiento y banner</a></li>
+      <li><a href="#gestion">Cómo gestionar o rechazar cookies</a></li>
+      <li><a href="#actualizaciones">Actualizaciones</a></li>
+    </ol>
+  </nav>
+
+  <section id="que-son">
+    <h2><span class="section-num">01</span> ¿Qué son las cookies?</h2>
+    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (ordenador, tablet o móvil) cuando visitas un sitio web. Sirven para que el sitio recuerde tus preferencias, medir el tráfico o facilitar la navegación.</p>
+    <p>Este Sitio utiliza cookies propias y de terceros. A continuación te explicamos cuáles y para qué.</p>
+  </section>
+
+  <section id="tipos">
+    <h2><span class="section-num">02</span> Tipos de cookies utilizadas</h2>
+
+    <div class="highlight-box">
+      <strong>Cookies técnicas o estrictamente necesarias</strong> — No requieren consentimiento. Son imprescindibles para el funcionamiento básico del Sitio.
+    </div>
+
+    <p><strong>Cookies analíticas</strong> — Recopilan información anónima sobre el uso del Sitio (páginas visitadas, tiempo de navegación, origen del tráfico) para mejorar el servicio. Requieren tu consentimiento.</p>
+
+    <p><strong>Cookies de terceros</strong> — Instaladas por servicios externos integrados en el Sitio (p.ej. Google Analytics). Estos terceros tienen sus propias políticas de privacidad.</p>
+  </section>
+
+  <section id="tabla">
+    <h2><span class="section-num">03</span> Tabla de cookies</h2>
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Proveedor</th>
+          <th>Tipo</th>
+          <th>Duración</th>
+          <th>Finalidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>mr_session</code></td>
+          <td>myrenting.es</td>
+          <td><span class="badge badge-required">Técnica</span></td>
+          <td>Sesión</td>
+          <td>Mantener el estado de la sesión del usuario</td>
+        </tr>
+        <tr>
+          <td><code>mr_consent</code></td>
+          <td>myrenting.es</td>
+          <td><span class="badge badge-required">Técnica</span></td>
+          <td>1 año</td>
+          <td>Guardar las preferencias de cookies del usuario</td>
+        </tr>
+        <tr>
+          <td><code>_ga</code></td>
+          <td>Google Analytics</td>
+          <td><span class="badge badge-analytics">Analítica</span></td>
+          <td>2 años</td>
+          <td>Distinguir usuarios únicos para estadísticas de tráfico</td>
+        </tr>
+        <tr>
+          <td><code>_ga_*</code></td>
+          <td>Google Analytics</td>
+          <td><span class="badge badge-analytics">Analítica</span></td>
+          <td>2 años</td>
+          <td>Mantener el estado de la sesión en Google Analytics</td>
+        </tr>
+        <tr>
+          <td><code>_gid</code></td>
+          <td>Google Analytics</td>
+          <td><span class="badge badge-analytics">Analítica</span></td>
+          <td>24 horas</td>
+          <td>Distinguir usuarios para informes de uso del Sitio</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">Esta tabla se actualiza cuando se añaden o eliminan cookies del Sitio.</p>
+  </section>
+
+  <section id="consentimiento">
+    <h2><span class="section-num">04</span> Consentimiento y banner de cookies</h2>
+    <p>La primera vez que visitas el Sitio, se muestra un banner de cookies similar al siguiente. Las cookies técnicas se activan automáticamente; las analíticas solo se instalan si aceptas.</p>
+
+    <div class="preview-label">Vista previa del banner</div>
+    <div class="banner-preview">
+      <p><strong>Usamos cookies</strong> para mejorar tu experiencia y analizar el tráfico. Puedes aceptar todas o solo las necesarias. <a href="politica-cookies.html" style="color:rgba(255,255,255,0.6);font-size:0.8rem;">Más info</a></p>
+      <div class="banner-btns">
+        <button class="btn-reject">Solo necesarias</button>
+        <button class="btn-accept">Aceptar todas</button>
+      </div>
+    </div>
+
+    <p>Puedes cambiar tus preferencias en cualquier momento desde el enlace "Gestionar cookies" en el pie de página.</p>
+  </section>
+
+  <section id="gestion">
+    <h2><span class="section-num">05</span> Cómo gestionar o rechazar cookies</h2>
+    <p>Además del banner del Sitio, puedes configurar tu navegador para bloquear o eliminar cookies. Ten en cuenta que deshabilitar cookies técnicas puede afectar al funcionamiento del Sitio.</p>
+    <p>Instrucciones por navegador:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+      <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    </ul>
+    <p>Para optar fuera del seguimiento de Google Analytics específicamente, puedes instalar el <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">complemento de inhabilitación de Google Analytics</a>.</p>
+  </section>
+
+  <section id="actualizaciones">
+    <h2><span class="section-num">06</span> Actualizaciones de esta política</h2>
+    <p>Esta política puede modificarse cuando cambiemos las cookies utilizadas o la normativa aplicable lo exija. La fecha indicada en el encabezado refleja siempre la versión en vigor.</p>
+    <p>Para cualquier consulta relacionada con el uso de cookies, puedes contactar con nosotros en <a href="mailto:mtiagconsulting@gmail.com">mtiagconsulting@gmail.com</a>.</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2025 MiRenting · mtiagconsulting · Barcelona, España</p>
+  <p style="margin-top:0.5rem;">
+    <a href="aviso-legal.html">Aviso Legal</a> ·
+    <a href="politica-privacidad.html">Privacidad</a> ·
+    <a href="politica-cookies.html">Cookies</a>
+  </p>
+</footer>
+
+</body>
+</html>
