@@ -1045,7 +1045,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="model-card">
       <div class="model-img" style="position:relative;">
         ${m.image
-          ? `<picture><source srcset="${m.image.replace('.png','.webp').replace('.jpg','.webp').replace('.JPG','.webp')}" type="image/webp"><img src="${m.image}" alt="${m.name}" loading="lazy" decoding="async"></picture>`
+          ? `<img src="${m.image}" alt="${m.name}" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'model-img-placeholder\\'>🚗</div>'">`
           : '<div class="model-img-placeholder">🚗</div>'}
         ${gestoraBadge}
       </div>
