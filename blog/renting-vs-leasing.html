@@ -153,7 +153,7 @@
   const otros = todos.filter(a => a.slug !== actual).slice(0, 3);
   const grid = document.getElementById('related-grid');
   otros.forEach(a => {
-    grid.innerHTML += `<a class="related-card" href="/blog/${a.slug}.html">
+    grid.innerHTML += `<a class='related-card' href='/blog/${a.slug}.html'>
       <div class="related-cat">${a.categoria}</div>
       <div class="related-title">${a.titulo}</div>
     </a>`;
