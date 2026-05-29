@@ -115,7 +115,8 @@
 
     /* ── HERO ── */
     .hero {
-      background: #111318;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)),
+                  url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
       color: #fff;
       padding: 72px 28px 0;
       text-align: center;
@@ -126,8 +127,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(232,56,13,.15), transparent),
-                  radial-gradient(ellipse 40% 40% at 80% 80%, rgba(232,56,13,.08), transparent);
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(232,56,13,.1), transparent);
     }
     .hero-content { position: relative; z-index: 1; }
     .hero-pill {
@@ -1030,65 +1030,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">MiRenting</div>
-      <p>El comparador de renting para particulares y empresas en España.</p>
+<footer style="background:#111318;color:rgba(255,255,255,.5);padding:32px 28px;margin-top:48px">
+  <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;margin-bottom:24px">
+    <div>
+      <div style="font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:8px">MiRenting<span style="display:inline-block;width:7px;height:7px;background:#e8380d;border-radius:50%;margin-left:3px;margin-bottom:8px"></span></div>
+      <p style="font-size:.85rem;max-width:260px;line-height:1.6">Comparador de renting para particulares y empresas en España.</p>
     </div>
-    
-        <div class="footer-links-col">
-          <h4>Categorías Populares</h4>
-          <a href="/renting-barato.html">Renting barato</a>
-          <a href="/renting-autonomos.html">Renting autónomos</a>
-          <a href="/renting-empresas.html">Renting empresas</a>
-          <a href="#modelos" onclick="document.getElementById('filter-combustible').value=''; document.getElementById('filter-cuota').value=''; document.getElementById('filter-cuota-slider').value=1500; document.getElementById('slider-label').textContent='Cualquier precio'; applyFilters();">Renting de SUV</a>
-          <a href="#modelos" onclick="document.getElementById('filter-combustible').value='híbrido'; applyFilters();">Renting Eco/Híbrido</a>
-          <a href="#modelos" onclick="document.getElementById('filter-cuota-slider').value=300; document.getElementById('filter-cuota').value=300; document.getElementById('slider-label').textContent='Hasta 300 €/mes'; applyFilters();">Renting menos de 300€</a>
-        </div>
-        <div class="footer-links-col">
-          <h4>Modelos populares</h4>
-          <a href="/renting-nissan-qashqai.html">Renting Nissan Qashqai</a>
-          <a href="/renting-volkswagen-golf.html">Renting Volkswagen Golf</a>
-          <a href="/renting-seat-arona.html">Renting Seat Arona</a>
-          <a href="/renting-volkswagen-t-roc.html">Renting Volkswagen T-Roc</a>
-          <a href="/renting-audi-q3.html">Renting Audi Q3</a>
-          <a href="/renting-ford-puma.html">Renting Ford Puma</a>
-        </div>
-        <div class="footer-links-col">
-      <h4>Navegación</h4>
-      <a href="#modelos">Ofertas</a>
-      <a href="#como-funciona">Cómo funciona</a>
-      <a href="mailto:mtiagconsulting@gmail.com">Contacto</a>
-    </div>
-    <div class="footer-links-col">
-      <h4>Gestoras</h4>
-      <a href="https://www.arval.es" target="_blank" rel="noopener">Arval</a>
-      <a href="https://www.ayvens.com/es-es" target="_blank" rel="noopener">Ayvens</a>
-      <a href="https://www.alphabet.com/es-es" target="_blank" rel="noopener">Alphabet</a>
+    <div style="display:flex;gap:48px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:.75rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Categorías</span>
+        <a href="/renting-suv.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">SUV</a>
+        <a href="/renting-electrico.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Eléctrico</a>
+        <a href="/renting-hibrido.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Híbrido</a>
+        <a href="/renting-furgoneta.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Furgoneta</a>
+        <a href="/renting-barato.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Más baratos</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:.75rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Marcas</span>
+        <a href="/renting-audi.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Audi</a>
+        <a href="/renting-bmw.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">BMW</a>
+        <a href="/renting-toyota.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Toyota</a>
+        <a href="/renting-volkswagen.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Volkswagen</a>
+        <a href="/renting-seat.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Seat</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:.75rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Info</span>
+        <a href="/blog/" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Blog</a>
+        <a href="/renting-autonomos.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Autónomos</a>
+        <a href="/renting-empresas.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Empresas</a>
+        <a href="/aviso-legal.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Aviso legal</a>
+        <a href="/politica-privacidad.html" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem">Privacidad</a>
+      </div>
     </div>
   </div>
-  
-        <div class="footer-links-col">
-          <h4>Modelos Populares</h4>
-          <a href="/renting-nissan-qashqai.html">Renting Nissan Qashqai</a>
-          <a href="/renting-volkswagen-golf.html">Renting Volkswagen Golf</a>
-          <a href="/renting-seat-arona.html">Renting Seat Arona</a>
-          <a href="/renting-volkswagen-t-roc.html">Renting Volkswagen T-Roc</a>
-          <a href="/renting-audi-q3.html">Renting Audi Q3</a>
-          <a href="/renting-ford-puma.html">Renting Ford Puma</a>
-        </div>
-        <div class="footer-links-col">
-          <h4>Más Modelos</h4>
-          <a href="/renting-kia-sportage.html">Renting Kia Sportage</a>
-          <a href="/renting-volkswagen-tiguan.html">Renting Volkswagen Tiguan</a>
-          <a href="/renting-ford-focus.html">Renting Ford Focus</a>
-          <a href="/renting-nissan-juke.html">Renting Nissan Juke</a>
-          <a href="/renting-seat-leon.html">Renting Seat Leon</a>
-          <a href="/renting-cupra-formentor.html">Renting Cupra Formentor</a>
-        </div>
-  <div class="footer-bottom">
-    Las ofertas son responsabilidad de cada gestora. MiRenting actúa como plataforma de comparación.
+  <div style="max-width:1280px;margin:0 auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between">
+    <span>© 2026 MiRenting · Barcelona, España</span>
+    <span>Las ofertas son responsabilidad de cada gestora.</span>
   </div>
 </footer>
 
