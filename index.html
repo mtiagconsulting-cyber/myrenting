@@ -743,11 +743,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- MODELS GRID -->
 <main id="modelos">
   <div class="section-header">
-    <h2 class="section-title">Modelos disponibles</h2>
-    <span class="results-count" id="results-count">Cargando...</span>
+    <h2 class="section-title">Ofertas destacadas</h2>
+    <a href="#modelos-todos" onclick="document.getElementById('modelos-todos').style.display='block';this.style.display='none';renderModels(filteredModels);return false;" style="font-size:.82rem;font-weight:700;color:var(--accent);text-decoration:none;">Ver todos los modelos →</a>
   </div>
   <div class="models-grid" id="models-grid"></div>
+  <div style="text-align:center;margin:24px 0 8px">
+    <a href="#modelos-todos" id="btn-ver-todos" onclick="document.getElementById('modelos-todos').style.display='block';document.getElementById('modelos-grid-todos').innerHTML='';renderAllModels();this.parentElement.style.display='none';return false;" style="display:inline-block;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 28px;font-size:.9rem;font-weight:700;color:var(--ink);text-decoration:none;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--ink)'">Ver todos los modelos disponibles →</a>
+  </div>
 </main>
+<div id="modelos-todos" style="display:none;max-width:1280px;margin:0 auto;padding:0 28px">
+  <div class="section-header">
+    <h2 class="section-title">Todos los modelos</h2>
+    <span class="results-count" id="results-count">Cargando...</span>
+  </div>
+  <div class="models-grid" id="models-grid-todos"></div>
+</div>
 
 <!-- ══ SECCIÓN CATEGORÍAS ══ -->
 <section style="max-width:1280px;margin:48px auto 0;padding:0 28px">
@@ -1246,8 +1256,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById('results-count').textContent = '0 modelos';
       return;
     }
-    models.forEach(m => grid.insertAdjacentHTML('beforeend', modelCardHtml(m)));
-    document.getElementById('results-count').textContent = models.length + (models.length === 1 ? ' modelo' : ' modelos');
+    // Mostrar solo 8 destacados en el index
+    const destacados = models.slice(0, 8);
+    destacados.forEach(m => grid.insertAdjacentHTML('beforeend', modelCardHtml(m)));
+    // Actualizar contador en el grid de todos si existe
+    const countEl = document.getElementById('results-count');
+    if (countEl) countEl.textContent = models.length + (models.length === 1 ? ' modelo' : ' modelos');
+  }
+
+  function renderAllModels() {
+    const grid = document.getElementById('models-grid-todos');
+    if (!grid) return;
+    grid.innerHTML = '';
+    filteredModels.forEach(m => grid.insertAdjacentHTML('beforeend', modelCardHtml(m)));
+    const countEl = document.getElementById('results-count');
+    if (countEl) countEl.textContent = filteredModels.length + (filteredModels.length === 1 ? ' modelo' : ' modelos');
   }
 
   function modelCardHtml(m) {
