@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120">
+  <rect width="320" height="120" rx="16" fill="#ffffff"/>
+  <rect x="20" y="24" width="52" height="52" rx="12" fill="#e8380d"/>
+  <path d="M30 58 L30 52 Q31 48 34 46 L40 40 Q42 38 45 38 L53 38 Q56 38 58 40 L63 46 Q65 48 66 52 L66 58 Z" fill="white"/>
+  <circle cx="35" cy="59" r="3.5" fill="#c42e0a"/>
+  <circle cx="61" cy="59" r="3.5" fill="#c42e0a"/>
+  <text x="84" y="52" font-family="Arial Black,sans-serif" font-size="28" font-weight="900" fill="#111" letter-spacing="-1">Mi</text>
+  <text x="117" y="52" font-family="Arial Black,sans-serif" font-size="28" font-weight="900" fill="#e8380d" letter-spacing="-1">Renting</text>
+  <circle cx="295" cy="30" r="5" fill="#e8380d"/>
+  <text x="84" y="74" font-family="Arial,sans-serif" font-size="12" fill="#999" letter-spacing="0.5">Compara · Elige · Conduce</text>
+</svg>

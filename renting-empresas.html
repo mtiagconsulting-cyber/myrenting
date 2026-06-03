@@ -218,5 +218,53 @@ renderModels(groups);
     });
   })();
 
+
+  // Lead form
+  var _leadUrl = '';
+  function abrirLead(url, car, details, price) {
+    _leadUrl = url;
+    document.getElementById('lead-car').textContent = car || '—';
+    document.getElementById('lead-details').textContent = details || '—';
+    document.getElementById('lead-price').textContent = price || '—';
+    document.getElementById('lead-form-wrap').style.display = 'block';
+    document.getElementById('lead-success').style.display = 'none';
+    document.getElementById('lead-overlay').style.display = 'flex';
+  }
+  function cerrarLead(e) {
+    if (e && e.target !== document.getElementById('lead-overlay')) return;
+    document.getElementById('lead-overlay').style.display = 'none';
+  }
+  async function enviarLead() {
+    var nombre   = document.getElementById('lf-nombre').value.trim();
+    var telefono = document.getElementById('lf-telefono').value.trim();
+    var email    = document.getElementById('lf-email').value.trim();
+    if (!nombre || !telefono || !email) {
+      alert('Por favor rellena nombre, telefono y email.');
+      return;
+    }
+    var formData = new FormData();
+    formData.append('nombre',   nombre + ' ' + document.getElementById('lf-apellido').value.trim());
+    formData.append('telefono', telefono);
+    formData.append('email',    email);
+    formData.append('perfil',   document.getElementById('lf-perfil').value);
+    formData.append('km',       document.getElementById('lf-km').value);
+    formData.append('coche',    document.getElementById('lead-car').textContent);
+    formData.append('oferta',   _leadUrl);
+    formData.append('_subject', 'Lead MiRenting — ' + document.getElementById('lead-car').textContent);
+    try {
+      await fetch('https://formsubmit.co/ajax/info@myrenting.es', {
+        method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: formData
+      });
+    } catch(e) {}
+    document.getElementById('lead-form-wrap').style.display = 'none';
+    document.getElementById('lead-success').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('lead-overlay').style.display = 'none';
+      if (_leadUrl) window.open(_leadUrl, '_blank');
+    }, 2000);
+  }
+
 </script>
 </body></html>

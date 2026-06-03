@@ -355,7 +355,7 @@
           <td data-label="Km/año">10.000 km/año</td>
           <td class="version-cell" data-label="Versión">BlueHDi 75KW (100CV) S&S Feel</td>
           <td data-label="Precio"><span class="best-badge">✓ Mejor precio</span><br><span class="price-strong">248.0 €/mes</span></td>
-          <td><a href="https://ofertas-renting.ayvens.es/ofertas/c3-53851128" target="_blank" rel="noopener" class="btn-ver">Ver oferta →</a></td>
+          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/c3-53851128',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'Citroen C3') : 'Citroen C3',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
         </tr></tbody>
       </table>
       <div class="no-results-filter" id="no-results-msg" style="display:none">
@@ -430,6 +430,60 @@
   <div class="section-title">Modelos similares</div>
   <div class="section-sub" style="margin-bottom:14px;">Otros coches disponibles en renting</div>
   <div id="similares-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;"></div>
+</div>
+
+
+<!-- MODAL LEAD FORM -->
+<div id="lead-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;padding:16px;" onclick="cerrarLead(event)">
+  <div style="background:white;border-radius:16px;max-width:480px;width:100%;overflow:hidden;position:relative;" onclick="event.stopPropagation()">
+    <div style="background:#e8380d;padding:22px 28px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:Arial Black,sans-serif;font-weight:900;color:white;font-size:14px;">M</div>
+        <span style="color:white;font-size:13px;font-weight:600;">MiRenting</span>
+        <button onclick="document.getElementById('lead-overlay').style.display='none'" style="margin-left:auto;background:rgba(255,255,255,.2);border:none;border-radius:50%;width:26px;height:26px;cursor:pointer;color:white;font-size:14px;display:flex;align-items:center;justify-content:center;">✕</button>
+      </div>
+      <h2 style="color:white;font-size:18px;font-weight:800;margin:0 0 4px;letter-spacing:-.5px;">Casi listo — un paso mas</h2>
+      <p style="color:rgba(255,255,255,.75);font-size:12px;margin:0;">Dejanos tus datos y te enviamos la oferta. Sin compromiso.</p>
+    </div>
+    <div style="background:#fff5f2;border-bottom:1px solid #ffd5cc;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;">
+      <div>
+        <div style="font-size:9px;font-weight:700;color:#e8380d;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;">Oferta seleccionada</div>
+        <div style="font-size:13px;font-weight:800;color:#111;" id="lead-car">—</div>
+        <div style="font-size:11px;color:#999;" id="lead-details">—</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:20px;font-weight:800;color:#e8380d;letter-spacing:-1px;" id="lead-price">—</div>
+        <div style="font-size:10px;color:#bbb;">/mes</div>
+      </div>
+    </div>
+    <div style="padding:20px 28px;">
+      <div id="lead-form-wrap">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Nombre</label><input type="text" id="lf-nombre" placeholder="Tu nombre" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
+          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Apellido</label><input type="text" id="lf-apellido" placeholder="Tu apellido" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
+        </div>
+        <div style="margin-bottom:10px;"><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Telefono</label><input type="tel" id="lf-telefono" placeholder="+34 6XX XXX XXX" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
+        <div style="margin-bottom:10px;"><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Email</label><input type="email" id="lf-email" placeholder="tu@email.com" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Perfil</label><select id="lf-perfil" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;background:white;"><option value="particular">Particular</option><option value="autonomo">Autonomo</option><option value="empresa">Empresa</option></select></div>
+          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Km anuales</label><select id="lf-km" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;background:white;"><option value="10000">10.000 km</option><option value="15000">15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000+ km</option></select></div>
+        </div>
+        <div style="background:#f7f7f5;border-radius:7px;padding:10px 12px;margin-bottom:14px;display:flex;gap:16px;flex-wrap:wrap;">
+          <span style="font-size:11px;color:#666;">✓ Sin compromiso</span>
+          <span style="font-size:11px;color:#666;">✓ Respuesta en 24h</span>
+          <span style="font-size:11px;color:#666;">✓ 100% gratis</span>
+        </div>
+        <button onclick="enviarLead()" style="width:100%;background:#e8380d;color:white;border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;" onmouseover="this.style.background='#c42e0a'" onmouseout="this.style.background='#e8380d'">Quiero esta oferta →</button>
+        <p style="font-size:10px;color:#ccc;text-align:center;margin:10px 0 0;line-height:1.5;">Al enviar aceptas nuestra <a href="/politica-privacidad.html" style="color:#e8380d;">politica de privacidad</a>.</p>
+      </div>
+      <div id="lead-success" style="display:none;text-align:center;padding:20px 0;">
+        <div style="width:56px;height:56px;background:#e8f5ee;border-radius:50%;font-size:24px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">✓</div>
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Solicitud enviada</h3>
+        <p style="color:#999;margin-bottom:16px;">Te contactaremos en las proximas 24 horas.</p>
+        <p style="font-size:12px;color:#bbb;">Redirigiendo a la oferta...</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer class="footer">
@@ -574,6 +628,54 @@
       `);
     });
   })();
+
+
+  // Lead form
+  var _leadUrl = '';
+  function abrirLead(url, car, details, price) {
+    _leadUrl = url;
+    document.getElementById('lead-car').textContent = car || '—';
+    document.getElementById('lead-details').textContent = details || '—';
+    document.getElementById('lead-price').textContent = price || '—';
+    document.getElementById('lead-form-wrap').style.display = 'block';
+    document.getElementById('lead-success').style.display = 'none';
+    document.getElementById('lead-overlay').style.display = 'flex';
+  }
+  function cerrarLead(e) {
+    if (e && e.target !== document.getElementById('lead-overlay')) return;
+    document.getElementById('lead-overlay').style.display = 'none';
+  }
+  async function enviarLead() {
+    var nombre   = document.getElementById('lf-nombre').value.trim();
+    var telefono = document.getElementById('lf-telefono').value.trim();
+    var email    = document.getElementById('lf-email').value.trim();
+    if (!nombre || !telefono || !email) {
+      alert('Por favor rellena nombre, telefono y email.');
+      return;
+    }
+    var formData = new FormData();
+    formData.append('nombre',   nombre + ' ' + document.getElementById('lf-apellido').value.trim());
+    formData.append('telefono', telefono);
+    formData.append('email',    email);
+    formData.append('perfil',   document.getElementById('lf-perfil').value);
+    formData.append('km',       document.getElementById('lf-km').value);
+    formData.append('coche',    document.getElementById('lead-car').textContent);
+    formData.append('oferta',   _leadUrl);
+    formData.append('_subject', 'Lead MiRenting — ' + document.getElementById('lead-car').textContent);
+    try {
+      await fetch('https://formsubmit.co/ajax/info@myrenting.es', {
+        method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: formData
+      });
+    } catch(e) {}
+    document.getElementById('lead-form-wrap').style.display = 'none';
+    document.getElementById('lead-success').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('lead-overlay').style.display = 'none';
+      if (_leadUrl) window.open(_leadUrl, '_blank');
+    }, 2000);
+  }
 
   // FAQ
   function toggleFaq(el) {
