@@ -12,12 +12,12 @@
   <link rel="canonical" href="https://www.myrenting.es/renting-hasta-250.html">
   <meta property="og:title" content="Renting por menos de 250€/mes — 12 coches disponibles | MiRenting">
   <meta property="og:description" content="12 coches en renting por menos de 250€/mes. Seguro y mantenimiento incluidos. Compara sin registrarte.">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--accent:#e8380d;--accent-2:#c42e0a;--ink:#111318;--ink-2:#2d2d3a;--ink-3:#6b6b80;--ink-4:#a0a0b0;
       --green:#00c47a;--surface:#fff;--surface-2:#f7f8fa;--border:#e4e4ec;--radius:14px;--radius-sm:8px}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;background:var(--surface-2);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
 nav{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 28px;height:62px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-size:1.25rem;font-weight:800;color:var(--ink);text-decoration:none}
@@ -61,7 +61,19 @@ footer p+p{margin-top:8px}
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<nav><div class="nav-inner"><a href="/" class="logo">MiRenting<span class="logo-dot"></span></a><a href="/" style="color:var(--ink-3);text-decoration:none;font-size:.875rem">← Todas las ofertas</a></div></nav>
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-logo">M</div>
+    <a href="/"><span class="nav-name">MiRenting</span></a>
+  </div>
+  <div class="nav-links">
+    <a href="/">Ofertas</a>
+    <a href="/blog/">Blog</a>
+    <a href="/renting-autonomos.html">Autonomos</a>
+    <a href="/renting-empresas.html">Empresas</a>
+  </div>
+  <a href="/" class="nav-cta">Comparar gratis</a>
+</nav>
 <section class="cat-hero">
   <div class="cat-hero-inner">
     <div class="breadcrumb"><a href="/">MiRenting</a> › Hasta 250€/mes</div>
@@ -162,6 +174,19 @@ footer p+p{margin-top:8px}
       <h2>Coches en renting por menos de 250€/mes</h2>
       <p>Estos 12 modelos tienen cuota de renting inferior a <strong>250€/mes</strong> con seguro a todo riesgo, mantenimiento y asistencia incluidos. Sin entrada, sin depreciación.</p>
     </div></main>
-<footer><p>© 2026 MiRenting · Barcelona, España</p><p><a href="/">Comparador</a><a href="/blog/">Blog</a><a href="/aviso-legal.html">Aviso Legal</a><a href="/politica-privacidad.html">Privacidad</a></p></footer>
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-logo">M</div>
+    <span class="footer-name">MiRenting</span>
+  </div>
+  <div class="footer-links">
+    <a href="/aviso-legal.html">Aviso legal</a>
+    <a href="/politica-privacidad.html">Privacidad</a>
+    <a href="/blog/">Blog</a>
+    <a href="/renting-autonomos.html">Autonomos</a>
+    <a href="/renting-empresas.html">Empresas</a>
+  </div>
+  <span class="footer-copy">2026 MiRenting · Barcelona</span>
+</footer>
 </body>
 </html>
