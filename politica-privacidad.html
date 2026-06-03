@@ -1,382 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NHXGQF97');</script>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacidad | MiRenting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <title>Politica de Privacidad | MiRenting</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.myrenting.es/politica-privacidad.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #F5F3EE;
-      --ink: #1A1A18;
-      --muted: #6B6B63;
-      --accent: #1E5CFF;
-      --accent-light: #E8EEFF;
-      --border: #DEDAD2;
-      --white: #FFFFFF;
-      --green: #0A7C4E;
-      --green-light: #E6F4EF;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --accent:#e8380d;--accent-dk:#c42e0a;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --ink:#111;--ink-2:#444;--ink-3:#666;--ink-4:#999;--ink-5:#bbb;
+      --border:#ebebeb;--border-2:#e0e0e0;
+      --surface:#fff;--surface-2:#f7f7f5;--surface-3:#fafafa;
+      --green:#00c47a;--green-lt:#e8f5ee;--green-dk:#00875a;
+      --radius:12px;--radius-sm:7px;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.7;
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,sans-serif;background:var(--surface-2);color:var(--ink);}
+    a{color:inherit;text-decoration:none;}
+    .nav{background:var(--surface);border-bottom:1.5px solid var(--border);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:100;}
+    .nav-brand{display:flex;align-items:center;gap:8px;}
+    .nav-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;}
+    .nav-name{font-size:17px;font-weight:800;letter-spacing:-.5px;color:var(--ink);}
+    .nav-links{display:flex;gap:24px;align-items:center;}
+    .nav-links a{font-size:12px;color:var(--ink-4);font-weight:500;transition:color .15s;}
+    .nav-links a:hover{color:var(--ink);}
+    .nav-cta{background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:8px 16px;border-radius:var(--radius-sm);transition:background .15s;}
+    .nav-cta:hover{background:var(--accent-dk);}
+    .footer{background:#111;padding:18px 32px;display:flex;justify-content:space-between;align-items:center;margin-top:48px;}
+    .footer-brand{display:flex;align-items:center;gap:8px;}
+    .footer-logo{width:24px;height:24px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;}
+    .footer-name{font-size:14px;font-weight:800;color:#fff;}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:11px;color:#444;transition:color .15s;}
+    .footer-links a:hover{color:#888;}
+    .footer-copy{font-size:11px;color:#444;}
+    .hero{background:var(--accent);color:#fff;padding:56px 32px 48px;text-align:center;}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:14px;}
+    .hero h1 em{font-style:normal;color:rgba(255,255,255,0.7);}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,.75);max-width:500px;margin:0 auto;}
+    .hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:5px 14px;font-size:.78rem;font-weight:600;margin-bottom:20px;color:rgba(255,255,255,.9);}
+    main{max-width:1100px;margin:36px auto;padding:0 32px;}
+    .section-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-bottom:24px;}
+    .section-card h2{font-size:1.1rem;font-weight:800;margin-bottom:16px;letter-spacing:-.3px;}
+    .section-card h3{font-size:1rem;font-weight:700;margin:20px 0 8px;padding-left:12px;border-left:3px solid var(--accent);}
+    .section-card p{color:var(--ink-4);line-height:1.8;margin-bottom:12px;font-size:.95rem;}
+    .section-card ul{color:var(--ink-4);line-height:1.9;padding-left:20px;font-size:.95rem;margin-bottom:12px;}
+    .section-card strong{color:var(--ink);}
+    .faq-item{border-bottom:1px solid var(--border);overflow:hidden;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:16px 0;font-size:.95rem;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit;}
+    .faq-arrow{transition:transform .2s;font-size:.8rem;color:var(--ink-5);}
+    .faq-item.open .faq-arrow{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .faq-item.open .faq-a{max-height:400px;}
+    .faq-a p{color:var(--ink-4);padding-bottom:16px;line-height:1.7;font-size:.9rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;}
+    .stat-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;}
+    .stat-val{font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:-1px;}
+    .stat-label{font-size:.8rem;color:var(--ink-5);margin-top:4px;}
+    .cta-box{background:var(--accent);color:#fff;border-radius:var(--radius);padding:36px;text-align:center;margin-bottom:24px;}
+    .cta-box h2{font-size:1.3rem;font-weight:800;margin-bottom:8px;}
+    .cta-box p{color:rgba(255,255,255,.75);margin-bottom:20px;}
+    .btn-cta{background:#fff;color:var(--accent);text-decoration:none;padding:12px 28px;border-radius:var(--radius-sm);font-size:.95rem;font-weight:700;display:inline-block;transition:opacity .15s;}
+    .btn-cta:hover{opacity:.9;}
+    .breadcrumb{font-size:.82rem;color:var(--ink-5);margin-bottom:24px;}
+    .breadcrumb a{color:var(--ink-4);}
+    .breadcrumb a:hover{color:var(--ink);}
+    @media(max-width:768px){
+      .nav{padding:0 16px;}
+      .nav-links{display:none;}
+      main{padding:0 16px;}
+      .stats-grid{grid-template-columns:1fr 1fr;}
+      .footer{flex-direction:column;gap:12px;text-align:center;padding:16px;}
+      .footer-links{flex-wrap:wrap;justify-content:center;}
+      .hero{padding:40px 16px 32px;}
     }
-    nav {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .nav-logo span { color: var(--accent); }
-    .nav-back {
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: color 0.2s;
-    }
-    .nav-back:hover { color: var(--accent); }
-    .page-header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 3rem 2rem 2.5rem;
-    }
-    .page-header-inner { max-width: 800px; margin: 0 auto; }
-    .breadcrumb {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .breadcrumb a { color: var(--muted); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--accent); }
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-    .page-meta { margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted); }
-    .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem 5rem; }
-    .toc {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 3rem;
-    }
-    .toc-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .toc ol { list-style: none; counter-reset: toc-counter; }
-    .toc ol li { counter-increment: toc-counter; margin-bottom: 0.35rem; }
-    .toc ol li::before {
-      content: counter(toc-counter, decimal-leading-zero) ". ";
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    .toc a { color: var(--ink); text-decoration: none; font-size: 0.9rem; transition: color 0.15s; }
-    .toc a:hover { color: var(--accent); }
-    section { margin-bottom: 3rem; scroll-margin-top: 80px; }
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      margin-bottom: 1rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 2px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    h2 .section-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 26px;
-      height: 26px;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 0.75rem;
-      font-weight: 700;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-    h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 1.5rem 0 0.5rem;
-      color: var(--ink);
-    }
-    p { margin-bottom: 0.85rem; }
-    p:last-child { margin-bottom: 0; }
-    a { color: var(--accent); }
-    ul { padding-left: 1.25rem; margin-bottom: 0.85rem; }
-    ul li { margin-bottom: 0.3rem; }
-    .highlight-box {
-      background: var(--accent-light);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      padding: 1rem 1.25rem;
-      margin: 1.25rem 0;
-      font-size: 0.9rem;
-    }
-    .rights-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin: 1rem 0;
-    }
-    .right-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-    }
-    .right-card .right-letter {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      background: var(--green-light);
-      color: var(--green);
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      border-radius: 6px;
-      margin-bottom: 0.5rem;
-    }
-    .right-card p { font-size: 0.85rem; color: var(--muted); margin: 0; }
-    .right-card strong { display: block; font-size: 0.9rem; color: var(--ink); margin-bottom: 0.2rem; }
-    .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
-    .data-table th {
-      background: var(--ink);
-      color: var(--white);
-      padding: 0.6rem 0.75rem;
-      text-align: left;
-      font-family: 'Syne', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    .data-table th:first-child { border-radius: 6px 0 0 0; }
-    .data-table th:last-child { border-radius: 0 6px 0 0; }
-    .data-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.85rem; vertical-align: top; }
-    .data-table tr:last-child td { border-bottom: none; }
-    footer {
-      background: var(--ink);
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.8rem;
-    }
-    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
-    footer a:hover { color: #fff; }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.7rem; }
-      .rights-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+</style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<nav>
-  <a href="https://myrenting.es/" class="nav-logo">Mi<span>Renting</span></a>
-  <a href="https://myrenting.es/" class="nav-back">← Volver al comparador</a>
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-logo">M</div>
+    <a href="/"><span class="nav-name">MiRenting</span></a>
+  </div>
+  <div class="nav-links">
+    <a href="/">Ofertas</a>
+    <a href="/blog/">Blog</a>
+    <a href="/renting-autonomos.html">Autonomos</a>
+    <a href="/renting-empresas.html">Empresas</a>
+  </div>
+  <a href="/" class="nav-cta">Comparar gratis</a>
 </nav>
 
-<div class="page-header">
-  <div class="page-header-inner">
-    <div class="breadcrumb">
-      <a href="https://myrenting.es/">MiRenting</a>
-      <span>›</span>
-      <span>Política de Privacidad</span>
-    </div>
-    <h1>Política de Privacidad</h1>
-    <p class="page-meta">Última actualización: mayo de 2025 · Reglamento (UE) 2016/679 (RGPD)</p>
+<section class="hero">
+  <div class="hero-pill">Transparencia y privacidad</div>
+  <h1>Politica de <em>Privacidad</em></h1>
+  <p class="hero-sub">Como usamos y protegemos tus datos personales.</p>
+</section>
+
+<main>
+
+<div class="breadcrumb"><a href="/">MiRenting</a> › Politica de Privacidad</div>
+
+<div class="section-card">
+  <h2>Politica de Privacidad</h2>
+  <p>Ultima actualizacion: junio 2026</p>
+
+  <h3>Responsable del tratamiento</h3>
+  <p>MiRenting (myrenting.es) es el responsable del tratamiento de los datos personales que nos facilitas a traves de este sitio web y sus formularios de contacto.</p>
+
+  <h3>Datos que recopilamos</h3>
+  <p>Cuando rellenas un formulario de solicitud de informacion en nuestro sitio, recopilamos:</p>
+  <ul>
+    <li>Nombre y apellidos</li>
+    <li>Numero de telefono</li>
+    <li>Direccion de email</li>
+    <li>Perfil de cliente (particular, autonomo o empresa)</li>
+    <li>Kilometraje anual estimado</li>
+    <li>Vehiculo de interes</li>
+  </ul>
+
+  <h3>Finalidad del tratamiento</h3>
+  <p>Tus datos se utilizan exclusivamente para:</p>
+  <ul>
+    <li>Gestionar tu solicitud de informacion sobre ofertas de renting</li>
+    <li>Ponernos en contacto contigo para resolver tus dudas</li>
+    <li>Enviarte la informacion sobre la oferta que te interesa</li>
+  </ul>
+
+  <h3>Base juridica</h3>
+  <p>El tratamiento de tus datos se basa en tu consentimiento expreso al enviar el formulario.</p>
+
+  <h3>Conservacion de datos</h3>
+  <p>Conservamos tus datos durante el tiempo necesario para gestionar tu solicitud y, en su caso, el tiempo legalmente establecido.</p>
+
+  <h3>Tus derechos</h3>
+  <p>Tienes derecho a acceder, rectificar, cancelar y oponerte al tratamiento de tus datos. Para ejercerlos, contacta con nosotros en <strong>mtiagconsulting@gmail.com</strong>.</p>
+
+  <h3>Cookies</h3>
+  <p>Este sitio utiliza cookies de analisis (Google Analytics / Google Tag Manager) para medir el trafico y mejorar la experiencia de usuario. Puedes desactivarlas desde la configuracion de tu navegador.</p>
+
+  <h3>Cambios en esta politica</h3>
+  <p>Nos reservamos el derecho de actualizar esta politica de privacidad. Te notificaremos cualquier cambio significativo a traves de esta misma pagina.</p>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-logo">M</div>
+    <span class="footer-name">MiRenting</span>
   </div>
-</div>
-
-<div class="container">
-
-  <nav class="toc" aria-label="Índice">
-    <div class="toc-title">Contenido</div>
-    <ol>
-      <li><a href="#responsable">Responsable del tratamiento</a></li>
-      <li><a href="#datos-recogidos">Datos que recogemos</a></li>
-      <li><a href="#finalidades">Finalidades y base jurídica</a></li>
-      <li><a href="#conservacion">Plazo de conservación</a></li>
-      <li><a href="#destinatarios">Destinatarios y transferencias</a></li>
-      <li><a href="#derechos">Tus derechos</a></li>
-      <li><a href="#menores">Menores de edad</a></li>
-      <li><a href="#cambios">Cambios en esta política</a></li>
-    </ol>
-  </nav>
-
-  <section id="responsable">
-    <h2><span class="section-num">01</span> Responsable del tratamiento</h2>
-    <table class="data-table">
-      <tr><td style="font-weight:500;color:var(--muted);width:40%">Responsable</td><td>mtiagconsulting</td></tr>
-      <tr><td>Domicilio</td><td>Barcelona, España</td></tr>
-      <tr><td>Contacto</td><td><a href="mailto:mtiagconsulting@gmail.com">mtiagconsulting@gmail.com</a></td></tr>
-    </table>
-  </section>
-
-  <section id="datos-recogidos">
-    <h2><span class="section-num">02</span> Datos que recogemos</h2>
-
-    <h3>2.1 Formulario de solicitud de información</h3>
-    <p>Cuando el usuario rellena el formulario de contacto para solicitar información sobre una oferta de renting, recogemos:</p>
-    <ul>
-      <li>Nombre y apellidos</li>
-      <li>Número de teléfono</li>
-      <li>Dirección de correo electrónico</li>
-      <li>Mensaje libre introducido por el usuario</li>
-    </ul>
-
-    <h3>2.2 Datos de navegación</h3>
-    <p>Al navegar por el Sitio, se pueden recoger automáticamente datos técnicos como la dirección IP, tipo de navegador, páginas visitadas y duración de la visita, con fines estadísticos y de seguridad.</p>
-
-    <div class="highlight-box">
-      MiRenting no vende ni cede tus datos personales a terceros con fines publicitarios ni comerciales propios.
-    </div>
-  </section>
-
-  <section id="finalidades">
-    <h2><span class="section-num">03</span> Finalidades y base jurídica</h2>
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Finalidad</th>
-          <th>Base jurídica</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tramitar tu solicitud de información y remitirla a la gestora seleccionada</td>
-          <td>Ejecución de medidas precontractuales a petición del interesado (art. 6.1.b RGPD)</td>
-        </tr>
-        <tr>
-          <td>Gestionar posibles consultas o reclamaciones</td>
-          <td>Interés legítimo del responsable (art. 6.1.f RGPD)</td>
-        </tr>
-        <tr>
-          <td>Análisis estadístico anónimo del uso del Sitio</td>
-          <td>Interés legítimo (art. 6.1.f RGPD)</td>
-        </tr>
-        <tr>
-          <td>Cumplimiento de obligaciones legales</td>
-          <td>Obligación legal (art. 6.1.c RGPD)</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="conservacion">
-    <h2><span class="section-num">04</span> Plazo de conservación</h2>
-    <p>Los datos facilitados a través del formulario se conservarán durante el tiempo necesario para dar respuesta a tu solicitud y, una vez finalizada, durante el plazo de prescripción de las posibles responsabilidades legales derivadas del tratamiento (máximo 3 años), salvo obligación legal de conservación más prolongada.</p>
-  </section>
-
-  <section id="destinatarios">
-    <h2><span class="section-num">05</span> Destinatarios y transferencias internacionales</h2>
-    <p>Los datos del formulario de solicitud se remiten a la gestora de renting que el usuario ha seleccionado (Arval, Ayvens, Alphabet u otras), que actuará como responsable independiente a partir de ese momento y tratará los datos conforme a su propia política de privacidad.</p>
-    <p>No se realizan transferencias internacionales de datos fuera del Espacio Económico Europeo, salvo que el proveedor de infraestructura técnica utilizado ofrezca garantías adecuadas conforme al RGPD (cláusulas contractuales tipo o nivel de adecuación reconocido).</p>
-  </section>
-
-  <section id="derechos">
-    <h2><span class="section-num">06</span> Tus derechos</h2>
-    <p>Puedes ejercer en cualquier momento los siguientes derechos enviando un correo a <a href="mailto:mtiagconsulting@gmail.com">mtiagconsulting@gmail.com</a> con el asunto "Ejercicio de derechos RGPD":</p>
-
-    <div class="rights-grid">
-      <div class="right-card">
-        <div class="right-letter">A</div>
-        <strong>Acceso</strong>
-        <p>Saber qué datos tratamos sobre ti.</p>
-      </div>
-      <div class="right-card">
-        <div class="right-letter">R</div>
-        <strong>Rectificación</strong>
-        <p>Corregir datos inexactos o incompletos.</p>
-      </div>
-      <div class="right-card">
-        <div class="right-letter">S</div>
-        <strong>Supresión</strong>
-        <p>Solicitar el borrado de tus datos.</p>
-      </div>
-      <div class="right-card">
-        <div class="right-letter">L</div>
-        <strong>Limitación</strong>
-        <p>Restringir el tratamiento en ciertos casos.</p>
-      </div>
-      <div class="right-card">
-        <div class="right-letter">P</div>
-        <strong>Portabilidad</strong>
-        <p>Recibir tus datos en formato estructurado.</p>
-      </div>
-      <div class="right-card">
-        <div class="right-letter">O</div>
-        <strong>Oposición</strong>
-        <p>Oponerte a ciertos tratamientos.</p>
-      </div>
-    </div>
-
-    <p>Si consideras que el tratamiento de tus datos no es conforme al RGPD, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> en <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
-  </section>
-
-  <section id="menores">
-    <h2><span class="section-num">07</span> Menores de edad</h2>
-    <p>El Sitio no está dirigido a menores de 14 años. mtiagconsulting no recoge conscientemente datos de menores. Si detectamos que se han facilitado datos de un menor sin consentimiento parental, procederemos a su eliminación inmediata.</p>
-  </section>
-
-  <section id="cambios">
-    <h2><span class="section-num">08</span> Cambios en esta política</h2>
-    <p>Esta política puede actualizarse para adaptarse a cambios normativos o modificaciones en el Sitio. La fecha de "última actualización" en el encabezado refleja siempre la versión vigente. Recomendamos revisarla periódicamente.</p>
-  </section>
-
-</div>
-
-<footer>
-  <p>© 2025 MiRenting · mtiagconsulting · Barcelona, España</p>
-  <p style="margin-top:0.5rem;">
-    <a href="aviso-legal.html">Aviso Legal</a> ·
-    <a href="politica-privacidad.html">Privacidad</a> ·
-    <a href="politica-cookies.html">Cookies</a>
-  </p>
+  <div class="footer-links">
+    <a href="/aviso-legal.html">Aviso legal</a>
+    <a href="/politica-privacidad.html">Privacidad</a>
+    <a href="/blog/">Blog</a>
+    <a href="/renting-autonomos.html">Autonomos</a>
+    <a href="/renting-empresas.html">Empresas</a>
+  </div>
+  <span class="footer-copy">2026 MiRenting · Barcelona, Espana</span>
 </footer>
 
+<script>
+function toggleFaq(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+</script>
 </body>
 </html>
