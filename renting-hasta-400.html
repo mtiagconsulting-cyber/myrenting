@@ -18,10 +18,10 @@
 :root{--accent:#e8380d;--accent-2:#c42e0a;--ink:#111318;--ink-2:#2d2d3a;--ink-3:#6b6b80;--ink-4:#a0a0b0;
       --green:#00c47a;--surface:#fff;--surface-2:#f7f8fa;--border:#e4e4ec;--radius:14px;--radius-sm:8px}
 body{font-family:'Inter',sans-serif;background:var(--surface-2);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-nav{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 28px;height:62px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.25rem;font-weight:800;color:var(--ink);text-decoration:none}
-.logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;margin-left:3px;margin-bottom:10px}
+
+
+
+
 .cat-hero{background:#111318;color:#fff;padding:52px 28px}
 .cat-hero-inner{max-width:1280px;margin:0 auto}
 .breadcrumb{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:14px}
@@ -53,11 +53,36 @@ main{max-width:1280px;margin:0 auto;padding:40px 28px}
 .seo-block ul{padding-left:1.3rem;margin-bottom:12px}
 .seo-block li{color:var(--ink-3);margin-bottom:5px;line-height:1.6;font-size:.92rem}
 .seo-block strong{color:var(--ink)}
-footer{background:#111318;color:rgba(255,255,255,.4);padding:32px 28px;text-align:center;font-size:.8rem}
+
 footer a{color:rgba(255,255,255,.4);text-decoration:none;margin:0 6px}
 footer a:hover{color:#fff}
 footer p+p{margin-top:8px}
-@media(max-width:640px){.cat-hero{padding:36px 16px}main{padding:24px 16px}.stats-bar{flex-wrap:wrap;gap:16px}.offers-grid{grid-template-columns:1fr}}</style>
+@media(max-width:640px){.cat-hero{padding:36px 16px}main{padding:24px 16px}.stats-bar{flex-wrap:wrap;gap:16px}.offers-grid{grid-template-columns:1fr}}
+    /* ── NAV NUEVO ── */
+    .nav{background:#fff !important;border-bottom:1.5px solid #ebebeb !important;height:58px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;padding:0 32px !important;position:sticky !important;top:0 !important;z-index:100 !important;backdrop-filter:none !important;}
+    .nav-brand{display:flex !important;align-items:center !important;gap:8px !important;}
+    .nav-logo{width:28px !important;height:28px !important;background:#e8380d !important;border-radius:7px !important;display:flex !important;align-items:center !important;justify-content:center !important;color:#fff !important;font-size:13px !important;font-weight:800 !important;}
+    .nav-name{font-size:17px !important;font-weight:800 !important;letter-spacing:-.5px !important;color:#111 !important;}
+    .nav-links{display:flex !important;gap:24px !important;align-items:center !important;list-style:none !important;}
+    .nav-links a{font-size:12px !important;color:#bbb !important;font-weight:500 !important;text-decoration:none !important;}
+    .nav-links a:hover{color:#111 !important;}
+    .nav-cta{background:#e8380d !important;color:#fff !important;font-size:11px !important;font-weight:700 !important;padding:8px 16px !important;border-radius:7px !important;text-decoration:none !important;}
+    /* ── FOOTER NUEVO ── */
+    .footer{background:#111 !important;padding:18px 32px !important;display:flex !important;justify-content:space-between !important;align-items:center !important;margin-top:40px !important;}
+    .footer-brand{display:flex !important;align-items:center !important;gap:8px !important;}
+    .footer-logo{width:24px !important;height:24px !important;background:#e8380d !important;border-radius:6px !important;display:flex !important;align-items:center !important;justify-content:center !important;color:#fff !important;font-size:11px !important;font-weight:800 !important;}
+    .footer-name{font-size:14px !important;font-weight:800 !important;color:#fff !important;}
+    .footer-links{display:flex !important;gap:20px !important;}
+    .footer-links a{font-size:11px !important;color:#444 !important;text-decoration:none !important;}
+    .footer-copy{font-size:11px !important;color:#444 !important;}
+    @media(max-width:768px){
+      .nav{padding:0 16px !important;}
+      .nav-links{display:none !important;}
+      .footer{flex-direction:column !important;gap:12px !important;text-align:center !important;padding:16px !important;}
+      .footer-links{flex-wrap:wrap !important;justify-content:center !important;}
+    }
+
+  </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
