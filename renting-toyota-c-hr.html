@@ -207,6 +207,10 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+
+    @media(max-width:600px){
+      #similares-grid{grid-template-columns:1fr 1fr !important;}
+    }
   </style>
 </head>
 <body>
@@ -287,31 +291,58 @@
     <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
   </div>
   <div class="ofertas-body collapsed" id="ofertas-body">
+    
     <div class="filter-bar">
       <div class="filter-bar-inner">
-        <div class="filter-bar-inner">
-        <div class="filter-group-inline">
+        <div class="filter-group">
           <label>Plazo</label>
-          <select id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option><option value="24">24 meses</option></select>
+          <select id="f-plazo" onchange="filtrarTabla()">
+            <option value="">Cualquier plazo</option>
+            <option value="24">24 meses</option>
+            <option value="36">36 meses</option>
+            <option value="48">48 meses</option>
+            <option value="60">60 meses</option>
+            <option value="72">72 meses</option>
+          </select>
         </div>
-        <div class="filter-group-inline">
+        <div class="filter-group">
           <label>Combustible</label>
-          <select id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option><option value="híbrido">Híbrido</option></select>
+          <select id="f-fuel" onchange="filtrarTabla()">
+            <option value="">Cualquier combustible</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="diésel">Diesel</option>
+            <option value="híbrido">Hibrido</option>
+            <option value="eléctrico">Electrico</option>
+            <option value="híbrido enchufable">Hibrido Enchufable</option>
+          </select>
         </div>
-        <div class="filter-group-inline">
-          <label>Cliente</label>
-          <select id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option><option value="particular">Particular</option></select>
+        <div class="filter-group">
+          <label>Perfil</label>
+          <select id="f-tipo" onchange="filtrarTabla()">
+            <option value="">Empresa y particular</option>
+            <option value="empresa">Empresa</option>
+            <option value="particular">Particular</option>
+          </select>
         </div>
-        <div class="filter-group-inline">
+        <div class="filter-group">
           <label>Gestora</label>
-          <select id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select>
+          <select id="f-fuente" onchange="filtrarTabla()">
+            <option value="">Todas las gestoras</option>
+            <option value="arval">Arval</option>
+            <option value="ayvens">Ayvens</option>
+            <option value="alphabet">Alphabet</option>
+            <option value="kinto">Kinto</option>
+            <option value="revel">REVEL</option>
+            <option value="leasys">Leasys</option>
+          </select>
         </div>
-        <div class="filter-results-wrap">
+        <div class="filter-actions">
           <span id="filter-count" class="filter-count"></span>
-          <button class="filter-reset" onclick="resetFiltros()" id="btn-reset" style="display:none">✕ Limpiar</button>
+          <button class="btn-reset" onclick="resetFiltros()" id="btn-reset" style="display:none">✕ Limpiar</button>
         </div>
       </div>
     </div>
+
     <div class="comp-table-wrap">
       <table class="comp-table">
         <thead><tr><th>#</th><th>Gestora</th><th>Cliente</th><th>Combustible</th><th>Plazo</th><th>Km/año</th><th>Versión</th><th>Precio/mes</th><th></th></tr></thead>
@@ -624,6 +655,14 @@
 
 <button class="mobile-cta" onclick="abrirModal()">Solicitar informacion gratis</button>
 
+
+<!-- MODELOS SIMILARES -->
+<div class="section" id="similares-section" style="margin-bottom:32px;">
+  <div class="section-title">Modelos similares</div>
+  <div class="section-sub" style="margin-bottom:14px;">Otros coches disponibles en renting</div>
+  <div id="similares-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;"></div>
+</div>
+
 <footer class="footer">
   <div class="footer-brand">
     <div class="footer-logo">M</div>
@@ -733,6 +772,39 @@
     document.getElementById('modal-success').style.display = 'block';
     setTimeout(() => { document.getElementById('modal-overlay').style.display = 'none'; }, 3000);
   }
+
+
+  // Modelos similares
+  (function() {
+    const currentUrl = window.location.pathname;
+    const links = [
+      {name:'Seat Arona', price:'232€/mes', url:'/renting-seat-arona.html'},
+      {name:'VW Tiguan', price:'536€/mes', url:'/renting-volkswagen-tiguan.html'},
+      {name:'Kia Sportage', price:'355€/mes', url:'/renting-kia-sportage.html'},
+      {name:'Audi Q3', price:'449€/mes', url:'/renting-audi-q3.html'},
+      {name:'BMW X1', price:'506€/mes', url:'/renting-bmw-x1.html'},
+      {name:'Toyota C-HR', price:'389€/mes', url:'/renting-toyota-c-hr.html'},
+      {name:'Renault Captur', price:'259€/mes', url:'/renting-renault-captur.html'},
+      {name:'Peugeot 3008', price:'349€/mes', url:'/renting-peugeot-3008.html'},
+      {name:'Skoda Karoq', price:'291€/mes', url:'/renting-skoda-karoq.html'},
+      {name:'Hyundai Tucson', price:'334€/mes', url:'/renting-hyundai-tucson.html'},
+      {name:'Mercedes GLA', price:'567€/mes', url:'/renting-mercedes-benz-gla.html'},
+      {name:'Ford Kuga', price:'349€/mes', url:'/renting-ford-kuga.html'},
+    ];
+    const filtered = links.filter(l => l.url !== currentUrl).slice(0, 4);
+    const grid = document.getElementById('similares-grid');
+    if (!grid) return;
+    filtered.forEach(m => {
+      grid.insertAdjacentHTML('beforeend', `
+        <a href="${m.url}" style="background:#fff;border:1px solid #ebebeb;border-radius:12px;padding:16px;display:block;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:9px;color:#bbb;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Renting</div>
+          <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:8px;">${m.name}</div>
+          <div style="font-size:18px;font-weight:800;color:#e8380d;letter-spacing:-.5px;">${m.price}</div>
+          <div style="margin-top:10px;background:#e8380d;color:#fff;text-align:center;padding:7px;border-radius:6px;font-size:11px;font-weight:700;">Ver ofertas</div>
+        </a>
+      `);
+    });
+  })();
 
   // FAQ
   function toggleFaq(el) {

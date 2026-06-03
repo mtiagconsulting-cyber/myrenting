@@ -161,5 +161,38 @@ function renderModels(models) {
 
 const groups = buildGroups(_OFERTAS);
 renderModels(groups);
+
+  // Modelos similares
+  (function() {
+    const currentUrl = window.location.pathname;
+    const links = [
+      {name:'Seat Arona', price:'232€/mes', url:'/renting-seat-arona.html'},
+      {name:'VW Tiguan', price:'536€/mes', url:'/renting-volkswagen-tiguan.html'},
+      {name:'Kia Sportage', price:'355€/mes', url:'/renting-kia-sportage.html'},
+      {name:'Audi Q3', price:'449€/mes', url:'/renting-audi-q3.html'},
+      {name:'BMW X1', price:'506€/mes', url:'/renting-bmw-x1.html'},
+      {name:'Toyota C-HR', price:'389€/mes', url:'/renting-toyota-c-hr.html'},
+      {name:'Renault Captur', price:'259€/mes', url:'/renting-renault-captur.html'},
+      {name:'Peugeot 3008', price:'349€/mes', url:'/renting-peugeot-3008.html'},
+      {name:'Skoda Karoq', price:'291€/mes', url:'/renting-skoda-karoq.html'},
+      {name:'Hyundai Tucson', price:'334€/mes', url:'/renting-hyundai-tucson.html'},
+      {name:'Mercedes GLA', price:'567€/mes', url:'/renting-mercedes-benz-gla.html'},
+      {name:'Ford Kuga', price:'349€/mes', url:'/renting-ford-kuga.html'},
+    ];
+    const filtered = links.filter(l => l.url !== currentUrl).slice(0, 4);
+    const grid = document.getElementById('similares-grid');
+    if (!grid) return;
+    filtered.forEach(m => {
+      grid.insertAdjacentHTML('beforeend', `
+        <a href="${m.url}" style="background:#fff;border:1px solid #ebebeb;border-radius:12px;padding:16px;display:block;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-size:9px;color:#bbb;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Renting</div>
+          <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:8px;">${m.name}</div>
+          <div style="font-size:18px;font-weight:800;color:#e8380d;letter-spacing:-.5px;">${m.price}</div>
+          <div style="margin-top:10px;background:#e8380d;color:#fff;text-align:center;padding:7px;border-radius:6px;font-size:11px;font-weight:700;">Ver ofertas</div>
+        </a>
+      `);
+    });
+  })();
+
 </script>
 </body></html>
