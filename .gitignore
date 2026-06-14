@@ -3,3 +3,6 @@ img/.DS_Store
 *.py
 index_redesign.html
 scraper-concesionarios/
+*.json
+*backup*.html
+*debug*.html
