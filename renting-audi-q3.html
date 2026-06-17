@@ -772,6 +772,12 @@
           <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Perfil</label><select id="lf-perfil" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;background:white;"><option value="particular">Particular</option><option value="autonomo">Autonomo</option><option value="empresa">Empresa</option></select></div>
           <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Km anuales</label><select id="lf-km" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;background:white;"><option value="10000">10.000 km</option><option value="15000">15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000+ km</option></select></div>
         </div>
+        <div style="margin-bottom:14px;">
+          <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:#444;cursor:pointer;">
+            <input type="checkbox" id="lf-whatsapp" style="width:16px;height:16px;accent-color:#e8380d;cursor:pointer;">
+            Prefiero que me contacten por WhatsApp
+          </label>
+        </div>
         <div style="background:#f7f7f5;border-radius:7px;padding:10px 12px;margin-bottom:14px;display:flex;gap:16px;flex-wrap:wrap;">
           <span style="font-size:11px;color:#666;">✓ Sin compromiso</span>
           <span style="font-size:11px;color:#666;">✓ Respuesta en 24h</span>
@@ -963,9 +969,14 @@
     formData.append('email',    email);
     formData.append('perfil',   document.getElementById('lf-perfil').value);
     formData.append('km',       document.getElementById('lf-km').value);
-    formData.append('coche',    document.getElementById('lead-car').textContent);
-    formData.append('oferta',   _leadUrl);
-    formData.append('_subject', 'Lead myrenting — ' + document.getElementById('lead-car').textContent);
+    var precioOferta = document.getElementById('lead-price').textContent;
+    var detallesOferta = document.getElementById('lead-details').textContent;
+    var prefiereWhatsapp = document.getElementById('lf-whatsapp').checked ? 'Sí' : 'No';
+    formData.append('coche',     document.getElementById('lead-car').textContent);
+    formData.append('precio_mes', precioOferta + '€/mes');
+    formData.append('plazo_km',  detallesOferta);
+    formData.append('contactar_whatsapp', prefiereWhatsapp);
+    formData.append('_subject', 'Lead myrenting — ' + document.getElementById('lead-car').textContent + ' (' + precioOferta + '€/mes)' + (prefiereWhatsapp === 'Sí' ? ' [WHATSAPP]' : ''));
     try {
       await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com', {
         method: 'POST',

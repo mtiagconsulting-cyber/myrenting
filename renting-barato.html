@@ -259,9 +259,14 @@ renderModels(groups);
     formData.append('email',    email);
     formData.append('perfil',   document.getElementById('lf-perfil').value);
     formData.append('km',       document.getElementById('lf-km').value);
-    formData.append('coche',    document.getElementById('lead-car').textContent);
-    formData.append('oferta',   _leadUrl);
-    formData.append('_subject', 'Lead myrenting — ' + document.getElementById('lead-car').textContent);
+    var precioOferta = document.getElementById('lead-price').textContent;
+    var detallesOferta = document.getElementById('lead-details').textContent;
+    var prefiereWhatsapp = document.getElementById('lf-whatsapp') ? (document.getElementById('lf-whatsapp').checked ? 'Sí' : 'No') : 'No';
+    formData.append('coche',     document.getElementById('lead-car').textContent);
+    formData.append('precio_mes', precioOferta + '€/mes');
+    formData.append('plazo_km',  detallesOferta);
+    formData.append('contactar_whatsapp', prefiereWhatsapp);
+    formData.append('_subject', 'Lead myrenting — ' + document.getElementById('lead-car').textContent + ' (' + precioOferta + '€/mes)' + (prefiereWhatsapp === 'Sí' ? ' [WHATSAPP]' : ''));
     try {
       await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com', {
         method: 'POST',
