@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -13,12 +12,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="shortcut icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Renting de Coches · Compara +1000 Ofertas Sin Entrada | Myrenting</title>
-<meta name="description" content="Compara las mejores ofertas de renting de coches en España. Arval, Ayvens, Alphabet, REVEL, Leasys y más. Sin registrarte, sin letra pequeña.">
+<title>Renting de Coches &middot; Compara +1000 Ofertas Sin Entrada | Myrenting</title>
+<meta name="description" content="Compara las mejores ofertas de renting de coches en Espa&ntilde;a. Arval, Ayvens, Alphabet, REVEL, Leasys y m&aacute;s. Sin registrarte, sin letra peque&ntilde;a.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://myrenting.es">
-<meta property="og:title" content="Comparador de Renting de Coches en España | Myrenting">
-<meta property="og:description" content="Compara todas las ofertas de renting de coches en España. Precios reales sin letra pequeña. Gratis y sin registrarse.">
+<meta property="og:title" content="Comparador de Renting de Coches en Espa&ntilde;a | Myrenting">
+<meta property="og:description" content="Compara todas las ofertas de renting de coches en Espa&ntilde;a. Precios reales sin letra peque&ntilde;a.">
 <meta property="og:url" content="https://myrenting.es">
 <meta property="og:image" content="https://myrenting.es/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -30,469 +29,456 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --red:#e8380d;--red-dk:#c42e0a;--red-lt:#fff5f2;--red-border:#ffd5cc;
-  --ink:#0a0a0a;--ink-2:#333;--ink-3:#555;--ink-4:#888;--ink-5:#bbb;
-  --border:#e8e8e8;--border-2:#d4d4d4;
-  --bg:#ffffff;--bg-2:#f9f9f9;--bg-3:#f2f2f2;
-  --green:#00a86b;--green-lt:#e6f7f0;
-  --r:14px;--r-sm:8px;--r-lg:20px;
-  --sh:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.06);
+  --o:#FF5C00;
+  --o-dk:#E54E00;
+  --o-lt:#FFF4EE;
+  --o-mid:#FFD4BD;
+  --ink:#111111;
+  --ink-2:#3D3D3D;
+  --ink-3:#666666;
+  --ink-4:#999999;
+  --ink-5:#C8C8C8;
+  --white:#FFFFFF;
+  --bg:#F7F7F7;
+  --border:#EBEBEB;
+  --border-2:#DEDEDE;
+  --green:#00A86B;
+  --green-lt:#E6F7F0;
+  --r:16px;--r-sm:10px;--r-xs:6px;
+  --sh:0 2px 8px rgba(0,0,0,.06);
+  --sh-md:0 4px 20px rgba(0,0,0,.08);
   --sh-lg:0 8px 40px rgba(0,0,0,.12);
-  --sh-xl:0 16px 60px rgba(0,0,0,.16);
 }
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-2);color:var(--ink);line-height:1.5}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--ink)}
 a{color:inherit;text-decoration:none}
-button{font-family:inherit}
-img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
 
-/* ── NAV ── */
+/* ===== NAV ===== */
 .nav{
-  position:sticky;top:0;z-index:300;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  height:64px;background:var(--white);
   border-bottom:1px solid var(--border);
-  height:60px;display:flex;align-items:center;
-  padding:0 40px;gap:40px;
+  display:flex;align-items:center;
+  padding:0 48px;gap:48px;
+  position:sticky;top:0;z-index:300;
 }
 .nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.nav-logo-mark{width:32px;height:32px;background:var(--ink);border-radius:10px;display:flex;align-items:center;justify-content:center}
-.nav-logo-mark svg{width:18px;height:18px;fill:#fff}
-.nav-logo-name{font-size:18px;font-weight:800;letter-spacing:-.6px;color:var(--ink)}
-.nav-links{display:flex;align-items:center;gap:6px;flex:1}
-.nav-links a{font-size:13px;font-weight:500;color:var(--ink-4);padding:6px 10px;border-radius:7px;transition:color .15s,background .15s}
-.nav-links a:hover{color:var(--ink);background:var(--bg-3)}
-.nav-links a.active{color:var(--ink);font-weight:600}
+.nav-logo-icon{
+  width:34px;height:34px;background:var(--o);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.nav-logo-icon svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.nav-logo-text{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-.6px}
+.nav-links{display:flex;align-items:center;gap:4px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--ink-3);padding:6px 12px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--ink);background:var(--bg)}
+.nav-links a.cur{color:var(--ink);font-weight:600}
 .nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.btn-nav-ghost{font-size:13px;font-weight:600;color:var(--ink-3);padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--bg);transition:.15s;cursor:pointer}
-.btn-nav-ghost:hover{border-color:var(--border-2);color:var(--ink)}
-.btn-nav-primary{font-size:13px;font-weight:700;color:#fff;padding:8px 18px;border-radius:var(--r-sm);background:var(--ink);border:none;cursor:pointer;transition:background .15s}
-.btn-nav-primary:hover{background:#222}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.btn-ghost{
+  font-size:14px;font-weight:600;color:var(--ink-3);
+  padding:9px 18px;border:1.5px solid var(--border);
+  border-radius:var(--r-sm);background:var(--white);
+  transition:.15s;white-space:nowrap;
+}
+.btn-ghost:hover{color:var(--ink);border-color:var(--border-2)}
+.btn-orange{
+  font-size:14px;font-weight:700;color:var(--white);
+  padding:9px 22px;border-radius:var(--r-sm);
+  background:var(--o);border:none;
+  transition:background .15s;white-space:nowrap;letter-spacing:-.1px;
+}
+.btn-orange:hover{background:var(--o-dk)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px}
 .nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px}
-.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);z-index:299;padding:8px 16px 16px;flex-direction:column;gap:2px}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:299;padding:8px 20px 16px;flex-direction:column;gap:2px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:15px;font-weight:500;padding:12px 8px;color:var(--ink-2);border-bottom:1px solid var(--bg-2)}
+.mobile-menu a{font-size:15px;font-weight:500;color:var(--ink-2);padding:13px 8px;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none;color:var(--o);font-weight:700;margin-top:6px}
 
-/* ── HERO ── */
+/* ===== HERO ===== */
 .hero{
-  background:var(--bg);
-  padding:72px 24px 64px;
+  background:var(--white);
+  padding:80px 24px 72px;
   text-align:center;
-  position:relative;
-  overflow:hidden;
 }
-.hero::before{
-  content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);
-  width:900px;height:600px;
-  background:radial-gradient(ellipse at center,rgba(232,56,13,.05) 0%,transparent 70%);
-  pointer-events:none;
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--ink-3);
+  background:var(--bg);border:1px solid var(--border);
+  padding:6px 16px;border-radius:99px;margin-bottom:28px;
 }
-.hero-label{
-  display:inline-flex;align-items:center;gap:7px;
-  font-size:12px;font-weight:600;color:var(--ink-3);
-  background:var(--bg-2);border:1px solid var(--border);
-  padding:5px 14px;border-radius:99px;margin-bottom:24px;
-  letter-spacing:.1px;
-}
-.hero-label::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+.hero-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
 .hero-h1{
-  font-size:56px;font-weight:900;letter-spacing:-2.5px;line-height:1.05;
-  color:var(--ink);margin-bottom:16px;
+  font-size:60px;font-weight:900;
+  letter-spacing:-3px;line-height:1.02;
+  color:var(--ink);margin-bottom:18px;
 }
-.hero-h1 em{color:var(--red);font-style:normal}
-.hero-sub{
-  font-size:17px;color:var(--ink-4);font-weight:400;
-  max-width:480px;margin:0 auto 44px;line-height:1.6;
+.hero-h1 .hl{color:var(--o)}
+.hero-p{
+  font-size:18px;font-weight:400;color:var(--ink-4);
+  max-width:440px;margin:0 auto 48px;line-height:1.65;
 }
 
-/* ── SEARCH WIDGET ── */
-.search-widget{
-  background:var(--bg);
-  border:1.5px solid var(--border);
-  border-radius:var(--r-lg);
-  box-shadow:var(--sh-xl);
-  max-width:720px;
-  margin:0 auto;
+/* ===== SEARCH BOX ===== */
+.sbox{
+  max-width:740px;margin:0 auto;
+  background:var(--white);
+  border-radius:var(--r);
+  border:1.5px solid var(--border-2);
+  box-shadow:var(--sh-lg);
   overflow:hidden;
 }
-.sw-row1{
-  display:flex;align-items:center;padding:16px 20px;gap:12px;
-  border-bottom:1px solid var(--border);
+.sbox-main{
+  display:flex;align-items:center;
+  padding:18px 20px;gap:14px;
 }
-.sw-search-ico{color:var(--ink-5);flex-shrink:0}
-.sw-input{
+.sbox-icon{color:var(--ink-5);flex-shrink:0;display:flex}
+.sbox-input{
   flex:1;border:none;background:transparent;
-  font-size:16px;font-weight:500;color:var(--ink);outline:none;
-  font-family:inherit;
+  font-size:16px;font-weight:500;color:var(--ink);
+  outline:none;font-family:inherit;
 }
-.sw-input::placeholder{color:var(--ink-5);font-weight:400}
-.sw-btn{
-  background:var(--red);color:#fff;border:none;cursor:pointer;
-  font-size:14px;font-weight:700;padding:12px 24px;
+.sbox-input::placeholder{color:var(--ink-5);font-weight:400}
+.sbox-go{
+  background:var(--o);color:var(--white);border:none;
+  font-size:15px;font-weight:700;padding:12px 28px;
   border-radius:var(--r-sm);font-family:inherit;
-  transition:background .15s;white-space:nowrap;
-  letter-spacing:-.1px;
+  transition:background .15s;white-space:nowrap;letter-spacing:-.1px;
 }
-.sw-btn:hover{background:var(--red-dk)}
-.sw-row2{
+.sbox-go:hover{background:var(--o-dk)}
+.sbox-divider{height:1px;background:var(--border);margin:0}
+.sbox-filters{
   display:grid;grid-template-columns:repeat(3,1fr);
 }
-.sw-field{
-  padding:14px 20px;
+.sf{
+  padding:16px 20px;
   border-right:1px solid var(--border);
 }
-.sw-field:last-child{border-right:none}
-.sw-field label{
+.sf:last-child{border-right:none}
+.sf label{
   display:block;font-size:10px;font-weight:700;
-  color:var(--ink-5);text-transform:uppercase;letter-spacing:.6px;
-  margin-bottom:4px;
+  color:var(--ink-5);text-transform:uppercase;
+  letter-spacing:.7px;margin-bottom:5px;
 }
-.sw-field select{
+.sf select{
   width:100%;border:none;background:transparent;
-  font-size:14px;font-weight:500;color:var(--ink-2);
-  outline:none;cursor:pointer;font-family:inherit;
+  font-size:14px;font-weight:600;color:var(--ink-2);
+  outline:none;font-family:inherit;
   appearance:none;-webkit-appearance:none;
 }
-.sw-row3{
-  padding:14px 20px;display:flex;align-items:center;gap:8px;
-  background:var(--bg-2);
+.sf select:focus{outline:none}
+.sbox-tags{
+  padding:14px 20px;background:var(--bg);
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
 }
-.sw-chips-label{font-size:11px;color:var(--ink-5);font-weight:600;white-space:nowrap}
-.sw-chip{
-  font-size:12px;font-weight:500;
-  background:var(--bg);border:1px solid var(--border);
-  color:var(--ink-3);padding:5px 13px;border-radius:99px;
-  cursor:pointer;transition:.15s;font-family:inherit;white-space:nowrap;
+.stag-lbl{font-size:12px;color:var(--ink-4);font-weight:500;white-space:nowrap;flex-shrink:0}
+.stag{
+  font-size:13px;font-weight:500;
+  background:var(--white);border:1.5px solid var(--border);
+  color:var(--ink-3);padding:5px 14px;border-radius:99px;
+  transition:.15s;white-space:nowrap;
 }
-.sw-chip:hover,.sw-chip.active{background:var(--red-lt);border-color:var(--red-border);color:var(--red)}
+.stag:hover,.stag.active{
+  background:var(--o-lt);border-color:var(--o-mid);color:var(--o);font-weight:600;
+}
 
-/* ── STATS ROW ── */
-.stats-row{
-  display:flex;align-items:center;justify-content:center;gap:0;
-  margin:36px auto 0;max-width:500px;
-  background:var(--bg);border:1.5px solid var(--border);
-  border-radius:var(--r);overflow:hidden;
-  box-shadow:var(--sh);
+/* ===== STATS ===== */
+.stats-bar{
+  display:flex;align-items:center;justify-content:center;
+  gap:0;margin:36px auto 0;
+  max-width:600px;
 }
-.stat-item{
-  flex:1;padding:16px 24px;text-align:center;
-  border-right:1px solid var(--border);
+.sbar-item{
+  flex:1;text-align:center;padding:20px 16px;
+  background:var(--white);border:1.5px solid var(--border);
+  border-right:none;
 }
-.stat-item:last-child{border-right:none}
-.stat-val{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px}
-.stat-val.red{color:var(--red)}
-.stat-lbl{font-size:10px;font-weight:600;color:var(--ink-5);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.sbar-item:first-child{border-radius:var(--r-sm) 0 0 var(--r-sm)}
+.sbar-item:last-child{border-right:1.5px solid var(--border);border-radius:0 var(--r-sm) var(--r-sm) 0}
+.sbar-val{font-size:24px;font-weight:900;color:var(--ink);letter-spacing:-.5px;line-height:1}
+.sbar-val.orange{color:var(--o)}
+.sbar-lbl{font-size:10px;font-weight:600;color:var(--ink-5);text-transform:uppercase;letter-spacing:.6px;margin-top:4px}
 
-/* ── GESTORAS STRIP ── */
-.gestoras{
-  background:var(--bg);border-bottom:1px solid var(--border);
-  padding:14px 40px;
-  display:flex;align-items:center;gap:16px;overflow-x:auto;
+/* ===== STRIPS ===== */
+.trust-strip{
+  background:var(--o);
+  padding:11px 48px;
+  display:flex;align-items:center;justify-content:center;
+  gap:0;flex-wrap:wrap;
 }
-.gest-lbl{font-size:10px;font-weight:700;color:var(--ink-5);text-transform:uppercase;letter-spacing:.6px;white-space:nowrap;flex-shrink:0}
-.gest-sep{width:1px;height:16px;background:var(--border);flex-shrink:0}
-.gest-names{display:flex;gap:6px;align-items:center;flex-wrap:nowrap}
-.gest-tag{
+.ti{font-size:12px;font-weight:600;color:rgba(255,255,255,.9);padding:2px 18px;white-space:nowrap}
+.td{color:rgba(255,255,255,.35);font-size:8px}
+.gestoras-strip{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:14px 48px;
+  display:flex;align-items:center;gap:12px;overflow-x:auto;
+}
+.gst-lbl{font-size:10px;font-weight:700;color:var(--ink-5);text-transform:uppercase;letter-spacing:.6px;white-space:nowrap;flex-shrink:0}
+.gst-divider{width:1px;height:16px;background:var(--border);flex-shrink:0}
+.gst-name{
   font-size:12px;font-weight:600;color:var(--ink-4);
-  background:var(--bg-2);border:1px solid var(--border);
-  padding:5px 12px;border-radius:6px;white-space:nowrap;
-  transition:.15s;
+  background:var(--bg);border:1px solid var(--border);
+  padding:5px 14px;border-radius:var(--r-xs);white-space:nowrap;transition:.15s;
 }
-.gest-tag:hover{color:var(--ink);border-color:var(--border-2)}
+.gst-name:hover{color:var(--ink);border-color:var(--border-2)}
 
-/* ── FILTER BAR ── */
+/* ===== FILTER BAR ===== */
 .fbar{
-  background:var(--bg);border-bottom:1px solid var(--border);
-  padding:10px 40px;
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:10px 48px;
   display:flex;align-items:center;gap:10px;
-  overflow-x:auto;position:sticky;top:60px;z-index:200;
+  overflow-x:auto;position:sticky;top:64px;z-index:200;
 }
-.fbar-label{font-size:11px;font-weight:700;color:var(--ink-5);text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
-.fbar-select{
-  border:1px solid var(--border);background:var(--bg);
+.fbar-lbl{font-size:11px;font-weight:700;color:var(--ink-5);text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+.fsel{
+  border:1.5px solid var(--border);background:var(--white);
   font-size:13px;font-weight:500;color:var(--ink-2);
-  padding:7px 28px 7px 12px;border-radius:var(--r-sm);
-  outline:none;cursor:pointer;font-family:inherit;
+  padding:8px 30px 8px 12px;border-radius:var(--r-sm);
+  outline:none;font-family:inherit;
   appearance:none;-webkit-appearance:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 9px center;
-  min-width:120px;transition:border-color .15s;
-  white-space:nowrap;
+  background-repeat:no-repeat;background-position:right 10px center;
+  min-width:130px;transition:.15s;white-space:nowrap;
 }
-.fbar-select:focus,.fbar-select:hover{border-color:var(--border-2)}
+.fsel:hover,.fsel:focus{border-color:var(--border-2)}
 .fbar-sep{width:1px;height:22px;background:var(--border);flex-shrink:0}
 .fbar-sort-lbl{font-size:12px;color:var(--ink-4);font-weight:500;white-space:nowrap}
 .sort-btns{display:flex;gap:4px}
 .sort-btn{
-  font-size:12px;padding:6px 12px;border:1px solid var(--border);
-  background:var(--bg);color:var(--ink-4);border-radius:var(--r-sm);
-  cursor:pointer;font-family:inherit;transition:.15s;white-space:nowrap;font-weight:500;
+  font-size:12px;padding:7px 14px;border:1.5px solid var(--border);
+  background:var(--white);color:var(--ink-4);
+  border-radius:var(--r-sm);transition:.15s;white-space:nowrap;font-weight:500;
 }
-.sort-btn.active,.sort-btn:hover{border-color:var(--ink);color:var(--ink);background:var(--bg)}
-.sort-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sort-btn.active{background:var(--o);color:var(--white);border-color:var(--o)}
+.sort-btn:not(.active):hover{border-color:var(--border-2);color:var(--ink)}
 .fbar-count{margin-left:auto;font-size:12px;color:var(--ink-5);white-space:nowrap;flex-shrink:0}
 
-/* ── CATALOG SECTION ── */
-.catalog{padding:32px 40px;background:var(--bg-2)}
-.catalog-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
-.catalog-title{font-size:20px;font-weight:800;letter-spacing:-.5px}
-.catalog-sub{font-size:13px;color:var(--ink-4);margin-top:3px}
-.btn-ver-todos{font-size:13px;font-weight:600;color:var(--ink);padding:8px 16px;border:1.5px solid var(--border);border-radius:var(--r-sm);cursor:pointer;background:var(--bg);transition:.15s}
-.btn-ver-todos:hover{border-color:var(--border-2);background:var(--bg-3)}
+/* ===== CATALOG ===== */
+.catalog{padding:36px 48px;background:var(--bg)}
+.cat-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px}
+.cat-ttl{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.cat-sub{font-size:13px;color:var(--ink-4);margin-top:4px}
+.btn-all{font-size:13px;font-weight:600;color:var(--ink-3);padding:9px 18px;border:1.5px solid var(--border);border-radius:var(--r-sm);background:var(--white);transition:.15s}
+.btn-all:hover{border-color:var(--border-2);color:var(--ink)}
 
-/* ── MODEL GRID ── */
+/* ===== GRID ===== */
 .models-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 
-/* ── MODEL CARD ── */
+/* ===== CARD ===== */
 .model-card{
-  background:var(--bg);border:1.5px solid var(--border);
+  background:var(--white);border:1.5px solid var(--border);
   border-radius:var(--r);overflow:hidden;
-  transition:box-shadow .2s,border-color .2s,transform .2s;
-  cursor:pointer;position:relative;
+  transition:box-shadow .2s,border-color .2s,transform .22s;
+  position:relative;
 }
-.model-card:hover{box-shadow:var(--sh-lg);border-color:var(--border-2);transform:translateY(-3px)}
-.model-card.popular{border:2px solid var(--ink)}
+.model-card:hover{
+  box-shadow:var(--sh-lg);
+  border-color:var(--border-2);
+  transform:translateY(-4px);
+}
+.model-card.popular{border:2px solid var(--o)}
 .model-card.in-compare{border:2px solid #6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.12)}
 .popular-badge{
-  background:var(--ink);text-align:center;
-  font-size:9px;font-weight:700;color:#fff;
+  background:var(--o);font-size:9px;font-weight:700;
+  color:var(--white);text-align:center;
   text-transform:uppercase;letter-spacing:.8px;padding:5px;
 }
 .card-actions{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:6px;z-index:2}
 .card-fav,.card-compare{
   width:30px;height:30px;border-radius:50%;
-  background:rgba(255,255,255,.95);border:1px solid var(--border);
+  background:rgba(255,255,255,.96);border:1.5px solid var(--border);
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:.15s;
-  box-shadow:0 1px 4px rgba(0,0,0,.08);
+  box-shadow:var(--sh);transition:.15s;
 }
-.card-fav{font-size:15px}
+.card-fav{font-size:14px}
 .card-compare{font-size:10px;font-weight:700;color:var(--ink-5)}
-.card-fav:hover{border-color:var(--red);transform:scale(1.1)}
-.card-fav.active{background:#fff5f2;border-color:var(--red)}
+.card-fav:hover{border-color:var(--o);transform:scale(1.1)}
+.card-fav.active{background:var(--o-lt);border-color:var(--o)}
 .card-compare:hover{border-color:#6366f1;color:#6366f1}
 .card-compare.active{background:#eef2ff;border-color:#6366f1;color:#6366f1}
 
 .model-img{
-  background:var(--bg-2);height:130px;
+  background:var(--bg);height:136px;
   display:flex;align-items:center;justify-content:center;
-  border-bottom:1px solid var(--border);overflow:hidden;position:relative;
+  border-bottom:1px solid var(--border);overflow:hidden;
 }
 .model-img img{
-  width:100%;height:100%;object-fit:contain;padding:12px;
-  transition:transform .3s;mix-blend-mode:multiply;
+  width:100%;height:100%;object-fit:contain;padding:14px;
+  transition:transform .35s;mix-blend-mode:multiply;
 }
-.model-card:hover .model-img img{transform:scale(1.06)}
-.model-img-placeholder{font-size:2.8rem;opacity:.2}
+.model-card:hover .model-img img{transform:scale(1.07)}
+.model-img-placeholder{font-size:2.8rem;opacity:.15}
 
-.model-body{padding:16px}
+.model-body{padding:18px}
 .model-tag{font-size:9px;font-weight:700;color:var(--ink-5);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
-.model-name{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;line-height:1.2}
-.model-fuels{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
-.fuel-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:5px;background:var(--bg-2);color:var(--ink-4);border:1px solid var(--border)}
-.fuel-badge.electric{background:var(--green-lt);color:var(--green);border-color:rgba(0,168,107,.2)}
-.fuel-badge.hybrid{background:#fffbeb;color:#b45309;border-color:#fde68a}
-.fuel-badge.plugin{background:#eff6ff;color:#2563eb;border-color:#bfdbfe}
+.model-name{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;line-height:1.2}
+.model-fuels{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
+.fuel-badge{font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;background:var(--bg);color:var(--ink-4);border:1px solid var(--border)}
+.fuel-badge.electric{background:var(--green-lt);color:var(--green);border-color:rgba(0,168,107,.25)}
+.fuel-badge.hybrid{background:#fffbeb;color:#92400e;border-color:#fde68a}
+.fuel-badge.plugin{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe}
 
-.model-price-row{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
-.price-from{font-size:12px;color:var(--ink-5)}
-.price-amount{font-size:28px;font-weight:900;color:var(--ink);letter-spacing:-1.5px;line-height:1}
-.price-unit{font-size:12px;color:var(--ink-4);font-weight:500}
+.price-block{margin-bottom:4px}
+.price-from{font-size:11px;color:var(--ink-5);margin-bottom:1px}
+.price-row{display:flex;align-items:baseline;gap:5px}
+.price-num{font-size:30px;font-weight:900;color:var(--o);letter-spacing:-1.5px;line-height:1}
+.price-unit{font-size:13px;color:var(--ink-4);font-weight:500}
 
-.model-offers-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.model-offer-cnt{font-size:11px;color:var(--ink-5)}
-.model-sources{font-size:11px;color:var(--ink-4);font-weight:600}
+.offers-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.offer-cnt{font-size:11px;color:var(--ink-5)}
+.offer-src{font-size:11px;color:var(--ink-4);font-weight:600}
 
 .btn-ver{
   display:block;width:100%;text-align:center;
-  background:var(--bg-2);color:var(--ink);
-  font-size:13px;font-weight:700;padding:10px 12px;
+  background:var(--bg);color:var(--ink);
+  font-size:13px;font-weight:700;padding:11px 12px;
   border-radius:var(--r-sm);border:1.5px solid var(--border);
-  cursor:pointer;transition:.15s;letter-spacing:-.1px;
+  transition:.15s;letter-spacing:-.1px;
 }
-.model-card.popular .btn-ver{background:var(--ink);color:#fff;border-color:var(--ink)}
-.btn-ver:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.model-card.popular .btn-ver:hover{background:#222;border-color:#222}
+.btn-ver:hover{background:var(--o);color:var(--white);border-color:var(--o)}
+.model-card.popular .btn-ver{background:var(--o);color:var(--white);border-color:var(--o)}
+.model-card.popular .btn-ver:hover{background:var(--o-dk);border-color:var(--o-dk)}
 
-/* ── LOAD MORE ── */
-.load-more-wrap{text-align:center;padding:32px 0}
+/* ===== LOAD MORE ===== */
+.load-more-wrap{text-align:center;padding:36px 0}
 .btn-load-more{
-  background:var(--bg);border:1.5px solid var(--border);
+  background:var(--white);border:1.5px solid var(--border);
   color:var(--ink-2);font-size:14px;font-weight:600;
-  padding:13px 36px;border-radius:var(--r);
-  cursor:pointer;font-family:inherit;transition:.15s;
+  padding:14px 40px;border-radius:var(--r);
+  transition:.15s;
 }
-.btn-load-more:hover{border-color:var(--border-2);background:var(--bg-3)}
+.btn-load-more:hover{border-color:var(--o);color:var(--o)}
 
-/* ── NO RESULTS ── */
-.no-results{grid-column:1/-1;text-align:center;padding:60px 24px;color:var(--ink-5)}
-.no-results svg{margin:0 auto 16px;opacity:.3}
+/* ===== NO RESULTS ===== */
+.no-results{grid-column:1/-1;text-align:center;padding:64px 24px;color:var(--ink-5)}
+.no-results svg{margin:0 auto 16px;opacity:.25}
 
-/* ── COMPARE DRAWER ── */
-.compare-drawer{
-  position:fixed;bottom:0;left:0;right:0;
-  background:var(--bg);border-top:2px solid #6366f1;
-  padding:14px 40px;display:none;align-items:center;gap:16px;
-  z-index:400;box-shadow:0 -4px 30px rgba(0,0,0,.12);
+/* ===== SECTION ===== */
+.sec{padding:56px 48px;background:var(--white)}
+.sec.gray{background:var(--bg)}
+.sec+.sec,.sec+.sec.gray,.sec.gray+.sec{border-top:1px solid var(--border)}
+.sec-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px}
+.sec-ttl{font-size:24px;font-weight:800;letter-spacing:-.6px}
+.sec-sub{font-size:14px;color:var(--ink-4);margin-top:5px}
+.sec-link{font-size:13px;font-weight:600;color:var(--ink-3);padding:9px 18px;border:1.5px solid var(--border);border-radius:var(--r-sm);background:var(--white);transition:.15s;white-space:nowrap}
+.sec-link:hover{border-color:var(--border-2);color:var(--ink)}
+
+/* ===== BLOG ===== */
+.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.blog-card{
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:var(--r);padding:24px;
+  transition:box-shadow .2s,transform .2s;display:block;
 }
+.blog-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+.blog-tag{font-size:10px;font-weight:700;color:var(--o);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+.blog-ttl{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:10px}
+.blog-exc{font-size:13px;color:var(--ink-4);line-height:1.6}
+
+/* ===== MARCAS ===== */
+.marcas-grid{display:flex;gap:8px;flex-wrap:wrap}
+.marca-chip{
+  background:var(--white);border:1.5px solid var(--border);
+  color:var(--ink-3);border-radius:var(--r-sm);
+  padding:10px 20px;font-size:13px;font-weight:600;transition:.15s;
+}
+.marca-chip:hover,.marca-chip.active{border-color:var(--o);color:var(--o);background:var(--o-lt)}
+
+/* ===== CIUDADES ===== */
+.ciudades-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ciudad-card{
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:var(--r);padding:22px;transition:.2s;display:block;
+}
+.ciudad-card:hover{border-color:var(--o-mid);box-shadow:var(--sh-md);transform:translateY(-2px)}
+.ciudad-name{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:5px;letter-spacing:-.3px}
+.ciudad-sub{font-size:12px;color:var(--ink-5)}
+
+/* ===== FAQ ===== */
+.faq-list{display:flex;flex-direction:column;gap:8px;max-width:780px}
+.faq-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-sm);transition:border-color .15s}
+.faq-item.open{border-color:var(--border-2)}
+.faq-q{padding:20px 22px;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--ink)}
+.faq-q::after{content:"+";font-size:22px;color:var(--ink-5);flex-shrink:0;transition:transform .2s;line-height:1;font-weight:300}
+.faq-item.open .faq-q::after{transform:rotate(45deg);color:var(--o)}
+.faq-a{display:none;padding:0 22px 20px;font-size:14px;color:var(--ink-3);line-height:1.75}
+.faq-item.open .faq-a{display:block}
+
+/* ===== CONTACT MODAL ===== */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:center;justify-content:center}
+.overlay.open{display:flex}
+.modal{background:var(--white);border-radius:var(--r);padding:36px;max-width:500px;width:90%;position:relative;max-height:90vh;overflow-y:auto;box-shadow:var(--sh-lg)}
+.modal h3{font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-.4px}
+.modal-sub{font-size:14px;color:var(--ink-4);margin-bottom:24px}
+.modal-close{position:absolute;top:18px;right:18px;background:var(--bg);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
+.modal-close:hover{color:var(--ink);background:var(--border)}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--ink-2);letter-spacing:.1px;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:14px;font-family:inherit;outline:none;transition:border-color .15s;color:var(--ink)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--o)}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.modal-submit{width:100%;background:var(--o);color:var(--white);border:none;padding:14px;border-radius:var(--r-sm);font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;letter-spacing:-.1px;margin-top:6px}
+.modal-submit:hover{background:var(--o-dk)}
+.modal-success{display:none;text-align:center;padding:24px 0}
+.modal-success.show{display:block}
+.success-icon{width:60px;height:60px;background:var(--green-lt);border-radius:50%;font-size:28px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+
+/* ===== COMPARE ===== */
+.compare-drawer{position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:2px solid #6366f1;padding:14px 48px;display:none;align-items:center;gap:16px;z-index:400;box-shadow:0 -6px 30px rgba(0,0,0,.1)}
 .compare-drawer.open{display:flex}
 .compare-slots{display:flex;gap:10px;flex:1}
-.compare-slot{
-  border:2px dashed var(--border);border-radius:var(--r-sm);
-  padding:8px 14px;font-size:13px;color:var(--ink-5);
-  min-width:160px;display:flex;align-items:center;justify-content:space-between;gap:8px;
-}
+.compare-slot{border:2px dashed var(--border);border-radius:var(--r-sm);padding:9px 14px;font-size:13px;color:var(--ink-5);min-width:160px;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .compare-slot.filled{border-style:solid;border-color:#6366f1;color:var(--ink);font-weight:600}
 .compare-slot-remove{cursor:pointer;color:var(--ink-5);font-size:16px;line-height:1}
-.compare-slot-remove:hover{color:var(--red)}
-.btn-compare-now{background:#6366f1;color:#fff;font-size:14px;font-weight:700;padding:11px 28px;border-radius:var(--r-sm);border:none;cursor:pointer;font-family:inherit}
+.compare-slot-remove:hover{color:var(--o)}
+.btn-compare-now{background:#6366f1;color:var(--white);font-size:14px;font-weight:700;padding:11px 28px;border-radius:var(--r-sm);border:none}
 .btn-compare-now:hover{background:#4f46e5}
 .compare-drawer-close{cursor:pointer;color:var(--ink-5);font-size:20px;margin-left:8px}
-
-/* ── COMPARE MODAL ── */
 .compare-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;align-items:center;justify-content:center;padding:24px}
 .compare-modal-overlay.open{display:flex}
-.compare-modal{background:var(--bg);border-radius:var(--r-lg);max-width:900px;width:100%;max-height:90vh;overflow-y:auto;padding:32px}
+.compare-modal{background:var(--white);border-radius:var(--r);max-width:900px;width:100%;max-height:90vh;overflow-y:auto;padding:32px;box-shadow:var(--sh-lg)}
 .compare-modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
 .compare-modal-header h3{font-size:20px;font-weight:800}
-.compare-close{background:var(--bg-3);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
+.compare-close{background:var(--bg);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
 .compare-table{width:100%;border-collapse:collapse}
-.compare-table th,.compare-table td{padding:11px 16px;border-bottom:1px solid var(--border);font-size:14px;text-align:left}
-.compare-table th{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink-5);letter-spacing:.4px;background:var(--bg-2)}
-.compare-table .car-col{text-align:center;font-weight:700;color:var(--red)}
+.compare-table th,.compare-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;text-align:left}
+.compare-table th{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--ink-5);letter-spacing:.4px;background:var(--bg)}
+.compare-table .car-col{text-align:center;font-weight:700;color:var(--o)}
 .compare-table .best{color:var(--green);font-weight:700}
 .compare-row-label{color:var(--ink-4);font-size:13px}
 
-/* ── CHAT WIDGET ── */
-.chat-btn{
-  position:fixed;bottom:88px;right:24px;
-  width:52px;height:52px;background:var(--ink);
-  border-radius:50%;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;z-index:299;border:none;
-  box-shadow:0 4px 20px rgba(0,0,0,.2);
-  transition:transform .2s,box-shadow .2s;
-}
-.chat-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(0,0,0,.3)}
-.chat-btn svg{width:24px;height:24px;fill:#fff}
-.chat-bubble{
-  position:fixed;bottom:152px;right:24px;
-  background:var(--bg);border:1.5px solid var(--border);
-  border-radius:var(--r);padding:14px 18px;
-  font-size:13px;color:var(--ink-2);width:230px;
-  box-shadow:var(--sh-lg);z-index:298;display:none;
-  animation:fadeUp .2s ease;
-}
+/* ===== CHAT ===== */
+.chat-btn{position:fixed;bottom:90px;right:24px;width:52px;height:52px;background:var(--o);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:299;border:none;box-shadow:0 4px 20px rgba(255,92,0,.35);transition:transform .2s,box-shadow .2s}
+.chat-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(255,92,0,.5)}
+.chat-btn svg{width:24px;height:24px;fill:var(--white)}
+.chat-bubble{position:fixed;bottom:154px;right:24px;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 18px;font-size:13px;color:var(--ink-2);width:230px;box-shadow:var(--sh-lg);z-index:298;display:none;animation:fadeUp .25s ease}
 .chat-bubble.show{display:block}
 .chat-bubble strong{display:block;margin-bottom:5px;color:var(--ink);font-size:14px}
-.chat-bubble::after{content:'';position:absolute;bottom:-7px;right:20px;width:14px;height:14px;background:var(--bg);border-right:1.5px solid var(--border);border-bottom:1.5px solid var(--border);transform:rotate(45deg)}
+.chat-bubble::after{content:'';position:absolute;bottom:-7px;right:20px;width:14px;height:14px;background:var(--white);border-right:1.5px solid var(--border);border-bottom:1.5px solid var(--border);transform:rotate(45deg)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── GENERIC SECTION ── */
-.section{padding:48px 40px;background:var(--bg)}
-.section+.section{border-top:1px solid var(--border)}
-.section-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px}
-.section-ttl{font-size:22px;font-weight:800;letter-spacing:-.6px}
-.section-sub{font-size:14px;color:var(--ink-4);margin-top:4px}
-.section-link{font-size:13px;font-weight:600;color:var(--ink-3);border:1.5px solid var(--border);padding:8px 16px;border-radius:var(--r-sm);background:var(--bg);cursor:pointer;transition:.15s;white-space:nowrap}
-.section-link:hover{border-color:var(--border-2);color:var(--ink);background:var(--bg-3)}
-
-/* ── BLOG ── */
-.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.blog-card{
-  background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);
-  padding:22px;transition:box-shadow .2s,transform .2s;display:block;
-}
-.blog-card:hover{box-shadow:var(--sh-lg);transform:translateY(-2px)}
-.blog-tag{font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
-.blog-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:10px}
-.blog-excerpt{font-size:12px;color:var(--ink-4);line-height:1.6}
-
-/* ── MARCAS ── */
-.marcas-grid{display:flex;gap:8px;flex-wrap:wrap}
-.marca-chip{
-  background:var(--bg);border:1.5px solid var(--border);color:var(--ink-3);
-  border-radius:var(--r-sm);padding:9px 18px;font-size:13px;font-weight:600;
-  cursor:pointer;transition:.15s;
-}
-.marca-chip:hover,.marca-chip.active{border-color:var(--ink);color:var(--ink);background:var(--bg-2)}
-
-/* ── CIUDADES ── */
-.ciudades-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.ciudad-card{
-  background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);
-  padding:20px;cursor:pointer;transition:border-color .15s,box-shadow .15s;
-}
-.ciudad-card:hover{border-color:var(--border-2);box-shadow:var(--sh)}
-.ciudad-name{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:4px;letter-spacing:-.3px}
-.ciudad-sub{font-size:12px;color:var(--ink-5)}
-
-/* ── FAQ ── */
-.faq-list{display:flex;flex-direction:column;gap:8px;max-width:760px}
-.faq-item{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-sm)}
-.faq-item.open{border-color:var(--border-2)}
-.faq-q{padding:18px 20px;font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--ink)}
-.faq-q::after{content:"+";font-size:20px;color:var(--ink-5);flex-shrink:0;transition:transform .2s;font-weight:300;line-height:1}
-.faq-item.open .faq-q::after{transform:rotate(45deg);color:var(--ink)}
-.faq-a{display:none;padding:0 20px 18px;font-size:14px;color:var(--ink-3);line-height:1.7}
-.faq-item.open .faq-a{display:block}
-
-/* ── CONTACT MODAL ── */
-.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
-.overlay.open{display:flex}
-.modal{background:var(--bg);border-radius:var(--r-lg);padding:36px;max-width:500px;width:90%;position:relative;max-height:90vh;overflow-y:auto;box-shadow:var(--sh-xl)}
-.modal h3{font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-.5px}
-.modal-sub{font-size:14px;color:var(--ink-4);margin-bottom:24px}
-.modal-close{position:absolute;top:18px;right:18px;background:var(--bg-3);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
-.modal-close:hover{background:var(--bg-2);color:var(--ink)}
-.form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:12px;font-weight:700;margin-bottom:6px;color:var(--ink-2);letter-spacing:.1px}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:14px;font-family:inherit;outline:none;transition:border-color .15s;background:var(--bg);color:var(--ink)}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--ink)}
-.form-group textarea{resize:vertical;min-height:90px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.modal-submit{width:100%;background:var(--ink);color:#fff;border:none;padding:14px;border-radius:var(--r-sm);font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;letter-spacing:-.2px;margin-top:4px}
-.modal-submit:hover{background:#222}
-.modal-success{display:none;text-align:center;padding:24px 0}
-.modal-success.show{display:block}
-.success-icon{width:60px;height:60px;background:var(--green-lt);border-radius:50%;font-size:26px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
-
-/* ── FOOTER ── */
-.footer{
-  background:var(--ink);padding:32px 40px;
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:16px;
-}
+/* ===== FOOTER ===== */
+.footer{background:#111;padding:36px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
 .footer-brand{display:flex;align-items:center;gap:10px}
-.footer-logo-mark{width:28px;height:28px;background:var(--red);border-radius:7px;display:flex;align-items:center;justify-content:center}
-.footer-logo-mark svg{width:16px;height:16px;fill:#fff}
-.footer-name{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.4px}
-.footer-links{display:flex;gap:24px;flex-wrap:wrap}
-.footer-links a{font-size:12px;color:#666;transition:color .15s}
+.footer-logo-ico{width:30px;height:30px;background:var(--o);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.footer-logo-ico svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.footer-name{font-size:17px;font-weight:800;color:#fff;letter-spacing:-.4px}
+.footer-links{display:flex;gap:28px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:#555;transition:color .15s}
 .footer-links a:hover{color:#aaa}
 .footer-copy{font-size:12px;color:#444}
 
-/* ── TRUST STRIP ── */
-.trust-strip{
-  background:var(--bg-2);border-bottom:1px solid var(--border);
-  padding:10px 40px;
-  display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;
+/* ===== RESPONSIVE ===== */
+@media(max-width:1280px){
+  .models-grid{grid-template-columns:repeat(3,1fr)}
+  .nav{padding:0 32px}
+  .gestoras-strip,.trust-strip,.fbar,.catalog,.sec,.footer{padding-left:32px;padding-right:32px}
 }
-.trust-item{font-size:12px;color:var(--ink-4);font-weight:500;padding:3px 16px;white-space:nowrap}
-.trust-dot{color:var(--border-2);font-size:8px}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1200px){.models-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:1024px){
   .nav{padding:0 24px}
-  .gestoras{padding:12px 24px}
-  .fbar{padding:10px 24px}
-  .catalog{padding:28px 24px}
-  .section{padding:40px 24px}
-  .footer{padding:28px 24px}
-  .trust-strip{padding:10px 24px}
-  .hero{padding:56px 20px 52px}
-  .hero-h1{font-size:44px}
+  .gestoras-strip,.trust-strip,.fbar,.catalog,.sec,.footer{padding-left:24px;padding-right:24px}
+  .hero-h1{font-size:48px}
 }
 @media(max-width:900px){
   .nav-links{display:none}
@@ -500,36 +486,35 @@ img{max-width:100%;display:block}
   .models-grid{grid-template-columns:repeat(2,1fr)}
   .blog-grid{grid-template-columns:repeat(2,1fr)}
   .ciudades-grid{grid-template-columns:repeat(2,1fr)}
-  .sw-row2{grid-template-columns:1fr 1fr}
-  .sw-field:nth-child(2){border-right:1px solid var(--border)}
-  .sw-field:nth-child(3){border-top:1px solid var(--border);border-right:none;grid-column:1/-1}
-  .stats-row{max-width:100%}
-  .compare-drawer{padding:12px 20px}
-  .compare-slots{gap:6px}
+  .sbox-filters{grid-template-columns:1fr 1fr}
+  .sf:nth-child(3){border-top:1px solid var(--border);border-right:none;grid-column:1/-1}
+  .stats-bar{max-width:100%}
 }
 @media(max-width:680px){
-  .hero-h1{font-size:34px;letter-spacing:-1.5px}
-  .hero-sub{font-size:15px}
+  .hero{padding:60px 20px 56px}
+  .hero-h1{font-size:36px;letter-spacing:-2px}
+  .hero-p{font-size:16px}
   .models-grid{grid-template-columns:1fr;gap:12px}
-  .model-card{display:grid;grid-template-columns:120px 1fr}
+  .model-card{display:grid;grid-template-columns:116px 1fr}
   .model-card.popular>.popular-badge{grid-column:1/-1}
-  .model-img{height:100%;min-height:120px;border-bottom:none;border-right:1px solid var(--border)}
+  .model-img{height:100%;min-height:116px;border-bottom:none;border-right:1px solid var(--border)}
   .model-img img{padding:8px}
   .model-body{padding:12px 14px}
-  .model-name{font-size:13px}.price-amount{font-size:22px}
+  .price-num{font-size:24px}
   .blog-grid{grid-template-columns:1fr}
   .ciudades-grid{grid-template-columns:1fr 1fr}
-  .footer{flex-direction:column;gap:16px;text-align:center}
+  .footer{flex-direction:column;text-align:center;gap:16px}
   .footer-links{flex-wrap:wrap;justify-content:center}
   .card-actions{top:6px;right:6px}
   .compare-slots{display:none}
-  .compare-drawer{flex-wrap:wrap}
-  .stats-row{flex-direction:column;max-width:none}
-  .stat-item{border-right:none;border-bottom:1px solid var(--border);padding:12px 24px}
-  .stat-item:last-child{border-bottom:none}
-  .sw-row2{grid-template-columns:1fr}
-  .sw-field{border-right:none!important;border-top:1px solid var(--border);grid-column:unset}
-  .sw-field:first-child{border-top:none}
+  .compare-drawer{flex-wrap:wrap;padding:12px 20px}
+  .stats-bar{flex-direction:column;max-width:none}
+  .sbar-item{border-right:1.5px solid var(--border);border-bottom:none}
+  .sbar-item:first-child{border-radius:var(--r-sm) var(--r-sm) 0 0}
+  .sbar-item:last-child{border-radius:0 0 var(--r-sm) var(--r-sm);border-bottom:1.5px solid var(--border)}
+  .sbox-filters{grid-template-columns:1fr}
+  .sf{border-right:none!important;border-top:1px solid var(--border)}
+  .sf:first-child{border-top:none}
 }
 </style>
 </head>
@@ -539,21 +524,21 @@ img{max-width:100%;display:block}
 <!-- NAV -->
 <nav class="nav">
   <a href="/" class="nav-logo">
-    <div class="nav-logo-mark">
-      <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-5 12H9a2 2 0 01-2-2v-1m10-9h2a2 2 0 012 2v8a2 2 0 01-2 2h-1"/></svg>
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
     </div>
-    <span class="nav-logo-name">myrenting</span>
+    <span class="nav-logo-text">myrenting</span>
   </a>
   <div class="nav-links">
-    <a href="/" class="active">Ofertas</a>
-    <a href="/renting-autonomos.html">Aut&#243;nomos</a>
+    <a href="/" class="cur">Ofertas</a>
+    <a href="/renting-autonomos.html">Aut&oacute;nomos</a>
     <a href="/renting-empresas.html">Empresas</a>
-    <a href="/renting-electrico.html">El&#233;ctrico</a>
+    <a href="/renting-electrico.html">El&eacute;ctrico</a>
     <a href="/blog/">Blog</a>
   </div>
   <div class="nav-actions">
-    <button class="btn-nav-primary" onclick="openContact(null,'Informacion general')">Pedir oferta gratis</button>
-    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <button class="btn-orange" onclick="openContact(null,'Informacion general')">Pedir oferta gratis</button>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Men&uacute;">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -561,144 +546,146 @@ img{max-width:100%;display:block}
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="/">Ofertas</a>
-  <a href="/renting-autonomos.html">Aut&#243;nomos</a>
+  <a href="/renting-autonomos.html">Aut&oacute;nomos</a>
   <a href="/renting-empresas.html">Empresas</a>
-  <a href="/renting-electrico.html">El&#233;ctrico</a>
+  <a href="/renting-electrico.html">El&eacute;ctrico</a>
   <a href="/blog/">Blog</a>
-  <a href="#" onclick="openContact(null,'Informacion general');toggleMenu();return false">Pedir oferta gratis</a>
+  <a href="#" onclick="openContact(null,'Informacion general');toggleMenu();return false">Pedir oferta gratis &rarr;</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-label">Actualizado hoy &middot; Precios reales</div>
-  <h1 class="hero-h1">Compara el renting<br>que <em>mejor te encaja</em></h1>
-  <p class="hero-sub">Las mejores gestoras de Espa&#241;a en un solo lugar. Sin registrarte, sin letra peque&#241;a.</p>
+  <div class="hero-eyebrow">
+    <span class="hero-dot"></span>
+    Actualizado hoy &middot; Precios reales
+  </div>
+  <h1 class="hero-h1">Encuentra el renting<br><span class="hl">perfecto para ti</span></h1>
+  <p class="hero-p">Compara m&aacute;s de 1.000 ofertas de las mejores gestoras de Espa&ntilde;a. Sin registrarte.</p>
 
-  <!-- Search widget -->
-  <div class="search-widget">
-    <div class="sw-row1">
-      <svg class="sw-search-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input class="sw-input" type="text" id="search-libre" placeholder="Busca marca, modelo&#8230; ej: SUV el&#233;ctrico, Toyota, Seat Ibiza" oninput="onSearchLibre(this.value)">
-      <button class="sw-btn" onclick="doSearchLibre()">Buscar</button>
+  <div class="sbox">
+    <div class="sbox-main">
+      <span class="sbox-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </span>
+      <input class="sbox-input" type="text" id="search-libre" placeholder="Busca por marca, modelo o tipo&hellip; ej: Toyota SUV el&eacute;ctrico" oninput="onSearchLibre(this.value)">
+      <button class="sbox-go" onclick="doSearchLibre()">Buscar</button>
     </div>
-    <div class="sw-row2">
-      <div class="sw-field">
+    <div class="sbox-divider"></div>
+    <div class="sbox-filters">
+      <div class="sf">
         <label for="filter-make">Marca</label>
         <select id="filter-make" onchange="onMakeChange()"><option value="">Todas las marcas</option></select>
       </div>
-      <div class="sw-field">
+      <div class="sf">
         <label for="filter-model">Modelo</label>
         <select id="filter-model" onchange="applyFilters()"><option value="">Todos los modelos</option></select>
       </div>
-      <div class="sw-field">
+      <div class="sf">
         <label for="filter-precio">Presupuesto</label>
         <select id="filter-precio" onchange="applyFilters()">
-          <option value="">Sin l&#237;mite</option>
-          <option value="250">Hasta 250&#8364;/mes</option>
-          <option value="300">Hasta 300&#8364;/mes</option>
-          <option value="400">Hasta 400&#8364;/mes</option>
-          <option value="500">Hasta 500&#8364;/mes</option>
+          <option value="">Sin l&iacute;mite</option>
+          <option value="250">Hasta 250&euro;/mes</option>
+          <option value="300">Hasta 300&euro;/mes</option>
+          <option value="400">Hasta 400&euro;/mes</option>
+          <option value="500">Hasta 500&euro;/mes</option>
         </select>
       </div>
     </div>
-    <div class="sw-row3">
-      <span class="sw-chips-label">R&#225;pido:</span>
-      <button class="sw-chip" onclick="applyChip('SUV')">SUV</button>
-      <button class="sw-chip" onclick="applyChip('Electrico')">El&#233;ctrico</button>
-      <button class="sw-chip" onclick="applyChipPrecio(300)">Hasta 300&#8364;</button>
-      <button class="sw-chip" onclick="applyChip('Hibrido')">H&#237;brido</button>
-      <button class="sw-chip" onclick="applyChip('Furgoneta')">Furgoneta</button>
+    <div class="sbox-tags">
+      <span class="stag-lbl">Popular:</span>
+      <button class="stag" onclick="applyChip('SUV')">SUV</button>
+      <button class="stag" onclick="applyChip('Electrico')">El&eacute;ctrico</button>
+      <button class="stag" onclick="applyChipPrecio(300)">Hasta 300&euro;</button>
+      <button class="stag" onclick="applyChip('Hibrido')">H&iacute;brido</button>
+      <button class="stag" onclick="applyChip('Furgoneta')">Furgoneta</button>
     </div>
   </div>
 
-  <!-- Stats -->
-  <div class="stats-row">
-    <div class="stat-item">
-      <div class="stat-val" id="stat-total">&#8212;</div>
-      <div class="stat-lbl">Ofertas</div>
+  <div class="stats-bar">
+    <div class="sbar-item">
+      <div class="sbar-val" id="stat-total">&mdash;</div>
+      <div class="sbar-lbl">Ofertas</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-val" id="stat-models">&#8212;</div>
-      <div class="stat-lbl">Modelos</div>
+    <div class="sbar-item">
+      <div class="sbar-val" id="stat-models">&mdash;</div>
+      <div class="sbar-lbl">Modelos</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-val red" id="stat-min">&#8212;</div>
-      <div class="stat-lbl">Desde/mes</div>
+    <div class="sbar-item">
+      <div class="sbar-val orange" id="stat-min">&mdash;</div>
+      <div class="sbar-lbl">Desde / mes</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-val">6</div>
-      <div class="stat-lbl">Gestoras</div>
+    <div class="sbar-item">
+      <div class="sbar-val">6</div>
+      <div class="sbar-lbl">Gestoras</div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
+<!-- TRUST -->
 <div class="trust-strip">
-  <span class="trust-item">Sin entrada</span><span class="trust-dot">&#9679;</span>
-  <span class="trust-item">Seguro incluido</span><span class="trust-dot">&#9679;</span>
-  <span class="trust-item">Mantenimiento incluido</span><span class="trust-dot">&#9679;</span>
-  <span class="trust-item">Precios sin letra peque&#241;a</span><span class="trust-dot">&#9679;</span>
-  <span class="trust-item">Gratis y sin registro</span>
+  <span class="ti">Sin entrada</span><span class="td">&#9679;</span>
+  <span class="ti">Seguro incluido</span><span class="td">&#9679;</span>
+  <span class="ti">Mantenimiento incluido</span><span class="td">&#9679;</span>
+  <span class="ti">Precios sin letra peque&ntilde;a</span><span class="td">&#9679;</span>
+  <span class="ti">Gratis y sin registro</span>
 </div>
 
-<!-- GESTORAS STRIP -->
-<div class="gestoras">
-  <span class="gest-lbl">Gestoras</span>
-  <div class="gest-sep"></div>
-  <div class="gest-names">
-    <span class="gest-tag">Arval</span>
-    <span class="gest-tag">Ayvens</span>
-    <span class="gest-tag">Alphabet</span>
-    <span class="gest-tag">Kinto</span>
-    <span class="gest-tag">Leasys</span>
-    <span class="gest-tag">REVEL</span>
-  </div>
+<!-- GESTORAS -->
+<div class="gestoras-strip">
+  <span class="gst-lbl">Gestoras</span>
+  <div class="gst-divider"></div>
+  <span class="gst-name">Arval</span>
+  <span class="gst-name">Ayvens</span>
+  <span class="gst-name">Alphabet</span>
+  <span class="gst-name">Kinto</span>
+  <span class="gst-name">Leasys</span>
+  <span class="gst-name">REVEL</span>
 </div>
 
 <!-- FILTER BAR -->
 <div class="fbar" id="filter-bar">
-  <span class="fbar-label">Filtrar:</span>
-  <select class="fbar-select" id="fbar-cat" onchange="filterByBarCat()">
+  <span class="fbar-lbl">Filtrar:</span>
+  <select class="fsel" id="fbar-cat" onchange="filterByBarCat()">
     <option value="">Tipo de coche</option>
     <option value="SUV">SUV</option>
-    <option value="Electrico">El&#233;ctrico</option>
-    <option value="Hibrido">H&#237;brido</option>
+    <option value="Electrico">El&eacute;ctrico</option>
+    <option value="Hibrido">H&iacute;brido</option>
     <option value="Furgoneta">Furgoneta</option>
     <option value="Berlina">Berlina</option>
     <option value="Urbano">Urbano</option>
   </select>
-  <select class="fbar-select" id="fbar-fuel" onchange="applyFilters()">
+  <select class="fsel" id="fbar-fuel" onchange="applyFilters()">
     <option value="">Combustible</option>
-    <option value="Electrico">El&#233;ctrico</option>
-    <option value="Hibrido">H&#237;brido</option>
+    <option value="Electrico">El&eacute;ctrico</option>
+    <option value="Hibrido">H&iacute;brido</option>
     <option value="Gasolina">Gasolina</option>
-    <option value="Diesel">Di&#233;sel</option>
+    <option value="Diesel">Di&eacute;sel</option>
   </select>
-  <select class="fbar-select" id="fbar-precio" onchange="applyFilters()">
-    <option value="">Precio m&#225;x</option>
-    <option value="250">Hasta 250&#8364;</option>
-    <option value="300">Hasta 300&#8364;</option>
-    <option value="400">Hasta 400&#8364;</option>
-    <option value="500">Hasta 500&#8364;</option>
+  <select class="fsel" id="fbar-precio" onchange="applyFilters()">
+    <option value="">Precio m&aacute;x</option>
+    <option value="250">Hasta 250&euro;</option>
+    <option value="300">Hasta 300&euro;</option>
+    <option value="400">Hasta 400&euro;</option>
+    <option value="500">Hasta 500&euro;</option>
   </select>
   <div class="fbar-sep"></div>
   <span class="fbar-sort-lbl">Ordenar:</span>
   <div class="sort-btns">
     <button class="sort-btn active" id="sort-precio" onclick="setSortBy('precio')">Precio</button>
     <button class="sort-btn" id="sort-popular" onclick="setSortBy('popular')">Popular</button>
-    <button class="sort-btn" id="sort-az" onclick="setSortBy('az')">A-Z</button>
+    <button class="sort-btn" id="sort-az" onclick="setSortBy('az')">A&ndash;Z</button>
   </div>
   <span class="fbar-count" id="filter-count"></span>
 </div>
 
 <!-- CATALOG -->
 <div class="catalog" id="section-ofertas">
-  <div class="catalog-header">
+  <div class="cat-hdr">
     <div>
-      <div class="catalog-title">Ofertas de renting</div>
-      <div class="catalog-sub">Ordenadas por precio &middot; <span id="results-count"></span></div>
+      <div class="cat-ttl">Ofertas de renting</div>
+      <div class="cat-sub">Ordenadas por precio &middot; <span id="results-count"></span></div>
     </div>
-    <button class="btn-ver-todos" onclick="showAllModels()">Ver todos los modelos</button>
+    <button class="btn-all" onclick="showAllModels()">Ver todos los modelos</button>
   </div>
   <div class="models-grid" id="models-grid"></div>
 </div>
@@ -708,49 +695,49 @@ img{max-width:100%;display:block}
     <div class="models-grid" id="models-grid-all"></div>
   </div>
   <div class="load-more-wrap" id="load-more-wrap" style="display:none">
-    <button class="btn-load-more" onclick="loadMore()">Ver m&#225;s modelos <span id="load-more-count"></span></button>
+    <button class="btn-load-more" onclick="loadMore()">Ver m&aacute;s modelos <span id="load-more-count"></span></button>
   </div>
 </div>
 
 <!-- BLOG -->
-<section class="section">
-  <div class="section-hdr">
+<section class="sec">
+  <div class="sec-hdr">
     <div>
-      <div class="section-ttl">Gu&#237;as y consejos de renting</div>
-      <div class="section-sub">Todo lo que necesitas saber antes de contratar</div>
+      <div class="sec-ttl">Gu&iacute;as y consejos</div>
+      <div class="sec-sub">Todo lo que necesitas saber antes de contratar</div>
     </div>
-    <a href="/blog/" class="section-link">Ver todos</a>
+    <a href="/blog/" class="sec-link">Ver todos &rarr;</a>
   </div>
   <div class="blog-grid">
     <a href="/blog/renting-barato-2026.html" class="blog-card">
-      <div class="blog-tag">Gu&#237;a 2026</div>
-      <div class="blog-title">Los mejores coches en renting baratos para 2026</div>
-      <div class="blog-excerpt">Modelos desde 164&#8364;/mes con precios reales y sin sorpresas.</div>
+      <div class="blog-tag">Gu&iacute;a 2026</div>
+      <div class="blog-ttl">Los mejores coches en renting baratos para 2026</div>
+      <div class="blog-exc">Modelos desde 164&euro;/mes con precios reales y sin sorpresas.</div>
     </a>
     <a href="/blog/renting-autonomos-deduccion-2026.html" class="blog-card">
-      <div class="blog-tag">Aut&#243;nomos</div>
-      <div class="blog-title">Renting para aut&#243;nomos: gu&#237;a fiscal 2026</div>
-      <div class="blog-excerpt">C&#243;mo deducir el IVA y el IRPF. Ahorro hasta 2.142&#8364;/a&#241;o.</div>
+      <div class="blog-tag">Aut&oacute;nomos</div>
+      <div class="blog-ttl">Renting para aut&oacute;nomos: gu&iacute;a fiscal 2026</div>
+      <div class="blog-exc">C&oacute;mo deducir el IVA y el IRPF. Ahorro hasta 2.142&euro;/a&ntilde;o.</div>
     </a>
     <a href="/blog/renting-vs-leasing-diferencias-2026.html" class="blog-card">
       <div class="blog-tag">Comparativa</div>
-      <div class="blog-title">Renting vs leasing vs compra: &#191;qu&#233; sale mejor?</div>
-      <div class="blog-excerpt">Comparativa real con n&#250;meros concretos para cada perfil.</div>
+      <div class="blog-ttl">Renting vs leasing vs compra: &iquest;qu&eacute; sale mejor?</div>
+      <div class="blog-exc">Comparativa real con n&uacute;meros concretos para cada perfil.</div>
     </a>
     <a href="/blog/renting-electrico-2026.html" class="blog-card">
-      <div class="blog-tag">El&#233;ctrico</div>
-      <div class="blog-title">Renting el&#233;ctrico 2026: precios, autonom&#237;a y ventajas</div>
-      <div class="blog-excerpt">Todo sobre el renting de coches el&#233;ctricos en Espa&#241;a.</div>
+      <div class="blog-tag">El&eacute;ctrico</div>
+      <div class="blog-ttl">Renting el&eacute;ctrico 2026: precios, autonom&iacute;a y ventajas</div>
+      <div class="blog-exc">Todo sobre el renting de coches el&eacute;ctricos en Espa&ntilde;a.</div>
     </a>
   </div>
 </section>
 
-<!-- POR MARCA -->
-<section class="section" style="background:var(--bg-2)">
-  <div class="section-hdr">
+<!-- MARCAS -->
+<section class="sec gray">
+  <div class="sec-hdr">
     <div>
-      <div class="section-ttl">Renting por marca</div>
-      <div class="section-sub">Todas las marcas disponibles en Espa&#241;a</div>
+      <div class="sec-ttl">Renting por marca</div>
+      <div class="sec-sub">Todas las marcas disponibles en Espa&ntilde;a</div>
     </div>
   </div>
   <div class="marcas-grid">
@@ -767,59 +754,59 @@ img{max-width:100%;display:block}
     <a href="/renting-skoda.html" class="marca-chip">Skoda</a>
     <a href="/renting-volvo.html" class="marca-chip">Volvo</a>
     <a href="/renting-ford.html" class="marca-chip">Ford</a>
-    <a href="/renting-citroen.html" class="marca-chip">Citro&#235;n</a>
+    <a href="/renting-citroen.html" class="marca-chip">Citro&euml;n</a>
     <a href="/renting-opel.html" class="marca-chip">Opel</a>
     <a href="/renting-dacia.html" class="marca-chip">Dacia</a>
     <a href="/renting-mazda.html" class="marca-chip">Mazda</a>
     <a href="/renting-nissan.html" class="marca-chip">Nissan</a>
     <a href="/renting-cupra.html" class="marca-chip">Cupra</a>
     <a href="/renting-byd.html" class="marca-chip">BYD</a>
-    <a href="/" class="marca-chip" onclick="showAllModels();return false" style="color:var(--red);border-color:var(--red-border)">Ver todas</a>
+    <a href="/" class="marca-chip" onclick="showAllModels();return false" style="color:var(--o);border-color:var(--o-mid);background:var(--o-lt)">Ver todas &rarr;</a>
   </div>
 </section>
 
-<!-- POR CIUDAD -->
-<section class="section">
-  <div class="section-hdr">
+<!-- CIUDADES -->
+<section class="sec">
+  <div class="sec-hdr">
     <div>
-      <div class="section-ttl">Renting por ciudad</div>
-      <div class="section-sub">Entrega del veh&#237;culo en tu ciudad</div>
+      <div class="sec-ttl">Renting por ciudad</div>
+      <div class="sec-sub">Entrega del veh&iacute;culo en tu ciudad</div>
     </div>
   </div>
   <div class="ciudades-grid">
     <a href="/renting-madrid.html" class="ciudad-card"><div class="ciudad-name">Madrid</div><div class="ciudad-sub">Renting en la capital</div></a>
-    <a href="/renting-barcelona.html" class="ciudad-card"><div class="ciudad-name">Barcelona</div><div class="ciudad-sub">Renting en Catalu&#241;a</div></a>
+    <a href="/renting-barcelona.html" class="ciudad-card"><div class="ciudad-name">Barcelona</div><div class="ciudad-sub">Renting en Catalu&ntilde;a</div></a>
     <a href="/renting-valencia.html" class="ciudad-card"><div class="ciudad-name">Valencia</div><div class="ciudad-sub">Renting en la Comunitat</div></a>
-    <a href="/renting-sevilla.html" class="ciudad-card"><div class="ciudad-name">Sevilla</div><div class="ciudad-sub">Renting en Andaluc&#237;a</div></a>
-    <a href="/renting-bilbao.html" class="ciudad-card"><div class="ciudad-name">Bilbao</div><div class="ciudad-sub">Renting en el Pa&#237;s Vasco</div></a>
-    <a href="/renting-zaragoza.html" class="ciudad-card"><div class="ciudad-name">Zaragoza</div><div class="ciudad-sub">Renting en Arag&#243;n</div></a>
-    <a href="/renting-malaga.html" class="ciudad-card"><div class="ciudad-name">M&#225;laga</div><div class="ciudad-sub">Renting en la Costa del Sol</div></a>
-    <a href="/renting-murcia.html" class="ciudad-card"><div class="ciudad-name">Murcia</div><div class="ciudad-sub">Renting en la Regi&#243;n</div></a>
+    <a href="/renting-sevilla.html" class="ciudad-card"><div class="ciudad-name">Sevilla</div><div class="ciudad-sub">Renting en Andaluc&iacute;a</div></a>
+    <a href="/renting-bilbao.html" class="ciudad-card"><div class="ciudad-name">Bilbao</div><div class="ciudad-sub">Renting en el Pa&iacute;s Vasco</div></a>
+    <a href="/renting-zaragoza.html" class="ciudad-card"><div class="ciudad-name">Zaragoza</div><div class="ciudad-sub">Renting en Arag&oacute;n</div></a>
+    <a href="/renting-malaga.html" class="ciudad-card"><div class="ciudad-name">M&aacute;laga</div><div class="ciudad-sub">Renting en la Costa del Sol</div></a>
+    <a href="/renting-murcia.html" class="ciudad-card"><div class="ciudad-name">Murcia</div><div class="ciudad-sub">Renting en la Regi&oacute;n</div></a>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section" style="background:var(--bg-2)">
-  <div class="section-hdr">
+<section class="sec gray">
+  <div class="sec-hdr">
     <div>
-      <div class="section-ttl">Preguntas frecuentes</div>
-      <div class="section-sub">Todo sobre el renting de coches</div>
+      <div class="sec-ttl">Preguntas frecuentes</div>
+      <div class="sec-sub">Todo sobre el renting de coches</div>
     </div>
   </div>
   <div class="faq-list">
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&#191;Qu&#233; es el renting de coches?</div><div class="faq-a">El renting es un alquiler de larga duraci&#243;n (normalmente 2 a 6 a&#241;os) que incluye seguro, mantenimiento e impuestos. Pagas una cuota mensual fija y no tienes que preocuparte de nada m&#225;s. Al acabar el contrato, puedes devolver el coche, renovar o cambiar de modelo.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&#191;Cu&#225;nto cuesta el renting en Espa&#241;a?</div><div class="faq-a">El precio depende del modelo, la duraci&#243;n del contrato y los kil&#243;metros anuales. En Myrenting encuentras ofertas desde 164&#8364;/mes para coches urbanos, hasta 800&#8364;/mes para SUVs premium. La mayor&#237;a de particulares encuentra algo entre 250 y 450&#8364;/mes.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&#191;Qu&#233; gestoras de renting hay en Espa&#241;a?</div><div class="faq-a">Las principales gestoras son Arval (BNP Paribas), Ayvens (Soci&#233;t&#233; G&#233;n&#233;rale), Alphabet (BMW Group), Kinto (Toyota), Leasys (Stellantis) y REVEL. Cada una tiene precios y condiciones distintas: por eso comparar es clave.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&#191;El renting es para particulares o solo para empresas?</div><div class="faq-a">Aunque hist&#243;ricamente era m&#225;s com&#250;n en empresas, hoy en d&#237;a muchas gestoras ofrecen renting para particulares con condiciones muy competitivas. Los aut&#243;nomos adem&#225;s pueden deducirse el IVA y una parte del IRPF de la cuota.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&#191;Puedo cancelar el renting antes de tiempo?</div><div class="faq-a">Depende del contrato y la gestora. Algunas permiten la cancelaci&#243;n con una penalizaci&#243;n, otras no. Es importante revisar las condiciones antes de firmar. En Myrenting te ayudamos a elegir la opci&#243;n que mejor se adapte a tu situaci&#243;n.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&iquest;Qu&eacute; es el renting de coches?</div><div class="faq-a">El renting es un alquiler de larga duraci&oacute;n (normalmente 2 a 6 a&ntilde;os) que incluye seguro, mantenimiento e impuestos. Pagas una cuota mensual fija y no tienes que preocuparte de nada m&aacute;s. Al acabar el contrato, puedes devolver el coche, renovar o cambiar de modelo.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&iquest;Cu&aacute;nto cuesta el renting en Espa&ntilde;a?</div><div class="faq-a">El precio depende del modelo, la duraci&oacute;n del contrato y los kil&oacute;metros anuales. En Myrenting encuentras ofertas desde 164&euro;/mes para coches urbanos, hasta 800&euro;/mes para SUVs premium. La mayor&iacute;a de particulares encuentra algo entre 250 y 450&euro;/mes.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&iquest;Qu&eacute; gestoras de renting hay en Espa&ntilde;a?</div><div class="faq-a">Las principales gestoras son Arval (BNP Paribas), Ayvens (Soci&eacute;t&eacute; G&eacute;n&eacute;rale), Alphabet (BMW Group), Kinto (Toyota), Leasys (Stellantis) y REVEL. Cada una tiene precios y condiciones distintas: por eso comparar es clave.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&iquest;El renting es para particulares o solo para empresas?</div><div class="faq-a">Aunque hist&oacute;ricamente era m&aacute;s com&uacute;n en empresas, hoy en d&iacute;a muchas gestoras ofrecen renting para particulares con condiciones muy competitivas. Los aut&oacute;nomos adem&aacute;s pueden deducirse el IVA y una parte del IRPF de la cuota.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">&iquest;Puedo cancelar el renting antes de tiempo?</div><div class="faq-a">Depende del contrato y la gestora. Algunas permiten la cancelaci&oacute;n con una penalizaci&oacute;n, otras no. Es importante revisar las condiciones antes de firmar. En Myrenting te ayudamos a elegir la opci&oacute;n que mejor se adapte a tu situaci&oacute;n.</div></div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-brand">
-    <div class="footer-logo-mark">
-      <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-5 12H9a2 2 0 01-2-2v-1m10-9h2a2 2 0 012 2v8a2 2 0 01-2 2h-1"/></svg>
+    <div class="footer-logo-ico">
+      <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
     </div>
     <span class="footer-name">myrenting</span>
   </div>
@@ -828,60 +815,60 @@ img{max-width:100%;display:block}
     <a href="/politica-privacidad.html">Privacidad</a>
     <a href="/politica-cookies.html">Cookies</a>
     <a href="/blog/">Blog</a>
-    <a href="/renting-autonomos.html">Aut&#243;nomos</a>
+    <a href="/renting-autonomos.html">Aut&oacute;nomos</a>
     <a href="/renting-empresas.html">Empresas</a>
   </div>
-  <span class="footer-copy">&#169; 2026 myrenting &middot; Barcelona, Espa&#241;a</span>
+  <span class="footer-copy">&copy; 2026 myrenting &middot; Barcelona, Espa&ntilde;a</span>
 </footer>
 
 <!-- MODAL CONTACTO -->
 <div class="overlay" id="contact-overlay" onclick="closeContact(event)">
   <div class="modal" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeContactDirect()">&#x2715;</button>
+    <button class="modal-close" onclick="closeContactDirect()">&times;</button>
     <div id="contact-form-content">
-      <h3>Solicitar informaci&#243;n</h3>
-      <p class="modal-sub" id="contact-car-info">Sobre este veh&#237;culo</p>
+      <h3>Solicitar informaci&oacute;n</h3>
+      <p class="modal-sub" id="contact-car-info">Sobre este veh&iacute;culo</p>
       <form id="contact-form" onsubmit="handleContact(event)">
         <input type="hidden" name="_subject" value="Solicitud myrenting">
         <div class="form-row">
           <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
-          <div class="form-group"><label>Tel&#233;fono</label><input type="tel" name="telefono" placeholder="6XX XXX XXX" required></div>
+          <div class="form-group"><label>Tel&eacute;fono</label><input type="tel" name="telefono" placeholder="6XX XXX XXX" required></div>
         </div>
         <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@email.com" required></div>
         <div class="form-group">
           <label>Perfil</label>
           <select name="perfil">
             <option value="particular">Particular</option>
-            <option value="autonomo">Aut&#243;nomo</option>
+            <option value="autonomo">Aut&oacute;nomo</option>
             <option value="empresa">Empresa</option>
           </select>
         </div>
         <div class="form-group">
           <label>Km anuales aproximados</label>
           <select name="km">
-            <option value="10000">10.000 km/a&#241;o</option>
-            <option value="15000">15.000 km/a&#241;o</option>
-            <option value="20000">20.000 km/a&#241;o</option>
-            <option value="25000">25.000 km/a&#241;o o m&#225;s</option>
+            <option value="10000">10.000 km/a&ntilde;o</option>
+            <option value="15000">15.000 km/a&ntilde;o</option>
+            <option value="20000">20.000 km/a&ntilde;o</option>
+            <option value="25000">25.000 km/a&ntilde;o o m&aacute;s</option>
           </select>
         </div>
-        <div class="form-group"><label>Mensaje (opcional)</label><textarea name="mensaje" id="contact-message" placeholder="Dinos qu&#233; modelo te interesa o cualquier duda&#8230;"></textarea></div>
+        <div class="form-group"><label>Mensaje (opcional)</label><textarea name="mensaje" id="contact-message" placeholder="D&iacute;nos qu&eacute; modelo te interesa o cualquier duda&hellip;"></textarea></div>
         <button type="submit" class="modal-submit">Enviar solicitud gratis</button>
       </form>
     </div>
     <div class="modal-success" id="contact-success">
       <div class="success-icon">&#10003;</div>
-      <h3>&#161;Solicitud enviada!</h3>
+      <h3>&iexcl;Solicitud enviada!</h3>
       <p style="font-size:14px;color:var(--ink-4);margin-top:10px">Te contactamos en menos de 24h con las mejores ofertas personalizadas.</p>
     </div>
   </div>
 </div>
 
-<!-- COMPARISON DRAWER -->
+<!-- COMPARE DRAWER -->
 <div class="compare-drawer" id="compare-drawer">
   <div class="compare-slots" id="compare-slots"></div>
   <button class="btn-compare-now" onclick="openCompareModal()">Comparar ahora</button>
-  <span class="compare-drawer-close" onclick="clearCompare()">&#x2715;</span>
+  <span class="compare-drawer-close" onclick="clearCompare()">&times;</span>
 </div>
 
 <!-- COMPARE MODAL -->
@@ -889,7 +876,7 @@ img{max-width:100%;display:block}
   <div class="compare-modal" onclick="event.stopPropagation()">
     <div class="compare-modal-header">
       <h3>Comparativa de modelos</h3>
-      <button class="compare-close" onclick="closeCompareModal()">&#x2715;</button>
+      <button class="compare-close" onclick="closeCompareModal()">&times;</button>
     </div>
     <div id="compare-modal-content"></div>
   </div>
@@ -901,7 +888,7 @@ img{max-width:100%;display:block}
 </button>
 <div class="chat-bubble" id="chat-bubble">
   <strong>&#128075; Hola, soy tu asistente</strong>
-  D&#237;me qu&#233; coche buscas y te ayudo a encontrar la mejor oferta de renting. &#8593;
+  D&iacute;me qu&eacute; coche buscas y te ayudo a encontrar la mejor oferta. &uarr;
 </div>
 
 <script>
