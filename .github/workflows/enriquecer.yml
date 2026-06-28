@@ -1,0 +1,81 @@
+name: Enriquecer datos de coches
+
+on:
+  schedule:
+    # Cada domingo a las 7:00h (5 UTC) — solo 1 vez a la semana
+    - cron: '0 5 * * 0'
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: 'Forzar re-fetch (ignora cache)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  enriquecer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Limpiar cache si forzar=true
+        if: ${{ github.event.inputs.forzar == 'true' }}
+        run: |
+          rm -f coches-specs.json
+          echo "Cache limpiado, re-fetching todo"
+
+      - name: Ejecutar agente de enriquecimiento
+        run: python agente_enriquecer.py
+
+      - name: Regenerar páginas SEO con datos nuevos
+        run: |
+          if [ -f generar_seo.py ]; then python generar_seo.py; fi
+          if [ -f generar_categorias.py ]; then python generar_categorias.py; fi
+
+      - name: Verificar cambios
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit y push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name 'Myrenting Bot'
+          git config user.email 'bot@myrenting.es'
+          git add coches-specs.json renting-*.html sitemap.xml img/modelos/ || true
+          git commit -m "Enriquecer coches: specs + imágenes $(date +'%Y-%m-%d')"
+          git push origin HEAD
+
+      - name: Resumen
+        if: always()
+        run: |
+          python3 -c "
+          import json, os
+          if not os.path.exists('coches-specs.json'):
+              print('Sin datos')
+          else:
+              with open('coches-specs.json') as f:
+                  data = json.load(f)
+              total = len(data)
+              con_desc  = sum(1 for v in data.values() if v.get('descripcion'))
+              con_img   = sum(1 for v in data.values() if v.get('imagen_local'))
+              con_specs = sum(1 for v in data.values() if v.get('consumo_l100') or v.get('consumo_kwh100'))
+              print('## Enriquecimiento de coches')
+              print(f'- Total modelos: **{total}**')
+              print(f'- Con descripción: **{con_desc}**')
+              print(f'- Con imagen local: **{con_img}**')
+              print(f'- Con specs técnicas: **{con_specs}**')
+          " >> \$GITHUB_STEP_SUMMARY || true

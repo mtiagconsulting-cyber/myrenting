@@ -259,7 +259,47 @@ def links_relacionados_html(make, model, todos_modelos):
     </div>'''
 
 
-def generar_pagina(make, model, ofertas_modelo, todos_modelos):
+def specs_panel_html(specs: dict) -> str:
+    """Genera una tabla de ficha técnica si hay datos disponibles."""
+    if not specs:
+        return ''
+    rows = []
+    if specs.get('asientos'):
+        rows.append(('Plazas', f"{int(specs['asientos'])} plazas"))
+    if specs.get('consumo_l100'):
+        rows.append(('Consumo WLTP', f"{specs['consumo_l100']:.1f} L/100km"))
+    if specs.get('consumo_kwh100'):
+        rows.append(('Consumo eléctrico', f"{specs['consumo_kwh100']:.0f} kWh/100km"))
+    if specs.get('co2_gkm') is not None:
+        co2 = specs['co2_gkm']
+        rows.append(('Emisiones CO₂', f"{co2:.0f} g/km" if co2 > 0 else '0 g/km (eléctrico)'))
+    if specs.get('ancho_mm'):
+        rows.append(('Anchura', f"{int(specs['ancho_mm']):,} mm".replace(',', '.')))
+    if specs.get('peso_kg'):
+        rows.append(('Peso', f"{int(specs['peso_kg']):,} kg".replace(',', '.')))
+    if specs.get('cilindrada_cc'):
+        rows.append(('Cilindrada', f"{int(specs['cilindrada_cc'])} cc"))
+    if specs.get('anio_inicio'):
+        anio_fin = specs.get('anio_fin', '')
+        rango = f"{int(specs['anio_inicio'])}–{int(anio_fin)}" if anio_fin else f"{int(specs['anio_inicio'])}–hoy"
+        rows.append(('Generación', rango))
+
+    if not rows:
+        return ''
+
+    filas_html = ''.join(
+        f'<tr><td class="spec-key">{k}</td><td class="spec-val">{v}</td></tr>'
+        for k, v in rows
+    )
+    return f'''
+    <div class="specs-panel">
+      <h3 class="specs-title">Ficha técnica</h3>
+      <table class="specs-table">{filas_html}</table>
+    </div>'''
+
+
+def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
+    specs = specs or {}
     nombre    = f"{make.title()} {model.title()}"
     slug_name = slug(f"renting-{make}-{model}")
 
@@ -267,7 +307,8 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos):
     precio_max  = max(o.get('precio_desde', 0)    for o in ofertas_modelo)
     gestoras    = sorted(set(o.get('fuente', '') for o in ofertas_modelo if o.get('fuente')))
     fuels       = sorted(set(o.get('fuel',   '') for o in ofertas_modelo if o.get('fuel')))
-    imagen      = next((o.get('image','') for o in ofertas_modelo if o.get('image')), '')
+    # Imagen: priorizar imagen local del agente enriquecedor, luego de la oferta
+    imagen      = specs.get('imagen_local') or next((o.get('image','') for o in ofertas_modelo if o.get('image')), '')
     cat         = categoria_coche(make, model)
     precio_comp = precio_compra_estimado(make, model, precio_min)
 
@@ -332,6 +373,8 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos):
     texto_seo    = generar_texto_seo(nombre, precio_min, precio_max, gestoras, fuels, make, model, len(ofertas_modelo), precio_comp)
     top_cards    = top_ofertas_html(ofertas_sorted, nombre)
     links_rel    = links_relacionados_html(make, model, todos_modelos)
+    ficha_tecnica = specs_panel_html(specs)
+    desc_enriquecida = specs.get('descripcion', '')
 
     # Schemas
     schema_product = json.dumps({
@@ -507,6 +550,15 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos):
     .calc-highlight-label{{font-size:12px;color:var(--green-dk);margin-top:4px;font-weight:600}}
 
     /* SEO TEXT */
+    .desc-enriquecida{{background:var(--surface);border:1.5px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:18px 22px;margin-bottom:18px}}
+    .desc-enriquecida p{{color:var(--ink-2);font-size:14px;line-height:1.75;margin:0}}
+    .specs-panel{{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin-bottom:18px}}
+    .specs-title{{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-3);margin-bottom:12px}}
+    .specs-table{{width:100%;border-collapse:collapse;font-size:13px}}
+    .specs-table tr{{border-bottom:1px solid var(--border)}}
+    .specs-table tr:last-child{{border-bottom:none}}
+    .spec-key{{padding:8px 0;color:var(--ink-3);font-weight:500;width:45%}}
+    .spec-val{{padding:8px 0;color:var(--ink);font-weight:600}}
     .seo-panel{{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:28px}}
     .seo-panel h2{{font-size:16px;font-weight:800;margin-bottom:10px;margin-top:22px;color:var(--ink);letter-spacing:-.3px}}
     .seo-panel h2:first-child{{margin-top:0}}
@@ -693,6 +745,10 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos):
     </div>
   </div>
 
+  <!-- FICHA TÉCNICA + DESCRIPCIÓN -->
+  {'<div class="desc-enriquecida"><p>' + desc_enriquecida + '</p></div>' if desc_enriquecida else ''}
+  {ficha_tecnica}
+
   <!-- TEXTO SEO -->
   <div class="seo-panel">{texto_seo}</div>
 
@@ -795,6 +851,14 @@ def main():
         ofertas = json.loads(html_txt[start:end])
     print(f'Ofertas leidas: {len(ofertas)}')
 
+    # Cargar specs enriquecidas si existen
+    specs_path = BASE / 'coches-specs.json'
+    specs_db: dict = {}
+    if specs_path.exists():
+        with open(specs_path, encoding='utf-8') as f:
+            specs_db = json.load(f)
+        print(f'Specs cargadas: {len(specs_db)} modelos')
+
     # Agrupar por make + model
     modelos: dict[str, list] = {}
     for o in ofertas:
@@ -812,7 +876,8 @@ def main():
     paginas = []
     for key, ofertas_modelo in modelos.items():
         make, model = key.split('||')
-        slug_name, html_pag = generar_pagina(make, model, ofertas_modelo, todos_modelos)
+        specs = specs_db.get(key, {})
+        slug_name, html_pag = generar_pagina(make, model, ofertas_modelo, todos_modelos, specs)
         path = BASE / f'{slug_name}.html'
         path.write_text(html_pag, encoding='utf-8')
         paginas.append((slug_name, len(ofertas_modelo)))

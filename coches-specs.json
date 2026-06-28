@@ -1,0 +1,2644 @@
+{
+  "NISSAN||QASHQAI": {
+    "imagen_local": "/img/modelos/nissan-qashqai.png",
+    "precio_desde": 290.0,
+    "num_ofertas": 43,
+    "fuentes": [
+      "Arval",
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Micro híbrido Gasolina",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "SUV familiar compacto con tecnología mild hybrid. Uno de los más vendidos en España.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "VOLKSWAGEN||GOLF": {
+    "imagen_local": "/img/modelos/volkswagen-golf.png",
+    "precio_desde": 296.0,
+    "num_ofertas": 24,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "El referente del segmento compacto. Calidad, tecnología y eficiencia.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "TESLA||3": {
+    "precio_desde": 509.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "Sedán",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "consumo_kwh100": 14.9,
+    "co2_gkm": 0,
+    "descripcion": "El sedán eléctrico más vendido del mundo. Hasta 678 km de autonomía en versión Long Range."
+  },
+  "SKODA||FABIA": {
+    "precio_desde": 206.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Urbano",
+    "imagen_local": "/img/modelos/skoda-fabia.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "Urbano premium de Škoda con el maletero más grande de su segmento (380 litros).",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "DACIA||SANDERO": {
+    "precio_desde": 217.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Berlina con portón",
+    "imagen_local": "/img/modelos/dacia-sandero.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "El coche nuevo más barato de España. Mecánica LPG y bi-fuel disponible en versión Bi-Fuel.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "SEAT||IBIZA": {
+    "precio_desde": 221.0,
+    "num_ofertas": 11,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "GLP",
+      "Gasolina"
+    ],
+    "category": "Urbano",
+    "imagen_local": "/img/modelos/seat-ibiza.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "Urbano clásico de SEAT con plataforma MQB-A0. Eficiencia y equipamiento por encima de su precio.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "PEUGEOT||208 5P ALLURE": {
+    "precio_desde": 231.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Compacto",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "SEAT||ARONA": {
+    "precio_desde": 232.0,
+    "num_ofertas": 28,
+    "fuentes": [
+      "Arval",
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/seat-arona.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "SUV urbano de SEAT, versátil y económico, ideal para ciudad y carretera.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "CITROEN||C3 AIRCROSS": {
+    "precio_desde": 234.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/citroen-c3-aircross.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "FIAT||500": {
+    "precio_desde": 236.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina",
+      "Gasolina"
+    ],
+    "category": "Urbano",
+    "imagen_local": "/img/modelos/fiat-500.png",
+    "asientos": 4,
+    "anio_inicio": 2020,
+    "descripcion": "Icónico urbano italiano renovado en 2020. Disponible en versión 100% eléctrica con hasta 321 km.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FIAT||TIPO": {
+    "precio_desde": 241.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/fiat-tipo.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "KIA||STONIC": {
+    "precio_desde": 242.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina",
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/kia-stonic.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "Crossover urbano de Kia con garantía de 7 años y tecnología de asistencia avanzada.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "CITROEN||BERLINGO": {
+    "precio_desde": 242.0,
+    "num_ofertas": 7,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/citroen-berlingo.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "Furgoneta multiusos disponible como familiar y comercial. Plataforma EMP2 con todas las motorizaciones.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "FORD||PUMA / 5P / TODOTERRENO": {
+    "precio_desde": 244.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FORD||TRANSIT CONNECT": {
+    "precio_desde": 249.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/ford-transit-connect.png",
+    "asientos": 2,
+    "anio_inicio": 2018,
+    "descripcion": "Furgoneta de reparto media de Ford con gran modularidad y versiones de una o dos toneladas.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "RENAULT||CLIO": {
+    "precio_desde": 252.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diésel",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/renault-clio.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "El coche más vendido de España. Disponible con mecánica full hybrid sin enchufar.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FORD||FIESTA": {
+    "precio_desde": 252.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/ford-fiesta.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "OPEL||MOKKA": {
+    "precio_desde": 253.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Eléctrico",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/opel-mokka.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "Crossover compacto rediseñado con interiores Vizor futuristas y versión 100% eléctrica Mokka-e.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "HYUNDAI||BAYON": {
+    "precio_desde": 254.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/hyundai-bayon.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "Crossover urbano de Hyundai que combina practicidad de SUV con precio de segmento B.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FORD||FOCUS": {
+    "precio_desde": 254.0,
+    "num_ofertas": 27,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/ford-focus.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "Berlina compacta con excelente comportamiento dinámico, amplio equipamiento y motores EcoBoost.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "NISSAN||MICRA": {
+    "precio_desde": 256.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/nissan-micra.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "OPEL||CORSA": {
+    "precio_desde": 256.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/opel-corsa.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Urbano renovado de Opel sobre plataforma CMP con versión totalmente eléctrica Corsa-e.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "SEAT||ATECA": {
+    "precio_desde": 259.0,
+    "num_ofertas": 7,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/seat-ateca.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "HYUNDAI||I20": {
+    "precio_desde": 259.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/hyundai-i20.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "Urbano coreano con tecnología mild hybrid 48V de serie en las versiones superiores.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "RENAULT||CAPTUR": {
+    "precio_desde": 259.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Híbrido",
+      "GLP",
+      "Gas licuado (GLP)",
+      "Híbrido Enchufable"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/renault-captur.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Crossover compacto de Renault, líder en su segmento con versión E-Tech enchufable."
+  },
+  "RENAULT||MEGANE": {
+    "precio_desde": 261.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/renault-megane.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "Compacto clásico de Renault con versión E-Tech híbrida y enchufable disponibles.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "NISSAN||JUKE": {
+    "precio_desde": 261.0,
+    "num_ofertas": 25,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/nissan-juke.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Crossover urbano de Nissan con diseño extrovertido y mecánica mild hybrid.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "RENAULT||KANGOO EXPRESS": {
+    "precio_desde": 262.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/renault-kangoo-express.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLKSWAGEN||TAIGO": {
+    "precio_desde": 262.0,
+    "num_ofertas": 11,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volkswagen-taigo.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "SKODA||SCALA": {
+    "precio_desde": 263.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/skoda-scala.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Compacto de Škoda con diseño elegante y maletero de 467 litros. La berlina más espaciosa del segmento.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "DS||DS 3 CROSSBACK": {
+    "precio_desde": 263.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/ds-ds-3-crossback.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "MERCEDES BENZ||CITAN FURGON": {
+    "precio_desde": 265.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/mercedes-benz-citan-furgon.png"
+  },
+  "SEAT||LEON": {
+    "precio_desde": 265.0,
+    "num_ofertas": 22,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diésel",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/seat-leon.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "Compacto de referencia fabricado en España. Mecánicas mild hybrid y enchufables disponibles.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLKSWAGEN||POLO": {
+    "precio_desde": 266.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Urbano",
+    "imagen_local": "/img/modelos/volkswagen-polo.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "Referente del segmento B con calidad alemana en formato compacto y motores TDI y TSI.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "OPEL||GRANDLAND X": {
+    "precio_desde": 266.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/opel-grandland-x.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "SUV familiar de Opel con versión enchufable y tecnología avanzada de asistencia a la conducción.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "FORD||PUMA": {
+    "precio_desde": 267.0,
+    "num_ofertas": 15,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/ford-puma.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Crossover compacto con mild hybrid EcoBoost y maletero MegaBox de 80 litros extra.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "VOLKSWAGEN||T-CROSS": {
+    "precio_desde": 268.0,
+    "num_ofertas": 8,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volkswagen-t-cross.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FIAT||DOBLÓ": {
+    "precio_desde": 270.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/fiat-doblo.png"
+  },
+  "PEUGEOT||3008": {
+    "precio_desde": 272.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Micro híbrido Gasolina",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/peugeot-3008.png",
+    "asientos": 5,
+    "anio_inicio": 2024,
+    "descripcion": "SUV de referencia renovado en 2024 con pantalla panorámica y versión 100% eléctrica.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "OPEL||ASTRA": {
+    "precio_desde": 273.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/opel-astra.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "Compacto renovado de Opel con versión plug-in hybrid Astra-e y diseño elegante.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||PARTNER": {
+    "precio_desde": 275.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/peugeot-partner.png",
+    "asientos": 2,
+    "anio_inicio": 2018,
+    "descripcion": "Furgoneta compacta de reparto muy popular entre autónomos y pymes con opciones gasolina y eléctrica.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "SKODA||KAMIQ": {
+    "precio_desde": 276.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/skoda-kamiq.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "KIA||CEED": {
+    "precio_desde": 276.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/kia-ceed.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "Compacto coreano con diseño europeo, garantía de 7 años y múltiples carrocerías disponibles.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FIAT||DOBLO CARGO": {
+    "precio_desde": 281.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLKSWAGEN||T-ROC": {
+    "precio_desde": 283.0,
+    "num_ofertas": 38,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volkswagen-t-roc.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "SUV compacto de Volkswagen con diseño dinámico, deportivo y acabados de alta calidad.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "KIA||SPORTAGE": {
+    "precio_desde": 284.0,
+    "num_ofertas": 18,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Diesel",
+      "Híbrido Enchufable",
+      "Híbrido Gasolina",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/kia-sportage.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "SUV coreano de gran éxito con garantía de 7 años y versiones híbridas enchufables.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "RENAULT||KANGOO": {
+    "precio_desde": 285.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/renault-kangoo.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "Furgoneta familiar o comercial con nueva generación más espaciosa y versión eléctrica E-Tech."
+  },
+  "OPEL||COMBO": {
+    "precio_desde": 285.0,
+    "num_ofertas": 7,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/opel-combo.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "Furgoneta compacta de Opel con versión eléctrica y familiar Combo Life de 7 plazas.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||2008": {
+    "precio_desde": 286.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/peugeot-2008.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FIAT||FIORINO": {
+    "precio_desde": 286.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/fiat-fiorino.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||RIFTER": {
+    "precio_desde": 288.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Arval",
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel",
+      "Diesel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/peugeot-rifter.png"
+  },
+  "PEUGEOT||208": {
+    "precio_desde": 289.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina"
+    ],
+    "category": "Urbano",
+    "imagen_local": "/img/modelos/peugeot-208.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Urbano de referencia con el revolucionario i-Cockpit y versión 100% eléctrica e-208.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "SKODA||KAROQ": {
+    "precio_desde": 291.0,
+    "num_ofertas": 7,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/skoda-karoq.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "SUV compacto de Škoda con gran habitabilidad, practicidad y tecnología VW a buen precio.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "AUDI||A3": {
+    "precio_desde": 291.0,
+    "num_ofertas": 13,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel",
+      "Gasolina",
+      "Híbrido enchufable"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/audi-a3.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "Compacto premium de Audi con interior sofisticado, pantallas MMI y versión enchufable 45 TFSI-e.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||508": {
+    "precio_desde": 292.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/peugeot-508.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "Berlina fastback de Peugeot con diseño premium y versión enchufable 508 Hybrid de 225 CV.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "MG||ZS": {
+    "precio_desde": 294.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/mg-zs.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "KIA||XCEED": {
+    "precio_desde": 295.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/kia-xceed.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "VOLKSWAGEN||TIGUAN": {
+    "precio_desde": 296.0,
+    "num_ofertas": 29,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volkswagen-tiguan.png",
+    "asientos": 5,
+    "anio_inicio": 2024,
+    "descripcion": "SUV familiar de referencia de VW, espacioso y con múltiples versiones electrificadas.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "FORD||KUGA": {
+    "precio_desde": 297.0,
+    "num_ofertas": 13,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Diesel",
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/ford-kuga.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "SUV familiar de Ford con opciones híbridas, enchufables y mild hybrid disponibles."
+  },
+  "HYUNDAI||IONIQ": {
+    "precio_desde": 298.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Híbrido Enchufable"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/hyundai-ioniq.png",
+    "asientos": 5,
+    "anio_inicio": 2023,
+    "consumo_kwh100": 16.0,
+    "co2_gkm": 0,
+    "descripcion": "Berlina eléctrica de Hyundai con batería de 77 kWh y hasta 614 km de autonomía WLTP."
+  },
+  "FORD||TRANSIT COURIER VAN": {
+    "precio_desde": 299.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "CITROËN||BERLINGO": {
+    "precio_desde": 299.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "SEAT||LEÓN": {
+    "precio_desde": 299.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Berlina",
+    "imagen_local": "/img/modelos/seat-leon.png"
+  },
+  "AUDI||A1": {
+    "precio_desde": 300.0,
+    "num_ofertas": 7,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/audi-a1.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "JEEP||COMPASS": {
+    "precio_desde": 301.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "SUV de Jeep con capacidades 4x4 y versión enchufable 4xe con 50 km de autonomía eléctrica.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||308": {
+    "precio_desde": 304.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diésel",
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/peugeot-308.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "Compacto de referencia renovado con el revolucionario i-Cockpit digital y versión eléctrica e-308.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "MINI||COUNTRYMAN": {
+    "precio_desde": 304.0,
+    "num_ofertas": 20,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/mini-countryman.png",
+    "asientos": 5,
+    "anio_inicio": 2023,
+    "descripcion": "El SUV de MINI en su tercera generación, con versión eléctrica de hasta 313 km de autonomía.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "MAZDA||CX-30": {
+    "precio_desde": 306.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/mazda-cx-30.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Crossover compacto de Mazda entre el CX-3 y el CX-5, con mecánica e-SkyActiv mild hybrid.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "FORD||TRANSIT COURIER KOMBI": {
+    "precio_desde": 309.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "RENAULT||SYMBIOZ": {
+    "precio_desde": 311.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/renault-symbioz.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "TOYOTA||COROLLA": {
+    "precio_desde": 312.0,
+    "num_ofertas": 10,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/toyota-corolla.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "El coche más vendido de la historia en versión híbrida autorrecargable con bajo consumo."
+  },
+  "OMODA||5": {
+    "precio_desde": 313.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/omoda-5.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "MERCEDES BENZ||CITAN TOURER": {
+    "precio_desde": 315.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/mercedes-benz-citan-tourer.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "HYUNDAI||KONA": {
+    "precio_desde": 323.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Híbrido Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/hyundai-kona.png"
+  },
+  "RENAULT||ZOE": {
+    "precio_desde": 324.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/renault-zoe.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "consumo_kwh100": 17.2,
+    "co2_gkm": 0,
+    "descripcion": "Pionero del coche eléctrico en España. Urbano eléctrico con 395 km de autonomía WLTP."
+  },
+  "BMW||SERIES 1": {
+    "precio_desde": 324.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/bmw-series-1.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "OPEL||FRONTERA": {
+    "precio_desde": 326.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "SKODA||OCTAVIA": {
+    "precio_desde": 330.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina"
+    ],
+    "category": "Sedán",
+    "imagen_local": "/img/modelos/skoda-octavia.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "El familiar más espacioso del segmento C con maletero de 600 litros. Excelente relación calidad-precio.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "BMW||X1": {
+    "precio_desde": 331.0,
+    "num_ofertas": 12,
+    "fuentes": [
+      "Arval",
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diésel",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/bmw-x1.png",
+    "asientos": 5,
+    "anio_inicio": 2022,
+    "descripcion": "SUV premium compacto de BMW con versión totalmente eléctrica iX1 y plataforma modular.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "TOYOTA||C-HR": {
+    "precio_desde": 333.0,
+    "num_ofertas": 22,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/toyota-c-hr.png",
+    "asientos": 5,
+    "anio_inicio": 2023,
+    "descripcion": "Crossover híbrido con diseño vanguardista y exclusividad de mecánica full hybrid."
+  },
+  "DS||DS 7 CROSSBACK": {
+    "precio_desde": 333.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/ds-ds-7-crossback.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "HYUNDAI||TUCSON": {
+    "precio_desde": 334.0,
+    "num_ofertas": 7,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Gasolina",
+      "Diesel",
+      "Híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/hyundai-tucson.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "SUV familiar con diseño paramétrico único y mecánicas completamente electrificadas.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "RENAULT||ARKANA": {
+    "precio_desde": 334.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/renault-arkana.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "descripcion": "SUV cupé de Renault con mecánica full hybrid sin enchufar y diseño cupé diferenciador."
+  },
+  "MAZDA||CX-5": {
+    "precio_desde": 334.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/mazda-cx-5.png",
+    "asientos": 5,
+    "anio_inicio": 2022,
+    "descripcion": "SUV mediano de Mazda con diseño kodo premiado y motor SkyActiv de alta compresión.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLKSWAGEN||PASSAT": {
+    "precio_desde": 338.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/volkswagen-passat.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "AUDI||Q2": {
+    "precio_desde": 341.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/audi-q2.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "BYD||ATTO 2 DMI ACTIVE 122KW 166 CV": {
+    "precio_desde": 343.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "SUV"
+  },
+  "TOYOTA||PROACE CITY VERSO": {
+    "precio_desde": 345.0,
+    "num_ofertas": 10,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/toyota-proace-city-verso.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "AUDI||Q3": {
+    "precio_desde": 346.0,
+    "num_ofertas": 31,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diésel",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/audi-q3.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "SUV premium de Audi con interior de alta calidad, tecnología avanzada y plataforma MQB.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "CITROËN||Ë-C3": {
+    "precio_desde": 349.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Eléctrico 100%"
+    ],
+    "category": "Compacto"
+  },
+  "FORD||MONDEO": {
+    "precio_desde": 352.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/ford-mondeo.png",
+    "asientos": 5,
+    "anio_inicio": 2022,
+    "descripcion": "Familiar de Ford disponible solo como hybrid en su nueva generación familiar."
+  },
+  "CUPRA||FORMENTOR": {
+    "precio_desde": 354.0,
+    "num_ofertas": 13,
+    "fuentes": [
+      "Arval",
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina",
+      "Gasolina",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/cupra-formentor.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "SUV deportivo de CUPRA, el primero exclusivo de la marca. Hasta 310 CV y versión enchufable.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "ALFA ROMEO||JUNIOR": {
+    "precio_desde": 355.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "SUV"
+  },
+  "MERCEDES||B-CLASS": {
+    "precio_desde": 361.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/mercedes-b-class.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "CITROEN||C5 AIRCROSS": {
+    "precio_desde": 364.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/citroen-c5-aircross.png"
+  },
+  "MERCEDES||A-CLASS": {
+    "precio_desde": 365.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/mercedes-a-class.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "SEAT||TARRACO": {
+    "precio_desde": 365.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/seat-tarraco.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "KIA||NIRO": {
+    "precio_desde": 365.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Híbrido Enchufable"
+    ],
+    "category": "Hatchback",
+    "imagen_local": "/img/modelos/kia-niro.png"
+  },
+  "BMW||X2": {
+    "precio_desde": 366.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Arval",
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Micro híbrido Diésel",
+      "Diésel",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/bmw-x2.png",
+    "asientos": 5,
+    "anio_inicio": 2023,
+    "descripcion": "Crossover premium de BMW con línea deportiva y versión eléctrica iX2 de hasta 313 CV.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLKSWAGEN||ARTEON": {
+    "precio_desde": 368.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Hatchback",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "PEUGEOT||EXPERT": {
+    "precio_desde": 368.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/peugeot-expert.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLVO||XC40": {
+    "precio_desde": 372.0,
+    "num_ofertas": 11,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volvo-xc40.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "consumo_kwh100": 20.4,
+    "co2_gkm": 148,
+    "descripcion": "SUV premium compacto de Volvo disponible en versión eléctrica de hasta 423 km de autonomía.",
+    "consumo_l100": 6.5
+  },
+  "VOLKSWAGEN||TIGUAN ALLSPACE": {
+    "precio_desde": 378.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||5008": {
+    "precio_desde": 379.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/peugeot-5008.png",
+    "asientos": 7,
+    "anio_inicio": 2024,
+    "descripcion": "SUV grande de 7 plazas de Peugeot, renovado en 2024 con versión eléctrica de largo alcance.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "SKODA||KODIAQ": {
+    "precio_desde": 380.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/skoda-kodiaq.png",
+    "asientos": 7,
+    "anio_inicio": 2023,
+    "descripcion": "SUV grande de Škoda con 7 plazas opcionales y renovado diseño exterior en su segunda generación.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "FORD||S-MAX": {
+    "precio_desde": 383.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/ford-s-max.png"
+  },
+  "MERCEDES||GLA": {
+    "precio_desde": 384.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/mercedes-gla.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "VOLVO||XC60": {
+    "precio_desde": 384.0,
+    "num_ofertas": 11,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volvo-xc60.png",
+    "asientos": 5,
+    "anio_inicio": 2017,
+    "descripcion": "SUV mediano premium de Volvo con versión enchufable T8 Recharge de 455 CV y mecánicas mild hybrid.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "BMW||SERIES 3": {
+    "precio_desde": 386.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Sedán",
+    "imagen_local": "/img/modelos/bmw-series-3.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "BYD||ATTO 2": {
+    "precio_desde": 387.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/byd-atto-2.png",
+    "asientos": 5,
+    "anio_inicio": 2024,
+    "consumo_kwh100": 13.7,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico compacto de BYD con batería Blade y hasta 312 km de autonomía WLTP."
+  },
+  "MITSUBISHI||ECLIPSE CROSS": {
+    "precio_desde": 389.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/mitsubishi-eclipse-cross.png"
+  },
+  "FIAT||SCUDO": {
+    "precio_desde": 396.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "VOLKSWAGEN||ID.4": {
+    "precio_desde": 397.0,
+    "num_ofertas": 9,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/volkswagen-id-4.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "consumo_kwh100": 18.5,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico de VW sobre plataforma MEB con hasta 543 km de autonomía WLTP."
+  },
+  "AUDI||A4": {
+    "precio_desde": 398.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/audi-a4.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Berlina media premium de Audi con mayor habitabilidad y tecnología de asistencia avanzada.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "ALFA ROMEO||STELVIO": {
+    "precio_desde": 399.0,
+    "num_ofertas": 4,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/alfa-romeo-stelvio.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "DS||7 BLUEHDI": {
+    "precio_desde": 399.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "SUV"
+  },
+  "TOYOTA||RAV4": {
+    "precio_desde": 404.0,
+    "num_ofertas": 14,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/toyota-rav4.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "SUV híbrido familiar de Toyota. Referente en fiabilidad con consumo real de 6 L/100km."
+  },
+  "KIA||EV3": {
+    "precio_desde": 407.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "Berlina con portón",
+    "imagen_local": "/img/modelos/kia-ev3.png",
+    "asientos": 5,
+    "anio_inicio": 2024,
+    "consumo_kwh100": 14.3,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico compacto de Kia con hasta 605 km de autonomía y precio competitivo."
+  },
+  "AUDI||Q5": {
+    "precio_desde": 408.0,
+    "num_ofertas": 6,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel",
+      "Micro híbrido Diésel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/audi-q5.png",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "descripcion": "SUV mediano premium de Audi con interiores de alta calidad y versión enchufable 55 TFSI-e.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "MERCEDES||CLA": {
+    "precio_desde": 408.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/mercedes-cla.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "RENAULT||RAFALE": {
+    "precio_desde": 418.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/renault-rafale.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "MERCEDES BENZ||CLASE A": {
+    "precio_desde": 425.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Sedán",
+    "imagen_local": "/img/modelos/mercedes-benz-clase-a.png"
+  },
+  "CUPRA||TERRAMAR": {
+    "precio_desde": 426.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Arval",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina",
+      "Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/cupra-terramar.png",
+    "asientos": 5,
+    "anio_inicio": 2024,
+    "descripcion": "Nuevo SUV de CUPRA sobre plataforma MQB-evo con mecánicas híbridas enchufables.",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "MERCEDES||C-CLASS": {
+    "precio_desde": 426.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Familiar",
+    "imagen_local": "/img/modelos/mercedes-c-class.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "LEXUS||UX": {
+    "precio_desde": 426.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/lexus-ux.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "SUV compacto premium de Lexus con mecánica full hybrid de serie y acabados de altísima calidad."
+  },
+  "RENAULT||TRAFIC": {
+    "precio_desde": 428.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/renault-trafic.png",
+    "asientos": 3,
+    "anio_inicio": 2021,
+    "descripcion": "Furgoneta media de Renault con múltiples versiones de carga y pasajeros."
+  },
+  "MERCEDES||GLB": {
+    "precio_desde": 433.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "AUDI||Q3 SPORTBACK": {
+    "precio_desde": 433.0,
+    "num_ofertas": 11,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/audi-q3-sportback.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Versión cupé del Audi Q3, con línea más deportiva y el mismo espacio interior práctico.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "PEUGEOT||BOXER": {
+    "precio_desde": 434.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "LCV",
+    "imagen_local": "/img/modelos/peugeot-boxer.png",
+    "asientos": 3,
+    "anio_inicio": 2021,
+    "descripcion": "Furgoneta grande de Peugeot con amplia gama de carrocerías y versiones eléctricas.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "RENAULT||MASTER": {
+    "precio_desde": 441.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/renault-master.png",
+    "asientos": 3,
+    "anio_inicio": 2024,
+    "descripcion": "Furgoneta grande de Renault renovada en 2024. Versión eléctrica E-Tech con 200 km de autonomía."
+  },
+  "RENAULT||ESPACE": {
+    "precio_desde": 443.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido",
+      "Híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/renault-espace.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "CITROËN||JUMPY": {
+    "precio_desde": 447.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "BMW||220D": {
+    "precio_desde": 449.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Berlina"
+  },
+  "BMW||SERIE 1": {
+    "precio_desde": 452.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Berlina con portón",
+    "imagen_local": "/img/modelos/bmw-serie-1.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "Compacto premium de BMW con tracción delantera y motor de hasta 306 CV en versión M135i."
+  },
+  "BMW||SERIE 2": {
+    "precio_desde": 453.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Diésel"
+    ],
+    "category": "Sedán",
+    "imagen_local": "/img/modelos/bmw-serie-2.png"
+  },
+  "MERCEDES BENZ||VITO": {
+    "precio_desde": 458.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/mercedes-benz-vito.png"
+  },
+  "BYD||SEAL U": {
+    "precio_desde": 462.0,
+    "num_ofertas": 5,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Híbrido enchufable"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/byd-seal-u.png",
+    "asientos": 5,
+    "anio_inicio": 2023,
+    "consumo_kwh100": 17.2,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico de tamaño mediano de BYD con hasta 420 km de autonomía y batería Blade."
+  },
+  "BMW||X4": {
+    "precio_desde": 463.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel",
+      "Gasolina"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/bmw-x4.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "SUV cupé de BMW que combina la practicidad del X3 con un diseño fastback dinámico.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "MERCEDES||GLC-CLASS": {
+    "precio_desde": 466.0,
+    "num_ofertas": 11,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/mercedes-glc-class.png",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "NISSAN||X-TRAIL": {
+    "precio_desde": 478.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/nissan-x-trail.png"
+  },
+  "JAECOO||7": {
+    "precio_desde": 490.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido enchufable"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/jaecoo-7.png"
+  },
+  "FIAT||DUCATO FURGÓN": {
+    "precio_desde": 495.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "ALPINE||A290": {
+    "precio_desde": 496.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "Urbano",
+    "imagen_local": "/img/modelos/alpine-a290.png"
+  },
+  "FORD||RANGER": {
+    "precio_desde": 501.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Todoterreno",
+    "imagen_local": "/img/modelos/ford-ranger.png"
+  },
+  "MERCEDES BENZ||SPRINTER": {
+    "precio_desde": 517.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgón",
+    "imagen_local": "/img/modelos/mercedes-benz-sprinter.png"
+  },
+  "FORD||MUSTANG MACH-E": {
+    "precio_desde": 517.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "Crossover",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "consumo_kwh100": 19.5,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico inspirado en el Mustang con hasta 610 km de autonomía y 487 CV en GT."
+  },
+  "BMW||X3": {
+    "precio_desde": 523.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover",
+    "imagen_local": "/img/modelos/bmw-x3.png",
+    "asientos": 5,
+    "anio_inicio": 2024,
+    "descripcion": "SUV mediano de BMW de nueva generación con opción totalmente eléctrica iX3."
+  },
+  "BMW||IX1": {
+    "precio_desde": 524.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Eléctrico 100%"
+    ],
+    "category": "SUV",
+    "asientos": 5,
+    "anio_inicio": 2022,
+    "consumo_kwh100": 18.5,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico compacto de BMW con 438 km de autonomía WLTP y carga rápida de 130 kW."
+  },
+  "MAZDA||CX-60": {
+    "precio_desde": 532.0,
+    "num_ofertas": 15,
+    "fuentes": [
+      "Arval",
+      "Ayvens"
+    ],
+    "fuels": [
+      "Micro híbrido Diésel",
+      "Híbrido Enchufable"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/mazda-cx-60.png",
+    "asientos": 5,
+    "anio_inicio": 2022,
+    "descripcion": "SUV grande de Mazda con motor 6 cilindros en línea y versión enchufable PHEV de 327 CV."
+  },
+  "RENAULT||TRAFIC FURGÓN": {
+    "precio_desde": 534.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "BMW||SERIES 5": {
+    "precio_desde": 536.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel"
+    ],
+    "category": "Sedán"
+  },
+  "KIA||EV6": {
+    "precio_desde": 547.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/kia-ev6.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "consumo_kwh100": 18.0,
+    "co2_gkm": 0,
+    "descripcion": "Crossover eléctrico de Kia ganador del Car of the Year 2022, con hasta 528 km de autonomía."
+  },
+  "MERCEDES||GLC": {
+    "precio_desde": 550.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "BMW||X5": {
+    "precio_desde": 565.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Diesel"
+    ],
+    "category": "Crossover",
+    "asientos": 7,
+    "anio_inicio": 2018,
+    "descripcion": "SUV grande de BMW con 7 plazas opcionales y versión enchufable xDrive45e PHEV.",
+    "consumo_l100": 5.1,
+    "co2_gkm": 133
+  },
+  "MERCEDES BENZ||GLA": {
+    "precio_desde": 567.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Gasolina"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/mercedes-benz-gla.png",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "RENAULT||MASTER FURGÓN T": {
+    "precio_desde": 578.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Furgonetas"
+  },
+  "BMW||X3 20D XDRIVE": {
+    "precio_desde": 594.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Diésel"
+    ],
+    "category": "SUV"
+  },
+  "HYUNDAI||IONIQ 5": {
+    "precio_desde": 604.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/hyundai-ioniq-5.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "consumo_kwh100": 17.7,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico de Hyundai con carga ultrarrápida de 800V y hasta 507 km de autonomía WLTP."
+  },
+  "BMW||318D": {
+    "precio_desde": 607.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Berlina"
+  },
+  "MERCEDES||GLC COUPE": {
+    "precio_desde": 629.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover"
+  },
+  "BMW||I4": {
+    "precio_desde": 638.0,
+    "num_ofertas": 2,
+    "fuentes": [
+      "Arval",
+      "Alphabet"
+    ],
+    "fuels": [
+      "Eléctrico 100%",
+      "Eléctrico"
+    ],
+    "category": "Berlina",
+    "imagen_local": "/img/modelos/bmw-i4.png",
+    "asientos": 5,
+    "anio_inicio": 2021,
+    "consumo_kwh100": 18.1,
+    "co2_gkm": 0,
+    "descripcion": "Gran berlina eléctrica de BMW con hasta 590 km WLTP y la dinámica característica de la marca."
+  },
+  "POLESTAR||4": {
+    "precio_desde": 643.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Eléctrico"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/polestar-4.png",
+    "asientos": 5,
+    "anio_inicio": 2023,
+    "consumo_kwh100": 19.2,
+    "co2_gkm": 0,
+    "descripcion": "SUV cupé eléctrico de Polestar sin luneta trasera, con hasta 591 km de autonomía y 544 CV."
+  },
+  "JEEP||WRANGLER": {
+    "precio_desde": 658.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Crossover"
+  },
+  "BMW||420I": {
+    "precio_desde": 663.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Gasolina"
+    ],
+    "category": "Berlina",
+    "consumo_l100": 6.5,
+    "co2_gkm": 148
+  },
+  "BMW||330E": {
+    "precio_desde": 686.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Híbrido Enchufable"
+    ],
+    "category": "Berlina"
+  },
+  "MERCEDES||GLE": {
+    "precio_desde": 701.0,
+    "num_ofertas": 3,
+    "fuentes": [
+      "Ayvens"
+    ],
+    "fuels": [
+      "Híbrido Enchufable",
+      "Diesel"
+    ],
+    "category": "Crossover"
+  },
+  "BMW||IX3": {
+    "precio_desde": 706.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Eléctrico 100%"
+    ],
+    "category": "SUV",
+    "asientos": 5,
+    "anio_inicio": 2020,
+    "consumo_kwh100": 18.0,
+    "co2_gkm": 0,
+    "descripcion": "SUV eléctrico de BMW basado en el X3 con 461 km de autonomía WLTP."
+  },
+  "BMW||520D": {
+    "precio_desde": 708.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Alphabet"
+    ],
+    "fuels": [
+      "Diésel"
+    ],
+    "category": "Berlina"
+  },
+  "LAND ROVER||RANGE ROVER EVOQUE": {
+    "precio_desde": 731.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Diésel"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/land-rover-range-rover-evoque.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "SUV premium de Land Rover con diseño elegante y versión mild hybrid P200 de 200 CV."
+  },
+  "LAND ROVER||DEFENDER": {
+    "precio_desde": 1045.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Micro híbrido Diésel"
+    ],
+    "category": "Todoterreno",
+    "imagen_local": "/img/modelos/land-rover-defender.png",
+    "asientos": 5,
+    "anio_inicio": 2019,
+    "descripcion": "SUV icónico reinventado con capacidades todoterreno extremas y opción PHEV."
+  },
+  "AUDI||Q8": {
+    "precio_desde": 1161.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido enchufable"
+    ],
+    "category": "SUV",
+    "imagen_local": "/img/modelos/audi-q8.png",
+    "asientos": 5,
+    "anio_inicio": 2018,
+    "descripcion": "SUV flagship de Audi con diseño cupé, pantallas táctiles y mecánicas MHEV de serie."
+  },
+  "LAND ROVER||SPORT": {
+    "precio_desde": 1404.0,
+    "num_ofertas": 1,
+    "fuentes": [
+      "Arval"
+    ],
+    "fuels": [
+      "Híbrido enchufable"
+    ],
+    "category": "SUV"
+  }
+}

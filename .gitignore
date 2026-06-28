@@ -3,8 +3,13 @@ img/.DS_Store
 *.py
 !agente_scraping.py
 !agente_outreach.py
+!agente_enriquecer.py
+!inyectar_ofertas.py
+!generar_seo.py
+!generar_categorias.py
 index_redesign.html
 scraper-concesionarios/
 *.json
+!coches-specs.json
 *backup*.html
 *debug*.html
