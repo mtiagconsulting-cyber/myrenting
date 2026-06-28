@@ -265,6 +265,7 @@ button{font-family:inherit;cursor:pointer}
 .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 
 /* ===== CARD ===== */
+a.model-card{text-decoration:none;color:inherit}
 .model-card{
   border-radius:16px;overflow:hidden;
   box-shadow:0 3px 14px rgba(0,0,0,.09);
@@ -567,8 +568,8 @@ button{font-family:inherit;cursor:pointer}
     <span class="hero-dot"></span>
     Actualizado 28 jun 2026 &middot; Precios reales
   </div>
-  <h1 class="hero-h1">Encuentra el renting<br><span class="hl">perfecto para ti</span></h1>
-  <p class="hero-p">Compara m&aacute;s de 1.000 ofertas de las mejores gestoras de Espa&ntilde;a. Sin registrarte.</p>
+  <h1 class="hero-h1">Compara el renting de<br><span class="hl">todos los coches</span></h1>
+  <p class="hero-p">M&aacute;s de 1.040 ofertas reales de 6 gestoras &mdash; actualizadas, sin registro y con precios finales.</p>
 
   <div class="sbox">
     <div class="sbox-main">
@@ -631,23 +632,23 @@ button{font-family:inherit;cursor:pointer}
 
 <!-- TRUST -->
 <div class="trust-strip">
-  <span class="ti">Sin entrada</span><span class="td">&#9679;</span>
-  <span class="ti">Seguro incluido</span><span class="td">&#9679;</span>
-  <span class="ti">Mantenimiento incluido</span><span class="td">&#9679;</span>
-  <span class="ti">Precios sin letra peque&ntilde;a</span><span class="td">&#9679;</span>
-  <span class="ti">Gratis y sin registro</span>
+  <span class="ti">✓ Sin entrada</span><span class="td">·</span>
+  <span class="ti">✓ Seguro a todo riesgo</span><span class="td">·</span>
+  <span class="ti">✓ Mantenimiento incluido</span><span class="td">·</span>
+  <span class="ti">✓ Asistencia 24h</span><span class="td">·</span>
+  <span class="ti">✓ Sin registro ni formularios</span>
 </div>
 
 <!-- GESTORAS -->
 <div class="gestoras-strip">
-  <span class="gst-lbl">Gestoras</span>
+  <span class="gst-lbl">Comparamos ofertas de</span>
   <div class="gst-divider"></div>
   <span class="gst-name">Arval</span>
   <span class="gst-name">Ayvens</span>
   <span class="gst-name">Alphabet</span>
   <span class="gst-name">Kinto</span>
-  <span class="gst-name">Leasys</span>
-  <span class="gst-name">REVEL</span>
+  <span class="gst-name">Quadis</span>
+  <span class="gst-name">KIA Armotors</span>
 </div>
 
 <!-- FILTER BAR -->
@@ -690,8 +691,8 @@ button{font-family:inherit;cursor:pointer}
 <div class="catalog" id="section-ofertas">
   <div class="cat-hdr">
     <div>
-      <div class="cat-ttl">Ofertas de renting</div>
-      <div class="cat-sub">Ordenadas por precio &middot; <span id="results-count"></span></div>
+      <div class="cat-ttl">Ofertas de renting en Espa&ntilde;a</div>
+      <div class="cat-sub">Ordenadas por precio &middot; <span id="results-count"></span> &middot; actualizado hoy</div>
     </div>
     <button class="btn-all" onclick="showAllModels()">Ver todos los modelos</button>
   </div>
@@ -1089,7 +1090,7 @@ button{font-family:inherit;cursor:pointer}
     const badge = popular
       ? '<span class="card-badge-pill pop">\u2b50 M\u00e1s popular</span>'
       : '';
-    return '<div class="model-card' + (popular?' popular':'') + (isComp?' in-compare':'') + '" id="card-' + s + '" onclick="location.href=\'/\' + s + \'.html\'">' +
+    return '<a class="model-card' + (popular?' popular':'') + (isComp?' in-compare':'') + '" id="card-' + s + '" href="/' + s + '.html">' +
       '<div class="card-hdr">' +
         '<div class="card-info-left">' +
           '<div class="card-model-name">' + m.name + '</div>' +
@@ -1109,7 +1110,7 @@ button{font-family:inherit;cursor:pointer}
       '<div class="card-ftr">' +
         (badge ? badge + '<span class="card-offer-cnt">' + m.offerCount + ' oferta' + (m.offerCount!==1?'s':'') + '</span>' : '<span class="card-gestoras">' + gestNames + '</span><span class="card-offer-cnt">' + m.offerCount + ' oferta' + (m.offerCount!==1?'s':'') + '</span>') +
       '</div>' +
-    '</div>';
+    '</a>';
   }
 
   /* FAV */
