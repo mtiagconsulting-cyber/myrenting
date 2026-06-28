@@ -298,6 +298,91 @@ def specs_panel_html(specs: dict) -> str:
     </div>'''
 
 
+
+def gestoras_cards_html(ofertas_sorted):
+    """Tarjetas por gestora al estilo Swipcar con tabla de precios."""
+    from collections import defaultdict
+    grupos = defaultdict(list)
+    for o in ofertas_sorted:
+        grupos[o.get('fuente', '?')].append(o)
+
+    cards = ''
+    for fuente, offers in sorted(grupos.items(), key=lambda x: min(o.get('precio_desde', 9999) for o in x[1])):
+        precio_min = min(o.get('precio_desde', 9999) for o in offers)
+        best = min(offers, key=lambda o: o.get('precio_desde', 9999))
+        version = (best.get('version') or '')[:55]
+        link = best.get('link_oferta') or best.get('url') or '#'
+        tipo = best.get('tipo', 'empresa').title()
+
+        combos, seen = [], set()
+        for o in offers:
+            if o.get('precios'):
+                for p in o['precios']:
+                    key = (int(p[0]), int(p[1]))
+                    if key not in seen:
+                        seen.add(key)
+                        combos.append({
+                            'dur': int(p[0]), 'km': int(p[1]),
+                            'part': float(p[3]) if len(p) > 3 else float(p[2]),
+                            'emp':  float(p[2]) if len(p) > 3 else None,
+                        })
+            else:
+                dur = int(o.get('duracion', 48) or 48)
+                km  = int(o.get('km', 10000) or 10000)
+                key = (dur, km)
+                if key not in seen:
+                    seen.add(key)
+                    combos.append({'dur': dur, 'km': km, 'part': o.get('precio_desde'), 'emp': None})
+
+        combos.sort(key=lambda c: (c['part'] or c['emp'] or 9999))
+        has_emp = any(c['emp'] for c in combos)
+
+        rows = ''
+        for c in combos[:6]:
+            km_str = f"{c['km']:,}".replace(',', '.') + ' km'
+            p_str  = f"{int(c['part'])}€" if c['part'] else '—'
+            e_str  = f"{int(c['emp'])}€"  if c['emp']  else ''
+            best_p = bool(c['part'] and abs(c['part'] - precio_min) < 1)
+            rows += '<tr>'
+            rows += f'<td>{c["dur"]} meses</td><td>{km_str}</td>'
+            rows += f'<td class="gc-best">{p_str}</td>' if best_p else f'<td>{p_str}</td>'
+            if has_emp:
+                rows += f'<td class="gc-emp">{e_str}</td>'
+            rows += '</tr>'
+
+        emp_th = '<th>Empresa</th>' if has_emp else ''
+        emp_col_class = ' gc-has-emp' if has_emp else ''
+
+        cards += (
+            '\n    <div class="gestora-card">'
+            '\n      <div class="gc-hdr">'
+            '\n        <div class="gc-hdr-top">'
+            f'\n          <span class="gc-name">{fuente}</span>'
+            f'\n          <span class="gc-tipo">{tipo}</span>'
+            '\n        </div>'
+            f'\n        <div class="gc-version">{version}</div>'
+            '\n        <div class="gc-price-row">'
+            '\n          <span class="gc-desde">Desde</span>'
+            f'\n          <span class="gc-price">{int(precio_min)}€</span>'
+            '\n          <span class="gc-iva">mes · IVA incl.</span>'
+            '\n        </div>'
+            '\n      </div>'
+            '\n      <div class="gc-body">'
+            f'\n        <table class="gc-table{emp_col_class}">'
+            f'\n          <thead><tr><th>Plazo</th><th>Km/año</th><th>Particular</th>{emp_th}</tr></thead>'
+            f'\n          <tbody>{rows}</tbody>'
+            '\n        </table>'
+            '\n        <div class="gc-includes">'
+            '\n          <span>✓ Sin entrada</span><span>✓ Seguro todo riesgo</span>'
+            '\n          <span>✓ Mantenimiento</span><span>✓ Asistencia 24h</span>'
+            '\n        </div>'
+            f'\n        <a href="{link}" target="_blank" rel="noopener" class="gc-cta">Ver en {fuente} →</a>'
+            '\n      </div>'
+            '\n    </div>'
+        )
+    return cards
+
+
 def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     specs = specs or {}
     nombre    = f"{make.title()} {model.title()}"
@@ -372,6 +457,7 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
 
     texto_seo    = generar_texto_seo(nombre, precio_min, precio_max, gestoras, fuels, make, model, len(ofertas_modelo), precio_comp)
     top_cards    = top_ofertas_html(ofertas_sorted, nombre)
+    gestora_cards = gestoras_cards_html(ofertas_sorted)
     links_rel    = links_relacionados_html(make, model, todos_modelos)
     ficha_tecnica = specs_panel_html(specs)
     desc_enriquecida = specs.get('descripcion', '')
@@ -599,6 +685,33 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     .sticky-cta{{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--accent);padding:12px 20px;z-index:300;text-align:center}}
     .sticky-cta a{{color:#fff;font-size:14px;font-weight:700}}
 
+
+    /* GESTORA CARDS */
+    .gestora-section{{margin-top:28px}}
+    .gestora-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:14px}}
+    .gestora-card{{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:box-shadow .2s,transform .2s}}
+    .gestora-card:hover{{box-shadow:var(--shadow-lg);transform:translateY(-2px)}}
+    .gc-hdr{{background:var(--accent);color:#fff;padding:16px 18px}}
+    .gc-hdr-top{{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}}
+    .gc-name{{font-size:17px;font-weight:800}}
+    .gc-tipo{{font-size:10px;font-weight:700;background:rgba(255,255,255,.2);padding:3px 9px;border-radius:99px}}
+    .gc-version{{font-size:11px;color:rgba(255,255,255,.7);margin-bottom:10px;line-height:1.4;min-height:14px}}
+    .gc-price-row{{display:flex;align-items:baseline;gap:6px}}
+    .gc-desde{{font-size:11px;color:rgba(255,255,255,.65)}}
+    .gc-price{{font-size:30px;font-weight:900;letter-spacing:-1px;line-height:1}}
+    .gc-iva{{font-size:10px;color:rgba(255,255,255,.65);line-height:1.5}}
+    .gc-body{{padding:16px 18px}}
+    .gc-table{{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px}}
+    .gc-table th{{text-align:left;padding:5px 8px;background:var(--surface-2);font-size:9px;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-4);border-bottom:1px solid var(--border)}}
+    .gc-table td{{padding:7px 8px;border-top:1px solid var(--border);color:var(--ink-2)}}
+    .gc-table td.gc-best{{color:var(--accent);font-weight:800}}
+    .gc-table td.gc-emp{{color:var(--ink-4)}}
+    .gc-includes{{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}}
+    .gc-includes span{{font-size:11px;color:var(--green-dk);background:var(--green-lt);border-radius:4px;padding:3px 8px;font-weight:600}}
+    .gc-cta{{display:block;background:var(--accent);color:#fff;text-align:center;padding:11px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;transition:background .15s}}
+    .gc-cta:hover{{background:var(--accent-dk)}}
+    @media(max-width:640px){{.gestora-grid{{grid-template-columns:1fr}}}}
+
     /* RESPONSIVE */
     @media(max-width:900px){{
       .hero-inner{{grid-template-columns:1fr}}
@@ -691,6 +804,13 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
 <div class="top-section">
   <div class="section-label">Las 3 mejores ofertas ahora mismo</div>
   <div class="top-grid">{top_cards}</div>
+</div>
+
+<!-- GESTORAS SECTION -->
+<div class="top-section gestora-section">
+  <div class="section-label">Comparar por gestora</div>
+  <div class="section-title">Precios y condiciones de cada gestora</div>
+  <div class="gestora-grid">{gestora_cards}</div>
 </div>
 
 <!-- MAIN -->

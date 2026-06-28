@@ -186,6 +186,33 @@
     .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--accent);padding:12px 20px;z-index:300;text-align:center}
     .sticky-cta a{color:#fff;font-size:14px;font-weight:700}
 
+
+    /* GESTORA CARDS */
+    .gestora-section{margin-top:28px}
+    .gestora-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:14px}
+    .gestora-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:box-shadow .2s,transform .2s}
+    .gestora-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+    .gc-hdr{background:var(--accent);color:#fff;padding:16px 18px}
+    .gc-hdr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+    .gc-name{font-size:17px;font-weight:800}
+    .gc-tipo{font-size:10px;font-weight:700;background:rgba(255,255,255,.2);padding:3px 9px;border-radius:99px}
+    .gc-version{font-size:11px;color:rgba(255,255,255,.7);margin-bottom:10px;line-height:1.4;min-height:14px}
+    .gc-price-row{display:flex;align-items:baseline;gap:6px}
+    .gc-desde{font-size:11px;color:rgba(255,255,255,.65)}
+    .gc-price{font-size:30px;font-weight:900;letter-spacing:-1px;line-height:1}
+    .gc-iva{font-size:10px;color:rgba(255,255,255,.65);line-height:1.5}
+    .gc-body{padding:16px 18px}
+    .gc-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px}
+    .gc-table th{text-align:left;padding:5px 8px;background:var(--surface-2);font-size:9px;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-4);border-bottom:1px solid var(--border)}
+    .gc-table td{padding:7px 8px;border-top:1px solid var(--border);color:var(--ink-2)}
+    .gc-table td.gc-best{color:var(--accent);font-weight:800}
+    .gc-table td.gc-emp{color:var(--ink-4)}
+    .gc-includes{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+    .gc-includes span{font-size:11px;color:var(--green-dk);background:var(--green-lt);border-radius:4px;padding:3px 8px;font-weight:600}
+    .gc-cta{display:block;background:var(--accent);color:#fff;text-align:center;padding:11px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;transition:background .15s}
+    .gc-cta:hover{background:var(--accent-dk)}
+    @media(max-width:640px){.gestora-grid{grid-template-columns:1fr}}
+
     /* RESPONSIVE */
     @media(max-width:900px){
       .hero-inner{grid-template-columns:1fr}
@@ -267,7 +294,7 @@
       </div>
       <div class="hero-social-proof">
         <span class="pulse"></span>
-        10 personas ven esta página ahora
+        29 personas ven esta página ahora
       </div>
     </div>
     <div class="hero-img-col"><img src="https://scene7.toyota.eu/is/image/toyotaeurope/NX+350+1?fmt=png-alpha&wid=480&resMode=sharp2&op_usm=1.75,0.3,2,0" alt="Renting Lexus Nx" loading="eager"></div>
@@ -302,6 +329,38 @@
           </div>
           <a href="https://www.kinto-mobility.eu/es/es/kinto-one/renting/lexus-nx4502wd-new/ca30" target="_blank" rel="noopener" class="top-card-btn">Ver oferta →</a>
         </div></div>
+</div>
+
+<!-- GESTORAS SECTION -->
+<div class="top-section gestora-section">
+  <div class="section-label">Comparar por gestora</div>
+  <div class="section-title">Precios y condiciones de cada gestora</div>
+  <div class="gestora-grid">
+    <div class="gestora-card">
+      <div class="gc-hdr">
+        <div class="gc-hdr-top">
+          <span class="gc-name">Kinto</span>
+          <span class="gc-tipo">Empresa</span>
+        </div>
+        <div class="gc-version">Lexus NX 350h 2WD Premium+ - Híbrido Automático D-SUV</div>
+        <div class="gc-price-row">
+          <span class="gc-desde">Desde</span>
+          <span class="gc-price">730€</span>
+          <span class="gc-iva">mes · IVA incl.</span>
+        </div>
+      </div>
+      <div class="gc-body">
+        <table class="gc-table">
+          <thead><tr><th>Plazo</th><th>Km/año</th><th>Particular</th></tr></thead>
+          <tbody><tr><td>48 meses</td><td>10.000 km</td><td class="gc-best">730€</td></tr></tbody>
+        </table>
+        <div class="gc-includes">
+          <span>✓ Sin entrada</span><span>✓ Seguro todo riesgo</span>
+          <span>✓ Mantenimiento</span><span>✓ Asistencia 24h</span>
+        </div>
+        <a href="https://www.kinto-mobility.eu/es/es/kinto-one/renting/lexus-nx350-new/ca29" target="_blank" rel="noopener" class="gc-cta">Ver en Kinto →</a>
+      </div>
+    </div></div>
 </div>
 
 <!-- MAIN -->

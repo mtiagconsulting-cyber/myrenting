@@ -71,6 +71,10 @@ def aplanar(o: dict) -> dict:
     }
 
 
+from datetime import datetime
+_MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic']
+FECHA_HOY = f"{datetime.now().day} {_MESES[datetime.now().month-1]} {datetime.now().year}"
+
 with open(JSON_PATH, encoding='utf-8') as f:
     raw = json.load(f)
 
@@ -89,5 +93,19 @@ html_nuevo, n = re.subn(patron, rf'\g<1>{json_str};', html, count=1, flags=re.DO
 if n == 0:
     print("ERROR: No se encontro _OFERTAS en index.html")
 else:
+    # Inject date into hero eyebrow
+    # Replace "Actualizado hoy" with actual date (handles HTML entities)
+    html_nuevo = re.sub(
+        r'Actualizado hoy\s*(?:&middot;|·)',
+        f'Actualizado {FECHA_HOY} &middot;',
+        html_nuevo
+    )
+    # Inject gestoras count
+    gestoras_n = len(set(o.get('fuente','') for o in raw if o.get('fuente')))
+    html_nuevo = re.sub(
+        r'<div class="sbar-val">6</div>',
+        f'<div class="sbar-val">{gestoras_n}</div>',
+        html_nuevo
+    )
     HTML_PATH.write_text(html_nuevo, encoding='utf-8')
-    print(f"OK: index.html actualizado con {len(ofertas)} ofertas")
+    print(f"OK: index.html actualizado con {len(ofertas)} ofertas, fecha={FECHA_HOY}")
