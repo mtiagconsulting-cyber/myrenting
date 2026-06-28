@@ -878,7 +878,7 @@
         '<button class="card-fav' + (isFav?' active':'') + '" onclick="toggleFav(event,\'' + m.name + '\')" title="Guardar">' + (isFav?'&#10084;':'&#9825;') + '</button>' +
         '<button class="card-compare' + (isComp?' active':'') + '" onclick="toggleCompare(event,' + JSON.stringify(m).replace(/'/g,"\'") + ')" title="Comparar">VS</button>' +
       '</div>' +
-      '<div class="model-img">' + (m.image ? '<img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.style.display='none'">' : '<div class="model-img-placeholder">&#x1F697;</div>') + '</div>' +
+      '<div class="model-img">' + (m.image ? '<img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '<div class="model-img-placeholder">&#x1F697;</div>') + '</div>' +
       '<div class="model-body">' +
         '<div class="model-name">' + m.name + '</div>' +
         '<div class="model-badges">' + fuels + '</div>' +
