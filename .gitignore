@@ -13,3 +13,7 @@ scraper-concesionarios/
 !coches-specs.json
 *backup*.html
 *debug*.html
+__pycache__/
+agente_enriquecer.log
+*.log
+*.pyc
