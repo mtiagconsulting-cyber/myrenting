@@ -2,12 +2,13 @@
 """
 Lee ofertas-db.json e inyecta los datos en const _OFERTAS del index.html.
 """
-import json, re
+import json, re, unicodedata
 from pathlib import Path
 
 BASE = Path(__file__).parent
 JSON_PATH = BASE / "ofertas-db.json"
 HTML_PATH = BASE / "index.html"
+IMG_DIR = BASE / "img" / "modelos"
 
 
 def limpiar(s: str) -> str:
@@ -15,15 +16,50 @@ def limpiar(s: str) -> str:
     return re.sub(r' +', ' ', s).strip()
 
 
+def _slugify(text: str) -> str:
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    text = text.lower().strip()
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
+
+
+def _build_local_images() -> dict:
+    mapping = {}
+    if IMG_DIR.exists():
+        for p in IMG_DIR.glob('*.png'):
+            mapping[p.stem] = f'/img/modelos/{p.name}'
+    return mapping
+
+
+_LOCAL_IMAGES = _build_local_images()
+
+
+def _local_image(make: str, model: str) -> str:
+    slug = _slugify(f'{make} {model}')
+    if slug in _LOCAL_IMAGES:
+        return _LOCAL_IMAGES[slug]
+    # try make-only prefix match for compound model names
+    make_slug = _slugify(make)
+    for key, path in _LOCAL_IMAGES.items():
+        if key.startswith(make_slug + '-') and _slugify(model).startswith(key[len(make_slug)+1:]):
+            return path
+    return ''
+
+
 def aplanar(o: dict) -> dict:
     precios = o.get('precios') or []
     duracion = int(precios[0][0]) if precios else int(o.get('duracion', 48) or 48)
     km = int(precios[0][1]) if precios else int(o.get('km', 10000) or 10000)
+    make = limpiar(o.get('make', ''))
+    model = limpiar(o.get('model', ''))
+    local_img = _local_image(make, model)
+    image = local_img or limpiar(o.get('image', ''))
     return {
         'fuente':       limpiar(o.get('fuente', '')),
         'tipo':         limpiar(o.get('tipo', 'empresa')),
-        'make':         limpiar(o.get('make', '')),
-        'model':        limpiar(o.get('model', '')),
+        'make':         make,
+        'model':        model,
         'version':      limpiar(o.get('version', '')),
         'fuel':         limpiar(o.get('fuel', '')),
         'precio_desde': o.get('precio_desde', 0),
@@ -31,7 +67,7 @@ def aplanar(o: dict) -> dict:
         'km':           km,
         'url':          limpiar(o.get('link_oferta', o.get('url', ''))),
         'category':     limpiar(o.get('category', '')),
-        'image':        limpiar(o.get('image', '')),
+        'image':        image,
     }
 
 
