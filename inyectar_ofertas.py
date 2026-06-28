@@ -39,10 +39,50 @@ def _local_image(make: str, model: str) -> str:
     slug = _slugify(f'{make} {model}')
     if slug in _LOCAL_IMAGES:
         return _LOCAL_IMAGES[slug]
-    # try make-only prefix match for compound model names
     make_slug = _slugify(make)
+    model_slug = _slugify(model)
+    model_words = model.split()
+    # try progressively shorter model names (drop trailing words)
+    for n_words in range(len(model_words) - 1, 0, -1):
+        short_slug = _slugify(f'{make} {" ".join(model_words[:n_words])}')
+        if short_slug in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[short_slug]
+    # image key starts with our slug (e.g. "ds-ds-7-crossback" matches "ds-ds-7")
     for key, path in _LOCAL_IMAGES.items():
-        if key.startswith(make_slug + '-') and _slugify(model).startswith(key[len(make_slug)+1:]):
+        if key.startswith(slug + '-'):
+            return path
+    # try abbreviated make (first segment of hyphenated makes like "mercedes-benz" → "mercedes")
+    make_parts = make_slug.split('-')
+    if len(make_parts) > 1:
+        abbrev = make_parts[0]
+        abbrev_slug = f'{abbrev}-{model_slug}'
+        if abbrev_slug in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[abbrev_slug]
+        for n_words in range(len(model_words) - 1, 0, -1):
+            s = _slugify(f'{abbrev} {" ".join(model_words[:n_words])}')
+            if s in _LOCAL_IMAGES:
+                return _LOCAL_IMAGES[s]
+        for key, path in _LOCAL_IMAGES.items():
+            if key.startswith(abbrev + '-' + model_slug) or key.startswith(abbrev_slug + '-'):
+                return path
+    # strip short leading prefix from model slug (e.g. "ë-C3" → "e-c3" → try "c3")
+    model_parts = model_slug.split('-')
+    if model_parts and len(model_parts[0]) <= 2 and len(model_parts) > 1:
+        trimmed = '-'.join(model_parts[1:])
+        trimmed_slug = f'{make_slug}-{trimmed}'
+        if trimmed_slug in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[trimmed_slug]
+        for key, path in _LOCAL_IMAGES.items():
+            if key.startswith(trimmed_slug):
+                return path
+    # for short model names (single digit/letter) try with "model-" prefix (e.g. Tesla "3" → "tesla-model-3")
+    if len(model_slug) <= 2:
+        expanded = f'{make_slug}-model-{model_slug}'
+        if expanded in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[expanded]
+    # fallback: any image whose key starts with make_slug and model slug starts with remaining key part
+    for key, path in _LOCAL_IMAGES.items():
+        if key.startswith(make_slug + '-') and model_slug.startswith(key[len(make_slug)+1:]):
             return path
     return ''
 

@@ -4,14 +4,71 @@ Genera páginas SEO individuales por modelo de renting.
 Mejoras v2: top-ofertas visuales, calculadora de ahorro, links internos,
 sticky CTA móvil, schema más completo, path relativo (sin ruta Mac hardcoded).
 """
-import json, re, random
+import json, re, random, unicodedata
 from pathlib import Path
 from datetime import datetime
 
 BASE = Path(__file__).parent
 HTML_PATH = BASE / "index.html"
+IMG_DIR = BASE / "img" / "modelos"
 HOY = datetime.now().strftime("%Y-%m-%d")
 AÑO = datetime.now().year
+
+def _slugify(text: str) -> str:
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    text = text.lower().strip()
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
+
+_LOCAL_IMAGES: dict = {}
+if IMG_DIR.exists():
+    for _p in IMG_DIR.glob('*.png'):
+        _LOCAL_IMAGES[_p.stem] = f'/img/modelos/{_p.name}'
+
+def _local_image(make: str, model: str) -> str:
+    sl = _slugify(f'{make} {model}')
+    if sl in _LOCAL_IMAGES:
+        return _LOCAL_IMAGES[sl]
+    make_slug = _slugify(make)
+    model_slug = _slugify(model)
+    model_words = model.split()
+    for n in range(len(model_words) - 1, 0, -1):
+        s = _slugify(f'{make} {" ".join(model_words[:n])}')
+        if s in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[s]
+    for key, path in _LOCAL_IMAGES.items():
+        if key.startswith(sl + '-'):
+            return path
+    make_parts = make_slug.split('-')
+    if len(make_parts) > 1:
+        abbrev = make_parts[0]
+        abbrev_sl = f'{abbrev}-{model_slug}'
+        if abbrev_sl in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[abbrev_sl]
+        for n in range(len(model_words) - 1, 0, -1):
+            s = _slugify(f'{abbrev} {" ".join(model_words[:n])}')
+            if s in _LOCAL_IMAGES:
+                return _LOCAL_IMAGES[s]
+        for key, path in _LOCAL_IMAGES.items():
+            if key.startswith(abbrev + '-' + model_slug) or key.startswith(abbrev_sl + '-'):
+                return path
+    model_parts = model_slug.split('-')
+    if model_parts and len(model_parts[0]) <= 2 and len(model_parts) > 1:
+        trimmed = f'{make_slug}-{"-".join(model_parts[1:])}'
+        if trimmed in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[trimmed]
+        for key, path in _LOCAL_IMAGES.items():
+            if key.startswith(trimmed):
+                return path
+    if len(model_slug) <= 2:
+        expanded = f'{make_slug}-model-{model_slug}'
+        if expanded in _LOCAL_IMAGES:
+            return _LOCAL_IMAGES[expanded]
+    for key, path in _LOCAL_IMAGES.items():
+        if key.startswith(make_slug + '-') and model_slug.startswith(key[len(make_slug)+1:]):
+            return path
+    return ''
 
 
 # ── Utilidades ────────────────────────────────────────────────────────────
@@ -392,8 +449,8 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     precio_max  = max(o.get('precio_desde', 0)    for o in ofertas_modelo)
     gestoras    = sorted(set(o.get('fuente', '') for o in ofertas_modelo if o.get('fuente')))
     fuels       = sorted(set(o.get('fuel',   '') for o in ofertas_modelo if o.get('fuel')))
-    # Imagen: priorizar imagen local del agente enriquecedor, luego de la oferta
-    imagen      = specs.get('imagen_local') or next((o.get('image','') for o in ofertas_modelo if o.get('image')), '')
+    # Imagen: priorizar local PNG > specs > oferta DB
+    imagen = _local_image(make, model) or specs.get('imagen_local') or next((o.get('image','') for o in ofertas_modelo if o.get('image')), '')
     cat         = categoria_coche(make, model)
     precio_comp = precio_compra_estimado(make, model, precio_min)
 
