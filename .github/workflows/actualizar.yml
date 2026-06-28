@@ -34,13 +34,11 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install anthropic requests playwright
+          pip install requests playwright
           playwright install chromium --with-deps
 
       - name: Ejecutar agente de scraping
         if: ${{ github.event.inputs.modo != 'solo-seo' }}
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python agente_scraping.py
 
       - name: Regenerar páginas SEO

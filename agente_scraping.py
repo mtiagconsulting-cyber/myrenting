@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 """
-Agente de scraping de precios de renting usando Claude API.
+Agente de scraping de precios de renting — sin coste, sin APIs de pago.
 Coordina múltiples scrapers y actualiza ofertas-db.json.
 """
 import os, json, re, time, subprocess, sys
 from datetime import datetime
-import anthropic
 
 OFERTAS_FILE = os.path.join(os.path.dirname(__file__), 'ofertas-db.json')
 LOG_FILE = os.path.join(os.path.dirname(__file__), 'agente_scraping.log')
-
-client = anthropic.Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY', ''))
 
 
 def log(msg):
@@ -38,7 +35,7 @@ def guardar_ofertas(ofertas: list):
 def scrape_arval() -> list:
     """Extrae ofertas de Arval via su API pública."""
     try:
-        import urllib.request, urllib.error
+        import urllib.request
         url = 'https://www.arval.es/api/v1/offers?locale=es_ES&page=1&per_page=200&offer_type=long_term'
         req = urllib.request.Request(url, headers={
             'User-Agent': 'Mozilla/5.0 (compatible; Myrenting/1.0)',
@@ -74,52 +71,43 @@ def scrape_arval() -> list:
 
 
 def scrape_ayvens() -> list:
-    """Extrae ofertas de Ayvens (ex-ALD)."""
+    """Extrae ofertas de Ayvens buscando JSON embebido en la página."""
     try:
         import urllib.request
-        url = 'https://www.ayvens.com/es-es/ofertas/?format=json'
+        url = 'https://www.ayvens.com/es-es/ofertas/'
         req = urllib.request.Request(url, headers={
             'User-Agent': 'Mozilla/5.0 (compatible; Myrenting/1.0)',
-            'Accept': 'application/json, text/html',
+            'Accept': 'text/html,application/json',
         })
         with urllib.request.urlopen(req, timeout=30) as resp:
             raw = resp.read().decode('utf-8', errors='ignore')
-        # Buscar JSON embebido si no es API directa
-        m = re.search(r'window\.__NUXT__\s*=\s*(\{.*?\})\s*;', raw, re.DOTALL)
-        if not m:
-            log('Ayvens: no JSON encontrado en página')
-            return []
-        data = json.loads(m.group(1))
+
         result = []
-        # Navegación recursiva del JSON para encontrar ofertas
-        def extract_offers(obj, depth=0):
-            if depth > 8 or len(result) > 300:
-                return
-            if isinstance(obj, list):
-                for item in obj:
-                    extract_offers(item, depth+1)
-            elif isinstance(obj, dict):
-                if 'price' in obj and 'brand' in obj:
-                    try:
-                        result.append({
-                            'fuente': 'Ayvens',
-                            'tipo': obj.get('type', 'empresa'),
-                            'make': str(obj.get('brand', '')).upper(),
-                            'model': str(obj.get('model', '')).upper(),
-                            'version': str(obj.get('version', '')),
-                            'fuel': str(obj.get('fuel', '')),
-                            'precio_desde': float(obj.get('price', 0)),
-                            'duracion': int(obj.get('duration', 48)),
-                            'km': int(obj.get('km', 10000)),
-                            'url': obj.get('url', 'https://www.ayvens.com/es-es/ofertas/'),
-                            'category': obj.get('category', ''),
-                            'image': obj.get('image', ''),
-                        })
-                    except Exception:
-                        pass
-                for v in obj.values():
-                    extract_offers(v, depth+1)
-        extract_offers(data)
+
+        # Intentar extraer precios del HTML con expresiones regulares
+        price_pattern = re.findall(
+            r'"brand"\s*:\s*"([^"]+)".*?"model"\s*:\s*"([^"]+)".*?"price"\s*:\s*([\d.]+)',
+            raw, re.DOTALL
+        )
+        for brand, model, price in price_pattern[:100]:
+            try:
+                result.append({
+                    'fuente': 'Ayvens',
+                    'tipo': 'empresa',
+                    'make': brand.upper(),
+                    'model': model.upper(),
+                    'version': '',
+                    'fuel': '',
+                    'precio_desde': float(price),
+                    'duracion': 48,
+                    'km': 10000,
+                    'url': 'https://www.ayvens.com/es-es/ofertas/',
+                    'category': '',
+                    'image': '',
+                })
+            except Exception:
+                continue
+
         log(f'Ayvens: {len(result)} ofertas')
         return result
     except Exception as e:
@@ -128,18 +116,16 @@ def scrape_ayvens() -> list:
 
 
 def ejecutar_scraper_existente(nombre: str) -> list:
-    """Ejecuta uno de los scrapers Python existentes y devuelve las ofertas."""
+    """Ejecuta uno de los scrapers Python existentes si está disponible."""
     script_map = {
         'arval': 'scraper_arval_definitivo.py',
         'ayvens': 'scraper_ayvens_completo.py',
-        'kinto': 'scraper_kinto.py',
     }
     script = script_map.get(nombre)
     if not script:
         return []
     script_path = os.path.join(os.path.dirname(__file__), script)
     if not os.path.exists(script_path):
-        log(f'Script no encontrado: {script_path}')
         return []
     try:
         result = subprocess.run(
@@ -148,81 +134,74 @@ def ejecutar_scraper_existente(nombre: str) -> list:
             cwd=os.path.dirname(__file__)
         )
         if result.returncode == 0:
-            # Intentar leer el JSON producido
-            for fname in ['ofertas_temp.json', f'{nombre}_data.json', 'output.json']:
+            for fname in ['ofertas_temp.json', f'{nombre}_data.json']:
                 fpath = os.path.join(os.path.dirname(__file__), fname)
                 if os.path.exists(fpath):
                     with open(fpath) as f:
                         data = json.load(f)
                     log(f'{nombre} via script: {len(data)} ofertas')
                     return data if isinstance(data, list) else []
-        else:
-            log(f'{nombre} script error: {result.stderr[:200]}')
-    except subprocess.TimeoutExpired:
-        log(f'{nombre} script timeout')
     except Exception as e:
-        log(f'{nombre} script exception: {e}')
+        log(f'{nombre} script error: {e}')
     return []
 
 
-def analizar_calidad_claude(ofertas: list) -> dict:
-    """Usa Claude para analizar la calidad del dataset y sugerir mejoras."""
-    if not os.environ.get('ANTHROPIC_API_KEY'):
-        return {}
+def analizar_calidad(ofertas: list) -> dict:
+    """Análisis de calidad del dataset sin coste (Python puro)."""
+    if not ofertas:
+        return {'calidad': 0, 'problemas': ['Dataset vacío']}
 
-    resumen = {
+    problemas = []
+    sin_imagen = sum(1 for o in ofertas if not o.get('image'))
+    sin_url = sum(1 for o in ofertas if not o.get('url'))
+    sin_fuel = sum(1 for o in ofertas if not o.get('fuel'))
+    precios_cero = sum(1 for o in ofertas if o.get('precio_desde', 0) <= 0)
+    fuentes = list({o.get('fuente', '') for o in ofertas})
+
+    if sin_imagen > len(ofertas) * 0.3:
+        problemas.append(f'{sin_imagen} ofertas sin imagen ({round(sin_imagen/len(ofertas)*100)}%)')
+    if sin_url > len(ofertas) * 0.1:
+        problemas.append(f'{sin_url} ofertas sin URL')
+    if precios_cero > 0:
+        problemas.append(f'{precios_cero} ofertas con precio cero')
+    if len(fuentes) < 2:
+        problemas.append('Solo una gestora en el dataset')
+
+    puntuacion = 10
+    puntuacion -= len(problemas) * 2
+    puntuacion -= round(sin_imagen / len(ofertas) * 3)
+    puntuacion = max(0, min(10, puntuacion))
+
+    return {
+        'calidad': puntuacion,
         'total': len(ofertas),
-        'fuentes': list({o.get('fuente', '') for o in ofertas}),
-        'marcas': list({o.get('make', '') for o in ofertas})[:20],
+        'fuentes': fuentes,
+        'problemas': problemas,
         'precio_min': min((o.get('precio_desde', 9999) for o in ofertas), default=0),
         'precio_max': max((o.get('precio_desde', 0) for o in ofertas), default=0),
-        'sin_imagen': sum(1 for o in ofertas if not o.get('image')),
-        'sin_url': sum(1 for o in ofertas if not o.get('url')),
     }
-
-    try:
-        message = client.messages.create(
-            model='claude-haiku-4-5-20251001',
-            max_tokens=512,
-            messages=[{
-                'role': 'user',
-                'content': f"""Eres un analista de datos de renting de coches en España.
-Analiza este resumen del dataset y responde en JSON con:
-- "calidad": puntuación 0-10
-- "problemas": lista de problemas encontrados
-- "sugerencias": lista de mejoras
-
-Dataset: {json.dumps(resumen, ensure_ascii=False)}"""
-            }]
-        )
-        text = message.content[0].text
-        m = re.search(r'\{.*\}', text, re.DOTALL)
-        if m:
-            return json.loads(m.group())
-    except Exception as e:
-        log(f'Claude análisis error: {e}')
-    return {}
 
 
 def normalizar_oferta(o: dict) -> dict:
     """Normaliza y limpia una oferta."""
     MAKE_CORRECTIONS = {
-        'VW': 'VOLKSWAGEN', 'CITROËN': 'CITROEN', 'CITROÃN': 'CITROEN',
-        'MERCEDES-BENZ': 'MERCEDES', 'BMW GROUP': 'BMW', 'KIA MOTORS': 'KIA',
-        'HYUNDAI MOTOR': 'HYUNDAI',
+        'VW': 'VOLKSWAGEN', 'CITROËN': 'CITROEN', 'CITROÃ\x83Â‰N': 'CITROEN',
+        'MERCEDES-BENZ': 'MERCEDES', 'BMW GROUP': 'BMW',
+        'KIA MOTORS': 'KIA', 'HYUNDAI MOTOR': 'HYUNDAI',
     }
-    make = str(o.get('make', '')).strip().upper()
-    make = MAKE_CORRECTIONS.get(make, make)
-
-    fuel = str(o.get('fuel', '')).strip()
     FUEL_MAP = {
-        'GASOLINA': 'Gasolina', 'PETROL': 'Gasolina', 'BENZIN': 'Gasolina',
+        'GASOLINA': 'Gasolina', 'PETROL': 'Gasolina',
         'DIESEL': 'Diesel', 'GASOIL': 'Diesel',
         'ELECTRICO': 'Electrico', 'ELECTRIC': 'Electrico', 'BEV': 'Electrico',
         'HIBRIDO': 'Hibrido', 'HYBRID': 'Hibrido', 'HEV': 'Hibrido',
         'PHEV': 'Hibrido enchufable', 'PLUG-IN': 'Hibrido enchufable',
         'MICRO': 'Micro hibrido', 'MHEV': 'Micro hibrido',
     }
+
+    make = str(o.get('make', '')).strip().upper()
+    make = MAKE_CORRECTIONS.get(make, make)
+
+    fuel = str(o.get('fuel', '')).strip()
     for k, v in FUEL_MAP.items():
         if k in fuel.upper():
             fuel = v
@@ -245,7 +224,6 @@ def normalizar_oferta(o: dict) -> dict:
 
 
 def deduplicar(ofertas: list) -> list:
-    """Elimina duplicados manteniendo el de menor precio."""
     seen = {}
     for o in ofertas:
         key = f"{o['fuente']}|{o['make']}|{o['model']}|{o['duracion']}|{o['km']}"
@@ -255,67 +233,54 @@ def deduplicar(ofertas: list) -> list:
 
 
 def main():
-    log('=== Agente de Scraping iniciado ===')
+    log('=== Agente de Scraping iniciado (coste cero) ===')
 
-    # Cargar ofertas existentes como fallback
     ofertas_existentes = cargar_ofertas()
     log(f'Ofertas existentes: {len(ofertas_existentes)}')
 
-    nuevas_ofertas = []
+    nuevas = []
 
-    # 1. Scrapers directos
-    log('--- Ejecutando scrapers ---')
-    nuevas_ofertas.extend(scrape_arval())
+    # 1. Scrapers directos (gratuitos)
+    nuevas.extend(scrape_arval())
     time.sleep(2)
-    nuevas_ofertas.extend(scrape_ayvens())
+    nuevas.extend(scrape_ayvens())
 
     # 2. Scripts existentes como fallback
-    if len(nuevas_ofertas) < 50:
+    if len(nuevas) < 50:
         log('Pocas ofertas nuevas, ejecutando scripts existentes...')
         for fuente in ['arval', 'ayvens']:
-            nuevas_ofertas.extend(ejecutar_scraper_existente(fuente))
+            nuevas.extend(ejecutar_scraper_existente(fuente))
 
-    # 3. Si no hay nada nuevo, mantener las existentes
-    if not nuevas_ofertas:
+    if not nuevas:
         log('Sin ofertas nuevas. Manteniendo dataset existente.')
         return
 
-    # 4. Normalizar y deduplicar
-    log('--- Normalizando ---')
-    nuevas_normalizadas = [normalizar_oferta(o) for o in nuevas_ofertas if o.get('make') and o.get('precio_desde', 0) > 0]
-    nuevas_normalizadas = deduplicar(nuevas_normalizadas)
-    log(f'Después de normalizar/dedup: {len(nuevas_normalizadas)}')
+    # 3. Normalizar y deduplicar
+    normalizadas = [normalizar_oferta(o) for o in nuevas if o.get('make') and o.get('precio_desde', 0) > 0]
+    normalizadas = deduplicar(normalizadas)
+    log(f'Normalizadas: {len(normalizadas)}')
 
-    # 5. Mezclar con existentes (priorizar nuevas, mantener fuentes no scrapeadas)
-    fuentes_nuevas = {o['fuente'] for o in nuevas_normalizadas}
-    existentes_otras_fuentes = [o for o in ofertas_existentes if o.get('fuente') not in fuentes_nuevas]
-    final = nuevas_normalizadas + existentes_otras_fuentes
-    final = deduplicar(final)
+    # 4. Mezclar con fuentes no scrapeadas en esta ejecución
+    fuentes_nuevas = {o['fuente'] for o in normalizadas}
+    otras = [o for o in ofertas_existentes if o.get('fuente') not in fuentes_nuevas]
+    final = deduplicar(normalizadas + otras)
     final.sort(key=lambda o: o.get('precio_desde', 9999))
 
-    log(f'Dataset final: {len(final)} ofertas')
+    # 5. Análisis de calidad (Python puro, sin coste)
+    analisis = analizar_calidad(final)
+    log(f'Calidad dataset: {analisis["calidad"]}/10 · {analisis["total"]} ofertas · fuentes: {analisis["fuentes"]}')
+    for p in analisis.get('problemas', []):
+        log(f'  Advertencia: {p}')
 
-    # 6. Análisis de calidad con Claude
-    analisis = analizar_calidad_claude(final)
-    if analisis:
-        log(f'Calidad dataset: {analisis.get("calidad", "N/D")}/10')
-        for p in analisis.get('problemas', []):
-            log(f'  Problema: {p}')
-
-    # 7. Guardar
+    # 6. Guardar
     guardar_ofertas(final)
 
-    # 8. Regenerar páginas SEO
-    generar_seo = os.path.join(os.path.dirname(__file__), 'generar_seo.py')
-    if os.path.exists(generar_seo):
-        log('Regenerando páginas SEO...')
-        subprocess.run([sys.executable, generar_seo], cwd=os.path.dirname(__file__), timeout=300)
-
-    # 9. Inyectar en index.html
-    inyectar = os.path.join(os.path.dirname(__file__), 'inyectar_ofertas.py')
-    if os.path.exists(inyectar):
-        log('Inyectando ofertas en index.html...')
-        subprocess.run([sys.executable, inyectar], cwd=os.path.dirname(__file__), timeout=60)
+    # 7. Regenerar páginas SEO
+    for script in ['inyectar_ofertas.py', 'generar_seo.py', 'generar_categorias.py']:
+        ruta = os.path.join(os.path.dirname(__file__), script)
+        if os.path.exists(ruta):
+            log(f'Ejecutando {script}...')
+            subprocess.run([sys.executable, ruta], cwd=os.path.dirname(__file__), timeout=300)
 
     log('=== Agente completado ===')
 
