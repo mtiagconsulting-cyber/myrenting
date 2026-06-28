@@ -2,8 +2,8 @@ name: Actualizar precios de renting
 
 on:
   schedule:
-    # Cada día a las 6:00 AM (hora España)
-    - cron: '0 5 * * *'
+    # Cada día a las 8:00h hora España (6 UTC)
+    - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       modo:

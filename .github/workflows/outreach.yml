@@ -1,0 +1,71 @@
+name: Outreach comercial semanal
+
+on:
+  schedule:
+    # Lunes a las 9:00h hora España (8 UTC)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      max_emails:
+        description: 'Máximo de emails a enviar'
+        required: false
+        default: '5'
+      modo:
+        description: 'Modo: preview (sin enviar) o send (envío real)'
+        required: false
+        default: 'preview'
+        type: choice
+        options:
+          - preview
+          - send
+
+jobs:
+  outreach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ejecutar agente de outreach
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          MODO="${{ github.event.inputs.modo || 'send' }}"
+          MAX="${{ github.event.inputs.max_emails || '5' }}"
+          python agente_outreach.py $MODO $MAX
+
+      - name: Guardar estado del pipeline
+        if: always()
+        run: |
+          git config user.name 'Myrenting Bot'
+          git config user.email 'bot@myrenting.es'
+          git add outreach_contactos.json agente_outreach.log || true
+          git diff --staged --quiet || git commit -m "Outreach: pipeline $(date +'%Y-%m-%d')"
+          git push origin HEAD || true
+
+      - name: Resumen de outreach
+        if: always()
+        run: |
+          python3 -c "
+          import json, os
+          if not os.path.exists('outreach_contactos.json'):
+              print('Sin datos aun')
+          else:
+              with open('outreach_contactos.json') as f:
+                  data = json.load(f)
+              estados = {}
+              for c in data:
+                  e = c.get('estado','pendiente')
+                  estados[e] = estados.get(e,0) + 1
+              print('## Pipeline de outreach')
+              for k,v in sorted(estados.items()):
+                  print(f'- {k}: **{v}**')
+          " >> \$GITHUB_STEP_SUMMARY || true
