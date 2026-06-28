@@ -1,6 +1,8 @@
 .DS_Store
 img/.DS_Store
 *.py
+!agente_scraping.py
+!agente_outreach.py
 index_redesign.html
 scraper-concesionarios/
 *.json

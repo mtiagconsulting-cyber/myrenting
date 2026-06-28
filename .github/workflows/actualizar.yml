@@ -1,0 +1,75 @@
+name: Actualizar precios de renting
+
+on:
+  schedule:
+    # Cada día a las 6:00 AM (hora España)
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'Modo de ejecución'
+        required: false
+        default: 'completo'
+        type: choice
+        options:
+          - completo
+          - solo-scraping
+          - solo-seo
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          pip install anthropic requests playwright
+          playwright install chromium --with-deps
+
+      - name: Ejecutar agente de scraping
+        if: ${{ github.event.inputs.modo != 'solo-seo' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python agente_scraping.py
+
+      - name: Regenerar páginas SEO
+        if: ${{ github.event.inputs.modo != 'solo-scraping' }}
+        run: |
+          if [ -f generar_seo.py ]; then python generar_seo.py; fi
+          if [ -f generar_categorias.py ]; then python generar_categorias.py; fi
+
+      - name: Inyectar ofertas en index.html
+        run: |
+          if [ -f inyectar_ofertas.py ]; then python inyectar_ofertas.py; fi
+
+      - name: Verificar cambios
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit y push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name 'Myrenting Bot'
+          git config user.email 'bot@myrenting.es'
+          git add ofertas-db.json index.html renting-*.html blog/ || true
+          git commit -m "Actualizar precios $(date +'%Y-%m-%d')"
+          git push origin HEAD
+
+      - name: Resumen
+        run: |
+          TOTAL=$(python3 -c "import json; d=json.load(open('ofertas-db.json')); print(len(d))" 2>/dev/null || echo "N/D")
+          echo "## Actualizacion completada" >> $GITHUB_STEP_SUMMARY
+          echo "- Ofertas totales: **$TOTAL**" >> $GITHUB_STEP_SUMMARY
+          echo "- Fecha: $(date +'%Y-%m-%d %H:%M')" >> $GITHUB_STEP_SUMMARY
