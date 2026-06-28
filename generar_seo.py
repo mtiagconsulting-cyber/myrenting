@@ -762,12 +762,37 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos):
 
 # ── Main ──────────────────────────────────────────────────────────────────
 
+def aplanar(o: dict) -> dict:
+    precios = o.get('precios') or []
+    return {
+        'fuente':       o.get('fuente', ''),
+        'tipo':         o.get('tipo', 'empresa'),
+        'make':         str(o.get('make', '')).strip().upper(),
+        'model':        str(o.get('model', '')).strip().upper(),
+        'version':      str(o.get('version', '')).strip(),
+        'fuel':         o.get('fuel', ''),
+        'precio_desde': o.get('precio_desde', 0),
+        'duracion':     int(precios[0][0]) if precios else 48,
+        'km':           int(precios[0][1]) if precios else 10000,
+        'url':          o.get('link_oferta', o.get('url', '')),
+        'category':     o.get('category', ''),
+        'image':        o.get('image', ''),
+    }
+
+
 def main():
-    # Leer ofertas desde index.html (patrón de inyección existente)
-    html_txt = HTML_PATH.read_text(encoding='utf-8')
-    start = html_txt.find('const _OFERTAS = [') + len('const _OFERTAS = ')
-    end   = html_txt.find('];', start) + 1
-    ofertas = json.loads(html_txt[start:end])
+    # Leer ofertas directamente desde ofertas-db.json
+    db_path = BASE / 'ofertas-db.json'
+    if db_path.exists():
+        with open(db_path, encoding='utf-8') as f:
+            raw = json.load(f)
+        ofertas = [aplanar(o) for o in raw if o.get('make') and o.get('precio_desde', 0) > 0]
+    else:
+        # Fallback: extraer de index.html
+        html_txt = HTML_PATH.read_text(encoding='utf-8')
+        start = html_txt.find('const _OFERTAS = [') + len('const _OFERTAS = ')
+        end   = html_txt.find('];', start) + 1
+        ofertas = json.loads(html_txt[start:end])
     print(f'Ofertas leidas: {len(ofertas)}')
 
     # Agrupar por make + model

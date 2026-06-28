@@ -14,7 +14,7 @@ Uso: python3 generar_categorias.py
 import json, re
 from pathlib import Path
 
-BASE     = Path("/Users/matthiasthomassen/Documents/Myrenting")
+BASE     = Path(__file__).parent
 BASE_URL = "https://www.myrenting.es"
 
 def slug(t):
@@ -367,11 +367,35 @@ def gen_arval_vs_ayvens(modelos_data):
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
+def aplanar(o: dict) -> dict:
+    precios = o.get('precios') or []
+    return {
+        'fuente':       o.get('fuente', ''),
+        'tipo':         o.get('tipo', 'empresa'),
+        'make':         str(o.get('make', '')).strip().upper(),
+        'model':        str(o.get('model', '')).strip().upper(),
+        'version':      str(o.get('version', '')).strip(),
+        'fuel':         o.get('fuel', ''),
+        'precio_desde': o.get('precio_desde', 0),
+        'duracion':     int(precios[0][0]) if precios else 48,
+        'km':           int(precios[0][1]) if precios else 10000,
+        'url':          o.get('link_oferta', o.get('url', '')),
+        'category':     o.get('category', ''),
+        'image':        o.get('image', ''),
+    }
+
+
 def main():
-    html_src = (BASE / "index.html").read_text(encoding="utf-8")
-    start = html_src.find("const _OFERTAS = [") + len("const _OFERTAS = ")
-    end   = html_src.find("];", start) + 1
-    ofertas = json.loads(html_src[start:end])
+    db_path = BASE / "ofertas-db.json"
+    if db_path.exists():
+        with open(db_path, encoding="utf-8") as f:
+            raw = json.load(f)
+        ofertas = [aplanar(o) for o in raw if o.get('make') and o.get('precio_desde', 0) > 0]
+    else:
+        html_src = (BASE / "index.html").read_text(encoding="utf-8")
+        start = html_src.find("const _OFERTAS = [") + len("const _OFERTAS = ")
+        end   = html_src.find("];", start) + 1
+        ofertas = json.loads(html_src[start:end])
     print(f"Ofertas leídas: {len(ofertas)}")
 
     # Agrupar por modelo

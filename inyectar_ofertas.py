@@ -1,26 +1,48 @@
-import json, re, shutil
-from datetime import datetime
+#!/usr/bin/env python3
+"""
+Lee ofertas-db.json e inyecta los datos en const _OFERTAS del index.html.
+"""
+import json, re
 from pathlib import Path
 
-BASE = Path("/Users/matthiasthomassen/Documents/Myrenting")
-JSON_PATH = BASE / "ofertas_para_html.json"
+BASE = Path(__file__).parent
+JSON_PATH = BASE / "ofertas-db.json"
 HTML_PATH = BASE / "index.html"
-BACKUP_PATH = BASE / f"index_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html"
 
-shutil.copy2(HTML_PATH, BACKUP_PATH)
-print(f"Backup: {BACKUP_PATH.name}")
 
-with open(JSON_PATH, "r", encoding="utf-8") as f:
-    ofertas = json.load(f)
+def aplanar(o: dict) -> dict:
+    precios = o.get('precios') or []
+    duracion = int(precios[0][0]) if precios else 48
+    km = int(precios[0][1]) if precios else 10000
+    return {
+        'fuente':       o.get('fuente', ''),
+        'tipo':         o.get('tipo', 'empresa'),
+        'make':         o.get('make', ''),
+        'model':        o.get('model', ''),
+        'version':      o.get('version', ''),
+        'fuel':         o.get('fuel', ''),
+        'precio_desde': o.get('precio_desde', 0),
+        'duracion':     duracion,
+        'km':           km,
+        'url':          o.get('link_oferta', o.get('url', '')),
+        'category':     o.get('category', ''),
+        'image':        o.get('image', ''),
+    }
+
+
+with open(JSON_PATH, encoding='utf-8') as f:
+    raw = json.load(f)
+
+ofertas = [aplanar(o) for o in raw if o.get('make') and o.get('precio_desde', 0) > 0]
 print(f"Ofertas: {len(ofertas)}")
 
-json_str = json.dumps(ofertas, ensure_ascii=False, separators=(",", ":"))
-html = HTML_PATH.read_text(encoding="utf-8")
+json_str = json.dumps(ofertas, ensure_ascii=False, separators=(',', ':'))
+html = HTML_PATH.read_text(encoding='utf-8')
 patron = r'(const _OFERTAS\s*=\s*)\[.*?\];'
 html_nuevo, n = re.subn(patron, rf'\g<1>{json_str};', html, count=1, flags=re.DOTALL)
 
 if n == 0:
-    print("ERROR: No se encontro _OFERTAS en el HTML")
+    print("ERROR: No se encontro _OFERTAS en index.html")
 else:
-    HTML_PATH.write_text(html_nuevo, encoding="utf-8")
+    HTML_PATH.write_text(html_nuevo, encoding='utf-8')
     print(f"OK: index.html actualizado con {len(ofertas)} ofertas")
