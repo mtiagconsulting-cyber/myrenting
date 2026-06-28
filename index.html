@@ -262,82 +262,94 @@ button{font-family:inherit;cursor:pointer}
 .btn-all:hover{border-color:var(--border-2);color:var(--ink)}
 
 /* ===== GRID ===== */
-.models-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 
 /* ===== CARD ===== */
 .model-card{
-  background:var(--white);border:1.5px solid var(--border);
-  border-radius:var(--r);overflow:hidden;
-  transition:box-shadow .2s,border-color .2s,transform .22s;
-  position:relative;
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 3px 14px rgba(0,0,0,.09);
+  transition:transform .22s,box-shadow .22s;
+  cursor:pointer;position:relative;
+  background:#fff;display:flex;flex-direction:column;
 }
 .model-card:hover{
-  box-shadow:var(--sh-lg);
-  border-color:var(--border-2);
-  transform:translateY(-4px);
+  transform:translateY(-6px);
+  box-shadow:0 18px 42px rgba(255,92,0,.2);
 }
-.model-card.popular{border:2px solid var(--o)}
-.model-card.in-compare{border:2px solid #6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.12)}
-.popular-badge{
-  background:var(--o);font-size:9px;font-weight:700;
-  color:var(--white);text-align:center;
-  text-transform:uppercase;letter-spacing:.8px;padding:5px;
+.model-card.popular{box-shadow:0 4px 20px rgba(255,92,0,.3)}
+.model-card.in-compare{box-shadow:0 0 0 3px #6366f1,0 8px 24px rgba(99,102,241,.18)}
+
+/* Orange header */
+.card-hdr{
+  background:var(--o);padding:16px 16px 14px;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
 }
-.card-actions{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:6px;z-index:2}
-.card-fav,.card-compare{
-  width:30px;height:30px;border-radius:50%;
-  background:rgba(255,255,255,.96);border:1.5px solid var(--border);
+.card-info-left{flex:1;min-width:0}
+.card-model-name{
+  font-size:16px;font-weight:800;color:#fff;
+  letter-spacing:-.3px;line-height:1.2;margin-bottom:3px;
+}
+.card-version{
+  font-size:10.5px;color:rgba(255,255,255,.72);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  margin-bottom:7px;
+}
+.card-fuel-row{
+  display:flex;align-items:center;gap:4px;
+  font-size:12px;color:rgba(255,255,255,.88);font-weight:500;
+}
+.card-price-blk{text-align:right;flex-shrink:0}
+.card-desde{
+  display:block;font-size:10px;color:rgba(255,255,255,.68);
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:1px;
+}
+.card-eur{
+  font-size:28px;font-weight:900;color:#fff;
+  letter-spacing:-1px;line-height:1;
+}
+.card-mes{
+  display:block;font-size:10px;color:rgba(255,255,255,.68);
+  margin-top:2px;line-height:1.4;
+}
+
+/* White image zone */
+.card-img-zone{
+  background:#fff;flex:1;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:var(--sh);transition:.15s;
+  padding:14px 18px;min-height:148px;position:relative;
 }
-.card-fav{font-size:14px}
-.card-compare{font-size:10px;font-weight:700;color:var(--ink-5)}
-.card-fav:hover{border-color:var(--o);transform:scale(1.1)}
+.card-img-zone img{
+  width:100%;max-height:136px;object-fit:contain;
+  transition:transform .35s;
+}
+.model-card:hover .card-img-zone img{transform:scale(1.06)}
+.card-img-placeholder{font-size:3rem;opacity:.1}
+
+/* Fav button over image */
+.card-fav{
+  position:absolute;top:8px;right:8px;
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(255,255,255,.95);border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;cursor:pointer;box-shadow:var(--sh);
+  transition:.15s;
+}
+.card-fav:hover{border-color:var(--o);transform:scale(1.12)}
 .card-fav.active{background:var(--o-lt);border-color:var(--o)}
-.card-compare:hover{border-color:#6366f1;color:#6366f1}
-.card-compare.active{background:#eef2ff;border-color:#6366f1;color:#6366f1}
 
-.model-img{
-  background:var(--bg);height:136px;
-  display:flex;align-items:center;justify-content:center;
-  border-bottom:1px solid var(--border);overflow:hidden;
+/* Orange footer */
+.card-ftr{
+  background:var(--o);padding:9px 14px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(0,0,0,.06);
 }
-.model-img img{
-  width:100%;height:100%;object-fit:contain;padding:14px;
-  transition:transform .35s;mix-blend-mode:multiply;
+.card-badge-pill{
+  font-size:11px;font-weight:700;
+  background:rgba(255,255,255,.18);color:#fff;
+  padding:4px 10px;border-radius:20px;
 }
-.model-card:hover .model-img img{transform:scale(1.07)}
-.model-img-placeholder{font-size:2.8rem;opacity:.15}
-
-.model-body{padding:18px}
-.model-tag{font-size:9px;font-weight:700;color:var(--ink-5);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
-.model-name{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;line-height:1.2}
-.model-fuels{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
-.fuel-badge{font-size:10px;font-weight:600;padding:3px 9px;border-radius:5px;background:var(--bg);color:var(--ink-4);border:1px solid var(--border)}
-.fuel-badge.electric{background:var(--green-lt);color:var(--green);border-color:rgba(0,168,107,.25)}
-.fuel-badge.hybrid{background:#fffbeb;color:#92400e;border-color:#fde68a}
-.fuel-badge.plugin{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe}
-
-.price-block{margin-bottom:4px}
-.price-from{font-size:11px;color:var(--ink-5);margin-bottom:1px}
-.price-row{display:flex;align-items:baseline;gap:5px}
-.price-num{font-size:30px;font-weight:900;color:var(--o);letter-spacing:-1.5px;line-height:1}
-.price-unit{font-size:13px;color:var(--ink-4);font-weight:500}
-
-.offers-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.offer-cnt{font-size:11px;color:var(--ink-5)}
-.offer-src{font-size:11px;color:var(--ink-4);font-weight:600}
-
-.btn-ver{
-  display:block;width:100%;text-align:center;
-  background:var(--bg);color:var(--ink);
-  font-size:13px;font-weight:700;padding:11px 12px;
-  border-radius:var(--r-sm);border:1.5px solid var(--border);
-  transition:.15s;letter-spacing:-.1px;
-}
-.btn-ver:hover{background:var(--o);color:var(--white);border-color:var(--o)}
-.model-card.popular .btn-ver{background:var(--o);color:var(--white);border-color:var(--o)}
-.model-card.popular .btn-ver:hover{background:var(--o-dk);border-color:var(--o-dk)}
+.card-badge-pill.pop{background:#fff;color:var(--o)}
+.card-offer-cnt{font-size:11px;color:rgba(255,255,255,.75);font-weight:500}
 
 /* ===== LOAD MORE ===== */
 .load-more-wrap{text-align:center;padding:36px 0}
@@ -494,18 +506,13 @@ button{font-family:inherit;cursor:pointer}
   .hero{padding:60px 20px 56px}
   .hero-h1{font-size:36px;letter-spacing:-2px}
   .hero-p{font-size:16px}
-  .models-grid{grid-template-columns:1fr;gap:12px}
-  .model-card{display:grid;grid-template-columns:116px 1fr}
-  .model-card.popular>.popular-badge{grid-column:1/-1}
-  .model-img{height:100%;min-height:116px;border-bottom:none;border-right:1px solid var(--border)}
-  .model-img img{padding:8px}
-  .model-body{padding:12px 14px}
-  .price-num{font-size:24px}
+  .models-grid{grid-template-columns:1fr;gap:14px}
+  .card-model-name{font-size:15px}
+  .card-eur{font-size:24px}
   .blog-grid{grid-template-columns:1fr}
   .ciudades-grid{grid-template-columns:1fr 1fr}
   .footer{flex-direction:column;text-align:center;gap:16px}
   .footer-links{flex-wrap:wrap;justify-content:center}
-  .card-actions{top:6px;right:6px}
   .compare-slots{display:none}
   .compare-drawer{flex-wrap:wrap;padding:12px 20px}
   .stats-bar{flex-direction:column;max-width:none}
@@ -1069,29 +1076,42 @@ button{font-family:inherit;cursor:pointer}
 
   function cardHtml(m, popular) {
     const s = slug(m.name);
-    const fuels = [...m.fuels].slice(0,2).map(f => {
-      const isE = f.toLowerCase().includes('el\u00e9') || f.toLowerCase().includes('elec');
-      const isH = f.toLowerCase().includes('h\u00edbrido') || f.toLowerCase().includes('hibrido') || f.toLowerCase().includes('hybrid');
-      return '<span class="fuel-badge' + (isE?' electric':isH?' hybrid':'') + '">' + f + '</span>';
-    }).join('');
-    const sources = [...m.fuentes].join(' · ');
+    const firstOffer = m.offers[0];
+    const version = firstOffer ? firstOffer.version : '';
+    const fuelType = [...m.fuels][0] || '';
+    const isE = fuelType.toLowerCase().includes('el\u00e9') || fuelType.toLowerCase().includes('elec');
+    const isH = fuelType.toLowerCase().includes('h\u00edbrido') || fuelType.toLowerCase().includes('hibrido');
+    const fuelIco = isE ? '\u26a1' : isH ? '\U0001f50b' : fuelType ? '\u26fd' : '';
     const isFav = favList.includes(m.name);
     const isComp = compareList.some(c => c.name === m.name);
-    const popBadge = popular ? '<div class="popular-badge">Mas popular</div>' : '';
-    return '<div class="' + (popular?'model-card popular':'model-card') + (isComp?' in-compare':'') + '" id="card-' + s + '">' +
-      popBadge +
-      '<div class="card-actions">' +
-        '<button class="card-fav' + (isFav?' active':'') + '" onclick="toggleFav(event,\'' + m.name + '\')" title="Guardar">' + (isFav?'&#10084;':'&#9825;') + '</button>' +
-        '<button class="card-compare' + (isComp?' active':'') + '" onclick="toggleCompare(event,' + JSON.stringify(m).replace(/'/g,"\'") + ')" title="Comparar">VS</button>' +
+    const badge = popular
+      ? '<span class="card-badge-pill pop">\u2b50 M\u00e1s popular</span>'
+      : m.offerCount >= 4
+        ? '<span class="card-badge-pill">Entrega r\u00e1pida</span>'
+        : '';
+    const offerTxt = '<span class="card-offer-cnt">' + m.offerCount + ' oferta' + (m.offerCount !== 1 ? 's' : '') + '</span>';
+    return '<div class="model-card' + (popular?' popular':'') + (isComp?' in-compare':'') + '" id="card-' + s + '" onclick="location.href=\'/\' + s + \'.html\'">' +
+      '<div class="card-hdr">' +
+        '<div class="card-info-left">' +
+          '<div class="card-model-name">' + m.name + '</div>' +
+          (version ? '<div class="card-version">' + version + '</div>' : '') +
+          (fuelType ? '<div class="card-fuel-row">' + fuelIco + ' ' + fuelType + '</div>' : '') +
+        '</div>' +
+        '<div class="card-price-blk">' +
+          '<span class="card-desde">Desde</span>' +
+          '<div class="card-eur">' + m.minPrice + '\u20ac</div>' +
+          '<span class="card-mes">mes \u00b7 IVA incl.</span>' +
+        '</div>' +
       '</div>' +
-      '<div class="model-img">' + (m.image ? '<img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '<div class="model-img-placeholder">&#x1F697;</div>') + '</div>' +
-      '<div class="model-body">' +
-        '<div class="model-name">' + m.name + '</div>' +
-        '<div class="model-badges">' + fuels + '</div>' +
-        '<div class="model-price"><span class="price-prefix">desde</span><span class="price-amount">' + m.minPrice + '</span><span class="price-unit">\u20ac/mes</span></div>' +
-        '<div class="offer-meta"><span class="offer-count">' + m.offerCount + ' oferta' + (m.offerCount!==1?'s':'') + '</span><span class="offer-sources">' + sources + '</span></div>' +
-        '<a href="/' + s + '.html" class="btn-ver">Ver ofertas</a>' +
-      '</div></div>';
+      '<div class="card-img-zone">' +
+        (m.image ? '<img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '<div class="card-img-placeholder">\U0001f697</div>') +
+        '<button class="card-fav' + (isFav?' active':'') + '" onclick="toggleFav(event,\'' + m.name + '\')" title="Guardar">' + (isFav?'\u2764\ufe0f':'\u2661') + '</button>' +
+      '</div>' +
+      '<div class="card-ftr">' +
+        (badge || offerTxt) +
+        (badge ? offerTxt : '') +
+      '</div>' +
+    '</div>';
   }
 
   /* FAV */
