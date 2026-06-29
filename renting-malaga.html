@@ -23,7 +23,6 @@
     .nav-links{display:flex;gap:24px;align-items:center;}
     .nav-links a{font-size:12px;color:#bbb;font-weight:500;}
     .nav-links a:hover{color:#111;}
-    .nav-cta{background:#F04E00;color:#fff;font-size:11px;font-weight:700;padding:8px 16px;border-radius:7px;}
     .hero{background:#fff;padding:40px 32px 32px;border-bottom:1px solid #ebebeb;}
     .pill{display:inline-flex;align-items:center;gap:6px;background:#fff5f2;border:1px solid #ffd5cc;border-radius:99px;padding:4px 14px;font-size:10px;font-weight:700;color:#F04E00;margin-bottom:14px;}
     h1{font-size:30px;font-weight:800;letter-spacing:-1px;margin-bottom:8px;}
@@ -90,7 +89,6 @@
     <a href="/renting-autonomos.html">Autonomos</a>
     <a href="/renting-empresas.html">Empresas</a>
   </div>
-  <a href="/" class="nav-cta">Comparar gratis</a>
 </nav>
 
 <section class="hero">
@@ -243,7 +241,7 @@
 <div class="cta-box">
   <h2>Compara ofertas de renting en Málaga</h2>
   <p>Más de 1.200 ofertas reales de Arval, Ayvens, Alphabet, Kinto y más. Sin registrarte, gratis.</p>
-  <a href="/" class="btn-cta">Ver todas las ofertas →</a>
+  <button class="btn-cta" onclick="abrirModal()">Ver todas las ofertas →</button>
 </div>
 
 <div class="otras-ciudades">
@@ -277,5 +275,59 @@
   </div>
   <span class="footer-copy">2026 myrenting · Barcelona</span>
 </footer>
+
+<!-- MODAL CONTACTO -->
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:16px;padding:32px;max-width:420px;width:90%;position:relative;">
+    <button onclick="document.getElementById('modal').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#999;">&#x2715;</button>
+    <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Solicitar información</h3>
+    <p style="font-size:12px;color:#999;margin-bottom:20px;">Te ponemos en contacto con la gestora en menos de 24h</p>
+    <form id="myform" onsubmit="return enviarFormularioModal(event)" style="display:flex;flex-direction:column;gap:12px;">
+      <input name="nombre" placeholder="Tu nombre" required style="padding:11px 14px;border:1.5px solid #ebebeb;border-radius:8px;font-family:inherit;font-size:13px;">
+      <input name="telefono" placeholder="Teléfono" required style="padding:11px 14px;border:1.5px solid #ebebeb;border-radius:8px;font-family:inherit;font-size:13px;">
+      <input name="email" type="email" placeholder="Email" required style="padding:11px 14px;border:1.5px solid #ebebeb;border-radius:8px;font-family:inherit;font-size:13px;">
+      <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:#444;cursor:pointer;">
+        <input type="checkbox" name="contactar_whatsapp" value="Sí" style="width:16px;height:16px;accent-color:#F04E00;cursor:pointer;">
+        Prefiero que me contacten por WhatsApp
+      </label>
+      <input type="hidden" name="pagina" id="modal-pagina" value="">
+      <button type="submit" id="modal-submit-btn" style="background:#F04E00;color:#fff;border:none;padding:13px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;">Solicitar información gratuita</button>
+    </form>
+    <div id="modal-success" style="display:none;text-align:center;padding:12px 0;">
+      <div style="width:48px;height:48px;background:#e8f5ee;border-radius:50%;font-size:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">&#10003;</div>
+      <h3 style="font-size:16px;font-weight:800;margin-bottom:6px;color:#111;">Enviado correctamente</h3>
+      <p style="color:#999;font-size:13px;">Te contactaremos en las próximas 24 horas.</p>
+    </div>
+  </div>
+</div>
+<script>
+function abrirModal(p){
+  document.getElementById('modal').style.display='flex';
+  document.getElementById('modal-pagina').value=p||window.location.pathname;
+  document.getElementById('myform').style.display='flex';
+  document.getElementById('modal-success').style.display='none';
+}
+async function enviarFormularioModal(e){
+  e.preventDefault();
+  var form=document.getElementById('myform');
+  var btn=document.getElementById('modal-submit-btn');
+  btn.disabled=true;
+  btn.textContent='Enviando...';
+  var formData=new FormData(form);
+  formData.append('_subject','Lead myrenting — '+(formData.get('pagina')||''));
+  try{
+    await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com',{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:formData
+    });
+  }catch(err){}
+  form.style.display='none';
+  document.getElementById('modal-success').style.display='block';
+  btn.disabled=false;
+  btn.textContent='Solicitar información gratuita';
+  return false;
+}
+</script>
 </body>
 </html>
