@@ -660,10 +660,26 @@
     document.getElementById('ofertaModal').classList.remove('open');
     document.body.style.overflow = '';
   }
-  function submitModal(e) {
+  async function submitModal(e) {
     e.preventDefault();
+    const btn = document.getElementById('modal-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    const fd = new FormData(e.target);
+    fd.append('_subject', 'Lead Myrenting — ' + document.title);
+    fd.append('pagina', window.location.href);
+    fd.append('gestora', document.getElementById('modal-gestora-name').textContent);
+    try {
+      await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com', {
+        method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: fd
+      });
+    } catch(err) {}
     document.getElementById('ofertaModal').classList.remove('open');
     document.body.style.overflow = '';
+    btn.disabled = false;
+    btn.textContent = 'Ver la oferta →';
     if (_modalUrl && _modalUrl !== '#') window.open(_modalUrl, '_blank', 'noopener,noreferrer');
   }
 
