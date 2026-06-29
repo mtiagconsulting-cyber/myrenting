@@ -101,16 +101,23 @@ def build_page(data):
     model_name = data.get('model_name', '')
     img = data.get('img', '')
     stats = data.get('stats', [])
-    
+
     # Extraer stats
     precio = next((v for l,v in stats if 'precio' in l.lower()), '—')
     num_ofertas = next((v for l,v in stats if 'oferta' in l.lower()), '—')
     gestoras = next((v for l,v in stats if 'gestora' in l.lower()), '—')
     ahorro = next((v for l,v in stats if 'ahorro' in l.lower()), '—')
-    
+
     hero_sub = data.get('hero_sub', '')
     # Limpiar HTML del hero_sub
     hero_sub_clean = re.sub(r'<[^>]+>', '', hero_sub)
+
+    # Precompute img HTML (avoids backslash in f-string, not allowed in Python < 3.12)
+    onerror_attr = "this.parentElement.innerHTML='<div style=\"color:#ccc;font-size:12px;\">" + model_name + "</div>'"
+    if img:
+        img_html = '<img src="' + img + '" alt="Renting ' + model_name + '" loading="eager" decoding="async" onerror="' + onerror_attr + '">'
+    else:
+        img_html = '<div style="color:#ccc;font-size:13px;text-align:center;">' + model_name + '</div>'
 
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -380,7 +387,7 @@ def build_page(data):
   </div>
 
   <div class="hero-img">
-    {'<img src="' + img + '" alt="Renting ' + model_name + '" loading="eager" decoding="async" onerror="this.parentElement.innerHTML=\'<div style=&quot;color:#ccc;font-size:12px;&quot;>' + model_name + '</div>\'">' if img else '<div style="color:#ccc;font-size:13px;text-align:center;">' + model_name + '</div>'}
+    {img_html}
   </div>
 </section>
 
