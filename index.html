@@ -619,6 +619,23 @@ a.model-card{text-decoration:none;color:inherit}
 
 /* 4-column grid on wide screens */
 @media(min-width:1200px){.models-grid{grid-template-columns:repeat(4,1fr)!important}}
+
+/* ── MOBILE v3 fixes ── */
+@media(max-width:900px){
+  .hero{padding:44px 24px 52px}
+  .hero-h1{font-size:44px;letter-spacing:-2px}
+  .sbox{max-width:100%}
+}
+@media(max-width:680px){
+  .hero{padding:36px 20px 44px}
+  .hero-h1{font-size:34px;letter-spacing:-1.5px;line-height:1.05}
+  .hero-p{font-size:15px;margin-bottom:28px}
+  .sbox-main{flex-wrap:wrap;gap:10px;padding:16px}
+  .sbox-go{width:100%;text-align:center;border-radius:var(--r-sm)}
+  .sbox-input{min-width:0}
+  .chat-bubble{right:12px;bottom:80px;width:calc(100vw - 80px);max-width:280px}
+  .chat-btn{bottom:20px;right:12px}
+}
 </style>
 </head>
 <body>
@@ -1307,7 +1324,7 @@ a.model-card{text-decoration:none;color:inherit}
     chatShown = !chatShown;
     document.getElementById('chat-bubble').classList.toggle('show', chatShown);
   }
-  setTimeout(() => { document.getElementById('chat-bubble').classList.add('show'); chatShown = true; }, 4000);
+  if(window.innerWidth > 680) setTimeout(() => { document.getElementById('chat-bubble').classList.add('show'); chatShown = true; }, 4000);
 
   /* INIT */
   (function() {
