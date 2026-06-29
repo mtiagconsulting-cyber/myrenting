@@ -286,7 +286,7 @@ def top_ofertas_html(ofertas_sorted, nombre):
             <span>{fuel} {dgt}</span>
             <span class="top-card-tipo">{tipo}</span>
           </div>
-          <a href="{link}" target="_blank" rel="noopener" class="top-card-btn">Ver oferta →</a>
+          <a href="#" onclick="abrirModal(event,'{link}','{fuente}');return false;" class="top-card-btn">Ver oferta →</a>
         </div>'''
     return cards
 
@@ -433,7 +433,7 @@ def gestoras_cards_html(ofertas_sorted):
             '\n          <span>✓ Sin entrada</span><span>✓ Seguro todo riesgo</span>'
             '\n          <span>✓ Mantenimiento</span><span>✓ Asistencia 24h</span>'
             '\n        </div>'
-            f'\n        <a href="{link}" target="_blank" rel="noopener" class="gc-cta">Ver en {fuente} →</a>'
+            f'\n        <a href="#" onclick="abrirModal(event,\'{link}\',\'{fuente}\');return false;" class="gc-cta">Ver en {fuente} \u2192</a>'
             '\n      </div>'
             '\n    </div>'
         )
@@ -502,7 +502,7 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
           <td data-label="Km/año">{km}</td>
           <td class="version-cell" data-label="Versión">{version}</td>
           <td data-label="Precio">{'<span class="best-badge">&#10003; Mejor precio</span><br>' if es_mejor else ''}<span class="price-strong">{precio} €/mes</span></td>
-          <td><a href="{link}" target="_blank" rel="noopener" class="btn-ver-oferta">Ver oferta →</a></td>
+          <td><a href="#" onclick="abrirModal(event,'{link}','{fuente}');return false;" class="btn-ver-oferta">Ver oferta →</a></td>
         </tr>'''
 
     faqs    = generar_faq(nombre, precio_min, gestoras, fuels, make, model)
@@ -577,7 +577,7 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
   <style>
     *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
     :root{{
-      --accent:#e8380d;--accent-dk:#c42e0a;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --accent:#F04E00;--accent-dk:#d94000;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
       --ink:#111;--ink-2:#333;--ink-3:#666;--ink-4:#999;--ink-5:#bbb;
       --border:#e8e8e8;--border-2:#d8d8d8;
       --surface:#fff;--surface-2:#f7f7f5;--surface-3:#f0f0ee;
@@ -600,27 +600,27 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     .nav-cta-sm:hover{{background:var(--accent-dk)}}
 
     /* HERO */
-    .hero{{background:#111;color:#fff;padding:0}}
-    .hero-inner{{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:0;min-height:280px}}
+    .hero{{background:#fff;border-bottom:1.5px solid var(--border);padding:0}}
+    .hero-inner{{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:0;min-height:240px}}
     .hero-content{{padding:36px 40px 32px 40px}}
-    .breadcrumb{{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}}
-    .breadcrumb a{{color:rgba(255,255,255,.4);transition:color .15s}}
-    .breadcrumb a:hover{{color:rgba(255,255,255,.7)}}
+    .breadcrumb{{font-size:11px;color:var(--ink-4);margin-bottom:14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}}
+    .breadcrumb a{{color:var(--ink-4);transition:color .15s}}
+    .breadcrumb a:hover{{color:var(--ink)}}
     .breadcrumb-sep{{opacity:.3}}
-    .hero-badge{{display:inline-flex;align-items:center;gap:6px;background:rgba(232,56,13,.25);border:1px solid rgba(232,56,13,.4);border-radius:99px;padding:3px 10px;font-size:10px;font-weight:700;color:#ff8c70;margin-bottom:14px;text-transform:uppercase;letter-spacing:.4px}}
-    .hero h1{{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:10px}}
+    .hero-badge{{display:inline-flex;align-items:center;gap:6px;background:var(--accent-lt);border:1px solid var(--accent-border);border-radius:99px;padding:3px 10px;font-size:10px;font-weight:700;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:.4px}}
+    .hero h1{{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:10px;color:var(--ink)}}
     .hero h1 em{{font-style:normal;color:var(--accent)}}
-    .hero-sub{{color:rgba(255,255,255,.5);font-size:13px;margin-bottom:20px;line-height:1.5}}
+    .hero-sub{{color:var(--ink-4);font-size:13px;margin-bottom:20px;line-height:1.5}}
     .hero-stats{{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}}
-    .hero-stat{{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-sm);padding:10px 14px;flex:1;min-width:100px}}
-    .hero-stat-label{{font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px}}
-    .hero-stat-value{{font-size:1.15rem;font-weight:800;margin-top:3px}}
+    .hero-stat{{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;flex:1;min-width:100px}}
+    .hero-stat-label{{font-size:9px;font-weight:700;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px}}
+    .hero-stat-value{{font-size:1.15rem;font-weight:800;margin-top:3px;color:var(--ink)}}
     .hero-stat-value.accent{{color:var(--accent)}}
-    .hero-social-proof{{font-size:11px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:6px}}
+    .hero-social-proof{{font-size:11px;color:var(--ink-4);display:flex;align-items:center;gap:6px}}
     .pulse{{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}}
     @keyframes pulse{{0%,100%{{opacity:1}}50%{{opacity:.4}}}}
-    .hero-img-col{{background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;padding:20px;border-left:1px solid rgba(255,255,255,.07)}}
-    .hero-img-col img{{max-width:100%;max-height:240px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,.4));mix-blend-mode:lighten}}
+    .hero-img-col{{background:linear-gradient(145deg,#EBF0FE,#F7F7F5);display:flex;align-items:center;justify-content:center;padding:20px;border-left:1px solid var(--border)}}
+    .hero-img-col img{{max-width:100%;max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,.15))}}
 
     /* TOP OFERTAS */
     .top-section{{max-width:1280px;margin:0 auto;padding:28px 28px 0}}
@@ -769,13 +769,32 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     .gc-cta:hover{{background:var(--accent-dk)}}
     @media(max-width:640px){{.gestora-grid{{grid-template-columns:1fr}}}}
 
+
+    /* MODAL VER OFERTA */
+    .modal-overlay{{position:fixed;inset:0;background:rgba(17,17,16,.7);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s}}
+    .modal-overlay.open{{opacity:1;pointer-events:all}}
+    .modal-box{{background:#fff;border-radius:16px;padding:32px;max-width:420px;width:100%;box-shadow:0 24px 64px rgba(0,0,0,.25);transform:translateY(16px);transition:transform .25s;position:relative}}
+    .modal-overlay.open .modal-box{{transform:translateY(0)}}
+    .modal-close{{position:absolute;top:14px;right:14px;background:none;border:none;font-size:18px;cursor:pointer;color:var(--ink-4);width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:.15s}}
+    .modal-close:hover{{background:var(--surface-2)}}
+    .modal-gestora-badge{{display:inline-block;background:var(--accent);color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:99px;margin-bottom:12px;letter-spacing:.3px;text-transform:uppercase}}
+    .modal-title{{font-size:20px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px;color:var(--ink)}}
+    .modal-sub{{font-size:13px;color:var(--ink-4);margin-bottom:20px;line-height:1.5}}
+    .modal-form{{display:flex;flex-direction:column;gap:12px}}
+    .modal-field{{display:flex;flex-direction:column;gap:4px}}
+    .modal-field label{{font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.4px}}
+    .modal-field input,.modal-field select{{padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s;outline:none}}
+    .modal-field input:focus,.modal-field select:focus{{border-color:var(--accent)}}
+    .modal-submit{{background:var(--accent);color:#fff;padding:13px;border-radius:var(--radius-sm);font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:background .15s;margin-top:4px;width:100%;text-align:center}}
+    .modal-submit:hover{{background:var(--accent-dk)}}
+    .modal-disclaimer{{font-size:11px;color:var(--ink-5);text-align:center;margin-top:10px;line-height:1.5}}
+
     /* RESPONSIVE */
     @media(max-width:900px){{
       .hero-inner{{grid-template-columns:1fr}}
       .hero-img-col{{display:none}}
       .hero-content{{padding:24px 20px}}
       .top-grid{{grid-template-columns:1fr 1fr}}
-      .calc-panel{{grid-template-columns:1fr}}
       .top-section,.main-wrap{{padding:20px 16px 0}}
       .main-wrap{{margin:20px auto}}
     }}
@@ -797,7 +816,7 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
       .comp-table tbody td:last-child{{padding-top:10px;border-top:1px solid var(--border);margin-top:6px;justify-content:flex-end}}
       .comp-table tbody td:last-child::before{{display:none}}
       .btn-ver-oferta{{width:100%;text-align:center;padding:10px}}
-      .seo-panel,.faq-panel,.calc-panel{{padding:18px 14px}}
+      .seo-panel,.faq-panel{{padding:18px 14px}}
       .filter-bar-inner{{gap:8px}}
       .fgroup{{min-width:calc(50% - 5px)}}
       .sticky-cta{{display:block}}
@@ -901,26 +920,6 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     </div>
   </div>
 
-  <!-- CALCULADORA DE AHORRO -->
-  <div class="calc-panel">
-    <div>
-      <div class="calc-title">¿Cuanto ahorras con renting vs compra?</div>
-      <div class="calc-sub">Comparativa orientativa para el {nombre} durante 48 meses</div>
-      <div class="calc-row"><span class="calc-row-label">Renting 48 meses (todo incluido)</span><span class="calc-row-value">{precio_min * 48:,.0f}€</span></div>
-      <div class="calc-row"><span class="calc-row-label">Precio de compra estimado</span><span class="calc-row-value">{precio_comp:,}€</span></div>
-      <div class="calc-row"><span class="calc-row-label">Seguro 4 años (~600€/año)</span><span class="calc-row-value">2.400€</span></div>
-      <div class="calc-row"><span class="calc-row-label">Mantenimiento 4 años (~400€/año)</span><span class="calc-row-value">1.600€</span></div>
-      <div class="calc-row"><span class="calc-row-label">Depreciación estimada (45% en 4 años)</span><span class="calc-row-value">{int(precio_comp*0.45):,}€</span></div>
-      <div class="calc-row"><span class="calc-row-label"><strong>Coste total compra</strong></span><span class="calc-row-value"><strong>{int(precio_comp + 2400 + 1600 + precio_comp*0.45):,}€</strong></span></div>
-    </div>
-    <div>
-      <div class="calc-highlight">
-        <div class="calc-highlight-num">+{max(0, int(precio_comp + 2400 + 1600 + precio_comp*0.45) - precio_min*48):,}€</div>
-        <div class="calc-highlight-label">puede ahorrarte el renting vs compra en 4 años</div>
-      </div>
-      <p style="font-size:11px;color:var(--ink-4);margin-top:12px;line-height:1.5">*Cifras orientativas. El ahorro real depende del uso, el modelo exacto y la depreciación del mercado.</p>
-    </div>
-  </div>
 
   <!-- FICHA TÉCNICA + DESCRIPCIÓN -->
   {'<div class="desc-enriquecida"><p>' + desc_enriquecida + '</p></div>' if desc_enriquecida else ''}
@@ -959,7 +958,65 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
   <a href="/" onclick="history.back();return false">Solicitar mejor oferta gratis →</a>
 </div>
 
+<!-- MODAL VER OFERTA -->
+<div class="modal-overlay" id="ofertaModal" onclick="cerrarModalOverlay(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('ofertaModal').classList.remove('open');document.body.style.overflow=''">&#x2715;</button>
+    <div class="modal-gestora-badge" id="modal-gestora-name">Gestora</div>
+    <div class="modal-title">Ver la oferta</div>
+    <div class="modal-sub">Déjanos tus datos y te enviamos los detalles</div>
+    <form class="modal-form" onsubmit="submitModal(event)">
+      <div class="modal-field">
+        <label>Nombre</label>
+        <input type="text" id="m-nombre" placeholder="Tu nombre completo" required>
+      </div>
+      <div class="modal-field">
+        <label>Email</label>
+        <input type="email" id="m-email" placeholder="tucorreo@ejemplo.com" required>
+      </div>
+      <div class="modal-field">
+        <label>Teléfono</label>
+        <input type="tel" id="m-tel" placeholder="600 000 000" required>
+      </div>
+      <div class="modal-field">
+        <label>Perfil</label>
+        <select id="m-perfil" required>
+          <option value="">Selecciona tu perfil</option>
+          <option value="particular">Particular</option>
+          <option value="autonomo">Autónomo / Freelance</option>
+          <option value="empresa">Empresa</option>
+        </select>
+      </div>
+      <button type="submit" class="modal-submit" id="modal-submit-btn">Ver la oferta →</button>
+    </form>
+    <div class="modal-disclaimer">Al enviar aceptas nuestra <a href="/politica-privacidad.html" style="color:var(--accent)">Política de privacidad</a></div>
+  </div>
+</div>
+
+
 <script>
+  let _modalUrl = '#';
+  function abrirModal(e, url, gestora) {{
+    if (e) e.preventDefault();
+    _modalUrl = url || '#';
+    document.getElementById('modal-gestora-name').textContent = gestora || 'Gestora';
+    document.getElementById('modal-submit-btn').textContent = 'Ver en ' + (gestora || 'gestora') + ' →';
+    document.getElementById('ofertaModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }}
+  function cerrarModalOverlay(e) {{
+    if (e.target !== document.getElementById('ofertaModal')) return;
+    document.getElementById('ofertaModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }}
+  function submitModal(e) {{
+    e.preventDefault();
+    document.getElementById('ofertaModal').classList.remove('open');
+    document.body.style.overflow = '';
+    if (_modalUrl && _modalUrl !== '#') window.open(_modalUrl, '_blank', 'noopener,noreferrer');
+  }}
+
+
   function filtrar() {{
     const plazo  = document.getElementById('f-plazo').value;
     const fuel   = document.getElementById('f-fuel').value;
