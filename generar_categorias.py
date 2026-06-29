@@ -15,7 +15,7 @@ import json, re
 from pathlib import Path
 
 BASE     = Path(__file__).parent
-BASE_URL = "https://www.myrenting.es"
+BASE_URL = "https://myrenting.es"
 
 def slug(t):
     for a, b in [('á','a'),('à','a'),('é','e'),('í','i'),('ó','o'),('ú','u'),('ü','u')]:
@@ -31,71 +31,65 @@ SUVY = {'QASHQAI','T-ROC','TIGUAN','ARONA','SPORTAGE','KONA','TUCSON','FORMENTOR
 
 CSS = """
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--accent:#e8380d;--ink:#111318;--ink-2:#2d2d3a;--ink-3:#6b6b80;--ink-4:#a0a0b0;
-          --green:#00c47a;--surface:#fff;--surface-2:#f7f8fa;--border:#e4e4ec;
-          --radius:14px;--radius-sm:8px}
-    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);
-         color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-    nav{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);
-        border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
-    .nav-inner{max-width:1280px;margin:0 auto;padding:0 28px;height:62px;
-               display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:1.25rem;font-weight:800;color:var(--ink);text-decoration:none}
-    .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;
-              display:inline-block;margin-left:3px;margin-bottom:10px}
-    .cat-hero{background:#111318;color:#fff;padding:52px 28px}
+    :root{
+      --accent:#F04E00;--accent-dk:#d94000;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --ink:#111110;--ink-2:#333;--ink-3:#5a5a56;--ink-4:#8a8a84;--ink-5:#b0b0aa;
+      --border:#E8E8E5;--surface:#fff;--surface-2:#F7F7F5;--surface-3:#f0f0ee;
+      --green:#00c47a;--green-lt:#e6faf3;--green-dk:#00875a;
+      --radius:12px;--radius-sm:8px;
+      --shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.06);
+    }
+    body{font-family:'Inter',sans-serif;background:var(--surface-2);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    nav{background:#fff;border-bottom:1.5px solid var(--border);position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;padding:0 28px;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;color:var(--ink)}
+    .nav-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
+    .nav-back{font-size:12px;color:var(--ink-4);font-weight:500;transition:color .15s}
+    .nav-back:hover{color:var(--ink)}
+    .cat-hero{background:#fff;border-bottom:1.5px solid var(--border);padding:48px 28px 40px}
     .cat-hero-inner{max-width:1280px;margin:0 auto}
-    .breadcrumb{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:14px}
-    .breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none}
-    .cat-pill{display:inline-block;background:var(--accent);color:#fff;font-size:.7rem;
-              font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:12px;
-              text-transform:uppercase;letter-spacing:.5px}
-    .cat-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1px;
-                 line-height:1.2;margin-bottom:10px}
+    .breadcrumb{font-size:11px;color:var(--ink-4);margin-bottom:14px;display:flex;gap:6px;align-items:center}
+    .breadcrumb a{color:var(--ink-4)}
+    .breadcrumb a:hover{color:var(--ink)}
+    .cat-pill{display:inline-block;background:var(--accent-lt);border:1px solid var(--accent-border);color:var(--accent);font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+    .cat-hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:10px;color:var(--ink)}
     .cat-hero h1 em{font-style:normal;color:var(--accent)}
-    .cat-hero p{color:rgba(255,255,255,.5);max-width:600px;font-size:1rem}
-    main{max-width:1280px;margin:0 auto;padding:40px 28px}
-    .stats-bar{display:flex;gap:24px;margin-bottom:32px;padding:20px 24px;
-               background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm)}
+    .cat-hero p{color:var(--ink-4);max-width:600px;font-size:14px;line-height:1.65}
+    main{max-width:1280px;margin:0 auto;padding:36px 28px}
+    .stats-bar{display:flex;gap:24px;margin-bottom:28px;padding:18px 22px;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-sm)}
     .stat{display:flex;flex-direction:column;gap:2px}
-    .stat-val{font-size:1.4rem;font-weight:800;color:var(--ink)}
-    .stat-label{font-size:.75rem;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px}
-    .offers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:40px}
-    .offer-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-                padding:20px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s,transform .2s}
-    .offer-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-2px)}
-    .offer-card-brand{font-size:.7rem;font-weight:700;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px}
-    .offer-card-name{font-size:1.05rem;font-weight:800;color:var(--ink);letter-spacing:-.2px}
-    .offer-card-price{font-size:1.5rem;font-weight:800;color:var(--accent);margin-top:4px}
-    .offer-card-price span{font-size:.8rem;font-weight:500;color:var(--ink-3)}
-    .offer-card-meta{font-size:.8rem;color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap}
-    .offer-tag{background:var(--surface-2);border-radius:99px;padding:3px 8px;font-size:.72rem;font-weight:600}
-    .offer-card-link{background:var(--accent);color:#fff;text-align:center;text-decoration:none;
-                     padding:10px;border-radius:var(--radius-sm);font-size:.85rem;font-weight:700;
-                     margin-top:auto;transition:background .15s}
-    .offer-card-link:hover{background:#c42e0a}
-    .seo-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-               padding:32px;margin-bottom:32px}
-    .seo-block h2{font-size:1.1rem;font-weight:800;margin-bottom:10px;letter-spacing:-.2px}
-    .seo-block h3{font-size:.95rem;font-weight:700;margin:18px 0 6px;color:var(--ink)}
-    .seo-block p{color:var(--ink-3);margin-bottom:12px;line-height:1.75;font-size:.95rem}
-    .seo-block ul{padding-left:1.3rem;margin-bottom:12px}
-    .seo-block li{color:var(--ink-3);margin-bottom:5px;line-height:1.6;font-size:.92rem}
+    .stat-val{font-size:1.3rem;font-weight:800;color:var(--ink)}
+    .stat-label{font-size:10px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px}
+    .offers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:36px}
+    .offer-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s,transform .2s}
+    .offer-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.09);transform:translateY(-2px)}
+    .offer-card-brand{font-size:10px;font-weight:700;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px}
+    .offer-card-name{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.2px}
+    .offer-card-price{font-size:1.4rem;font-weight:800;color:var(--accent);margin-top:2px}
+    .offer-card-price span{font-size:12px;font-weight:500;color:var(--ink-4)}
+    .offer-card-meta{font-size:11px;color:var(--ink-4);display:flex;gap:8px;flex-wrap:wrap}
+    .offer-tag{background:var(--surface-2);border-radius:99px;padding:3px 8px;font-size:10px;font-weight:600;border:1px solid var(--border)}
+    .offer-card-link{background:var(--ink);color:#fff;text-align:center;padding:10px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;margin-top:auto;transition:background .15s}
+    .offer-card-link:hover{background:var(--accent)}
+    .seo-block{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:28px}
+    .seo-block h2{font-size:16px;font-weight:800;margin-bottom:10px;letter-spacing:-.3px;margin-top:20px}
+    .seo-block h2:first-child{margin-top:0}
+    .seo-block h3{font-size:14px;font-weight:700;margin:16px 0 6px;color:var(--ink)}
+    .seo-block p{color:var(--ink-3);margin-bottom:10px;line-height:1.75;font-size:14px}
+    .seo-block ul{padding-left:1.2rem;margin-bottom:12px}
+    .seo-block li{color:var(--ink-3);margin-bottom:5px;line-height:1.6;font-size:13px}
     .seo-block strong{color:var(--ink)}
-    .comp-table-wrap{overflow-x:auto;margin-bottom:32px}
-    .comp-table{width:100%;border-collapse:collapse;font-size:.875rem}
-    .comp-table th{background:#111318;color:#fff;padding:10px 14px;text-align:left;
-                   font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-    .comp-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+    .comp-table-wrap{overflow-x:auto;margin-bottom:28px}
+    .comp-table{width:100%;border-collapse:collapse;font-size:13px}
+    .comp-table th{background:var(--surface-2);color:var(--ink-4);padding:10px 14px;text-align:left;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;border-bottom:2px solid var(--border)}
+    .comp-table td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
     .comp-table tr:hover td{background:var(--surface-2)}
-    .winner-badge{background:#e0faf1;color:#00875a;font-size:.7rem;font-weight:700;
-                  padding:2px 7px;border-radius:99px}
-    footer{background:#111318;color:rgba(255,255,255,.4);padding:32px 28px;text-align:center;font-size:.8rem}
-    footer a{color:rgba(255,255,255,.4);text-decoration:none;margin:0 6px}
-    footer a:hover{color:#fff}
-    footer p+p{margin-top:8px}
+    .winner-badge{background:var(--green-lt);color:var(--green-dk);font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px}
+    footer{background:#111110;color:#555;padding:20px 28px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    footer a{color:#555;transition:color .15s}
+    footer a:hover{color:#888}
     @media(max-width:640px){
-      .cat-hero{padding:36px 16px}
+      .cat-hero{padding:32px 16px 28px}
       main{padding:24px 16px}
       .stats-bar{flex-wrap:wrap;gap:16px}
       .offers-grid{grid-template-columns:1fr}
@@ -103,18 +97,16 @@ CSS = """
 """
 
 NAV = """<nav>
-  <div class="nav-inner">
-    <a href="/" class="logo">MiRenting<span class="logo-dot"></span></a>
-    <a href="/" style="color:var(--ink-3);text-decoration:none;font-size:.875rem">← Todas las ofertas</a>
-  </div>
+  <a href="/" class="nav-brand">
+    <div class="nav-logo">M</div>
+    <span>My<span style="color:var(--accent)">Renting</span></span>
+  </a>
+  <a href="/" class="nav-back">&#8592; Todas las ofertas</a>
 </nav>"""
 
 FOOTER = """<footer>
-  <p>© 2026 MiRenting · mtiagconsulting · Barcelona, España</p>
-  <p><a href="/">Comparador</a><a href="/blog/">Blog</a>
-     <a href="/aviso-legal.html">Aviso Legal</a>
-     <a href="/politica-privacidad.html">Privacidad</a>
-     <a href="/politica-cookies.html">Cookies</a></p>
+  <span>&#169; 2026 Myrenting · <a href="/">Comparador de renting de coches en España</a></span>
+  <span><a href="/aviso-legal.html">Aviso Legal</a> · <a href="/politica-privacidad.html">Privacidad</a> · <a href="/politica-cookies.html">Cookies</a></span>
 </footer>"""
 
 GTM = """<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NHXGQF97');</script>"""
@@ -132,7 +124,8 @@ def page_shell(title, desc, canonical, pill, h1, subtitle, content, schema=""):
   <link rel="canonical" href="{BASE_URL}/{canonical}">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{desc}">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   {f'<script type="application/ld+json">{schema}</script>' if schema else ''}
   <style>{CSS}</style>
 </head>
@@ -141,7 +134,7 @@ def page_shell(title, desc, canonical, pill, h1, subtitle, content, schema=""):
 {NAV}
 <section class="cat-hero">
   <div class="cat-hero-inner">
-    <div class="breadcrumb"><a href="/">MiRenting</a> › {pill}</div>
+    <div class="breadcrumb"><a href="/">Myrenting</a> <span style="opacity:.4">›</span> {pill}</div>
     <span class="cat-pill">{pill}</span>
     <h1>{h1}</h1>
     <p>{subtitle}</p>
