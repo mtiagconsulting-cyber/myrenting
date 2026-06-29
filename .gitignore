@@ -9,6 +9,8 @@ img/.DS_Store
 !generar_categorias.py
 !generar_marcas.py
 !descargar_imagenes_coches.py
+!scripts/scrapers/scrape_myrenting.py
+!scripts/generadores/regenerar_paginas.py
 index_redesign.html
 scraper-concesionarios/
 *.json
