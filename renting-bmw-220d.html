@@ -544,6 +544,11 @@
       </div>
       <button type="submit" class="modal-submit" id="modal-submit-btn">Ver la oferta →</button>
     </form>
+    <div id="modal-success" style="display:none;text-align:center;padding:16px 0;">
+      <div style="width:52px;height:52px;background:#e8f5ee;border-radius:50%;font-size:24px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">&#10003;</div>
+      <h3 style="font-size:17px;font-weight:800;margin-bottom:8px;color:#111;">&#161;Enviado correctamente!</h3>
+      <p style="color:#6F6F6B;font-size:13px;line-height:1.6;">Te contactaremos en menos de 24h.<br>Ahora te redirigimos a la oferta.</p>
+    </div>
     <div class="modal-disclaimer">Al enviar aceptas nuestra <a href="/politica-privacidad.html" style="color:var(--accent)">Política de privacidad</a></div>
   </div>
 </div>
@@ -580,11 +585,17 @@
         body: fd
       });
     } catch(err) {}
-    document.getElementById('ofertaModal').classList.remove('open');
-    document.body.style.overflow = '';
-    btn.disabled = false;
-    btn.textContent = 'Ver la oferta →';
+    e.target.style.display = 'none';
+    document.getElementById('modal-success').style.display = 'block';
     if (_modalUrl && _modalUrl !== '#') window.open(_modalUrl, '_blank', 'noopener,noreferrer');
+    setTimeout(() => {
+      document.getElementById('ofertaModal').classList.remove('open');
+      document.body.style.overflow = '';
+      e.target.style.display = '';
+      document.getElementById('modal-success').style.display = 'none';
+      btn.disabled = false;
+      btn.textContent = 'Ver la oferta →';
+    }, 3000);
   }
 
 
