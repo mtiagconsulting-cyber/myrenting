@@ -220,5 +220,59 @@
   </div>
   <span class="footer-copy">2026 myrenting · Barcelona</span>
 </footer>
+
+<!-- MODAL CONTACTO -->
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:16px;padding:32px;max-width:420px;width:90%;position:relative;">
+    <button onclick="document.getElementById('modal').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#999;">&#x2715;</button>
+    <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Solicitar información</h3>
+    <p style="font-size:12px;color:#999;margin-bottom:20px;">Te ponemos en contacto con la gestora en menos de 24h</p>
+    <form id="myform" onsubmit="return enviarFormularioModal(event)" style="display:flex;flex-direction:column;gap:12px;">
+      <input name="nombre" placeholder="Tu nombre" required style="padding:11px 14px;border:1.5px solid #ebebeb;border-radius:8px;font-family:inherit;font-size:13px;">
+      <input name="telefono" placeholder="Teléfono" required style="padding:11px 14px;border:1.5px solid #ebebeb;border-radius:8px;font-family:inherit;font-size:13px;">
+      <input name="email" type="email" placeholder="Email" required style="padding:11px 14px;border:1.5px solid #ebebeb;border-radius:8px;font-family:inherit;font-size:13px;">
+      <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:#444;cursor:pointer;">
+        <input type="checkbox" name="contactar_whatsapp" value="Sí" style="width:16px;height:16px;accent-color:#F04E00;cursor:pointer;">
+        Prefiero que me contacten por WhatsApp
+      </label>
+      <input type="hidden" name="pagina" id="modal-pagina" value="">
+      <button type="submit" id="modal-submit-btn" style="background:#F04E00;color:#fff;border:none;padding:13px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;">Solicitar información gratuita</button>
+    </form>
+    <div id="modal-success" style="display:none;text-align:center;padding:12px 0;">
+      <div style="width:48px;height:48px;background:#e8f5ee;border-radius:50%;font-size:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">&#10003;</div>
+      <h3 style="font-size:16px;font-weight:800;margin-bottom:6px;color:#111;">Enviado correctamente</h3>
+      <p style="color:#999;font-size:13px;">Te contactaremos en las próximas 24 horas.</p>
+    </div>
+  </div>
+</div>
+<script>
+function abrirModal(p){
+  document.getElementById('modal').style.display='flex';
+  document.getElementById('modal-pagina').value=p||window.location.pathname;
+  document.getElementById('myform').style.display='flex';
+  document.getElementById('modal-success').style.display='none';
+}
+async function enviarFormularioModal(e){
+  e.preventDefault();
+  var form=document.getElementById('myform');
+  var btn=document.getElementById('modal-submit-btn');
+  btn.disabled=true;
+  btn.textContent='Enviando...';
+  var formData=new FormData(form);
+  formData.append('_subject','Lead myrenting — '+(formData.get('pagina')||''));
+  try{
+    await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com',{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:formData
+    });
+  }catch(err){}
+  form.style.display='none';
+  document.getElementById('modal-success').style.display='block';
+  btn.disabled=false;
+  btn.textContent='Solicitar información gratuita';
+  return false;
+}
+</script>
 </body>
 </html>
