@@ -597,21 +597,25 @@ a.model-card{text-decoration:none;color:inherit}
 .pill-other{background:#F5F5F3;color:#6F6F6B;border-color:#E8E8E5}
 
 /* card body */
-.card-body-v3{padding:16px 18px 14px}
-.card-make-v3{font-size:11px;font-weight:600;color:var(--v3-sub);text-transform:uppercase;letter-spacing:.7px;margin-bottom:2px}
-.card-name-v3{font-size:17px;font-weight:800;letter-spacing:-.4px;color:var(--v3-black);margin-bottom:12px}
-.card-bottom-v3{display:flex;align-items:flex-end;justify-content:space-between}
-.v3-plabel{font-size:11px;color:var(--v3-sub);margin-bottom:1px}
-.v3-price{font-size:26px;font-weight:800;letter-spacing:-.8px;line-height:1;color:var(--v3-black)}
-.v3-price sub{font-size:12px;font-weight:500;color:var(--v3-sub);letter-spacing:0;vertical-align:baseline}
-.card-meta-v3{font-size:12px;color:var(--v3-sub);text-align:right;line-height:1.5}
-.card-meta-v3 strong{color:var(--v3-text);font-weight:600}
+.card-body-v3{padding:14px 16px 12px}
+.card-make-v3{font-size:10px;font-weight:700;color:var(--v3-sub);text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+.card-name-v3{font-size:19px;font-weight:800;letter-spacing:-.5px;color:var(--v3-black);margin-bottom:14px;line-height:1.15}
+.card-bottom-v3{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.v3-plabel{font-size:10px;font-weight:600;color:var(--v3-sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.v3-price{font-size:30px;font-weight:900;letter-spacing:-1.2px;line-height:1;color:var(--v3-black)}
+.v3-price sub{font-size:12px;font-weight:400;color:var(--v3-sub);letter-spacing:0;vertical-align:baseline}
+.card-meta-v3{font-size:11px;color:var(--v3-sub);text-align:right;line-height:1.6;flex-shrink:0}
+.card-meta-v3 strong{color:var(--v3-text);font-weight:700;font-size:13px}
 
 /* card footer */
-.card-ftr{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:9px 18px!important;background:var(--v3-white)!important;border-top:1px solid var(--v3-border)!important}
-.gdots{display:flex;gap:2px}
-.gdot{width:20px;height:20px;border-radius:50%;font-size:7px;font-weight:900;color:#fff;display:flex;align-items:center;justify-content:center;border:2px solid var(--v3-white)}
-.card-link-v3{font-size:12px;font-weight:700;color:var(--v3-accent)}
+.card-ftr{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:10px 16px!important;background:var(--v3-white)!important;border-top:1px solid var(--v3-border)!important}
+.gdots{display:flex;gap:3px;align-items:center}
+.gdot{width:22px;height:22px;border-radius:50%;font-size:7px;font-weight:900;color:#fff;display:flex;align-items:center;justify-content:center;border:2px solid var(--v3-white);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.card-link-v3{font-size:12px;font-weight:700;color:var(--v3-accent);letter-spacing:.1px}
+
+/* photo zone: taller */
+.card-img-zone{height:190px!important;min-height:190px!important}
+.card-img-zone img{height:160px!important;max-height:160px!important}
 
 /* 4-column grid on wide screens */
 @media(min-width:1200px){.models-grid{grid-template-columns:repeat(4,1fr)!important}}
@@ -623,10 +627,8 @@ a.model-card{text-decoration:none;color:inherit}
 <!-- NAV -->
 <nav class="nav">
   <a href="/" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-    </div>
-    <span class="nav-logo-text">myrenting</span>
+    <div class="nav-logo-icon" style="font-size:16px;font-weight:900;letter-spacing:-1px;color:#fff;font-family:Inter,sans-serif">M</div>
+    <span class="nav-logo-text">My<span style="color:var(--o)">Renting</span></span>
   </a>
   <div class="nav-links">
     <a href="/" class="cur">Ofertas</a>
@@ -654,10 +656,6 @@ a.model-card{text-decoration:none;color:inherit}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">
-    <span class="hero-dot"></span>
-    Actualizado 28 jun 2026 &middot; Precios reales
-  </div>
   <h1 class="hero-h1">Compara el renting de<br><span class="hl">todos los coches</span></h1>
   <p class="hero-p">M&aacute;s de 1.040 ofertas reales de 6 gestoras &mdash; actualizadas, sin registro y con precios finales.</p>
 
@@ -699,40 +697,9 @@ a.model-card{text-decoration:none;color:inherit}
       <button class="stag" onclick="applyChip('Furgoneta')">Furgoneta</button>
     </div>
   </div>
-
-  <div class="stats-bar">
-    <div class="sbar-item">
-      <div class="sbar-val" id="stat-total">&mdash;</div>
-      <div class="sbar-lbl">Ofertas</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-val" id="stat-models">&mdash;</div>
-      <div class="sbar-lbl">Modelos</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-val orange" id="stat-min">&mdash;</div>
-      <div class="sbar-lbl">Desde / mes</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-val">6</div>
-      <div class="sbar-lbl">Gestoras</div>
-    </div>
-  </div>
 </section>
 
-<!-- TRUST -->
-<div class="trust-strip">
-  <span class="ti">✓ Sin entrada</span><span class="td">·</span>
-  <span class="ti">✓ Seguro a todo riesgo</span><span class="td">·</span>
-  <span class="ti">✓ Mantenimiento incluido</span><span class="td">·</span>
-  <span class="ti">✓ Asistencia 24h</span><span class="td">·</span>
-  <span class="ti">✓ Sin registro ni formularios</span>
-</div>
 
-<!-- GESTORAS -->
-<div class="gestoras-strip">
-  <span class="gst-lbl">Comparamos ofertas de</span>
-  <div class="gst-divider"></div>
   <span class="gst-name">Arval</span>
   <span class="gst-name">Ayvens</span>
   <span class="gst-name">Alphabet</span>
@@ -907,7 +874,7 @@ a.model-card{text-decoration:none;color:inherit}
     <div class="footer-logo-ico">
       <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
     </div>
-    <span class="footer-name">myrenting</span>
+    <span class="footer-name">My<span style="color:var(--o)">Renting</span></span>
   </div>
   <div class="footer-links">
     <a href="/aviso-legal.html">Aviso legal</a>
