@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NHXGQF97');</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
-<link rel="shortcut icon" href="/favicon.png">
+
 <link rel="apple-touch-icon" href="/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Renting de Coches &middot; Compara +1000 Ofertas Sin Entrada | Myrenting</title>
@@ -525,6 +525,100 @@ a.model-card{text-decoration:none;color:inherit}
   .sf{border-right:none!important;border-top:1px solid var(--border)}
   .sf:first-child{border-top:none}
 }
+
+/* ══════════════════════════════════════
+   v3 DESIGN SYSTEM — OVERRIDES
+══════════════════════════════════════ */
+:root{
+  --v3-bg:#F7F7F5;
+  --v3-white:#FFFFFF;
+  --v3-black:#111110;
+  --v3-text:#1C1C1A;
+  --v3-sub:#6F6F6B;
+  --v3-border:#E8E8E5;
+  --v3-accent:#F04E00;
+  --v3-r:10px;
+  --v3-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.06);
+  --v3-shadow-hover:0 4px 12px rgba(0,0,0,.09),0 16px 40px rgba(0,0,0,.10);
+}
+
+/* ── HERO: left-aligned ── */
+.hero{text-align:left;padding:56px 48px 60px;background:var(--v3-white)}
+.hero-h1{font-size:56px;letter-spacing:-3px;line-height:1.02;color:var(--v3-black);max-width:680px}
+.hero-h1 .hl{color:var(--v3-accent)}
+.hero-eyebrow{background:transparent;border:1px solid var(--v3-border);margin-bottom:22px}
+.hero-p{font-size:17px;color:var(--v3-sub);margin:0 0 38px;line-height:1.65;max-width:520px}
+.sbox{margin:0;box-shadow:none;border-radius:var(--v3-r);max-width:620px}
+
+/* ── STATS: inline strip ── */
+.stats-bar{
+  display:flex!important;flex-direction:row!important;align-items:center;
+  justify-content:flex-start;gap:0;margin:28px 0 0;max-width:100%;
+  background:none;font-size:13px;flex-wrap:wrap;
+}
+.sbar-item{
+  flex:none!important;text-align:left;padding:0!important;
+  background:none!important;border:none!important;border-radius:0!important;
+  display:inline-flex;align-items:center;gap:4px;margin-right:6px;
+}
+.sbar-item:not(:last-child)::after{content:'·';color:#ccc;margin-left:6px}
+.sbar-val{font-size:13px!important;font-weight:700;color:var(--v3-text);letter-spacing:0;line-height:1}
+.sbar-val.orange{color:var(--v3-accent)}
+.sbar-lbl{font-size:13px!important;font-weight:400;color:var(--v3-sub);margin-top:0!important}
+
+/* ── CARD base ── */
+.model-card{border-radius:var(--v3-r)!important;box-shadow:var(--v3-shadow)!important;background:var(--v3-white)!important}
+.model-card:hover{transform:translateY(-2px)!important;box-shadow:var(--v3-shadow-hover)!important}
+.model-card.popular{box-shadow:0 0 0 2px var(--v3-accent),var(--v3-shadow)!important}
+.model-card.in-compare{box-shadow:0 0 0 3px #6366f1,0 8px 24px rgba(99,102,241,.18)!important}
+
+/* orange header → remove */
+.card-hdr{display:none!important}
+
+/* image zone → gradient photo zone */
+.card-img-zone{
+  height:175px!important;min-height:175px!important;padding:0!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  position:relative;overflow:hidden;
+}
+.card-img-zone.g-hybrid{background:linear-gradient(145deg,#E8F5EE,#F2FAF5)!important}
+.card-img-zone.g-elec{background:linear-gradient(145deg,#EBF0FE,#F0F5FF)!important}
+.card-img-zone.g-gas{background:linear-gradient(145deg,#FEF4EB,#FFF8F0)!important}
+.card-img-zone.g-diesel{background:linear-gradient(145deg,#F2F2F0,#F7F7F5)!important}
+.card-img-zone img{height:145px!important;max-height:145px!important;width:100%!important;object-fit:contain!important;object-position:center!important;padding:0 10px!important;transition:transform .3s}
+.model-card:hover .card-img-zone img{transform:scale(1.04)!important}
+
+/* fuel pill */
+.card-fuel-pill{position:absolute;top:10px;left:10px;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;border:1px solid transparent}
+.pill-hybrid{background:#EDFBF3;color:#15803D}
+.pill-elec{background:#EEF3FF;color:#1D4ED8}
+.pill-gas{background:#FEF0EB;color:#F04E00}
+.pill-diesel{background:#F5F5F3;color:#6F6F6B;border-color:#E8E8E5}
+.pill-other{background:#F5F5F3;color:#6F6F6B;border-color:#E8E8E5}
+
+/* card body */
+.card-body-v3{padding:14px 16px 12px}
+.card-make-v3{font-size:10px;font-weight:700;color:var(--v3-sub);text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+.card-name-v3{font-size:19px;font-weight:800;letter-spacing:-.5px;color:var(--v3-black);margin-bottom:14px;line-height:1.15}
+.card-bottom-v3{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.v3-plabel{font-size:10px;font-weight:600;color:var(--v3-sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.v3-price{font-size:30px;font-weight:900;letter-spacing:-1.2px;line-height:1;color:var(--v3-black)}
+.v3-price sub{font-size:12px;font-weight:400;color:var(--v3-sub);letter-spacing:0;vertical-align:baseline}
+.card-meta-v3{font-size:11px;color:var(--v3-sub);text-align:right;line-height:1.6;flex-shrink:0}
+.card-meta-v3 strong{color:var(--v3-text);font-weight:700;font-size:13px}
+
+/* card footer */
+.card-ftr{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:10px 16px!important;background:var(--v3-white)!important;border-top:1px solid var(--v3-border)!important}
+.gdots{display:flex;gap:3px;align-items:center}
+.gdot{width:22px;height:22px;border-radius:50%;font-size:7px;font-weight:900;color:#fff;display:flex;align-items:center;justify-content:center;border:2px solid var(--v3-white);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.card-link-v3{font-size:12px;font-weight:700;color:var(--v3-accent);letter-spacing:.1px}
+
+/* photo zone: taller */
+.card-img-zone{height:190px!important;min-height:190px!important}
+.card-img-zone img{height:160px!important;max-height:160px!important}
+
+/* 4-column grid on wide screens */
+@media(min-width:1200px){.models-grid{grid-template-columns:repeat(4,1fr)!important}}
 </style>
 </head>
 <body>
@@ -533,10 +627,8 @@ a.model-card{text-decoration:none;color:inherit}
 <!-- NAV -->
 <nav class="nav">
   <a href="/" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-    </div>
-    <span class="nav-logo-text">myrenting</span>
+    <div class="nav-logo-icon" style="font-size:16px;font-weight:900;letter-spacing:-1px;color:#fff;font-family:Inter,sans-serif">M</div>
+    <span class="nav-logo-text">My<span style="color:var(--o)">Renting</span></span>
   </a>
   <div class="nav-links">
     <a href="/" class="cur">Ofertas</a>
@@ -564,10 +656,6 @@ a.model-card{text-decoration:none;color:inherit}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">
-    <span class="hero-dot"></span>
-    Actualizado 28 jun 2026 &middot; Precios reales
-  </div>
   <h1 class="hero-h1">Compara el renting de<br><span class="hl">todos los coches</span></h1>
   <p class="hero-p">M&aacute;s de 1.040 ofertas reales de 6 gestoras &mdash; actualizadas, sin registro y con precios finales.</p>
 
@@ -609,40 +697,9 @@ a.model-card{text-decoration:none;color:inherit}
       <button class="stag" onclick="applyChip('Furgoneta')">Furgoneta</button>
     </div>
   </div>
-
-  <div class="stats-bar">
-    <div class="sbar-item">
-      <div class="sbar-val" id="stat-total">&mdash;</div>
-      <div class="sbar-lbl">Ofertas</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-val" id="stat-models">&mdash;</div>
-      <div class="sbar-lbl">Modelos</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-val orange" id="stat-min">&mdash;</div>
-      <div class="sbar-lbl">Desde / mes</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-val">6</div>
-      <div class="sbar-lbl">Gestoras</div>
-    </div>
-  </div>
 </section>
 
-<!-- TRUST -->
-<div class="trust-strip">
-  <span class="ti">✓ Sin entrada</span><span class="td">·</span>
-  <span class="ti">✓ Seguro a todo riesgo</span><span class="td">·</span>
-  <span class="ti">✓ Mantenimiento incluido</span><span class="td">·</span>
-  <span class="ti">✓ Asistencia 24h</span><span class="td">·</span>
-  <span class="ti">✓ Sin registro ni formularios</span>
-</div>
 
-<!-- GESTORAS -->
-<div class="gestoras-strip">
-  <span class="gst-lbl">Comparamos ofertas de</span>
-  <div class="gst-divider"></div>
   <span class="gst-name">Arval</span>
   <span class="gst-name">Ayvens</span>
   <span class="gst-name">Alphabet</span>
@@ -817,7 +874,7 @@ a.model-card{text-decoration:none;color:inherit}
     <div class="footer-logo-ico">
       <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
     </div>
-    <span class="footer-name">myrenting</span>
+    <span class="footer-name">My<span style="color:var(--o)">Renting</span></span>
   </div>
   <div class="footer-links">
     <a href="/aviso-legal.html">Aviso legal</a>
@@ -1076,43 +1133,77 @@ a.model-card{text-decoration:none;color:inherit}
 
   function showAllModels() { loadMore(); }
 
+  const GESTORA_DOT = {
+    'Arval':        {bg:'#C41E1E', lbl:'A'},
+    'Ayvens':       {bg:'#1E4DB7', lbl:'Ay'},
+    'Alphabet':     {bg:'#6D28D9', lbl:'Al'},
+    'Kinto':        {bg:'#15803D', lbl:'K'},
+    'Quadis':       {bg:'#B45309', lbl:'Q'},
+    'KIA Armotors': {bg:'#B91C1C', lbl:'KA'},
+    'Leasys':       {bg:'#0891B2', lbl:'L'},
+    'REVEL':        {bg:'#0F766E', lbl:'R'},
+  };
+
+  function fuelGrad(fuel) {
+    const f = (fuel||'').toLowerCase();
+    if (f.includes('el\u00e9c') || f.includes('elec')) return 'g-elec';
+    if (f.includes('h\u00edbrido') || f.includes('hibrido') || f.includes('plug')) return 'g-hybrid';
+    if (f.includes('di\u00e9sel') || f.includes('diesel')) return 'g-diesel';
+    return 'g-gas';
+  }
+  function fuelPill(fuel) {
+    const f = (fuel||'').toLowerCase();
+    if (f.includes('el\u00e9c') || f.includes('elec')) return ['pill-elec', 'El\u00e9ctrico'];
+    if (f.includes('h\u00edbrido') || f.includes('hibrido') || f.includes('plug')) return ['pill-hybrid', 'H\u00edbrido'];
+    if (f.includes('di\u00e9sel') || f.includes('diesel')) return ['pill-diesel', 'Di\u00e9sel'];
+    if (fuel) return ['pill-gas', fuel];
+    return ['', ''];
+  }
+
   function cardHtml(m, popular) {
     const s = slug(m.name);
     const firstOffer = m.offers[0];
-    const version = firstOffer ? firstOffer.version : '';
     const fuelType = [...m.fuels][0] || '';
-    const isE = fuelType.toLowerCase().includes('el\u00e9') || fuelType.toLowerCase().includes('elec');
-    const isH = fuelType.toLowerCase().includes('h\u00edbrido') || fuelType.toLowerCase().includes('hibrido');
-    const fuelIco = isE ? '\u26a1' : isH ? '\U0001f50b' : fuelType ? '\u26fd' : '';
+    const duracion = firstOffer ? firstOffer.duracion : 48;
     const isFav = favList.includes(m.name);
     const isComp = compareList.some(c => c.name === m.name);
-    const gestNames = [...m.fuentes].slice(0,3).join(' · ');
-    const badge = popular
-      ? '<span class="card-badge-pill pop">\u2b50 M\u00e1s popular</span>'
-      : '';
-    return '<a class="model-card' + (popular?' popular':'') + (isComp?' in-compare':'') + '" id="card-' + s + '" href="/' + s + '.html">' +
-      '<div class="card-hdr">' +
-        '<div class="card-info-left">' +
-          '<div class="card-model-name">' + m.name + '</div>' +
-          (version ? '<div class="card-version">' + version + '</div>' : '') +
-          (fuelType ? '<div class="card-fuel-row">' + fuelIco + ' ' + fuelType + '</div>' : '') +
-        '</div>' +
-        '<div class="card-price-blk">' +
-          '<span class="card-desde">Desde</span>' +
-          '<div class="card-eur">' + m.minPrice + '\u20ac</div>' +
-          '<span class="card-mes">mes \u00b7 IVA incl.</span>' +
+
+    const gClass = fuelGrad(fuelType);
+    const [pClass, pLabel] = fuelPill(fuelType);
+    const pillHtml = pLabel ? '<span class=\"card-fuel-pill ' + pClass + '\">' + pLabel + '</span>' : '';
+    const popBadge = popular ? '<span class=\"card-fuel-pill\" style=\"top:auto;bottom:10px;left:10px;background:#fff;color:#F04E00;border-color:#F04E00\">\u2b50 Popular</span>' : '';
+
+    const fuentes = [...m.fuentes].slice(0, 4);
+    const dotsHtml = fuentes.map(function(f) {
+      const d = GESTORA_DOT[f] || {bg:'#888', lbl:f.charAt(0)};
+      return '<div class=\"gdot\" style=\"background:' + d.bg + '\" title=\"' + f + '\">' + d.lbl + '</div>';
+    }).join('');
+
+    const nameParts = m.name.split(' ');
+    const make = nameParts[0];
+    const model = nameParts.slice(1).join(' ') || m.name;
+
+    return '<a class=\"model-card' + (popular?' popular':'') + (isComp?' in-compare':'') + '\" id=\"card-' + s + '\" href=\"/' + s + '.html\">' +
+      '<div class=\"card-hdr\"></div>' +
+      '<div class=\"card-img-zone ' + gClass + '\">' +
+        (m.image ? '<img src=\"' + m.image + '\" alt=\"' + m.name + '\" loading=\"lazy\" decoding=\"async\" onerror=\"this.style.display=\'none\'\">': '') +
+        pillHtml + popBadge +
+        '<button class=\"card-fav' + (isFav?' active':'') + '\" onclick=\"toggleFav(event,\'' + m.name + '\')\" title=\"Guardar\">' + (isFav?'\u2764\ufe0f':'\u2661') + '</button>' +
+      '</div>' +
+      '<div class=\"card-body-v3\">' +
+        '<div class=\"card-make-v3\">' + make + '</div>' +
+        '<div class=\"card-name-v3\">' + model + '</div>' +
+        '<div class=\"card-bottom-v3\">' +
+          '<div><div class=\"v3-plabel\">Desde</div><div class=\"v3-price\">' + m.minPrice + '<sub> \u20ac/mes</sub></div></div>' +
+          '<div class=\"card-meta-v3\"><strong>' + m.fuentes.size + '</strong> gestora' + (m.fuentes.size!==1?'s':'') + '<br>' + duracion + ' meses</div>' +
         '</div>' +
       '</div>' +
-      '<div class="card-img-zone">' +
-        (m.image ? '<img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '<div class="card-img-placeholder">\U0001f697</div>') +
-        '<button class="card-fav' + (isFav?' active':'') + '" onclick="toggleFav(event,\'' + m.name + '\')" title="Guardar">' + (isFav?'\u2764\ufe0f':'\u2661') + '</button>' +
-      '</div>' +
-      '<div class="card-ftr">' +
-        (badge ? badge + '<span class="card-offer-cnt">' + m.offerCount + ' oferta' + (m.offerCount!==1?'s':'') + '</span>' : '<span class="card-gestoras">' + gestNames + '</span><span class="card-offer-cnt">' + m.offerCount + ' oferta' + (m.offerCount!==1?'s':'') + '</span>') +
+      '<div class=\"card-ftr\">' +
+        '<div class=\"gdots\">' + dotsHtml + '</div>' +
+        '<span class=\"card-link-v3\">Ver \u2192</span>' +
       '</div>' +
     '</a>';
   }
-
   /* FAV */
   function toggleFav(e, name) {
     e.stopPropagation(); e.preventDefault();

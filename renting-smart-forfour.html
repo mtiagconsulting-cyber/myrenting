@@ -22,7 +22,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --accent:#e8380d;--accent-dk:#c42e0a;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --accent:#F04E00;--accent-dk:#d94000;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
       --ink:#111;--ink-2:#444;--ink-3:#666;--ink-4:#999;--ink-5:#bbb;
       --border:#ebebeb;--border-2:#e0e0e0;
       --surface:#fff;--surface-2:#f7f7f5;--surface-3:#fafafa;
@@ -590,7 +590,7 @@
 <!-- MODAL LEAD FORM -->
 <div id="lead-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;padding:16px;" onclick="cerrarLead(event)">
   <div style="background:white;border-radius:16px;max-width:480px;width:100%;overflow:hidden;position:relative;" onclick="event.stopPropagation()">
-    <div style="background:#e8380d;padding:22px 28px;">
+    <div style="background:#F04E00;padding:22px 28px;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
         <div style="width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:Arial Black,sans-serif;font-weight:900;color:white;font-size:14px;">M</div>
         <span style="color:white;font-size:13px;font-weight:600;">Myrenting</span>
@@ -601,30 +601,30 @@
     </div>
     <div style="background:#fff5f2;border-bottom:1px solid #ffd5cc;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;">
       <div>
-        <div style="font-size:9px;font-weight:700;color:#e8380d;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;">Oferta seleccionada</div>
+        <div style="font-size:9px;font-weight:700;color:#F04E00;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;">Oferta seleccionada</div>
         <div style="font-size:13px;font-weight:800;color:#111;" id="lead-car">—</div>
         <div style="font-size:11px;color:#999;" id="lead-details">—</div>
       </div>
       <div style="text-align:right;">
-        <div style="font-size:20px;font-weight:800;color:#e8380d;letter-spacing:-1px;" id="lead-price">—</div>
+        <div style="font-size:20px;font-weight:800;color:#F04E00;letter-spacing:-1px;" id="lead-price">—</div>
         <div style="font-size:10px;color:#bbb;">/mes</div>
       </div>
     </div>
     <div style="padding:20px 28px;">
       <div id="lead-form-wrap">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
-          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Nombre</label><input type="text" id="lf-nombre" placeholder="Tu nombre" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
-          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Apellido</label><input type="text" id="lf-apellido" placeholder="Tu apellido" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
+          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Nombre</label><input type="text" id="lf-nombre" placeholder="Tu nombre" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#F04E00'" onblur="this.style.borderColor='#ebebeb'"></div>
+          <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Apellido</label><input type="text" id="lf-apellido" placeholder="Tu apellido" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#F04E00'" onblur="this.style.borderColor='#ebebeb'"></div>
         </div>
-        <div style="margin-bottom:10px;"><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Telefono</label><input type="tel" id="lf-telefono" placeholder="+34 6XX XXX XXX" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
-        <div style="margin-bottom:10px;"><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Email</label><input type="email" id="lf-email" placeholder="tu@email.com" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#e8380d'" onblur="this.style.borderColor='#ebebeb'"></div>
+        <div style="margin-bottom:10px;"><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Telefono</label><input type="tel" id="lf-telefono" placeholder="+34 6XX XXX XXX" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#F04E00'" onblur="this.style.borderColor='#ebebeb'"></div>
+        <div style="margin-bottom:10px;"><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Email</label><input type="email" id="lf-email" placeholder="tu@email.com" required style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;" onfocus="this.style.borderColor='#F04E00'" onblur="this.style.borderColor='#ebebeb'"></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
           <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Perfil</label><select id="lf-perfil" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;background:white;"><option value="particular">Particular</option><option value="autonomo">Autonomo</option><option value="empresa">Empresa</option></select></div>
           <div><label style="font-size:10px;font-weight:700;color:#999;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px;">Km anuales</label><select id="lf-km" style="width:100%;padding:9px 11px;border:1.5px solid #ebebeb;border-radius:7px;font-size:13px;font-family:inherit;outline:none;background:white;"><option value="10000">10.000 km</option><option value="15000">15.000 km</option><option value="20000">20.000 km</option><option value="25000">25.000+ km</option></select></div>
         </div>
         <div style="margin-bottom:14px;">
           <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:#444;cursor:pointer;">
-            <input type="checkbox" id="lf-whatsapp" style="width:16px;height:16px;accent-color:#e8380d;cursor:pointer;">
+            <input type="checkbox" id="lf-whatsapp" style="width:16px;height:16px;accent-color:#F04E00;cursor:pointer;">
             Prefiero que me contacten por WhatsApp
           </label>
         </div>
@@ -633,8 +633,8 @@
           <span style="font-size:11px;color:#666;">✓ Respuesta en 24h</span>
           <span style="font-size:11px;color:#666;">✓ 100% gratis</span>
         </div>
-        <button onclick="enviarLead()" style="width:100%;background:#e8380d;color:white;border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;" onmouseover="this.style.background='#c42e0a'" onmouseout="this.style.background='#e8380d'">Quiero esta oferta →</button>
-        <p style="font-size:10px;color:#ccc;text-align:center;margin:10px 0 0;line-height:1.5;">Al enviar aceptas nuestra <a href="/politica-privacidad.html" style="color:#e8380d;">politica de privacidad</a>.</p>
+        <button onclick="enviarLead()" style="width:100%;background:#F04E00;color:white;border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;" onmouseover="this.style.background='#d94000'" onmouseout="this.style.background='#F04E00'">Quiero esta oferta →</button>
+        <p style="font-size:10px;color:#ccc;text-align:center;margin:10px 0 0;line-height:1.5;">Al enviar aceptas nuestra <a href="/politica-privacidad.html" style="color:#F04E00;">politica de privacidad</a>.</p>
       </div>
       <div id="lead-success" style="display:none;text-align:center;padding:20px 0;">
         <div style="width:56px;height:56px;background:#e8f5ee;border-radius:50%;font-size:24px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">✓</div>
@@ -782,8 +782,8 @@
         <a href="${m.url}" style="background:#fff;border:1px solid #ebebeb;border-radius:12px;padding:16px;display:block;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'">
           <div style="font-size:9px;color:#bbb;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Renting</div>
           <div style="font-size:14px;font-weight:800;color:#111;margin-bottom:8px;">${m.name}</div>
-          <div style="font-size:18px;font-weight:800;color:#e8380d;letter-spacing:-.5px;">${m.price}</div>
-          <div style="margin-top:10px;background:#e8380d;color:#fff;text-align:center;padding:7px;border-radius:6px;font-size:11px;font-weight:700;">Ver ofertas</div>
+          <div style="font-size:18px;font-weight:800;color:#F04E00;letter-spacing:-.5px;">${m.price}</div>
+          <div style="margin-top:10px;background:#F04E00;color:#fff;text-align:center;padding:7px;border-radius:6px;font-size:11px;font-weight:700;">Ver ofertas</div>
         </a>
       `);
     });
