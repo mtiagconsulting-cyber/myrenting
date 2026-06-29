@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myrenting.es/sitemap.xml
