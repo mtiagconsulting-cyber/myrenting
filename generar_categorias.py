@@ -198,7 +198,7 @@ def gen_renting_barato(modelos_data):
       </ul>
     </div>"""
     return page_shell(
-        title=f"Renting barato desde {pm}€/mes — Coches por menos de 300€ | MiRenting",
+        title=f"Renting barato desde {pm}€/mes — Coches por menos de 300€ | Myrenting",
         desc=f"Los {len(baratos)} coches más baratos en renting en España. Cuotas desde {pm}€/mes con seguro y mantenimiento incluidos. Compara sin registrarte.",
         canonical="renting-barato.html",
         pill="Renting Barato",
@@ -232,7 +232,7 @@ def gen_renting_suv(modelos_data):
       <p>Modelos como el Hyundai Tucson PHEV, el Kia Sportage Híbrido o el Volkswagen ID.4 eléctrico tienen <strong>etiqueta ECO o CERO</strong>, lo que permite circular sin restricciones por las Zonas de Bajas Emisiones de Madrid y Barcelona.</p>
     </div>"""
     return page_shell(
-        title=f"Renting SUV desde {pm}€/mes — Comparativa 2026 | MiRenting",
+        title=f"Renting SUV desde {pm}€/mes — Comparativa 2026 | Myrenting",
         desc=f"Compara {len(suvs)} SUV disponibles en renting en España. Desde {pm}€/mes con seguro y mantenimiento. Filtra por precio, gestora y etiqueta DGT.",
         canonical="renting-suv.html",
         pill="Renting SUV",
@@ -265,7 +265,7 @@ def gen_renting_electrico(modelos_data):
       <p>Si haces más de 40 km diarios y tienes punto de carga en casa o en el trabajo, el <strong>eléctrico puro (etiqueta CERO)</strong> tiene menor coste por kilómetro. Si tu uso es mixto urbano/interurbano sin punto de carga garantizado, el <strong>híbrido enchufable (etiqueta ECO)</strong> es más flexible.</p>
     </div>"""
     return page_shell(
-        title=f"Renting Eléctrico e Híbrido — Etiqueta ECO y CERO desde {pm}€/mes | MiRenting",
+        title=f"Renting Eléctrico e Híbrido — Etiqueta ECO y CERO desde {pm}€/mes | Myrenting",
         desc=f"Compara {len(electricos)} coches eléctricos e híbridos en renting. Etiqueta ECO y CERO, desde {pm}€/mes. Sin entrada, seguro incluido.",
         canonical="renting-electrico.html",
         pill="Renting Eléctrico",
@@ -296,7 +296,7 @@ def gen_renting_sin_entrada(modelos_data):
     content += stats_bar(len(todos), pm, 3)
     content += f'<div class="offers-grid">{cards}</div>'
     return page_shell(
-        title=f"Renting Sin Entrada — Todos los coches desde {pm}€/mes | MiRenting",
+        title=f"Renting Sin Entrada — Todos los coches desde {pm}€/mes | Myrenting",
         desc=f"El renting no requiere entrada. Empieza a conducir desde {pm}€/mes sin pago inicial. Más de 900 ofertas sin formularios ni registros.",
         canonical="renting-sin-entrada.html",
         pill="Sin Entrada",
@@ -349,7 +349,7 @@ def gen_arval_vs_ayvens(modelos_data):
     </div>"""
 
     return page_shell(
-        title="Arval vs Ayvens: ¿cuál es más barata? Comparativa precio a precio | MiRenting",
+        title="Arval vs Ayvens: ¿cuál es más barata? Comparativa precio a precio | Myrenting",
         desc=f"Comparamos Arval y Ayvens modelo a modelo. Descubre qué gestora tiene el renting más barato para tu coche. {len(comunes)} modelos analizados.",
         canonical="renting-arval-vs-ayvens.html",
         pill="Comparativa Gestoras",
