@@ -1,0 +1,335 @@
+#!/usr/bin/env python3
+"""
+generar_marcas.py
+Genera páginas hub por marca (renting-toyota.html, renting-bmw.html, etc.)
+con diseño v3, precios actualizados desde ofertas-db.json.
+"""
+import json, re, unicodedata
+from pathlib import Path
+from datetime import datetime
+
+BASE = Path(__file__).parent
+HOY  = datetime.now().strftime("%Y-%m-%d")
+AÑO  = datetime.now().year
+IMG_DIR = BASE / "img" / "modelos"
+
+
+def slugify(text: str) -> str:
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    text = text.lower().strip()
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
+
+
+_LOCAL_IMAGES: dict = {}
+if IMG_DIR.exists():
+    for _p in IMG_DIR.glob('*.png'):
+        _LOCAL_IMAGES[_p.stem] = f'/img/modelos/{_p.name}'
+
+
+def local_image(make: str, model: str) -> str:
+    sl = slugify(f'{make} {model}')
+    if sl in _LOCAL_IMAGES:
+        return _LOCAL_IMAGES[sl]
+    for key, path in _LOCAL_IMAGES.items():
+        if key.startswith(sl + '-') or key.startswith(slugify(make) + '-' + slugify(model)):
+            return path
+    return ''
+
+
+GTM = """<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NHXGQF97');</script>"""
+
+CSS = """
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --accent:#F04E00;--accent-dk:#d94000;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --ink:#111110;--ink-2:#333;--ink-3:#5a5a56;--ink-4:#8a8a84;--ink-5:#b0b0aa;
+      --border:#E8E8E5;--surface:#fff;--surface-2:#F7F7F5;--surface-3:#f0f0ee;
+      --green:#00c47a;--green-lt:#e6faf3;--green-dk:#00875a;
+      --radius:12px;--radius-sm:8px;
+      --shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.06);
+      --shadow-hover:0 4px 12px rgba(0,0,0,.09),0 16px 40px rgba(0,0,0,.10);
+    }
+    body{font-family:'Inter',sans-serif;background:var(--surface-2);color:var(--ink);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    nav{background:#fff;border-bottom:1.5px solid var(--border);position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;padding:0 28px;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800}
+    .nav-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
+    .nav-back{font-size:12px;color:var(--ink-4);font-weight:500;transition:color .15s}
+    .nav-back:hover{color:var(--ink)}
+    .hero{background:#fff;border-bottom:1.5px solid var(--border);padding:44px 40px 36px}
+    .hero-inner{max-width:1280px;margin:0 auto}
+    .breadcrumb{font-size:11px;color:var(--ink-4);margin-bottom:14px;display:flex;gap:6px;align-items:center}
+    .breadcrumb a{color:var(--ink-4)}
+    .breadcrumb a:hover{color:var(--ink)}
+    .hero-pill{display:inline-flex;align-items:center;background:var(--accent-lt);border:1px solid var(--accent-border);border-radius:99px;padding:3px 10px;font-size:10px;font-weight:700;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:.4px}
+    .hero h1{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:8px}
+    .hero h1 em{font-style:normal;color:var(--accent)}
+    .hero-sub{color:var(--ink-4);font-size:13px;margin-bottom:20px}
+    .hero-stats{display:flex;gap:28px;align-items:center}
+    .hstat-val{font-size:20px;font-weight:800;color:var(--ink)}
+    .hstat-val.acc{color:var(--accent)}
+    .hstat-label{font-size:9px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+    .hdiv{width:1px;height:36px;background:var(--border)}
+    .main{max-width:1280px;margin:0 auto;padding:32px 40px}
+    .section-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-5);margin-bottom:8px}
+    .section-title{font-size:17px;font-weight:800;letter-spacing:-.4px;margin-bottom:4px}
+    .section-sub{font-size:12px;color:var(--ink-4);margin-bottom:20px}
+    .models-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px}
+    .model-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:box-shadow .2s,transform .2s;display:block}
+    .model-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:var(--accent)}
+    .model-img{height:140px;display:flex;align-items:center;justify-content:center;padding:12px;background:linear-gradient(145deg,#F7F7F5,#EFF0EE)}
+    .model-img img{max-height:100%;max-width:100%;object-fit:contain}
+    .model-body{padding:12px 14px 14px}
+    .model-make{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-4);margin-bottom:3px}
+    .model-name{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.2px}
+    .model-price{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:-.8px;margin-bottom:10px}
+    .model-price span{font-size:11px;font-weight:400;color:var(--ink-4)}
+    .model-btn{display:block;background:var(--ink);color:#fff;text-align:center;padding:8px;border-radius:6px;font-size:11px;font-weight:700;transition:background .15s}
+    .model-btn:hover{background:var(--accent)}
+    .seo-panel{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:28px}
+    .seo-panel h2{font-size:15px;font-weight:800;margin-bottom:10px;margin-top:20px;color:var(--ink);letter-spacing:-.3px}
+    .seo-panel h2:first-child{margin-top:0}
+    .seo-panel p{color:var(--ink-3);font-size:13px;line-height:1.75;margin-bottom:10px}
+    .gestoras-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+    .gestora-chip{background:var(--surface);border:1.5px solid var(--border);border-radius:99px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--ink-3);transition:.15s}
+    .gestora-chip:hover{border-color:var(--accent);color:var(--accent)}
+    .cta-banner{background:#111110;border-radius:var(--radius);padding:32px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .cta-banner h2{font-size:16px;font-weight:800;color:#fff;margin-bottom:4px}
+    .cta-banner p{font-size:12px;color:rgba(255,255,255,.45)}
+    .btn-cta{background:var(--accent);color:#fff;padding:12px 24px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;transition:background .15s;white-space:nowrap}
+    .btn-cta:hover{background:var(--accent-dk)}
+    footer{background:#111110;color:#555;padding:20px 28px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    footer a{color:#555;transition:color .15s}
+    footer a:hover{color:#888}
+    @media(max-width:1100px){.models-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:768px){
+      .hero{padding:28px 20px 22px}
+      .main{padding:24px 16px}
+      .models-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-stats{gap:16px}
+    }
+    @media(max-width:480px){.models-grid{grid-template-columns:1fr}}
+"""
+
+
+def generar_pagina_marca(make: str, modelos: list) -> tuple[str, str]:
+    """Retorna (slug, html) para una página de marca."""
+    make_title = make.title()
+    slug_make   = slugify(make)
+    slug_name   = f"renting-{slug_make}"
+
+    precio_min  = min(m['precio_min'] for m in modelos)
+    n_modelos   = len(modelos)
+    gestoras    = sorted({g for m in modelos for g in m['gestoras']})
+    n_gestoras  = len(gestoras)
+
+    title = f"Renting {make_title} {AÑO} — Desde {precio_min}€/mes Sin Entrada | Myrenting"
+    description = (
+        f"Compara todas las ofertas de renting {make_title} en España. "
+        f"Desde {precio_min}€/mes sin entrada con seguro, mantenimiento e ITV incluidos. "
+        f"{', '.join(gestoras[:3])}."
+    )
+
+    gestoras_chips = ''.join(
+        f'<span class="gestora-chip">{g}</span>' for g in gestoras
+    )
+
+    cards = ''
+    for m in modelos:
+        img = local_image(make, m['model'])
+        img_html = (
+            f'<img src="{img}" alt="Renting {make_title} {m["model"].title()}" loading="lazy">'
+            if img else ''
+        )
+        cards += f'''
+        <a href="/{m["slug"]}.html" class="model-card">
+          <div class="model-img">{img_html}</div>
+          <div class="model-body">
+            <div class="model-make">{make_title}</div>
+            <div class="model-name">{m["model"].title()}</div>
+            <div class="model-price">{m["precio_min"]}€<span>/mes</span></div>
+            <div class="model-btn">Ver ofertas →</div>
+          </div>
+        </a>'''
+
+    schema_list = json.dumps({
+        "@context": "https://schema.org", "@type": "ItemList",
+        "name": f"Renting {make_title}",
+        "url": f"https://myrenting.es/{slug_name}.html",
+        "numberOfItems": n_modelos,
+    }, ensure_ascii=False)
+    schema_bc = json.dumps({
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Myrenting", "item": "https://myrenting.es/"},
+            {"@type": "ListItem", "position": 2, "name": f"Renting {make_title}", "item": f"https://myrenting.es/{slug_name}.html"},
+        ]
+    }, ensure_ascii=False)
+
+    html = f'''<!DOCTYPE html>
+<html lang="es">
+<head>
+  {GTM}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://myrenting.es/{slug_name}.html">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:url" content="https://myrenting.es/{slug_name}.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{schema_list}</script>
+  <script type="application/ld+json">{schema_bc}</script>
+  <style>{CSS}</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<nav>
+  <a href="/" class="nav-brand">
+    <div class="nav-logo">M</div>
+    <span>My<span style="color:var(--accent)">Renting</span></span>
+  </a>
+  <a href="/" class="nav-back">&#8592; Todas las ofertas</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Myrenting</a><span style="opacity:.4">›</span>
+      <span>Renting {make_title}</span>
+    </div>
+    <div class="hero-pill">Renting {make_title} en España</div>
+    <h1>Renting <em>{make_title}</em> — Compara todas las ofertas</h1>
+    <p class="hero-sub">Precios reales de {', '.join(gestoras[:3])}. Sin registrarte, sin letra pequeña.</p>
+    <div class="hero-stats">
+      <div>
+        <div class="hstat-val acc">{precio_min}€</div>
+        <div class="hstat-label">desde /mes</div>
+      </div>
+      <div class="hdiv"></div>
+      <div>
+        <div class="hstat-val">{n_modelos}</div>
+        <div class="hstat-label">modelos</div>
+      </div>
+      <div class="hdiv"></div>
+      <div>
+        <div class="hstat-val">{n_gestoras}</div>
+        <div class="hstat-label">gestoras</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="section-label">Modelos disponibles</div>
+  <div class="section-title">Modelos {make_title} en renting</div>
+  <div class="section-sub">Ordenados por precio · Actualizado {HOY}</div>
+  <div class="models-grid">{cards}</div>
+
+  <div class="section-label" style="margin-bottom:10px">Gestoras disponibles</div>
+  <div class="gestoras-row">{gestoras_chips}</div>
+
+  <div class="seo-panel">
+    <h2>Renting {make_title} en España — ¿cuánto cuesta?</h2>
+    <p>El <strong>renting {make_title}</strong> parte desde <strong>{precio_min}€/mes</strong>
+    en las {n_modelos} ofertas disponibles en Myrenting. Compara precios de {', '.join(gestoras[:3])}
+    y elige la mejor opción sin necesidad de registrarte.</p>
+
+    <h2>¿Qué incluye el renting de un {make_title}?</h2>
+    <p>Todas las ofertas de renting {make_title} incluyen <strong>seguro a todo riesgo</strong>,
+    mantenimiento preventivo y correctivo en red oficial, asistencia en carretera 24 horas
+    y gestión de ITV y multas. La cuota mensual es fija durante todo el contrato.</p>
+
+    <h2>¿Por qué elegir el renting frente a comprar un {make_title}?</h2>
+    <p>Con el renting no hay desembolso inicial, el coche siempre está en garantía y tú solo
+    pagas una cuota fija mensual. Al terminar el contrato lo devuelves y cambias a un modelo
+    nuevo sin trámites. Para autónomos y empresas, además, el IVA es deducible al 100%
+    y el IRPF hasta un 50%.</p>
+  </div>
+
+  <div class="cta-banner">
+    <div>
+      <h2>¿No encuentras el {make_title} que buscas?</h2>
+      <p>Explora todas las marcas y modelos disponibles en renting ahora mismo</p>
+    </div>
+    <a href="/" class="btn-cta">Ver todas las ofertas →</a>
+  </div>
+</div>
+
+<footer>
+  <span>&#169; {AÑO} Myrenting · <a href="/">Comparador de renting de coches en España</a></span>
+  <span><a href="/aviso-legal.html">Aviso Legal</a> · <a href="/politica-privacidad.html">Privacidad</a> · <a href="/politica-cookies.html">Cookies</a></span>
+</footer>
+</body>
+</html>'''
+
+    return slug_name, html
+
+
+def aplanar(o: dict) -> dict:
+    precios = o.get('precios') or []
+    return {
+        'fuente':       o.get('fuente', ''),
+        'make':         str(o.get('make', '')).strip().upper(),
+        'model':        str(o.get('model', '')).strip().upper(),
+        'precio_desde': o.get('precio_desde', 0),
+    }
+
+
+def main():
+    db_path = BASE / 'ofertas-db.json'
+    if db_path.exists():
+        with open(db_path, encoding='utf-8') as f:
+            raw = json.load(f)
+        ofertas = [aplanar(o) for o in raw if o.get('make') and o.get('precio_desde', 0) > 0]
+    else:
+        html_txt = (BASE / 'index.html').read_text(encoding='utf-8')
+        start = html_txt.find('const _OFERTAS = [') + len('const _OFERTAS = ')
+        end   = html_txt.find('];', start) + 1
+        ofertas = json.loads(html_txt[start:end])
+
+    print(f'Ofertas leídas: {len(ofertas)}')
+
+    # Agrupar por make → model
+    marcas: dict[str, dict] = {}
+    for o in ofertas:
+        make  = o['make']
+        model = o['model']
+        if not make or not model: continue
+        if make not in marcas:
+            marcas[make] = {}
+        if model not in marcas[make]:
+            marcas[make][model] = {'precio_min': 9999, 'gestoras': set()}
+        marcas[make][model]['precio_min'] = min(marcas[make][model]['precio_min'], o['precio_desde'])
+        if o.get('fuente'):
+            marcas[make][model]['gestoras'].add(o['fuente'])
+
+    generadas = []
+    for make, models_dict in sorted(marcas.items()):
+        modelos_list = []
+        for model, data in sorted(models_dict.items(), key=lambda x: x[1]['precio_min']):
+            slug_m = f"renting-{slugify(make)}-{slugify(model)}"
+            modelos_list.append({
+                'model':     model,
+                'precio_min': int(data['precio_min']),
+                'gestoras':  data['gestoras'],
+                'slug':      slug_m,
+            })
+        slug_name, html = generar_pagina_marca(make, modelos_list)
+        path = BASE / f'{slug_name}.html'
+        path.write_text(html, encoding='utf-8')
+        generadas.append((make, slug_name, len(modelos_list)))
+
+    print(f'\n✓ {len(generadas)} páginas de marca generadas')
+    for make, slug, n in sorted(generadas, key=lambda x: -x[2])[:10]:
+        print(f'  {slug}.html  ({n} modelos)')
+
+
+if __name__ == '__main__':
+    main()
