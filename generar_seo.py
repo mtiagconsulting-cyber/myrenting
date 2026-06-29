@@ -720,9 +720,9 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     .faq-a p{{color:var(--ink-3);padding-bottom:14px;line-height:1.7;font-size:13px}}
 
     /* CTA BANNER */
-    .cta-banner{{background:#111;border-radius:var(--radius);padding:36px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}}
-    .cta-banner-text h2{{font-size:18px;font-weight:800;color:#fff;margin-bottom:6px}}
-    .cta-banner-text p{{font-size:13px;color:rgba(255,255,255,.5)}}
+    .cta-banner{{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:36px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}}
+    .cta-banner-text h2{{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:6px}}
+    .cta-banner-text p{{font-size:13px;color:var(--ink-3)}}
     .btn-cta-primary{{background:var(--accent);color:#fff;padding:13px 28px;border-radius:var(--radius-sm);font-size:14px;font-weight:700;transition:background .15s;white-space:nowrap}}
     .btn-cta-primary:hover{{background:var(--accent-dk)}}
 
@@ -734,9 +734,9 @@ def generar_pagina(make, model, ofertas_modelo, todos_modelos, specs=None):
     .rel-chip:hover{{border-color:var(--accent);color:var(--accent);background:var(--accent-lt)}}
 
     /* FOOTER */
-    footer{{background:#111;color:#555;padding:20px 28px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}}
-    footer a{{color:#555;transition:color .15s}}
-    footer a:hover{{color:#888}}
+    footer{{background:var(--surface-2);border-top:1px solid var(--border);color:var(--ink-4);padding:20px 28px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}}
+    footer a{{color:var(--ink-4);transition:color .15s}}
+    footer a:hover{{color:var(--ink)}}
 
     /* STICKY CTA (solo móvil) */
     .sticky-cta{{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--accent);padding:12px 20px;z-index:300;text-align:center}}
