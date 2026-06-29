@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparador de Renting de Coches 2026 | Myrenting</title>
+<meta name="description" content="Compara todas las ofertas de renting de coches en España. Filtra por marca, cuota, kilómetros y gestora. Precios reales sin letra pequeña.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://myrenting.es/comparador.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --o:#FF5C00;--o-dk:#E54E00;--o-lt:#FFF4EE;--o-mid:#FFD4BD;
+  --ink:#111;--ink-2:#3D3D3D;--ink-3:#666;--ink-4:#999;--ink-5:#C8C8C8;
+  --white:#fff;--bg:#F7F7F7;--border:#EBEBEB;--border-2:#DEDEDE;
+  --green:#00A86B;--green-lt:#E6F7F0;
+  --r:12px;--r-sm:8px;--r-xs:5px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+
+/* NAV */
+.nav{height:60px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 32px;gap:32px;position:sticky;top:0;z-index:200}
+.nav-brand{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-icon{width:32px;height:32px;background:var(--o);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.nav-icon svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.nav-name{font-size:18px;font-weight:800;letter-spacing:-.5px}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-3);padding:6px 11px;border-radius:7px;transition:.15s}
+.nav-links a:hover{color:var(--ink);background:var(--bg)}
+.nav-links a.active{color:var(--o);font-weight:700;background:var(--o-lt)}
+.nav-cta{font-size:13px;font-weight:700;color:var(--white);padding:8px 20px;border-radius:var(--r-sm);background:var(--o);border:none;transition:background .15s;flex-shrink:0}
+.nav-cta:hover{background:var(--o-dk)}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:10px 32px;font-size:11px;color:var(--ink-4);display:flex;align-items:center;gap:6px}
+.breadcrumb a{color:var(--ink-4)}
+.breadcrumb a:hover{color:var(--o)}
+.breadcrumb .sep{color:var(--ink-5);font-size:9px}
+.breadcrumb .cur{color:var(--ink-2);font-weight:500}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:280px 1fr;min-height:calc(100vh - 60px);align-items:start}
+
+/* SIDEBAR */
+.sidebar{background:var(--white);border-right:1px solid var(--border);padding:20px;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:4px}
+.sb-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sb-title{font-size:14px;font-weight:800;color:var(--ink)}
+.sb-clear{font-size:11px;font-weight:600;color:var(--o);background:none;border:none;padding:0}
+.sb-clear:hover{text-decoration:underline}
+
+.filter-group{margin-bottom:20px}
+.fg-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--ink-4);margin-bottom:10px;display:block}
+.fg-search{width:100%;border:1.5px solid var(--border);background:var(--bg);font-size:13px;font-weight:500;color:var(--ink);padding:9px 12px;border-radius:var(--r-sm);outline:none;font-family:inherit;transition:.15s}
+.fg-search:focus{border-color:var(--o);background:var(--white)}
+
+.checkbox-list{display:flex;flex-direction:column;gap:6px}
+.cb-item{display:flex;align-items:center;gap:9px;cursor:pointer;padding:5px 8px;border-radius:6px;transition:background .15s}
+.cb-item:hover{background:var(--bg)}
+.cb-item input{width:16px;height:16px;accent-color:var(--o);cursor:pointer;flex-shrink:0}
+.cb-label{font-size:13px;font-weight:500;color:var(--ink-2);flex:1}
+.cb-count{font-size:11px;color:var(--ink-5);font-weight:400}
+.show-more{font-size:11px;font-weight:600;color:var(--o);background:none;border:none;padding:5px 8px;margin-top:4px;cursor:pointer}
+.show-more:hover{text-decoration:underline}
+
+.range-block{display:flex;flex-direction:column;gap:8px}
+.range-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.range-input{border:1.5px solid var(--border);background:var(--white);font-size:13px;font-weight:600;color:var(--ink);padding:9px 10px;border-radius:var(--r-sm);outline:none;font-family:inherit;width:100%;transition:.15s}
+.range-input:focus{border-color:var(--o)}
+.range-slider{-webkit-appearance:none;width:100%;height:4px;border-radius:2px;background:linear-gradient(to right,var(--o) 40%,var(--border-2) 40%);outline:none}
+.range-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--o);cursor:pointer;border:3px solid var(--white);box-shadow:0 1px 4px rgba(255,92,0,.4)}
+
+.fg-divider{height:1px;background:var(--border);margin-bottom:20px}
+
+.tag-pills{display:flex;flex-wrap:wrap;gap:6px}
+.tag-pill{font-size:11px;font-weight:600;padding:5px 12px;border:1.5px solid var(--border);border-radius:99px;color:var(--ink-3);background:var(--white);cursor:pointer;transition:.15s}
+.tag-pill:hover,.tag-pill.on{background:var(--o-lt);border-color:var(--o-mid);color:var(--o)}
+
+.apply-btn{width:100%;background:var(--o);color:var(--white);border:none;font-size:14px;font-weight:700;padding:13px;border-radius:var(--r-sm);margin-top:8px;transition:background .15s;letter-spacing:-.2px}
+.apply-btn:hover{background:var(--o-dk)}
+
+/* MAIN CONTENT */
+.main-area{padding:24px 32px}
+
+/* RESULTS HEADER */
+.results-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:16px}
+.results-count{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.results-count span{color:var(--o)}
+.results-sub{font-size:13px;color:var(--ink-4);margin-top:2px;font-weight:400}
+.sort-row{display:flex;align-items:center;gap:8px}
+.sort-label{font-size:12px;color:var(--ink-4);white-space:nowrap}
+.sort-select{border:1.5px solid var(--border);background:var(--white);font-size:13px;font-weight:600;color:var(--ink-2);padding:8px 32px 8px 12px;border-radius:var(--r-sm);outline:none;font-family:inherit;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;cursor:pointer;transition:.15s}
+.sort-select:focus{border-color:var(--o)}
+
+/* ACTIVE FILTERS */
+.active-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.af-label{font-size:11px;font-weight:700;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px}
+.af-tag{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--o);background:var(--o-lt);border:1.5px solid var(--o-mid);padding:5px 10px;border-radius:99px}
+.af-tag button{background:none;border:none;color:var(--o);font-size:14px;line-height:1;padding:0;cursor:pointer;margin-top:-1px}
+.af-clear-all{font-size:12px;font-weight:600;color:var(--ink-4);background:none;border:none;cursor:pointer;text-decoration:underline;white-space:nowrap}
+.af-clear-all:hover{color:var(--ink)}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+/* CARD */
+.card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s;position:relative}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(255,92,0,.18)}
+.card-badge{position:absolute;top:12px;left:12px;z-index:2;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:99px}
+.badge-popular{background:#fff;color:var(--o)}
+.badge-nuevo{background:var(--green);color:#fff}
+.badge-oferta{background:#FBBF24;color:#78350F}
+.card-head{background:var(--o);padding:18px 16px 14px;position:relative}
+.card-head-gradient{background:linear-gradient(135deg,var(--o) 0%,var(--o-dk) 100%);padding:18px 16px 14px;position:relative}
+.ch-left{flex:1;min-width:0}
+.ch-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.car-brand{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.7);margin-bottom:2px}
+.car-name{font-size:17px;font-weight:900;color:#fff;letter-spacing:-.4px;line-height:1.15;margin-bottom:2px}
+.car-version{font-size:10px;color:rgba(255,255,255,.65);line-height:1.4;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.car-tags{display:flex;gap:4px;flex-wrap:wrap}
+.ctag{font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px;background:rgba(255,255,255,.18);color:rgba(255,255,255,.9)}
+.price-blk{text-align:right;flex-shrink:0}
+.price-desde{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.65);display:block;margin-bottom:1px}
+.price-amt{font-size:30px;font-weight:900;color:#fff;letter-spacing:-1.5px;line-height:1}
+.price-mes{font-size:9px;color:rgba(255,255,255,.65);display:block;margin-top:2px}
+
+.card-img{background:#f9f9f9;height:140px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.car-placeholder{display:flex;flex-direction:column;align-items:center;gap:8px}
+.car-silhouette{width:100px;height:50px;background:var(--border-2);border-radius:8px;position:relative;opacity:.4}
+.car-silhouette::before{content:'';position:absolute;top:-12px;left:20%;width:60%;height:16px;background:var(--border-2);border-radius:4px 4px 0 0}
+.car-silhouette::after{content:'';position:absolute;bottom:-6px;left:10%;width:20%;height:12px;background:var(--border-2);border-radius:50%;box-shadow:50px 0 0 var(--border-2)}
+.img-gest{position:absolute;bottom:8px;right:8px;font-size:9px;font-weight:700;padding:3px 8px;background:var(--white);border:1px solid var(--border);border-radius:5px;color:var(--ink-4)}
+
+.card-body{padding:14px 16px}
+.card-specs{display:flex;gap:0;margin-bottom:12px;background:var(--bg);border-radius:var(--r-sm);overflow:hidden}
+.cs-item{flex:1;padding:8px 6px;text-align:center;border-right:1px solid var(--border)}
+.cs-item:last-child{border-right:none}
+.cs-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-5);display:block;margin-bottom:2px}
+.cs-val{font-size:12px;font-weight:700;color:var(--ink-2)}
+
+.card-offers{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.offer-row{display:flex;align-items:center;justify-content:space-between;padding:6px 8px;background:var(--bg);border-radius:6px;border:1px solid var(--border)}
+.offer-gest{font-size:10px;font-weight:700;color:var(--ink-3)}
+.offer-price{font-size:13px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
+.offer-price.best{color:var(--green)}
+.offer-detail{font-size:9px;color:var(--ink-5)}
+
+.card-cta{width:100%;background:var(--o);color:#fff;border:none;font-size:13px;font-weight:700;padding:11px;border-radius:var(--r-sm);transition:background .15s;letter-spacing:-.2px}
+.card-cta:hover{background:var(--o-dk)}
+.card-compare{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--ink-4);background:none;border:1.5px solid var(--border);padding:8px 12px;border-radius:var(--r-sm);flex:1;transition:.15s;justify-content:center}
+.card-compare:hover{border-color:var(--border-2);color:var(--ink)}
+.card-actions{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+.card-save{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--border);border-radius:var(--r-sm);background:var(--white);color:var(--ink-4);transition:.15s;flex-shrink:0}
+.card-save:hover{border-color:var(--o);color:var(--o)}
+
+/* LOAD MORE */
+.load-more-section{text-align:center;margin-top:32px;padding:24px}
+.load-more-btn{background:var(--white);border:2px solid var(--border);color:var(--ink-2);font-size:14px;font-weight:700;padding:14px 40px;border-radius:var(--r-sm);transition:.15s;cursor:pointer}
+.load-more-btn:hover{border-color:var(--o);color:var(--o)}
+.load-more-info{font-size:12px;color:var(--ink-4);margin-top:10px}
+
+/* PAGINATION */
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:32px}
+.page-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--ink-3);background:var(--white);cursor:pointer;transition:.15s}
+.page-btn:hover{border-color:var(--border-2);color:var(--ink)}
+.page-btn.active{background:var(--o);border-color:var(--o);color:#fff}
+.page-btn.disabled{opacity:.4;cursor:default}
+
+/* SEO SECTION */
+.seo-section{padding:48px 32px;background:var(--white);border-top:1px solid var(--border);margin-top:32px}
+.seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1100px;margin:0 auto}
+.seo-col h3{font-size:13px;font-weight:800;margin-bottom:12px;color:var(--ink)}
+.seo-col ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.seo-col ul li a{font-size:12px;color:var(--ink-4);transition:color .15s}
+.seo-col ul li a:hover{color:var(--o)}
+
+/* FOOTER */
+.footer{background:#111;padding:40px 32px 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand .brand-logo{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.footer-brand .logo-box{width:30px;height:30px;background:var(--o);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:900}
+.footer-brand .logo-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.footer-brand p{font-size:12px;color:#555;line-height:1.7;max-width:240px}
+.footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#444;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{font-size:12px;color:#555;transition:color .15s}
+.footer-col ul li a:hover{color:#aaa}
+.footer-bottom{border-top:1px solid #222;padding-top:20px;display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:11px;color:#444}
+.footer-legal{display:flex;gap:16px}
+.footer-legal a{font-size:11px;color:#444}
+.footer-legal a:hover{color:#888}
+
+/* COMPARE BAR */
+.compare-bar{position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:2px solid var(--o);padding:12px 32px;display:flex;align-items:center;gap:16px;z-index:500;box-shadow:0 -4px 24px rgba(0,0,0,.12);transform:translateY(100%);transition:transform .3s}
+.compare-bar.visible{transform:translateY(0)}
+.cb-slots{display:flex;gap:10px;flex:1}
+.cb-slot{width:120px;height:46px;border:2px dashed var(--border-2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--ink-5);font-weight:600}
+.cb-slot.filled{border:2px solid var(--o);background:var(--o-lt);font-size:11px;color:var(--o);font-weight:700}
+.cb-compare-btn{background:var(--o);color:#fff;border:none;font-size:14px;font-weight:700;padding:12px 28px;border-radius:var(--r-sm);white-space:nowrap;transition:background .15s}
+.cb-compare-btn:hover{background:var(--o-dk)}
+.cb-dismiss{font-size:13px;color:var(--ink-4);background:none;border:none;cursor:pointer}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .main-area{padding:20px 16px}
+  .results-hdr{flex-direction:column;align-items:flex-start;gap:10px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media(max-width:580px){
+  .grid{grid-template-columns:1fr}
+  .seo-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <span class="nav-name">Myrenting</span>
+  </div>
+  <div class="nav-links">
+    <a href="/comparador.html" class="active">Comparador</a>
+    <a href="/marcas.html">Por Marca</a>
+    <a href="/gestoras.html">Gestoras</a>
+    <a href="/guia-renting.html">Guía</a>
+    <a href="/blog.html">Blog</a>
+  </div>
+  <button class="nav-cta">Recibe Ofertas</button>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Inicio</a>
+  <span class="sep">›</span>
+  <span class="cur">Comparador de Renting</span>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sb-header">
+      <span class="sb-title">Filtros</span>
+      <button class="sb-clear">Limpiar todo</button>
+    </div>
+
+    <!-- Cuota mensual -->
+    <div class="filter-group">
+      <span class="fg-label">Cuota mensual (€/mes)</span>
+      <div class="range-block">
+        <div class="range-row">
+          <input type="number" class="range-input" placeholder="Mín" value="150">
+          <input type="number" class="range-input" placeholder="Máx" value="800">
+        </div>
+        <input type="range" class="range-slider" min="150" max="1200" value="800">
+      </div>
+    </div>
+    <div class="fg-divider"></div>
+
+    <!-- Marca -->
+    <div class="filter-group">
+      <span class="fg-label">Marca</span>
+      <input type="search" class="fg-search" placeholder="Buscar marca...">
+      <div style="margin-top:8px" class="checkbox-list">
+        <label class="cb-item"><input type="checkbox" checked><span class="cb-label">Volkswagen</span><span class="cb-count">87</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">BMW</span><span class="cb-count">64</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Mercedes</span><span class="cb-count">58</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Toyota</span><span class="cb-count">52</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Seat</span><span class="cb-count">49</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Renault</span><span class="cb-count">45</span></label>
+      </div>
+      <button class="show-more">+ Ver 18 más</button>
+    </div>
+    <div class="fg-divider"></div>
+
+    <!-- Gestora -->
+    <div class="filter-group">
+      <span class="fg-label">Gestora de Renting</span>
+      <div class="checkbox-list">
+        <label class="cb-item"><input type="checkbox" checked><span class="cb-label">Arval</span><span class="cb-count">312</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Ayvens</span><span class="cb-count">289</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Alphabet</span><span class="cb-count">178</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">REVEL</span><span class="cb-count">143</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Leasys</span><span class="cb-count">112</span></label>
+      </div>
+    </div>
+    <div class="fg-divider"></div>
+
+    <!-- Combustible -->
+    <div class="filter-group">
+      <span class="fg-label">Combustible</span>
+      <div class="tag-pills">
+        <button class="tag-pill on">Todos</button>
+        <button class="tag-pill">Eléctrico</button>
+        <button class="tag-pill">Híbrido</button>
+        <button class="tag-pill">Gasolina</button>
+        <button class="tag-pill">Diésel</button>
+        <button class="tag-pill">PHEV</button>
+      </div>
+    </div>
+    <div class="fg-divider"></div>
+
+    <!-- Duración -->
+    <div class="filter-group">
+      <span class="fg-label">Duración del contrato</span>
+      <div class="tag-pills">
+        <button class="tag-pill">12 meses</button>
+        <button class="tag-pill on">24 meses</button>
+        <button class="tag-pill">36 meses</button>
+        <button class="tag-pill">48 meses</button>
+      </div>
+    </div>
+    <div class="fg-divider"></div>
+
+    <!-- Kilómetros -->
+    <div class="filter-group">
+      <span class="fg-label">Kilómetros anuales</span>
+      <div class="tag-pills">
+        <button class="tag-pill">10.000 km</button>
+        <button class="tag-pill on">15.000 km</button>
+        <button class="tag-pill">20.000 km</button>
+        <button class="tag-pill">25.000 km</button>
+        <button class="tag-pill">30.000 km</button>
+      </div>
+    </div>
+    <div class="fg-divider"></div>
+
+    <!-- Carrocería -->
+    <div class="filter-group">
+      <span class="fg-label">Tipo de carrocería</span>
+      <div class="checkbox-list">
+        <label class="cb-item"><input type="checkbox" checked><span class="cb-label">SUV / Crossover</span><span class="cb-count">421</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Berlina</span><span class="cb-count">198</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Familiar / Combi</span><span class="cb-count">134</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Furgoneta</span><span class="cb-count">87</span></label>
+        <label class="cb-item"><input type="checkbox"><span class="cb-label">Deportivo</span><span class="cb-count">46</span></label>
+      </div>
+    </div>
+
+    <button class="apply-btn">Aplicar filtros (1.043)</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-area">
+
+    <!-- RESULTS HEADER -->
+    <div class="results-hdr">
+      <div>
+        <div class="results-count"><span>1.043</span> ofertas de renting</div>
+        <div class="results-sub">Actualizado hace 2 horas · 12 gestoras comparadas</div>
+      </div>
+      <div class="sort-row">
+        <span class="sort-label">Ordenar:</span>
+        <select class="sort-select">
+          <option>Precio: menor a mayor</option>
+          <option>Precio: mayor a menor</option>
+          <option>Más popular</option>
+          <option>Más reciente</option>
+          <option>Mejor valorado</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ACTIVE FILTERS -->
+    <div class="active-filters">
+      <span class="af-label">Activos:</span>
+      <span class="af-tag">Volkswagen <button>×</button></span>
+      <span class="af-tag">Arval <button>×</button></span>
+      <span class="af-tag">24 meses <button>×</button></span>
+      <span class="af-tag">SUV <button>×</button></span>
+      <button class="af-clear-all">Limpiar todo</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <span class="card-badge badge-popular">⭐ Popular</span>
+        <div class="card-head">
+          <div class="ch-row">
+            <div class="ch-left">
+              <div class="car-brand">Volkswagen</div>
+              <div class="car-name">Golf</div>
+              <div class="car-version">1.5 eTSI 150CV DSG Life</div>
+              <div class="car-tags">
+                <span class="ctag">Híbrido Suave</span>
+                <span class="ctag">Automático</span>
+              </div>
+            </div>
+            <div class="price-blk">
+              <span class="price-desde">Desde</span>
+              <span class="price-amt">289</span>
+              <span class="price-mes">€/mes · IVA inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-img">
+          <div class="car-placeholder">
+            <div class="car-silhouette"></div>
+          </div>
+          <span class="img-gest">Arval</span>
+        </div>
+        <div class="card-body">
+          <div class="card-specs">
+            <div class="cs-item"><span class="cs-label">Duración</span><span class="cs-val">36 m</span></div>
+            <div class="cs-item"><span class="cs-label">Km/año</span><span class="cs-val">15.000</span></div>
+            <div class="cs-item"><span class="cs-label">Entrada</span><span class="cs-val">0€</span></div>
+          </div>
+          <div class="card-offers">
+            <div class="offer-row">
+              <span class="offer-gest">Arval</span>
+              <div>
+                <div class="offer-price best">289 €/mes</div>
+                <div class="offer-detail">36m · 15.000km</div>
+              </div>
+            </div>
+            <div class="offer-row">
+              <span class="offer-gest">Ayvens</span>
+              <div>
+                <div class="offer-price">312 €/mes</div>
+                <div class="offer-detail">36m · 15.000km</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-cta">Ver oferta →</button>
+            <button class="card-save">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <span class="card-badge badge-nuevo">Nuevo</span>
+        <div class="card-head" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)">
+          <div class="ch-row">
+            <div class="ch-left">
+              <div class="car-brand">BMW</div>
+              <div class="car-name">Serie 3</div>
+              <div class="car-version">320d xDrive Touring Business</div>
+              <div class="car-tags">
+                <span class="ctag">Diésel</span>
+                <span class="ctag">4x4</span>
+              </div>
+            </div>
+            <div class="price-blk">
+              <span class="price-desde">Desde</span>
+              <span class="price-amt">489</span>
+              <span class="price-mes">€/mes · IVA inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-img">
+          <div class="car-placeholder">
+            <div class="car-silhouette"></div>
+          </div>
+          <span class="img-gest">Alphabet</span>
+        </div>
+        <div class="card-body">
+          <div class="card-specs">
+            <div class="cs-item"><span class="cs-label">Duración</span><span class="cs-val">24 m</span></div>
+            <div class="cs-item"><span class="cs-label">Km/año</span><span class="cs-val">20.000</span></div>
+            <div class="cs-item"><span class="cs-label">Entrada</span><span class="cs-val">0€</span></div>
+          </div>
+          <div class="card-offers">
+            <div class="offer-row">
+              <span class="offer-gest">Alphabet</span>
+              <div>
+                <div class="offer-price best">489 €/mes</div>
+                <div class="offer-detail">24m · 20.000km</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-cta">Ver oferta →</button>
+            <button class="card-save">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <span class="card-badge badge-oferta">🔥 Oferta</span>
+        <div class="card-head" style="background:linear-gradient(135deg,#00A86B 0%,#007A4D 100%)">
+          <div class="ch-row">
+            <div class="ch-left">
+              <div class="car-brand">Peugeot</div>
+              <div class="car-name">e-208</div>
+              <div class="car-version">EV 136CV Electric Style</div>
+              <div class="car-tags">
+                <span class="ctag">100% Eléctrico</span>
+                <span class="ctag">350 km WLTP</span>
+              </div>
+            </div>
+            <div class="price-blk">
+              <span class="price-desde">Desde</span>
+              <span class="price-amt">249</span>
+              <span class="price-mes">€/mes · IVA inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-img">
+          <div class="car-placeholder">
+            <div class="car-silhouette"></div>
+          </div>
+          <span class="img-gest">REVEL</span>
+        </div>
+        <div class="card-body">
+          <div class="card-specs">
+            <div class="cs-item"><span class="cs-label">Duración</span><span class="cs-val">48 m</span></div>
+            <div class="cs-item"><span class="cs-label">Km/año</span><span class="cs-val">10.000</span></div>
+            <div class="cs-item"><span class="cs-label">Entrada</span><span class="cs-val">0€</span></div>
+          </div>
+          <div class="card-offers">
+            <div class="offer-row">
+              <span class="offer-gest">REVEL</span>
+              <div>
+                <div class="offer-price best">249 €/mes</div>
+                <div class="offer-detail">48m · 10.000km</div>
+              </div>
+            </div>
+            <div class="offer-row">
+              <span class="offer-gest">Leasys</span>
+              <div>
+                <div class="offer-price">269 €/mes</div>
+                <div class="offer-detail">48m · 10.000km</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-cta">Ver oferta →</button>
+            <button class="card-save">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+        <div class="card-head">
+          <div class="ch-row">
+            <div class="ch-left">
+              <div class="car-brand">Toyota</div>
+              <div class="car-name">Yaris Cross</div>
+              <div class="car-version">1.5 Hybrid 116CV Team D</div>
+              <div class="car-tags">
+                <span class="ctag">Híbrido</span>
+                <span class="ctag">Automático</span>
+              </div>
+            </div>
+            <div class="price-blk">
+              <span class="price-desde">Desde</span>
+              <span class="price-amt">319</span>
+              <span class="price-mes">€/mes · IVA inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-img">
+          <div class="car-placeholder"><div class="car-silhouette"></div></div>
+          <span class="img-gest">Arval</span>
+        </div>
+        <div class="card-body">
+          <div class="card-specs">
+            <div class="cs-item"><span class="cs-label">Duración</span><span class="cs-val">36 m</span></div>
+            <div class="cs-item"><span class="cs-label">Km/año</span><span class="cs-val">15.000</span></div>
+            <div class="cs-item"><span class="cs-label">Entrada</span><span class="cs-val">0€</span></div>
+          </div>
+          <div class="card-offers">
+            <div class="offer-row">
+              <span class="offer-gest">Arval</span>
+              <div><div class="offer-price best">319 €/mes</div><div class="offer-detail">36m · 15.000km</div></div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-cta">Ver oferta →</button>
+            <button class="card-save"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card">
+        <div class="card-head" style="background:linear-gradient(135deg,#2D1B69 0%,#11095A 100%)">
+          <div class="ch-row">
+            <div class="ch-left">
+              <div class="car-brand">Cupra</div>
+              <div class="car-name">Formentor</div>
+              <div class="car-version">1.5 eTSI 150CV DSG VZ</div>
+              <div class="car-tags">
+                <span class="ctag">Gasolina</span>
+                <span class="ctag">Deportivo</span>
+              </div>
+            </div>
+            <div class="price-blk">
+              <span class="price-desde">Desde</span>
+              <span class="price-amt">395</span>
+              <span class="price-mes">€/mes · IVA inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-img">
+          <div class="car-placeholder"><div class="car-silhouette"></div></div>
+          <span class="img-gest">Ayvens</span>
+        </div>
+        <div class="card-body">
+          <div class="card-specs">
+            <div class="cs-item"><span class="cs-label">Duración</span><span class="cs-val">36 m</span></div>
+            <div class="cs-item"><span class="cs-label">Km/año</span><span class="cs-val">15.000</span></div>
+            <div class="cs-item"><span class="cs-label">Entrada</span><span class="cs-val">0€</span></div>
+          </div>
+          <div class="card-offers">
+            <div class="offer-row">
+              <span class="offer-gest">Ayvens</span>
+              <div><div class="offer-price best">395 €/mes</div><div class="offer-detail">36m · 15.000km</div></div>
+            </div>
+            <div class="offer-row">
+              <span class="offer-gest">Arval</span>
+              <div><div class="offer-price">420 €/mes</div><div class="offer-detail">36m · 15.000km</div></div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-cta">Ver oferta →</button>
+            <button class="card-save"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card">
+        <div class="card-head" style="background:linear-gradient(135deg,#374151 0%,#1F2937 100%)">
+          <div class="ch-row">
+            <div class="ch-left">
+              <div class="car-brand">Kia</div>
+              <div class="car-name">Sportage</div>
+              <div class="car-version">1.6 T-GDI 230CV PHEV Drive AWD</div>
+              <div class="car-tags">
+                <span class="ctag">PHEV</span>
+                <span class="ctag">4x4</span>
+              </div>
+            </div>
+            <div class="price-blk">
+              <span class="price-desde">Desde</span>
+              <span class="price-amt">459</span>
+              <span class="price-mes">€/mes · IVA inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-img">
+          <div class="car-placeholder"><div class="car-silhouette"></div></div>
+          <span class="img-gest">Leasys</span>
+        </div>
+        <div class="card-body">
+          <div class="card-specs">
+            <div class="cs-item"><span class="cs-label">Duración</span><span class="cs-val">48 m</span></div>
+            <div class="cs-item"><span class="cs-label">Km/año</span><span class="cs-val">15.000</span></div>
+            <div class="cs-item"><span class="cs-label">Entrada</span><span class="cs-val">0€</span></div>
+          </div>
+          <div class="card-offers">
+            <div class="offer-row">
+              <span class="offer-gest">Leasys</span>
+              <div><div class="offer-price best">459 €/mes</div><div class="offer-detail">48m · 15.000km</div></div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="card-cta">Ver oferta →</button>
+            <button class="card-save"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- LOAD MORE -->
+    <div class="load-more-section">
+      <button class="load-more-btn">Cargar más ofertas</button>
+      <div class="load-more-info">Mostrando 6 de 1.043 resultados</div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button class="page-btn disabled">‹</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">4</button>
+      <span style="color:var(--ink-5);padding:0 4px">…</span>
+      <button class="page-btn">87</button>
+      <button class="page-btn">›</button>
+    </div>
+
+  </main>
+</div><!-- /layout -->
+
+<!-- SEO -->
+<div class="seo-section">
+  <div class="seo-grid">
+    <div class="seo-col">
+      <h3>Renting por Marca</h3>
+      <ul>
+        <li><a href="#">Renting Volkswagen</a></li>
+        <li><a href="#">Renting BMW</a></li>
+        <li><a href="#">Renting Mercedes</a></li>
+        <li><a href="#">Renting Toyota</a></li>
+        <li><a href="#">Renting Seat</a></li>
+        <li><a href="#">Renting Renault</a></li>
+        <li><a href="#">Renting Ford</a></li>
+        <li><a href="#">Renting Hyundai</a></li>
+      </ul>
+    </div>
+    <div class="seo-col">
+      <h3>Renting por Cuota</h3>
+      <ul>
+        <li><a href="#">Renting menos de 200€/mes</a></li>
+        <li><a href="#">Renting 200–300€/mes</a></li>
+        <li><a href="#">Renting 300–400€/mes</a></li>
+        <li><a href="#">Renting 400–500€/mes</a></li>
+        <li><a href="#">Renting más de 500€/mes</a></li>
+        <li><a href="#">Renting coches eléctricos</a></li>
+        <li><a href="#">Renting SUV</a></li>
+        <li><a href="#">Renting furgonetas</a></li>
+      </ul>
+    </div>
+    <div class="seo-col">
+      <h3>Gestoras de Renting</h3>
+      <ul>
+        <li><a href="#">Ofertas Arval</a></li>
+        <li><a href="#">Ofertas Ayvens</a></li>
+        <li><a href="#">Ofertas Alphabet</a></li>
+        <li><a href="#">Ofertas REVEL</a></li>
+        <li><a href="#">Ofertas Leasys</a></li>
+        <li><a href="#">Todas las gestoras</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-logo">
+        <div class="logo-box">M</div>
+        <span class="logo-name">Myrenting</span>
+      </div>
+      <p>El comparador de renting más completo de España. Más de 1.000 ofertas reales de las principales gestoras, sin letra pequeña.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Comparador</h4>
+      <ul>
+        <li><a href="#">Por Marca</a></li>
+        <li><a href="#">Por Gestora</a></li>
+        <li><a href="#">Por Cuota</a></li>
+        <li><a href="#">Eléctricos</a></li>
+        <li><a href="#">SUVs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Información</h4>
+      <ul>
+        <li><a href="#">¿Qué es el renting?</a></li>
+        <li><a href="#">Guía de renting</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Myrenting · Todos los derechos reservados</span>
+    <div class="footer-legal">
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compareBar">
+  <div class="cb-slots">
+    <div class="cb-slot filled">VW Golf</div>
+    <div class="cb-slot filled">Peugeot e-208</div>
+    <div class="cb-slot">+ Añadir</div>
+  </div>
+  <button class="cb-compare-btn">Comparar ahora (2)</button>
+  <button class="cb-dismiss">Cancelar</button>
+</div>
+
+</body>
+</html>

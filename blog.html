@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog de Renting · Consejos y Guías 2026 | Myrenting</title>
+<meta name="description" content="Todo sobre el renting de coches: consejos, comparativas, noticias del sector y guías para elegir el mejor renting para tu perfil.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://myrenting.es/blog.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --o:#FF5C00;--o-dk:#E54E00;--o-lt:#FFF4EE;--o-mid:#FFD4BD;
+  --ink:#111;--ink-2:#3D3D3D;--ink-3:#666;--ink-4:#999;--ink-5:#C8C8C8;
+  --white:#fff;--bg:#F7F7F7;--border:#EBEBEB;--border-2:#DEDEDE;
+  --green:#00A86B;--green-lt:#E6F7F0;
+  --r:12px;--r-sm:8px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+
+/* NAV */
+.nav{height:60px;background:var(--white);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 32px;gap:32px;position:sticky;top:0;z-index:200}
+.nav-brand{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.nav-icon{width:32px;height:32px;background:var(--o);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.nav-icon svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.nav-name{font-size:18px;font-weight:800;letter-spacing:-.5px}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-3);padding:6px 11px;border-radius:7px;transition:.15s}
+.nav-links a:hover{color:var(--ink);background:var(--bg)}
+.nav-links a.active{color:var(--o);font-weight:700;background:var(--o-lt)}
+.nav-cta{font-size:13px;font-weight:700;color:var(--white);padding:8px 20px;border-radius:var(--r-sm);background:var(--o);border:none;flex-shrink:0;cursor:pointer;transition:background .15s}
+.nav-cta:hover{background:var(--o-dk)}
+
+/* HERO */
+.hero{background:var(--white);border-bottom:1px solid var(--border);padding:52px 32px 40px}
+.hero-inner{max-width:1100px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--o);background:var(--o-lt);border:1px solid var(--o-mid);padding:5px 16px;border-radius:99px;margin-bottom:16px}
+.hero h1{font-size:44px;font-weight:900;letter-spacing:-2px;line-height:1.08;margin-bottom:10px;max-width:600px}
+.hero h1 span{color:var(--o)}
+.hero-sub{font-size:15px;color:var(--ink-4);max-width:480px;line-height:1.65}
+
+/* CATEGORY PILLS */
+.cat-bar{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;gap:6px;overflow-x:auto}
+.cat-pill{font-size:13px;font-weight:600;color:var(--ink-4);padding:14px 16px;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;transition:.15s;background:none;border-top:none;border-left:none;border-right:none}
+.cat-pill:hover{color:var(--ink)}
+.cat-pill.active{color:var(--o);border-bottom-color:var(--o)}
+
+/* LAYOUT */
+.blog-layout{max-width:1100px;margin:0 auto;padding:40px 32px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+
+/* FEATURED ARTICLE */
+.featured{background:var(--white);border-radius:var(--r);border:1px solid var(--border);overflow:hidden;margin-bottom:24px;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.featured:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+.featured-img{height:280px;background:linear-gradient(135deg,var(--o) 0%,var(--o-dk) 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.featured-img::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
+.featured-emoji{font-size:80px;position:relative;z-index:1}
+.featured-cat{position:absolute;top:16px;left:16px;z-index:2;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;padding:4px 12px;border-radius:99px;background:#fff;color:var(--o)}
+.featured-body{padding:28px}
+.fb-category{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--o);margin-bottom:8px}
+.fb-title{font-size:24px;font-weight:900;color:var(--ink);letter-spacing:-.7px;line-height:1.2;margin-bottom:10px}
+.fb-excerpt{font-size:13px;color:var(--ink-3);line-height:1.7;margin-bottom:16px}
+.fb-meta{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--ink-5)}
+.fb-author-avatar{width:28px;height:28px;border-radius:50%;background:var(--o);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff}
+.fb-author-name{font-weight:600;color:var(--ink-3)}
+.meta-sep{color:var(--ink-5)}
+.fb-read-more{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--o);margin-top:16px}
+.fb-read-more:hover{text-decoration:underline}
+
+/* ARTICLE GRID */
+.articles-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.articles-header h2{font-size:18px;font-weight:800;letter-spacing:-.3px}
+.articles-header select{border:1.5px solid var(--border);background:var(--white);font-size:12px;font-weight:600;color:var(--ink-2);padding:7px 28px 7px 10px;border-radius:var(--r-sm);outline:none;font-family:inherit;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+
+.articles-list{display:flex;flex-direction:column;gap:16px}
+.article-card{background:var(--white);border-radius:var(--r);border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:180px 1fr;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.article-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.ac-img{height:100%;min-height:120px;display:flex;align-items:center;justify-content:center;font-size:44px;position:relative}
+.ac-img.orange{background:linear-gradient(135deg,var(--o) 0%,var(--o-dk) 100%)}
+.ac-img.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)}
+.ac-img.green{background:linear-gradient(135deg,#00A86B 0%,#007A4D 100%)}
+.ac-img.blue{background:linear-gradient(135deg,#2563EB 0%,#1D4ED8 100%)}
+.ac-img.purple{background:linear-gradient(135deg,#7C3AED 0%,#5B21B6 100%)}
+.ac-img.amber{background:linear-gradient(135deg,#D97706 0%,#B45309 100%)}
+.ac-body{padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between}
+.ac-category{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--o);margin-bottom:6px}
+.ac-title{font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.3px;line-height:1.3;margin-bottom:6px}
+.ac-excerpt{font-size:12px;color:var(--ink-4);line-height:1.6;margin-bottom:10px;flex:1}
+.ac-meta{display:flex;align-items:center;gap:10px;font-size:10px;color:var(--ink-5)}
+.ac-author{font-weight:600;color:var(--ink-4)}
+.ac-tag{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--bg);color:var(--ink-4);border:1px solid var(--border)}
+.ac-tag.new{background:var(--green-lt);color:var(--green);border-color:#b3e8d4}
+
+/* LOAD MORE */
+.load-more{text-align:center;margin-top:24px}
+.load-more-btn{background:var(--white);border:1.5px solid var(--border);color:var(--ink-3);font-size:13px;font-weight:700;padding:12px 32px;border-radius:var(--r-sm);cursor:pointer;transition:.15s}
+.load-more-btn:hover{border-color:var(--o);color:var(--o)}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:20px}
+
+/* NEWSLETTER */
+.newsletter-box{background:linear-gradient(135deg,var(--o) 0%,var(--o-dk) 100%);border-radius:var(--r);padding:24px;text-align:center}
+.nb-icon{font-size:36px;margin-bottom:12px}
+.nb-title{font-size:16px;font-weight:900;color:#fff;letter-spacing:-.4px;margin-bottom:6px}
+.nb-sub{font-size:12px;color:rgba(255,255,255,.8);line-height:1.5;margin-bottom:16px}
+.nb-input{width:100%;border:none;background:rgba(255,255,255,.2);color:#fff;font-size:13px;font-weight:500;padding:10px 14px;border-radius:var(--r-sm);outline:none;font-family:inherit;margin-bottom:8px}
+.nb-input::placeholder{color:rgba(255,255,255,.6)}
+.nb-btn{width:100%;background:#fff;color:var(--o);font-size:13px;font-weight:800;padding:11px;border-radius:var(--r-sm);border:none;cursor:pointer;transition:.15s}
+.nb-btn:hover{background:var(--o-lt)}
+.nb-note{font-size:9px;color:rgba(255,255,255,.6);margin-top:8px}
+
+/* POPULAR ARTICLES */
+.sidebar-box{background:var(--white);border-radius:var(--r);border:1px solid var(--border);overflow:hidden}
+.sb-title{font-size:13px;font-weight:800;color:var(--ink);padding:16px 18px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.5px}
+.popular-list{display:flex;flex-direction:column}
+.popular-item{display:flex;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;align-items:flex-start}
+.popular-item:last-child{border-bottom:none}
+.popular-item:hover{background:var(--bg)}
+.pi-num{font-size:20px;font-weight:900;color:var(--border-2);letter-spacing:-1px;flex-shrink:0;line-height:1;margin-top:2px}
+.pi-num.hot{color:var(--o)}
+.pi-text{}
+.pi-title{font-size:12px;font-weight:700;color:var(--ink);line-height:1.35;margin-bottom:3px}
+.pi-meta{font-size:10px;color:var(--ink-5)}
+
+/* TOPICS */
+.topics-list{padding:16px 18px;display:flex;flex-wrap:wrap;gap:6px}
+.topic-tag{font-size:11px;font-weight:600;padding:5px 12px;border:1.5px solid var(--border);border-radius:99px;color:var(--ink-3);cursor:pointer;transition:.15s}
+.topic-tag:hover{border-color:var(--o-mid);color:var(--o);background:var(--o-lt)}
+
+/* OFFER BOX SIDEBAR */
+.offer-sidebar{background:var(--white);border:2px solid var(--o);border-radius:var(--r);overflow:hidden}
+.osb-head{background:var(--o);padding:14px 18px;display:flex;align-items:center;gap:10px}
+.osb-fire{font-size:20px}
+.osb-head-text h4{font-size:13px;font-weight:800;color:#fff}
+.osb-head-text p{font-size:10px;color:rgba(255,255,255,.75)}
+.osb-body{padding:18px}
+.osb-offer-item{background:var(--bg);border-radius:var(--r-sm);padding:12px;margin-bottom:8px;border:1px solid var(--border)}
+.osb-offer-item:last-of-type{margin-bottom:14px}
+.ooi-car{font-size:11px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.ooi-price{font-size:18px;font-weight:900;color:var(--o);letter-spacing:-.5px}
+.ooi-detail{font-size:10px;color:var(--ink-5)}
+.osb-cta{display:block;width:100%;background:var(--o);color:#fff;border:none;font-size:13px;font-weight:700;padding:11px;border-radius:var(--r-sm);cursor:pointer;transition:background .15s;text-align:center}
+.osb-cta:hover{background:var(--o-dk)}
+
+/* FOOTER */
+.footer{background:#111;padding:40px 32px 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand .brand-logo{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.footer-brand .logo-box{width:30px;height:30px;background:var(--o);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:900}
+.footer-brand .logo-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.footer-brand p{font-size:12px;color:#555;line-height:1.7;max-width:240px}
+.footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#444;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{font-size:12px;color:#555;transition:color .15s}
+.footer-col ul li a:hover{color:#aaa}
+.footer-bottom{border-top:1px solid #222;padding-top:20px;display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:11px;color:#444}
+.footer-legal{display:flex;gap:16px}
+.footer-legal a{font-size:11px;color:#444}
+.footer-legal a:hover{color:#888}
+
+@media(max-width:900px){
+  .blog-layout{grid-template-columns:1fr;padding:24px 16px}
+  .nav-links{display:none}
+  .article-card{grid-template-columns:1fr}
+  .ac-img{min-height:140px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .hero{padding:36px 16px}
+  .hero h1{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <span class="nav-name">Myrenting</span>
+  </div>
+  <div class="nav-links">
+    <a href="/comparador.html">Comparador</a>
+    <a href="/marcas.html">Por Marca</a>
+    <a href="/gestoras.html">Gestoras</a>
+    <a href="/guia-renting.html">Guía</a>
+    <a href="/blog.html" class="active">Blog</a>
+  </div>
+  <button class="nav-cta">Comparar ofertas</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">📝 Blog & Guías</div>
+    <h1>Aprende todo sobre el <span>renting</span></h1>
+    <p class="hero-sub">Consejos, comparativas de modelos, análisis de gestoras y guías prácticas para que siempre estés un paso por delante.</p>
+  </div>
+</div>
+
+<!-- CATEGORIES BAR -->
+<div class="cat-bar">
+  <button class="cat-pill active">Todos</button>
+  <button class="cat-pill">Guías</button>
+  <button class="cat-pill">Comparativas</button>
+  <button class="cat-pill">Eléctricos</button>
+  <button class="cat-pill">Autónomos</button>
+  <button class="cat-pill">Empresas</button>
+  <button class="cat-pill">Gestoras</button>
+  <button class="cat-pill">Noticias</button>
+</div>
+
+<!-- BLOG LAYOUT -->
+<div class="blog-layout">
+
+  <!-- MAIN CONTENT -->
+  <div>
+
+    <!-- FEATURED ARTICLE -->
+    <a href="#" class="featured">
+      <div class="featured-img">
+        <span class="featured-cat">⚡ Eléctricos</span>
+        <div class="featured-emoji">⚡🚗</div>
+      </div>
+      <div class="featured-body">
+        <div class="fb-category">Análisis completo · Junio 2026</div>
+        <div class="fb-title">Los 10 mejores coches eléctricos en renting en 2026: precios, autonomía y qué gestora ofrece la mejor oferta</div>
+        <div class="fb-excerpt">El mercado del renting eléctrico ha explotado en 2026. Con más modelos disponibles que nunca y precios cada vez más competitivos, analizamos las 10 mejores opciones del mercado y las comparamos gestora por gestora para que no pierdas ni un euro.</div>
+        <div class="fb-meta">
+          <div class="fb-author-avatar">L</div>
+          <span class="fb-author-name">Laura Sánchez</span>
+          <span class="meta-sep">·</span>
+          <span>12 min lectura</span>
+          <span class="meta-sep">·</span>
+          <span>28 Jun 2026</span>
+        </div>
+        <div class="fb-read-more">Leer artículo completo →</div>
+      </div>
+    </a>
+
+    <!-- ARTICLES LIST -->
+    <div class="articles-header">
+      <h2>Artículos recientes</h2>
+      <select>
+        <option>Más recientes</option>
+        <option>Más leídos</option>
+        <option>Por categoría</option>
+      </select>
+    </div>
+
+    <div class="articles-list">
+
+      <a href="#" class="article-card">
+        <div class="ac-img dark">🏢</div>
+        <div class="ac-body">
+          <div>
+            <div class="ac-category">Autónomos</div>
+            <div class="ac-title">Renting para autónomos en 2026: ventajas fiscales, IVA deducible y qué modelos convienen más</div>
+            <div class="ac-excerpt">Guía completa sobre las ventajas del renting si eres autónomo o tienes una empresa. Desde la deducción del IVA hasta los modelos más rentables fiscalmente.</div>
+          </div>
+          <div class="ac-meta">
+            <span class="ac-author">Carlos M.</span>
+            <span>·</span>
+            <span>8 min</span>
+            <span>·</span>
+            <span>25 Jun 2026</span>
+            <span class="ac-tag new">Popular</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="article-card">
+        <div class="ac-img green">🆚</div>
+        <div class="ac-body">
+          <div>
+            <div class="ac-category">Comparativa</div>
+            <div class="ac-title">Arval vs Ayvens 2026: ¿Cuál tiene las mejores ofertas de renting este año?</div>
+            <div class="ac-excerpt">Las dos gestoras más grandes de España frente a frente. Comparamos precios, servicios incluidos, tiempo de respuesta y valoraciones de usuarios reales.</div>
+          </div>
+          <div class="ac-meta">
+            <span class="ac-author">Ana G.</span>
+            <span>·</span>
+            <span>6 min</span>
+            <span>·</span>
+            <span>22 Jun 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="article-card">
+        <div class="ac-img orange">🚗</div>
+        <div class="ac-body">
+          <div>
+            <div class="ac-category">Guía</div>
+            <div class="ac-title">¿Cuántos kilómetros contratar en el renting? La calculadora que necesitas antes de firmar</div>
+            <div class="ac-excerpt">Una de las decisiones más importantes al contratar un renting. Si te quedas corto pagas más, si te pasas también. Te explicamos cómo acertar y cuánto cuesta el km extra.</div>
+          </div>
+          <div class="ac-meta">
+            <span class="ac-author">Laura S.</span>
+            <span>·</span>
+            <span>5 min</span>
+            <span>·</span>
+            <span>19 Jun 2026</span>
+            <span class="ac-tag new">Nuevo</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="article-card">
+        <div class="ac-img blue">🔋</div>
+        <div class="ac-body">
+          <div>
+            <div class="ac-category">Eléctricos</div>
+            <div class="ac-title">Renting Peugeot e-208 vs Renault Zoe: cuál se rentabiliza antes en renting</div>
+            <div class="ac-excerpt">Dos de los eléctricos más populares en renting, analizados en profundidad. Precios reales de todas las gestoras, autonomía real y costes totales comparados.</div>
+          </div>
+          <div class="ac-meta">
+            <span class="ac-author">Pablo R.</span>
+            <span>·</span>
+            <span>7 min</span>
+            <span>·</span>
+            <span>17 Jun 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="article-card">
+        <div class="ac-img purple">❌</div>
+        <div class="ac-body">
+          <div>
+            <div class="ac-category">Consejos</div>
+            <div class="ac-title">7 errores que comete la gente al contratar renting (y cómo evitarlos)</div>
+            <div class="ac-excerpt">Después de analizar miles de contratos de renting, hemos identificado los 7 errores más comunes. Léelos antes de firmar para no arrepentirte después.</div>
+          </div>
+          <div class="ac-meta">
+            <span class="ac-author">Carlos M.</span>
+            <span>·</span>
+            <span>9 min</span>
+            <span>·</span>
+            <span>14 Jun 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="article-card">
+        <div class="ac-img amber">🏆</div>
+        <div class="ac-body">
+          <div>
+            <div class="ac-category">Ranking</div>
+            <div class="ac-title">Los 5 SUVs más baratos en renting en España (junio 2026): precios reales</div>
+            <div class="ac-excerpt">Los SUV dominan las ventas de renting en España. Hemos analizado los 5 más asequibles con datos reales de todas las gestoras para junio de 2026.</div>
+          </div>
+          <div class="ac-meta">
+            <span class="ac-author">Ana G.</span>
+            <span>·</span>
+            <span>5 min</span>
+            <span>·</span>
+            <span>11 Jun 2026</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- LOAD MORE -->
+    <div class="load-more">
+      <button class="load-more-btn">Cargar más artículos</button>
+    </div>
+
+  </div><!-- /main -->
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter-box">
+      <div class="nb-icon">📬</div>
+      <div class="nb-title">Alertas de ofertas</div>
+      <div class="nb-sub">Recibe cada semana las mejores ofertas de renting y los artículos más leídos del blog.</div>
+      <input type="email" class="nb-input" placeholder="tu@email.com">
+      <button class="nb-btn">Suscribirme gratis</button>
+      <div class="nb-note">Sin spam. Cancelación en 1 clic.</div>
+    </div>
+
+    <!-- POPULAR -->
+    <div class="sidebar-box">
+      <div class="sb-title">Artículos populares</div>
+      <div class="popular-list">
+        <div class="popular-item">
+          <div class="pi-num hot">01</div>
+          <div class="pi-text">
+            <div class="pi-title">¿Renting o compra? La calculadora definitiva para 2026</div>
+            <div class="pi-meta">15.432 lecturas · 12 min</div>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="pi-num hot">02</div>
+          <div class="pi-text">
+            <div class="pi-title">Mejores ofertas de renting eléctrico de junio 2026</div>
+            <div class="pi-meta">12.891 lecturas · 8 min</div>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="pi-num">03</div>
+          <div class="pi-text">
+            <div class="pi-title">Guía completa: qué pasa al acabar el contrato de renting</div>
+            <div class="pi-meta">9.234 lecturas · 6 min</div>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="pi-num">04</div>
+          <div class="pi-text">
+            <div class="pi-title">Km extra en renting: cuánto cuesta y cómo evitarlo</div>
+            <div class="pi-meta">7.891 lecturas · 4 min</div>
+          </div>
+        </div>
+        <div class="popular-item">
+          <div class="pi-num">05</div>
+          <div class="pi-text">
+            <div class="pi-title">Ranking gestoras de renting España 2026: la mejor valorada</div>
+            <div class="pi-meta">6.543 lecturas · 10 min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFER BOX -->
+    <div class="offer-sidebar">
+      <div class="osb-head">
+        <div class="osb-fire">🔥</div>
+        <div class="osb-head-text">
+          <h4>Mejores ofertas ahora</h4>
+          <p>Precios actualizados hoy</p>
+        </div>
+      </div>
+      <div class="osb-body">
+        <div class="osb-offer-item">
+          <div class="ooi-car">🚗 VW Golf 1.5 eTSI</div>
+          <div class="ooi-price">289 €<span style="font-size:11px;font-weight:400;color:var(--ink-4)">/mes</span></div>
+          <div class="ooi-detail">Arval · 36m · 15.000km · IVA inc.</div>
+        </div>
+        <div class="osb-offer-item">
+          <div class="ooi-car">⚡ Peugeot e-208</div>
+          <div class="ooi-price">249 €<span style="font-size:11px;font-weight:400;color:var(--ink-4)">/mes</span></div>
+          <div class="ooi-detail">REVEL · 48m · 10.000km · IVA inc.</div>
+        </div>
+        <div class="osb-offer-item">
+          <div class="ooi-car">🏎 Cupra Formentor</div>
+          <div class="ooi-price">395 €<span style="font-size:11px;font-weight:400;color:var(--ink-4)">/mes</span></div>
+          <div class="ooi-detail">Ayvens · 36m · 15.000km · IVA inc.</div>
+        </div>
+        <button class="osb-cta">Ver todas las ofertas →</button>
+      </div>
+    </div>
+
+    <!-- TOPICS -->
+    <div class="sidebar-box">
+      <div class="sb-title">Temas</div>
+      <div class="topics-list">
+        <button class="topic-tag">Eléctricos</button>
+        <button class="topic-tag">Autónomos</button>
+        <button class="topic-tag">SUV</button>
+        <button class="topic-tag">Arval</button>
+        <button class="topic-tag">Ayvens</button>
+        <button class="topic-tag">Alphabet</button>
+        <button class="topic-tag">Guías</button>
+        <button class="topic-tag">Comparativas</button>
+        <button class="topic-tag">Consejos</button>
+        <button class="topic-tag">Empresas</button>
+        <button class="topic-tag">Híbridos</button>
+        <button class="topic-tag">Ranking</button>
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+</div><!-- /blog-layout -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-logo">
+        <div class="logo-box">M</div>
+        <span class="logo-name">Myrenting</span>
+      </div>
+      <p>El comparador de renting más completo de España. Más de 1.000 ofertas reales de las principales gestoras, sin letra pequeña.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Comparador</h4>
+      <ul>
+        <li><a href="#">Por Marca</a></li>
+        <li><a href="#">Por Gestora</a></li>
+        <li><a href="#">Eléctricos</a></li>
+        <li><a href="#">SUVs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Información</h4>
+      <ul>
+        <li><a href="#">Guía de renting</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Myrenting · Todos los derechos reservados</span>
+    <div class="footer-legal">
+      <a href="/aviso-legal.html">Aviso legal</a>
+      <a href="/politica-privacidad.html">Privacidad</a>
+      <a href="/politica-cookies.html">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
