@@ -7,6 +7,8 @@ img/.DS_Store
 !inyectar_ofertas.py
 !generar_seo.py
 !generar_categorias.py
+!generar_marcas.py
+!descargar_imagenes_coches.py
 index_redesign.html
 scraper-concesionarios/
 *.json
