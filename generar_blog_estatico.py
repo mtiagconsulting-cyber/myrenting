@@ -33,7 +33,7 @@ for _en, _es in _meses.items():
 # ── CSS compartido ─────────────────────────────────────────────────────────────
 CSS_BASE = """
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--accent:#e8380d;--ink:#111318;--ink-2:#2d2d3a;--ink-3:#6b6b80;--ink-4:#a0a0b0;
+    :root{--accent:#F04E00;--ink:#111110;--ink-2:#1C1C1A;--ink-3:#6F6F6B;--ink-4:#9F9F9B;
           --green:#00c47a;--green-lt:#e0faf1;--surface:#fff;--surface-2:#f7f8fa;
           --surface-3:#eeeff4;--border:#e4e4ec;--radius:14px;--radius-sm:8px}
     body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface-2);
@@ -47,9 +47,9 @@ CSS_BASE = """
               display:inline-block;margin-left:3px;margin-bottom:10px}
     .nav-back{color:var(--ink-3);text-decoration:none;font-size:.875rem;font-weight:500}
     .nav-back:hover{color:var(--ink)}
-    footer{background:#111318;color:rgba(255,255,255,.4);padding:32px 28px;text-align:center;font-size:.8rem}
-    footer a{color:rgba(255,255,255,.4);text-decoration:none;margin:0 6px}
-    footer a:hover{color:#fff}
+    footer{background:#F7F7F5;border-top:1px solid #E8E8E5;color:#6F6F6B;padding:32px 28px;text-align:center;font-size:.8rem}
+    footer a{color:#6F6F6B;text-decoration:none;margin:0 6px}
+    footer a:hover{color:#111110}
     footer p+p{margin-top:8px}
 """
 
@@ -94,7 +94,7 @@ ARTICULOS = [
 <h2>La variable que más importa: tu perfil fiscal</h2>
 <p>Si eres autónomo, el renting es todavía más interesante. Puedes deducirte el <strong>21% de IVA</strong> de cada cuota si el uso es profesional, y hasta el <strong>50% en IRPF</strong> si el uso es mixto. En el ejemplo anterior, el ahorro fiscal en 3 años puede superar los 2.000€.</p>
 
-<p class="cta-inline">¿Listo para comparar precios reales? <a href="/">Ver todas las ofertas de renting en MiRenting →</a></p>
+<p class="cta-inline">¿Listo para comparar precios reales? <a href="/">Ver todas las ofertas de renting en Myrenting →</a></p>
 """,
 },
 
@@ -133,7 +133,7 @@ ARTICULOS = [
 <h2>Diferencias entre gestoras</h2>
 <p>Arval, Ayvens y Alphabet tienen coberturas muy similares en lo esencial, pero pueden diferir en detalles como: número de revisiones incluidas, cobertura de daños en llantas, o si incluyen coche de sustitución durante reparaciones. Siempre merece la pena leer las condiciones generales antes de contratar.</p>
 
-<p class="cta-inline">¿Quieres comparar qué incluye cada gestora? <a href="/">Ver todas las ofertas de renting en MiRenting →</a></p>
+<p class="cta-inline">¿Quieres comparar qué incluye cada gestora? <a href="/">Ver todas las ofertas de renting en Myrenting →</a></p>
 """,
 },
 
@@ -175,7 +175,7 @@ ARTICULOS = [
 <h2>¿Renting o leasing para autónomos?</h2>
 <p>El renting es operativo (gasto, fuera de balance) mientras que el leasing es financiero (activo en balance con amortización). Para la mayoría de autónomos individuales, el renting es más sencillo contablemente y fiscalmente igual de ventajoso.</p>
 
-<p class="cta-inline">¿Buscas el renting más barato para tu actividad? <a href="/">Comparar ofertas en MiRenting →</a></p>
+<p class="cta-inline">¿Buscas el renting más barato para tu actividad? <a href="/">Comparar ofertas en Myrenting →</a></p>
 """,
 },
 
@@ -225,7 +225,7 @@ ARTICULOS = [
 <h2>¿Cómo comparar para encontrar el precio real?</h2>
 <p>Los precios cambian según gestora, plazo y kilómetros. El mismo Qashqai puede variar más de 100€/mes entre Arval y Ayvens para las mismas condiciones. Antes de llamar a nadie, compara online.</p>
 
-<p class="cta-inline">¿Quieres ver los precios reales actualizados? <a href="/">Comparar ofertas en MiRenting →</a></p>
+<p class="cta-inline">¿Quieres ver los precios reales actualizados? <a href="/">Comparar ofertas en Myrenting →</a></p>
 """,
 },
 
@@ -261,7 +261,7 @@ ARTICULOS = [
 </ul>
 <p>Para la gran mayoría de autónomos y pymes en España, el renting es la opción más práctica, más flexible y con menos sorpresas.</p>
 
-<p class="cta-inline">¿Buscas ofertas de renting sin compromisos? <a href="/">Ver todas las ofertas en MiRenting →</a></p>
+<p class="cta-inline">¿Buscas ofertas de renting sin compromisos? <a href="/">Ver todas las ofertas en Myrenting →</a></p>
 """,
 },
 
@@ -287,8 +287,8 @@ def html_articulo(art: dict, todos: list) -> str:
         "@type": "Article",
         "headline": titulo,
         "description": desc,
-        "author": {"@type": "Organization", "name": "MiRenting"},
-        "publisher": {"@type": "Organization", "name": "MiRenting", "url": BASE_URL},
+        "author": {"@type": "Organization", "name": "Myrenting"},
+        "publisher": {"@type": "Organization", "name": "Myrenting", "url": BASE_URL},
         "datePublished": date.today().isoformat(),
         "url": f"{BASE_URL}/blog/{slug}.html"
     }, ensure_ascii=False)
@@ -299,11 +299,11 @@ def html_articulo(art: dict, todos: list) -> str:
   <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}})(window,document,'script','dataLayer','GTM-NHXGQF97');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{titulo} | MiRenting</title>
+  <title>{titulo} | Myrenting</title>
   <meta name="description" content="{desc}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{BASE_URL}/blog/{slug}.html">
-  <meta property="og:title" content="{titulo} | MiRenting">
+  <meta property="og:title" content="{titulo} | Myrenting">
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{BASE_URL}/blog/{slug}.html">
   <meta property="og:type" content="article">
@@ -311,7 +311,7 @@ def html_articulo(art: dict, todos: list) -> str:
   <script type="application/ld+json">{schema}</script>
   <style>
     {CSS_BASE}
-    .article-hero{{background:#111318;color:#fff;padding:52px 28px 44px}}
+    .article-hero{{background:#fff;border-bottom:1.5px solid #E8E8E5;color:#111110;padding:52px 28px 44px}}
     .article-hero-inner{{max-width:780px;margin:0 auto}}
     .breadcrumb{{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:14px}}
     .breadcrumb a{{color:rgba(255,255,255,.4);text-decoration:none}}
@@ -358,7 +358,7 @@ def html_articulo(art: dict, todos: list) -> str:
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo">MiRenting<span class="logo-dot"></span></a>
+    <a href="/" class="logo">Myrenting<span class="logo-dot"></span></a>
     <a href="/blog/" class="nav-back">← Blog</a>
   </div>
 </nav>
@@ -366,7 +366,7 @@ def html_articulo(art: dict, todos: list) -> str:
 <section class="article-hero">
   <div class="article-hero-inner">
     <div class="breadcrumb">
-      <a href="/">MiRenting</a> › <a href="/blog/">Blog</a> › {categoria}
+      <a href="/">Myrenting</a> › <a href="/blog/">Blog</a> › {categoria}
     </div>
     <span class="cat-pill">{categoria}</span>
     <h1>{titulo}</h1>
@@ -386,7 +386,7 @@ def html_articulo(art: dict, todos: list) -> str:
 </div>
 
 <footer>
-  <p>© 2026 MiRenting · mtiagconsulting · Barcelona, España</p>
+  <p>© 2026 Myrenting · mtiagconsulting · Barcelona, España</p>
   <p>
     <a href="/">Comparador</a>
     <a href="/blog/">Blog</a>
@@ -430,14 +430,14 @@ def html_blog_index(articulos: list) -> str:
   <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}})(window,document,'script','dataLayer','GTM-NHXGQF97');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog de Renting de Coches — Guías y consejos | MiRenting</title>
+  <title>Blog de Renting de Coches — Guías y consejos | Myrenting</title>
   <meta name="description" content="Guías, comparativas y consejos sobre renting de coches en España. Todo lo que necesitas saber antes de contratar tu renting.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{BASE_URL}/blog/">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     {CSS_BASE}
-    .blog-hero{{background:#111318;color:#fff;padding:52px 28px}}
+    .blog-hero{{background:#111110;color:#fff;padding:52px 28px}}
     .blog-hero-inner{{max-width:1280px;margin:0 auto}}
     .blog-hero h1{{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-1px;margin-bottom:10px}}
     .blog-hero h1 em{{font-style:normal;color:var(--accent)}}
@@ -472,7 +472,7 @@ def html_blog_index(articulos: list) -> str:
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo">MiRenting<span class="logo-dot"></span></a>
+    <a href="/" class="logo">Myrenting<span class="logo-dot"></span></a>
     <a href="/" class="nav-back">← Comparador</a>
   </div>
 </nav>
@@ -496,7 +496,7 @@ def html_blog_index(articulos: list) -> str:
 </main>
 
 <footer>
-  <p>© 2026 MiRenting · mtiagconsulting · Barcelona, España</p>
+  <p>© 2026 Myrenting · mtiagconsulting · Barcelona, España</p>
   <p>
     <a href="/">Comparador</a>
     <a href="/blog/">Blog</a>
@@ -529,7 +529,7 @@ def actualizar_sitemap(slugs: list):
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
     print("=" * 55)
-    print("  MiRenting · Generador de Blog estático")
+    print("  Myrenting · Generador de Blog estático")
     print("=" * 55)
     print(f"  Artículos: {len(ARTICULOS)}")
     print(f"  Destino:   {BLOG_DIR}")
