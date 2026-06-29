@@ -1,0 +1,45 @@
+name: Actualizar ofertas
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Lunes 8h Madrid (verano UTC+2)
+  workflow_dispatch:       # Permite lanzarlo manualmente desde GitHub
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests playwright beautifulsoup4
+
+      - name: Instalar Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      - name: Scraping de ofertas
+        run: python3 scripts/scrapers/scrape_myrenting.py
+
+      - name: Regenerar páginas
+        run: python3 scripts/generadores/regenerar_paginas.py
+
+      - name: Gestionar ofertas expiradas
+        run: python3 scripts/mantenimiento/expirar_ofertas.py
+
+      - name: Commit y push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html renting-*.html
+          git diff --staged --quiet || git commit -m "Update ofertas semanales $(date '+%Y-%m-%d')"
+          git push
