@@ -40,8 +40,6 @@
     .nav-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
     .nav-back{font-size:12px;color:var(--ink-4);font-weight:500;display:flex;align-items:center;gap:4px;transition:color .15s}
     .nav-back:hover{color:var(--ink)}
-    .nav-cta-sm{background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:7px 14px;border-radius:var(--radius-sm);transition:background .15s}
-    .nav-cta-sm:hover{background:var(--accent-dk)}
 
     /* HERO */
     .hero{background:#fff;border-bottom:1.5px solid var(--border);padding:0}
@@ -182,10 +180,6 @@
     footer a{color:var(--ink-4);transition:color .15s}
     footer a:hover{color:var(--ink)}
 
-    /* STICKY CTA (solo móvil) */
-    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--accent);padding:12px 20px;z-index:300;text-align:center}
-    .sticky-cta a{color:#fff;font-size:14px;font-weight:700}
-
 
     /* GESTORA CARDS */
     .gestora-section{margin-top:28px}
@@ -263,8 +257,7 @@
       .seo-panel,.faq-panel{padding:18px 14px}
       .filter-bar-inner{gap:8px}
       .fgroup{min-width:calc(50% - 5px)}
-      .sticky-cta{display:block}
-      footer{flex-direction:column;text-align:center;gap:8px;padding-bottom:60px}
+      footer{flex-direction:column;text-align:center;gap:8px}
     }
   </style>
 </head>
@@ -278,7 +271,6 @@
     <span>Myrenting</span>
   </a>
   <a href="/" class="nav-back">&#8592; Todas las ofertas</a>
-  <a href="/" class="nav-cta-sm" onclick="return false">Comparar gratis</a>
 </nav>
 
 <!-- HERO -->
@@ -576,11 +568,6 @@
   <span>&#169; 2026 Myrenting · <a href="/">Comparador de renting de coches en España</a></span>
   <span><a href="/aviso-legal.html">Aviso Legal</a> · <a href="/politica-privacidad.html">Privacidad</a> · <a href="/politica-cookies.html">Cookies</a></span>
 </footer>
-
-<!-- STICKY CTA MÓVIL -->
-<div class="sticky-cta">
-  <a href="/" onclick="history.back();return false">Solicitar mejor oferta gratis →</a>
-</div>
 
 <!-- MODAL VER OFERTA -->
 <div class="modal-overlay" id="ofertaModal" onclick="cerrarModalOverlay(event)">
