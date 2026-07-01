@@ -89,32 +89,7 @@
     .section-title{font-size:16px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px;}
     .section-sub{font-size:11px;color:var(--ink-5);margin-bottom:16px;}
 
-    /* FILTROS DESPLEGABLES */
-    .ofertas-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;user-select:none;background:var(--surface);border-radius:var(--radius) var(--radius) 0 0;border:1px solid var(--border);border-bottom:none;}
-    .ofertas-header-left{display:flex;align-items:center;gap:10px;}
-    .ofertas-count{font-size:12px;font-weight:700;color:var(--ink);}
-    .ofertas-count-badge{background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;}
-    .ofertas-toggle-icon{font-size:14px;color:var(--ink-5);transition:transform .25s;}
-    .ofertas-toggle-icon.open{transform:rotate(180deg);}
-    .ofertas-body{background:var(--surface);border:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius);overflow:hidden;}
-    .ofertas-body.collapsed{display:none;}
 
-    /* FILTROS */
-    .filter-bar{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 2px 16px rgba(0,0,0,.07);}
-    .filter-bar-inner{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;}
-    .filter-group{display:flex;flex-direction:column;gap:3px;min-width:120px;}
-    .filter-group label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);}
-    .filter-group select{padding:7px 10px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:11px;font-family:inherit;color:var(--ink-3);background:var(--surface);cursor:pointer;outline:none;transition:border-color .15s;}
-    .filter-group select:focus,.filter-group select.active{border-color:var(--accent);color:var(--ink);}
-    .filter-actions{display:flex;align-items:flex-end;gap:8px;margin-left:auto;}
-    .filter-count{font-size:11px;color:var(--ink-5);white-space:nowrap;padding-bottom:4px;}
-    .fgroup{display:flex;flex-direction:column;gap:3px;flex:1;min-width:130px;}
-    .fgroup label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);display:block;}
-    .fgroup select{border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;background:var(--bg);color:var(--ink);cursor:pointer;width:100%;}
-    .fgroup select.active{border-color:var(--accent);color:var(--accent);}
-    .filter-right{display:flex;align-items:center;gap:8px;margin-left:auto;padding-top:4px;}
-    .btn-reset{background:none;border:1.5px solid var(--border-2);border-radius:99px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--ink-4);cursor:pointer;font-family:inherit;transition:all .15s;}
-    .btn-reset:hover{border-color:var(--accent);color:var(--accent);}
 
     /* TABLA */
     .comp-table-wrap{overflow-x:auto;}
@@ -185,7 +160,6 @@
       .hero-stats{grid-template-columns:1fr 1fr;}
       .section{padding:0 16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
-      .filter-bar-inner{gap:8px;}
       .filter-group{min-width:calc(50% - 4px);}
       .footer{flex-direction:column;gap:12px;text-align:center;padding:16px;}
       .footer-links{flex-wrap:wrap;justify-content:center;}
@@ -244,6 +218,16 @@
       .card-price-num{font-size:26px;}
     }
 
+  
+    /* FILTROS — mockup */
+    .filters{background:#fff;border-radius:14px;border:1px solid var(--border);padding:16px;margin-bottom:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;box-shadow:0 2px 16px rgba(0,0,0,.07);}
+    .f-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);margin-bottom:3px;display:block;}
+    .f-group{display:flex;flex-direction:column;flex:1;min-width:130px;}
+    .f-select{border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;background:#fff;color:var(--ink);cursor:pointer;}
+    .f-select.active{border-color:var(--accent);color:var(--accent);}
+    .f-count{font-size:12px;color:var(--ink-4);align-self:flex-end;padding-bottom:10px;white-space:nowrap;}
+    .f-reset{background:none;border:1.5px solid var(--border);border-radius:99px;padding:6px 14px;font-size:11px;font-weight:600;color:var(--ink-4);cursor:pointer;font-family:inherit;align-self:flex-end;}
+    .f-reset:hover{border-color:var(--accent);color:var(--accent);}
   </style>
 </head>
 <body>
@@ -314,19 +298,27 @@
 <div class="section comparador-section" style="margin-top:8px;">
   <div class="comparador-header">
     <span class="comparador-title">Oferta disponible</span>
-    <span class="comparador-count" id="filter-count">11 ofertas</span>
   </div>
 
-  <div class="filter-bar">
-    <div class="filter-bar-inner">
-      <div class="fgroup"><label>Plazo</label><select id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option></select></div>
-      <div class="fgroup"><label>Combustible</label><select id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option><option value="diesel">Diesel</option><option value="híbrido-enchufable">Híbrido Enchufable</option></select></div>
-      <div class="fgroup"><label>Cliente</label><select id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option><option value="particular">particular</option></select></div>
-      <div class="fgroup"><label>Gestora</label><select id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select></div>
-      <div class="filter-right">
-        <button class="btn-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
-      </div>
+  <div class="filters">
+    <div class="f-group">
+      <label class="f-label">Plazo</label>
+      <select class="f-select" id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option></select>
     </div>
+    <div class="f-group">
+      <label class="f-label">Combustible</label>
+      <select class="f-select" id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option><option value="diesel">Diesel</option><option value="híbrido-enchufable">Híbrido Enchufable</option></select>
+    </div>
+    <div class="f-group">
+      <label class="f-label">Cliente</label>
+      <select class="f-select" id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option><option value="particular">particular</option></select>
+    </div>
+    <div class="f-group">
+      <label class="f-label">Gestora</label>
+      <select class="f-select" id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select>
+    </div>
+    <span class="f-count" id="filter-count">11 ofertas</span>
+    <button class="f-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
   </div>
 
   <div class="compare-grid" id="compare-grid">
