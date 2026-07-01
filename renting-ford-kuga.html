@@ -263,6 +263,24 @@
       .car-price-hero{text-align:left;}
       .ch-wrap{padding:16px 16px 12px;}
     }
+  
+    /* card-price-desde label */
+    .card-price-desde{font-size:11px;color:var(--ink-4);margin-right:2px;}
+    /* similar vehicles */
+    .similar-section{padding:0 32px;margin-bottom:28px;}
+    .similar-title{font-size:13px;font-weight:700;color:var(--ink-4);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;}
+    .similar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .similar-card{background:#fff;border-radius:12px;border:1.5px solid var(--border);padding:14px;text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:6px;}
+    .similar-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.10);transform:translateY(-2px);}
+    .sim-img-wrap{height:72px;background:var(--surface-2);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .sim-img-wrap img{width:100%;height:100%;object-fit:contain;padding:4px;}
+    .sim-model{font-size:13px;font-weight:700;color:var(--ink);}
+    .sim-price{font-size:12px;color:var(--ink-4);}
+    .sim-price strong{color:var(--accent);font-size:14px;}
+    @media(max-width:768px){
+      .similar-grid{grid-template-columns:1fr 1fr;}
+      .similar-section{padding:0 16px;}
+    }
   </style>
 </head>
 <body>
@@ -327,327 +345,62 @@
       <label class="f-label">Gestora</label>
       <select class="f-select" id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select>
     </div>
-    <span class="f-count" id="filter-count">13 ofertas</span>
+    <span class="f-count" id="filter-count">13 gestoras</span>
     <button class="f-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
   </div>
 
   <div class="compare-grid" id="compare-grid">
-    <div class="offer-card best" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido" data-plazo="">
+    <div class="offer-card best" data-fuente="ayvens" data-tipo="particular" data-fuel="diesel híbrido híbrido enchufable" data-plazo="" data-fuels="diesel híbrido híbrido enchufable" data-tipos="particular" data-plazos="">
       <div class="best-ribbon">&#9733; MEJOR PRECIO</div>
       <div class="card-gestora">
         <div class="gestora-logo">AY</div>
         <div>
           <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido</div>
+          <div class="gestora-type">Particular &middot; 13 ofertas</div>
         </div>
       </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">Titanium 2.5 Duratec FHEV 140kW Auto</span></div>
-      </div>
       <div class="card-price-wrap">
+        <span class="card-price-desde">desde</span>
         <span class="card-price-num">297</span>
-        <span class="card-price-unit">€/mes</span>
-        <span class="card-savings">−17% vs. media</span>
+        <span class="card-price-unit">&euro;/mes</span>
+        <span class="card-savings">&#8722;17% vs. media</span>
       </div>
       <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">Titanium 2.5 Duratec FHEV 140kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">308</span>
-        <span class="card-price-unit">€/mes</span>
-        <span class="card-savings">−14% vs. media</span>
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diesel" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · Diesel</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">(O) ST-Line 1.5 EcoBlue 88kW (120CV)</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">309</span>
-        <span class="card-price-unit">€/mes</span>
-        <span class="card-savings">−13% vs. media</span>
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diesel" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · Diesel</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line 1.5 EcoBlue 88kW (120CV) Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">309</span>
-        <span class="card-price-unit">€/mes</span>
-        <span class="card-savings">−13% vs. media</span>
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">Titanium 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">344</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line X 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">347</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">352</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">364</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line X 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">384</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line X 2.5 Duratec FHEV Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">390</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line X 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">404</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">(O) ST-Line X 2.5 Duratec FHEV Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">407</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
-      </div>
-    </div>
-    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="">
-      
-      <div class="card-gestora">
-        <div class="gestora-logo">AY</div>
-        <div>
-          <div class="gestora-name">Ayvens</div>
-          <div class="gestora-type">particular · híbrido enchufable</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">ST-Line X 2.5 Duratec PHEV 165kW Auto</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">428</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
-        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+        <button class="btn-card-info" onclick="abrirModal('Ayvens','Ford Kuga');return false;">Solicitar info</button>
+        <button class="btn-card-ver" onclick="abrirModalGestora('ayvens','Ayvens','Ford Kuga');return false;">Ver ofertas &rarr;</button>
       </div>
     </div>
   </div>
 
   <div class="no-results-cards" id="no-results-msg">
     Sin resultados con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+  </div>
+</div>
+
+<!-- COCHES SIMILARES -->
+<div class="similar-section">
+  <div class="similar-title">Coches similares</div>
+  <div class="similar-grid">
+  <a class="similar-card" href="/renting-ford-explorer.html">
+    <div class="sim-img-wrap"><img src="/img/modelos/ford-explorer.png" alt="Ford Explorer" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+    <div class="sim-model">Ford Explorer</div>
+    <div class="sim-price">desde <strong>343&euro;</strong>/mes</div>
+  </a>
+  <a class="similar-card" href="/renting-ford-fiesta.html">
+    <div class="sim-img-wrap"><img src="/img/modelos/ford-fiesta.png" alt="Ford Fiesta" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+    <div class="sim-model">Ford Fiesta</div>
+    <div class="sim-price">desde <strong>252&euro;</strong>/mes</div>
+  </a>
+  <a class="similar-card" href="/renting-ford-focus.html">
+    <div class="sim-img-wrap"><img src="/img/modelos/ford-focus.png" alt="Ford Focus" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+    <div class="sim-model">Ford Focus</div>
+    <div class="sim-price">desde <strong>254&euro;</strong>/mes</div>
+  </a>
+  <a class="similar-card" href="/renting-ford-mondeo.html">
+    <div class="sim-img-wrap"><img src="/img/modelos/ford-mondeo.png" alt="Ford Mondeo" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+    <div class="sim-model">Ford Mondeo</div>
+    <div class="sim-price">desde <strong>352&euro;</strong>/mes</div>
+  </a>
   </div>
 </div>
 
@@ -710,17 +463,49 @@
 
 
 
+<!-- MODAL GESTORA -->
+<div id="mg-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;align-items:center;justify-content:center;padding:16px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:16px;max-width:620px;width:100%;max-height:88vh;overflow-y:auto;position:relative;">
+    <div style="padding:22px 22px 0;position:sticky;top:0;background:#fff;border-radius:16px 16px 0 0;z-index:1;border-bottom:1px solid #ebebeb;padding-bottom:14px;margin-bottom:4px;">
+      <button onclick="document.getElementById('mg-overlay').style.display='none'" style="position:absolute;top:14px;right:14px;background:#f0f0ee;border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:15px;">&#x2715;</button>
+      <h3 id="mg-title" style="font-size:17px;font-weight:800;margin-bottom:2px;"></h3>
+      <p id="mg-subtitle" style="font-size:12px;color:#888;"></p>
+    </div>
+    <div id="mg-offers" style="padding:4px 22px 0;"></div>
+    <div style="padding:18px 22px 22px;border-top:1px solid #ebebeb;margin-top:8px;">
+      <h4 style="font-size:13px;font-weight:700;margin-bottom:14px;">Solicitar esta oferta</h4>
+      <div id="mg-sel-info" style="display:none;background:#fff8f5;border:1.5px solid #ffd5cc;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#555;"></div>
+      <form id="mg-form" onsubmit="enviarLeadGestora(event)">
+        <input type="hidden" id="mg-gestora-h" name="gestora">
+        <input type="hidden" id="mg-vehiculo-h" name="vehiculo">
+        <input type="hidden" id="mg-oferta-h" name="oferta_seleccionada">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+          <div><label style="font-size:11px;font-weight:600;display:block;margin-bottom:4px;">Nombre *</label><input type="text" name="nombre" required placeholder="Tu nombre" style="width:100%;padding:9px 12px;border:1.5px solid #ebebeb;border-radius:8px;font-size:13px;font-family:inherit;outline:none;"></div>
+          <div><label style="font-size:11px;font-weight:600;display:block;margin-bottom:4px;">Tel&eacute;fono *</label><input type="tel" name="telefono" required placeholder="6XX XXX XXX" style="width:100%;padding:9px 12px;border:1.5px solid #ebebeb;border-radius:8px;font-size:13px;font-family:inherit;outline:none;"></div>
+        </div>
+        <div style="margin-bottom:10px;"><label style="font-size:11px;font-weight:600;display:block;margin-bottom:4px;">Email *</label><input type="email" name="email" required placeholder="tu@email.com" style="width:100%;padding:9px 12px;border:1.5px solid #ebebeb;border-radius:8px;font-size:13px;font-family:inherit;outline:none;"></div>
+        <button type="submit" style="width:100%;background:#e8380d;color:#fff;border:none;padding:13px;border-radius:99px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:4px;">Enviar solicitud</button>
+      </form>
+      <div id="mg-ok" style="display:none;text-align:center;padding:24px 0;">
+        <div style="width:52px;height:52px;background:#f0fdf4;border-radius:50%;font-size:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">&#10003;</div>
+        <h3 style="font-size:17px;font-weight:800;margin-bottom:6px;">&#161;Solicitud enviada!</h3>
+        <p style="color:#888;font-size:13px;">Te contactamos en menos de 24h.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="footer-brand">
     <div class="footer-logo">M</div>
-    <span class="footer-name">Myrenting</span>
+    <span class="footer-name">My<span style="color:var(--accent)">renting</span></span>
   </div>
   <div class="footer-links">
     <a href="/aviso-legal.html">Aviso legal</a>
     <a href="/politica-privacidad.html">Privacidad</a>
     <a href="/blog/">Blog</a>
   </div>
-  <span class="footer-copy">2026 Myrenting · Barcelona</span>
+  <span class="footer-copy">2026 My<span style="color:var(--accent)">renting</span> · Barcelona</span>
 </footer>
 
 <script>
@@ -756,34 +541,33 @@
 
   // Filtros
   function filtrarTabla() {
-    const plazo  = document.getElementById('f-plazo')?.value  || '';
-    const fuel   = document.getElementById('f-fuel')?.value   || '';
-    const tipo   = document.getElementById('f-tipo')?.value   || '';
-    const fuente = document.getElementById('f-fuente')?.value || '';
-    const hayFiltro = plazo || fuel || tipo || fuente;
-    const btnReset = document.getElementById('btn-reset');
-    if (btnReset) btnReset.style.display = hayFiltro ? 'inline-block' : 'none';
-    ['f-plazo','f-fuel','f-tipo','f-fuente'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.toggle('active', el.value !== '');
+    var plazo=document.getElementById('f-plazo')?.value||'';
+    var fuel=document.getElementById('f-fuel')?.value||'';
+    var tipo=document.getElementById('f-tipo')?.value||'';
+    var fuente=document.getElementById('f-fuente')?.value||'';
+    var hayFiltro=plazo||fuel||tipo||fuente;
+    var btn=document.getElementById('btn-reset');
+    if(btn) btn.style.display=hayFiltro?'inline-block':'none';
+    ['f-plazo','f-fuel','f-tipo','f-fuente'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.classList.toggle('active',el.value!=='');
     });
-    const cards = document.querySelectorAll('.offer-card');
-    let visibles = 0;
-    cards.forEach(card => {
-      const match =
-        (!plazo  || card.dataset.plazo  === plazo)  &&
-        (!fuel   || card.dataset.fuel?.includes(fuel)) &&
-        (!tipo   || card.dataset.tipo   === tipo)   &&
-        (!fuente || card.dataset.fuente === fuente);
-      card.classList.toggle('hidden-card', !match);
-      if (match) visibles++;
+    var cards=document.querySelectorAll('.offer-card');
+    var vis=0;
+    cards.forEach(function(c){
+      var cF=(c.dataset.fuels||c.dataset.fuel||'').toLowerCase();
+      var cT=(c.dataset.tipos||c.dataset.tipo||'').toLowerCase();
+      var cP=(c.dataset.plazos||c.dataset.plazo||'').toLowerCase();
+      var cS=(c.dataset.fuente||'').toLowerCase();
+      var ok=(!plazo||cP.includes(plazo.toLowerCase()))&&(!fuel||cF.includes(fuel.toLowerCase()))&&(!tipo||cT.includes(tipo.toLowerCase()))&&(!fuente||cS===fuente.toLowerCase());
+      c.classList.toggle('hidden-card',!ok);
+      if(ok) vis++;
     });
-    const countEl = document.getElementById('filter-count');
-    if (countEl) countEl.textContent = hayFiltro
-      ? visibles + ' de ' + cards.length + ' oferta' + (cards.length !== 1 ? 's' : '')
-      : cards.length + ' oferta' + (cards.length !== 1 ? 's' : '');
-    const noRes = document.getElementById('no-results-msg');
-    if (noRes) noRes.style.display = visibles === 0 ? 'block' : 'none';
+    var n=cards.length;
+    var el=document.getElementById('filter-count');
+    if(el) el.textContent=hayFiltro?vis+' de '+n+' gestora'+(n!==1?'s':''):n+' gestora'+(n!==1?'s':'');
+    var nr=document.getElementById('no-results-msg');
+    if(nr) nr.style.display=vis===0?'block':'none';
   }
 
   function resetFiltros() {
@@ -795,10 +579,14 @@
   }
 
   // Modal
-  function abrirModal() {
-    document.getElementById('modal-overlay').style.display = 'flex';
-    document.getElementById('modal-form-wrap').style.display = 'block';
-    document.getElementById('modal-success').style.display = 'none';
+  function abrirModal(gestora, vehiculo) {
+    var ov=document.getElementById('modal-overlay');
+    if(!ov) return;
+    var ci=document.getElementById('modal-car-info');
+    if(ci&&gestora) ci.textContent=gestora+(vehiculo?' — '+vehiculo:'');
+    var fw=document.getElementById('modal-form-wrap'),sc=document.getElementById('modal-success');
+    if(fw) fw.style.display='block'; if(sc) sc.style.display='none';
+    ov.style.display='flex';
   }
   function cerrarModal(e) {
     if (e.target === document.getElementById('modal-overlay'))
@@ -824,5 +612,9 @@
     item.classList.toggle('open');
   }
 </script>
+
+  <script>
+  window._OFERTAS = {"ayvens": [{"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido", "plazo": "—", "km": "—", "version": "Titanium 2.5 Duratec FHEV 140kW Auto", "price": "297"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido", "plazo": "—", "km": "—", "version": "Titanium 2.5 Duratec FHEV 140kW Auto", "price": "308"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "diesel", "plazo": "—", "km": "—", "version": "(O) ST-Line 1.5 EcoBlue 88kW (120CV)", "price": "309"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "diesel", "plazo": "—", "km": "—", "version": "ST-Line 1.5 EcoBlue 88kW (120CV) Auto", "price": "309"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "Titanium 2.5 Duratec PHEV 165kW Auto", "price": "344"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "ST-Line X 2.5 Duratec PHEV 165kW Auto", "price": "347"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "ST-Line 2.5 Duratec PHEV 165kW Auto", "price": "352"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "ST-Line 2.5 Duratec PHEV 165kW Auto", "price": "364"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "ST-Line X 2.5 Duratec PHEV 165kW Auto", "price": "384"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido", "plazo": "—", "km": "—", "version": "ST-Line X 2.5 Duratec FHEV Auto", "price": "390"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "ST-Line X 2.5 Duratec PHEV 165kW Auto", "price": "404"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido", "plazo": "—", "km": "—", "version": "(O) ST-Line X 2.5 Duratec FHEV Auto", "price": "407"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "híbrido enchufable", "plazo": "—", "km": "—", "version": "ST-Line X 2.5 Duratec PHEV 165kW Auto", "price": "428"}]};
+  </script>
 </body>
 </html>
