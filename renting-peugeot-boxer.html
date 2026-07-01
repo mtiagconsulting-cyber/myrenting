@@ -210,6 +210,40 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ── COMPARADOR DE TARJETAS ── */
+    .comparador-section{background:var(--surface);padding:0;}
+    .comparador-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 0 10px;}
+    .comparador-title{font-size:15px;font-weight:800;color:var(--ink);}
+    .compare-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:4px;}
+    .offer-card{background:#fff;border-radius:14px;border:1.5px solid var(--border);padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s;position:relative;display:flex;flex-direction:column;}
+    .offer-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.10);}
+    .offer-card.best{border-color:var(--accent);}
+    .offer-card.hidden-card{display:none!important;}
+    .best-ribbon{position:absolute;top:-1px;right:16px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:0 0 8px 8px;letter-spacing:.3px;}
+    .card-gestora{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+    .gestora-logo{width:38px;height:38px;background:var(--surface-2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--ink-4);flex-shrink:0;letter-spacing:-.5px;}
+    .gestora-name{font-size:15px;font-weight:800;line-height:1.2;}
+    .gestora-type{font-size:11px;color:var(--ink-4);margin-top:2px;}
+    .card-rows{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);flex:1;}
+    .card-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+    .row-label{font-size:11px;color:var(--ink-4);font-weight:600;white-space:nowrap;}
+    .row-val{font-size:12px;font-weight:600;color:var(--ink-2);text-align:right;}
+    .card-price-wrap{display:flex;align-items:baseline;gap:4px;margin-bottom:14px;}
+    .card-price-num{font-size:30px;font-weight:800;color:var(--accent);letter-spacing:-1.5px;}
+    .card-price-unit{font-size:13px;color:var(--ink-4);}
+    .card-savings{font-size:10px;color:#15803d;font-weight:700;background:#f0fdf4;padding:3px 8px;border-radius:99px;margin-left:auto;white-space:nowrap;}
+    .card-cta{display:flex;gap:8px;margin-top:auto;}
+    .btn-card-info{background:none;border:1.5px solid var(--border);border-radius:99px;padding:10px 14px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--ink-2);white-space:nowrap;}
+    .btn-card-info:hover{border-color:var(--accent);color:var(--accent);}
+    .btn-card-ver{flex:1;background:var(--accent);color:#fff;border:none;border-radius:99px;padding:10px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;}
+    .no-results-cards{display:none;text-align:center;padding:32px 16px;color:var(--ink-4);font-size:14px;}
+    @media(max-width:600px){
+      .compare-grid{grid-template-columns:1fr;}
+      .offer-card{padding:16px;}
+      .card-price-num{font-size:26px;}
+    }
+
   </style>
 </head>
 <body>
@@ -277,61 +311,78 @@
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
-<div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">2</span>
-      <span class="ofertas-count">ofertas disponibles — Peugeot Boxer</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
+<!-- COMPARADOR DE TARJETAS -->
+<div class="section comparador-section" style="margin-top:8px;">
+  <div class="comparador-header">
+    <span class="comparador-title">Oferta disponible</span>
+    <span class="comparador-count" id="filter-count">2 ofertas</span>
   </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        <div class="fgroup"><label>Plazo</label><select id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option></select></div>
-        <div class="fgroup"><label>Combustible</label><select id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option><option value="diesel">Diesel</option></select></div>
-        <div class="fgroup"><label>Cliente</label><select id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option><option value="empresa">empresa</option><option value="particular">particular</option></select></div>
-        <div class="fgroup"><label>Gestora</label><select id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select></div>
-        <div class="filter-right">
-          <span class="filter-count" id="filter-count">2 ofertas</span>
-          <button class="btn-reset" id="btn-reset" onclick="resetFiltros()">&#x2715; Limpiar</button>
+
+  <div class="filter-bar">
+    <div class="filter-bar-inner">
+      <div class="fgroup"><label>Plazo</label><select id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option></select></div>
+      <div class="fgroup"><label>Combustible</label><select id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option><option value="diesel">Diesel</option></select></div>
+      <div class="fgroup"><label>Cliente</label><select id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option><option value="empresa">empresa</option><option value="particular">particular</option></select></div>
+      <div class="fgroup"><label>Gestora</label><select id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select></div>
+      <div class="filter-right">
+        <button class="btn-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare-grid" id="compare-grid">
+    <div class="offer-card best" data-fuente="ayvens" data-tipo="particular" data-fuel="diesel" data-plazo="">
+      <div class="best-ribbon">&#9733; MEJOR PRECIO</div>
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diesel</div>
         </div>
       </div>
-    </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead><tr><th>Plazo</th><th>Km/año</th><th>Particular</th></tr></thead>
-        <tbody id="comp-tbody"><tr class="best-row" data-fuente="ayvens" data-tipo="particular" data-fuel="diesel" data-plazo="">
-          <td class="rank-cell"><span class="rank-star">&#9733;</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diesel </td>
-          <td data-label="Plazo">—</td>
-          <td data-label="Km/año">—</td>
-          <td class="version-cell" data-label="Versión">3.5 L2 H2 BHDI 103kW (140CV)</td>
-          <td data-label="Precio"><span class="best-badge">&#10003; Mejor precio</span><br><span class="price-strong">434.0 €/mes</span></td>
-          <td><a href="#" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;" class="btn-ver-oferta">Ver oferta →</a></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="empresa" data-fuel="diesel" data-plazo="">
-          <td class="rank-cell"><span class="rank-num">2</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">empresa</span></td>
-          <td data-label="Combustible">Diesel </td>
-          <td data-label="Plazo">—</td>
-          <td data-label="Km/año">—</td>
-          <td class="version-cell" data-label="Versión">3.5 L2 H2 BHDI 103kW (140CV)</td>
-          <td data-label="Precio"><span class="price-strong">436.0 €/mes</span></td>
-          <td><a href="#" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;" class="btn-ver-oferta">Ver oferta →</a></td>
-        </tr></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">3.5 L2 H2 BHDI 103kW (140CV)</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">434</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
+        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
       </div>
     </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="empresa" data-fuel="diesel" data-plazo="">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">empresa · Diesel</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">3.5 L2 H2 BHDI 103kW (140CV)</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">436</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'https://www.ayvens.com/es-es/ofertas/','Ayvens');return false;">Solicitar info</button>
+        <a href="https://www.ayvens.com/es-es/ofertas/" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-results-cards" id="no-results-msg">
+    Sin resultados con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
   </div>
 </div>
 
@@ -409,16 +460,6 @@
 
 <script>
   // Desplegable ofertas
-  function toggleOfertas(header) {
-    const body = document.getElementById('ofertas-body');
-    const icon = document.getElementById('toggle-icon');
-    const collapsed = body.classList.contains('collapsed');
-    body.classList.toggle('collapsed', !collapsed);
-    icon.classList.toggle('open', collapsed);
-    if (collapsed) {
-      body.scrollIntoView({behavior:'smooth', block:'nearest'});
-    }
-  }
 
   // Auto-abrir si hay pocas ofertas
   window.addEventListener('DOMContentLoaded', () => {
@@ -461,32 +502,23 @@
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', el.value !== '');
     });
-    const filas = document.querySelectorAll('#comp-tbody tr');
+    const cards = document.querySelectorAll('.offer-card');
     let visibles = 0;
-    filas.forEach(tr => {
+    cards.forEach(card => {
       const match =
-        (!plazo  || tr.dataset.plazo  === plazo)  &&
-        (!fuel   || tr.dataset.fuel?.includes(fuel)) &&
-        (!tipo   || tr.dataset.tipo   === tipo)   &&
-        (!fuente || tr.dataset.fuente === fuente);
-      tr.classList.toggle('hidden-row', !match);
+        (!plazo  || card.dataset.plazo  === plazo)  &&
+        (!fuel   || card.dataset.fuel?.includes(fuel)) &&
+        (!tipo   || card.dataset.tipo   === tipo)   &&
+        (!fuente || card.dataset.fuente === fuente);
+      card.classList.toggle('hidden-card', !match);
       if (match) visibles++;
     });
-    let num = 1;
-    filas.forEach(tr => {
-      if (!tr.classList.contains('hidden-row') && !tr.classList.contains('best-row')) {
-        const cell = tr.querySelector('.rank-cell');
-        if (cell) cell.innerHTML = `<span class="rank-num">${num}</span>`;
-        num++;
-      }
-    });
     const countEl = document.getElementById('filter-count');
-    if (countEl) countEl.textContent = hayFiltro ? visibles + ' de ' + filas.length + ' ofertas' : filas.length + ' ofertas';
+    if (countEl) countEl.textContent = hayFiltro
+      ? visibles + ' de ' + cards.length + ' oferta' + (cards.length !== 1 ? 's' : '')
+      : cards.length + ' oferta' + (cards.length !== 1 ? 's' : '');
     const noRes = document.getElementById('no-results-msg');
     if (noRes) noRes.style.display = visibles === 0 ? 'block' : 'none';
-    // Auto-abrir tabla al filtrar
-    document.getElementById('ofertas-body').classList.remove('collapsed');
-    document.getElementById('toggle-icon').classList.add('open');
   }
 
   function resetFiltros() {

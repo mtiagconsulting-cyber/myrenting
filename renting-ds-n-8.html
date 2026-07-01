@@ -210,6 +210,40 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ── COMPARADOR DE TARJETAS ── */
+    .comparador-section{background:var(--surface);padding:0;}
+    .comparador-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 0 10px;}
+    .comparador-title{font-size:15px;font-weight:800;color:var(--ink);}
+    .compare-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:4px;}
+    .offer-card{background:#fff;border-radius:14px;border:1.5px solid var(--border);padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s;position:relative;display:flex;flex-direction:column;}
+    .offer-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.10);}
+    .offer-card.best{border-color:var(--accent);}
+    .offer-card.hidden-card{display:none!important;}
+    .best-ribbon{position:absolute;top:-1px;right:16px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:0 0 8px 8px;letter-spacing:.3px;}
+    .card-gestora{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+    .gestora-logo{width:38px;height:38px;background:var(--surface-2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--ink-4);flex-shrink:0;letter-spacing:-.5px;}
+    .gestora-name{font-size:15px;font-weight:800;line-height:1.2;}
+    .gestora-type{font-size:11px;color:var(--ink-4);margin-top:2px;}
+    .card-rows{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);flex:1;}
+    .card-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+    .row-label{font-size:11px;color:var(--ink-4);font-weight:600;white-space:nowrap;}
+    .row-val{font-size:12px;font-weight:600;color:var(--ink-2);text-align:right;}
+    .card-price-wrap{display:flex;align-items:baseline;gap:4px;margin-bottom:14px;}
+    .card-price-num{font-size:30px;font-weight:800;color:var(--accent);letter-spacing:-1.5px;}
+    .card-price-unit{font-size:13px;color:var(--ink-4);}
+    .card-savings{font-size:10px;color:#15803d;font-weight:700;background:#f0fdf4;padding:3px 8px;border-radius:99px;margin-left:auto;white-space:nowrap;}
+    .card-cta{display:flex;gap:8px;margin-top:auto;}
+    .btn-card-info{background:none;border:1.5px solid var(--border);border-radius:99px;padding:10px 14px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;color:var(--ink-2);white-space:nowrap;}
+    .btn-card-info:hover{border-color:var(--accent);color:var(--accent);}
+    .btn-card-ver{flex:1;background:var(--accent);color:#fff;border:none;border-radius:99px;padding:10px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;}
+    .no-results-cards{display:none;text-align:center;padding:32px 16px;color:var(--ink-4);font-size:14px;}
+    @media(max-width:600px){
+      .compare-grid{grid-template-columns:1fr;}
+      .offer-card{padding:16px;}
+      .card-price-num{font-size:26px;}
+    }
+
   </style>
 </head>
 <body>
@@ -277,242 +311,408 @@
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
-<div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">15</span>
-      <span class="ofertas-count">ofertas disponibles — DS N 8</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
+<!-- COMPARADOR DE TARJETAS -->
+<div class="section comparador-section" style="margin-top:8px;">
+  <div class="comparador-header">
+    <span class="comparador-title">Compara las 2 gestoras disponibles</span>
+    <span class="comparador-count" id="filter-count">15 ofertas</span>
   </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        <div class="filter-group">
-          <label>Plazo</label>
-          <select id="f-plazo" onchange="filtrarTabla()">
-            <option value="">Cualquier plazo</option>
+
+  <div class="filter-bar">
+    <div class="filter-bar-inner">
+      <div class="fgroup"><label>Plazo</label><select id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option>
             <option value="24">24 meses</option>
             <option value="36">36 meses</option>
             <option value="48">48 meses</option>
             <option value="60">60 meses</option>
-            <option value="72">72 meses</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label>Combustible</label>
-          <select id="f-fuel" onchange="filtrarTabla()">
-            <option value="">Cualquier combustible</option>
+            <option value="72">72 meses</option></select></div>
+      <div class="fgroup"><label>Combustible</label><select id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option>
             <option value="gasolina">Gasolina</option>
             <option value="diésel">Diesel</option>
             <option value="híbrido">Hibrido</option>
             <option value="eléctrico">Electrico</option>
-            <option value="híbrido enchufable">Hibrido Enchufable</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label>Perfil</label>
-          <select id="f-tipo" onchange="filtrarTabla()">
-            <option value="">Empresa y particular</option>
+            <option value="híbrido enchufable">Hibrido Enchufable</option></select></div>
+      <div class="fgroup"><label>Cliente</label><select id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option>
             <option value="empresa">Empresa</option>
-            <option value="particular">Particular</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label>Gestora</label>
-          <select id="f-fuente" onchange="filtrarTabla()">
-            <option value="">Todas las gestoras</option>
+            <option value="particular">Particular</option></select></div>
+      <div class="fgroup"><label>Gestora</label><select id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option>
             <option value="arval">Arval</option>
             <option value="ayvens">Ayvens</option>
             <option value="alphabet">Alphabet</option>
             <option value="kinto">Kinto</option>
             <option value="revel">REVEL</option>
-            <option value="leasys">Leasys</option>
-          </select>
-        </div>
-        <div class="filter-actions">
-          <span id="filter-count" class="filter-count"></span>
-          <button class="btn-reset" onclick="resetFiltros()" id="btn-reset" style="display:none">✕ Limpiar</button>
-        </div>
+            <option value="leasys">Leasys</option></select></div>
+      <div class="filter-right">
+        <button class="btn-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
       </div>
     </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead><tr><th>#</th><th>Gestora</th><th>Cliente</th><th>Combustible</th><th>Plazo</th><th>Km/año</th><th>Versión</th><th>Precio/mes</th><th></th></tr></thead>
-        <tbody id="comp-tbody"><tr class="best-row" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
-          <td class="rank-cell"><span class="rank-star">★</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Gasolina 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 GDi 97kW (132CV) Concept 4x2</td>
-          <td data-label="Precio"><span class="best-badge">✓ Mejor precio</span><br><span class="price-strong">343.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53993437',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="arval" data-tipo="empresa" data-fuel="híbrido" data-plazo="72">
-          <td class="rank-cell"><span class="rank-num">2</span></td>
-          <td data-label="Gestora"><strong>Arval</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">empresa</span></td>
-          <td data-label="Combustible">Híbrido 🔵 ECO</td>
-          <td data-label="Plazo">72 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 T-GDi HEV 176kW (239CV) Concept 4x2 (PENTA METAL)</td>
-          <td data-label="Precio"><span class="price-strong">355.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('lead-empresa-kia-sportage',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">3</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Business 100kW (136CV) 4x4</td>
-          <td data-label="Precio"><span class="price-strong">358.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53981485',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">4</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Business 100kW (136CV) 4x4</td>
-          <td data-label="Precio"><span class="price-strong">363.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53874237',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">5</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Business 100kW (136CV) 4x4</td>
-          <td data-label="Precio"><span class="price-strong">363.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53753044',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">6</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Business 100kW (136CV) 4x4</td>
-          <td data-label="Precio"><span class="price-strong">363.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53851144',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">7</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Business 100kW (136CV) 4x4</td>
-          <td data-label="Precio"><span class="price-strong">374.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53950347',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">8</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Business 100kW (136CV) 4x4</td>
-          <td data-label="Precio"><span class="price-strong">374.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53973420',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">9</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 CRDi MHEV 100kW (136CV) Drive 4x2</td>
-          <td data-label="Precio"><span class="price-strong">375.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-54035280',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">10</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Black Edition 100kW (136CV) 4x2</td>
-          <td data-label="Precio"><span class="price-strong">382.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53810436',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">11</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Diésel 🟡 C</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 MHEV Black Edition 100kW (136CV) 4x2</td>
-          <td data-label="Precio"><span class="price-strong">382.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53865712',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="arval" data-tipo="particular" data-fuel="híbrido" data-plazo="72">
-          <td class="rank-cell"><span class="rank-num">12</span></td>
-          <td data-label="Gestora"><strong>Arval</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Híbrido 🔵 ECO</td>
-          <td data-label="Plazo">72 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 T-GDi HEV 176kW (239CV) Concept 4x2 (PENTA METAL)</td>
-          <td data-label="Precio"><span class="price-strong">430.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('lead-particular-kia-sportage',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="empresa" data-fuel="híbrido" data-plazo="36">
-          <td class="rank-cell"><span class="rank-num">13</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">empresa</span></td>
-          <td data-label="Combustible">Híbrido 🔵 ECO</td>
-          <td data-label="Plazo">36 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 T-GDi HEV 176kW (239CV) Drive 4x2</td>
-          <td data-label="Precio"><span class="price-strong">438.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53939257',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="empresa" data-fuel="híbrido" data-plazo="36">
-          <td class="rank-cell"><span class="rank-num">14</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">empresa</span></td>
-          <td data-label="Combustible">Híbrido 🔵 ECO</td>
-          <td data-label="Plazo">36 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 T-GDi HEV 176kW (239CV) Drive 4x2</td>
-          <td data-label="Precio"><span class="price-strong">440.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53941261',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr>
-        <tr class="" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="24">
-          <td class="rank-cell"><span class="rank-num">15</span></td>
-          <td data-label="Gestora"><strong>Ayvens</strong></td>
-          <td data-label="Cliente"><span class="tipo-badge">particular</span></td>
-          <td data-label="Combustible">Híbrido Enchufable 🔵 ECO</td>
-          <td data-label="Plazo">24 meses</td>
-          <td data-label="Km/año">10.000 km/año</td>
-          <td class="version-cell" data-label="Versión">1.6 T-GDi PHEV 198kW (265CV) Tech 4x4</td>
-          <td data-label="Precio"><span class="price-strong">515.0 €/mes</span></td>
-          <td><button class="btn-ver" onclick="abrirLead('https://ofertas-renting.ayvens.es/ofertas/sportage-53993447',document.querySelector('#lead-car') && this.closest('tr') ? (this.closest('tr').querySelector('[data-label=\'Gestora\']')?.textContent?.trim() + ' · ' + 'DS N 8') : 'DS N 8',this.closest('tr') ? ((this.closest('tr').dataset.plazo||'') + ' meses · ' + (this.closest('tr').querySelector('[data-label=\'Km/año\']')?.textContent?.trim()||'')) : '',this.closest('tr') ? this.closest('tr').querySelector('.price-strong')?.textContent?.replace('/mes','').trim() : '')">Ver oferta →</button></td>
-        </tr></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+  </div>
+
+  <div class="compare-grid" id="compare-grid">
+    <div class="offer-card best" data-fuente="ayvens" data-tipo="particular" data-fuel="gasolina" data-plazo="24">
+      <div class="best-ribbon">&#9733; MEJOR PRECIO</div>
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Gasolina 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 GDi 97kW (132CV) Concept 4x2</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">343</span>
+        <span class="card-price-unit">€/mes</span>
+        <span class="card-savings">−12% vs. media</span>
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
       </div>
     </div>
+    <div class="offer-card" data-fuente="arval" data-tipo="empresa" data-fuel="híbrido" data-plazo="72">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AR</div>
+        <div>
+          <div class="gestora-name">Arval</div>
+          <div class="gestora-type">empresa · Híbrido 🔵 ECO</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">72 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 T-GDi HEV 176kW (239CV) Concept 4x2 (PENTA METAL)</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">355</span>
+        <span class="card-price-unit">€/mes</span>
+        <span class="card-savings">−9% vs. media</span>
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Arval');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Business 100kW (136CV) 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">358</span>
+        <span class="card-price-unit">€/mes</span>
+        <span class="card-savings">−8% vs. media</span>
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Business 100kW (136CV) 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">363</span>
+        <span class="card-price-unit">€/mes</span>
+        <span class="card-savings">−7% vs. media</span>
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Business 100kW (136CV) 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">363</span>
+        <span class="card-price-unit">€/mes</span>
+        <span class="card-savings">−7% vs. media</span>
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Business 100kW (136CV) 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">363</span>
+        <span class="card-price-unit">€/mes</span>
+        <span class="card-savings">−7% vs. media</span>
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Business 100kW (136CV) 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">374</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Business 100kW (136CV) 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">374</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 CRDi MHEV 100kW (136CV) Drive 4x2</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">375</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Black Edition 100kW (136CV) 4x2</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">382</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="diésel" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Diésel 🟡 C</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 MHEV Black Edition 100kW (136CV) 4x2</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">382</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="arval" data-tipo="particular" data-fuel="híbrido" data-plazo="72">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AR</div>
+        <div>
+          <div class="gestora-name">Arval</div>
+          <div class="gestora-type">particular · Híbrido 🔵 ECO</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">72 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 T-GDi HEV 176kW (239CV) Concept 4x2 (PENTA METAL)</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">430</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Arval');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="empresa" data-fuel="híbrido" data-plazo="36">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">empresa · Híbrido 🔵 ECO</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">36 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 T-GDi HEV 176kW (239CV) Drive 4x2</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">438</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="empresa" data-fuel="híbrido" data-plazo="36">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">empresa · Híbrido 🔵 ECO</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">36 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 T-GDi HEV 176kW (239CV) Drive 4x2</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">440</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+    <div class="offer-card" data-fuente="ayvens" data-tipo="particular" data-fuel="híbrido enchufable" data-plazo="24">
+      
+      <div class="card-gestora">
+        <div class="gestora-logo">AY</div>
+        <div>
+          <div class="gestora-name">Ayvens</div>
+          <div class="gestora-type">particular · Híbrido Enchufable 🔵 ECO</div>
+        </div>
+      </div>
+      <div class="card-rows">
+        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">24 meses</span></div>
+        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">10.000 km/año</span></div>
+        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">1.6 T-GDi PHEV 198kW (265CV) Tech 4x4</span></div>
+      </div>
+      <div class="card-price-wrap">
+        <span class="card-price-num">515</span>
+        <span class="card-price-unit">€/mes</span>
+        
+      </div>
+      <div class="card-cta">
+        <button class="btn-card-info" onclick="abrirModal(event,'#','Ayvens');return false;">Solicitar info</button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-card-ver">Ver oferta &#8594;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-results-cards" id="no-results-msg">
+    Sin resultados con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
   </div>
 </div>
 
@@ -590,16 +790,6 @@
 
 <script>
   // Desplegable ofertas
-  function toggleOfertas(header) {
-    const body = document.getElementById('ofertas-body');
-    const icon = document.getElementById('toggle-icon');
-    const collapsed = body.classList.contains('collapsed');
-    body.classList.toggle('collapsed', !collapsed);
-    icon.classList.toggle('open', collapsed);
-    if (collapsed) {
-      body.scrollIntoView({behavior:'smooth', block:'nearest'});
-    }
-  }
 
   // Auto-abrir si hay pocas ofertas
   window.addEventListener('DOMContentLoaded', () => {
@@ -642,32 +832,23 @@
       const el = document.getElementById(id);
       if (el) el.classList.toggle('active', el.value !== '');
     });
-    const filas = document.querySelectorAll('#comp-tbody tr');
+    const cards = document.querySelectorAll('.offer-card');
     let visibles = 0;
-    filas.forEach(tr => {
+    cards.forEach(card => {
       const match =
-        (!plazo  || tr.dataset.plazo  === plazo)  &&
-        (!fuel   || tr.dataset.fuel?.includes(fuel)) &&
-        (!tipo   || tr.dataset.tipo   === tipo)   &&
-        (!fuente || tr.dataset.fuente === fuente);
-      tr.classList.toggle('hidden-row', !match);
+        (!plazo  || card.dataset.plazo  === plazo)  &&
+        (!fuel   || card.dataset.fuel?.includes(fuel)) &&
+        (!tipo   || card.dataset.tipo   === tipo)   &&
+        (!fuente || card.dataset.fuente === fuente);
+      card.classList.toggle('hidden-card', !match);
       if (match) visibles++;
     });
-    let num = 1;
-    filas.forEach(tr => {
-      if (!tr.classList.contains('hidden-row') && !tr.classList.contains('best-row')) {
-        const cell = tr.querySelector('.rank-cell');
-        if (cell) cell.innerHTML = `<span class="rank-num">${num}</span>`;
-        num++;
-      }
-    });
     const countEl = document.getElementById('filter-count');
-    if (countEl) countEl.textContent = hayFiltro ? visibles + ' de ' + filas.length + ' ofertas' : filas.length + ' ofertas';
+    if (countEl) countEl.textContent = hayFiltro
+      ? visibles + ' de ' + cards.length + ' oferta' + (cards.length !== 1 ? 's' : '')
+      : cards.length + ' oferta' + (cards.length !== 1 ? 's' : '');
     const noRes = document.getElementById('no-results-msg');
     if (noRes) noRes.style.display = visibles === 0 ? 'block' : 'none';
-    // Auto-abrir tabla al filtrar
-    document.getElementById('ofertas-body').classList.remove('collapsed');
-    document.getElementById('toggle-icon').classList.add('open');
   }
 
   function resetFiltros() {
