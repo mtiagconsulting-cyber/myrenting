@@ -34,8 +34,8 @@
     /* NAV */
     .nav{background:var(--surface);border-bottom:1.5px solid var(--border);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:100;}
     .nav-brand{display:flex;align-items:center;gap:8px;}
-    .nav-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;}
-    .nav-name{font-size:17px;font-weight:800;letter-spacing:-.5px;}
+    .nav-logo{font-size:17px;font-weight:800;letter-spacing:-.5px;text-decoration:none;color:var(--ink);}
+    .nav-logo span{color:var(--accent);}
     .nav-back{font-size:12px;color:var(--ink-4);font-weight:500;display:flex;align-items:center;gap:4px;}
     .nav-back:hover{color:var(--ink);}
 
@@ -98,7 +98,7 @@
     .ofertas-body.collapsed{display:none;}
 
     /* FILTROS */
-    .filter-bar{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:4px;}
+    .filter-bar{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 2px 16px rgba(0,0,0,.07);}
     .filter-bar-inner{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;}
     .filter-group{display:flex;flex-direction:column;gap:3px;min-width:120px;}
     .filter-group label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);}
@@ -108,7 +108,7 @@
     .filter-count{font-size:11px;color:var(--ink-5);white-space:nowrap;padding-bottom:4px;}
     .fgroup{display:flex;flex-direction:column;gap:3px;flex:1;min-width:130px;}
     .fgroup label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);display:block;}
-    .fgroup select{border:1.5px solid var(--border);border-radius:8px;padding:7px 8px;font-size:13px;font-family:inherit;background:var(--bg);color:var(--ink);cursor:pointer;width:100%;-webkit-appearance:auto;}
+    .fgroup select{border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;background:var(--bg);color:var(--ink);cursor:pointer;width:100%;}
     .fgroup select.active{border-color:var(--accent);color:var(--accent);}
     .filter-right{display:flex;align-items:center;gap:8px;margin-left:auto;padding-top:4px;}
     .btn-reset{background:none;border:1.5px solid var(--border-2);border-radius:99px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--ink-4);cursor:pointer;font-family:inherit;transition:all .15s;}
@@ -214,8 +214,7 @@
 
 <nav class="nav">
   <div class="nav-brand">
-    <div class="nav-logo">M</div>
-    <a href="/"><span class="nav-name">Myrenting</span></a>
+    <a class="nav-logo" href="/">My<span>renting</span></a>
   </div>
   <a href="/" class="nav-back">← Todas las ofertas</a>
 </nav>
