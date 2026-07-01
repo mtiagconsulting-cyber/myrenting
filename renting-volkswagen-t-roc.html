@@ -212,7 +212,7 @@
 <nav class="nav">
   <div class="nav-brand">
     <div class="nav-logo">M</div>
-    <a href="/"><span class="nav-name">MiRenting</span></a>
+    <a href="/"><span class="nav-name">Myrenting</span></a>
   </div>
   <a href="/" class="nav-back">← Todas las ofertas</a>
 </nav>
@@ -287,8 +287,6 @@
   <div class="ofertas-body collapsed" id="ofertas-body">
     <div class="filter-bar">
       <div class="filter-bar-inner">
-        <div class="filter-bar-inner">
-        <div class="filter-bar-inner">
         <div class="fgroup"><label>Plazo</label><select id="f-plazo" onchange="filtrar()"><option value="">Cualquier plazo</option></select></div>
         <div class="fgroup"><label>Combustible</label><select id="f-fuel" onchange="filtrar()"><option value="">Cualquier combustible</option><option value="diesel">Diesel</option><option value="gasolina">Gasolina</option><option value="micro-híbrido-gasolina">Micro híbrido Gasolina</option></select></div>
         <div class="fgroup"><label>Cliente</label><select id="f-tipo" onchange="filtrar()"><option value="">Empresa y particular</option><option value="empresa">empresa</option><option value="particular">particular</option></select></div>
@@ -790,14 +788,14 @@
 <footer class="footer">
   <div class="footer-brand">
     <div class="footer-logo">M</div>
-    <span class="footer-name">MiRenting</span>
+    <span class="footer-name">Myrenting</span>
   </div>
   <div class="footer-links">
     <a href="/aviso-legal.html">Aviso legal</a>
     <a href="/politica-privacidad.html">Privacidad</a>
     <a href="/blog/">Blog</a>
   </div>
-  <span class="footer-copy">2026 MiRenting · Barcelona</span>
+  <span class="footer-copy">2026 Myrenting · Barcelona</span>
 </footer>
 
 <script>
@@ -817,6 +815,23 @@
   window.addEventListener('DOMContentLoaded', () => {
     const total = document.querySelectorAll('#comp-tbody tr').length;
     document.getElementById('badge-count').textContent = total;
+    // Populate stats from table data
+    const priceEls = document.querySelectorAll('#comp-tbody .price-strong');
+    const prices = Array.from(priceEls).map(el => parseFloat(el.textContent.replace(/[^0-9.]/g, ''))).filter(p => !isNaN(p) && p > 0);
+    const rows = document.querySelectorAll('#comp-tbody tr');
+    const gestoras = new Set(Array.from(rows).map(tr => tr.dataset.fuente).filter(Boolean));
+    if (prices.length) {
+      const minP = Math.min(...prices);
+      const pNum = document.querySelector('.precio-num');
+      if (pNum) pNum.textContent = minP % 1 === 0 ? minP : minP.toFixed(0);
+      const stats = document.querySelectorAll('.stat-val');
+      if (stats[0]) stats[0].textContent = (minP % 1 === 0 ? minP : minP.toFixed(0)) + '€';
+      if (stats[1]) stats[1].textContent = gestoras.size;
+      if (stats[2]) stats[2].textContent = total;
+    }
+    const bc = document.querySelector('.badge-count');
+    if (bc) bc.textContent = total + ' oferta' + (total !== 1 ? 's' : '') + ' · ' + gestoras.size + ' gestora' + (gestoras.size !== 1 ? 's' : '');
+
     document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
     if (total <= 4) {
       document.getElementById('ofertas-body').classList.remove('collapsed');
@@ -888,7 +903,7 @@
     const form = e.target;
     const data = new FormData(form);
     try {
-      await fetch('https://formsubmit.co/ajax/info@myrenting.es', {
+      await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com', {
         method:'POST', headers:{'Accept':'application/json'}, body: data
       });
     } catch(err) {}
