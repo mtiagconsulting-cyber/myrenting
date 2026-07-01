@@ -228,6 +228,41 @@
     .f-count{font-size:12px;color:var(--ink-4);align-self:flex-end;padding-bottom:10px;white-space:nowrap;}
     .f-reset{background:none;border:1.5px solid var(--border);border-radius:99px;padding:6px 14px;font-size:11px;font-weight:600;color:var(--ink-4);cursor:pointer;font-family:inherit;align-self:flex-end;}
     .f-reset:hover{border-color:var(--accent);color:var(--accent);}
+  
+    /* ── CAR HEADER ── mockup */
+    .car-header{background:#fff;border-radius:14px;border:1px solid var(--border);padding:24px;margin-bottom:0;display:flex;gap:24px;align-items:center;box-shadow:0 2px 16px rgba(0,0,0,.07);}
+    .car-img-wrap{width:200px;flex-shrink:0;background:var(--surface-2);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:12px;height:130px;}
+    .car-img-wrap img{width:100%;object-fit:contain;}
+    .car-img-empty{width:200px;height:130px;background:linear-gradient(135deg,#f0f0ee 0%,#e8e8e4 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--ink-5);font-size:13px;flex-shrink:0;}
+    .car-info{flex:1;min-width:0;}
+    .car-brand{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-4);margin-bottom:4px;}
+    .car-name{font-size:24px;font-weight:800;letter-spacing:-.5px;margin-bottom:12px;}
+    .car-specs{display:flex;gap:20px;flex-wrap:wrap;}
+    .spec-item{display:flex;flex-direction:column;gap:2px;}
+    .spec-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);}
+    .spec-val{font-size:13px;font-weight:600;color:var(--ink-2);}
+    .car-price-hero{text-align:right;flex-shrink:0;}
+    .price-desde{font-size:11px;color:var(--ink-4);}
+    .price-big{font-size:36px;font-weight:800;color:var(--accent);letter-spacing:-2px;line-height:1;}
+    .price-unit{font-size:13px;color:var(--ink-4);margin-top:2px;}
+    .price-badge{background:#f0fdf4;color:#15803d;font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;margin-top:8px;display:inline-block;}
+    /* ── SEARCH BAR ── mockup */
+    .search-bar{background:var(--accent);padding:18px 20px;}
+    .search-inner{max-width:1100px;margin:0 auto;}
+    .search-label-bar{font-size:12px;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+    .search-box{display:flex;gap:8px;}
+    .search-input{flex:1;border:none;border-radius:10px;padding:13px 16px;font-size:15px;font-family:inherit;outline:none;}
+    .search-btn{background:#111;color:#fff;border:none;border-radius:10px;padding:0 20px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;}
+    /* ── COMPARE TITLE ── mockup */
+    .compare-title{font-size:13px;font-weight:700;color:var(--ink-4);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;}
+    /* ── SECTION WRAPPER ── */
+    .ch-wrap{max-width:1100px;margin:0 auto;padding:24px 32px 20px;}
+    @media(max-width:768px){
+      .car-header{flex-direction:column;align-items:flex-start;gap:16px;}
+      .car-img-wrap,.car-img-empty{width:100%;height:160px;}
+      .car-price-hero{text-align:left;}
+      .ch-wrap{padding:16px 16px 12px;}
+    }
   </style>
 </head>
 <body>
@@ -239,66 +274,41 @@
   <a href="/" class="nav-back">← Todas las ofertas</a>
 </nav>
 
-<div class="breadcrumb-bar">
-   › Maserati Grecale
+<div class="search-bar">
+  <div class="search-inner">
+    <div class="search-label-bar">Compara precios de renting</div>
+    <div class="search-box">
+      <input class="search-input" type="text" value="Maserati Grecale" placeholder="Busca un coche&#x2026;" onkeydown="if(event.key==='Enter')window.location.href='/?q='+encodeURIComponent(this.value)">
+      <button class="search-btn" onclick="window.location.href='/?q='+encodeURIComponent(this.previousElementSibling.value)">Comparar &#x2192;</button>
+    </div>
+  </div>
 </div>
 
-<!-- HERO -->
-<section class="hero" style="padding-bottom:28px;">
-  <div>
-    <div class="hero-badges">
-      <span class="badge badge-type">Maserati</span>
-      <span class="badge-count">1 ofertas · 1 gestoras</span>
-    </div>
-    <h1 class="hero-title">Renting <em>Maserati Grecale</em></h1>
-    <p class="hero-sub">1 ofertas de 1 gestora · Actualizado 2026-06-29</p>
 
-    <div class="precio-box">
-      <div>
-        <div class="precio-label">Mejor precio disponible</div>
-        <div class="precio-val">
-          <span class="precio-desde">desde</span>
-          <span class="precio-num">1441</span>
-          <span class="precio-unit">€/mes</span>
-        </div>
-        <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
-      </div>
-      <button class="btn-solicitar" onclick="abrirModal()">Solicitar info</button>
-    </div>
-
-    <div class="hero-stats">
-      <div class="stat-box">
-        <div class="stat-label">Desde</div>
-        <div class="stat-val">1441€</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-label">Gestoras</div>
-        <div class="stat-val">1</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-label">Ofertas</div>
-        <div class="stat-val">1</div>
-      </div>
-    </div>
-
-    <div class="hero-tags">
-      <span class="tag">Sin entrada</span>
-      <span class="tag">Seguro incluido</span>
-      <span class="tag">Mantenimiento</span>
-      <span class="tag">Asistencia 24h</span>
+<div class="ch-wrap">
+<div class="car-header">
+  <div class="car-img-wrap"><img src="https://quadis.s3.amazonaws.com/GestorQuadis/Vehiculos/Maserati_Grecale_L4%20MHEV%20300CV%20AWD_511649/image-removebg-preview-2026-03-04T084351684.png" alt="Maserati Grecale" loading="eager" decoding="async" onerror="this.style.display='none'"></div>
+  <div class="car-info">
+    <div class="car-brand">Maserati</div>
+    <div class="car-name">Maserati Grecale</div>
+    <div class="car-specs">
+      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">?</span></div>
+      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">1</span></div>
+      <div class="spec-item"><span class="spec-label">Actualizado</span><span class="spec-val">29 Jun 2026</span></div>
     </div>
   </div>
-
-  <div class="hero-img">
-    <img src="https://quadis.s3.amazonaws.com/GestorQuadis/Vehiculos/Maserati_Grecale_L4%20MHEV%20300CV%20AWD_511649/image-removebg-preview-2026-03-04T084351684.png" alt="Renting Maserati Grecale" loading="eager" decoding="async" onerror="this.style.display='none'">
+  <div class="car-price-hero">
+    <div class="price-desde">desde</div>
+    <div class="price-big">1441<sup style="font-size:16px">&#8364;</sup></div>
+    <div class="price-unit">al mes</div>
+    <div class="price-badge">&#10003; ? gestoras comparadas</div>
   </div>
-</section>
+</div>
+</div>
 
 <!-- COMPARADOR DE TARJETAS -->
 <div class="section comparador-section" style="margin-top:8px;">
-  <div class="comparador-header">
-    <span class="comparador-title">Oferta disponible</span>
-  </div>
+  <div class="compare-title">Oferta disponible</div>
 
   <div class="filters">
     <div class="f-group">
