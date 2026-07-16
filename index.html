@@ -144,7 +144,7 @@ button{font-family:inherit;cursor:pointer}
 /* ── AUTOCOMPLETE ── */
 .sbox{overflow:visible}
 .sbox-main{position:relative}
-.ac-drop{position:absolute;top:calc(100% + 12px);left:0;right:0;background:var(--white);border:1.5px solid var(--border-2);border-radius:16px;box-shadow:var(--sh-lg);z-index:70;display:none;max-height:66vh;overflow-y:auto;text-align:left;padding-bottom:6px}
+.ac-drop{position:absolute;top:calc(100% + 12px);left:0;right:0;background:var(--white);border:1.5px solid var(--border-2);border-radius:16px;box-shadow:var(--sh-lg);z-index:300;display:none;max-height:66vh;overflow-y:auto;text-align:left;padding-bottom:6px}
 .ac-drop.show{display:block}
 .ac-head{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-5);padding:13px 16px 5px}
 .ac-item{display:flex;align-items:center;gap:12px;padding:9px 16px;cursor:pointer;text-decoration:none;color:var(--ink)}
@@ -190,6 +190,10 @@ button{font-family:inherit;cursor:pointer}
   display:flex;align-items:center;gap:8px;flex-wrap:wrap;
 }
 .stag-lbl{font-size:12px;color:var(--ink-4);font-weight:500;white-space:nowrap;flex-shrink:0}
+.sbox-sort{margin-left:auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.sbox-sort-lbl{font-size:12px;color:var(--ink-4);font-weight:500;white-space:nowrap}
+.sbox-count{font-size:12px;color:var(--ink-5);white-space:nowrap;margin-left:4px}
+@media(max-width:600px){.sbox-sort{margin-left:0;width:100%}}
 .stag{
   font-size:13px;font-weight:500;
   background:var(--white);border:1.5px solid var(--border);
@@ -706,6 +710,28 @@ a.model-card{text-decoration:none;color:inherit}
         <select id="filter-model" onchange="applyFilters()"><option value="">Todos los modelos</option></select>
       </div>
       <div class="sf">
+        <label for="fbar-cat">Tipo</label>
+        <select id="fbar-cat" onchange="filterByBarCat()">
+          <option value="">Todos</option>
+          <option value="SUV">SUV</option>
+          <option value="Electrico">El&eacute;ctrico</option>
+          <option value="Hibrido">H&iacute;brido</option>
+          <option value="Furgoneta">Furgoneta</option>
+          <option value="Berlina">Berlina</option>
+          <option value="Urbano">Urbano</option>
+        </select>
+      </div>
+      <div class="sf">
+        <label for="fbar-fuel">Combustible</label>
+        <select id="fbar-fuel" onchange="applyFilters()">
+          <option value="">Todos</option>
+          <option value="Electrico">El&eacute;ctrico</option>
+          <option value="Hibrido">H&iacute;brido</option>
+          <option value="Gasolina">Gasolina</option>
+          <option value="Diesel">Di&eacute;sel</option>
+        </select>
+      </div>
+      <div class="sf">
         <label for="filter-precio">Presupuesto</label>
         <select id="filter-precio" onchange="applyFilters()">
           <option value="">Sin l&iacute;mite</option>
@@ -723,54 +749,16 @@ a.model-card{text-decoration:none;color:inherit}
       <button class="stag" onclick="applyChipPrecio(300)">Hasta 300&euro;</button>
       <button class="stag" onclick="applyChip('Hibrido')">H&iacute;brido</button>
       <button class="stag" onclick="applyChip('Furgoneta')">Furgoneta</button>
+      <span class="sbox-sort">
+        <span class="sbox-sort-lbl">Ordenar:</span>
+        <button class="sort-btn active" id="sort-precio" onclick="setSortBy('precio')">Precio</button>
+        <button class="sort-btn" id="sort-popular" onclick="setSortBy('popular')">Popular</button>
+        <button class="sort-btn" id="sort-az" onclick="setSortBy('az')">A&ndash;Z</button>
+        <span class="sbox-count" id="filter-count"></span>
+      </span>
     </div>
   </div>
 </section>
-
-
-  <span class="gst-name">Arval</span>
-  <span class="gst-name">Ayvens</span>
-  <span class="gst-name">Alphabet</span>
-  <span class="gst-name">Kinto</span>
-  <span class="gst-name">Quadis</span>
-  <span class="gst-name">KIA Armotors</span>
-</div>
-
-<!-- FILTER BAR -->
-<div class="fbar" id="filter-bar">
-  <span class="fbar-lbl">Filtrar:</span>
-  <select class="fsel" id="fbar-cat" onchange="filterByBarCat()">
-    <option value="">Tipo de coche</option>
-    <option value="SUV">SUV</option>
-    <option value="Electrico">El&eacute;ctrico</option>
-    <option value="Hibrido">H&iacute;brido</option>
-    <option value="Furgoneta">Furgoneta</option>
-    <option value="Berlina">Berlina</option>
-    <option value="Urbano">Urbano</option>
-  </select>
-  <select class="fsel" id="fbar-fuel" onchange="applyFilters()">
-    <option value="">Combustible</option>
-    <option value="Electrico">El&eacute;ctrico</option>
-    <option value="Hibrido">H&iacute;brido</option>
-    <option value="Gasolina">Gasolina</option>
-    <option value="Diesel">Di&eacute;sel</option>
-  </select>
-  <select class="fsel" id="fbar-precio" onchange="applyFilters()">
-    <option value="">Precio m&aacute;x</option>
-    <option value="250">Hasta 250&euro;</option>
-    <option value="300">Hasta 300&euro;</option>
-    <option value="400">Hasta 400&euro;</option>
-    <option value="500">Hasta 500&euro;</option>
-  </select>
-  <div class="fbar-sep"></div>
-  <span class="fbar-sort-lbl">Ordenar:</span>
-  <div class="sort-btns">
-    <button class="sort-btn active" id="sort-precio" onclick="setSortBy('precio')">Precio</button>
-    <button class="sort-btn" id="sort-popular" onclick="setSortBy('popular')">Popular</button>
-    <button class="sort-btn" id="sort-az" onclick="setSortBy('az')">A&ndash;Z</button>
-  </div>
-  <span class="fbar-count" id="filter-count"></span>
-</div>
 
 <!-- CATALOG -->
 <div class="catalog" id="section-ofertas">
@@ -1047,9 +1035,8 @@ a.model-card{text-decoration:none;color:inherit}
     const make = document.getElementById('filter-make').value;
     const model = document.getElementById('filter-model').value;
     const precioHero = document.getElementById('filter-precio').value;
-    const precioBar = document.getElementById('fbar-precio').value;
     const fuelBar = document.getElementById('fbar-fuel').value;
-    const maxPrecio = precioBar || precioHero;
+    const maxPrecio = precioHero;
 
     filteredModels = groupedModels.filter(m => {
       if (make && m.make !== make) return false;
@@ -1174,7 +1161,6 @@ a.model-card{text-decoration:none;color:inherit}
   }
   function applyChipPrecio(max) {
     document.getElementById('filter-precio').value = max;
-    document.getElementById('fbar-precio').value = max;
     applyFilters();
     document.getElementById('section-ofertas').scrollIntoView({behavior:'smooth'});
   }
