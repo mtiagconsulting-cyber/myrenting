@@ -684,7 +684,7 @@ a.model-card{text-decoration:none;color:inherit}
 <!-- HERO -->
 <section class="hero">
   <h1 class="hero-h1">Compara el renting de<br><span class="hl">todos los coches</span></h1>
-  <p class="hero-p">M&aacute;s de 1.040 ofertas reales de 6 gestoras &mdash; actualizadas, sin registro y con precios finales.</p>
+  <p class="hero-p">M&aacute;s de <span id="hero-ofertas">750</span> ofertas reales de <span id="hero-gestoras">6</span> gestoras &mdash; actualizadas, sin registro y con precios finales.</p>
 
   <div class="sbox">
     <div class="sbox-main">
@@ -1406,6 +1406,11 @@ a.model-card{text-decoration:none;color:inherit}
     renderModels();
     const st = document.getElementById('stat-total'); if (st) st.textContent = allOffers.length;
     const smo = document.getElementById('stat-models'); if (smo) smo.textContent = groupedModels.length;
+    // Titular dinámico: nº de ofertas (redondeado a la baja) y gestoras, siempre reales
+    const ho = document.getElementById('hero-ofertas');
+    if (ho && allOffers.length) ho.textContent = (Math.floor(allOffers.length / 50) * 50).toLocaleString('es-ES');
+    const hg = document.getElementById('hero-gestoras');
+    if (hg) hg.textContent = new Set(allOffers.map(o => o.fuente).filter(Boolean)).size;
     updateCount();
   })();
 </script>
