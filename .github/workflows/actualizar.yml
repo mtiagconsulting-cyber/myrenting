@@ -5,16 +5,6 @@ on:
     # Cada día a las 8:00h hora España (6 UTC)
     - cron: '0 6 * * *'
   workflow_dispatch:
-    inputs:
-      modo:
-        description: 'Modo de ejecución'
-        required: false
-        default: 'completo'
-        type: choice
-        options:
-          - completo
-          - solo-scraping
-          - solo-seo
 
 jobs:
   actualizar:
@@ -34,40 +24,36 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install requests playwright
+          pip install requests playwright beautifulsoup4
           playwright install chromium --with-deps
 
-      - name: Ejecutar agente de scraping
-        if: ${{ github.event.inputs.modo != 'solo-seo' }}
-        run: python agente_scraping.py
+      - name: Scrapear gestoras (genera ofertas-db.json)
+        # El scraper captura errores por gestora y sale 0 aunque alguna falle.
+        continue-on-error: true
+        run: python scrape_myrenting.py
 
-      - name: Regenerar páginas SEO
-        if: ${{ github.event.inputs.modo != 'solo-scraping' }}
-        run: |
-          if [ -f generar_seo.py ]; then python generar_seo.py; fi
-          if [ -f generar_categorias.py ]; then python generar_categorias.py; fi
-
-      - name: Inyectar ofertas en index.html
-        run: |
-          if [ -f inyectar_ofertas.py ]; then python inyectar_ofertas.py; fi
+      - name: Inyectar de forma segura (guardarrailes + rollback)
+        # Si el scrape esta roto, este paso ABORTA (exit!=0) y el workflow
+        # no llega a commitear: la web queda intacta.
+        run: python actualizar_ofertas_seguro.py
 
       - name: Verificar cambios
         id: changes
         run: |
-          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet index.html ofertas-manuales.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit y push
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name 'Myrenting Bot'
           git config user.email 'bot@myrenting.es'
-          git add ofertas-db.json index.html renting-*.html blog/ || true
+          git add index.html ofertas-manuales.json
           git commit -m "Actualizar precios $(date +'%Y-%m-%d')"
           git push origin HEAD
 
       - name: Resumen
+        if: always()
         run: |
-          TOTAL=$(python3 -c "import json; d=json.load(open('ofertas-db.json')); print(len(d))" 2>/dev/null || echo "N/D")
-          echo "## Actualizacion completada" >> $GITHUB_STEP_SUMMARY
-          echo "- Ofertas totales: **$TOTAL**" >> $GITHUB_STEP_SUMMARY
+          echo "## Actualizacion de precios" >> $GITHUB_STEP_SUMMARY
           echo "- Fecha: $(date +'%Y-%m-%d %H:%M')" >> $GITHUB_STEP_SUMMARY
+          echo "- Cambios: ${{ steps.changes.outputs.changed }}" >> $GITHUB_STEP_SUMMARY
