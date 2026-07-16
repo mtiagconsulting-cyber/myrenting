@@ -141,6 +141,22 @@ button{font-family:inherit;cursor:pointer}
   outline:none;font-family:inherit;
 }
 .sbox-input::placeholder{color:var(--ink-5);font-weight:400}
+/* ── AUTOCOMPLETE ── */
+.sbox{overflow:visible}
+.sbox-main{position:relative}
+.ac-drop{position:absolute;top:calc(100% + 12px);left:0;right:0;background:var(--white);border:1.5px solid var(--border-2);border-radius:16px;box-shadow:var(--sh-lg);z-index:70;display:none;max-height:66vh;overflow-y:auto;text-align:left;padding-bottom:6px}
+.ac-drop.show{display:block}
+.ac-head{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-5);padding:13px 16px 5px}
+.ac-item{display:flex;align-items:center;gap:12px;padding:9px 16px;cursor:pointer;text-decoration:none;color:var(--ink)}
+.ac-item:hover,.ac-item.active{background:#faf5f0}
+.ac-thumb{width:48px;height:34px;object-fit:contain;flex-shrink:0}
+.ac-brand{width:38px;height:38px;border-radius:10px;background:#fff0e8;color:var(--o);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ac-txt{display:flex;flex-direction:column;min-width:0;flex:1}
+.ac-name{font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ac-sub{font-size:12px;color:var(--ink-5)}
+.ac-price{margin-left:auto;font-size:14px;font-weight:800;color:var(--o);white-space:nowrap}
+.ac-go{margin-left:auto;font-size:13px;font-weight:700;color:var(--o);white-space:nowrap}
+.ac-empty{padding:16px;font-size:13px;color:var(--ink-5);line-height:1.5}
 .sbox-go{
   background:var(--o);color:var(--white);border:none;
   font-size:15px;font-weight:700;padding:12px 28px;
@@ -675,8 +691,9 @@ a.model-card{text-decoration:none;color:inherit}
       <span class="sbox-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       </span>
-      <input class="sbox-input" type="text" id="search-libre" placeholder="Busca por marca, modelo o tipo&hellip; ej: Toyota SUV el&eacute;ctrico" oninput="onSearchLibre(this.value)">
+      <input class="sbox-input" type="text" id="search-libre" autocomplete="off" placeholder="Busca por marca, modelo o tipo&hellip; ej: Toyota SUV el&eacute;ctrico" oninput="onSearchLibre(this.value)" onkeydown="acKey(event)" onfocus="if(this.value)buildAC(this.value)">
       <button class="sbox-go" onclick="doSearchLibre()">Buscar</button>
+      <div class="ac-drop" id="ac-drop" role="listbox"></div>
     </div>
     <div class="sbox-divider"></div>
     <div class="sbox-filters">
@@ -1072,8 +1089,82 @@ a.model-card{text-decoration:none;color:inherit}
   function onSearchLibre(val) {
     searchTerm = val;
     applyFilters();
+    buildAC(val);
   }
-  function doSearchLibre() { onSearchLibre(document.getElementById('search-libre').value); document.getElementById('section-ofertas').scrollIntoView({behavior:'smooth'}); }
+  function doSearchLibre() {
+    searchTerm = document.getElementById('search-libre').value;
+    applyFilters();
+    hideAC();
+    document.getElementById('section-ofertas').scrollIntoView({behavior:'smooth'});
+  }
+
+  /* ── AUTOCOMPLETE ── */
+  let acList = [], acIdx = -1;
+  function acTitle(s){ return (s||'').toLowerCase().split(' ').map(w => w ? w.charAt(0).toUpperCase()+w.slice(1) : w).join(' '); }
+  function buildAC(val) {
+    val = (val || '').trim().toLowerCase();
+    const drop = document.getElementById('ac-drop');
+    if (!drop) return;
+    if (val.length < 1) { hideAC(); return; }
+    // Marcas: dedupe case-insensitive
+    const makeMap = {};
+    groupedModels.forEach(m => { const k = m.make.toUpperCase(); if (!makeMap[k]) makeMap[k] = {disp:m.make, n:0}; makeMap[k].n++; });
+    const brandM = Object.keys(makeMap).filter(k => k.toLowerCase().includes(val)).sort();
+    // Modelos: dedupe by slug (misma ficha), menor precio primero
+    let models = groupedModels.filter(m => m.name.toLowerCase().includes(val));
+    models.sort((a,b) => a.minPrice - b.minPrice);
+    const seenSlug = {}; const modelsD = [];
+    models.forEach(m => { const s = slug(m.name); if (!seenSlug[s]) { seenSlug[s] = 1; modelsD.push(m); } });
+    acList = []; let html = '';
+    if (brandM.length) {
+      html += '<div class="ac-head">Marcas</div>';
+      brandM.slice(0,3).forEach(k => {
+        const n = makeMap[k].n, disp = makeMap[k].disp;
+        const i = acList.length; acList.push({type:'brand', make:k});
+        html += '<div class="ac-item" data-i="'+i+'" onmousedown="acPick('+i+')">'
+          + '<span class="ac-brand">'+acTitle(disp).slice(0,2).toUpperCase()+'</span>'
+          + '<span class="ac-txt"><span class="ac-name">'+acTitle(disp)+'</span><span class="ac-sub">'+n+' modelo'+(n!==1?'s':'')+'</span></span>'
+          + '<span class="ac-go">Ver todos &rarr;</span></div>';
+      });
+    }
+    if (modelsD.length) {
+      html += '<div class="ac-head">Modelos</div>';
+      modelsD.slice(0,6).forEach(m => {
+        const i = acList.length; const url = '/'+slug(m.name)+'.html'; acList.push({type:'model', url:url});
+        html += '<a class="ac-item" data-i="'+i+'" href="'+url+'">'
+          + (m.image ? '<img class="ac-thumb" src="'+m.image+'" alt="" onerror="this.style.visibility=\'hidden\'">' : '<span class="ac-brand">'+acTitle(m.make).slice(0,2).toUpperCase()+'</span>')
+          + '<span class="ac-txt"><span class="ac-name">'+acTitle(m.name)+'</span><span class="ac-sub">'+m.offerCount+' oferta'+(m.offerCount!==1?'s':'')+'</span></span>'
+          + '<span class="ac-price">desde '+m.minPrice+'€</span></a>';
+      });
+    }
+    if (!html) html = '<div class="ac-empty">Sin coincidencias. Pulsa <b>Buscar</b> para ver todo el catálogo.</div>';
+    drop.innerHTML = html; drop.classList.add('show'); acIdx = -1;
+  }
+  function hideAC(){ const d = document.getElementById('ac-drop'); if (d) d.classList.remove('show'); acIdx = -1; }
+  function acPick(i) {
+    const it = acList[i]; if (!it) return;
+    if (it.type === 'brand') {
+      const disp = acTitle(it.make);
+      const inp = document.getElementById('search-libre'); if (inp) inp.value = disp;
+      const mk = document.getElementById('filter-make'); if (mk) mk.value = '';
+      searchTerm = it.make; applyFilters();
+      hideAC();
+      document.getElementById('section-ofertas').scrollIntoView({behavior:'smooth'});
+    } else {
+      window.location.href = it.url;
+    }
+  }
+  function acKey(e) {
+    const d = document.getElementById('ac-drop');
+    const open = d && d.classList.contains('show');
+    if (e.key === 'Enter') { if (open && acIdx >= 0) { e.preventDefault(); acPick(acIdx); } else { doSearchLibre(); } return; }
+    if (!open) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); acIdx = Math.min(acList.length-1, acIdx+1); acHi(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); acIdx = Math.max(0, acIdx-1); acHi(); }
+    else if (e.key === 'Escape') { hideAC(); }
+  }
+  function acHi(){ document.querySelectorAll('#ac-drop .ac-item').forEach(el => el.classList.toggle('active', +el.dataset.i === acIdx)); }
+  document.addEventListener('click', function(e){ if (!e.target.closest('.sbox-main')) hideAC(); });
 
   function applyChip(cat) {
     activeCat = cat;
@@ -1090,10 +1181,9 @@ a.model-card{text-decoration:none;color:inherit}
 
   function updateCount() {
     const cnt = filteredModels.length;
-    document.getElementById('results-count').textContent = cnt + ' modelo' + (cnt !== 1 ? 's' : '');
-    document.getElementById('filter-count').textContent = cnt + ' resultado' + (cnt !== 1 ? 's' : '');
-    const minP = cnt ? filteredModels[0].minPrice : 0;
-    document.getElementById('stat-min').textContent = minP + '\u20ac';
+    const rc = document.getElementById('results-count'); if (rc) rc.textContent = cnt + ' modelo' + (cnt !== 1 ? 's' : '');
+    const fc = document.getElementById('filter-count'); if (fc) fc.textContent = cnt + ' resultado' + (cnt !== 1 ? 's' : '');
+    const sm = document.getElementById('stat-min'); if (sm) { const minP = cnt ? filteredModels[0].minPrice : 0; sm.textContent = minP + '\u20ac'; }
   }
 
   function renderModels() {
@@ -1314,8 +1404,8 @@ a.model-card{text-decoration:none;color:inherit}
     filteredModels = sortModels(groupedModels);
     buildMakeSelect();
     renderModels();
-    document.getElementById('stat-total').textContent = allOffers.length;
-    document.getElementById('stat-models').textContent = groupedModels.length;
+    const st = document.getElementById('stat-total'); if (st) st.textContent = allOffers.length;
+    const smo = document.getElementById('stat-models'); if (smo) smo.textContent = groupedModels.length;
     updateCount();
   })();
 </script>
