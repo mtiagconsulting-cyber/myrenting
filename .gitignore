@@ -10,6 +10,8 @@ img/.DS_Store
 !generar_marcas.py
 !descargar_imagenes_coches.py
 !scripts/scrapers/scrape_myrenting.py
+!scrape_myrenting.py
+!actualizar_ofertas_seguro.py
 !scripts/generadores/regenerar_paginas.py
 !scripts/mantenimiento/expirar_ofertas.py
 !scripts/mantenimiento/salud_sitio.py
@@ -17,6 +19,7 @@ index_redesign.html
 scraper-concesionarios/
 *.json
 !coches-specs.json
+!ofertas-manuales.json
 *backup*.html
 *debug*.html
 __pycache__/
