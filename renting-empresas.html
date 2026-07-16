@@ -82,20 +82,33 @@
       .hero{padding:40px 16px 32px;}
     }
 </style>
+<style id="mrnav-css">
+.mrnav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:20px;background:#fff;border-bottom:1px solid #ece7e2;padding:0 32px;height:64px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif;}
+.mrnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.mrnav-ic{width:34px;height:34px;border-radius:9px;background:#e8380d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;letter-spacing:-1px;}
+.mrnav-tx{font-size:19px;font-weight:800;color:#17120f;letter-spacing:-.6px;}
+.mrnav-tx span{color:#e8380d;}
+.mrnav-links{display:flex;align-items:center;gap:4px;flex:1;}
+.mrnav-links a{font-size:14px;font-weight:500;color:#5c534d;padding:6px 12px;border-radius:8px;text-decoration:none;transition:.15s;white-space:nowrap;}
+.mrnav-links a:hover{color:#17120f;background:#f5f2ef;}
+.mrnav-cta{background:#e8380d;color:#fff;text-decoration:none;font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:10px;white-space:nowrap;flex-shrink:0;}
+.mrnav-cta:hover{background:#c42e0a;}
+@media(max-width:760px){.mrnav{padding:0 18px;gap:12px;}.mrnav-links{display:none;}}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHXGQF97" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<nav class="nav">
-  <div class="nav-brand">
-    <a class="nav-logo" href="/">My<span>Renting</span></a>
-  </div>
-  <div class="nav-links">
+<nav class="mrnav">
+  <a href="/" class="mrnav-logo"><span class="mrnav-ic">M</span><span class="mrnav-tx">My<span>Renting</span></span></a>
+  <div class="mrnav-links">
     <a href="/">Ofertas</a>
-    <a href="/blog/">Blog</a>
-    <a href="/renting-autonomos.html">Autonomos</a>
+    <a href="/renting-autonomos.html">Aut&oacute;nomos</a>
     <a href="/renting-empresas.html">Empresas</a>
+    <a href="/renting-electrico.html">El&eacute;ctrico</a>
+    <a href="/blog/">Blog</a>
   </div>
+  <a href="/" class="mrnav-cta">Comparar gratis</a>
 </nav>
 
 <section class="hero">
