@@ -281,101 +281,133 @@
       .similar-grid{grid-template-columns:1fr 1fr;}
       .similar-section{padding:0 16px;}
     }
+  
+    /* ===== FICHA v4 ===== */
+    .search-bar{display:none !important;}
+    .sub-bar{background:#fff;border-bottom:1px solid var(--border);}
+    .sub-inner{max-width:1080px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .crumb{font-size:13px;color:var(--ink-4);display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
+    .crumb a{color:var(--ink-4);text-decoration:none;}.crumb a:hover{color:var(--accent);}
+    .crumb .sep{color:var(--ink-5);}.crumb .cur{color:var(--ink);font-weight:700;}
+    .mini-search{display:flex;align-items:center;gap:8px;background:var(--surface-2,#f5f2ef);border:1.5px solid var(--border);border-radius:12px;padding:7px 8px 7px 14px;min-width:320px;}
+    .mini-search svg{color:var(--ink-5);flex-shrink:0;}
+    .mini-search input{flex:1;border:none;background:transparent;font-family:inherit;font-size:14px;color:var(--ink);outline:none;font-weight:500;}
+    .mini-search button{background:var(--accent);color:#fff;border:none;border-radius:9px;padding:8px 16px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;}
+    .ch-wrap{max-width:1080px;margin:0 auto;padding:26px 32px 8px;}
+    .car-header{background:#fff;border-radius:20px;border:1px solid var(--border);padding:28px 30px;display:flex;gap:30px;align-items:center;box-shadow:0 8px 30px rgba(30,20,15,.06);}
+    .car-img-wrap{width:250px;height:160px;flex-shrink:0;background:radial-gradient(circle at 50% 40%,#f6f3f0,#eceae6);border-radius:16px;display:flex;align-items:center;justify-content:center;padding:14px;}
+    .car-img-wrap img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.14));}
+    .car-info{flex:1;min-width:0;}
+    .car-brand{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:5px;}
+    .car-name{font-size:32px;font-weight:850;letter-spacing:-1px;margin-bottom:16px;line-height:1;}
+    .car-specs{display:flex;gap:10px;flex-wrap:wrap;}
+    .spec-item{display:flex;flex-direction:column;gap:3px;background:var(--surface-2,#f5f2ef);border:1px solid var(--border);border-radius:11px;padding:9px 14px;}
+    .spec-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);}
+    .spec-val{font-size:14px;font-weight:700;color:var(--ink-2,#2a2320);}
+    .car-price-hero{text-align:right;flex-shrink:0;padding-left:26px;border-left:1px solid var(--border);}
+    .price-desde{font-size:12px;color:var(--ink-4);font-weight:600;}
+    .price-big{font-size:46px;font-weight:850;color:var(--accent);letter-spacing:-2.5px;line-height:.95;}
+    .price-unit{font-size:13px;color:var(--ink-4);margin-top:2px;}
+    .price-badge{background:#ecfdf3;color:#15803d;font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:99px;margin-top:12px;display:inline-block;border:1px solid #bbf7d0;}
+    .comparador-section{max-width:1080px;margin:14px auto 0;padding:0 32px;}
+    .compare-title{font-size:19px;font-weight:820;letter-spacing:-.4px;color:var(--ink);margin-bottom:14px;text-transform:none;}
+    .cmp-cond{font-size:13.5px;color:var(--ink-3,#4a423d);margin-bottom:14px;font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+    .cmp-cond select{font-family:inherit;font-size:13px;font-weight:700;color:var(--accent);border:1.5px solid var(--border);border-radius:8px;padding:5px 8px;background:#fff;cursor:pointer;}
+    .filters{background:#fff;border-radius:14px;border:1px solid var(--border);padding:14px 16px;margin-bottom:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;box-shadow:0 2px 14px rgba(0,0,0,.05);}
+    .f-group{display:flex;flex-direction:column;gap:4px;flex:1;min-width:150px;}
+    .f-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);}
+    .f-select{border:1.5px solid var(--border);border-radius:9px;padding:9px 11px;font-size:13.5px;font-family:inherit;background:#fff;color:var(--ink);cursor:pointer;}
+    .f-count{font-size:12px;color:var(--ink-4);align-self:flex-end;padding-bottom:10px;white-space:nowrap;}
+    .compare-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;margin-top:4px;}
+    .offer-card{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:13px;transition:box-shadow .18s,transform .18s;position:relative;}
+    .offer-card:hover{box-shadow:0 12px 34px rgba(30,20,15,.11);transform:translateY(-3px);}
+    .offer-card.best{border-color:var(--accent);box-shadow:0 10px 30px rgba(232,56,13,.13);}
+    .oc-rank{position:absolute;top:-10px;right:16px;background:var(--accent);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.4px;padding:4px 11px;border-radius:99px;text-transform:uppercase;box-shadow:0 4px 12px rgba(232,56,13,.35);}
+    .oc-top{display:flex;align-items:center;gap:12px;}
+    .oc-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;}
+    .oc-name{font-size:16px;font-weight:800;}.oc-meta{font-size:12px;color:var(--ink-4);margin-top:1px;}
+    .oc-version{font-size:12.5px;color:var(--ink-3,#4a423d);background:var(--surface-2,#f5f2ef);border-radius:9px;padding:9px 12px;line-height:1.4;min-height:38px;display:flex;align-items:center;}
+    .oc-cond{display:flex;gap:8px;flex-wrap:wrap;}
+    .oc-cond span{font-size:11.5px;font-weight:700;color:var(--ink-3,#4a423d);background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:5px 9px;}
+    .oc-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;}
+    .oc-price{display:flex;align-items:baseline;gap:3px;}
+    .oc-desde{font-size:11px;color:var(--ink-4);font-weight:600;margin-right:3px;}
+    .oc-price b{font-size:30px;font-weight:850;color:var(--ink);letter-spacing:-1.5px;}
+    .oc-unit{font-size:13px;color:var(--ink-4);font-weight:600;}
+    .oc-save{background:#ecfdf3;color:#15803d;font-size:12px;font-weight:800;padding:4px 10px;border-radius:8px;border:1px solid #bbf7d0;}
+    .oc-cta{display:flex;gap:9px;margin-top:2px;}
+    .btn-card-info{flex:0 0 auto;background:#fff;border:1.5px solid var(--border);color:var(--ink-2,#2a2320);border-radius:11px;padding:11px 15px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;}
+    .btn-card-ver{flex:1;background:var(--accent);color:#fff;border:none;border-radius:11px;padding:11px;font-size:13.5px;font-weight:800;font-family:inherit;cursor:pointer;}
+    .hidden-card{display:none !important;}
+    @media(max-width:820px){
+      .car-header{flex-direction:column;align-items:stretch;gap:20px;text-align:center;}
+      .car-img-wrap{width:100%;height:180px;}.car-specs{justify-content:center;}
+      .car-price-hero{text-align:center;padding-left:0;border-left:none;border-top:1px solid var(--border);padding-top:18px;}
+      .compare-grid{grid-template-columns:1fr;}
+      .ch-wrap,.comparador-section,.sub-inner{padding-left:18px;padding-right:18px;}
+      .mini-search{min-width:0;width:100%;}
+    }
+
   </style>
 </head>
 <body>
 
 <nav class="nav">
-  <div class="nav-brand">
-    <a class="nav-logo" href="/">My<span>renting</span></a>
-  </div>
-  <a href="/" class="nav-back">← Todas las ofertas</a>
+  <div class="nav-brand"><a class="nav-logo" href="/">My<span>Renting</span></a></div>
+  <a href="/" class="nav-back">&larr; Todas las ofertas</a>
 </nav>
 
-<div class="search-bar">
-  <div class="search-inner">
-    <div class="search-label-bar">Compara precios de renting</div>
-    <div class="search-box">
-      <input class="search-input" type="text" value="Renault Rafale" placeholder="Busca un coche&#x2026;" onkeydown="if(event.key==='Enter')window.location.href='/?q='+encodeURIComponent(this.value)">
-      <button class="search-btn" onclick="window.location.href='/?q='+encodeURIComponent(this.previousElementSibling.value)">Comparar &#x2192;</button>
-    </div>
+<div class="sub-bar"><div class="sub-inner">
+  <nav class="crumb"><a href="/">Inicio</a><span class="sep">&rsaquo;</span><a href="/renting-renault.html">Renault</a><span class="sep">&rsaquo;</span><span class="cur">Renault Rafale</span></nav>
+  <div class="mini-search">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" value="Renault Rafale" placeholder="Busca otro coche&hellip;" onkeydown="if(event.key==='Enter')window.location.href='/?q='+encodeURIComponent(this.value)">
+    <button onclick="window.location.href='/?q='+encodeURIComponent(this.previousElementSibling.value)">Comparar &rarr;</button>
   </div>
-</div>
+</div></div>
+
+
 
 
 <div class="ch-wrap">
 <div class="car-header">
-  <div class="car-img-wrap"><img src="/img/modelos/renault-rafale.png" alt="Renault Rafale" loading="eager" decoding="async" onerror="this.style.display='none'"></div>
+  <div class="car-img-wrap"><img src="/img/modelos/renault-rafale.png" alt="Renault Rafale" loading="eager" onerror="this.style.display='none'"></div>
   <div class="car-info">
-    <div class="car-brand">Renault</div>
-    <div class="car-name">Renault Rafale</div>
+    <div class="car-brand">Renault</div><div class="car-name">Renault Rafale</div>
     <div class="car-specs">
-      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">?</span></div>
-      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">1</span></div>
+      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">1</span></div>
+      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">2</span></div>
       <div class="spec-item"><span class="spec-label">Actualizado</span><span class="spec-val">29 Jun 2026</span></div>
     </div>
   </div>
-  <div class="car-price-hero">
-    <div class="price-desde">desde</div>
-    <div class="price-big">418<sup style="font-size:16px">&#8364;</sup></div>
-    <div class="price-unit">al mes</div>
-    <div class="price-badge">&#10003; ? gestoras comparadas</div>
-  </div>
-</div>
-</div>
+  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">418<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-badge">&#10003; 1 gestoras comparadas</div></div>
+</div></div>
 
 <!-- COMPARADOR DE TARJETAS -->
 <div class="section comparador-section" style="margin-top:8px;">
-  <div class="compare-title">Oferta disponible</div>
+  <div class="compare-title">Compara las 1 gestoras disponibles</div>
+
+  <div class="cmp-cond">Comparando a <select id="cond-plazo" onchange="renderComparador()"><option value="">cualquier plazo</option><option value="72">72 meses</option></select> · <select id="cond-km" onchange="renderComparador()"><option value="">cualquier km</option><option value="10000">10.000 km/año</option></select></div>
 
   <div class="filters">
-    <div class="f-group">
-      <label class="f-label">Plazo</label>
-      <select class="f-select" id="f-plazo" onchange="filtrarTabla()"><option value="">Cualquier plazo</option></select>
-    </div>
-    <div class="f-group">
-      <label class="f-label">Combustible</label>
-      <select class="f-select" id="f-fuel" onchange="filtrarTabla()"><option value="">Cualquier combustible</option><option value="híbrido-gasolina">Híbrido Gasolina</option></select>
-    </div>
-    <div class="f-group">
-      <label class="f-label">Cliente</label>
-      <select class="f-select" id="f-tipo" onchange="filtrarTabla()"><option value="">Empresa y particular</option><option value="empresa">empresa</option></select>
-    </div>
-    <div class="f-group">
-      <label class="f-label">Gestora</label>
-      <select class="f-select" id="f-fuente" onchange="filtrarTabla()"><option value="">Todas las gestoras</option><option value="arval">Arval</option></select>
-    </div>
-    <span class="f-count" id="filter-count">1 gestora</span>
+    <div class="f-group"><label class="f-label">Cliente</label><select class="f-select" id="f-tipo" onchange="renderComparador()"><option value="">Empresa y particular</option><option value="empresa">Empresa</option><option value="particular">Particular</option></select></div>
+    <div class="f-group"><label class="f-label">Gestora</label><select class="f-select" id="f-fuente" onchange="renderComparador()"><option value="">Todas las gestoras</option><option value="arval">Arval</option></select></div>
+    <span class="f-count" id="filter-count">1 gestoras</span>
     <button class="f-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
   </div>
 
   <div class="compare-grid" id="compare-grid">
-    <div class="offer-card best" data-fuente="arval" data-tipo="empresa" data-fuel="híbrido gasolina" data-plazo="">
-      <div class="best-ribbon">&#9733; MEJOR PRECIO</div>
-      <div class="card-gestora">
-        <div class="gestora-logo">AR</div>
-        <div>
-          <div class="gestora-name">Arval</div>
-          <div class="gestora-type">empresa · híbrido gasolina</div>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card-row"><span class="row-label">Plazo</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Km/año</span><span class="row-val">—</span></div>
-        <div class="card-row"><span class="row-label">Versión</span><span class="row-val">Techno full hybrid E-Tech 200CV (147kW) (2026</span></div>
-      </div>
-      <div class="card-price-wrap">
-        <span class="card-price-num">418</span>
-        <span class="card-price-unit">€/mes</span>
-        
-      </div>
-      <div class="card-cta">
-        <button class="btn-card-info" onclick="abrirModal('Arval','Renault Rafale');return false;">Solicitar info</button>
-        <button class="btn-card-ver" onclick="abrirModalGestora('arval','Arval','Renault Rafale');return false;">Ver ofertas &rarr;</button>
-      </div>
+    <div class="offer-card best">
+      <div class="oc-rank">&#9733; Mejor precio</div>
+      <div class="oc-top"><div class="oc-logo" style="background:#C41E1E">A</div><div><div class="oc-name">Arval</div><div class="oc-meta">Empresa, Particular &middot; 2 ofertas</div></div></div>
+      <div class="oc-version">Techno full hybrid E-Tech 200CV (147kW) (2026</div>
+      <div class="oc-cond"><span>&#128337; 72 meses</span><span>&#128663; 10.000 km/año</span></div>
+      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>418</b><span class="oc-unit">&euro;/mes</span></div><div class="oc-save">&#8722;10%</div></div>
+      <div class="oc-cta"><button class="btn-card-info" onclick="abrirModal('Arval','Renault Rafale');return false;">Solicitar info</button><button class="btn-card-ver" onclick="abrirModalGestora('arval','Arval','Renault Rafale');return false;">Ver ofertas &rarr;</button></div>
     </div>
   </div>
 
+  
   <div class="no-results-cards" id="no-results-msg">
     Sin resultados con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
   </div>
@@ -640,7 +672,70 @@
 </script>
 
   <script>
-  window._OFERTAS = {"arval": [{"gestora": "Arval", "tipo": "empresa", "fuel": "híbrido gasolina", "plazo": "—", "km": "—", "version": "Techno full hybrid E-Tech 200CV (147kW) (2026", "price": "418"}]};
+  window._OFERTAS = {"arval": [{"gestora": "Arval", "tipo": "empresa", "fuel": "Híbrido", "plazo": "72", "km": "10000", "version": "Techno full hybrid E-Tech 200CV (147kW) (2026", "price": "418"}, {"gestora": "Arval", "tipo": "particular", "fuel": "Híbrido", "plazo": "72", "km": "10000", "version": "Techno full hybrid E-Tech 200CV (147kW) (2026", "price": "506"}]};
   </script>
+
+<script>
+(function(){
+  var GC={arval:'#C41E1E',ayvens:'#1E4DB7',alphabet:'#6D28D9',kinto:'#15803D',quadis:'#B45309','kia armotors':'#B91C1C',leasys:'#0891B2',revel:'#0F766E'};
+  function ini(n){return (n||'').split(' ').slice(0,2).map(function(w){return w[0]||'';}).join('').toUpperCase();}
+  function kmf(k){k=parseInt(k);return isNaN(k)?'—':(''+k).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+  function esc(s){return (''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function val(id){var e=document.getElementById(id);return e?e.value:'';}
+  window.renderComparador=function(){
+    var data=window._OFERTAS||{};
+    var plazo=val('cond-plazo'),km=val('cond-km'),tipo=val('f-tipo'),fuente=val('f-fuente');
+    var vehiculo=(document.querySelector('.car-name')||{}).textContent||'';
+    var groups=[];
+    Object.keys(data).forEach(function(f){
+      if(fuente&&f!==fuente)return;
+      var offs=data[f].filter(function(o){
+        if(plazo&&String(o.plazo)!==plazo)return false;
+        if(km&&String(o.km)!==km)return false;
+        if(tipo&&o.tipo!==tipo)return false;
+        return true;
+      });
+      if(!offs.length)return;
+      offs.sort(function(a,b){return parseFloat(a.price)-parseFloat(b.price);});
+      groups.push({fuente:f,best:offs[0],n:offs.length,tipos:offs.map(function(o){return o.tipo;})});
+    });
+    groups.sort(function(a,b){return parseFloat(a.best.price)-parseFloat(b.best.price);});
+    var grid=document.getElementById('compare-grid');
+    var nr=document.getElementById('no-results-msg');
+    if(!groups.length){if(grid)grid.innerHTML='';if(nr)nr.style.display='block';setCount(0);return;}
+    if(nr)nr.style.display='none';
+    var prices=groups.map(function(g){return parseFloat(g.best.price);});
+    var media=prices.reduce(function(a,b){return a+b;},0)/prices.length;
+    grid.innerHTML=groups.map(function(g,i){
+      var o=g.best,best=i===0,color=GC[g.fuente]||'#6a615b';
+      var save=Math.round((media-parseFloat(o.price))/media*100);
+      var savehtml=(best&&save>=3)?'<div class="oc-save">&#8722;'+save+'%</div>':'<div></div>';
+      var rank=best?'<div class="oc-rank">&#9733; Mejor precio</div>':'';
+      var tset={};g.tipos.forEach(function(t){if(t)tset[t]=1;});
+      var meta=Object.keys(tset).map(cap).join(', ')+' &middot; '+g.n+' oferta'+(g.n!==1?'s':'');
+      var cond='';
+      if(o.plazo&&o.plazo!=='—')cond+='<span>&#128337; '+o.plazo+' meses</span>';
+      if(o.km&&o.km!=='—')cond+='<span>&#128663; '+kmf(o.km)+' km/año</span>';
+      var gn=o.gestora.replace(/'/g,"\\'"),vj=vehiculo.replace(/'/g,"\\'");
+      return '<div class="offer-card'+(best?' best':'')+'">'+rank
+        +'<div class="oc-top"><div class="oc-logo" style="background:'+color+'">'+ini(o.gestora)+'</div>'
+        +'<div><div class="oc-name">'+esc(o.gestora)+'</div><div class="oc-meta">'+meta+'</div></div></div>'
+        +'<div class="oc-version">'+esc(o.version||'Versión estándar')+'</div>'
+        +(cond?'<div class="oc-cond">'+cond+'</div>':'')
+        +'<div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>'+parseInt(o.price)+'</b><span class="oc-unit">&euro;/mes</span></div>'+savehtml+'</div>'
+        +'<div class="oc-cta"><button class="btn-card-info" onclick="abrirModal(\''+gn+'\',\''+vj+'\');return false;">Solicitar info</button>'
+        +'<button class="btn-card-ver" onclick="abrirModalGestora(\''+g.fuente+'\',\''+gn+'\',\''+vj+'\');return false;">Ver ofertas &rarr;</button></div></div>';
+    }).join('');
+    setCount(groups.length);
+    var ph=document.querySelector('.price-big');
+    if(ph)ph.innerHTML=parseInt(prices[0])+'<sup style="font-size:20px">&#8364;</sup>';
+  };
+  function cap(s){return s?s.charAt(0).toUpperCase()+s.slice(1):s;}
+  function setCount(n){var e=document.getElementById('filter-count');if(e)e.textContent=n+' gestora'+(n!==1?'s':'');}
+  window.filtrarTabla=window.renderComparador;
+  window.resetFiltros=function(){['cond-plazo','cond-km','f-tipo','f-fuente'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});renderComparador();};
+})();
+</script>
+
 </body>
 </html>
