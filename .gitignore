@@ -9,6 +9,7 @@ img/.DS_Store
 !generar_categorias.py
 !generar_marcas.py
 !descargar_imagenes_coches.py
+!descargar_logos.py
 !scripts/scrapers/scrape_myrenting.py
 !scrape_myrenting.py
 !actualizar_ofertas_seguro.py
