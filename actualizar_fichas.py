@@ -77,7 +77,11 @@ NEW_CSS = """
     .offer-card.best{border-color:var(--accent);box-shadow:0 10px 30px rgba(232,56,13,.13);}
     .oc-rank{position:absolute;top:-10px;right:16px;background:var(--accent);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.4px;padding:4px 11px;border-radius:99px;text-transform:uppercase;box-shadow:0 4px 12px rgba(232,56,13,.35);}
     .oc-top{display:flex;align-items:center;gap:12px;}
-    .oc-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;}
+    .oc-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;position:relative;overflow:hidden;}
+    .oc-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;display:none;}
+    .oc-logo.has-logo{background:#fff!important;border:1px solid #ece5db;}
+    .oc-logo.has-logo>span{display:none;}
+    .oc-logo.has-logo img{display:block;}
     .oc-name{font-size:16px;font-weight:800;}.oc-meta{font-size:12px;color:var(--ink-4);margin-top:1px;}
     .oc-version{font-size:12.5px;color:var(--ink-3,#4a423d);background:var(--surface-2,#f5f2ef);border-radius:9px;padding:9px 12px;line-height:1.4;min-height:38px;display:flex;align-items:center;}
     .oc-cond{display:flex;gap:8px;flex-wrap:wrap;}
@@ -108,6 +112,8 @@ JS_RENDER = r"""
 (function(){
   var GC={arval:'#C41E1E',ayvens:'#1E4DB7',alphabet:'#6D28D9',kinto:'#15803D',quadis:'#B45309','kia armotors':'#B91C1C',leasys:'#0891B2',revel:'#0F766E'};
   function ini(n){return (n||'').split(' ').slice(0,2).map(function(w){return w[0]||'';}).join('').toUpperCase();}
+  function gslug(n){return (n||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+  function ocLogo(fuente,gestora,color){return '<div class="oc-logo" style="background:'+color+'"><span>'+ini(gestora)+'</span><img src="/img/gestoras/'+gslug(fuente)+'.png" alt="'+esc(gestora)+'" loading="lazy" onload="this.parentNode.classList.add(\'has-logo\')" onerror="this.remove()"></div>';}
   function kmf(k){k=parseInt(k);return isNaN(k)?'—':(''+k).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
   function esc(s){return (''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
   function val(id){var e=document.getElementById(id);return e?e.value:'';}
@@ -147,7 +153,7 @@ JS_RENDER = r"""
       if(o.km&&o.km!=='—')cond+='<span>&#128663; '+kmf(o.km)+' km/año</span>';
       var gn=o.gestora.replace(/'/g,"\\'"),vj=vehiculo.replace(/'/g,"\\'");
       return '<div class="offer-card'+(best?' best':'')+'">'+rank
-        +'<div class="oc-top"><div class="oc-logo" style="background:'+color+'">'+ini(o.gestora)+'</div>'
+        +'<div class="oc-top">'+ocLogo(g.fuente,o.gestora,color)
         +'<div><div class="oc-name">'+esc(o.gestora)+'</div><div class="oc-meta">'+meta+'</div></div></div>'
         +'<div class="oc-version">'+esc(o.version||'Versión estándar')+'</div>'
         +(cond?'<div class="oc-cond">'+cond+'</div>':'')
@@ -205,7 +211,7 @@ def static_cards(data, media, model):
         nm=o['gestora'].replace("'","\\'"); mj=model.replace("'","\\'")
         out.append(f'''    <div class="offer-card{' best' if best else ''}">
       {rank}
-      <div class="oc-top"><div class="oc-logo" style="background:{color}">{ini(o['gestora'])}</div><div><div class="oc-name">{esc(o['gestora'])}</div><div class="oc-meta">{meta}</div></div></div>
+      <div class="oc-top"><div class="oc-logo" style="background:{color}"><span>{ini(o['gestora'])}</span><img src="/img/gestoras/{slugify(f)}.png" alt="{esc(o['gestora'])}" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">{esc(o['gestora'])}</div><div class="oc-meta">{meta}</div></div></div>
       <div class="oc-version">{esc(o['version'] or 'Versión estándar')}</div>
       {'<div class="oc-cond">'+cond+'</div>' if cond else ''}
       <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>{int(float(o['price']))}</b><span class="oc-unit">&euro;/mes</span></div>{savehtml}</div>
@@ -303,10 +309,17 @@ def transform(path, offers):
     blob = 'window._OFERTAS = ' + json.dumps(data, ensure_ascii=False) + ';'
     c = re.sub(r'window\._OFERTAS\s*=\s*\{.*?\};', blob, c, count=1, flags=re.DOTALL)
 
-    # 5) CSS + JS render (una vez)
-    if 'FICHA v4' not in c:
+    # 5) CSS + JS render — reinyectar SIEMPRE (reemplaza la version previa
+    #    para que cambios de plantilla lleguen a las fichas ya generadas)
+    if 'FICHA v4' in c:
+        c = re.sub(r'/\* ===== FICHA v4 ===== \*/.*?(?=\n?\s*</style>)',
+                   lambda _: NEW_CSS.strip(), c, count=1, flags=re.DOTALL)
+    else:
         c = c.replace('</style>', NEW_CSS + '\n  </style>', 1)
-    if 'window.renderComparador' not in c:
+    if 'window.renderComparador' in c:
+        c = re.sub(r'<script>(?:(?!</script>).)*?window\.renderComparador(?:(?!</script>).)*?</script>',
+                   lambda _: JS_RENDER.strip(), c, count=1, flags=re.DOTALL)
+    else:
         c = c.replace('</body>', JS_RENDER + '\n</body>', 1)
 
     return c, None

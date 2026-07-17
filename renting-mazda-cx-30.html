@@ -324,7 +324,11 @@
     .offer-card.best{border-color:var(--accent);box-shadow:0 10px 30px rgba(232,56,13,.13);}
     .oc-rank{position:absolute;top:-10px;right:16px;background:var(--accent);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.4px;padding:4px 11px;border-radius:99px;text-transform:uppercase;box-shadow:0 4px 12px rgba(232,56,13,.35);}
     .oc-top{display:flex;align-items:center;gap:12px;}
-    .oc-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;}
+    .oc-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;position:relative;overflow:hidden;}
+    .oc-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;display:none;}
+    .oc-logo.has-logo{background:#fff!important;border:1px solid #ece5db;}
+    .oc-logo.has-logo>span{display:none;}
+    .oc-logo.has-logo img{display:block;}
     .oc-name{font-size:16px;font-weight:800;}.oc-meta{font-size:12px;color:var(--ink-4);margin-top:1px;}
     .oc-version{font-size:12.5px;color:var(--ink-3,#4a423d);background:var(--surface-2,#f5f2ef);border-radius:9px;padding:9px 12px;line-height:1.4;min-height:38px;display:flex;align-items:center;}
     .oc-cond{display:flex;gap:8px;flex-wrap:wrap;}
@@ -356,6 +360,15 @@
   <div class="nav-brand"><a class="nav-logo" href="/">My<span>Renting</span></a></div>
   <a href="/" class="nav-back">&larr; Todas las ofertas</a>
 </nav>
+
+<div class="sub-bar"><div class="sub-inner">
+  <nav class="crumb"><a href="/">Inicio</a><span class="sep">&rsaquo;</span><a href="/renting-mazda.html">Mazda</a><span class="sep">&rsaquo;</span><span class="cur">Mazda Cx-30</span></nav>
+  <div class="mini-search">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" value="Mazda Cx-30" placeholder="Busca otro coche&hellip;" onkeydown="if(event.key==='Enter')window.location.href='/?q='+encodeURIComponent(this.value)">
+    <button onclick="window.location.href='/?q='+encodeURIComponent(this.previousElementSibling.value)">Comparar &rarr;</button>
+  </div>
+</div></div>
 
 <div class="sub-bar"><div class="sub-inner">
   <nav class="crumb"><a href="/">Inicio</a><span class="sep">&rsaquo;</span><a href="/renting-mazda.html">Mazda</a><span class="sep">&rsaquo;</span><span class="cur">Mazda Cx-30</span></nav>
@@ -399,7 +412,7 @@
   <div class="compare-grid" id="compare-grid">
     <div class="offer-card best">
       <div class="oc-rank">&#9733; Mejor precio</div>
-      <div class="oc-top"><div class="oc-logo" style="background:#1E4DB7">A</div><div><div class="oc-name">Ayvens</div><div class="oc-meta">Empresa, Particular &middot; 9 ofertas</div></div></div>
+      <div class="oc-top"><div class="oc-logo" style="background:#1E4DB7"><span>A</span><img src="/img/gestoras/ayvens.png" alt="Ayvens" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">Ayvens</div><div class="oc-meta">Empresa, Particular &middot; 9 ofertas</div></div></div>
       <div class="oc-version">2.5L e-SKYACT G MHEV 103kW AT Centr-Line</div>
       <div class="oc-cond"><span>&#128337; 36 meses</span><span>&#128663; 10.000 km/año</span></div>
       <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>403</b><span class="oc-unit">&euro;/mes</span></div><div class="oc-save">&#8722;3%</div></div>
@@ -679,6 +692,8 @@
 (function(){
   var GC={arval:'#C41E1E',ayvens:'#1E4DB7',alphabet:'#6D28D9',kinto:'#15803D',quadis:'#B45309','kia armotors':'#B91C1C',leasys:'#0891B2',revel:'#0F766E'};
   function ini(n){return (n||'').split(' ').slice(0,2).map(function(w){return w[0]||'';}).join('').toUpperCase();}
+  function gslug(n){return (n||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+  function ocLogo(fuente,gestora,color){return '<div class="oc-logo" style="background:'+color+'"><span>'+ini(gestora)+'</span><img src="/img/gestoras/'+gslug(fuente)+'.png" alt="'+esc(gestora)+'" loading="lazy" onload="this.parentNode.classList.add(\'has-logo\')" onerror="this.remove()"></div>';}
   function kmf(k){k=parseInt(k);return isNaN(k)?'—':(''+k).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
   function esc(s){return (''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
   function val(id){var e=document.getElementById(id);return e?e.value:'';}
@@ -718,7 +733,7 @@
       if(o.km&&o.km!=='—')cond+='<span>&#128663; '+kmf(o.km)+' km/año</span>';
       var gn=o.gestora.replace(/'/g,"\\'"),vj=vehiculo.replace(/'/g,"\\'");
       return '<div class="offer-card'+(best?' best':'')+'">'+rank
-        +'<div class="oc-top"><div class="oc-logo" style="background:'+color+'">'+ini(o.gestora)+'</div>'
+        +'<div class="oc-top">'+ocLogo(g.fuente,o.gestora,color)
         +'<div><div class="oc-name">'+esc(o.gestora)+'</div><div class="oc-meta">'+meta+'</div></div></div>'
         +'<div class="oc-version">'+esc(o.version||'Versión estándar')+'</div>'
         +(cond?'<div class="oc-cond">'+cond+'</div>':'')

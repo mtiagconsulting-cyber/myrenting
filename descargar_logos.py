@@ -81,9 +81,10 @@ MARCA_ALIAS = {
 
 # Slug del repositorio car-logos-dataset (a veces difiere del nuestro)
 DATASET_SLUG = {
-    "mercedes-benz": "mercedes-benz", "alfa-romeo": "alfa-romeo",
-    "land-rover": "land-rover", "citroen": "citroen", "ds": "ds-automobiles",
-    "byd": "byd", "cupra": "cupra", "polestar": "polestar", "lynk-co": "lynk-co",
+    "mercedes": "mercedes-benz", "mercedes-benz": "mercedes-benz",
+    "alfa-romeo": "alfa-romeo", "land-rover": "land-rover", "citroen": "citroen",
+    "ds": "ds-automobiles", "lynk-and-co": "lynk-co",
+    "byd": "byd", "cupra": "cupra", "polestar": "polestar",
 }
 DATASET_URL = ("https://raw.githubusercontent.com/filippofilip95/"
                "car-logos-dataset/master/logos/optimized/{slug}.png")
@@ -98,9 +99,8 @@ def slugify(text: str) -> str:
 
 
 def marca_slug(make: str) -> str:
-    key = re.sub(r"\s+", " ", make.strip().lower())
-    if key in MARCA_ALIAS:
-        return MARCA_ALIAS[key]
+    # Mismo slug que usa la web (slugify plano) para que los PNG coincidan
+    # con las rutas /img/marcas/<slug>.png de las tarjetas y el buscador.
     return slugify(make)
 
 

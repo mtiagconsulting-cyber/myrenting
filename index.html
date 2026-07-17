@@ -150,7 +150,11 @@ button{font-family:inherit;cursor:pointer}
 .ac-item{display:flex;align-items:center;gap:12px;padding:9px 16px;cursor:pointer;text-decoration:none;color:var(--ink)}
 .ac-item:hover,.ac-item.active{background:#faf5f0}
 .ac-thumb{width:48px;height:34px;object-fit:contain;flex-shrink:0}
-.ac-brand{width:38px;height:38px;border-radius:10px;background:#fff0e8;color:var(--o);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ac-brand{width:38px;height:38px;border-radius:10px;background:#fff0e8;color:var(--o);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;overflow:hidden}
+.ac-brand img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5px;display:none}
+.ac-brand.has-logo{background:#fff;border:1px solid #ece5db}
+.ac-brand.has-logo>span{display:none}
+.ac-brand.has-logo img{display:block}
 .ac-txt{display:flex;flex-direction:column;min-width:0;flex:1}
 .ac-name{font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ac-sub{font-size:12px;color:var(--ink-5)}
@@ -1109,7 +1113,7 @@ a.model-card{text-decoration:none;color:inherit}
         const n = makeMap[k].n, disp = makeMap[k].disp;
         const i = acList.length; acList.push({type:'brand', make:k});
         html += '<div class="ac-item" data-i="'+i+'" onmousedown="acPick('+i+')">'
-          + '<span class="ac-brand">'+acTitle(disp).slice(0,2).toUpperCase()+'</span>'
+          + '<span class="ac-brand"><span>'+acTitle(disp).slice(0,2).toUpperCase()+'</span><img src="/img/marcas/'+slug(disp).replace("renting-","")+'.png" alt="" loading="lazy" onload="this.parentNode.classList.add(\'has-logo\')" onerror="this.remove()"></span>'
           + '<span class="ac-txt"><span class="ac-name">'+acTitle(disp)+'</span><span class="ac-sub">'+n+' modelo'+(n!==1?'s':'')+'</span></span>'
           + '<span class="ac-go">Ver todos &rarr;</span></div>';
       });
@@ -1119,7 +1123,7 @@ a.model-card{text-decoration:none;color:inherit}
       modelsD.slice(0,6).forEach(m => {
         const i = acList.length; const url = '/'+slug(m.name)+'.html'; acList.push({type:'model', url:url});
         html += '<a class="ac-item" data-i="'+i+'" href="'+url+'">'
-          + (m.image ? '<img class="ac-thumb" src="'+m.image+'" alt="" onerror="this.style.visibility=\'hidden\'">' : '<span class="ac-brand">'+acTitle(m.make).slice(0,2).toUpperCase()+'</span>')
+          + (m.image ? '<img class="ac-thumb" src="'+m.image+'" alt="" onerror="this.style.visibility=\'hidden\'">' : '<span class="ac-brand"><span>'+acTitle(m.make).slice(0,2).toUpperCase()+'</span><img src="/img/marcas/'+slug(m.make).replace("renting-","")+'.png" alt="" loading="lazy" onload="this.parentNode.classList.add(\'has-logo\')" onerror="this.remove()"></span>')
           + '<span class="ac-txt"><span class="ac-name">'+acTitle(m.name)+'</span><span class="ac-sub">'+m.offerCount+' oferta'+(m.offerCount!==1?'s':'')+'</span></span>'
           + '<span class="ac-price">desde '+m.minPrice+'€</span></a>';
       });
