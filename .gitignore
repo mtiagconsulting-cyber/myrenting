@@ -13,6 +13,7 @@ img/.DS_Store
 !scrape_myrenting.py
 !actualizar_ofertas_seguro.py
 !actualizar_fichas.py
+!actualizar_hubs.py
 !scripts/generadores/regenerar_paginas.py
 !scripts/mantenimiento/expirar_ofertas.py
 !scripts/mantenimiento/salud_sitio.py
