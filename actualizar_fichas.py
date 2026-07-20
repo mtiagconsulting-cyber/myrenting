@@ -255,9 +255,12 @@ def transform(path, offers):
     <button onclick="window.location.href='/?q='+encodeURIComponent(this.previousElementSibling.value)">Comparar &rarr;</button>
   </div>
 </div></div>'''
-    c2 = re.sub(r'<nav class="nav">.*?</nav>\s*(?:<div class="search-bar">.*?</div>\s*</div>\s*</div>)?', newnav + '\n\n', c, count=1, flags=re.DOTALL)
+    # Idempotente: quita TODAS las sub-bars previas (evita duplicados al regenerar)
+    c = re.sub(r'\s*<div class="sub-bar">.*?Comparar &rarr;</button>\s*</div>\s*</div>\s*</div>', '', c, flags=re.DOTALL)
+    # y sustituye el nav (con o sin vieja search-bar) por nav + UNA sub-bar
+    c2 = re.sub(r'<nav class="nav">.*?</nav>\s*(?:<div class="search-bar">.*?</div>\s*</div>\s*</div>)?',
+                lambda _: newnav + '\n\n', c, count=1, flags=re.DOTALL)
     if c2 == c:
-        # fallback: al menos reemplazar la search-bar
         c2 = re.sub(r'<div class="search-bar">.*?</div>\s*</div>\s*</div>', '', c, count=1, flags=re.DOTALL)
     c = c2
 
