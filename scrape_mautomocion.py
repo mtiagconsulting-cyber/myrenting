@@ -301,7 +301,13 @@ def parse_listing(html, base_url):
     for p in data.get("detail_products_list", []):
         name = clean(p.get("name", ""))
         make = clean(p.get("manufacturer_name", "")) or guess_make(name)
-        price = p.get("price_main") or p.get("price_sale")
+        tipo = _seg_from_path(p.get("category_path", []))
+        # particular -> precio con IVA · empresa/autónomo -> sin IVA (deducible)
+        if tipo == "particular":
+            price = p.get("price_main") or p.get("price_sale")
+        else:
+            price = (p.get("price_main_tax_excl") or p.get("price_sale_tax_excl")
+                     or p.get("price_main") or p.get("price_sale"))
         if not name or not make or not price: continue
         try: price = float(price)
         except Exception: continue
