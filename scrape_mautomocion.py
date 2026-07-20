@@ -47,9 +47,12 @@ CANDIDATE_PATHS = [
     "/renting-autonomos", "/coches", "/vehiculos", "/ofertas", "/catalogo",
 ]
 
-MARCAS = ["volkswagen","audi","hyundai","seat","cupra","toyota","skoda","honda",
-          "mazda","omoda","jaecoo","ebro","geely","lepas","kia","peugeot","citroen",
-          "renault","dacia","opel","ford","nissan","bmw","mini","volvo","fiat","mg","byd"]
+MARCAS = ["alfa romeo","land rover","mercedes benz","mercedes-benz","aston martin",
+          "volkswagen","audi","hyundai","seat","cupra","toyota","skoda","honda","mazda",
+          "omoda","jaecoo","ebro","geely","lepas","kia","peugeot","citroen","citroën",
+          "renault","dacia","opel","ford","nissan","bmw","mini","volvo","fiat","mg","byd",
+          "lexus","jeep","maserati","porsche","jaguar","tesla","smart","subaru","suzuki",
+          "mitsubishi","infiniti","lancia","alpine","polestar","mercedes","ds"]
 
 CATS = {
     "suv":"SUV","todoterreno":"SUV","crossover":"SUV",
@@ -81,10 +84,31 @@ def num(s):
 
 def guess_make(text):
     t = text.lower()
-    for mk in MARCAS:
+    for mk in sorted(MARCAS, key=len, reverse=True):   # multi-palabra primero
         if re.search(r"\b" + re.escape(mk) + r"\b", t):
-            return mk.upper()
+            return mk.upper().replace("-", " ")
     return ""
+
+def price_mes(text):
+    """Precio mensual: exige símbolo € (para no confundir '60 meses' con 60€)."""
+    for pat in (r"(\d[\d.]{1,6})\s*€\s*/?\s*mes",
+                r"€\s*(\d[\d.]{1,6})\s*/?\s*mes",
+                r"(\d[\d.]{1,6})\s*€\s*al\s*mes",
+                r"desde\s*(\d[\d.]{1,6})\s*€"):
+        m = re.search(pat, text, re.I)
+        if m:
+            v = num(m.group(1))
+            if v and 50 <= v <= 5000:
+                return v
+    return None
+
+def km_year(text):
+    m = re.search(r"(\d{1,3}(?:[.\s]\d{3}))\s*km", text, re.I)   # 10.000 km, 15 000 km
+    if m:
+        v = int(num(m.group(1)))
+        if 3000 <= v <= 60000:
+            return v
+    return None
 
 def guess_cat(text):
     t = text.lower()
@@ -175,14 +199,12 @@ def parse_product(html, url):
     titulo = clean(h1.get_text()) if h1 else ""
     # precio/mes: el precio actual del producto o el primer "€/mes"
     precio = None
-    pe = soup.select_one(".current-price [itemprop='price'], .current-price .price, .product-price, .price")
+    pe = soup.select_one(".current-price [itemprop='price'], .current-price .price, .product-price .price, .current-price")
     if pe:
-        precio = num(pe.get("content") or pe.get_text())
-    m = re.search(r"(\d[\d.\s]{1,6})\s*€?\s*(?:/|al)?\s*mes", full, re.I)
-    if m and (not precio or precio > 3000):   # si el .price es un total, usa el €/mes
-        precio = num(m.group(1))
+        v = num(pe.get("content") or pe.get_text())
+        if v and 50 <= v <= 5000: precio = v
     if not precio:
-        return None
+        precio = price_mes(full)
     # ficha de datos (Marca / Modelo / Combustible / Plazo / Kilómetros)
     specs = {}
     for row in soup.select(".data-sheet dt, .product-features dt, table tr"):
@@ -191,24 +213,26 @@ def parse_product(html, url):
         dd = dt.find_next_sibling(["dd", "td"])
         if dd: specs[clean(dt.get_text()).lower()] = clean(dd.get_text())
     txt = titulo + " " + full[:1500]
-    make = guess_make(txt)
-    model = ""
-    if make:
+    make = guess_make(titulo) or specs.get("marca", "").upper() or guess_make(full[:800])
+    if not precio or not make:          # descarta contenido que no es un vehículo
+        return None
+    model = specs.get("modelo", "")
+    if not model:
         mm = re.search(re.escape(make), titulo, re.I)
-        if mm: model = clean(titulo[mm.end():])[:40]
+        if mm: model = clean(titulo[mm.end():])
+    model = re.split(r"\bdesde\b|\d+\s*€|\|", model, 1)[0].strip()[:40]
     plazo = re.search(r"(\d{2})\s*mes", full, re.I)
-    km = re.search(r"(\d[\d.\s]{2,6})\s*km", full, re.I)
-    tipo = "empresa" if re.search(r"empresa|autonomo|aut[oó]nomo", url + " " + titulo, re.I) else "particular"
+    tipo = "empresa" if re.search(r"empresa|aut[oó]nomo", url + " " + titulo, re.I) else "particular"
     img = soup.select_one(".product-cover img, #product img, img[itemprop='image'], .product-thumbnail img, img")
     return {
         "fuente": FUENTE, "tipo": tipo,
-        "make": (make or specs.get("marca","") or titulo.split()[0]).upper(),
-        "model": (specs.get("modelo","") or model or titulo).upper()[:40].strip(),
+        "make": make.upper(),
+        "model": (model or titulo).upper()[:40].strip(),
         "version": titulo[:120],
-        "fuel": guess_fuel(txt) or specs.get("combustible",""),
+        "fuel": guess_fuel(txt) or specs.get("combustible", ""),
         "precio_desde": precio,
         "duracion": int(plazo.group(1)) if plazo else 48,
-        "km": int(num(km.group(1))) if km else 10000,
+        "km": km_year(full) or 10000,
         "url": url,
         "category": guess_cat(txt),
         "image": urljoin(url, img.get("src") or img.get("data-src") or "") if img else "",
