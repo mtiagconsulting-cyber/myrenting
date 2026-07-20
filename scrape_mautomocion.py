@@ -229,7 +229,10 @@ def parse_product(html, url):
         if mm: model = clean(titulo[mm.end():])
     model = re.split(r"\bdesde\b|\d+\s*€|\|", model, maxsplit=1)[0].strip()[:40]
     plazo = re.search(r"(\d{2})\s*mes", full, re.I)
-    tipo = "empresa" if re.search(r"empresa|aut[oó]nomo", url + " " + titulo, re.I) else "particular"
+    u = (url + " " + titulo).lower()
+    tipo = ("autonomo" if re.search(r"aut[oó]nom", u)
+            else "empresa" if "empresa" in u
+            else "particular")
     img = soup.select_one(".product-cover img, #product img, img[itemprop='image'], .product-thumbnail img, img")
     return {
         "fuente": FUENTE, "tipo": tipo,
@@ -245,19 +248,29 @@ def parse_product(html, url):
         "image": urljoin(url, img.get("src") or img.get("data-src") or "") if img else "",
     }
 
+# páginas de listado por segmento (empresa / autónomo / particular)
+SEGMENT_PATHS = ["/renting-empresas", "/renting-empresa", "/renting-autonomos",
+                 "/renting-autonomo", "/renting-particulares", "/renting-particular",
+                 "/renting-flexible", "/ofertas-flash"]
+
 def find_and_scrape(deep=True):
     tried = []
-    # 1) descubrir páginas de marca desde la home
+    # 1) descubrir páginas de marca desde la home + listados por segmento
     home = fetch(BASE_URL); tried.append((BASE_URL, bool(home)))
-    brand_urls = set()
+    seeds = set(urljoin(BASE_URL, p) for p in SEGMENT_PATHS)
     if home:
         from bs4 import BeautifulSoup
-        for a in BeautifulSoup(home, "lxml").select("a[href*='/brand/']"):
-            brand_urls.add(urljoin(BASE_URL, a["href"]))
-    print(f"  marcas encontradas: {len(brand_urls)}")
+        soup = BeautifulSoup(home, "lxml")
+        for a in soup.select("a[href*='/brand/']"):
+            seeds.add(urljoin(BASE_URL, a["href"]))
+        # cualquier enlace de listado de renting por segmento
+        for a in soup.find_all("a", href=True):
+            if re.search(r"renting-(empresa|autonom|particular)", a["href"], re.I):
+                seeds.add(urljoin(BASE_URL, a["href"]))
+    print(f"  páginas de listado (marcas + segmentos): {len(seeds)}")
 
-    # 2) recorrer marcas -> recolectar enlaces de producto (+ paginación)
-    product_urls, to_visit, visited = set(), list(brand_urls), set()
+    # 2) recorrer listados -> recolectar enlaces de producto (+ paginación)
+    product_urls, to_visit, visited = set(), list(seeds), set()
     while to_visit:
         u = to_visit.pop()
         if u in visited: continue
@@ -283,7 +296,7 @@ def find_and_scrape(deep=True):
 
     uniq = {}
     for o in offers:
-        uniq[(o["make"], o["model"], o["version"])] = o
+        uniq[(o["make"], o["model"], o["version"], o["tipo"])] = o
     return list(uniq.values()), tried
 
 # ─── MERGE ────────────────────────────────────────────────────────────────────
@@ -330,10 +343,13 @@ def main():
             print(f"    {'✓' if ok else '✗'} {u}")
 
     print(f"\n✅ {len(offers)} ofertas extraídas de {FUENTE}")
-    for o in offers[:8]:
-        print(f"   · {o['make']} {o['model']} — {o['precio_desde']}€/mes ({o['duracion']}m/{o['km']}km) [{o['category'] or '?'}]")
-    if len(offers) > 8:
-        print(f"   … y {len(offers)-8} más")
+    from collections import Counter
+    seg = Counter(o["tipo"] for o in offers)
+    print(f"   por segmento: " + " · ".join(f"{k}: {v}" for k, v in seg.items()))
+    for o in offers[:10]:
+        print(f"   · [{o['tipo'][:4]}] {o['make']} {o['model']} — {o['precio_desde']}€/mes ({o['duracion']}m/{o['km']}km) [{o['category'] or '?'}]")
+    if len(offers) > 10:
+        print(f"   … y {len(offers)-10} más")
 
     OUT_DB.write_text(json.dumps(offers, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n💾 Guardado en {OUT_DB.name}")
