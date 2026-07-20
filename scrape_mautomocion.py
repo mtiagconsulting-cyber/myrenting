@@ -220,7 +220,7 @@ def parse_product(html, url):
     if not model:
         mm = re.search(re.escape(make), titulo, re.I)
         if mm: model = clean(titulo[mm.end():])
-    model = re.split(r"\bdesde\b|\d+\s*€|\|", model, 1)[0].strip()[:40]
+    model = re.split(r"\bdesde\b|\d+\s*€|\|", model, maxsplit=1)[0].strip()[:40]
     plazo = re.search(r"(\d{2})\s*mes", full, re.I)
     tipo = "empresa" if re.search(r"empresa|aut[oó]nomo", url + " " + titulo, re.I) else "particular"
     img = soup.select_one(".product-cover img, #product img, img[itemprop='image'], .product-thumbnail img, img")
