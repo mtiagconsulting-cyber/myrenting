@@ -79,9 +79,9 @@ NEW_CSS = """
     .oc-top{display:flex;align-items:center;gap:12px;}
     .oc-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0;position:relative;overflow:hidden;}
     .oc-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;display:none;}
-    .oc-logo.has-logo{background:#fff!important;border:1px solid #ece5db;}
+    .oc-logo.has-logo{background:#fff!important;border:1px solid #ece5db;width:auto;min-width:44px;max-width:104px;padding:0 8px;}
     .oc-logo.has-logo>span{display:none;}
-    .oc-logo.has-logo img{display:block;}
+    .oc-logo.has-logo img{display:block;position:static;inset:auto;width:auto;max-width:88px;height:32px;padding:0;}
     .oc-name{font-size:16px;font-weight:800;}.oc-meta{font-size:12px;color:var(--ink-4);margin-top:1px;}
     .oc-version{font-size:12.5px;color:var(--ink-3,#4a423d);background:var(--surface-2,#f5f2ef);border-radius:9px;padding:9px 12px;line-height:1.4;min-height:38px;display:flex;align-items:center;}
     .oc-cond{display:flex;gap:8px;flex-wrap:wrap;}
