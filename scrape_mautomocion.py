@@ -262,52 +262,88 @@ def parse_product(html, url):
         "image": urljoin(url, img.get("src") or img.get("data-src") or "") if img else "",
     }
 
-# páginas de listado por segmento (empresa / autónomo / particular)
-SEGMENT_PATHS = ["/renting-empresas", "/renting-empresa", "/renting-autonomos",
-                 "/renting-autonomo", "/renting-particulares", "/renting-particular",
-                 "/renting-flexible", "/ofertas-flash"]
+# listados por segmento (PrestaShop pagina con ?page=N, 12 productos/página)
+SEGMENT_PATHS = ["/renting-particulares", "/renting-autonomos", "/renting-empresas"]
+
+def _seg_from_path(cat):
+    c = " ".join(cat).lower()
+    if "aut" in c: return "autonomo"
+    if "empresa" in c: return "empresa"
+    return "particular"
+
+def parse_listing(html, base_url):
+    """Parsea una página de listado: JSON de productos (js-rcpgtm-data) cruzado
+    con las tarjetas (versión/acabado, URL, imagen)."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "lxml")
+    # tarjetas por id_product -> url, acabado, imagen
+    mini = {}
+    for art in soup.select("article.js-product-miniature, article.product-miniature"):
+        pid = art.get("data-id-product")
+        if not pid: continue
+        a = art.select_one("a.product_name") or art.select_one("h3 a") or art.select_one("a[title]")
+        d = art.select_one(".product-desc")
+        img = art.select_one("img")
+        src = (img.get("data-src") or img.get("src")) if img else ""
+        mini.setdefault(pid, {
+            "url": urljoin(base_url, a["href"]) if a and a.get("href") else "",
+            "trim": clean(d.get_text()) if d else "",
+            "img": urljoin(base_url, src) if src else "",
+        })
+    # JSON con todos los productos de la página
+    m = re.search(r'id="js-rcpgtm-data"[^>]*>(.*?)</script>', html, re.S)
+    if not m: return []
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return []
+    offers = []
+    for p in data.get("detail_products_list", []):
+        name = clean(p.get("name", ""))
+        make = clean(p.get("manufacturer_name", "")) or guess_make(name)
+        price = p.get("price_main") or p.get("price_sale")
+        if not name or not make or not price: continue
+        try: price = float(price)
+        except Exception: continue
+        if not (50 <= price <= 6000): continue
+        attrs = {str(k).lower(): str(v) for k, v in p.get("attributes", []) if isinstance(k, str)}
+        km = int(num(attrs.get("kms al año", "") or attrs.get("kms al ano", "") or "10000") or 10000)
+        plazo = int(num(attrs.get("plazos", "") or "60") or 60)
+        tipo = _seg_from_path(p.get("category_path", []))
+        mn = mini.get(str(p.get("id_product", "")), {})
+        model = name
+        mm = re.search(re.escape(make), name, re.I)
+        if mm: model = clean(name[mm.end():])
+        model = model[:40].strip()
+        trim = mn.get("trim", "")
+        txt = name + " " + trim
+        offers.append({
+            "fuente": FUENTE, "tipo": tipo, "make": make.upper(),
+            "model": (model or name).upper()[:40],
+            "version": (name + (" " + trim if trim else "")).strip()[:120],
+            "fuel": guess_fuel(txt),
+            "precio_desde": round(price, 2),
+            "duracion": plazo, "km": km,
+            "url": mn.get("url") or urljoin(base_url, SEGMENT_PATHS[0]),
+            "category": guess_cat(txt),
+            "image": mn.get("img", ""),
+        })
+    return offers
 
 def find_and_scrape(deep=True):
-    tried = []
-    # 1) descubrir páginas de marca desde la home + listados por segmento
-    home = fetch(BASE_URL); tried.append((BASE_URL, bool(home)))
-    seeds = set(urljoin(BASE_URL, p) for p in SEGMENT_PATHS)
-    if home:
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(home, "lxml")
-        for a in soup.select("a[href*='/brand/']"):
-            seeds.add(urljoin(BASE_URL, a["href"]))
-        # cualquier enlace de listado de renting por segmento
-        for a in soup.find_all("a", href=True):
-            if re.search(r"renting-(empresa|autonom|particular)", a["href"], re.I):
-                seeds.add(urljoin(BASE_URL, a["href"]))
-    print(f"  páginas de listado (marcas + segmentos): {len(seeds)}")
-
-    # 2) recorrer listados -> recolectar enlaces de producto (+ paginación)
-    product_urls, to_visit, visited = set(), list(seeds), set()
-    while to_visit:
-        u = to_visit.pop()
-        if u in visited: continue
-        visited.add(u)
-        h = fetch(u); tried.append((u, bool(h)))
-        if not h: continue
-        links, pages = product_links_from(h, u)
-        product_urls |= links
-        for pg in pages:
-            if pg not in visited: to_visit.append(pg)
-        time.sleep(0.6)
-    print(f"  productos encontrados: {len(product_urls)}")
-
-    # 3) parsear cada producto
-    offers = []
-    for i, pu in enumerate(sorted(product_urls), 1):
-        h = fetch(pu)
-        if not h: continue
-        o = parse_product(h, pu)
-        if o: offers.append(o)
-        if i % 20 == 0: print(f"    …{i}/{len(product_urls)}")
-        time.sleep(0.5)
-
+    tried, offers = [], []
+    for path in SEGMENT_PATHS:
+        page = 1
+        while page <= 15:
+            url = urljoin(BASE_URL, path) + (f"?page={page}" if page > 1 else "")
+            h = fetch(url); tried.append((url, bool(h)))
+            if not h: break
+            offs = parse_listing(h, url)
+            if not offs: break
+            offers += offs
+            print(f"  {path} p{page}: {len(offs)}")
+            page += 1
+            time.sleep(0.6)
     uniq = {}
     for o in offers:
         uniq[(o["make"], o["model"], o["version"], o["tipo"])] = o
@@ -342,14 +378,8 @@ def main():
 
     if args.from_file:
         html = Path(args.from_file).read_text(encoding="utf-8")
-        o = parse_product(html, BASE_URL)
-        if o:
-            offers = [o]
-        else:
-            links, _ = product_links_from(html, BASE_URL)
-            print(f"  (no es página de producto) enlaces de producto encontrados: {len(links)}")
-            for l in list(links)[:20]: print(f"    → {l}")
-            offers = []
+        offers = parse_listing(html, BASE_URL)
+        print(f"  (from-file) {len(offers)} ofertas parseadas del listado")
     else:
         print("── Scrapeando m-renting.com…")
         offers, tried = find_and_scrape()
