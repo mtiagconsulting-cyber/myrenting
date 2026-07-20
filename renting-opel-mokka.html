@@ -376,38 +376,30 @@
   <div class="car-info">
     <div class="car-brand">Opel</div><div class="car-name">Opel Mokka</div>
     <div class="car-specs">
-      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">2</span></div>
-      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">4</span></div>
+      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">1</span></div>
+      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">3</span></div>
       <div class="spec-item"><span class="spec-label">Actualizado</span><span class="spec-val">29 Jun 2026</span></div>
     </div>
   </div>
-  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">342<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-badge">&#10003; 2 gestoras comparadas</div></div>
+  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">353<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-badge">&#10003; 1 gestoras comparadas</div></div>
 </div></div>
 
 <!-- COMPARADOR DE TARJETAS -->
 <div class="section comparador-section" style="margin-top:8px;">
-  <div class="compare-title">Compara las 2 gestoras disponibles</div>
+  <div class="compare-title">Compara las 1 gestoras disponibles</div>
 
-  <div class="cmp-cond">Comparando a <select id="cond-plazo" onchange="renderComparador()"><option value="">cualquier plazo</option><option value="24">24 meses</option><option value="36">36 meses</option></select> · <select id="cond-km" onchange="renderComparador()"><option value="">cualquier km</option><option value="10000">10.000 km/año</option></select></div>
+  <div class="cmp-cond">Comparando a <select id="cond-plazo" onchange="renderComparador()"><option value="">cualquier plazo</option><option value="24">24 meses</option></select> · <select id="cond-km" onchange="renderComparador()"><option value="">cualquier km</option><option value="10000">10.000 km/año</option></select></div>
 
   <div class="filters">
-    <div class="f-group"><label class="f-label">Cliente</label><select class="f-select" id="f-tipo" onchange="renderComparador()"><option value="">Empresa y particular</option><option value="empresa">Empresa</option><option value="particular">Particular</option></select></div>
-    <div class="f-group"><label class="f-label">Gestora</label><select class="f-select" id="f-fuente" onchange="renderComparador()"><option value="">Todas las gestoras</option><option value="quadis">Quadis</option><option value="ayvens">Ayvens</option></select></div>
-    <span class="f-count" id="filter-count">2 gestoras</span>
+    <div class="f-group"><label class="f-label">Cliente</label><select class="f-select" id="f-tipo" onchange="renderComparador()"><option value="">Empresa y particular</option><option value="particular">Particular</option></select></div>
+    <div class="f-group"><label class="f-label">Gestora</label><select class="f-select" id="f-fuente" onchange="renderComparador()"><option value="">Todas las gestoras</option><option value="ayvens">Ayvens</option></select></div>
+    <span class="f-count" id="filter-count">1 gestoras</span>
     <button class="f-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
   </div>
 
   <div class="compare-grid" id="compare-grid">
     <div class="offer-card best">
       <div class="oc-rank">&#9733; Mejor precio</div>
-      <div class="oc-top"><div class="oc-logo" style="background:#B45309"><span>Q</span><img src="/img/gestoras/quadis.png" alt="Quadis" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">Quadis</div><div class="oc-meta">Empresa &middot; 1 oferta</div></div></div>
-      <div class="oc-version">Opel Mokka 1.2 T XHT Hybrid eDCT6 GS</div>
-      <div class="oc-cond"><span>&#128337; 36 meses</span><span>&#128663; 10.000 km/año</span></div>
-      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>342</b><span class="oc-unit">&euro;/mes</span></div><div class="oc-save">&#8722;3%</div></div>
-      <div class="oc-cta"><button class="btn-card-info" onclick="abrirModal('Quadis','Opel Mokka');return false;">Solicitar info</button><button class="btn-card-ver" onclick="abrirModalGestora('quadis','Quadis','Opel Mokka');return false;">Ver ofertas &rarr;</button></div>
-    </div>
-    <div class="offer-card">
-      
       <div class="oc-top"><div class="oc-logo" style="background:#1E4DB7"><span>A</span><img src="/img/gestoras/ayvens.png" alt="Ayvens" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">Ayvens</div><div class="oc-meta">Particular &middot; 3 ofertas</div></div></div>
       <div class="oc-version">1.2 T 100kW (136 CV) GS</div>
       <div class="oc-cond"><span>&#128337; 24 meses</span><span>&#128663; 10.000 km/año</span></div>
@@ -681,7 +673,7 @@
 </script>
 
   <script>
-  window._OFERTAS = {"quadis": [{"gestora": "Quadis", "tipo": "empresa", "fuel": "", "plazo": "36", "km": "10000", "version": "Opel Mokka 1.2 T XHT Hybrid eDCT6 GS", "price": "342"}], "ayvens": [{"gestora": "Ayvens", "tipo": "particular", "fuel": "Gasolina", "plazo": "24", "km": "10000", "version": "1.2 T 100kW (136 CV) GS", "price": "353"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "Gasolina", "plazo": "24", "km": "10000", "version": "1.2 T 96kW (130 CV) GS", "price": "357"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "Gasolina", "plazo": "24", "km": "10000", "version": "1.2 T 100kW (136 CV) GS", "price": "357"}]};
+  window._OFERTAS = {"ayvens": [{"gestora": "Ayvens", "tipo": "particular", "fuel": "Gasolina", "plazo": "24", "km": "10000", "version": "1.2 T 100kW (136 CV) GS", "price": "353"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "Gasolina", "plazo": "24", "km": "10000", "version": "1.2 T 96kW (130 CV) GS", "price": "357"}, {"gestora": "Ayvens", "tipo": "particular", "fuel": "Gasolina", "plazo": "24", "km": "10000", "version": "1.2 T 100kW (136 CV) GS", "price": "357"}]};
   </script>
 
 <script>

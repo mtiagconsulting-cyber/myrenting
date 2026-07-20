@@ -25,7 +25,7 @@ MANUAL_FILE = BASE / 'ofertas-manuales.json'
 BACKUP = BASE / 'index.html.bak'
 
 # Gestoras que cubre scrape_myrenting.py
-SCRAPED_SOURCES = {'Arval', 'Ayvens', 'Kinto', 'Alphabet', 'Quadis'}
+SCRAPED_SOURCES = {'Arval', 'Ayvens', 'Alphabet'}
 
 # Guardarrailes
 MIN_TOTAL_ABS = 500          # el sitio nunca puede quedar con menos de esto

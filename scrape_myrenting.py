@@ -418,18 +418,15 @@ async def main():
 
     arval    = scrape_arval()
     ayvens   = await scrape_ayvens()
-    kinto    = await scrape_kinto()
     alphabet = scrape_alphabet()
-    quadis   = scrape_quadis()
+    # Kinto y Quadis desactivados (fuera del comparador por decisión de negocio)
 
-    todas = arval + ayvens + kinto + alphabet + quadis
+    todas = arval + ayvens + alphabet
 
     print("\n─── RESUMEN ─────────────────────────────")
     print(f"Arval:    {len(arval):>4} ofertas")
     print(f"Ayvens:   {len(ayvens):>4} ofertas")
-    print(f"Kinto:    {len(kinto):>4} ofertas")
     print(f"Alphabet: {len(alphabet):>4} ofertas")
-    print(f"Quadis:   {len(quadis):>4} ofertas")
     print(f"TOTAL:    {len(todas):>4} ofertas")
 
     # Guardar en ofertas-db.json (formato principal del proyecto)

@@ -355,8 +355,11 @@ def offers_from_page(content):
         pdata = json.loads(m.group(1))
     except Exception:
         return []
+    ALLOWED = {'arval', 'ayvens', 'alphabet', 'm automoción', 'm automocion'}
     offers = []
     for fuente, lst in pdata.items():
+        if fuente.lower() not in ALLOWED:      # Kinto/Quadis/KIA fuera del comparador
+            continue
         for o in lst:
             try:
                 price = float(str(o.get('price', '0')).replace(',', '.'))

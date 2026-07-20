@@ -376,24 +376,24 @@
   <div class="car-info">
     <div class="car-brand">Peugeot</div><div class="car-name">Peugeot 208</div>
     <div class="car-specs">
-      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">2</span></div>
-      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">3</span></div>
+      <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">1</span></div>
+      <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">2</span></div>
       <div class="spec-item"><span class="spec-label">Actualizado</span><span class="spec-val">29 Jun 2026</span></div>
     </div>
   </div>
-  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">289<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-badge">&#10003; 2 gestoras comparadas</div></div>
+  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">289<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-badge">&#10003; 1 gestoras comparadas</div></div>
 </div></div>
 
 <!-- COMPARADOR DE TARJETAS -->
 <div class="section comparador-section" style="margin-top:8px;">
-  <div class="compare-title">Compara las 2 gestoras disponibles</div>
+  <div class="compare-title">Compara las 1 gestoras disponibles</div>
 
-  <div class="cmp-cond">Comparando a <select id="cond-plazo" onchange="renderComparador()"><option value="">cualquier plazo</option><option value="36">36 meses</option><option value="72">72 meses</option></select> · <select id="cond-km" onchange="renderComparador()"><option value="">cualquier km</option><option value="10000">10.000 km/año</option></select></div>
+  <div class="cmp-cond">Comparando a <select id="cond-plazo" onchange="renderComparador()"><option value="">cualquier plazo</option><option value="72">72 meses</option></select> · <select id="cond-km" onchange="renderComparador()"><option value="">cualquier km</option><option value="10000">10.000 km/año</option></select></div>
 
   <div class="filters">
     <div class="f-group"><label class="f-label">Cliente</label><select class="f-select" id="f-tipo" onchange="renderComparador()"><option value="">Empresa y particular</option><option value="empresa">Empresa</option><option value="particular">Particular</option></select></div>
-    <div class="f-group"><label class="f-label">Gestora</label><select class="f-select" id="f-fuente" onchange="renderComparador()"><option value="">Todas las gestoras</option><option value="arval">Arval</option><option value="quadis">Quadis</option></select></div>
-    <span class="f-count" id="filter-count">2 gestoras</span>
+    <div class="f-group"><label class="f-label">Gestora</label><select class="f-select" id="f-fuente" onchange="renderComparador()"><option value="">Todas las gestoras</option><option value="arval">Arval</option></select></div>
+    <span class="f-count" id="filter-count">1 gestoras</span>
     <button class="f-reset" id="btn-reset" onclick="resetFiltros()" style="display:none">&#x2715; Limpiar</button>
   </div>
 
@@ -403,16 +403,8 @@
       <div class="oc-top"><div class="oc-logo" style="background:#C41E1E"><span>A</span><img src="/img/gestoras/arval.png" alt="Arval" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">Arval</div><div class="oc-meta">Empresa, Particular &middot; 2 ofertas</div></div></div>
       <div class="oc-version">5P Allure HYBRID 145 e-DSC6</div>
       <div class="oc-cond"><span>&#128337; 72 meses</span><span>&#128663; 10.000 km/año</span></div>
-      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>289</b><span class="oc-unit">&euro;/mes</span></div><div class="oc-save">&#8722;7%</div></div>
+      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>289</b><span class="oc-unit">&euro;/mes</span></div><div class="oc-save">&#8722;10%</div></div>
       <div class="oc-cta"><button class="btn-card-info" onclick="abrirModal('Arval','Peugeot 208');return false;">Solicitar info</button><button class="btn-card-ver" onclick="abrirModalGestora('arval','Arval','Peugeot 208');return false;">Ver ofertas &rarr;</button></div>
-    </div>
-    <div class="offer-card">
-      
-      <div class="oc-top"><div class="oc-logo" style="background:#B45309"><span>Q</span><img src="/img/gestoras/quadis.png" alt="Quadis" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">Quadis</div><div class="oc-meta">Empresa &middot; 1 oferta</div></div></div>
-      <div class="oc-version">Peugeot 208 Allure Gasolina 100 S&amp;S 6 Vel. MAN</div>
-      <div class="oc-cond"><span>&#128337; 36 meses</span><span>&#128663; 10.000 km/año</span></div>
-      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>295</b><span class="oc-unit">&euro;/mes</span></div><div></div></div>
-      <div class="oc-cta"><button class="btn-card-info" onclick="abrirModal('Quadis','Peugeot 208');return false;">Solicitar info</button><button class="btn-card-ver" onclick="abrirModalGestora('quadis','Quadis','Peugeot 208');return false;">Ver ofertas &rarr;</button></div>
     </div>
   </div>
 
@@ -681,7 +673,7 @@
 </script>
 
   <script>
-  window._OFERTAS = {"arval": [{"gestora": "Arval", "tipo": "empresa", "fuel": "Micro híbrido Gasolina", "plazo": "72", "km": "10000", "version": "5P Allure HYBRID 145 e-DSC6", "price": "289"}, {"gestora": "Arval", "tipo": "particular", "fuel": "Micro híbrido Gasolina", "plazo": "72", "km": "10000", "version": "5P Allure HYBRID 145 e-DSC6", "price": "350"}], "quadis": [{"gestora": "Quadis", "tipo": "empresa", "fuel": "", "plazo": "36", "km": "10000", "version": "Peugeot 208 Allure Gasolina 100 S&S 6 Vel. MAN", "price": "295"}]};
+  window._OFERTAS = {"arval": [{"gestora": "Arval", "tipo": "empresa", "fuel": "Micro híbrido Gasolina", "plazo": "72", "km": "10000", "version": "5P Allure HYBRID 145 e-DSC6", "price": "289"}, {"gestora": "Arval", "tipo": "particular", "fuel": "Micro híbrido Gasolina", "plazo": "72", "km": "10000", "version": "5P Allure HYBRID 145 e-DSC6", "price": "350"}]};
   </script>
 
 <script>
