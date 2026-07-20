@@ -45,8 +45,8 @@
     /* NAV */
     .nav{background:var(--surface);border-bottom:1.5px solid var(--border);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:100;}
     .nav-brand{display:flex;align-items:center;gap:8px;}
-    .nav-logo{font-size:17px;font-weight:800;letter-spacing:-.5px;text-decoration:none;color:var(--ink);}
-    .nav-logo span{color:var(--accent);}
+    .nav-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;}
+    .nav-name{font-size:17px;font-weight:800;letter-spacing:-.5px;}
     .nav-back{font-size:12px;color:var(--ink-4);font-weight:500;display:flex;align-items:center;gap:4px;}
     .nav-back:hover{color:var(--ink);}
 
@@ -98,7 +98,27 @@
     .section-title{font-size:16px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px;}
     .section-sub{font-size:11px;color:var(--ink-5);margin-bottom:16px;}
 
+    /* FILTROS DESPLEGABLES */
+    .ofertas-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;user-select:none;background:var(--surface);border-radius:var(--radius) var(--radius) 0 0;border:1px solid var(--border);border-bottom:none;}
+    .ofertas-header-left{display:flex;align-items:center;gap:10px;}
+    .ofertas-count{font-size:12px;font-weight:700;color:var(--ink);}
+    .ofertas-count-badge{background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;}
+    .ofertas-toggle-icon{font-size:14px;color:var(--ink-5);transition:transform .25s;}
+    .ofertas-toggle-icon.open{transform:rotate(180deg);}
+    .ofertas-body{background:var(--surface);border:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius);overflow:hidden;}
+    .ofertas-body.collapsed{display:none;}
 
+    /* FILTROS */
+    .filter-bar{background:var(--surface-2);border-bottom:1px solid var(--border);padding:12px 16px;}
+    .filter-bar-inner{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;}
+    .filter-group{display:flex;flex-direction:column;gap:3px;min-width:120px;}
+    .filter-group label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);}
+    .filter-group select{padding:7px 10px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:11px;font-family:inherit;color:var(--ink-3);background:var(--surface);cursor:pointer;outline:none;transition:border-color .15s;}
+    .filter-group select:focus,.filter-group select.active{border-color:var(--accent);color:var(--ink);}
+    .filter-actions{display:flex;align-items:flex-end;gap:8px;margin-left:auto;}
+    .filter-count{font-size:11px;color:var(--ink-5);white-space:nowrap;padding-bottom:4px;}
+    .btn-reset{background:none;border:1.5px solid var(--border-2);border-radius:99px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--ink-4);cursor:pointer;font-family:inherit;transition:all .15s;}
+    .btn-reset:hover{border-color:var(--accent);color:var(--accent);}
 
     /* TABLA */
     .comp-table-wrap{overflow-x:auto;}
@@ -169,6 +189,7 @@
       .hero-stats{grid-template-columns:1fr 1fr;}
       .section{padding:0 16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
+      .filter-bar-inner{gap:8px;}
       .filter-group{min-width:calc(50% - 4px);}
       .footer{flex-direction:column;gap:12px;text-align:center;padding:16px;}
       .footer-links{flex-wrap:wrap;justify-content:center;}
@@ -193,60 +214,16 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
-  
-    /* FILTROS — mockup */
-    .filters{background:#fff;border-radius:14px;border:1px solid var(--border);padding:16px;margin-bottom:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;box-shadow:0 2px 16px rgba(0,0,0,.07);}
-    .f-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-5);margin-bottom:3px;display:block;}
-    .f-group{display:flex;flex-direction:column;flex:1;min-width:130px;}
-    .f-select{border:1.5px solid var(--border);border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;background:#fff;color:var(--ink);cursor:pointer;}
-    .f-select.active{border-color:var(--accent);color:var(--accent);}
-    .f-count{font-size:12px;color:var(--ink-4);align-self:flex-end;padding-bottom:10px;white-space:nowrap;}
-    .f-reset{background:none;border:1.5px solid var(--border);border-radius:99px;padding:6px 14px;font-size:11px;font-weight:600;color:var(--ink-4);cursor:pointer;font-family:inherit;align-self:flex-end;}
-    .f-reset:hover{border-color:var(--accent);color:var(--accent);}
-  
-    /* ===== HUB v4 ===== */
-    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:6px;}
-    .hub-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;}
-    .hub-card:hover{box-shadow:0 12px 30px rgba(30,20,15,.12);transform:translateY(-3px);border-color:#e0d6ce;}
-    .hub-img{height:120px;background:radial-gradient(circle at 50% 45%,#f6f3f0,#ece9e4);display:flex;align-items:center;justify-content:center;padding:12px;}
-    .hub-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));}
-    .hub-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:3px;flex:1;}
-    .hub-brand{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);}
-    .hub-model{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);line-height:1.15;}
-    .hub-meta{font-size:11.5px;color:var(--ink-4,#6a615b);margin-top:1px;}
-    .hub-price{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-4,#6a615b);}
-    .hub-price b{font-size:19px;color:var(--accent);font-weight:850;letter-spacing:-.5px;}
-    .hub-empty{padding:26px;text-align:center;color:var(--ink-4,#6a615b);font-size:14px;}
-    .seo-block{max-width:820px;line-height:1.7;color:var(--ink-3,#4a423d);font-size:15px;}
-    .seo-block p{margin:0 0 14px;}
-
   </style>
-<style id="mrnav-css">
-.mrnav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:20px;background:#fff;border-bottom:1px solid #ece7e2;padding:0 32px;height:64px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif;}
-.mrnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
-.mrnav-ic{width:34px;height:34px;border-radius:9px;background:#e8380d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;letter-spacing:-1px;}
-.mrnav-tx{font-size:19px;font-weight:800;color:#17120f;letter-spacing:-.6px;}
-.mrnav-tx span{color:#e8380d;}
-.mrnav-links{display:flex;align-items:center;gap:4px;flex:1;}
-.mrnav-links a{font-size:14px;font-weight:500;color:#5c534d;padding:6px 12px;border-radius:8px;text-decoration:none;transition:.15s;white-space:nowrap;}
-.mrnav-links a:hover{color:#17120f;background:#f5f2ef;}
-.mrnav-cta{background:#e8380d;color:#fff;text-decoration:none;font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:10px;white-space:nowrap;flex-shrink:0;}
-.mrnav-cta:hover{background:#c42e0a;}
-@media(max-width:760px){.mrnav{padding:0 18px;gap:12px;}.mrnav-links{display:none;}}
-</style>
 </head>
 <body>
 
-<nav class="mrnav">
-  <a href="/" class="mrnav-logo"><span class="mrnav-ic">M</span><span class="mrnav-tx">My<span>Renting</span></span></a>
-  <div class="mrnav-links">
-    <a href="/">Ofertas</a>
-    <a href="/renting-autonomos.html">Aut&oacute;nomos</a>
-    <a href="/renting-empresas.html">Empresas</a>
-    <a href="/renting-electrico.html">El&eacute;ctrico</a>
-    <a href="/blog/">Blog</a>
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="nav-logo">M</div>
+    <a href="/"><span class="nav-name">MiRenting</span></a>
   </div>
-  <a href="/" class="mrnav-cta">Comparar gratis</a>
+  <a href="/" class="nav-back">← Todas las ofertas</a>
 </nav>
 
 <div class="breadcrumb-bar">
@@ -258,7 +235,7 @@
   <div>
     <div class="hero-badges">
       <span class="badge badge-type">MINI</span>
-      <span class="badge-count">5 ofertas &middot; 2 gestoras</span>
+      <span class="badge-count">— ofertas · — gestoras</span>
     </div>
     <h1 class="hero-title">Renting <em>MINI</em></h1>
     <p class="hero-sub"></p>
@@ -268,7 +245,7 @@
         <div class="precio-label">Mejor precio disponible</div>
         <div class="precio-val">
           <span class="precio-desde">desde</span>
-          <span class="precio-num">355</span>
+          <span class="precio-num">—</span>
           <span class="precio-unit">€/mes</span>
         </div>
         <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
@@ -279,15 +256,15 @@
     <div class="hero-stats">
       <div class="stat-box">
         <div class="stat-label">Desde</div>
-        <div class="stat-val">355€</div>
+        <div class="stat-val">—</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Gestoras</div>
-        <div class="stat-val">2</div>
+        <div class="stat-val">—</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Ofertas</div>
-        <div class="stat-val">5</div>
+        <div class="stat-val">—</div>
       </div>
     </div>
 
@@ -304,41 +281,35 @@
   </div>
 </section>
 
-<!-- MODELOS -->
+<!-- OFERTAS DESPLEGABLES -->
 <div class="section" style="margin-top:8px;">
-  <div class="section-title">3 modelos disponibles</div>
-  <div class="section-sub">Pulsa un modelo para comparar todas las gestoras</div>
-  <div class="hub-grid">
-    <a class="hub-card" href="/renting-mini-cooper-c.html">
-      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/808/mini_cooper_3_puertas.png" alt="Mini Cooper C" loading="lazy" onerror="this.style.display='none'"></div>
-      <div class="hub-body">
-        <div class="hub-brand">Mini</div>
-        <div class="hub-model">Cooper C</div>
-        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
-        <div class="hub-price">desde <b>355&euro;</b>/mes</div>
+  <div class="section-title">Compara todas las ofertas</div>
+  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
+
+  <div class="ofertas-header" onclick="toggleOfertas(this)">
+    <div class="ofertas-header-left">
+      <span class="ofertas-count-badge" id="badge-count">—</span>
+      <span class="ofertas-count">ofertas disponibles — MINI</span>
+    </div>
+    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
+  </div>
+  <div class="ofertas-body collapsed" id="ofertas-body">
+    <div class="filter-bar">
+      <div class="filter-bar-inner">
+        
       </div>
-    </a>
-    <a class="hub-card" href="/renting-mini-countryman.html">
-      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/322b4e2a897646b98f4d3363d4224fde.JPG" alt="Mini Countryman" loading="lazy" onerror="this.style.display='none'"></div>
-      <div class="hub-body">
-        <div class="hub-brand">Mini</div>
-        <div class="hub-model">Countryman</div>
-        <div class="hub-meta">2 gestoras &middot; 3 ofertas</div>
-        <div class="hub-price">desde <b>408&euro;</b>/mes</div>
+    </div>
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead></thead>
+        <tbody id="comp-tbody"></tbody>
+      </table>
+      <div class="no-results-filter" id="no-results-msg" style="display:none">
+        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
       </div>
-    </a>
-    <a class="hub-card" href="/renting-mini-aceman-e.html">
-      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/710/mini_aceman.png" alt="Mini Aceman E" loading="lazy" onerror="this.style.display='none'"></div>
-      <div class="hub-body">
-        <div class="hub-brand">Mini</div>
-        <div class="hub-model">Aceman E</div>
-        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
-        <div class="hub-price">desde <b>428&euro;</b>/mes</div>
-      </div>
-    </a>
+    </div>
   </div>
 </div>
-
 
 <!-- QUE INCLUYE -->
 <div class="section">
@@ -354,10 +325,9 @@
 
 <!-- SEO CONTENT -->
 <div class="section">
-  <div class="section-title">Renting MINI: como funciona</div>
-  <div class="seo-block"><p>En MyRenting comparamos <strong>3 modelos de renting de MINI</strong> de las principales gestoras del mercado, con precios desde <strong>355&euro;/mes</strong>. Todas las ofertas incluyen seguro a todo riesgo, mantenimiento, asistencia en carretera y sin entrada: solo pagas la cuota mensual.</p><p>Compara aqui todas las versiones disponibles de MINI y elige la que mejor encaja con tu perfil y kilometraje. Al pulsar en un modelo veras las ofertas de cada gestora comparadas en las mismas condiciones.</p></div>
+  
+  
 </div>
-
 
 <!-- FAQ -->
 <div class="section">
@@ -398,19 +368,19 @@
   </div>
 </div>
 
-
+<button class="mobile-cta" onclick="abrirModal()">Solicitar informacion gratis</button>
 
 <footer class="footer">
   <div class="footer-brand">
     <div class="footer-logo">M</div>
-    <span class="footer-name">MyRenting</span>
+    <span class="footer-name">MiRenting</span>
   </div>
   <div class="footer-links">
     <a href="/aviso-legal.html">Aviso legal</a>
     <a href="/politica-privacidad.html">Privacidad</a>
     <a href="/blog/">Blog</a>
   </div>
-  <span class="footer-copy">2026 MyRenting · Barcelona</span>
+  <span class="footer-copy">2026 MiRenting · Barcelona</span>
 </footer>
 
 <script>
@@ -427,7 +397,15 @@
   }
 
   // Auto-abrir si hay pocas ofertas
-  /* tabla antigua eliminada */
+  window.addEventListener('DOMContentLoaded', () => {
+    const total = document.querySelectorAll('#comp-tbody tr').length;
+    document.getElementById('badge-count').textContent = total;
+    document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
+    if (total <= 4) {
+      document.getElementById('ofertas-body').classList.remove('collapsed');
+      document.getElementById('toggle-icon').classList.add('open');
+    }
+  });
 
   // Filtros
   function filtrarTabla() {
@@ -493,7 +471,7 @@
     const form = e.target;
     const data = new FormData(form);
     try {
-      await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/info@myrenting.es', {
         method:'POST', headers:{'Accept':'application/json'}, body: data
       });
     } catch(err) {}
