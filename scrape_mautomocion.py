@@ -320,6 +320,7 @@ def parse_listing(html, base_url):
         model = (" ".join(nw[i:]) if i < len(nw) else name)[:40].strip()
         trim = mn.get("trim", "")
         txt = name + " " + trim
+        url = mn.get("url") or f"{BASE_URL}/oferta-renting-{tipo}-{slugify(name)}"
         offers.append({
             "fuente": FUENTE, "tipo": tipo, "make": make.upper(),
             "model": (model or name).upper()[:40],
@@ -327,9 +328,10 @@ def parse_listing(html, base_url):
             "fuel": guess_fuel(txt),
             "precio_desde": round(price, 2),
             "duracion": plazo, "km": km,
-            "url": mn.get("url") or urljoin(base_url, SEGMENT_PATHS[0]),
+            "url": url,
             "category": guess_cat(txt),
             "image": mn.get("img", ""),
+            "_id": p.get("id_product"),
         })
     return offers
 
@@ -348,9 +350,12 @@ def find_and_scrape(deep=True):
             page += 1
             time.sleep(0.6)
     uniq = {}
-    for o in offers:                       # 1 oferta por producto y segmento (sin fragmento)
-        uniq[(o["tipo"], o["url"].split("#")[0])] = o
-    return list(uniq.values()), tried
+    for o in offers:                       # 1 oferta por producto (id_product) y segmento
+        uniq[(o["tipo"], o.get("_id") or o["url"].split("#")[0])] = o
+    out = list(uniq.values())
+    for o in out:
+        o.pop("_id", None)
+    return out, tried
 
 # ─── MERGE ────────────────────────────────────────────────────────────────────
 def merge_into_manuales(offers):
