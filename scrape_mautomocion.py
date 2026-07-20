@@ -238,7 +238,11 @@ def parse_product(html, url):
     if mp and _asc(mp[0]) == _asc(make.split()[0]):
         model = " ".join(mp[1:])
     model = model[:40].strip()
-    plazo = re.search(r"(\d{2})\s*mes", full, re.I)
+    # plazo y km: de la combinación en la URL (#/..-10000_kms/..-60_meses) o del texto
+    kmm = re.search(r"(\d{4,6})_kms", url) or re.search(r"(\d{4,6})[ .]?kms?/a", full)
+    plm = re.search(r"(\d{2})_meses", url) or re.search(r"(\d{2})\s*mes", full, re.I)
+    dur = int(plm.group(1)) if plm else 60
+    kmv = int(kmm.group(1)) if kmm else (km_year(full) or 10000)
     u = (url + " " + titulo).lower()
     tipo = ("autonomo" if re.search(r"aut[oó]nom", u)
             else "empresa" if "empresa" in u
@@ -251,8 +255,8 @@ def parse_product(html, url):
         "version": titulo[:120],
         "fuel": guess_fuel(txt) or specs.get("combustible", ""),
         "precio_desde": precio,
-        "duracion": int(plazo.group(1)) if plazo else 48,
-        "km": km_year(full) or 10000,
+        "duracion": dur,
+        "km": kmv,
         "url": url,
         "category": guess_cat(txt),
         "image": urljoin(url, img.get("src") or img.get("data-src") or "") if img else "",
