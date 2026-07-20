@@ -25,7 +25,7 @@ USO (en tu Mac, que sí tiene internet):
 Flujo recomendado la primera vez:
     lanza --inspect y pégame la salida; con eso te dejo los selectores exactos.
 """
-import argparse, json, re, sys, time, html as _html
+import argparse, json, re, sys, time, unicodedata, html as _html
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -180,10 +180,11 @@ def product_links_from(html, page_url):
         a = p.select_one(".product-title a, h2 a, h3 a, a.product-thumbnail, a.thumbnail")
         if a and a.get("href"):
             links.add(urljoin(page_url, a["href"]))
-    # fallback: enlaces con patrón de oferta de renting
+    # fallback: SOLO páginas de producto reales (/oferta-renting-...), nunca listados/filtros
     for a in soup.find_all("a", href=True):
-        if re.search(r"/oferta-renting|/renting-|-renting-", a["href"], re.I):
-            links.add(urljoin(page_url, a["href"]))
+        h = a["href"]
+        if re.search(r"/oferta-renting-", h, re.I) and "?" not in h and "#" not in h:
+            links.add(urljoin(page_url, h))
     # paginación
     pages = set()
     for a in soup.select("a[href*='page='], .pagination a[href]"):
@@ -223,11 +224,20 @@ def parse_product(html, url):
     make = guess_make(titulo) or (mj.group(1) if mj else "") or specs.get("marca", "") or guess_make(full[:800])
     if not precio or not make:          # descarta contenido que no es un vehículo
         return None
+    # descarta páginas de aterrizaje/listado ("Renting Empresas/Autónomos/Particulares")
+    if re.search(r"renting\s+(empresas?|aut[oó]nomos?|particulares?)", titulo, re.I) or "/oferta-renting-" not in url:
+        return None
     model = specs.get("modelo", "")
     if not model:
         mm = re.search(re.escape(make), titulo, re.I)
         if mm: model = clean(titulo[mm.end():])
-    model = re.split(r"\bdesde\b|\d+\s*€|\|", model, maxsplit=1)[0].strip()[:40]
+    model = re.split(r"\bdesde\b|\d+\s*€|\|", model, maxsplit=1)[0].strip()
+    # quita marca duplicada al principio del modelo (p.ej. 'ŠKODA KAMIQ' -> 'KAMIQ')
+    def _asc(s): return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().upper()
+    mp = model.split()
+    if mp and _asc(mp[0]) == _asc(make.split()[0]):
+        model = " ".join(mp[1:])
+    model = model[:40].strip()
     plazo = re.search(r"(\d{2})\s*mes", full, re.I)
     u = (url + " " + titulo).lower()
     tipo = ("autonomo" if re.search(r"aut[oó]nom", u)
