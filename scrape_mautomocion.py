@@ -146,78 +146,112 @@ def inspect(url):
         print(f"    → {l}")
     print("\n  ➜ Pega esta salida en el chat y te dejo los selectores exactos del scraper.")
 
-# ─── PARSE (heurístico, 1ª pasada) ───────────────────────────────────────────────
-def parse_cards(html, page_url):
-    """Extrae ofertas de una página de listado. Heurística: bloques con precio €/mes."""
+# ─── PARSE PrestaShop ───────────────────────────────────────────────────────────
+def product_links_from(html, page_url):
+    """Devuelve URLs de producto de una página de listado/marca (PrestaShop)."""
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(html, "lxml")
-    offers = []
-    seen = set()
+    links = set()
+    for p in soup.select(".product-miniature, article.product-miniature, .js-product-miniature, .product_list .product"):
+        a = p.select_one(".product-title a, h2 a, h3 a, a.product-thumbnail, a.thumbnail")
+        if a and a.get("href"):
+            links.add(urljoin(page_url, a["href"]))
+    # fallback: enlaces con patrón de oferta de renting
+    for a in soup.find_all("a", href=True):
+        if re.search(r"/oferta-renting|/renting-|-renting-", a["href"], re.I):
+            links.add(urljoin(page_url, a["href"]))
+    # paginación
+    pages = set()
+    for a in soup.select("a[href*='page='], .pagination a[href]"):
+        pages.add(urljoin(page_url, a["href"]))
+    return links, pages
 
-    # candidatos a "tarjeta": el ancestro más cercano con un precio y un enlace
-    price_nodes = soup.find_all(string=re.compile(r"\d[\d.\s]{1,6}\s*€?\s*(?:/|al)?\s*mes", re.I))
-    for pn in price_nodes:
-        card = pn
-        for _ in range(6):
-            card = card.parent
-            if card is None: break
-            if card.name in ("article", "li", "div") and card.find("a", href=True):
-                break
-        if card is None:
-            continue
-        txt = clean(card.get_text(" "))
-        a = card.find("a", href=True)
-        img = card.find("img")
-        precio = num(re.search(r"(\d[\d.\s]{1,6})\s*€?\s*(?:/|al)?\s*mes", txt, re.I).group(1))
-        make = guess_make(txt)
-        # modelo: texto del título/heading dentro de la tarjeta
-        h = card.find(["h1","h2","h3","h4"])
-        titulo = clean(h.get_text(" ")) if h else txt[:80]
-        model = ""
-        if make:
-            mm = re.search(re.escape(make), titulo, re.I)
-            if mm:
-                model = clean(titulo[mm.end():]).split("desde")[0][:40]
-        url = urljoin(page_url, a["href"]) if a else page_url
-        plazo = re.search(r"(\d{2})\s*mes", txt, re.I)
-        km = re.search(r"(\d[\d.\s]{2,6})\s*km", txt, re.I)
-        key = (make, model, precio)
-        if not precio or key in seen:
-            continue
-        seen.add(key)
-        offers.append({
-            "fuente": FUENTE,
-            "tipo": "particular",
-            "make": make or clean(titulo.split()[0]).upper(),
-            "model": (model or titulo).upper()[:40].strip(),
-            "version": titulo[:120],
-            "fuel": guess_fuel(txt),
-            "precio_desde": precio,
-            "duracion": int(plazo.group(1)) if plazo else 48,
-            "km": int(num(km.group(1))) if km else 10000,
-            "url": url,
-            "category": guess_cat(txt),
-            "image": urljoin(page_url, img.get("src") or img.get("data-src") or "") if img else "",
-        })
-    return offers
+def parse_product(html, url):
+    """Extrae una oferta de una página de PRODUCTO (detalle) de PrestaShop."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "lxml")
+    full = clean(soup.get_text(" "))
+    h1 = soup.select_one("h1.product-title, h1[itemprop='name'], h1")
+    titulo = clean(h1.get_text()) if h1 else ""
+    # precio/mes: el precio actual del producto o el primer "€/mes"
+    precio = None
+    pe = soup.select_one(".current-price [itemprop='price'], .current-price .price, .product-price, .price")
+    if pe:
+        precio = num(pe.get("content") or pe.get_text())
+    m = re.search(r"(\d[\d.\s]{1,6})\s*€?\s*(?:/|al)?\s*mes", full, re.I)
+    if m and (not precio or precio > 3000):   # si el .price es un total, usa el €/mes
+        precio = num(m.group(1))
+    if not precio:
+        return None
+    # ficha de datos (Marca / Modelo / Combustible / Plazo / Kilómetros)
+    specs = {}
+    for row in soup.select(".data-sheet dt, .product-features dt, table tr"):
+        pass
+    for dt in soup.select("dt.name, .data-sheet .name"):
+        dd = dt.find_next_sibling(["dd", "td"])
+        if dd: specs[clean(dt.get_text()).lower()] = clean(dd.get_text())
+    txt = titulo + " " + full[:1500]
+    make = guess_make(txt)
+    model = ""
+    if make:
+        mm = re.search(re.escape(make), titulo, re.I)
+        if mm: model = clean(titulo[mm.end():])[:40]
+    plazo = re.search(r"(\d{2})\s*mes", full, re.I)
+    km = re.search(r"(\d[\d.\s]{2,6})\s*km", full, re.I)
+    tipo = "empresa" if re.search(r"empresa|autonomo|aut[oó]nomo", url + " " + titulo, re.I) else "particular"
+    img = soup.select_one(".product-cover img, #product img, img[itemprop='image'], .product-thumbnail img, img")
+    return {
+        "fuente": FUENTE, "tipo": tipo,
+        "make": (make or specs.get("marca","") or titulo.split()[0]).upper(),
+        "model": (specs.get("modelo","") or model or titulo).upper()[:40].strip(),
+        "version": titulo[:120],
+        "fuel": guess_fuel(txt) or specs.get("combustible",""),
+        "precio_desde": precio,
+        "duracion": int(plazo.group(1)) if plazo else 48,
+        "km": int(num(km.group(1))) if km else 10000,
+        "url": url,
+        "category": guess_cat(txt),
+        "image": urljoin(url, img.get("src") or img.get("data-src") or "") if img else "",
+    }
 
-def find_and_scrape():
-    all_offers = []
+def find_and_scrape(deep=True):
     tried = []
-    for path in CANDIDATE_PATHS:
-        url = urljoin(BASE_URL, path)
-        html = fetch(url)
-        tried.append((url, bool(html)))
-        if not html:
-            continue
-        offs = parse_cards(html, url)
-        if offs:
-            print(f"  ✓ {url}: {len(offs)} ofertas")
-            all_offers.extend(offs)
-        time.sleep(1)
-    # dedupe global por (make, model, version)
+    # 1) descubrir páginas de marca desde la home
+    home = fetch(BASE_URL); tried.append((BASE_URL, bool(home)))
+    brand_urls = set()
+    if home:
+        from bs4 import BeautifulSoup
+        for a in BeautifulSoup(home, "lxml").select("a[href*='/brand/']"):
+            brand_urls.add(urljoin(BASE_URL, a["href"]))
+    print(f"  marcas encontradas: {len(brand_urls)}")
+
+    # 2) recorrer marcas -> recolectar enlaces de producto (+ paginación)
+    product_urls, to_visit, visited = set(), list(brand_urls), set()
+    while to_visit:
+        u = to_visit.pop()
+        if u in visited: continue
+        visited.add(u)
+        h = fetch(u); tried.append((u, bool(h)))
+        if not h: continue
+        links, pages = product_links_from(h, u)
+        product_urls |= links
+        for pg in pages:
+            if pg not in visited: to_visit.append(pg)
+        time.sleep(0.6)
+    print(f"  productos encontrados: {len(product_urls)}")
+
+    # 3) parsear cada producto
+    offers = []
+    for i, pu in enumerate(sorted(product_urls), 1):
+        h = fetch(pu)
+        if not h: continue
+        o = parse_product(h, pu)
+        if o: offers.append(o)
+        if i % 20 == 0: print(f"    …{i}/{len(product_urls)}")
+        time.sleep(0.5)
+
     uniq = {}
-    for o in all_offers:
+    for o in offers:
         uniq[(o["make"], o["model"], o["version"])] = o
     return list(uniq.values()), tried
 
@@ -250,7 +284,14 @@ def main():
 
     if args.from_file:
         html = Path(args.from_file).read_text(encoding="utf-8")
-        offers = parse_cards(html, BASE_URL)
+        o = parse_product(html, BASE_URL)
+        if o:
+            offers = [o]
+        else:
+            links, _ = product_links_from(html, BASE_URL)
+            print(f"  (no es página de producto) enlaces de producto encontrados: {len(links)}")
+            for l in list(links)[:20]: print(f"    → {l}")
+            offers = []
     else:
         print("── Scrapeando m-renting.com…")
         offers, tried = find_and_scrape()
