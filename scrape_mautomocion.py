@@ -198,11 +198,17 @@ def parse_product(html, url):
     h1 = soup.select_one("h1.product-title, h1[itemprop='name'], h1")
     titulo = clean(h1.get_text()) if h1 else ""
     # precio/mes: el precio actual del producto o el primer "€/mes"
+    # precio fiable desde el JSON de producto PrestaShop (€/mes, IVA incl)
     precio = None
-    pe = soup.select_one(".current-price [itemprop='price'], .current-price .price, .product-price .price, .current-price")
-    if pe:
-        v = num(pe.get("content") or pe.get_text())
-        if v and 50 <= v <= 5000: precio = v
+    pj = re.search(r'"price_sale"\s*:\s*([\d.]+)', html) or re.search(r'"price_main"\s*:\s*([\d.]+)', html)
+    if pj:
+        v = float(pj.group(1))
+        if 50 <= v <= 5000: precio = v
+    if not precio:                               # fallbacks
+        pe = soup.select_one(".current-price [itemprop='price'], .current-price .price, .product-price .price, .current-price")
+        if pe:
+            v = num(pe.get("content") or pe.get_text())
+            if v and 50 <= v <= 5000: precio = v
     if not precio:
         precio = price_mes(full)
     # ficha de datos (Marca / Modelo / Combustible / Plazo / Kilómetros)
@@ -213,7 +219,8 @@ def parse_product(html, url):
         dd = dt.find_next_sibling(["dd", "td"])
         if dd: specs[clean(dt.get_text()).lower()] = clean(dd.get_text())
     txt = titulo + " " + full[:1500]
-    make = guess_make(titulo) or specs.get("marca", "").upper() or guess_make(full[:800])
+    mj = re.search(r'"manufacturer_name"\s*:\s*"([^"]+)"', html)
+    make = guess_make(titulo) or (mj.group(1) if mj else "") or specs.get("marca", "") or guess_make(full[:800])
     if not precio or not make:          # descarta contenido que no es un vehículo
         return None
     model = specs.get("modelo", "")
