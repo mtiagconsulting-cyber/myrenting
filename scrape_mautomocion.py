@@ -311,10 +311,13 @@ def parse_listing(html, base_url):
         plazo = int(num(attrs.get("plazos", "") or "60") or 60)
         tipo = _seg_from_path(p.get("category_path", []))
         mn = mini.get(str(p.get("id_product", "")), {})
-        model = name
-        mm = re.search(re.escape(make), name, re.I)
-        if mm: model = clean(name[mm.end():])
-        model = model[:40].strip()
+        # modelo = nombre sin la marca al principio (insensible a acentos: 'Škoda Kamiq' -> 'Kamiq')
+        def _asc(s): return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().upper()
+        nw, mkw = name.split(), make.split()
+        i = 0
+        while i < len(nw) and i < len(mkw) and _asc(nw[i]) == _asc(mkw[i]):
+            i += 1
+        model = (" ".join(nw[i:]) if i < len(nw) else name)[:40].strip()
         trim = mn.get("trim", "")
         txt = name + " " + trim
         offers.append({
@@ -345,8 +348,8 @@ def find_and_scrape(deep=True):
             page += 1
             time.sleep(0.6)
     uniq = {}
-    for o in offers:
-        uniq[(o["make"], o["model"], o["version"], o["tipo"])] = o
+    for o in offers:                       # 1 oferta por producto y segmento (sin fragmento)
+        uniq[(o["tipo"], o["url"].split("#")[0])] = o
     return list(uniq.values()), tried
 
 # ─── MERGE ────────────────────────────────────────────────────────────────────
