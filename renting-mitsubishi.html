@@ -205,6 +205,23 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ===== HUB v4 ===== */
+    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:6px;}
+    .hub-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;}
+    .hub-card:hover{box-shadow:0 12px 30px rgba(30,20,15,.12);transform:translateY(-3px);border-color:#e0d6ce;}
+    .hub-img{height:120px;background:radial-gradient(circle at 50% 45%,#f6f3f0,#ece9e4);display:flex;align-items:center;justify-content:center;padding:12px;}
+    .hub-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));}
+    .hub-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:3px;flex:1;}
+    .hub-brand{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);}
+    .hub-model{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);line-height:1.15;}
+    .hub-meta{font-size:11.5px;color:var(--ink-4,#6a615b);margin-top:1px;}
+    .hub-price{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-4,#6a615b);}
+    .hub-price b{font-size:19px;color:var(--accent);font-weight:850;letter-spacing:-.5px;}
+    .hub-empty{padding:26px;text-align:center;color:var(--ink-4,#6a615b);font-size:14px;}
+    .seo-block{max-width:820px;line-height:1.7;color:var(--ink-3,#4a423d);font-size:15px;}
+    .seo-block p{margin:0 0 14px;}
+
   </style>
 </head>
 <body>
@@ -226,7 +243,7 @@
   <div>
     <div class="hero-badges">
       <span class="badge badge-type">Mitsubishi</span>
-      <span class="badge-count">— ofertas · — gestoras</span>
+      <span class="badge-count">94 ofertas &middot; 3 gestoras</span>
     </div>
     <h1 class="hero-title">Renting <em>Mitsubishi</em></h1>
     <p class="hero-sub">Precios reales de Ayvens. Sin registrarte, sin letra pequeña.</p>
@@ -236,7 +253,7 @@
         <div class="precio-label">Mejor precio disponible</div>
         <div class="precio-val">
           <span class="precio-desde">desde</span>
-          <span class="precio-num">—</span>
+          <span class="precio-num">206</span>
           <span class="precio-unit">€/mes</span>
         </div>
         <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
@@ -247,15 +264,15 @@
     <div class="hero-stats">
       <div class="stat-box">
         <div class="stat-label">Desde</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">206€</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Gestoras</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">3</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Ofertas</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">94</div>
       </div>
     </div>
 
@@ -272,35 +289,230 @@
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
+<!-- MODELOS -->
 <div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">—</span>
-      <span class="ofertas-count">ofertas disponibles — Mitsubishi</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
-  </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        
+  <div class="section-title">24 modelos disponibles</div>
+  <div class="section-sub">Pulsa un modelo para comparar todas las gestoras</div>
+  <div class="hub-grid">
+    <a class="hub-card" href="/renting-skoda-fabia.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Skoda/Fabia/2023/5Hatchback/23fabiaactivehb4bfr/skoda_23fabiaactivehb4bfr_lowaggressive_blanco-candy.png" alt="Skoda Fabia" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Skoda</div>
+        <div class="hub-model">Fabia</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>206&euro;</b>/mes</div>
       </div>
-    </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead></thead>
-        <tbody id="comp-tbody"></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+    </a>
+    <a class="hub-card" href="/renting-dacia-sandero.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Dacia/Sandero/2025/5Hatchback/25sanderoessentialhb3ffr/dacia_25sanderoessentialhb3ffr_lowaggressive.png" alt="Dacia Sandero" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Dacia</div>
+        <div class="hub-model">Sandero</div>
+        <div class="hub-meta">2 gestoras &middot; 5 ofertas</div>
+        <div class="hub-price">desde <b>217&euro;</b>/mes</div>
       </div>
-    </div>
+    </a>
+    <a class="hub-card" href="/renting-seat-ibiza.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/SEAT/Ibiza/2022/5Hatchback/22ibizamoveplushb5fb/seat_22ibizamoveplushb5fb_lowaggressive_blanco.png" alt="Seat Ibiza" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Seat</div>
+        <div class="hub-model">Ibiza</div>
+        <div class="hub-meta">2 gestoras &middot; 3 ofertas</div>
+        <div class="hub-price">desde <b>221&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-208-allure.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Peugeot/208/2025/5Hatchback/25208allurehb2fbfr/peugeot_25208allurehb2fbfr_lowaggressive_blanco-banquise.png" alt="Peugeot 208 Allure" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">208 Allure</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>226&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-volkswagen-polo.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Volkswagen/Polo/2025/5Hatchback/25pololifehb6fbfr/volkswagen_25pololifehb6fbfr_lowaggressive_plata-plateado-metalizado.png" alt="Volkswagen Polo" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Volkswagen</div>
+        <div class="hub-model">Polo</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>230&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-seat-arona.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/SEAT/Arona/2025/5SUV/25aronabizsu1fbfr/seat_25aronabizsu1fbfr_lowaggressive_blanco-glacial-gris-magnetic.png" alt="Seat Arona" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Seat</div>
+        <div class="hub-model">Arona</div>
+        <div class="hub-meta">2 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>232&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-fiat-500.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/FIAT/500H%C3%ADbrido/2023/3Hatchback/23500mhevha2fb/fiat_23500mhevha2fb_lowaggressive_blanco-gelato.png" alt="Fiat 500" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Fiat</div>
+        <div class="hub-model">500</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>236&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-kia-stonic.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/ARVAL_IMAGENES%20WEB%20ARVAL_960X630_24032026_KIA%20STONIC_2d870b59fc1d50dda114ce4076b8b19773059c6ee677c9f79d686e5751c32974.png" alt="Kia Stonic" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Kia</div>
+        <div class="hub-model">Stonic</div>
+        <div class="hub-meta">2 gestoras &middot; 14 ofertas</div>
+        <div class="hub-price">desde <b>242&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-ford-puma-5p-todoterreno.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/ford-puma-mira-dcha-120226-volteado_4af93175adbc5805a90dd2f532f839ef5c6704d31b75ba5ffee8ae1b0054ff90.png" alt="Ford Puma / 5P / Todoterreno" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Ford</div>
+        <div class="hub-model">Puma / 5P / Todoterreno</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>244&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-opel-corsa.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/1136/alp_imgshowroom_opelcorsa.png" alt="Opel Corsa" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Opel</div>
+        <div class="hub-model">Corsa</div>
+        <div class="hub-meta">3 gestoras &middot; 6 ofertas</div>
+        <div class="hub-price">desde <b>244&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-hyundai-bayon.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Hyundai/Bayon/2025/5SUV/25bayoncreativesu1fbfr/hyundai_25bayoncreativesu1fbfr_lowaggressive_atlas-white.png" alt="Hyundai Bayon" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Hyundai</div>
+        <div class="hub-model">Bayon</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>254&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-hyundai-i20.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Hyundai/i20/2025/5Hatchback/25i20intuitivehb3fbfr/hyundai_25i20intuitivehb3fbfr_lowaggressive.png" alt="Hyundai I20" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Hyundai</div>
+        <div class="hub-model">I20</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>255&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-dacia-sandero-stepway.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/1135/alp_imgshowroom_daciasandero.png" alt="Dacia Sandero Stepway" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Dacia</div>
+        <div class="hub-model">Sandero Stepway</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>256&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-clio.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/renault_20clioeditiononehb5b_lowaggressive_blanco-glaciar-opaco_0747ddfc7610367cba99146c53873ae559c7506aaa704d8bdacaccf11d4d821d_0747ddfc7610367cba99146c53873ae559c7506aaa704d8bdacaccf11d4d821d.png" alt="Renault Clio" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Clio</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>257&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-captur.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/992/alp_imgshowroom_ranault_captur.png" alt="Renault Captur" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Captur</div>
+        <div class="hub-meta">3 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>259&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-mercedes-benz-citan-furgon.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Mercedes/CitanFurgon/2023/4CarVan/23citan108prol1vc2b/mercedes_23citan108prol1vc2b_lowaggressive.png" alt="Mercedes Benz Citan Furgon" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Mercedes Benz</div>
+        <div class="hub-model">Citan Furgon</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>265&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-toyota-yaris.html">
+      <div class="hub-img"><img src="/img/modelos/ma-toyota-yaris-autonomo.jpg" alt="Toyota Yaris" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Toyota</div>
+        <div class="hub-model">Yaris</div>
+        <div class="hub-meta">2 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>269&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-fiat-doblo.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/Captura%20de%20pantalla%202026-02-26%20183728_a7277c2ec1961293d36bd13f04853c8d7f54d872b1fa84e892373f2d9724f171.png" alt="Fiat Dobló" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Fiat</div>
+        <div class="hub-model">Dobló</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>270&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-skoda-kamiq.html">
+      <div class="hub-img"><img src="/img/modelos/ma-skoda-kamiq-autonomo.jpg" alt="Skoda Kamiq" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Skoda</div>
+        <div class="hub-model">Kamiq</div>
+        <div class="hub-meta">2 gestoras &middot; 10 ofertas</div>
+        <div class="hub-price">desde <b>271&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-2008.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/2008Hybride/2025/5SUV/252008hevgtsu2fbfr_ftt/peugeot_252008hevgtsu2fbfr_ftt_lowaggressive.png" alt="Peugeot 2008" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">2008</div>
+        <div class="hub-meta">2 gestoras &middot; 3 ofertas</div>
+        <div class="hub-price">desde <b>286&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-rifter.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Peugeot/Rifter/2025/5MiniMPV/25rifterxlallure5pmp3ffr/peugeot_25rifterxlallure5pmp3ffr_lowaggressive_blanco-kaolin.png" alt="Peugeot Rifter" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">Rifter</div>
+        <div class="hub-meta">3 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>288&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-208.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/208/2025/5Hatchback/25208allurehb2fbfr/peugeot_25208allurehb2fbfr_lowaggressive.png" alt="Peugeot 208" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">208</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>289&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-skoda-karoq.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Skoda/Karoq/2025/5SUV/25karoqsportlinesu1fbfr/skoda_25karoqsportlinesu1fbfr_lowaggressive.png" alt="Skoda Karoq" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Skoda</div>
+        <div class="hub-model">Karoq</div>
+        <div class="hub-meta">3 gestoras &middot; 6 ofertas</div>
+        <div class="hub-price">desde <b>291&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-mg-zs.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/MG/MGZSHybridPlus/2025/5SUV/25mgzshevplusluxurysu2bfr/mg_25mgzshevplusluxurysu2bfr_lowaggressive_cosmic-silver.png" alt="Mg Zs" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Mg</div>
+        <div class="hub-model">Zs</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>294&euro;</b>/mes</div>
+      </div>
+    </a>
   </div>
 </div>
+
 
 <!-- QUE INCLUYE -->
 <div class="section">
@@ -316,9 +528,10 @@
 
 <!-- SEO CONTENT -->
 <div class="section">
-  
-  
+  <div class="section-title">Renting Mitsubishi: como funciona</div>
+  <div class="seo-block"><p>Compara <strong>24 modelos en renting</strong> desde <strong>206&euro;/mes</strong>, con seguro y mantenimiento incluidos y sin entrada.</p></div>
 </div>
+
 
 <!-- FAQ -->
 <div class="section">
@@ -388,15 +601,7 @@
   }
 
   // Auto-abrir si hay pocas ofertas
-  window.addEventListener('DOMContentLoaded', () => {
-    const total = document.querySelectorAll('#comp-tbody tr').length;
-    document.getElementById('badge-count').textContent = total;
-    document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
-    if (total <= 4) {
-      document.getElementById('ofertas-body').classList.remove('collapsed');
-      document.getElementById('toggle-icon').classList.add('open');
-    }
-  });
+  /* tabla antigua eliminada */
 
   // Filtros
   function filtrarTabla() {

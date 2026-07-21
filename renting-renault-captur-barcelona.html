@@ -215,6 +215,23 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ===== HUB v4 ===== */
+    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:6px;}
+    .hub-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;}
+    .hub-card:hover{box-shadow:0 12px 30px rgba(30,20,15,.12);transform:translateY(-3px);border-color:#e0d6ce;}
+    .hub-img{height:120px;background:radial-gradient(circle at 50% 45%,#f6f3f0,#ece9e4);display:flex;align-items:center;justify-content:center;padding:12px;}
+    .hub-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));}
+    .hub-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:3px;flex:1;}
+    .hub-brand{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);}
+    .hub-model{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);line-height:1.15;}
+    .hub-meta{font-size:11.5px;color:var(--ink-4,#6a615b);margin-top:1px;}
+    .hub-price{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-4,#6a615b);}
+    .hub-price b{font-size:19px;color:var(--accent);font-weight:850;letter-spacing:-.5px;}
+    .hub-empty{padding:26px;text-align:center;color:var(--ink-4,#6a615b);font-size:14px;}
+    .seo-block{max-width:820px;line-height:1.7;color:var(--ink-3,#4a423d);font-size:15px;}
+    .seo-block p{margin:0 0 14px;}
+
   </style>
 </head>
 <body>
@@ -236,7 +253,7 @@
   <div>
     <div class="hero-badges">
       <span class="badge badge-type">Renault</span>
-      <span class="badge-count">— ofertas · — gestoras</span>
+      <span class="badge-count">46 ofertas &middot; 3 gestoras</span>
     </div>
     <h1 class="hero-title">Renting <em>Renault Captur</em></h1>
     <p class="hero-sub"></p>
@@ -246,7 +263,7 @@
         <div class="precio-label">Mejor precio disponible</div>
         <div class="precio-val">
           <span class="precio-desde">desde</span>
-          <span class="precio-num">—</span>
+          <span class="precio-num">257</span>
           <span class="precio-unit">€/mes</span>
         </div>
         <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
@@ -257,15 +274,15 @@
     <div class="hero-stats">
       <div class="stat-box">
         <div class="stat-label">Desde</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">257€</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Gestoras</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">3</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Ofertas</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">46</div>
       </div>
     </div>
 
@@ -282,35 +299,140 @@
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
+<!-- MODELOS -->
 <div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">—</span>
-      <span class="ofertas-count">ofertas disponibles — Renault Captur</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
-  </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        
+  <div class="section-title">14 modelos disponibles</div>
+  <div class="section-sub">Pulsa un modelo para comparar todas las gestoras</div>
+  <div class="hub-grid">
+    <a class="hub-card" href="/renting-renault-clio.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/renault_20clioeditiononehb5b_lowaggressive_blanco-glaciar-opaco_0747ddfc7610367cba99146c53873ae559c7506aaa704d8bdacaccf11d4d821d_0747ddfc7610367cba99146c53873ae559c7506aaa704d8bdacaccf11d4d821d.png" alt="Renault Clio" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Clio</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>257&euro;</b>/mes</div>
       </div>
-    </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead></thead>
-        <tbody id="comp-tbody"></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+    </a>
+    <a class="hub-card" href="/renting-renault-captur.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/992/alp_imgshowroom_ranault_captur.png" alt="Renault Captur" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Captur</div>
+        <div class="hub-meta">3 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>259&euro;</b>/mes</div>
       </div>
-    </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-kangoo.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Renault/KangooVan/2025/4CargoVan/25kangool2h1extravc3rfr/renault_25kangool2h1extravc3rfr_lowaggressive.png" alt="Renault Kangoo" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Kangoo</div>
+        <div class="hub-meta">2 gestoras &middot; 3 ofertas</div>
+        <div class="hub-price">desde <b>295&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-symbioz.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Renault/SYMBIOZHybrid/2025/5SUV/25symbiozheviconicsu1bfr/renault_25symbiozheviconicsu1bfr_lowaggressive_gris-zinc.png" alt="Renault Symbioz" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Symbioz</div>
+        <div class="hub-meta">2 gestoras &middot; 5 ofertas</div>
+        <div class="hub-price">desde <b>311&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-megane.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/d8a781be3cd04c658a3844306dd97a72.JPG" alt="Renault Megane" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Megane</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>320&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-symbioz-evolution.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/1137/alp_imgshowroom_renaultsymbioz_v2.png" alt="Renault Symbioz Evolution" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Symbioz Evolution</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>320&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-grand-scenic.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/e39cac2e73574f0facd5792260f47e13.JPG" alt="Renault Grand Scenic" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Grand Scenic</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>390&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-arkana.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/ba12827cd7464452959cb6a865079921.JPG" alt="Renault Arkana" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Arkana</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>401&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-austral.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/590/showroomalp_renault-austral.png" alt="Renault Austral" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Austral</div>
+        <div class="hub-meta">3 gestoras &middot; 13 ofertas</div>
+        <div class="hub-price">desde <b>411&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-rafale.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Renault/RafaleHEV/2025/5SUV/25rafalehevespritalpinesu1fr/renault_25rafalehevespritalpinesu1fr_lowaggressive.png" alt="Renault Rafale" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Rafale</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>418&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-trafic.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/ARVAL_IMAGENES%20WEB%20ARVAL_960X630_24032026_RENAULT%20TRAFFIC%20(2)_bc9e6663fffd963a3211e584a37072448a75a5c542f15b0ed1f715ce73ded13d.png" alt="Renault Trafic" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Trafic</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>428&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-master.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Renault/Master/2025/4CargoVan/25masterl2h2advtracvc4fr/renault_25masterl2h2advtracvc4fr_lowaggressive.png" alt="Renault Master" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Master</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>441&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-espace.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Renault/EspaceHybrid/2024/5SUV/24espaceheviconic7p4wdsu6b/renault_24espaceheviconic7p4wdsu6b_lowaggressive_gris-pizarra.png" alt="Renault Espace" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Espace</div>
+        <div class="hub-meta">2 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>443&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-megane-e-tech.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/29ce39a0fefa49c2beb5639ed4eea10d.JPG" alt="Renault Megane E-Tech" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Megane E-Tech</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>475&euro;</b>/mes</div>
+      </div>
+    </a>
   </div>
 </div>
+
 
 <!-- QUE INCLUYE -->
 <div class="section">
@@ -326,9 +448,10 @@
 
 <!-- SEO CONTENT -->
 <div class="section">
-  
-  
+  <div class="section-title">Renting Renault Captur: como funciona</div>
+  <div class="seo-block"><p>En MyRenting comparamos <strong>14 modelos de renting de Renault Captur</strong> de las principales gestoras del mercado, con precios desde <strong>257&euro;/mes</strong>. Todas las ofertas incluyen seguro a todo riesgo, mantenimiento, asistencia en carretera y sin entrada: solo pagas la cuota mensual.</p><p>Compara aqui todas las versiones disponibles de Renault Captur y elige la que mejor encaja con tu perfil y kilometraje. Al pulsar en un modelo veras las ofertas de cada gestora comparadas en las mismas condiciones.</p></div>
 </div>
+
 
 <!-- FAQ -->
 <div class="section">
@@ -398,15 +521,7 @@
   }
 
   // Auto-abrir si hay pocas ofertas
-  window.addEventListener('DOMContentLoaded', () => {
-    const total = document.querySelectorAll('#comp-tbody tr').length;
-    document.getElementById('badge-count').textContent = total;
-    document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
-    if (total <= 4) {
-      document.getElementById('ofertas-body').classList.remove('collapsed');
-      document.getElementById('toggle-icon').classList.add('open');
-    }
-  });
+  /* tabla antigua eliminada */
 
   // Filtros
   function filtrarTabla() {

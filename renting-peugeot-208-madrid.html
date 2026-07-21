@@ -215,6 +215,23 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ===== HUB v4 ===== */
+    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:6px;}
+    .hub-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;}
+    .hub-card:hover{box-shadow:0 12px 30px rgba(30,20,15,.12);transform:translateY(-3px);border-color:#e0d6ce;}
+    .hub-img{height:120px;background:radial-gradient(circle at 50% 45%,#f6f3f0,#ece9e4);display:flex;align-items:center;justify-content:center;padding:12px;}
+    .hub-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));}
+    .hub-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:3px;flex:1;}
+    .hub-brand{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);}
+    .hub-model{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);line-height:1.15;}
+    .hub-meta{font-size:11.5px;color:var(--ink-4,#6a615b);margin-top:1px;}
+    .hub-price{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-4,#6a615b);}
+    .hub-price b{font-size:19px;color:var(--accent);font-weight:850;letter-spacing:-.5px;}
+    .hub-empty{padding:26px;text-align:center;color:var(--ink-4,#6a615b);font-size:14px;}
+    .seo-block{max-width:820px;line-height:1.7;color:var(--ink-3,#4a423d);font-size:15px;}
+    .seo-block p{margin:0 0 14px;}
+
   </style>
 </head>
 <body>
@@ -236,7 +253,7 @@
   <div>
     <div class="hero-badges">
       <span class="badge badge-type">Peugeot</span>
-      <span class="badge-count">— ofertas · — gestoras</span>
+      <span class="badge-count">43 ofertas &middot; 3 gestoras</span>
     </div>
     <h1 class="hero-title">Renting <em>Peugeot 208</em></h1>
     <p class="hero-sub"></p>
@@ -246,7 +263,7 @@
         <div class="precio-label">Mejor precio disponible</div>
         <div class="precio-val">
           <span class="precio-desde">desde</span>
-          <span class="precio-num">—</span>
+          <span class="precio-num">226</span>
           <span class="precio-unit">€/mes</span>
         </div>
         <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
@@ -257,15 +274,15 @@
     <div class="hero-stats">
       <div class="stat-box">
         <div class="stat-label">Desde</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">226€</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Gestoras</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">3</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Ofertas</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">43</div>
       </div>
     </div>
 
@@ -282,35 +299,104 @@
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
+<!-- MODELOS -->
 <div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">—</span>
-      <span class="ofertas-count">ofertas disponibles — Peugeot 208</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
-  </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        
+  <div class="section-title">10 modelos disponibles</div>
+  <div class="section-sub">Pulsa un modelo para comparar todas las gestoras</div>
+  <div class="hub-grid">
+    <a class="hub-card" href="/renting-peugeot-208-allure.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Peugeot/208/2025/5Hatchback/25208allurehb2fbfr/peugeot_25208allurehb2fbfr_lowaggressive_blanco-banquise.png" alt="Peugeot 208 Allure" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">208 Allure</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>226&euro;</b>/mes</div>
       </div>
-    </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead></thead>
-        <tbody id="comp-tbody"></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-2008.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/2008Hybride/2025/5SUV/252008hevgtsu2fbfr_ftt/peugeot_252008hevgtsu2fbfr_ftt_lowaggressive.png" alt="Peugeot 2008" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">2008</div>
+        <div class="hub-meta">2 gestoras &middot; 3 ofertas</div>
+        <div class="hub-price">desde <b>286&euro;</b>/mes</div>
       </div>
-    </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-rifter.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Peugeot/Rifter/2025/5MiniMPV/25rifterxlallure5pmp3ffr/peugeot_25rifterxlallure5pmp3ffr_lowaggressive_blanco-kaolin.png" alt="Peugeot Rifter" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">Rifter</div>
+        <div class="hub-meta">3 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>288&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-208.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/208/2025/5Hatchback/25208allurehb2fbfr/peugeot_25208allurehb2fbfr_lowaggressive.png" alt="Peugeot 208" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">208</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>289&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-partner.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/6dc512c1dc094e54b935b2be48aa1b66.JPG" alt="Peugeot Partner" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">Partner</div>
+        <div class="hub-meta">1 gestora &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>333&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-3008.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Peugeot/3008Hybride/2025/5SUV/253008hevgtsu3fbfr/peugeot_253008hevgtsu3fbfr_lowaggressive_azul-ingaro.png" alt="Peugeot 3008" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">3008</div>
+        <div class="hub-meta">2 gestoras &middot; 17 ofertas</div>
+        <div class="hub-price">desde <b>349&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-308.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/308SW/2025/5Wagon/25308swgtwg3bfr/peugeot_25308swgtwg3bfr_lowaggressive.png" alt="Peugeot 308" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">308</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>406&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-5008.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/39d386fc12ee47968696e9b1ceb1e024.JPG" alt="Peugeot 5008" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">5008</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>439&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-expert.html">
+      <div class="hub-img"><img src="https://staticcdn.ayvens.es/vehicle-images/bb9294a4-9960-4ed5-991d-60e59ff0fd6d.png" alt="Peugeot Expert" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">Expert</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>446&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-boxer.html">
+      <div class="hub-img"><img src="https://staticcdn.ayvens.es/vehicle-images/90de8349-7b6d-4d38-b80a-cc76a0de1cf7.png" alt="Peugeot Boxer" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">Boxer</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>529&euro;</b>/mes</div>
+      </div>
+    </a>
   </div>
 </div>
+
 
 <!-- QUE INCLUYE -->
 <div class="section">
@@ -326,9 +412,10 @@
 
 <!-- SEO CONTENT -->
 <div class="section">
-  
-  
+  <div class="section-title">Renting Peugeot 208: como funciona</div>
+  <div class="seo-block"><p>En MyRenting comparamos <strong>10 modelos de renting de Peugeot 208</strong> de las principales gestoras del mercado, con precios desde <strong>226&euro;/mes</strong>. Todas las ofertas incluyen seguro a todo riesgo, mantenimiento, asistencia en carretera y sin entrada: solo pagas la cuota mensual.</p><p>Compara aqui todas las versiones disponibles de Peugeot 208 y elige la que mejor encaja con tu perfil y kilometraje. Al pulsar en un modelo veras las ofertas de cada gestora comparadas en las mismas condiciones.</p></div>
 </div>
+
 
 <!-- FAQ -->
 <div class="section">
@@ -398,15 +485,7 @@
   }
 
   // Auto-abrir si hay pocas ofertas
-  window.addEventListener('DOMContentLoaded', () => {
-    const total = document.querySelectorAll('#comp-tbody tr').length;
-    document.getElementById('badge-count').textContent = total;
-    document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
-    if (total <= 4) {
-      document.getElementById('ofertas-body').classList.remove('collapsed');
-      document.getElementById('toggle-icon').classList.add('open');
-    }
-  });
+  /* tabla antigua eliminada */
 
   // Filtros
   function filtrarTabla() {
