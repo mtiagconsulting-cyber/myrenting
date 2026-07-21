@@ -11,7 +11,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2182-home_default/oferta-renting-particular-opel-corsa.jpg"
+    "image": "/img/modelos/ma-opel-corsa-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -25,7 +25,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2206-home_default/oferta-renting-particular-dacia-sandero.jpg"
+    "image": "/img/modelos/ma-dacia-sandero-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -39,7 +39,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2084-home_default/oferta-renting-particular-toyota-yaris.jpg"
+    "image": "/img/modelos/ma-toyota-yaris-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -53,7 +53,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "SUV",
-    "image": "https://m-renting.com/2312-home_default/oferta-renting-particular-skoda-kamiq.jpg"
+    "image": "/img/modelos/ma-skoda-kamiq-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -67,7 +67,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "SUV",
-    "image": "https://m-renting.com/2307-home_default/oferta-renting-particular-skoda-kamiq-dsg.jpg"
+    "image": "/img/modelos/ma-skoda-kamiq-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -81,7 +81,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2465-home_default/oferta-renting-particular-lancia-ypsilon.jpg"
+    "image": "/img/modelos/ma-lancia-ypsilon-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -95,7 +95,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "SUV",
-    "image": "https://m-renting.com/2477-home_default/oferta-renting-particular-opel-frontera.jpg"
+    "image": "/img/modelos/ma-opel-frontera-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -109,7 +109,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "SUV",
-    "image": "https://m-renting.com/2224-home_default/oferta-renting-praticular-renault-symbioz.jpg"
+    "image": "/img/modelos/ma-renault-symbioz-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -123,7 +123,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "Urbano",
-    "image": "https://m-renting.com/1744-home_default/oferta-renting-particular-audi-a1.jpg"
+    "image": "/img/modelos/ma-audi-a1-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -137,7 +137,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "Compacto",
-    "image": "https://m-renting.com/2373-home_default/oferta-renting-particular-seat-leon.jpg"
+    "image": "/img/modelos/ma-seat-leon-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -151,7 +151,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "SUV",
-    "image": "https://m-renting.com/2238-home_default/oferta-renting-particular-omoda-5.jpg"
+    "image": "/img/modelos/ma-omoda-5-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -165,7 +165,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
     "category": "SUV",
-    "image": "https://m-renting.com/665-home_default/oferta-renting-particulares-toyota-yaris-cross.jpg"
+    "image": "/img/modelos/ma-toyota-yaris-cross-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -179,7 +179,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2349-home_default/oferta-renting-particular-nissan-qashqai.jpg"
+    "image": "/img/modelos/ma-nissan-qashqai-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -193,7 +193,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1941-home_default/oferta-renting-particular-volkswagen-t-roc-gris.jpg"
+    "image": "/img/modelos/ma-volkswagen-t-roc-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -207,7 +207,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1919-home_default/oferta-renting-particular-volkswagen-t-roc-blanco.jpg"
+    "image": "/img/modelos/ma-volkswagen-t-roc-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -221,7 +221,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1878-home_default/oferta-renting-particulares-ebro-s400-blanco.jpg"
+    "image": "/img/modelos/ma-ebro-s400-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -235,7 +235,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2144-home_default/oferta-renting-particular-toyota-c-hr-mhev.jpg"
+    "image": "/img/modelos/ma-toyota-c-hr-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -249,7 +249,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "Berlina",
-    "image": "https://m-renting.com/1184-home_default/skoda-octavia-limo-particular.jpg"
+    "image": "/img/modelos/ma-skoda-octavia-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -263,7 +263,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1882-home_default/oferta-renting-particulares-ebro-s400-gris.jpg"
+    "image": "/img/modelos/ma-ebro-s400-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -277,7 +277,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1544-home_default/oferta-renting-partculares-hyundai-tucson-hev.jpg"
+    "image": "/img/modelos/ma-hyundai-tucson-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -291,7 +291,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2274-home_default/oferta-renting-particular-jaecoo-5.jpg"
+    "image": "/img/modelos/ma-jaecoo-5-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -305,7 +305,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "Berlina",
-    "image": "https://m-renting.com/1161-home_default/skoda-octavia-combi-particular.jpg"
+    "image": "/img/modelos/ma-skoda-octavia-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -319,7 +319,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2442-home_default/oferta-renting-particular-byd-dolphin.jpg"
+    "image": "/img/modelos/ma-byd-dolphin-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -333,7 +333,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2428-home_default/oferta-renting-particular-byd-atto.jpg"
+    "image": "/img/modelos/ma-byd-atto-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -347,7 +347,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1832-home_default/oferta-renting-particular-mazda-cx5-machinegray.jpg"
+    "image": "/img/modelos/ma-mazda-cx-5-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -361,7 +361,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1794-home_default/oferta-renting-particular-mazda-cx5-souldredcrystal.jpg"
+    "image": "/img/modelos/ma-mazda-cx-5-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -375,7 +375,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2003-home_default/oferta-renting-particular-volkswagen-tiguan.jpg"
+    "image": "/img/modelos/ma-volkswagen-tiguan-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -389,7 +389,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2357-home_default/oferta-renting-particular-renault-austral.jpg"
+    "image": "/img/modelos/ma-renault-austral-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -403,7 +403,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1205-home_default/skoda-karoq.jpg"
+    "image": "/img/modelos/ma-skoda-karoq-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -417,7 +417,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2287-home_default/oferta-reniting-particular-jaecoo-7.jpg"
+    "image": "/img/modelos/ma-jaecoo-7-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -431,7 +431,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1222-home_default/skoda-elroq.jpg"
+    "image": "/img/modelos/ma-skoda-elroq-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -445,7 +445,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2250-home_default/omoda-7.jpg"
+    "image": "/img/modelos/ma-omoda-7-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -459,7 +459,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2262-home_default/oferta-renting-particular-omoda-7-mate.jpg"
+    "image": "/img/modelos/ma-omoda-7-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -473,7 +473,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2120-home_default/oferta-renting-particular-omoda-9.jpg"
+    "image": "/img/modelos/ma-omoda-9-particular.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -487,7 +487,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2176-home_default/oferta-renting-autonomo-opel-corsa.jpg"
+    "image": "/img/modelos/ma-opel-corsa-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -501,7 +501,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2200-home_default/oferta-renting-autonomo-dacia-sandero.jpg"
+    "image": "/img/modelos/ma-dacia-sandero-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -515,7 +515,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "SUV",
-    "image": "https://m-renting.com/2363-home_default/oferta-renting-autonomo-renault-captur.jpg"
+    "image": "/img/modelos/ma-renault-captur-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -529,7 +529,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2078-home_default/oferta-renting-autonomo-toyota-yaris.jpg"
+    "image": "/img/modelos/ma-toyota-yaris-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -543,7 +543,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "SUV",
-    "image": "https://m-renting.com/2317-home_default/oferta-renting-autonomo-skoda-kamiq.jpg"
+    "image": "/img/modelos/ma-skoda-kamiq-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -557,7 +557,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "SUV",
-    "image": "https://m-renting.com/2302-home_default/oferta-renting-autonomo-skoda-kamiq-dsg.jpg"
+    "image": "/img/modelos/ma-skoda-kamiq-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -571,7 +571,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2459-home_default/oferta-renting-autonomo-lancia-ypsilon.jpg"
+    "image": "/img/modelos/ma-lancia-ypsilon-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -585,7 +585,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/2102-home_default/oferta-renting-autonomo-peugeot-rifter.jpg"
+    "image": "/img/modelos/ma-peugeot-rifter-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -599,7 +599,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "SUV",
-    "image": "https://m-renting.com/2471-home_default/oferta-renting-autonomo-opel-frontera.jpg"
+    "image": "/img/modelos/ma-opel-frontera-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -613,7 +613,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "SUV",
-    "image": "https://m-renting.com/2218-home_default/oferta-renting-autonomo-renault-symbioz.jpg"
+    "image": "/img/modelos/ma-renault-symbioz-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -627,7 +627,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1349-home_default/oferta-renting-autonomo-toyota-proace-city-gx.jpg"
+    "image": "/img/modelos/ma-toyota-proace-city-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -641,7 +641,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1323-home_default/oferta-renting-autonomo-toyota-proace-city-gx-plus.jpg"
+    "image": "/img/modelos/ma-toyota-proace-city-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -655,7 +655,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "Urbano",
-    "image": "https://m-renting.com/1738-home_default/oferta-renting-autonomo-audi-a1.jpg"
+    "image": "/img/modelos/ma-audi-a1-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -669,7 +669,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1315-home_default/oferta-renting-autonomo-toyota-proace-city-combi.jpg"
+    "image": "/img/modelos/ma-toyota-proace-city-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -683,7 +683,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/2335-home_default/oferta-renting-autonomo-citroen-berlingo.jpg"
+    "image": "/img/modelos/ma-citroen-berlingo-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -697,7 +697,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "Compacto",
-    "image": "https://m-renting.com/2368-home_default/oferta-renting-autonomo-seat-leon.jpg"
+    "image": "/img/modelos/ma-seat-leon-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -711,7 +711,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2235-home_default/oferta-renting-autonomo-omoda-5.jpg"
+    "image": "/img/modelos/ma-omoda-5-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -725,7 +725,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/459-home_default/oferta-renting-autonomos-toyota-yaris-cross.jpg"
+    "image": "/img/modelos/ma-toyota-yaris-cross-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -739,7 +739,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2342-home_default/oferta-renting-autonomo-nissan-qashqai.jpg"
+    "image": "/img/modelos/ma-nissan-qashqai-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -753,7 +753,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1949-home_default/oferta-renting-autonomo-volkswagen-t-roc-gris.jpg"
+    "image": "/img/modelos/ma-volkswagen-t-roc-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -767,7 +767,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1927-home_default/oferta-renting-autonomo-volkswagen-t-roc-blanco.jpg"
+    "image": "/img/modelos/ma-volkswagen-t-roc-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -781,7 +781,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1875-home_default/oferta-renting-autonomo-ebro-s400-blanco.jpg"
+    "image": "/img/modelos/ma-ebro-s400-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -795,7 +795,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2138-home_default/oferta-renting-autonomo-toyota-c-hr-mhev.jpg"
+    "image": "/img/modelos/ma-toyota-c-hr-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -809,7 +809,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
     "category": "Berlina",
-    "image": "https://m-renting.com/1167-home_default/skoda-octavia-limo-autonomo.jpg"
+    "image": "/img/modelos/ma-skoda-octavia-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -823,7 +823,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2329-home_default/oferta-renting-autonomo-alfa-romeo-junior.jpg"
+    "image": "/img/modelos/ma-alfa-romeo-junior-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -837,7 +837,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1885-home_default/oferta-renting-autonomo-ebro-s400-gris.jpg"
+    "image": "/img/modelos/ma-ebro-s400-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -851,7 +851,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1538-home_default/oferta-renting-autonomo-hyundai-tucson-hev.jpg"
+    "image": "/img/modelos/ma-hyundai-tucson-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -865,7 +865,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2271-home_default/oferta-renting-autonomo-jaecoo-5.jpg"
+    "image": "/img/modelos/ma-jaecoo-5-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -879,7 +879,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "Berlina",
-    "image": "https://m-renting.com/1156-home_default/skoda-octavia-combi-autonomo.jpg"
+    "image": "/img/modelos/ma-skoda-octavia-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -893,7 +893,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2439-home_default/oferta-renting-autonomo-byd-dolphin.jpg"
+    "image": "/img/modelos/ma-byd-dolphin-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -907,7 +907,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2423-home_default/oferta-renting-autonomo-byd-atto.jpg"
+    "image": "/img/modelos/ma-byd-atto-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -921,7 +921,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1826-home_default/oferta-renting-autonomo-mazda-cx5-machinegray.jpg"
+    "image": "/img/modelos/ma-mazda-cx-5-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -935,7 +935,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1804-home_default/oferta-renting-particular-mazda-cx5-souldredcrystal.jpg"
+    "image": "/img/modelos/ma-mazda-cx-5-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -949,7 +949,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1997-home_default/oferta-renting-autonomo-volkswagen-tiguan.jpg"
+    "image": "/img/modelos/ma-volkswagen-tiguan-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -963,7 +963,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2353-home_default/oferta-renting-autonomo-renault-austral.jpg"
+    "image": "/img/modelos/ma-renault-austral-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -977,7 +977,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1200-home_default/skoda-karoq.jpg"
+    "image": "/img/modelos/ma-skoda-karoq-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -991,7 +991,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2283-home_default/oferta-renting-autonomo-jaecoo-7.jpg"
+    "image": "/img/modelos/ma-jaecoo-7-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1005,7 +1005,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/1218-home_default/skoda-elroq.jpg"
+    "image": "/img/modelos/ma-skoda-elroq-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1019,7 +1019,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
     "category": "Todoterreno",
-    "image": "https://m-renting.com/2158-home_default/oferta-renting-autonomo-toyota-hilux.jpg"
+    "image": "/img/modelos/ma-toyota-hilux-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1033,7 +1033,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2247-home_default/oferta-renitng-autonomo-omoda-7.jpg"
+    "image": "/img/modelos/ma-omoda-7-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1047,7 +1047,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2254-home_default/oferta-renitng-autonomo-omoda-7-mate.jpg"
+    "image": "/img/modelos/ma-omoda-7-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1061,7 +1061,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2116-home_default/oferta-renting-autonomo-omoda-9.jpg"
+    "image": "/img/modelos/ma-omoda-9-autonomo.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1075,7 +1075,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2166-home_default/oferta-renting-empresa-opel-corsa.jpg"
+    "image": "/img/modelos/ma-opel-corsa-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1089,7 +1089,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2190-home_default/oferta-renting-empresa-dacia-sandero.jpg"
+    "image": "/img/modelos/ma-dacia-sandero-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1103,7 +1103,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "SUV",
-    "image": "https://m-renting.com/847-home_default/oferta-renting-empresa-renault-captur.jpg"
+    "image": "/img/modelos/ma-renault-captur-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1117,7 +1117,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Urbano",
-    "image": "https://m-renting.com/659-home_default/oferta-renting-empresa-toyota-yaris.jpg"
+    "image": "/img/modelos/ma-toyota-yaris-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1131,7 +1131,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "SUV",
-    "image": "https://m-renting.com/2322-home_default/oferta-renting-empresa-skoda-kamiq.jpg"
+    "image": "/img/modelos/ma-skoda-kamiq-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1145,7 +1145,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "SUV",
-    "image": "https://m-renting.com/2294-home_default/oferta-renting-empresa-skoda-kamiq-dsg.jpg"
+    "image": "/img/modelos/ma-skoda-kamiq-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1159,7 +1159,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2449-home_default/oferta-renting-empresa-lancia-ypsilon.jpg"
+    "image": "/img/modelos/ma-lancia-ypsilon-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1173,7 +1173,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1011-home_default/oferta-renting-empresa-peugeot-rifter.jpg"
+    "image": "/img/modelos/ma-peugeot-rifter-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1187,7 +1187,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "SUV",
-    "image": "https://m-renting.com/911-home_default/oferta-renting-empresa-opel-frontera.jpg"
+    "image": "/img/modelos/ma-opel-frontera-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1201,7 +1201,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "SUV",
-    "image": "https://m-renting.com/2209-home_default/oferta-renting-empresa-renault-symbioz.jpg"
+    "image": "/img/modelos/ma-renault-symbioz-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1215,7 +1215,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1342-home_default/oferta-renting-empresa-toyota-proace-city-gx.jpg"
+    "image": "/img/modelos/ma-toyota-proace-city-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1229,7 +1229,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1335-home_default/oferta-renting-empresa-toyota-proace-city-gx-plus.jpg"
+    "image": "/img/modelos/ma-toyota-proace-city-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1243,7 +1243,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "Urbano",
-    "image": "https://m-renting.com/1728-home_default/oferta-renting-empresa-audi-a1.jpg"
+    "image": "/img/modelos/ma-audi-a1-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1257,7 +1257,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1305-home_default/oferta-renting-empresa-toyota-proace-city-combi.jpg"
+    "image": "/img/modelos/ma-toyota-proace-city-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1271,7 +1271,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/335-home_default/oferta-renting-empresa-citroen-berlingo.jpg"
+    "image": "/img/modelos/ma-citroen-berlingo-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1285,7 +1285,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "Compacto",
-    "image": "https://m-renting.com/840-home_default/oferta-renting-empresa-seat-leon.jpg"
+    "image": "/img/modelos/ma-seat-leon-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1299,7 +1299,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2244-home_default/oferta-renitng-empresa-omoda-5.jpg"
+    "image": "/img/modelos/ma-omoda-5-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1313,7 +1313,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/671-home_default/oferta-renting-empresa-toyota-yaris-cross.jpg"
+    "image": "/img/modelos/ma-toyota-yaris-cross-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1327,7 +1327,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1681-home_default/oferta-renting-empresa-nissan-qashqai.jpg"
+    "image": "/img/modelos/ma-nissan-qashqai-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1341,7 +1341,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1955-home_default/oferta-renting-empresa-volkswagen-t-roc-gris.jpg"
+    "image": "/img/modelos/ma-volkswagen-t-roc-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1355,7 +1355,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1933-home_default/oferta-renting-empresa-volkswagen-t-roc-blanco.jpg"
+    "image": "/img/modelos/ma-volkswagen-t-roc-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1369,7 +1369,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/1872-home_default/oferta-renting-empresa-ebro-s400-blanco.jpg"
+    "image": "/img/modelos/ma-ebro-s400-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1383,7 +1383,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "SUV",
-    "image": "https://m-renting.com/2127-home_default/oferta-renting-empresa-toyota-c-hr-mhev.jpg"
+    "image": "/img/modelos/ma-toyota-c-hr-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1397,7 +1397,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
     "category": "Berlina",
-    "image": "https://m-renting.com/1178-home_default/skoda-octavia-limo-empresa.jpg"
+    "image": "/img/modelos/ma-skoda-octavia-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1411,7 +1411,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/949-home_default/oferta-renting-empresa-alfa-romeo-junior.jpg"
+    "image": "/img/modelos/ma-alfa-romeo-junior-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1425,7 +1425,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1888-home_default/oferta-renting-empresa-ebro-s400-gris.jpg"
+    "image": "/img/modelos/ma-ebro-s400-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1439,7 +1439,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/775-home_default/oferta-renting-empresa-hyundai-tucson-hev.jpg"
+    "image": "/img/modelos/ma-hyundai-tucson-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1453,7 +1453,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2268-home_default/oferta-renting-empresa-jaecoo-5.jpg"
+    "image": "/img/modelos/ma-jaecoo-5-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1467,7 +1467,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "Berlina",
-    "image": "https://m-renting.com/1147-home_default/skoda-octavia-combi-empresa.jpg"
+    "image": "/img/modelos/ma-skoda-octavia-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1481,7 +1481,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "Urbano",
-    "image": "https://m-renting.com/2436-home_default/oferta-renting-empresa-byd-dolphin.jpg"
+    "image": "/img/modelos/ma-byd-dolphin-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1495,7 +1495,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/2415-home_default/oferta-renting-empresa-byd-atto.jpg"
+    "image": "/img/modelos/ma-byd-atto-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1509,7 +1509,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1818-home_default/oferta-renting-empresa-mazda-cx5-machinegray.jpg"
+    "image": "/img/modelos/ma-mazda-cx-5-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1523,7 +1523,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1810-home_default/oferta-renting-empresa-mazda-cx5-souldredcrystal.jpg"
+    "image": "/img/modelos/ma-mazda-cx-5-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1537,7 +1537,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1987-home_default/oferta-renting-empresa-volkswagen-tiguan.jpg"
+    "image": "/img/modelos/ma-volkswagen-tiguan-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1551,7 +1551,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/877-home_default/oferta-renting-empresa-renault-austral.jpg"
+    "image": "/img/modelos/ma-renault-austral-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1565,7 +1565,7 @@
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
     "category": "SUV",
-    "image": "https://m-renting.com/1192-home_default/skoda-karoq.jpg"
+    "image": "/img/modelos/ma-skoda-karoq-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1579,7 +1579,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2278-home_default/oferta-renting-empresa-jaecoo-7.jpg"
+    "image": "/img/modelos/ma-jaecoo-7-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1593,7 +1593,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/1211-home_default/skoda-elroq.jpg"
+    "image": "/img/modelos/ma-skoda-elroq-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1607,7 +1607,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "Furgoneta",
-    "image": "https://m-renting.com/1368-home_default/oferta-renting-empresa-toyota-proace-max-gx.jpg"
+    "image": "/img/modelos/ma-toyota-proace-max-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1621,7 +1621,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "Todoterreno",
-    "image": "https://m-renting.com/2152-home_default/oferta-renting-empresa-toyota-hilux.jpg"
+    "image": "/img/modelos/ma-toyota-hilux-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1635,7 +1635,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2240-home_default/oferta-renting-empresa-omoda-7.jpg"
+    "image": "/img/modelos/ma-omoda-7-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1649,7 +1649,7 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2259-home_default/oferta-renitng-empresa-omoda-7-mate.jpg"
+    "image": "/img/modelos/ma-omoda-7-empresa.jpg"
   },
   {
     "fuente": "M Automoción",
@@ -1663,6 +1663,6 @@
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
     "category": "SUV",
-    "image": "https://m-renting.com/2110-home_default/oferta-renting-empresa-omoda-9.jpg"
+    "image": "/img/modelos/ma-omoda-9-empresa.jpg"
   }
 ]
