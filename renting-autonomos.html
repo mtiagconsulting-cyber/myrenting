@@ -40,7 +40,7 @@
     .footer-links a{font-size:11px;color:#444;transition:color .15s;}
     .footer-links a:hover{color:#888;}
     .footer-copy{font-size:11px;color:#444;}
-    .hero{background:var(--accent);color:#fff;padding:56px 32px 48px;text-align:center;}
+    .hero-legacy{}
     .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-1px;line-height:1.15;margin-bottom:14px;}
     .hero h1 em{font-style:normal;color:rgba(255,255,255,0.7);}
     .hero-sub{font-size:1rem;color:rgba(255,255,255,.75);max-width:500px;margin:0 auto;}
@@ -81,7 +81,30 @@
       .footer-links{flex-wrap:wrap;justify-content:center;}
       .hero{padding:40px 16px 32px;}
     }
-</style>
+
+    .sec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 8px;}
+    @media(max-width:900px){.sec-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:520px){.sec-grid{grid-template-columns:1fr 1fr;}}
+    .sec-card{background:#fff;border:1px solid #ebebeb;border-radius:14px;overflow:hidden;display:block;text-decoration:none;transition:box-shadow .15s,transform .15s;}
+    .sec-card:hover{box-shadow:0 10px 26px rgba(30,20,15,.10);transform:translateY(-2px);}
+    .sec-card-img{background:#faf7f5;height:120px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #f0ece8;}
+    .sec-card-b{padding:12px 14px;}
+    .sec-card-n{font-size:13.5px;font-weight:800;color:#17120f;margin-bottom:5px;}
+    .sec-card-p{font-size:21px;font-weight:850;color:#e8380d;letter-spacing:-.5px;margin-bottom:9px;}
+    .sec-card-p span{font-size:11px;color:#999;font-weight:600;}
+    .sec-card-cta{background:#17120f;color:#fff;text-align:center;padding:8px;border-radius:8px;font-size:11.5px;font-weight:700;}
+    .sec-head{max-width:1100px;margin:28px auto 4px;padding:0 32px;}
+    .sec-head h2{font-size:22px;font-weight:850;letter-spacing:-.5px;color:#17120f;margin:0 0 4px;}
+    .sec-head p{color:#6a615b;font-size:14px;margin:0;}
+    .sec-wrap{max-width:1100px;margin:0 auto;padding:0 32px;}
+    .lite-hero{background:#fff;border-bottom:1px solid #ece7e2;padding:34px 32px 24px;text-align:center;}
+    .lite-hero .hero-pill{display:inline-flex;background:#fff5f2;color:#e8380d;border:1px solid #ffd9cd;border-radius:99px;padding:5px 14px;font-size:12px;font-weight:700;margin-bottom:12px;}
+    .lite-hero h1{font-size:clamp(1.7rem,3.5vw,2.2rem);font-weight:850;letter-spacing:-1px;color:#17120f;margin:0 0 8px;}
+    .lite-hero h1 em{font-style:normal;color:#e8380d;}
+    .lite-hero p{color:#6a615b;font-size:15px;max-width:560px;margin:0 auto;}
+    @media(max-width:768px){.sec-head,.sec-wrap{padding:0 16px;}}
+
+  </style>
 <style id="mrnav-css">
 .mrnav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:20px;background:#fff;border-bottom:1px solid #ece7e2;padding:0 32px;height:64px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,sans-serif;}
 .mrnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
@@ -111,7 +134,7 @@
   <a href="/" class="mrnav-cta">Comparar gratis</a>
 </nav>
 
-<section class="hero">
+<section class="lite-hero">
   <div class="hero-pill">Para autonomos y freelance</div>
   <h1>Renting para <em>Autonomos</em></h1>
   <p class="hero-sub">Deduce el IVA y el IRPF de tu coche. Ahorra hasta 2.142€ al ano.</p>
@@ -120,6 +143,132 @@
 <main>
 
 <div class="breadcrumb"><a href="/">MyRenting</a> › Renting para Autonomos</div>
+<div class="sec-head"><h2>Ofertas de renting para aut&oacute;nomos</h2><p>34 modelos con IVA e IRPF deducibles &middot; precio real, todo incluido y sin entrada</p></div>
+<div class="sec-wrap"><div class="sec-grid">
+    <a href="/renting-opel-corsa.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/opel-corsa.png" alt="Renting Opel Corsa" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Opel Corsa</div>
+        <div class="sec-card-p">244€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-dacia-sandero.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/dacia-sandero.png" alt="Renting Dacia Sandero" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Dacia Sandero</div>
+        <div class="sec-card-p">256€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-renault-captur.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/renault-captur.png" alt="Renting Renault Captur" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Renault Captur</div>
+        <div class="sec-card-p">259€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-toyota-yaris.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/ma-toyota-yaris-autonomo.jpg" alt="Renting Toyota Yaris" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Toyota Yaris</div>
+        <div class="sec-card-p">269€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-skoda-kamiq.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/skoda-kamiq.png" alt="Renting Skoda Kamiq" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Skoda Kamiq</div>
+        <div class="sec-card-p">271€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-lancia-ypsilon.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/ma-lancia-ypsilon-autonomo.jpg" alt="Renting Lancia Ypsilon" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Lancia Ypsilon</div>
+        <div class="sec-card-p">309€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-peugeot-rifter.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/peugeot-rifter.png" alt="Renting Peugeot Rifter" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Peugeot Rifter</div>
+        <div class="sec-card-p">309€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-opel-frontera.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/ma-opel-frontera-autonomo.jpg" alt="Renting Opel Frontera" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Opel Frontera</div>
+        <div class="sec-card-p">319€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-renault-symbioz.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/renault-symbioz.png" alt="Renting Renault Symbioz" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Renault Symbioz</div>
+        <div class="sec-card-p">320€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-toyota-proace-city.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/ma-toyota-proace-city-autonomo.jpg" alt="Renting Toyota Proace City" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Toyota Proace City</div>
+        <div class="sec-card-p">322€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-audi-a1.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/audi-a1.png" alt="Renting Audi A1" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Audi A1</div>
+        <div class="sec-card-p">329€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-citroen-berlingo.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/citroen-berlingo.png" alt="Renting Citroen Berlingo" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Citroen Berlingo</div>
+        <div class="sec-card-p">335€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-seat-leon.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/seat-leon.png" alt="Renting Seat Leon" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Seat Leon</div>
+        <div class="sec-card-p">339€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-omoda-5.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/omoda-5.png" alt="Renting Omoda 5" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Omoda 5</div>
+        <div class="sec-card-p">340€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-toyota-yaris-cross.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/toyota-yaris-cross.png" alt="Renting Toyota Yaris Cross" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Toyota Yaris Cross</div>
+        <div class="sec-card-p">341€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-nissan-qashqai.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/nissan-qashqai.png" alt="Renting Nissan Qashqai" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Nissan Qashqai</div>
+        <div class="sec-card-p">351€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-volkswagen-t-roc.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/volkswagen-t-roc.png" alt="Renting Volkswagen T-roc" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Volkswagen T-roc</div>
+        <div class="sec-card-p">358€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-ebro-s400.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/ma-ebro-s400-autonomo.jpg" alt="Renting Ebro S400" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Ebro S400</div>
+        <div class="sec-card-p">362€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-toyota-c-hr.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/toyota-c-hr.png" alt="Renting Toyota C-hr" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Toyota C-hr</div>
+        <div class="sec-card-p">363€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+    <a href="/renting-skoda-octavia.html" class="sec-card">
+      <div class="sec-card-img"><img src="/img/modelos/skoda-octavia.png" alt="Renting Skoda Octavia" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:10px;"></div>
+      <div class="sec-card-b"><div class="sec-card-n">Skoda Octavia</div>
+        <div class="sec-card-p">364€<span>/mes</span></div>
+        <div class="sec-card-cta">Ver oferta &rarr;</div></div>
+    </a>
+  </div>
+  <div style="text-align:center;margin:18px 0 8px;"><a href="/" style="display:inline-block;background:#e8380d;color:#fff;padding:12px 26px;border-radius:99px;font-weight:700;text-decoration:none;font-size:14px;">Ver todas las ofertas &rarr;</a></div>
+</div>
+
 
 <div class="stats-grid">
   <div class="stat-box"><div class="stat-val">21%</div><div class="stat-label">IVA deducible</div></div>
