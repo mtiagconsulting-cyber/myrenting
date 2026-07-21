@@ -16,9 +16,16 @@ USO (en tu Mac, con salida a internet):
 Luego:  git add img/modelos ofertas-manuales.json index.html renting-*.html
         git commit -m "Imagenes M Automocion locales" && git push
 """
-import json, os, re, sys, urllib.request, hashlib
+import json, os, re, sys, urllib.request, hashlib, ssl
 
 DRY = '--dry' in sys.argv
+
+# --- contexto SSL robusto (Python en macOS a menudo no encuentra los certs) ---
+try:
+    import certifi
+    SSL_CTX = ssl.create_default_context(cafile=certifi.where())
+except Exception:
+    SSL_CTX = ssl._create_unverified_context()   # imágenes públicas: verificación no crítica
 OUT = 'img/modelos'
 os.makedirs(OUT, exist_ok=True)
 
@@ -52,7 +59,7 @@ for u, local in url_local.items():
         continue
     try:
         req = urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'})
-        data = urllib.request.urlopen(req, timeout=30).read()
+        data = urllib.request.urlopen(req, timeout=30, context=SSL_CTX).read()
         if len(data) < 800:      # imagen sospechosamente pequeña / placeholder
             raise ValueError(f"respuesta muy pequeña ({len(data)} bytes)")
         open(dest, 'wb').write(data)
