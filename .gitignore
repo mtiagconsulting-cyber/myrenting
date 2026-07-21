@@ -14,6 +14,7 @@ img/.DS_Store
 !scrape_myrenting.py
 !scrape_mautomocion.py
 !descargar_imagenes_mautomocion.py
+!generar_ciudades_mautomocion.py
 !mautomocion-db.json
 !actualizar_ofertas_seguro.py
 !actualizar_fichas.py
