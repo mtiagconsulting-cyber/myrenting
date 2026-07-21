@@ -54,7 +54,7 @@ def load_models():
 CATEGORIES = {
     'electrico': lambda m: 'ele' in m['fuels'] or 'eléc' in m['fuels'],
     'coche-electrico': lambda m: 'ele' in m['fuels'],
-    'hibrido': lambda m: any(x in m['fuels'] for x in ['hib','hybr','plug','hibrido']),
+    'hibrido': lambda m: any(x in m['fuels'] for x in ['brido','hybr','plug']),
     'suv': lambda m: 'suv' in m['category'].lower() or bool(re.search(r'Q[2-8]|X[1-7]|TUCSON|QASHQAI|TIGUAN|ATECA|ARONA|KAROQ|KODIAQ|SPORTAGE|TUCSON|KUGA|CAPTUR|DUSTER|C-HR|COUNTRYMAN|FRONTERA|GRANDLAND|3008|2008|5008|T-ROC|T-CROSS|FORMENTOR|TERRAMAR', m['model'].upper())),
     'berlina': lambda m: 'berlina' in m['category'].lower() or 'sedan' in m['category'].lower(),
     'urbano': lambda m: 'urban' in m['category'].lower() or 'porton' in m['category'].lower() or 'portón' in m['category'].lower(),

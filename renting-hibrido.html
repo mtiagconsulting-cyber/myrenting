@@ -204,6 +204,23 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ===== HUB v4 ===== */
+    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:6px;}
+    .hub-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;}
+    .hub-card:hover{box-shadow:0 12px 30px rgba(30,20,15,.12);transform:translateY(-3px);border-color:#e0d6ce;}
+    .hub-img{height:120px;background:radial-gradient(circle at 50% 45%,#f6f3f0,#ece9e4);display:flex;align-items:center;justify-content:center;padding:12px;}
+    .hub-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));}
+    .hub-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:3px;flex:1;}
+    .hub-brand{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);}
+    .hub-model{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);line-height:1.15;}
+    .hub-meta{font-size:11.5px;color:var(--ink-4,#6a615b);margin-top:1px;}
+    .hub-price{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-4,#6a615b);}
+    .hub-price b{font-size:19px;color:var(--accent);font-weight:850;letter-spacing:-.5px;}
+    .hub-empty{padding:26px;text-align:center;color:var(--ink-4,#6a615b);font-size:14px;}
+    .seo-block{max-width:820px;line-height:1.7;color:var(--ink-3,#4a423d);font-size:15px;}
+    .seo-block p{margin:0 0 14px;}
+
   </style>
 </head>
 <body>
@@ -225,7 +242,7 @@
   <div>
     <div class="hero-badges">
       <span class="badge badge-type">Híbrido</span>
-      <span class="badge-count">— ofertas · — gestoras</span>
+      <span class="badge-count">178 ofertas &middot; 4 gestoras</span>
     </div>
     <h1 class="hero-title">Renting <em>Híbrido</em></h1>
     <p class="hero-sub"></p>
@@ -235,7 +252,7 @@
         <div class="precio-label">Mejor precio disponible</div>
         <div class="precio-val">
           <span class="precio-desde">desde</span>
-          <span class="precio-num">—</span>
+          <span class="precio-num">236</span>
           <span class="precio-unit">€/mes</span>
         </div>
         <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
@@ -246,15 +263,15 @@
     <div class="hero-stats">
       <div class="stat-box">
         <div class="stat-label">Desde</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">236€</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Gestoras</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">4</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Ofertas</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">178</div>
       </div>
     </div>
 
@@ -271,35 +288,230 @@
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
+<!-- MODELOS -->
 <div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">—</span>
-      <span class="ofertas-count">ofertas disponibles — Híbrido</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
-  </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        
+  <div class="section-title">24 modelos disponibles</div>
+  <div class="section-sub">Pulsa un modelo para comparar todas las gestoras</div>
+  <div class="hub-grid">
+    <a class="hub-card" href="/renting-fiat-500.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/FIAT/500H%C3%ADbrido/2023/3Hatchback/23500mhevha2fb/fiat_23500mhevha2fb_lowaggressive_blanco-gelato.png" alt="Fiat 500" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Fiat</div>
+        <div class="hub-model">500</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>236&euro;</b>/mes</div>
       </div>
-    </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead></thead>
-        <tbody id="comp-tbody"></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+    </a>
+    <a class="hub-card" href="/renting-kia-stonic.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/ARVAL_IMAGENES%20WEB%20ARVAL_960X630_24032026_KIA%20STONIC_2d870b59fc1d50dda114ce4076b8b19773059c6ee677c9f79d686e5751c32974.png" alt="Kia Stonic" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Kia</div>
+        <div class="hub-model">Stonic</div>
+        <div class="hub-meta">2 gestoras &middot; 14 ofertas</div>
+        <div class="hub-price">desde <b>242&euro;</b>/mes</div>
       </div>
-    </div>
+    </a>
+    <a class="hub-card" href="/renting-ford-puma-5p-todoterreno.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/ford-puma-mira-dcha-120226-volteado_4af93175adbc5805a90dd2f532f839ef5c6704d31b75ba5ffee8ae1b0054ff90.png" alt="Ford Puma / 5P / Todoterreno" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Ford</div>
+        <div class="hub-model">Puma / 5P / Todoterreno</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>244&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-hyundai-bayon.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Hyundai/Bayon/2025/5SUV/25bayoncreativesu1fbfr/hyundai_25bayoncreativesu1fbfr_lowaggressive_atlas-white.png" alt="Hyundai Bayon" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Hyundai</div>
+        <div class="hub-model">Bayon</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>254&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-captur.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/992/alp_imgshowroom_ranault_captur.png" alt="Renault Captur" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Captur</div>
+        <div class="hub-meta">3 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>259&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-toyota-yaris.html">
+      <div class="hub-img"><img src="/img/modelos/ma-toyota-yaris-autonomo.jpg" alt="Toyota Yaris" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Toyota</div>
+        <div class="hub-model">Yaris</div>
+        <div class="hub-meta">2 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>269&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-2008.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/2008Hybride/2025/5SUV/252008hevgtsu2fbfr_ftt/peugeot_252008hevgtsu2fbfr_ftt_lowaggressive.png" alt="Peugeot 2008" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">2008</div>
+        <div class="hub-meta">2 gestoras &middot; 3 ofertas</div>
+        <div class="hub-price">desde <b>286&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-208.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Peugeot/208/2025/5Hatchback/25208allurehb2fbfr/peugeot_25208allurehb2fbfr_lowaggressive.png" alt="Peugeot 208" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">208</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>289&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-mg-zs.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/MG/MGZSHybridPlus/2025/5SUV/25mgzshevplusluxurysu2bfr/mg_25mgzshevplusluxurysu2bfr_lowaggressive_cosmic-silver.png" alt="Mg Zs" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Mg</div>
+        <div class="hub-model">Zs</div>
+        <div class="hub-meta">1 gestora &middot; 2 ofertas</div>
+        <div class="hub-price">desde <b>294&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-lancia-ypsilon.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/1167/showroomalp_lacia-ypsilon.png" alt="Lancia Ypsilon" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Lancia</div>
+        <div class="hub-model">Ypsilon</div>
+        <div class="hub-meta">2 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>309&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-hyundai-kona.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/FOTO__Hyundai%20Kona_%20Frontal3.4_PyB_1920x1440_27832e4b9923403f13eb77d7e86a7712e7d17413c0ee39ca38db0cb3132f931c.jpg" alt="Hyundai Kona" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Hyundai</div>
+        <div class="hub-model">Kona</div>
+        <div class="hub-meta">1 gestora &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>311&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-symbioz.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Renault/SYMBIOZHybrid/2025/5SUV/25symbiozheviconicsu1bfr/renault_25symbiozheviconicsu1bfr_lowaggressive_gris-zinc.png" alt="Renault Symbioz" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Symbioz</div>
+        <div class="hub-meta">2 gestoras &middot; 5 ofertas</div>
+        <div class="hub-price">desde <b>311&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-opel-frontera.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/1214/opel_frontera.png" alt="Opel Frontera" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Opel</div>
+        <div class="hub-model">Frontera</div>
+        <div class="hub-meta">3 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>319&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-renault-symbioz-evolution.html">
+      <div class="hub-img"><img src="https://crm-colectivosb2e.alphabet.es/colectivosb2eadmin/img/vehicles/2/1137/alp_imgshowroom_renaultsymbioz_v2.png" alt="Renault Symbioz Evolution" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Symbioz Evolution</div>
+        <div class="hub-meta">1 gestora &middot; 1 oferta</div>
+        <div class="hub-price">desde <b>320&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-skoda-octavia.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Skoda/OctaviaMHEV/2025/5Hatchback/25octaviamhevsportlnhb4fbfr/skoda_25octaviamhevsportlnhb4fbfr_lowaggressive_gris-graphite-metalizado.png" alt="Skoda Octavia" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Skoda</div>
+        <div class="hub-model">Octavia</div>
+        <div class="hub-meta">2 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>330&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-hyundai-tucson.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Hyundai/Tucson/2025/5SUV/25tucsonadvcsu4fbuk/hyundai_25tucsonadvcsu4fbuk_lowaggressive_shadow-grey-metalizada.png" alt="Hyundai Tucson" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Hyundai</div>
+        <div class="hub-model">Tucson</div>
+        <div class="hub-meta">3 gestoras &middot; 10 ofertas</div>
+        <div class="hub-price">desde <b>334&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-nissan-qashqai.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Nissan/QashqaiMHEV/2024/5SUV/24qashqaimhevnconectasu3bfr/nissan_24qashqaimhevnconectasu3bfr_lowaggressive_skyline-grey.png" alt="Nissan Qashqai" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Nissan</div>
+        <div class="hub-model">Qashqai</div>
+        <div class="hub-meta">4 gestoras &middot; 20 ofertas</div>
+        <div class="hub-price">desde <b>337&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-omoda-5.html">
+      <div class="hub-img"><img src="/img/modelos/ma-omoda-5-autonomo.jpg" alt="Omoda 5" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Omoda</div>
+        <div class="hub-model">5</div>
+        <div class="hub-meta">1 gestora &middot; 3 ofertas</div>
+        <div class="hub-price">desde <b>340&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-toyota-yaris-cross.html">
+      <div class="hub-img"><img src="/img/modelos/ma-toyota-yaris-cross-autonomo.jpg" alt="Toyota Yaris Cross" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Toyota</div>
+        <div class="hub-model">Yaris Cross</div>
+        <div class="hub-meta">2 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>341&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-peugeot-3008.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Colors_PNG2048/ES-es/Peugeot/3008Hybride/2025/5SUV/253008hevgtsu3fbfr/peugeot_253008hevgtsu3fbfr_lowaggressive_azul-ingaro.png" alt="Peugeot 3008" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">3008</div>
+        <div class="hub-meta">2 gestoras &middot; 17 ofertas</div>
+        <div class="hub-price">desde <b>349&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-volkswagen-t-roc.html">
+      <div class="hub-img"><img src="https://staticcdn.ald-automotive.es/vim/0db215c55d924eaa860095a8b9a1752c.JPG" alt="Volkswagen T-Roc" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Volkswagen</div>
+        <div class="hub-model">T-Roc</div>
+        <div class="hub-meta">3 gestoras &middot; 23 ofertas</div>
+        <div class="hub-price">desde <b>349&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-kia-sportage.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Octopus/ARVAL_IMAGENES%20WEB%20ARVAL_960X630_24032026_KIA%20SPORTAGE_e2ffa9ed110564830794e7c8487b7a04684b100d89ceafc4d0b5299f694847b5.png" alt="Kia Sportage" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Kia</div>
+        <div class="hub-model">Sportage</div>
+        <div class="hub-meta">2 gestoras &middot; 19 ofertas</div>
+        <div class="hub-price">desde <b>355&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-cupra-formentor.html">
+      <div class="hub-img"><img src="https://mediaservices.arval.com/Small_1.5_x1/Pix_PNG2048/ES/Cupra/FormentoreHybrid/2025/5SUV/25formentorphevvzsu1fbfr/cupra_25formentorphevvzsu1fbfr_lowaggressive.png" alt="Cupra Formentor" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Cupra</div>
+        <div class="hub-model">Formentor</div>
+        <div class="hub-meta">2 gestoras &middot; 7 ofertas</div>
+        <div class="hub-price">desde <b>357&euro;</b>/mes</div>
+      </div>
+    </a>
+    <a class="hub-card" href="/renting-ebro-s400.html">
+      <div class="hub-img"><img src="/img/modelos/ma-ebro-s400-autonomo.jpg" alt="Ebro S400" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Ebro</div>
+        <div class="hub-model">S400</div>
+        <div class="hub-meta">1 gestora &middot; 6 ofertas</div>
+        <div class="hub-price">desde <b>362&euro;</b>/mes</div>
+      </div>
+    </a>
   </div>
 </div>
+
 
 <!-- QUE INCLUYE -->
 <div class="section">
@@ -315,9 +527,10 @@
 
 <!-- SEO CONTENT -->
 <div class="section">
-  
-  
+  <div class="section-title">Renting Híbrido: como funciona</div>
+  <div class="seo-block"><p>Encuentra tu <strong>renting Híbrido</strong> comparando 24 modelos de todas las gestoras, desde <strong>236&euro;/mes</strong>. Precios reales, sin entrada y con seguro y mantenimiento incluidos.</p><p>Filtra por marca y modelo y compara las ofertas en igualdad de condiciones (mismo plazo y kilometraje) antes de decidir.</p></div>
 </div>
+
 
 <!-- FAQ -->
 <div class="section">
@@ -387,15 +600,7 @@
   }
 
   // Auto-abrir si hay pocas ofertas
-  window.addEventListener('DOMContentLoaded', () => {
-    const total = document.querySelectorAll('#comp-tbody tr').length;
-    document.getElementById('badge-count').textContent = total;
-    document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
-    if (total <= 4) {
-      document.getElementById('ofertas-body').classList.remove('collapsed');
-      document.getElementById('toggle-icon').classList.add('open');
-    }
-  });
+  /* tabla antigua eliminada */
 
   // Filtros
   function filtrarTabla() {
