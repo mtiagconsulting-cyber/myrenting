@@ -158,8 +158,13 @@ def esc(s): return s.replace('&','&amp;').replace('"','&quot;')
 
 EXCL=[]
 for k,offs in grp.items():
-    if set(o['fuente'] for o in offs)=={'M Automoción'}:
+    if any(o['fuente']=='M Automoción' for o in offs):
         EXCL.append(k)
+
+FUEL_TXT={'Híbrido':'híbrido','Híbrido enchufable':'híbrido enchufable','Eléctrico':'eléctrico',
+          'Diésel':'diésel','Gasolina':'de gasolina'}
+CAT_TXT={'SUV':'SUV','Urbano':'urbano','Berlina':'berlina','Compacto':'compacto',
+         'Furgoneta':'furgoneta','Todoterreno':'todoterreno','Familiar':'familiar'}
 
 TIPO={'particular':'Particular','autonomo':'Autónomo','empresa':'Empresa'}
 generated=[]
@@ -169,6 +174,13 @@ for make,model in sorted(EXCL):
     if not ficha: continue
     modelo=title_case(f"{make} {model}")
     mn=int(min(o['precio_desde'] for o in offs))
+    cheap=min(offs,key=lambda o:o['precio_desde'])
+    DISP={'m automoción':'M Automoción','m automocion':'M Automoción'}
+    cheap_g=DISP.get(cheap['fuente'].lower(),cheap['fuente'])
+    cat=offs[0].get('category',''); fu=offs[0].get('fuel','')
+    ct=CAT_TXT.get(cat,cat.lower() if cat else 'coche'); ft=FUEL_TXT.get(fu,'')
+    model_line=(f"El {modelo} es un {ct}{(' '+ft) if ft else ''} que en MyRenting puedes tener en renting "
+                f"desde {mn}€/mes con todo incluido y sin entrada.")
     plazo=offs[0]['duracion']; km=f"{offs[0]['km']:,}".replace(',','.')
     # una fila por tipo (cuota más barata de cada tipo)
     by_t={}
@@ -187,6 +199,9 @@ for make,model in sorted(EXCL):
         ciudad=c['n']
         title=f"Renting {modelo} en {ciudad} Sin Entrada — desde {mn}€/mes | MyRenting"
         desc=f"Renting del {modelo} en {ciudad} desde {mn}€/mes, todo incluido y sin entrada. Precios reales para particulares, autónomos y empresas. Entrega en {c['prov']}."
+        import os
+        if os.path.exists(fname):   # no sobrescribir páginas existentes (ricas o ya creadas)
+            continue
         watext=urllib.parse.quote(f"Hola, me interesa el renting del {modelo} en {ciudad}")
         otras=' '.join(f'<a href="/renting-{slug(make+" "+model)}-{o}.html">{CIUDADES[o]["n"]}</a>' for o in CIUDADES if o!=cslug)
         otras+=f' <a href="/{ficha}">Ver todas las ofertas →</a>'
@@ -194,9 +209,9 @@ for make,model in sorted(EXCL):
             "description":desc,"brand":{"@type":"Brand","name":title_case(make)},"category":offs[0].get('category','').lower(),
             "offers":{"@type":"AggregateOffer","lowPrice":str(mn),"priceCurrency":"EUR","offerCount":str(len(offs)),
                 "availability":"https://schema.org/InStock","areaServed":ciudad,
-                "seller":{"@type":"Organization","name":"M Automoción"}}}, ensure_ascii=False)
+                "seller":{"@type":"Organization","name":cheap_g}}}, ensure_ascii=False)
         html=TPL.format(title=esc(title),desc=esc(desc),fname=fname,jsonld=jsonld,ficha=ficha,
-            modelo=modelo,ciudad=ciudad,intro=c['intro'],precio=mn,plazo=plazo,km=km,rows=rows,
+            modelo=modelo,ciudad=ciudad,intro=esc(model_line+' '+c['intro']),precio=mn,plazo=plazo,km=km,rows=rows,
             prov=c['prov'],zbe=c['zbe'],wa=WA,watext=watext,mail=MAIL,otras=otras)
         if not DRY: open(fname,'w').write(html)
         generated.append(fname)
