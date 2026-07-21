@@ -5,12 +5,12 @@
     "make": "OPEL",
     "model": "CORSA",
     "version": "OPEL CORSA GS 1.2T",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 295.24,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2182-home_default/oferta-renting-particular-opel-corsa.jpg"
   },
   {
@@ -19,12 +19,12 @@
     "make": "DACIA",
     "model": "SANDERO",
     "version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 309.76,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2206-home_default/oferta-renting-particular-dacia-sandero.jpg"
   },
   {
@@ -33,12 +33,12 @@
     "make": "TOYOTA",
     "model": "YARIS",
     "version": "TOYOTA YARIS ACTIVE 120H 116CV",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 326.64,
     "duracion": 72,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2084-home_default/oferta-renting-particular-toyota-yaris.jpg"
   },
   {
@@ -52,7 +52,7 @@
     "duracion": 48,
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2312-home_default/oferta-renting-particular-skoda-kamiq.jpg"
   },
   {
@@ -66,7 +66,7 @@
     "duracion": 48,
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2307-home_default/oferta-renting-particular-skoda-kamiq-dsg.jpg"
   },
   {
@@ -75,12 +75,12 @@
     "make": "LANCIA",
     "model": "YPSILON",
     "version": "LANCIA YPSILON LX IBRIDA",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 373.89,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2465-home_default/oferta-renting-particular-lancia-ypsilon.jpg"
   },
   {
@@ -89,12 +89,12 @@
     "make": "OPEL",
     "model": "FRONTERA",
     "version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 385.99,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2477-home_default/oferta-renting-particular-opel-frontera.jpg"
   },
   {
@@ -103,12 +103,12 @@
     "make": "RENAULT",
     "model": "SYMBIOZ",
     "version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 387.2,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2224-home_default/oferta-renting-praticular-renault-symbioz.jpg"
   },
   {
@@ -117,12 +117,12 @@
     "make": "AUDI",
     "model": "A1",
     "version": "AUDI A1 SB ADRENALIN EDITION 30TFSI 116CV STRONIC",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 398.5,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/1744-home_default/oferta-renting-particular-audi-a1.jpg"
   },
   {
@@ -136,7 +136,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "Compacto",
     "image": "https://m-renting.com/2373-home_default/oferta-renting-particular-seat-leon.jpg"
   },
   {
@@ -150,7 +150,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2238-home_default/oferta-renting-particular-omoda-5.jpg"
   },
   {
@@ -159,12 +159,12 @@
     "make": "TOYOTA",
     "model": "YARIS CROSS",
     "version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 412.91,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/665-home_default/oferta-renting-particulares-toyota-yaris-cross.jpg"
   },
   {
@@ -173,12 +173,12 @@
     "make": "NISSAN",
     "model": "QASHQAI",
     "version": "NISSAN QASHQAI DIG-T MILD HYBRID 12V ACENTA",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 424.71,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2349-home_default/oferta-renting-particular-nissan-qashqai.jpg"
   },
   {
@@ -192,7 +192,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1941-home_default/oferta-renting-particular-volkswagen-t-roc-gris.jpg"
   },
   {
@@ -206,7 +206,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1919-home_default/oferta-renting-particular-volkswagen-t-roc-blanco.jpg"
   },
   {
@@ -220,7 +220,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1878-home_default/oferta-renting-particulares-ebro-s400-blanco.jpg"
   },
   {
@@ -229,12 +229,12 @@
     "make": "TOYOTA",
     "model": "C-HR",
     "version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 439.86,
     "duracion": 72,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2144-home_default/oferta-renting-particular-toyota-c-hr-mhev.jpg"
   },
   {
@@ -248,7 +248,7 @@
     "duracion": 36,
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "Berlina",
     "image": "https://m-renting.com/1184-home_default/skoda-octavia-limo-particular.jpg"
   },
   {
@@ -262,7 +262,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1882-home_default/oferta-renting-particulares-ebro-s400-gris.jpg"
   },
   {
@@ -276,7 +276,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1544-home_default/oferta-renting-partculares-hyundai-tucson-hev.jpg"
   },
   {
@@ -290,7 +290,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2274-home_default/oferta-renting-particular-jaecoo-5.jpg"
   },
   {
@@ -304,7 +304,7 @@
     "duracion": 36,
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "Berlina",
     "image": "https://m-renting.com/1161-home_default/skoda-octavia-combi-particular.jpg"
   },
   {
@@ -313,12 +313,12 @@
     "make": "BYD",
     "model": "DOLPHIN",
     "version": "BYD DOLPHIN DOLPHIN SURF BOOST",
-    "fuel": "",
+    "fuel": "Eléctrico",
     "precio_desde": 461.01,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2442-home_default/oferta-renting-particular-byd-dolphin.jpg"
   },
   {
@@ -327,12 +327,12 @@
     "make": "BYD",
     "model": "ATTO",
     "version": "BYD ATTO ATTO 2 DM-i",
-    "fuel": "",
+    "fuel": "Híbrido enchufable",
     "precio_desde": 490.05,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2428-home_default/oferta-renting-particular-byd-atto.jpg"
   },
   {
@@ -346,7 +346,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1832-home_default/oferta-renting-particular-mazda-cx5-machinegray.jpg"
   },
   {
@@ -360,7 +360,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1794-home_default/oferta-renting-particular-mazda-cx5-souldredcrystal.jpg"
   },
   {
@@ -374,7 +374,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2003-home_default/oferta-renting-particular-volkswagen-tiguan.jpg"
   },
   {
@@ -383,12 +383,12 @@
     "make": "RENAULT",
     "model": "AUSTRAL",
     "version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 497.31,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2357-home_default/oferta-renting-particular-renault-austral.jpg"
   },
   {
@@ -402,7 +402,7 @@
     "duracion": 60,
     "km": 15000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1205-home_default/skoda-karoq.jpg"
   },
   {
@@ -416,7 +416,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2287-home_default/oferta-reniting-particular-jaecoo-7.jpg"
   },
   {
@@ -425,12 +425,12 @@
     "make": "SKODA",
     "model": "ELROQ",
     "version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
-    "fuel": "",
+    "fuel": "Eléctrico",
     "precio_desde": 544.5,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1222-home_default/skoda-elroq.jpg"
   },
   {
@@ -444,7 +444,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2250-home_default/omoda-7.jpg"
   },
   {
@@ -458,7 +458,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2262-home_default/oferta-renting-particular-omoda-7-mate.jpg"
   },
   {
@@ -472,7 +472,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-particulares?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2120-home_default/oferta-renting-particular-omoda-9.jpg"
   },
   {
@@ -481,12 +481,12 @@
     "make": "OPEL",
     "model": "CORSA",
     "version": "OPEL CORSA GS 1.2T",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 244.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2176-home_default/oferta-renting-autonomo-opel-corsa.jpg"
   },
   {
@@ -495,12 +495,12 @@
     "make": "DACIA",
     "model": "SANDERO",
     "version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 256.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2200-home_default/oferta-renting-autonomo-dacia-sandero.jpg"
   },
   {
@@ -509,12 +509,12 @@
     "make": "RENAULT",
     "model": "CAPTUR",
     "version": "RENAULT CAPTUR EVOLUTION ECO-G SS",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 259.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2363-home_default/oferta-renting-autonomo-renault-captur.jpg"
   },
   {
@@ -523,12 +523,12 @@
     "make": "TOYOTA",
     "model": "YARIS",
     "version": "TOYOTA YARIS ACTIVE 120H 116CV",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 269.95,
     "duracion": 72,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2078-home_default/oferta-renting-autonomo-toyota-yaris.jpg"
   },
   {
@@ -542,7 +542,7 @@
     "duracion": 48,
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2317-home_default/oferta-renting-autonomo-skoda-kamiq.jpg"
   },
   {
@@ -556,7 +556,7 @@
     "duracion": 48,
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2302-home_default/oferta-renting-autonomo-skoda-kamiq-dsg.jpg"
   },
   {
@@ -565,12 +565,12 @@
     "make": "LANCIA",
     "model": "YPSILON",
     "version": "LANCIA YPSILON LX IBRIDA",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 309.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2459-home_default/oferta-renting-autonomo-lancia-ypsilon.jpg"
   },
   {
@@ -584,7 +584,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/2102-home_default/oferta-renting-autonomo-peugeot-rifter.jpg"
   },
   {
@@ -593,12 +593,12 @@
     "make": "OPEL",
     "model": "FRONTERA",
     "version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 319.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2471-home_default/oferta-renting-autonomo-opel-frontera.jpg"
   },
   {
@@ -607,12 +607,12 @@
     "make": "RENAULT",
     "model": "SYMBIOZ",
     "version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 320.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2218-home_default/oferta-renting-autonomo-renault-symbioz.jpg"
   },
   {
@@ -621,12 +621,12 @@
     "make": "TOYOTA",
     "model": "PROACE CITY",
     "version": "TOYOTA PROACE CITY VAN L1 GX",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 322.6,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1349-home_default/oferta-renting-autonomo-toyota-proace-city-gx.jpg"
   },
   {
@@ -635,12 +635,12 @@
     "make": "TOYOTA",
     "model": "PROACE CITY",
     "version": "TOYOTA PROACE CITY VAN L1 GX PLUS",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 328.61,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1323-home_default/oferta-renting-autonomo-toyota-proace-city-gx-plus.jpg"
   },
   {
@@ -649,12 +649,12 @@
     "make": "AUDI",
     "model": "A1",
     "version": "AUDI A1 SB ADRENALIN EDITION 30TFSI 116CV STRONIC",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 329.34,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/1738-home_default/oferta-renting-autonomo-audi-a1.jpg"
   },
   {
@@ -663,12 +663,12 @@
     "make": "TOYOTA",
     "model": "PROACE CITY",
     "version": "TOYOTA PROACE CITY COMBI L2 GX PLUS 100 CV",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 334.37,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1315-home_default/oferta-renting-autonomo-toyota-proace-city-combi.jpg"
   },
   {
@@ -677,12 +677,12 @@
     "make": "CITROEN",
     "model": "BERLINGO",
     "version": "CITROEN BERLINGO VAN FURGÓN M",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 335.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/2335-home_default/oferta-renting-autonomo-citroen-berlingo.jpg"
   },
   {
@@ -696,7 +696,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "Compacto",
     "image": "https://m-renting.com/2368-home_default/oferta-renting-autonomo-seat-leon.jpg"
   },
   {
@@ -710,7 +710,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2235-home_default/oferta-renting-autonomo-omoda-5.jpg"
   },
   {
@@ -719,12 +719,12 @@
     "make": "TOYOTA",
     "model": "YARIS CROSS",
     "version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 341.25,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/459-home_default/oferta-renting-autonomos-toyota-yaris-cross.jpg"
   },
   {
@@ -733,12 +733,12 @@
     "make": "NISSAN",
     "model": "QASHQAI",
     "version": "NISSAN QASHQAI DIG-T MILD HYBRID 12V ACENTA",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 351.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2342-home_default/oferta-renting-autonomo-nissan-qashqai.jpg"
   },
   {
@@ -752,7 +752,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1949-home_default/oferta-renting-autonomo-volkswagen-t-roc-gris.jpg"
   },
   {
@@ -766,7 +766,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1927-home_default/oferta-renting-autonomo-volkswagen-t-roc-blanco.jpg"
   },
   {
@@ -780,7 +780,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1875-home_default/oferta-renting-autonomo-ebro-s400-blanco.jpg"
   },
   {
@@ -789,12 +789,12 @@
     "make": "TOYOTA",
     "model": "C-HR",
     "version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 363.52,
     "duracion": 72,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2138-home_default/oferta-renting-autonomo-toyota-c-hr-mhev.jpg"
   },
   {
@@ -808,7 +808,7 @@
     "duracion": 36,
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos?page=2#",
-    "category": "",
+    "category": "Berlina",
     "image": "https://m-renting.com/1167-home_default/skoda-octavia-limo-autonomo.jpg"
   },
   {
@@ -817,12 +817,12 @@
     "make": "ALFA ROMEO",
     "model": "JUNIOR",
     "version": "ALFA ROMEO JUNIOR IBRIDA TI 1.2 VGT",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 365.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2329-home_default/oferta-renting-autonomo-alfa-romeo-junior.jpg"
   },
   {
@@ -836,7 +836,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1885-home_default/oferta-renting-autonomo-ebro-s400-gris.jpg"
   },
   {
@@ -850,7 +850,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1538-home_default/oferta-renting-autonomo-hyundai-tucson-hev.jpg"
   },
   {
@@ -864,7 +864,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2271-home_default/oferta-renting-autonomo-jaecoo-5.jpg"
   },
   {
@@ -878,7 +878,7 @@
     "duracion": 36,
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "Berlina",
     "image": "https://m-renting.com/1156-home_default/skoda-octavia-combi-autonomo.jpg"
   },
   {
@@ -887,12 +887,12 @@
     "make": "BYD",
     "model": "DOLPHIN",
     "version": "BYD DOLPHIN DOLPHIN SURF BOOST",
-    "fuel": "",
+    "fuel": "Eléctrico",
     "precio_desde": 381.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2439-home_default/oferta-renting-autonomo-byd-dolphin.jpg"
   },
   {
@@ -901,12 +901,12 @@
     "make": "BYD",
     "model": "ATTO",
     "version": "BYD ATTO ATTO 2 DM-i",
-    "fuel": "",
+    "fuel": "Híbrido enchufable",
     "precio_desde": 405.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2423-home_default/oferta-renting-autonomo-byd-atto.jpg"
   },
   {
@@ -920,7 +920,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1826-home_default/oferta-renting-autonomo-mazda-cx5-machinegray.jpg"
   },
   {
@@ -934,7 +934,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1804-home_default/oferta-renting-particular-mazda-cx5-souldredcrystal.jpg"
   },
   {
@@ -948,7 +948,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1997-home_default/oferta-renting-autonomo-volkswagen-tiguan.jpg"
   },
   {
@@ -957,12 +957,12 @@
     "make": "RENAULT",
     "model": "AUSTRAL",
     "version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 411.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2353-home_default/oferta-renting-autonomo-renault-austral.jpg"
   },
   {
@@ -976,7 +976,7 @@
     "duracion": 60,
     "km": 15000,
     "url": "https://m-renting.com/renting-autonomos?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1200-home_default/skoda-karoq.jpg"
   },
   {
@@ -990,7 +990,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2283-home_default/oferta-renting-autonomo-jaecoo-7.jpg"
   },
   {
@@ -999,12 +999,12 @@
     "make": "SKODA",
     "model": "ELROQ",
     "version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
-    "fuel": "",
+    "fuel": "Eléctrico",
     "precio_desde": 450.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1218-home_default/skoda-elroq.jpg"
   },
   {
@@ -1013,12 +1013,12 @@
     "make": "TOYOTA",
     "model": "HILUX",
     "version": "TOYOTA HILUX DOBLE CABINA GX 2.4B 150CV 6AT 4X4",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 524.65,
     "duracion": 48,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
-    "category": "",
+    "category": "Todoterreno",
     "image": "https://m-renting.com/2158-home_default/oferta-renting-autonomo-toyota-hilux.jpg"
   },
   {
@@ -1032,7 +1032,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2247-home_default/oferta-renitng-autonomo-omoda-7.jpg"
   },
   {
@@ -1046,7 +1046,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2254-home_default/oferta-renitng-autonomo-omoda-7-mate.jpg"
   },
   {
@@ -1060,7 +1060,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-autonomos?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2116-home_default/oferta-renting-autonomo-omoda-9.jpg"
   },
   {
@@ -1069,12 +1069,12 @@
     "make": "OPEL",
     "model": "CORSA",
     "version": "OPEL CORSA GS 1.2T",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 244.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2166-home_default/oferta-renting-empresa-opel-corsa.jpg"
   },
   {
@@ -1083,12 +1083,12 @@
     "make": "DACIA",
     "model": "SANDERO",
     "version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 256.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2190-home_default/oferta-renting-empresa-dacia-sandero.jpg"
   },
   {
@@ -1097,12 +1097,12 @@
     "make": "RENAULT",
     "model": "CAPTUR",
     "version": "RENAULT CAPTUR EVOLUTION ECO-G SS",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 259.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/847-home_default/oferta-renting-empresa-renault-captur.jpg"
   },
   {
@@ -1111,12 +1111,12 @@
     "make": "TOYOTA",
     "model": "YARIS",
     "version": "TOYOTA YARIS ACTIVE 120H 116CV",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 269.95,
     "duracion": 72,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/659-home_default/oferta-renting-empresa-toyota-yaris.jpg"
   },
   {
@@ -1130,7 +1130,7 @@
     "duracion": 48,
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2322-home_default/oferta-renting-empresa-skoda-kamiq.jpg"
   },
   {
@@ -1144,7 +1144,7 @@
     "duracion": 48,
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2294-home_default/oferta-renting-empresa-skoda-kamiq-dsg.jpg"
   },
   {
@@ -1153,12 +1153,12 @@
     "make": "LANCIA",
     "model": "YPSILON",
     "version": "LANCIA YPSILON LX IBRIDA",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 309.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2449-home_default/oferta-renting-empresa-lancia-ypsilon.jpg"
   },
   {
@@ -1172,7 +1172,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1011-home_default/oferta-renting-empresa-peugeot-rifter.jpg"
   },
   {
@@ -1181,12 +1181,12 @@
     "make": "OPEL",
     "model": "FRONTERA",
     "version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 319.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/911-home_default/oferta-renting-empresa-opel-frontera.jpg"
   },
   {
@@ -1195,12 +1195,12 @@
     "make": "RENAULT",
     "model": "SYMBIOZ",
     "version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 320.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2209-home_default/oferta-renting-empresa-renault-symbioz.jpg"
   },
   {
@@ -1209,12 +1209,12 @@
     "make": "TOYOTA",
     "model": "PROACE CITY",
     "version": "TOYOTA PROACE CITY VAN L1 GX",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 322.6,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1342-home_default/oferta-renting-empresa-toyota-proace-city-gx.jpg"
   },
   {
@@ -1223,12 +1223,12 @@
     "make": "TOYOTA",
     "model": "PROACE CITY",
     "version": "TOYOTA PROACE CITY VAN L1 GX PLUS",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 328.61,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1335-home_default/oferta-renting-empresa-toyota-proace-city-gx-plus.jpg"
   },
   {
@@ -1237,12 +1237,12 @@
     "make": "AUDI",
     "model": "A1",
     "version": "AUDI A1 SB ADRENALIN EDITION 30TFSI 116CV STRONIC",
-    "fuel": "",
+    "fuel": "Gasolina",
     "precio_desde": 329.34,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/1728-home_default/oferta-renting-empresa-audi-a1.jpg"
   },
   {
@@ -1251,12 +1251,12 @@
     "make": "TOYOTA",
     "model": "PROACE CITY",
     "version": "TOYOTA PROACE CITY COMBI L2 GX PLUS 100 CV",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 334.37,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1305-home_default/oferta-renting-empresa-toyota-proace-city-combi.jpg"
   },
   {
@@ -1265,12 +1265,12 @@
     "make": "CITROEN",
     "model": "BERLINGO",
     "version": "CITROEN BERLINGO VAN FURGÓN M",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 335.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/335-home_default/oferta-renting-empresa-citroen-berlingo.jpg"
   },
   {
@@ -1284,7 +1284,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "Compacto",
     "image": "https://m-renting.com/840-home_default/oferta-renting-empresa-seat-leon.jpg"
   },
   {
@@ -1298,7 +1298,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2244-home_default/oferta-renitng-empresa-omoda-5.jpg"
   },
   {
@@ -1307,12 +1307,12 @@
     "make": "TOYOTA",
     "model": "YARIS CROSS",
     "version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 341.25,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/671-home_default/oferta-renting-empresa-toyota-yaris-cross.jpg"
   },
   {
@@ -1321,12 +1321,12 @@
     "make": "NISSAN",
     "model": "QASHQAI",
     "version": "NISSAN QASHQAI DIG-T MILD HYBRID 12V ACENTA",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 351.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1681-home_default/oferta-renting-empresa-nissan-qashqai.jpg"
   },
   {
@@ -1340,7 +1340,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1955-home_default/oferta-renting-empresa-volkswagen-t-roc-gris.jpg"
   },
   {
@@ -1354,7 +1354,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1933-home_default/oferta-renting-empresa-volkswagen-t-roc-blanco.jpg"
   },
   {
@@ -1368,7 +1368,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1872-home_default/oferta-renting-empresa-ebro-s400-blanco.jpg"
   },
   {
@@ -1377,12 +1377,12 @@
     "make": "TOYOTA",
     "model": "C-HR",
     "version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 363.52,
     "duracion": 72,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2127-home_default/oferta-renting-empresa-toyota-c-hr-mhev.jpg"
   },
   {
@@ -1396,7 +1396,7 @@
     "duracion": 36,
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas?page=2#",
-    "category": "",
+    "category": "Berlina",
     "image": "https://m-renting.com/1178-home_default/skoda-octavia-limo-empresa.jpg"
   },
   {
@@ -1405,12 +1405,12 @@
     "make": "ALFA ROMEO",
     "model": "JUNIOR",
     "version": "ALFA ROMEO JUNIOR IBRIDA TI 1.2 VGT",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 365.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/949-home_default/oferta-renting-empresa-alfa-romeo-junior.jpg"
   },
   {
@@ -1424,7 +1424,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1888-home_default/oferta-renting-empresa-ebro-s400-gris.jpg"
   },
   {
@@ -1438,7 +1438,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/775-home_default/oferta-renting-empresa-hyundai-tucson-hev.jpg"
   },
   {
@@ -1452,7 +1452,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2268-home_default/oferta-renting-empresa-jaecoo-5.jpg"
   },
   {
@@ -1466,7 +1466,7 @@
     "duracion": 36,
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "Berlina",
     "image": "https://m-renting.com/1147-home_default/skoda-octavia-combi-empresa.jpg"
   },
   {
@@ -1475,12 +1475,12 @@
     "make": "BYD",
     "model": "DOLPHIN",
     "version": "BYD DOLPHIN DOLPHIN SURF BOOST",
-    "fuel": "",
+    "fuel": "Eléctrico",
     "precio_desde": 381.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "Urbano",
     "image": "https://m-renting.com/2436-home_default/oferta-renting-empresa-byd-dolphin.jpg"
   },
   {
@@ -1489,12 +1489,12 @@
     "make": "BYD",
     "model": "ATTO",
     "version": "BYD ATTO ATTO 2 DM-i",
-    "fuel": "",
+    "fuel": "Híbrido enchufable",
     "precio_desde": 405.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2415-home_default/oferta-renting-empresa-byd-atto.jpg"
   },
   {
@@ -1508,7 +1508,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1818-home_default/oferta-renting-empresa-mazda-cx5-machinegray.jpg"
   },
   {
@@ -1522,7 +1522,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1810-home_default/oferta-renting-empresa-mazda-cx5-souldredcrystal.jpg"
   },
   {
@@ -1536,7 +1536,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1987-home_default/oferta-renting-empresa-volkswagen-tiguan.jpg"
   },
   {
@@ -1545,12 +1545,12 @@
     "make": "RENAULT",
     "model": "AUSTRAL",
     "version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
-    "fuel": "",
+    "fuel": "Híbrido",
     "precio_desde": 411.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/877-home_default/oferta-renting-empresa-renault-austral.jpg"
   },
   {
@@ -1564,7 +1564,7 @@
     "duracion": 60,
     "km": 15000,
     "url": "https://m-renting.com/renting-empresas?page=3#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1192-home_default/skoda-karoq.jpg"
   },
   {
@@ -1578,7 +1578,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2278-home_default/oferta-renting-empresa-jaecoo-7.jpg"
   },
   {
@@ -1587,12 +1587,12 @@
     "make": "SKODA",
     "model": "ELROQ",
     "version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
-    "fuel": "",
+    "fuel": "Eléctrico",
     "precio_desde": 450.0,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/1211-home_default/skoda-elroq.jpg"
   },
   {
@@ -1601,12 +1601,12 @@
     "make": "TOYOTA",
     "model": "PROACE MAX",
     "version": "TOYOTA PROACE MAX L3H2 GX 140 CV",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 475.47,
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "Furgoneta",
     "image": "https://m-renting.com/1368-home_default/oferta-renting-empresa-toyota-proace-max-gx.jpg"
   },
   {
@@ -1615,12 +1615,12 @@
     "make": "TOYOTA",
     "model": "HILUX",
     "version": "TOYOTA HILUX DOBLE CABINA GX 2.4B 150CV 6AT 4X4",
-    "fuel": "",
+    "fuel": "Diésel",
     "precio_desde": 524.65,
     "duracion": 48,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "Todoterreno",
     "image": "https://m-renting.com/2152-home_default/oferta-renting-empresa-toyota-hilux.jpg"
   },
   {
@@ -1634,7 +1634,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2240-home_default/oferta-renting-empresa-omoda-7.jpg"
   },
   {
@@ -1648,7 +1648,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2259-home_default/oferta-renitng-empresa-omoda-7-mate.jpg"
   },
   {
@@ -1662,7 +1662,7 @@
     "duracion": 60,
     "km": 10000,
     "url": "https://m-renting.com/renting-empresas?page=4#",
-    "category": "",
+    "category": "SUV",
     "image": "https://m-renting.com/2110-home_default/oferta-renting-empresa-omoda-9.jpg"
   }
 ]
