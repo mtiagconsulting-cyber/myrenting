@@ -92,6 +92,12 @@ NEW_CSS = """
     .oc-desde{font-size:11px;color:var(--ink-4);font-weight:600;margin-right:3px;}
     .oc-price b{font-size:30px;font-weight:850;color:var(--ink);letter-spacing:-1.5px;}
     .oc-unit{font-size:13px;color:var(--ink-4);font-weight:600;}
+    .oc-iva{display:inline-block;margin-left:7px;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:6px;letter-spacing:.2px;align-self:center;}
+    .oc-iva.inc{background:#e6f7ed;color:#0a7a3d;}
+    .oc-iva.noinc{background:#fff3e0;color:#b25b00;}
+    .price-iva{display:inline-block;margin-top:6px;font-size:12px;font-weight:800;padding:3px 9px;border-radius:7px;letter-spacing:.2px;}
+    .price-iva.inc{background:#e6f7ed;color:#0a7a3d;}
+    .price-iva.noinc{background:#fff3e0;color:#b25b00;}
     .oc-save{background:#ecfdf3;color:#15803d;font-size:12px;font-weight:800;padding:4px 10px;border-radius:8px;border:1px solid #bbf7d0;}
     .oc-cta{display:flex;gap:9px;margin-top:2px;}
     .btn-card-info{flex:0 0 auto;background:#fff;border:1.5px solid var(--border);color:var(--ink-2,#2a2320);border-radius:11px;padding:11px 15px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;}
@@ -158,13 +164,15 @@ JS_RENDER = r"""
         +'<div><div class="oc-name">'+esc(o.gestora)+'</div><div class="oc-meta">'+meta+'</div></div></div>'
         +'<div class="oc-version">'+esc(o.version||'Versión estándar')+'</div>'
         +(cond?'<div class="oc-cond">'+cond+'</div>':'')
-        +'<div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>'+parseInt(o.price)+'</b><span class="oc-unit">&euro;/mes</span></div>'+savehtml+'</div>'
+        +'<div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>'+parseInt(o.price)+'</b><span class="oc-unit">&euro;/mes</span>'+(o.tipo==='particular'?'<span class="oc-iva inc">IVA incl.</span>':'<span class="oc-iva noinc">+ IVA</span>')+'</div>'+savehtml+'</div>'
         +'<div class="oc-cta"><button class="btn-card-info" onclick="abrirModal(\''+gn+'\',\''+vj+'\');return false;">Solicitar info</button>'
         +'<button class="btn-card-ver" onclick="abrirModalGestora(\''+g.fuente+'\',\''+gn+'\',\''+vj+'\');return false;">Ver ofertas &rarr;</button></div></div>';
     }).join('');
     setCount(groups.length);
     var ph=document.querySelector('.price-big');
     if(ph)ph.innerHTML=parseInt(prices[0])+'<sup style="font-size:20px">&#8364;</sup>';
+    var pi=document.querySelector('.price-iva');
+    if(pi){var bt=groups[0].best.tipo;pi.className='price-iva '+(bt==='particular'?'inc':'noinc');pi.textContent=bt==='particular'?'IVA incluido':'IVA no incluido';}
   };
   function cap(s){return s?s.charAt(0).toUpperCase()+s.slice(1):s;}
   function setCount(n){var e=document.getElementById('filter-count');if(e)e.textContent=n+' gestora'+(n!==1?'s':'');}
@@ -215,7 +223,7 @@ def static_cards(data, media, model):
       <div class="oc-top"><div class="oc-logo" style="background:{color}"><span>{ini(o['gestora'])}</span><img src="/img/gestoras/{slugify(f)}.png" alt="{esc(o['gestora'])}" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"></div><div><div class="oc-name">{esc(o['gestora'])}</div><div class="oc-meta">{meta}</div></div></div>
       <div class="oc-version">{esc(o['version'] or 'Versión estándar')}</div>
       {'<div class="oc-cond">'+cond+'</div>' if cond else ''}
-      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>{int(float(o['price']))}</b><span class="oc-unit">&euro;/mes</span></div>{savehtml}</div>
+      <div class="oc-bottom"><div class="oc-price"><span class="oc-desde">desde</span><b>{int(float(o['price']))}</b><span class="oc-unit">&euro;/mes</span>{'<span class="oc-iva inc">IVA incl.</span>' if o['tipo']=='particular' else '<span class="oc-iva noinc">+ IVA</span>'}</div>{savehtml}</div>
       <div class="oc-cta"><button class="btn-card-info" onclick="abrirModal('{nm}','{mj}');return false;">Solicitar info</button><button class="btn-card-ver" onclick="abrirModalGestora('{f}','{nm}','{mj}');return false;">Ver ofertas &rarr;</button></div>
     </div>''')
     return '\n'.join(out)
@@ -225,8 +233,8 @@ def transform(path, offers):
     c = path.read_text(encoding='utf-8')
     if 'compare-grid' not in c or 'car-header' not in c:
         return None, 'sin comparador'
-    mm = re.search(r'class="car-name">([^<]+)</div>', c)
-    bm = re.search(r'class="car-brand">([^<]+)</div>', c)
+    mm = re.search(r'class="car-name">([^<]+)</(?:div|h1)>', c)
+    bm = re.search(r'class="car-brand">([^<]+)</(?:div|h1)>', c)
     im = re.search(r'class="car-img-wrap"><img src="([^"]+)"', c)
     if not (mm and bm and im): return None, 'sin cabecera'
     model, brand, img = mm.group(1), bm.group(1), im.group(1)
@@ -236,6 +244,9 @@ def transform(path, offers):
     data = build_offer_data(offers)
     prices = [float(o['precio_desde']) for o in offers]
     gmin = int(min(prices)); media = sum(prices)/len(prices)
+    gmin_tipo = min(offers, key=lambda o: float(o['precio_desde'])).get('tipo','')
+    gmin_iva_cls = 'inc' if gmin_tipo == 'particular' else 'noinc'
+    gmin_iva_txt = 'IVA incluido' if gmin_tipo == 'particular' else 'IVA no incluido'
     n_off = len(offers); n_gest = len(data)
     plazos = sorted({str(o.get('duracion','')) for o in offers if o.get('duracion')}, key=lambda x:int(x) if x.isdigit() else 999)
     kms = sorted({str(o.get('km','')) for o in offers if o.get('km')}, key=lambda x:int(x) if x.isdigit() else 999)
@@ -270,14 +281,14 @@ def transform(path, offers):
 <div class="car-header">
   <div class="car-img-wrap"><img src="{img}" alt="{esc(model)}" loading="eager" onerror="this.style.display='none'"></div>
   <div class="car-info">
-    <div class="car-brand">{esc(brand)}</div><div class="car-name">{esc(model)}</div>
+    <div class="car-brand">{esc(brand)}</div><h1 class="car-name">{esc(model)}</h1>
     <div class="car-specs">
       <div class="spec-item"><span class="spec-label">Gestoras</span><span class="spec-val">{n_gest}</span></div>
       <div class="spec-item"><span class="spec-label">Ofertas</span><span class="spec-val">{n_off}</span></div>
       <div class="spec-item"><span class="spec-label">Actualizado</span><span class="spec-val">{date}</span></div>
     </div>
   </div>
-  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">{gmin}<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-badge">&#10003; {n_gest} gestoras comparadas</div></div>
+  <div class="car-price-hero"><div class="price-desde">desde</div><div class="price-big">{gmin}<sup style="font-size:20px">&#8364;</sup></div><div class="price-unit">al mes</div><div class="price-iva {gmin_iva_cls}">{gmin_iva_txt}</div><div class="price-badge">&#10003; {n_gest} gestoras comparadas</div></div>
 </div></div>'''
     c = re.sub(r'<div class="ch-wrap">.*?</div>\s*</div>\s*</div>(?=\s*\n\s*<!-- COMPARADOR)', header, c, count=1, flags=re.DOTALL)
 

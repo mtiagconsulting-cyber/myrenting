@@ -28,7 +28,7 @@ BACKUP = BASE / 'index.html.bak'
 SCRAPED_SOURCES = set()  # Arval/Ayvens/Alphabet desactivados: solo M Automoción
 
 # Guardarrailes
-MIN_TOTAL_ABS = 500          # el sitio nunca puede quedar con menos de esto
+MIN_TOTAL_ABS = 100          # el sitio nunca puede quedar con menos de esto (solo M Automoción)
 MIN_FRACTION_VS_PREV = 0.6   # ni por debajo del 60% de lo que habia
 GESTORA_MIN_ABS = 10         # minimo por gestora para considerar el scrape "vivo"
 GESTORA_MIN_FRACTION = 0.5   # o al menos el 50% de lo que tenia
@@ -56,10 +56,73 @@ def by_source(offers):
     return d
 
 
+# --- normalizacion make/model + imagen local (corrige rarezas del scraper) ---
+KNOWN_MAKES = {'OPEL', 'CITROEN', 'MAZDA', 'KIA', 'VOLKSWAGEN', 'TOYOTA', 'SKODA',
+               'RENAULT', 'PEUGEOT', 'NISSAN', 'HYUNDAI', 'SEAT', 'AUDI', 'BYD',
+               'DACIA', 'LANCIA', 'ALFA ROMEO', 'JAECOO', 'OMODA', 'EBRO'}
+IMG_DIR = BASE / 'img' / 'modelos'
+
+
+def _slug(s):
+    s = (s or '').lower()
+    for a, b in [('á','a'),('à','a'),('ä','a'),('é','e'),('è','e'),('í','i'),
+                 ('ó','o'),('ú','u'),('ñ','n'),('ü','u'),('š','s'),('ø','o')]:
+        s = s.replace(a, b)
+    return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
+
+
+# modelos cuyo make/model no tiene imagen propia pero reutiliza otra existente
+IMG_ALIAS = {
+    'citroen-e-berlingo': 'citroen-berlingo',
+    'opel-combo-e': 'opel-combo',
+}
+
+
+def _local_image(make, model, tipo):
+    """Devuelve una ruta /img/modelos/... que exista en disco, o None."""
+    mm = _slug(f'{make}-{model}')
+    mm = IMG_ALIAS.get(mm, mm)
+    cands = [f'{mm}.png', f'{mm}.jpg', f'ma-{_slug(make+"-"+model+"-"+tipo)}.jpg']
+    for c in cands:
+        if (IMG_DIR / c).exists():
+            return '/img/modelos/' + c
+    g = sorted(IMG_DIR.glob(f'ma-{mm}-*.jpg'))
+    if g:
+        return '/img/modelos/' + g[0].name
+    return None
+
+
+def normalize_offer(o):
+    make = (o.get('make') or '').upper().strip()
+    model = (o.get('model') or '').upper().strip()
+    # 1) el modelo empieza por otra marca conocida -> esa es la marca real
+    for km in sorted(KNOWN_MAKES, key=len, reverse=True):
+        if model == km or model.startswith(km + ' '):
+            make, model = km, model[len(km):].strip()
+            break
+    # 2) Citroen e-Berlingo (electrico) mal partido por el scraper
+    if model.startswith('EBERLINGO'):
+        model = 'E-BERLINGO'
+    # 3) quita sufijo de caja de cambios del modelo (CX-30 AT -> CX-30)
+    model = re.sub(r'\s+(AT|AUT|DSG|CVT|MT)$', '', model).strip()
+    o['make'], o['model'] = make, model
+    # 4) imagen local si existe (evita hotlink a m-renting.com)
+    loc = _local_image(make, model, o.get('tipo', ''))
+    if loc:
+        o['image'] = loc
+    return o
+
+
+# marcas excluidas del sitio (decision de negocio; los datos siguen en el JSON)
+DROP_MAKES = {'KIA'}
+
+
 def valid_offer(o):
     try:
         p = float(o.get('precio_desde', 0))
     except Exception:
+        return False
+    if (o.get('make') or '').upper().strip() in DROP_MAKES:
         return False
     return bool(o.get('make')) and 30 <= p <= 4000
 
@@ -83,9 +146,9 @@ def main():
 
     # --- datos nuevos ---
     scraped = load_json(SCRAPED_FILE) or []
-    scraped = [o for o in scraped if valid_offer(o)]
+    scraped = [normalize_offer(o) for o in scraped if valid_offer(o)]
     manual = load_json(MANUAL_FILE) or []
-    manual = [o for o in manual if valid_offer(o)]
+    manual = [normalize_offer(o) for o in manual if valid_offer(o)]
     scraped_by = by_source(scraped)
 
     # --- fallback por gestora scrapeada ---

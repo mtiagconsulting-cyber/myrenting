@@ -17,6 +17,7 @@ img/.DS_Store
 !generar_ciudades_mautomocion.py
 !generar_comparativas.py
 !generar_landings_precio.py
+!generar_fichas_nuevas.py
 !mautomocion-db.json
 !actualizar_ofertas_seguro.py
 !actualizar_fichas.py
