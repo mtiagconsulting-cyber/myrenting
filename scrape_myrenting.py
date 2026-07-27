@@ -416,10 +416,9 @@ async def main():
     print("║   SCRAPER MYRENTING.ES               ║")
     print("╚══════════════════════════════════════╝")
 
-    arval    = scrape_arval()
-    ayvens   = await scrape_ayvens()
-    alphabet = scrape_alphabet()
-    # Kinto y Quadis desactivados (fuera del comparador por decisión de negocio)
+    # Arval, Ayvens, Alphabet, Kinto y Quadis desactivados: el comparador
+    # opera solo con M Automoción (decisión de negocio).
+    arval = ayvens = alphabet = []
 
     todas = arval + ayvens + alphabet
 
