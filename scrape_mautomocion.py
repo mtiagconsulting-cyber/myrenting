@@ -65,11 +65,15 @@ CATS = {
 }
 
 # ─── HTTP ──────────────────────────────────────────────────────────────────────
-def fetch(url):
+def fetch(url, verbose=False):
     import requests
     try:
         r = requests.get(url, headers=HEADERS, timeout=25)
-        return r.text if r.status_code == 200 else None
+        if r.status_code != 200:
+            if verbose:
+                print(f"    ⚠ HTTP {r.status_code} en {url}")
+            return None
+        return r.text
     except Exception as e:
         print(f"    ⚠ error {url}: {e}")
         return None
@@ -313,12 +317,41 @@ def matrix_from_product(html, url=""):
     return matriz, diag
 
 
+def _discover_product_url():
+    """Busca en los listados la primera URL de ficha de producto real."""
+    for path in SEGMENT_PATHS:
+        html = fetch(BASE_URL + path, verbose=True)
+        if not html:
+            continue
+        links, _ = product_links_from(html, BASE_URL + path)
+        prod = sorted(l for l in links if "/oferta-renting-" in l)
+        if prod:
+            return prod[0]
+    return None
+
+
 def combos_cmd(url):
-    """Diagnóstico: vuelca la matriz km×meses de UNA ficha de producto."""
-    print(f"── Analizando combinaciones de: {url}")
-    html = fetch(url)
+    """Diagnóstico: vuelca la matriz km×meses de UNA ficha de producto.
+    Si la URL no carga (o es 'auto'), descubre una ficha desde el listado."""
+    if url == "auto":
+        url = None
+    if url:
+        print(f"── Analizando combinaciones de: {url}")
+        html = fetch(url, verbose=True)
+    else:
+        html = None
     if not html:
-        print("  ✗ no se pudo cargar"); return
+        if url:
+            print("  ✗ esa URL no cargó; busco una ficha real en el listado…")
+        else:
+            print("── Buscando una ficha de producto en el listado…")
+        url = _discover_product_url()
+        if not url:
+            print("  ✗ no encontré ninguna ficha de producto en los listados."); return
+        print(f"  ✓ ficha encontrada: {url}")
+        html = fetch(url, verbose=True)
+    if not html:
+        print("  ✗ no se pudo cargar la ficha"); return
     Path("/tmp/mauto_producto.html").write_text(html, encoding="utf-8")
     print(f"  ✓ {len(html)} bytes (guardado en /tmp/mauto_producto.html)")
     matriz, diag = matrix_from_product(html, url)
@@ -452,7 +485,8 @@ def main():
     ap.add_argument("--inspect", nargs="?", const=BASE_URL, help="Explora la web y muestra su estructura")
     ap.add_argument("--from-file", help="Parsea un HTML guardado en disco")
     ap.add_argument("--merge", action="store_true", help="Fusiona el resultado en ofertas-manuales.json")
-    ap.add_argument("--combos", metavar="URL", help="Vuelca la matriz km×meses×precio de UNA ficha de producto")
+    ap.add_argument("--combos", nargs="?", const="auto", metavar="URL",
+                    help="Vuelca la matriz km×meses×precio de UNA ficha (sin URL: la busca solo)")
     args = ap.parse_args()
 
     for pkg, imp in [("requests","requests"), ("beautifulsoup4","bs4"), ("lxml","lxml")]:
