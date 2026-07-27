@@ -361,10 +361,32 @@ def combos_cmd(url):
         for c in sorted(matriz, key=lambda x: (x['km'] or 0, x['meses'] or 0)):
             print(f"     {c['km']} km/año · {c['meses']} meses → {c['price']} €   [{c['raw']}]")
     else:
-        print("\n  ⚠ No pude leer la matriz automáticamente.")
-        print("     Pégame estas líneas del HTML /tmp/mauto_producto.html:")
-        print("     grep -o 'data-product=.\\{0,200\\}' /tmp/mauto_producto.html | head")
-        print("     grep -o '\"combinations\".\\{0,300\\}'  /tmp/mauto_producto.html | head")
+        print("\n  ⚠ No leí la matriz aún. Volcado de estructura (pégame TODO esto):")
+        # a) estructura del data-product
+        m = re.search(r"data-product\s*=\s*(['\"])(\{.*?\})\1", html, re.DOTALL)
+        if m:
+            try:
+                d = json.loads(_html.unescape(m.group(2)))
+                print("  · data-product KEYS:", list(d.keys()))
+                for k, v in d.items():
+                    kl = k.lower()
+                    if isinstance(v, (dict, list)):
+                        print(f"    - {k} ({type(v).__name__}, n={len(v)}): {str(v)[:220]}")
+                    elif any(t in kl for t in ("price", "attr", "combination", "id_product")):
+                        print(f"    - {k} = {v}")
+            except Exception as e:
+                print("  · data-product no parsea:", str(e)[:120])
+        # b) ¿hay un mapa de combinaciones / id_product_attribute en algún script?
+        for pat, lbl in [(r'"id_product_attribute"\s*:\s*"?\d+', "id_product_attribute"),
+                         (r'combinations?\s*[:=]\s*[\[{]', "combinations var"),
+                         (r'"price_amount"\s*:\s*[\d.]+', "price_amount"),
+                         (r'quantity_discounts', "quantity_discounts"),
+                         (r'\d+-plazos-\d+_meses', "friendly combo url")]:
+            hits = re.findall(pat, html)
+            print(f"  · {lbl}: {len(hits)} coincidencias" + (f"  ej: {hits[0][:80]}" if hits else ""))
+        # c) primeros 3 fragmentos de combinación con su contexto de precio
+        for frag in sorted(set(re.findall(r'/[\w-]*kms_al_ano-\d+_kms/[\w-]*plazos-\d+_meses', html)))[:6]:
+            print(f"  · combo url: {frag}")
 
 
 # listados por segmento (PrestaShop pagina con ?page=N, 12 productos/página)
