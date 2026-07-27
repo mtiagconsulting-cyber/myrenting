@@ -294,27 +294,90 @@ def matrix_from_product(html, url=""):
                 diag["productDetails_error"] = str(e)[:120]
 
     matriz = []
-    combos = None
-    if isinstance(combos_json, dict):
-        combos = combos_json.get("combinations") or combos_json.get("combinaciones")
-    if isinstance(combos, dict):
-        for cid, c in combos.items():
-            if not isinstance(c, dict):
-                continue
-            attrs = " ".join(str(v) for v in (c.get("attributes_values") or c.get("attributes") or {}).values()) \
-                    if isinstance(c.get("attributes_values") or c.get("attributes"), dict) else str(c)
-            km = re.search(r"(\d{4,6})\s*(?:kms?|km)", attrs, re.I)
-            me = re.search(r"(\d{2})\s*mes", attrs, re.I)
-            price = c.get("price_amount") or c.get("price") or c.get("price_tax_exc")
-            matriz.append({"id_pa": cid,
-                           "km": int(km.group(1)) if km else None,
-                           "meses": int(me.group(1)) if me else None,
-                           "price": price, "raw": attrs[:80]})
-    # 3) fallback: enumerar los valores km/meses presentes en la página (diagnóstico)
+    d = combos_json if isinstance(combos_json, dict) else {}
+    pid = d.get("id_product") or d.get("id")
+    base = (url or "").split("#")[0]
+
+    # grupos de atributos (id_grupo -> slug) desde data-product.attributes
+    grupos = {}
+    for gid, a in (d.get("attributes") or {}).items():
+        if isinstance(a, dict):
+            grupos[str(a.get("id_attribute_group", gid))] = _slug_attr(a.get("group", ""))
+
+    # valores por grupo desde las URLs de combinación: attrId-slug-valor_(kms|meses)
+    #   ej: 30-kms_al_ano-10000_kms  ·  33-plazos-60_meses
+    porgrupo = {}   # slug -> {valor:int -> attr_id:str}
+    for aid, slug, val, unidad in re.findall(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)', html):
+        porgrupo.setdefault(slug, {})[int(val)] = aid
+    # slug -> id_grupo (por el nombre en data-product; si no, heurística)
+    slug2gid = {}
+    for gid, gslug in grupos.items():
+        for slug in porgrupo:
+            if gslug and (gslug in slug or slug in gslug):
+                slug2gid[slug] = gid
+    for slug in porgrupo:                       # heurística de respaldo
+        if slug not in slug2gid:
+            slug2gid[slug] = "5" if "km" in slug else "6"
+
+    diag["id_product"] = pid
+    diag["grupos"] = grupos
+    diag["valores_por_grupo"] = {s: sorted(v) for s, v in porgrupo.items()}
+
+    # producto detalle particular vs sin-IVA: guardamos ambos precios
+    if pid and len(porgrupo) >= 2 and base:
+        import itertools
+        slugs = list(porgrupo.keys())
+        combos_iter = itertools.product(*[porgrupo[s].items() for s in slugs])
+        for combo in combos_iter:
+            params = {slug2gid[slugs[i]]: aid for i, (val, aid) in enumerate(combo)}
+            info = _combo_price(base, pid, params)
+            row = {slugs[i].replace("kms_al_ano", "km").replace("plazos", "meses"): val
+                   for i, (val, aid) in enumerate(combo)}
+            row.update(info)
+            matriz.append(row)
+    else:
+        diag["motivo_sin_matriz"] = f"pid={pid} grupos={len(porgrupo)} base={'si' if base else 'no'}"
+
     diag["kms_en_pagina"] = sorted(set(re.findall(r"(\d{4,6})_kms", html)))
     diag["meses_en_pagina"] = sorted(set(re.findall(r"(\d{2})_meses", html)))
-    diag["tiene_combinations"] = '"combinations"' in html or "combinaciones" in html
     return matriz, diag
+
+
+def _slug_attr(s):
+    s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "_", s).strip("_")
+
+
+def _deep_find(obj, keys):
+    """Busca recursivamente la primera aparición de cualquiera de 'keys'."""
+    found = {}
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k in keys and k not in found and not isinstance(v, (dict, list)):
+                    found[k] = v
+                walk(v)
+        elif isinstance(o, list):
+            for it in o:
+                walk(it)
+    walk(obj)
+    return found
+
+
+def _combo_price(base_url, pid, group_params):
+    """Pide a PrestaShop (AJAX refresh) el precio de UNA combinación."""
+    import requests
+    q = f"?ajax=1&action=refresh&quantity_wanted=1&id_product={pid}"
+    for gid, aid in group_params.items():
+        q += f"&group[{gid}]={aid}"
+    try:
+        r = requests.get(base_url + q, headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=25)
+        data = r.json()
+    except Exception as e:
+        return {"error": str(e)[:80]}
+    f = _deep_find(data, {"price_amount", "price_tax_exc", "attribute_price", "id_product_attribute"})
+    return {"con_iva": f.get("price_amount"), "sin_iva": f.get("price_tax_exc") or f.get("attribute_price"),
+            "id_pa": f.get("id_product_attribute")}
 
 
 def _discover_product_url():
@@ -357,9 +420,10 @@ def combos_cmd(url):
     matriz, diag = matrix_from_product(html, url)
     print("  diagnóstico:", json.dumps(diag, ensure_ascii=False))
     if matriz:
-        print(f"\n  ✅ {len(matriz)} combinaciones encontradas:")
-        for c in sorted(matriz, key=lambda x: (x['km'] or 0, x['meses'] or 0)):
-            print(f"     {c['km']} km/año · {c['meses']} meses → {c['price']} €   [{c['raw']}]")
+        print(f"\n  ✅ {len(matriz)} combinaciones encontradas (con_iva = particular · sin_iva = aut/emp):")
+        for c in sorted(matriz, key=lambda x: (x.get('km') or 0, x.get('meses') or 0)):
+            print(f"     {c.get('km')} km/año · {c.get('meses')} meses → "
+                  f"con IVA {c.get('con_iva')} € · sin IVA {c.get('sin_iva')} €  (id_pa {c.get('id_pa')})")
     else:
         print("\n  ⚠ No leí la matriz aún. Volcado de estructura (pégame TODO esto):")
         # a) estructura del data-product
