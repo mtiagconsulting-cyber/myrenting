@@ -311,36 +311,36 @@ def matrix_from_product(html, url=""):
                 return gid
         return "5" if "km" in slug else "6"
 
-    # Combinaciones COMPLETAS desde las URLs de combo (empareja bien los attr id):
-    #   /30-kms_al_ano-10000_kms/33-plazos-60_meses
+    # 1) De las URLs de combo COMPLETAS aprendemos el attr_id fiable de cada valor
+    #    (emparejados correctamente): /30-kms_al_ano-10000_kms/33-plazos-60_meses
     pat = re.compile(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)/(\d+)-([a-z_]+)-(\d+)_(kms|meses)')
-    combos = {}   # clave (attrA,attrB) -> {slug: (attr_id, valor)}
+    val2attr = {}   # slug -> {valor:int -> attr_id}
     for a1, s1, v1, u1, a2, s2, v2, u2 in pat.findall(html):
-        seg = {s1: (a1, int(v1)), s2: (a2, int(v2))}
-        combos[(a1, a2)] = seg
+        val2attr.setdefault(s1, {})[int(v1)] = a1
+        val2attr.setdefault(s2, {})[int(v2)] = a2
+    # respaldo: valores sueltos que no aparecieron emparejados
+    for aid, slug, val, u in re.findall(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)', html):
+        val2attr.setdefault(slug, {}).setdefault(int(val), aid)
 
     diag["id_product"] = pid
     diag["grupos"] = grupos
-    diag["combos_detectadas"] = len(combos)
+    diag["valores"] = {s: sorted(v) for s, v in val2attr.items()}
 
-    if pid and combos and base:
-        for n, seg in enumerate(combos.values()):
-            params = {gid_for(slug): aid for slug, (aid, val) in seg.items()}
+    # 2) Rejilla completa: producto cartesiano de valores con sus attr_id fiables
+    if pid and len(val2attr) >= 2 and base:
+        import itertools
+        slugs = list(val2attr.keys())
+        rejilla = list(itertools.product(*[sorted(val2attr[s].items()) for s in slugs]))
+        for n, combo in enumerate(rejilla):
+            params = {gid_for(slugs[i]): aid for i, (val, aid) in enumerate(combo)}
             info = _combo_price(base, pid, params, want_keys=(n == 0))
             if n == 0:
                 diag["respuesta_keys"] = info.pop("_keys", None)
-            row = {("km" if "km" in slug else "meses"): val for slug, (aid, val) in seg.items()}
+            row = {("km" if "km" in slugs[i] else "meses"): val for i, (val, aid) in enumerate(combo)}
             row.update(info)
             matriz.append(row)
-        # dedupe por (km,meses)
-        vistos, uniq = set(), []
-        for r in matriz:
-            k = (r.get("km"), r.get("meses"))
-            if k not in vistos:
-                vistos.add(k); uniq.append(r)
-        matriz = uniq
     else:
-        diag["motivo_sin_matriz"] = f"pid={pid} combos={len(combos)} base={'si' if base else 'no'}"
+        diag["motivo_sin_matriz"] = f"pid={pid} grupos={len(val2attr)} base={'si' if base else 'no'}"
 
     diag["kms_en_pagina"] = sorted(set(re.findall(r"(\d{4,6})_kms", html)))
     diag["meses_en_pagina"] = sorted(set(re.findall(r"(\d{2})_meses", html)))
