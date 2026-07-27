@@ -327,10 +327,12 @@ def matrix_from_product(html, url=""):
     if pid and len(porgrupo) >= 2 and base:
         import itertools
         slugs = list(porgrupo.keys())
-        combos_iter = itertools.product(*[porgrupo[s].items() for s in slugs])
-        for combo in combos_iter:
+        combos_iter = list(itertools.product(*[porgrupo[s].items() for s in slugs]))
+        for n, combo in enumerate(combos_iter):
             params = {slug2gid[slugs[i]]: aid for i, (val, aid) in enumerate(combo)}
-            info = _combo_price(base, pid, params)
+            info = _combo_price(base, pid, params, want_keys=(n == 0))
+            if n == 0:
+                diag["respuesta_keys"] = info.pop("_keys", None)
             row = {slugs[i].replace("kms_al_ano", "km").replace("plazos", "meses"): val
                    for i, (val, aid) in enumerate(combo)}
             row.update(info)
@@ -364,8 +366,10 @@ def _deep_find(obj, keys):
     return found
 
 
-def _combo_price(base_url, pid, group_params):
-    """Pide a PrestaShop (AJAX refresh) el precio de UNA combinación."""
+def _combo_price(base_url, pid, group_params, want_keys=False):
+    """Pide a PrestaShop (AJAX refresh) el precio de UNA combinación.
+    El precio mostrado es el del segmento de esa ficha (particular=con IVA,
+    aut/empresa=sin IVA)."""
     import requests
     q = f"?ajax=1&action=refresh&quantity_wanted=1&id_product={pid}"
     for gid, aid in group_params.items():
@@ -376,8 +380,24 @@ def _combo_price(base_url, pid, group_params):
     except Exception as e:
         return {"error": str(e)[:80]}
     f = _deep_find(data, {"price_amount", "price_tax_exc", "attribute_price", "id_product_attribute"})
-    return {"con_iva": f.get("price_amount"), "sin_iva": f.get("price_tax_exc") or f.get("attribute_price"),
-            "id_pa": f.get("id_product_attribute")}
+    price = f.get("price_amount")
+    # PrestaShop 1.7/8: el precio suele venir dentro del HTML 'product_prices'
+    if price is None and isinstance(data, dict):
+        pp = ""
+        for k, v in data.items():
+            if isinstance(v, str) and "price" in k.lower() and "€" in v:
+                pp = v; break
+        if pp:
+            mm = (re.search(r'content="([\d.]+)"', pp)
+                  or re.search(r'(\d[\d.]*,\d{2})\s*€', pp)
+                  or re.search(r'(\d[\d.]+)\s*€', pp))
+            if mm:
+                price = mm.group(1)
+    out = {"price": price, "sin_iva": f.get("price_tax_exc") or f.get("attribute_price"),
+           "id_pa": f.get("id_product_attribute")}
+    if want_keys:
+        out["_keys"] = list(data.keys()) if isinstance(data, dict) else str(type(data))
+    return out
 
 
 def _discover_product_url():
@@ -420,10 +440,10 @@ def combos_cmd(url):
     matriz, diag = matrix_from_product(html, url)
     print("  diagnóstico:", json.dumps(diag, ensure_ascii=False))
     if matriz:
-        print(f"\n  ✅ {len(matriz)} combinaciones encontradas (con_iva = particular · sin_iva = aut/emp):")
+        print(f"\n  ✅ {len(matriz)} combinaciones (precio = el del segmento de esta ficha):")
         for c in sorted(matriz, key=lambda x: (x.get('km') or 0, x.get('meses') or 0)):
             print(f"     {c.get('km')} km/año · {c.get('meses')} meses → "
-                  f"con IVA {c.get('con_iva')} € · sin IVA {c.get('sin_iva')} €  (id_pa {c.get('id_pa')})")
+                  f"{c.get('price')} €  (sin_iva {c.get('sin_iva')}, id_pa {c.get('id_pa')})")
     else:
         print("\n  ⚠ No leí la matriz aún. Volcado de estructura (pégame TODO esto):")
         # a) estructura del data-product
