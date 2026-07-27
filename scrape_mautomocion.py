@@ -262,6 +262,78 @@ def parse_product(html, url):
         "image": urljoin(url, img.get("src") or img.get("data-src") or "") if img else "",
     }
 
+def matrix_from_product(html, url=""):
+    """Extrae TODAS las combinaciones km × meses × precio de una ficha de producto
+    PrestaShop. Devuelve (matriz, diag) donde matriz = [{km, meses, price, id_pa}].
+
+    PrestaShop guarda las combinaciones en un objeto 'combinations' (dentro de un
+    <script> o de data-product='...'). Cada combinación tiene atributos (kms/meses)
+    y su precio. Probamos las variantes habituales de PrestaShop 1.6/1.7/8.
+    """
+    diag = {}
+    combos_json = None
+    # 1) data-product='{...}' (PrestaShop 1.7/8)
+    m = re.search(r"data-product\s*=\s*(['\"])(\{.*?\})\1", html, re.DOTALL)
+    if m:
+        try:
+            combos_json = json.loads(_html.unescape(m.group(2)))
+            diag["fuente"] = "data-product"
+        except Exception as e:
+            diag["data-product_error"] = str(e)[:120]
+    # 2) var productDetails = {...}  /  "combinations": {...}
+    if not combos_json:
+        m = re.search(r'(?:var\s+productDetails\s*=\s*|"product"\s*:\s*)(\{.*?\})\s*[;,]\s*\n', html, re.DOTALL)
+        if m:
+            try:
+                combos_json = json.loads(m.group(1)); diag["fuente"] = "productDetails"
+            except Exception as e:
+                diag["productDetails_error"] = str(e)[:120]
+
+    matriz = []
+    combos = None
+    if isinstance(combos_json, dict):
+        combos = combos_json.get("combinations") or combos_json.get("combinaciones")
+    if isinstance(combos, dict):
+        for cid, c in combos.items():
+            if not isinstance(c, dict):
+                continue
+            attrs = " ".join(str(v) for v in (c.get("attributes_values") or c.get("attributes") or {}).values()) \
+                    if isinstance(c.get("attributes_values") or c.get("attributes"), dict) else str(c)
+            km = re.search(r"(\d{4,6})\s*(?:kms?|km)", attrs, re.I)
+            me = re.search(r"(\d{2})\s*mes", attrs, re.I)
+            price = c.get("price_amount") or c.get("price") or c.get("price_tax_exc")
+            matriz.append({"id_pa": cid,
+                           "km": int(km.group(1)) if km else None,
+                           "meses": int(me.group(1)) if me else None,
+                           "price": price, "raw": attrs[:80]})
+    # 3) fallback: enumerar los valores km/meses presentes en la página (diagnóstico)
+    diag["kms_en_pagina"] = sorted(set(re.findall(r"(\d{4,6})_kms", html)))
+    diag["meses_en_pagina"] = sorted(set(re.findall(r"(\d{2})_meses", html)))
+    diag["tiene_combinations"] = '"combinations"' in html or "combinaciones" in html
+    return matriz, diag
+
+
+def combos_cmd(url):
+    """Diagnóstico: vuelca la matriz km×meses de UNA ficha de producto."""
+    print(f"── Analizando combinaciones de: {url}")
+    html = fetch(url)
+    if not html:
+        print("  ✗ no se pudo cargar"); return
+    Path("/tmp/mauto_producto.html").write_text(html, encoding="utf-8")
+    print(f"  ✓ {len(html)} bytes (guardado en /tmp/mauto_producto.html)")
+    matriz, diag = matrix_from_product(html, url)
+    print("  diagnóstico:", json.dumps(diag, ensure_ascii=False))
+    if matriz:
+        print(f"\n  ✅ {len(matriz)} combinaciones encontradas:")
+        for c in sorted(matriz, key=lambda x: (x['km'] or 0, x['meses'] or 0)):
+            print(f"     {c['km']} km/año · {c['meses']} meses → {c['price']} €   [{c['raw']}]")
+    else:
+        print("\n  ⚠ No pude leer la matriz automáticamente.")
+        print("     Pégame estas líneas del HTML /tmp/mauto_producto.html:")
+        print("     grep -o 'data-product=.\\{0,200\\}' /tmp/mauto_producto.html | head")
+        print("     grep -o '\"combinations\".\\{0,300\\}'  /tmp/mauto_producto.html | head")
+
+
 # listados por segmento (PrestaShop pagina con ?page=N, 12 productos/página)
 SEGMENT_PATHS = ["/renting-particulares", "/renting-autonomos", "/renting-empresas"]
 
@@ -380,6 +452,7 @@ def main():
     ap.add_argument("--inspect", nargs="?", const=BASE_URL, help="Explora la web y muestra su estructura")
     ap.add_argument("--from-file", help="Parsea un HTML guardado en disco")
     ap.add_argument("--merge", action="store_true", help="Fusiona el resultado en ofertas-manuales.json")
+    ap.add_argument("--combos", metavar="URL", help="Vuelca la matriz km×meses×precio de UNA ficha de producto")
     args = ap.parse_args()
 
     for pkg, imp in [("requests","requests"), ("beautifulsoup4","bs4"), ("lxml","lxml")]:
@@ -389,6 +462,9 @@ def main():
 
     if args.inspect:
         inspect(args.inspect); return
+
+    if args.combos:
+        combos_cmd(args.combos); return
 
     if args.from_file:
         html = Path(args.from_file).read_text(encoding="utf-8")
