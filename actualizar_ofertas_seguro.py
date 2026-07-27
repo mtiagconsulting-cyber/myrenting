@@ -113,8 +113,8 @@ def normalize_offer(o):
     return o
 
 
-# marcas excluidas del sitio (decision de negocio; los datos siguen en el JSON)
-DROP_MAKES = {'KIA'}
+# marcas excluidas del sitio (vacio: se muestra todo lo que ofrece M Automoción)
+DROP_MAKES = set()
 
 
 def valid_offer(o):

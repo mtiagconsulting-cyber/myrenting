@@ -43,6 +43,9 @@ NUEVOS = [
     ('citroen-berlingo', 'CITROEN', 'E-BERLINGO', 'Citroën Berlingo', 'Citroën E-Berlingo', 'furgoneta'),
     # ficha antigua (formato pre-v4) reconstruida como comparador v4:
     ('toyota-yaris-cross', 'TOYOTA', 'YARIS',     'Toyota Yaris Cross', 'Toyota Yaris',    'urbano'),
+    # KIA (furgonetas electricas de M Automoción) — clon inter-marca desde Citroën
+    ('citroen-berlingo', 'KIA', 'PV5 CARGO',     'Citroën Berlingo', 'Kia Pv5 Cargo',     'furgoneta'),
+    ('citroen-berlingo', 'KIA', 'PV5 PASSENGER', 'Citroën Berlingo', 'Kia Pv5 Passenger', 'furgoneta'),
 ]
 
 
@@ -90,6 +93,20 @@ def main():
         c = c.replace(disp_old, disp_new)
         c = c.replace(old_up, new_up)
         c = c.replace(old_slug, new_slug)
+
+        # 2b) clon inter-marca: limpia restos de la marca del template (marca
+        #     suelta en breadcrumb/JSON-LD + enlace al hub renting-<marca>.html)
+        old_brand = disp_old.split()[0]          # p.ej. "Citroën"
+        new_brand = disp_new.split()[0]          # p.ej. "Kia"
+        if slugify(old_brand) != slugify(new_brand):
+            c = c.replace(old_brand, new_brand)
+            c = c.replace(old_brand.upper(), new_brand.upper())
+            c = c.replace(f'renting-{slugify(old_brand)}.html',
+                          f'renting-{slugify(new_brand)}.html')
+
+        # 2c) quita la seccion "por ciudades": enlaza a paginas de ciudad que
+        #     NO existen para un modelo nuevo (serian 404)
+        c = re.sub(r'<section class="ciudades-seo".*?</section>', '', c, flags=re.DOTALL)
 
         # 3) precios/contadores/categoria (solo head + JSON-LD; tabla se regenera)
         if t_lowld:
