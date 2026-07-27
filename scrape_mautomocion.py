@@ -311,36 +311,53 @@ def matrix_from_product(html, url=""):
                 return gid
         return "5" if "km" in slug else "6"
 
-    # 1) De las URLs de combo COMPLETAS aprendemos el attr_id fiable de cada valor
-    #    (emparejados correctamente): /30-kms_al_ano-10000_kms/33-plazos-60_meses
+    # Combos COMPLETAS = combinaciones REALES ofertadas (con labels correctos):
+    #   /30-kms_al_ano-10000_kms/33-plazos-60_meses
+    # (no todas las parejas km×meses existen; PrestaShop hace fallback silencioso,
+    #  por eso NO usamos el producto cartesiano)
     pat = re.compile(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)/(\d+)-([a-z_]+)-(\d+)_(kms|meses)')
-    val2attr = {}   # slug -> {valor:int -> attr_id}
+    completas = {}   # (km,meses) -> {slug:(aid,val)}
+    val2attr = {}
     for a1, s1, v1, u1, a2, s2, v2, u2 in pat.findall(html):
-        val2attr.setdefault(s1, {})[int(v1)] = a1
-        val2attr.setdefault(s2, {})[int(v2)] = a2
-    # respaldo: valores sueltos que no aparecieron emparejados
-    for aid, slug, val, u in re.findall(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)', html):
-        val2attr.setdefault(slug, {}).setdefault(int(val), aid)
+        seg = {s1: (a1, int(v1)), s2: (a2, int(v2))}
+        km = next(v for s, (a, v) in seg.items() if "km" in s)
+        me = next(v for s, (a, v) in seg.items() if "km" not in s)
+        completas[(km, me)] = seg
+        for s, (a, v) in seg.items():
+            val2attr.setdefault(s, {})[v] = a
 
     diag["id_product"] = pid
     diag["grupos"] = grupos
+    diag["combos_reales"] = sorted(completas.keys())
     diag["valores"] = {s: sorted(v) for s, v in val2attr.items()}
 
-    # 2) Rejilla completa: producto cartesiano de valores con sus attr_id fiables
-    if pid and len(val2attr) >= 2 and base:
-        import itertools
-        slugs = list(val2attr.keys())
-        rejilla = list(itertools.product(*[sorted(val2attr[s].items()) for s in slugs]))
-        for n, combo in enumerate(rejilla):
-            params = {gid_for(slugs[i]): aid for i, (val, aid) in enumerate(combo)}
+    if pid and completas and base:
+        seen_ipa = set()
+        items = list(completas.items())
+        # 1) combos reales (labels fiables)
+        for n, ((km, me), seg) in enumerate(items):
+            params = {gid_for(s): a for s, (a, v) in seg.items()}
             info = _combo_price(base, pid, params, want_keys=(n == 0))
             if n == 0:
                 diag["respuesta_keys"] = info.pop("_keys", None)
+            if info.get("id_pa"):
+                seen_ipa.add(info["id_pa"])
+            matriz.append({"km": km, "meses": me, **info})
+        # 2) parejas extra del cartesiano SOLO si dan un id_pa nuevo (no fallback)
+        import itertools
+        slugs = list(val2attr.keys())
+        for combo in itertools.product(*[sorted(val2attr[s].items()) for s in slugs]):
             row = {("km" if "km" in slugs[i] else "meses"): val for i, (val, aid) in enumerate(combo)}
-            row.update(info)
-            matriz.append(row)
+            if (row["km"], row["meses"]) in completas:
+                continue
+            params = {gid_for(slugs[i]): aid for i, (val, aid) in enumerate(combo)}
+            info = _combo_price(base, pid, params)
+            if not info.get("id_pa") or info["id_pa"] in seen_ipa:
+                continue   # PrestaShop hizo fallback -> esa pareja no existe
+            seen_ipa.add(info["id_pa"])
+            matriz.append({**row, **info})
     else:
-        diag["motivo_sin_matriz"] = f"pid={pid} grupos={len(val2attr)} base={'si' if base else 'no'}"
+        diag["motivo_sin_matriz"] = f"pid={pid} combos_reales={len(completas)} base={'si' if base else 'no'}"
 
     diag["kms_en_pagina"] = sorted(set(re.findall(r"(\d{4,6})_kms", html)))
     diag["meses_en_pagina"] = sorted(set(re.findall(r"(\d{2})_meses", html)))
