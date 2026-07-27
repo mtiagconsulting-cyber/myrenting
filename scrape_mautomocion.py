@@ -304,41 +304,43 @@ def matrix_from_product(html, url=""):
         if isinstance(a, dict):
             grupos[str(a.get("id_attribute_group", gid))] = _slug_attr(a.get("group", ""))
 
-    # valores por grupo desde las URLs de combinación: attrId-slug-valor_(kms|meses)
-    #   ej: 30-kms_al_ano-10000_kms  ·  33-plazos-60_meses
-    porgrupo = {}   # slug -> {valor:int -> attr_id:str}
-    for aid, slug, val, unidad in re.findall(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)', html):
-        porgrupo.setdefault(slug, {})[int(val)] = aid
-    # slug -> id_grupo (por el nombre en data-product; si no, heurística)
-    slug2gid = {}
-    for gid, gslug in grupos.items():
-        for slug in porgrupo:
+    # slug de grupo -> id_grupo (nombre en data-product; si no, heurística)
+    def gid_for(slug):
+        for gid, gslug in grupos.items():
             if gslug and (gslug in slug or slug in gslug):
-                slug2gid[slug] = gid
-    for slug in porgrupo:                       # heurística de respaldo
-        if slug not in slug2gid:
-            slug2gid[slug] = "5" if "km" in slug else "6"
+                return gid
+        return "5" if "km" in slug else "6"
+
+    # Combinaciones COMPLETAS desde las URLs de combo (empareja bien los attr id):
+    #   /30-kms_al_ano-10000_kms/33-plazos-60_meses
+    pat = re.compile(r'(\d+)-([a-z_]+)-(\d+)_(kms|meses)/(\d+)-([a-z_]+)-(\d+)_(kms|meses)')
+    combos = {}   # clave (attrA,attrB) -> {slug: (attr_id, valor)}
+    for a1, s1, v1, u1, a2, s2, v2, u2 in pat.findall(html):
+        seg = {s1: (a1, int(v1)), s2: (a2, int(v2))}
+        combos[(a1, a2)] = seg
 
     diag["id_product"] = pid
     diag["grupos"] = grupos
-    diag["valores_por_grupo"] = {s: sorted(v) for s, v in porgrupo.items()}
+    diag["combos_detectadas"] = len(combos)
 
-    # producto detalle particular vs sin-IVA: guardamos ambos precios
-    if pid and len(porgrupo) >= 2 and base:
-        import itertools
-        slugs = list(porgrupo.keys())
-        combos_iter = list(itertools.product(*[porgrupo[s].items() for s in slugs]))
-        for n, combo in enumerate(combos_iter):
-            params = {slug2gid[slugs[i]]: aid for i, (val, aid) in enumerate(combo)}
+    if pid and combos and base:
+        for n, seg in enumerate(combos.values()):
+            params = {gid_for(slug): aid for slug, (aid, val) in seg.items()}
             info = _combo_price(base, pid, params, want_keys=(n == 0))
             if n == 0:
                 diag["respuesta_keys"] = info.pop("_keys", None)
-            row = {slugs[i].replace("kms_al_ano", "km").replace("plazos", "meses"): val
-                   for i, (val, aid) in enumerate(combo)}
+            row = {("km" if "km" in slug else "meses"): val for slug, (aid, val) in seg.items()}
             row.update(info)
             matriz.append(row)
+        # dedupe por (km,meses)
+        vistos, uniq = set(), []
+        for r in matriz:
+            k = (r.get("km"), r.get("meses"))
+            if k not in vistos:
+                vistos.add(k); uniq.append(r)
+        matriz = uniq
     else:
-        diag["motivo_sin_matriz"] = f"pid={pid} grupos={len(porgrupo)} base={'si' if base else 'no'}"
+        diag["motivo_sin_matriz"] = f"pid={pid} combos={len(combos)} base={'si' if base else 'no'}"
 
     diag["kms_en_pagina"] = sorted(set(re.findall(r"(\d{4,6})_kms", html)))
     diag["meses_en_pagina"] = sorted(set(re.findall(r"(\d{2})_meses", html)))
