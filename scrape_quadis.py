@@ -323,8 +323,24 @@ def detail_inspect(url):
     # bloques JSON-LD
     for i, m in enumerate(re.finditer(r'application/ld\+json[^>]*>(.*?)</script>', html, re.S)):
         print(f"  · JSON-LD[{i}]: {m.group(1).strip()[:200]}")
-    print("\n  ➜ Si no ves un endpoint claro de precios: abre la ficha en Chrome → F12 → Red/XHR,")
-    print("     cambia el desplegable de km o meses, y mira qué petición se lanza. Pégame su URL.")
+    # volcado de la estructura 'cuotas' (parece llevar la matriz embebida)
+    print("\n  · contexto de 'cuotas' (pégame esto):")
+    for pat in (r'"cuotas"\s*:\s*(\[.*?\]|\{.*?\})',
+                r'cuotas\s*[:=]\s*(\[.*?\]|\{.*?\})',
+                r'data-cuotas\s*=\s*([\'"]).*?\1'):
+        m = re.search(pat, html, re.S)
+        if m:
+            print(f"       [{pat[:20]}…] {m.group(0)[:800]}")
+            break
+    else:
+        for i, m in enumerate(re.finditer(r'.{60}cuotas.{240}', html, re.I)):
+            if i >= 4: break
+            print(f"       …{m.group(0)}…")
+    # tabla HTML de cuotas si existe
+    mt = re.search(r'<table[^>]*(?:cuota|precio|renting)[^>]*>.*?</table>', html, re.I | re.S)
+    if mt:
+        tabla = re.sub(r'\s+', ' ', mt.group(0))[:500]
+        print(f"  · tabla de cuotas HTML encontrada ({len(mt.group(0))}b): {tabla}")
 
 
 def api_scrape():
