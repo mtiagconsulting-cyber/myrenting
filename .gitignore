@@ -10,6 +10,7 @@ img/.DS_Store
 !scripts/scrapers/scrape_myrenting.py
 !scrape_myrenting.py
 !scrape_mautomocion.py
+!scrape_quadis.py
 !descargar_imagenes_mautomocion.py
 !generar_ciudades_mautomocion.py
 !generar_comparativas.py
