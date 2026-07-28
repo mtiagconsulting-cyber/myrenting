@@ -517,7 +517,9 @@ def parse_listing(html, base_url):
     for art in soup.select("article.js-product-miniature, article.product-miniature"):
         pid = art.get("data-id-product")
         if not pid: continue
-        a = art.select_one("a.product_name") or art.select_one("h3 a") or art.select_one("a[title]")
+        # preferimos el enlace real a la ficha (/oferta-renting-...)
+        a = (art.select_one("a[href*='oferta-renting-']") or art.select_one("a.product_name")
+             or art.select_one("h3 a") or art.select_one("a[title]"))
         d = art.select_one(".product-desc")
         img = art.select_one("img")
         src = (img.get("data-src") or img.get("src")) if img else ""
@@ -562,7 +564,7 @@ def parse_listing(html, base_url):
         model = (" ".join(nw[i:]) if i < len(nw) else name)[:40].strip()
         trim = mn.get("trim", "")
         txt = name + " " + trim
-        url = mn.get("url") or f"{BASE_URL}/oferta-renting-{tipo}-{slugify(name)}"
+        url = mn.get("url") or f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
         offers.append({
             "fuente": FUENTE, "tipo": tipo, "make": make.upper(),
             "model": (model or name).upper()[:40],
@@ -606,13 +608,19 @@ def enrich_with_matrix(offers):
     petición por ficha + varias por combinación."""
     total = len(offers)
     n_ok = n_combos = 0
+    skips = {"sin_url": 0, "fetch_fallo": 0, "sin_matriz": 0}
+    ejemplos = []
     print(f"── Extrayendo matriz km×meses de {total} ofertas (esto tarda)…")
     for i, o in enumerate(offers, 1):
         u = (o.get("url") or "").split("#")[0]
         if "/oferta-renting-" not in u:
+            skips["sin_url"] += 1
+            if len(ejemplos) < 4: ejemplos.append(f"sin_url: {o.get('make')} {o.get('model')} -> {u!r}")
             continue
         h = fetch(u)
         if not h:
+            skips["fetch_fallo"] += 1
+            if len(ejemplos) < 4: ejemplos.append(f"fetch_fallo (¿404?): {u}")
             continue
         matriz, _ = matrix_from_product(h, u)
         combos = []
@@ -628,10 +636,17 @@ def enrich_with_matrix(offers):
             o["combinaciones"] = sorted(combos, key=lambda x: (x["km"], x["meses"]))
             n_ok += 1
             n_combos += len(combos)
+        else:
+            skips["sin_matriz"] += 1
+            if len(ejemplos) < 4: ejemplos.append(f"sin_matriz: {u}")
         if i % 10 == 0 or i == total:
             print(f"    {i}/{total}  (ofertas con matriz: {n_ok}, combinaciones: {n_combos})")
         time.sleep(0.3)
     print(f"  ✓ matriz añadida a {n_ok}/{total} ofertas ({n_combos} combinaciones en total)")
+    if n_ok < total:
+        print(f"    saltadas: {skips}")
+        for e in ejemplos:
+            print(f"      · {e}")
 
 
 # ─── MERGE ────────────────────────────────────────────────────────────────────
