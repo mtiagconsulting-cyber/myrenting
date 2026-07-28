@@ -243,76 +243,94 @@ API_ENDPOINTS = [
     ("/api-vehicles/furgonetas-renting", "Furgoneta"),
 ]
 
-def _g(d, *keys):
-    """Devuelve el primer campo presente (busca en el dict y en subdicts 1 nivel)."""
-    for k in keys:
-        if isinstance(d, dict) and d.get(k) not in (None, ""):
-            return d[k]
-    for v in (d.values() if isinstance(d, dict) else []):
-        if isinstance(v, dict):
-            for k in keys:
-                if v.get(k) not in (None, ""):
-                    return v[k]
-    return None
+def parse_quadis_cards(frag, tipo="particular", cat=None):
+    """La API devuelve las tarjetas renderizadas en HTML (campo 'html').
+    Cada .car-card trae: enlace /coches-renting/{marca}/{modelo}/{version}/{id},
+    <h2><strong>Marca Modelo</strong><span>versión</span></h2>, precio en
+    .monthlyPayment (IVA incluido) e imagen en .car-card-img-1."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(frag, "lxml")
+    offers = []
+    for card in soup.select(".car-card"):
+        a = card.select_one("a[href*='renting/']") or card.select_one("a[href]")
+        href = a.get("href", "") if a else ""
+        m = re.search(r"/(?:coches|furgonetas)-renting/([^/]+)/([^/]+)/([^/]+)/(\d+)", href)
+        make = model = vslug = ""
+        cid = None
+        if m:
+            make, model, vslug, cid = m.group(1), m.group(2), m.group(3), m.group(4)
+        strong = card.select_one("h2 strong")
+        span = card.select_one("h2 span")
+        disp = clean(strong.get_text()) if strong else ""      # "Peugeot 208"
+        version = clean(span.get_text()) if span else ""        # "Allure Gasolina..."
+        if not make and disp:
+            make = guess_make(disp)
+            model = clean(disp[len(make):]) if make else disp
+        pe = card.select_one(".monthlyPayment")
+        price = num(pe.get_text()) if pe else price_mes(clean(card.get_text(" ")))
+        if not (make and price and 50 <= price <= 6000):
+            continue
+        img_el = card.select_one("img.car-card-img-1, .car-card-img img, img")
+        img = (img_el.get("data-src") or img_el.get("src") or "") if img_el else ""
+        if img and "car-cover" in img:
+            img = ""
+        fuel_el = card.select_one(".tags-renting .tag, .tag-gasolina, .tag-diesel, .tag-electrico, .tag-hibrido")
+        fuel = clean(fuel_el.get_text()) if fuel_el else ""
+        name = f"{make} {model} {version}"
+        version_full = clean(f"{disp} {version}") if disp else clean(f"{make.replace('-',' ')} {model.replace('-',' ')} {version}")
+        offers.append({
+            "fuente": FUENTE, "tipo": tipo,
+            "make": _asc(make.replace("-", " ")),
+            "model": _asc(model.replace("-", " "))[:40].strip(),
+            "version": version_full[:120],
+            "fuel": (fuel or guess_fuel(name + " " + version)),
+            "precio_desde": round(float(price), 2),
+            "precio_con_iva": round(float(price), 2), "precio_sin_iva": None,
+            "duracion": 60, "km": 10000,
+            "url": urljoin(BASE_URL, href) if href else BASE_URL + "/coches-renting",
+            "category": guess_cat(name + " " + version, cat),
+            "image": img,
+            "_id": cid,
+        })
+    return offers
 
-def map_api_offer(v, cat=None):
-    make = _g(v, "make", "marca", "brand", "makeName", "brandName") or ""
-    model = _g(v, "model", "modelo", "modelName") or ""
-    version = _g(v, "version", "acabado", "trim", "versionName", "finish") or ""
-    con = _g(v, "priceWithTax", "priceTaxInc", "precioConIva", "pvpConIva", "monthlyPriceWithTax")
-    sin = _g(v, "priceWithoutTax", "priceTaxExc", "precioSinIva", "pvpSinIva", "monthlyPriceWithoutTax")
-    price = _g(v, "price", "precio", "cuota", "monthlyPrice", "pvp", "fee", "rentingPrice") or con or sin
-    km = _g(v, "km", "kms", "kmYear", "kmsAnuales", "annualKm", "mileage")
-    meses = _g(v, "months", "meses", "plazo", "duration", "term", "duracion")
-    fuel = _g(v, "fuel", "combustible", "fuelType", "fuelName") or ""
-    img = _g(v, "image", "imagen", "img", "photo", "thumbnail", "picture", "mainImage") or ""
-    slug = _g(v, "url", "slug", "link", "detailUrl", "permalink") or ""
-    tipo = (_g(v, "segment", "tipo", "clientType") or "particular")
-    tipo = "particular" if "part" in str(tipo).lower() else ("empresa" if "empr" in str(tipo).lower() else ("autonomo" if "auto" in str(tipo).lower() else "particular"))
-    try: price = float(str(price).replace(".", "").replace(",", ".")) if isinstance(price, str) else float(price)
-    except Exception: return None
-    if not (make and price and 50 <= price <= 6000): return None
-    name = f"{make} {model} {version}".strip()
-    return {
-        "fuente": FUENTE, "tipo": tipo,
-        "make": _asc(make), "model": _asc(model)[:40].strip() or _asc(name)[:40],
-        "version": clean(f"{make} {model} {version}")[:120],
-        "fuel": (fuel or guess_fuel(name)),
-        "precio_desde": round(float(price), 2),
-        "precio_con_iva": con, "precio_sin_iva": sin,
-        "duracion": int(num(str(meses)) or 60), "km": int(num(str(km)) or 10000),
-        "url": urljoin(BASE_URL, str(slug)) if slug else BASE_URL + "/coches-renting",
-        "category": guess_cat(name, cat),
-        "image": urljoin(BASE_URL, str(img)) if img and not str(img).startswith("http") else (img or ""),
-    }
 
 def api_scrape():
     offers, tried = [], []
+    # (endpoint, categoria_forzada, tipo)  ·  precio de Quadis = CON IVA (particular)
     for path, cat in API_ENDPOINTS:
-        for page in range(1, 60):
+        page, total, got_total = 1, None, 0
+        while page <= 40:
             u = f"{BASE_URL}{path}?page={page}&limit=48"
             h = fetch(u, verbose=(page == 1)); tried.append((u, bool(h)))
-            if not h: break
+            if not h:
+                break
             try:
                 data = json.loads(h)
             except Exception:
-                if page == 1: print(f"    ⚠ {path} no devolvió JSON");
+                print(f"    ⚠ {path} no devolvió JSON"); break
+            frag = data.get("html") or ""
+            if total is None:
+                try: total = int(str(data.get("total_count") or 0))
+                except Exception: total = 0
+            offs = parse_quadis_cards(frag, "particular", cat)
+            if not offs:
                 break
-            items = data if isinstance(data, list) else _g(data, "data", "items", "vehicles",
-                        "results", "records", "list", "rows") or []
-            if not isinstance(items, list) or not items:
+            offers += offs; got_total += len(offs)
+            print(f"  {path} p{page}: {len(offs)}  (total_count {total})")
+            if total and got_total >= total:
                 break
-            got = 0
-            for v in items:
-                o = map_api_offer(v, cat)
-                if o: offers.append(o); got += 1
-            print(f"  {path} p{page}: {got}/{len(items)}")
-            if len(items) < 48: break
-            time.sleep(0.4)
+            if len(offs) < 48:
+                break
+            page += 1; time.sleep(0.4)
     uniq = {}
     for o in offers:
-        uniq[(o["tipo"], o["make"], o["model"], o["version"], o["precio_desde"])] = o
-    return list(uniq.values()), tried
+        key = o.get("_id") or (o["make"], o["model"], o["version"], o["precio_desde"])
+        uniq[key] = o
+    out = list(uniq.values())
+    for o in out:
+        o.pop("_id", None)
+    return out, tried
 
 
 def parse_listing(html, url, tipo="particular", cat=None):
