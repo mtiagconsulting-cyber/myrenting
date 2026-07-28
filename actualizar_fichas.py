@@ -98,6 +98,18 @@ NEW_CSS = """
     .price-iva{display:inline-block;margin-top:6px;font-size:12px;font-weight:800;padding:3px 9px;border-radius:7px;letter-spacing:.2px;}
     .price-iva.inc{background:#e6f7ed;color:#0a7a3d;}
     .price-iva.noinc{background:#fff3e0;color:#b25b00;}
+    .matrix-wrap{margin:22px 0 4px;}
+    .matrix-title{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+    .matrix-iva{font-size:11px;font-weight:800;padding:2px 8px;border-radius:6px;background:#fff3e0;color:#b25b00;}
+    .matrix-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:12px;}
+    table.matrix{border-collapse:collapse;width:100%;min-width:340px;font-size:13.5px;}
+    table.matrix th,table.matrix td{padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);white-space:nowrap;}
+    table.matrix thead th{background:var(--surface-2,#f5f2ef);font-weight:800;color:var(--ink-2,#2a2320);font-size:12px;}
+    table.matrix tbody th{text-align:left;font-weight:700;color:var(--ink-3,#4a423d);background:#fff;}
+    table.matrix tbody td{font-weight:800;color:var(--ink);}
+    table.matrix td.mx-na{color:var(--ink-5,#c8c8c8);font-weight:600;}
+    table.matrix tbody tr:last-child th,table.matrix tbody tr:last-child td{border-bottom:none;}
+    .matrix-note{font-size:11.5px;color:var(--ink-4);margin-top:8px;}
     .oc-save{background:#ecfdf3;color:#15803d;font-size:12px;font-weight:800;padding:4px 10px;border-radius:8px;border:1px solid #bbf7d0;}
     .oc-cta{display:flex;gap:9px;margin-top:2px;}
     .btn-card-info{flex:0 0 auto;background:#fff;border:1.5px solid var(--border);color:var(--ink-2,#2a2320);border-radius:11px;padding:11px 15px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;}
@@ -229,6 +241,38 @@ def static_cards(data, media, model):
     return '\n'.join(out)
 
 
+def matrix_table(offers):
+    """Tabla km × meses con TODAS las cuotas de la oferta más barata que tenga
+    matriz (combinaciones). Contenido único = bueno para SEO y transparencia."""
+    def _consistent(o):
+        # la matriz es fiable si su cuota mínima ~ el precio 'desde' de la oferta
+        ps = [c['precio'] for c in o['combinaciones'] if c.get('precio')]
+        return ps and abs(min(ps) - float(o.get('precio_desde', 0))) <= 2
+    cand = [o for o in offers if o.get('combinaciones') and _consistent(o)]
+    if not cand:
+        return ''
+    o = min(cand, key=lambda x: float(x.get('precio_desde', 9999)))
+    combos = o['combinaciones']
+    kms = sorted({int(c['km']) for c in combos if c.get('km')})
+    meses = sorted({int(c['meses']) for c in combos if c.get('meses')})
+    if not kms or not meses:
+        return ''
+    cell = {(int(c['km']), int(c['meses'])): c['precio'] for c in combos if c.get('km') and c.get('meses')}
+    tipo = o.get('tipo', '')
+    iva = 'IVA incluido' if tipo == 'particular' else '+ IVA (sin IVA)'
+    thead = ''.join(f'<th>{m} meses</th>' for m in meses)
+    rows = ''
+    for k in kms:
+        tds = ''.join(f'<td>{int(cell[(k,m)])}&euro;</td>' if (k, m) in cell else '<td class="mx-na">&mdash;</td>' for m in meses)
+        rows += f'<tr><th>{kmf(str(k))} km/a&ntilde;o</th>{tds}</tr>'
+    return f'''
+  <div class="matrix-wrap">
+    <div class="matrix-title">Todas las cuotas &middot; {esc(o.get('fuente',''))} &middot; {tipo.capitalize()} <span class="matrix-iva">{iva}</span></div>
+    <div class="matrix-scroll"><table class="matrix"><thead><tr><th>Km / plazo</th>{thead}</tr></thead><tbody>{rows}</tbody></table></div>
+    <div class="matrix-note">Cuota &euro;/mes seg&uacute;n kil&oacute;metros al a&ntilde;o y plazo. Precios reales; consulta otras combinaciones al solicitar tu oferta.</div>
+  </div>'''
+
+
 def transform(path, offers):
     c = path.read_text(encoding='utf-8')
     if 'compare-grid' not in c or 'car-header' not in c:
@@ -316,7 +360,8 @@ def transform(path, offers):
 
   <div class="compare-grid" id="compare-grid">
 {static_cards(data, media, model)}
-  </div>'''
+  </div>
+{matrix_table(offers)}'''
     c = re.sub(r'<div class="compare-title">.*?<div class="compare-grid" id="compare-grid">.*?</div>\s*(?=\n\s*<div class="no-results-cards")',
                sec + '\n\n  ', c, count=1, flags=re.DOTALL)
 
@@ -385,11 +430,32 @@ def offers_from_page(content):
     return offers
 
 
+def _load_matrices():
+    """(tipo, precio_desde, version) -> combinaciones km×meses, desde ofertas-manuales.json.
+    (El index no lleva la matriz; la leemos aquí para pintar la tabla en la ficha.)"""
+    mat = {}
+    p = BASE / 'ofertas-manuales.json'
+    if not p.exists():
+        return mat
+    try:
+        for o in json.loads(p.read_text(encoding='utf-8')):
+            if o.get('combinaciones'):
+                k = (o.get('tipo', ''), int(round(float(o.get('precio_desde', 0)))), (o.get('version') or '')[:60])
+                mat[k] = o['combinaciones']
+    except Exception:
+        pass
+    return mat
+
+
 def main():
     idx = IDX.read_text(encoding='utf-8')
     allo = json.loads(re.search(r'const _OFERTAS\s*=\s*(\[.*?\]);', idx, re.DOTALL).group(1))
+    MAT = _load_matrices()
     by_model = defaultdict(list)
     for o in allo:
+        k = (o.get('tipo', ''), int(round(float(o.get('precio_desde', 0)))), (o.get('version') or '')[:60])
+        if k in MAT:
+            o['combinaciones'] = MAT[k]
         by_model[(o['make'], o['model'])].append(o)
 
     only = [a.lower() for a in sys.argv[1:]]

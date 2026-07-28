@@ -345,6 +345,18 @@
     .price-iva{display:inline-block;margin-top:6px;font-size:12px;font-weight:800;padding:3px 9px;border-radius:7px;letter-spacing:.2px;}
     .price-iva.inc{background:#e6f7ed;color:#0a7a3d;}
     .price-iva.noinc{background:#fff3e0;color:#b25b00;}
+    .matrix-wrap{margin:22px 0 4px;}
+    .matrix-title{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+    .matrix-iva{font-size:11px;font-weight:800;padding:2px 8px;border-radius:6px;background:#fff3e0;color:#b25b00;}
+    .matrix-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:12px;}
+    table.matrix{border-collapse:collapse;width:100%;min-width:340px;font-size:13.5px;}
+    table.matrix th,table.matrix td{padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);white-space:nowrap;}
+    table.matrix thead th{background:var(--surface-2,#f5f2ef);font-weight:800;color:var(--ink-2,#2a2320);font-size:12px;}
+    table.matrix tbody th{text-align:left;font-weight:700;color:var(--ink-3,#4a423d);background:#fff;}
+    table.matrix tbody td{font-weight:800;color:var(--ink);}
+    table.matrix td.mx-na{color:var(--ink-5,#c8c8c8);font-weight:600;}
+    table.matrix tbody tr:last-child th,table.matrix tbody tr:last-child td{border-bottom:none;}
+    .matrix-note{font-size:11.5px;color:var(--ink-4);margin-top:8px;}
     .oc-save{background:#ecfdf3;color:#15803d;font-size:12px;font-weight:800;padding:4px 10px;border-radius:8px;border:1px solid #bbf7d0;}
     .oc-cta{display:flex;gap:9px;margin-top:2px;}
     .btn-card-info{flex:0 0 auto;background:#fff;border:1.5px solid var(--border);color:var(--ink-2,#2a2320);border-radius:11px;padding:11px 15px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;}
@@ -414,6 +426,7 @@
       <div class="oc-cta"><button class="btn-card-info" onclick="abrirModal('Quadis','BMW Ix1');return false;">Solicitar info</button><button class="btn-card-ver" onclick="abrirModalGestora('quadis','Quadis','BMW Ix1');return false;">Ver ofertas &rarr;</button></div>
     </div>
   </div>
+
 
   
   <div class="no-results-cards" id="no-results-msg">
