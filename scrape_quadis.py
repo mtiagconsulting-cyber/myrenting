@@ -271,17 +271,39 @@ def inspect(url):
     n_mes = len(re.findall(r'€\s*/?\s*mes', html, re.I))
     precios = sorted(set(re.findall(r'(\d[\d.]{2,5})\s*€', html)))[:8]
     print(f"  · JSON-LD bloques: {n_jsonld}")
-    print(f"  · '€/mes' apariciones: {n_mes}")
+    print(f"  · '€/mes' apariciones: {n_mes}  (pocas => catálogo por JS/API)")
     print(f"  · precios ejemplo: {precios}")
-    for var in ("__NEXT_DATA__", "__NUXT__", "__INITIAL_STATE__", "window.dataLayer"):
-        if var in html: print(f"  · encontrado estado JS: {var}")
+    for var in ("__NEXT_DATA__", "__NUXT__", "__INITIAL_STATE__", "window.__DATA__", "self.__next_f"):
+        if var in html: print(f"  · estado JS embebido: {var}")
+
+    # contenido del/los JSON-LD (a veces trae el listado)
+    for i, m in enumerate(re.finditer(r'application/ld\+json[^>]*>(.*?)</script>', html, re.S)):
+        blob = m.group(1).strip()
+        print(f"  · JSON-LD[{i}] ({len(blob)}b): {blob[:200]}")
+
+    # posibles endpoints de API en el HTML/JS
+    urls = set(re.findall(r'https?://[^\s"\'<>]+', html))
+    api = sorted(u for u in urls if re.search(r'(api|graphql|/ofertas|/renting|/vehic|/search|\.json)', u, re.I)
+                 and 'quadis' in u.lower())[:20]
+    print(f"  · posibles endpoints API (mismo dominio): {len(api)}")
+    for u in api: print(f"       {u}")
+    ext = sorted(u for u in urls if re.search(r'(api|graphql)', u, re.I) and 'quadis' not in u.lower())[:10]
+    if ext:
+        print("  · APIs de terceros:")
+        for u in ext: print(f"       {u}")
+    # scripts de la app (bundles)
+    srcs = re.findall(r'<script[^>]+src="([^"]+)"', html)
+    print(f"  · <script src> ({len(srcs)}): " + ", ".join(s.split('/')[-1] for s in srcs[:12]))
+
     offs, strat = parse_listing(html, url)
-    print(f"  · ofertas detectadas con estrategia '{strat}': {len(offs)}")
+    print(f"  · ofertas detectadas ('{strat}'): {len(offs)}")
     for o in offs[:8]:
         print(f"     {o['make']} {o['model']} — {o['precio_desde']}€ [{o['tipo']}/{o['category'] or '?'}]")
-    if not offs:
-        print("  ⚠ 0 ofertas. Pégame en el chat estas líneas del HTML /tmp/quadis_inspect.html:")
-        print("     grep -oE '<article[^>]*>|class=\"[^\"]*(card|vehic|rent|price|precio)[^\"]*\"' /tmp/quadis_inspect.html | sort -u | head -40")
+    if not offs or len(offs) < 4:
+        print("\n  ⚠ El catálogo no está en el HTML (carga por API). Necesito la URL de esa API:")
+        print("     En Chrome: abre la página → F12 → pestaña 'Red'/'Network' → filtro 'Fetch/XHR'")
+        print("     → recarga → busca una petición que devuelva JSON con coches (mira 'Preview').")
+        print("     Copia su URL (botón derecho → Copy → Copy link address) y pégamela.")
 
 
 # ─── SCRAPE ────────────────────────────────────────────────────────────────────
