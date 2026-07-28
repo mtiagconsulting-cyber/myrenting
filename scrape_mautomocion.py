@@ -92,6 +92,10 @@ def num(s):
     m = re.search(r"(\d[\d.\s]*)", str(s).replace(",", "."))
     return float(m.group(1).replace(".", "").replace(" ", "")) if m else None
 
+def slugify(s):
+    s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s)).strip("-")
+
 def guess_make(text):
     t = text.lower()
     for mk in sorted(MARCAS, key=len, reverse=True):   # multi-palabra primero
