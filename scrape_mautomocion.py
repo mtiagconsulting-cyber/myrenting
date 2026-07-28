@@ -564,7 +564,8 @@ def parse_listing(html, base_url):
         model = (" ".join(nw[i:]) if i < len(nw) else name)[:40].strip()
         trim = mn.get("trim", "")
         txt = name + " " + trim
-        url = mn.get("url") or f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
+        real = mn.get("url", "")
+        url = real if "oferta-renting-" in real else f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
         offers.append({
             "fuente": FUENTE, "tipo": tipo, "make": make.upper(),
             "model": (model or name).upper()[:40],
