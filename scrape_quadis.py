@@ -295,6 +295,36 @@ def parse_quadis_cards(frag, tipo="particular", cat=None):
     return offers
 
 
+def detail_inspect(url):
+    """Explora una ficha de detalle para localizar cómo sirve la matriz km×meses."""
+    print(f"── Inspeccionando detalle: {url}")
+    html = fetch(url, verbose=True)
+    if not html:
+        print("  ✗ no cargó (403/anti-bot). Ábrela en el navegador y mira la pestaña Red/XHR.")
+        return
+    Path("/tmp/quadis_detalle.html").write_text(html, encoding="utf-8")
+    print(f"  ✓ {len(html)} bytes (guardado en /tmp/quadis_detalle.html)")
+    print(f"  · '€/mes' apariciones: {len(re.findall(r'€', html))}")
+    print(f"  · precios ejemplo: {sorted(set(re.findall(r'(\d[\d.]{2,5})\s*€', html)))[:12]}")
+    # opciones de km / meses (selects, botones, data-*)
+    kms = sorted(set(re.findall(r'(\d{2}[.\s]?\d{3})\s*(?:km|kms)', html, re.I)))
+    meses = sorted(set(re.findall(r'(\d{2})\s*mes', html, re.I)))
+    print(f"  · valores km detectados: {kms}")
+    print(f"  · valores meses detectados: {meses}")
+    # endpoints API del mismo dominio (posible precio por combinación)
+    urls = set(re.findall(r'https?://[^\s"\'<>]+', html)) | set(re.findall(r'"(/api[^"\']+)"', html))
+    api = sorted(u for u in urls if re.search(r'(api-vehicles|/api/|price|precio|cuota|renting|vehicle)', u, re.I))[:25]
+    print(f"  · posibles endpoints ({len(api)}):")
+    for u in api: print(f"       {u}")
+    for var in ("__NUXT__", "__NEXT_DATA__", "__INITIAL_STATE__", "productDetails", "data-product", "window.vehicle", "combinations", "cuotas", "simulator", "simulador"):
+        if var in html: print(f"  · marcador embebido: {var}")
+    # bloques JSON-LD
+    for i, m in enumerate(re.finditer(r'application/ld\+json[^>]*>(.*?)</script>', html, re.S)):
+        print(f"  · JSON-LD[{i}]: {m.group(1).strip()[:200]}")
+    print("\n  ➜ Si no ves un endpoint claro de precios: abre la ficha en Chrome → F12 → Red/XHR,")
+    print("     cambia el desplegable de km o meses, y mira qué petición se lanza. Pégame su URL.")
+
+
 def api_scrape():
     offers, tried = [], []
     # (endpoint, categoria_forzada, tipo)  ·  precio de Quadis = CON IVA (particular)
@@ -445,6 +475,9 @@ def main():
     ap.add_argument("--inspect", nargs="?", const=BASE_URL + "/coches-renting/particulares")
     ap.add_argument("--api-dump", nargs="?", const=BASE_URL + "/api-vehicles/coches-renting?page=1&limit=3",
                     help="Descarga y muestra el JSON crudo de la API (para ver los campos)")
+    ap.add_argument("--detail", nargs="?",
+                    const=BASE_URL + "/coches-renting/peugeot/208/208-allure-gasolina-100-ss-6-vel-man/512258",
+                    help="Inspecciona una ficha de detalle para localizar la matriz km×meses")
     ap.add_argument("--from-file")
     ap.add_argument("--html", action="store_true", help="Fuerza scrape del HTML en vez de la API")
     ap.add_argument("--merge", action="store_true")
@@ -457,6 +490,9 @@ def main():
 
     if args.inspect:
         inspect(args.inspect); return
+
+    if args.detail is not None:
+        detail_inspect(args.detail); return
 
     if args.api_dump is not None:
         h = fetch(args.api_dump, verbose=True)
