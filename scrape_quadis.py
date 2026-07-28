@@ -304,8 +304,10 @@ def detail_inspect(url):
         return
     Path("/tmp/quadis_detalle.html").write_text(html, encoding="utf-8")
     print(f"  ✓ {len(html)} bytes (guardado en /tmp/quadis_detalle.html)")
-    print(f"  · '€/mes' apariciones: {len(re.findall(r'€', html))}")
-    print(f"  · precios ejemplo: {sorted(set(re.findall(r'(\d[\d.]{2,5})\s*€', html)))[:12]}")
+    n_eur = len(re.findall(r'€', html))
+    precios = sorted(set(re.findall(r'(\d[\d.]{2,5})\s*€', html)))[:12]
+    print(f"  · '€' apariciones: {n_eur}")
+    print(f"  · precios ejemplo: {precios}")
     # opciones de km / meses (selects, botones, data-*)
     kms = sorted(set(re.findall(r'(\d{2}[.\s]?\d{3})\s*(?:km|kms)', html, re.I)))
     meses = sorted(set(re.findall(r'(\d{2})\s*mes', html, re.I)))
