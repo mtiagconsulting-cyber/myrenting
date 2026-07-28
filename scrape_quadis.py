@@ -237,6 +237,84 @@ def _mk_offer(name, price, tipo, cat, url, img, ctx=""):
     }
 
 
+# ─── API (quadis.es/api-vehicles/...) ─────────────────────────────────────────
+API_ENDPOINTS = [
+    ("/api-vehicles/coches-renting",    None),
+    ("/api-vehicles/furgonetas-renting", "Furgoneta"),
+]
+
+def _g(d, *keys):
+    """Devuelve el primer campo presente (busca en el dict y en subdicts 1 nivel)."""
+    for k in keys:
+        if isinstance(d, dict) and d.get(k) not in (None, ""):
+            return d[k]
+    for v in (d.values() if isinstance(d, dict) else []):
+        if isinstance(v, dict):
+            for k in keys:
+                if v.get(k) not in (None, ""):
+                    return v[k]
+    return None
+
+def map_api_offer(v, cat=None):
+    make = _g(v, "make", "marca", "brand", "makeName", "brandName") or ""
+    model = _g(v, "model", "modelo", "modelName") or ""
+    version = _g(v, "version", "acabado", "trim", "versionName", "finish") or ""
+    con = _g(v, "priceWithTax", "priceTaxInc", "precioConIva", "pvpConIva", "monthlyPriceWithTax")
+    sin = _g(v, "priceWithoutTax", "priceTaxExc", "precioSinIva", "pvpSinIva", "monthlyPriceWithoutTax")
+    price = _g(v, "price", "precio", "cuota", "monthlyPrice", "pvp", "fee", "rentingPrice") or con or sin
+    km = _g(v, "km", "kms", "kmYear", "kmsAnuales", "annualKm", "mileage")
+    meses = _g(v, "months", "meses", "plazo", "duration", "term", "duracion")
+    fuel = _g(v, "fuel", "combustible", "fuelType", "fuelName") or ""
+    img = _g(v, "image", "imagen", "img", "photo", "thumbnail", "picture", "mainImage") or ""
+    slug = _g(v, "url", "slug", "link", "detailUrl", "permalink") or ""
+    tipo = (_g(v, "segment", "tipo", "clientType") or "particular")
+    tipo = "particular" if "part" in str(tipo).lower() else ("empresa" if "empr" in str(tipo).lower() else ("autonomo" if "auto" in str(tipo).lower() else "particular"))
+    try: price = float(str(price).replace(".", "").replace(",", ".")) if isinstance(price, str) else float(price)
+    except Exception: return None
+    if not (make and price and 50 <= price <= 6000): return None
+    name = f"{make} {model} {version}".strip()
+    return {
+        "fuente": FUENTE, "tipo": tipo,
+        "make": _asc(make), "model": _asc(model)[:40].strip() or _asc(name)[:40],
+        "version": clean(f"{make} {model} {version}")[:120],
+        "fuel": (fuel or guess_fuel(name)),
+        "precio_desde": round(float(price), 2),
+        "precio_con_iva": con, "precio_sin_iva": sin,
+        "duracion": int(num(str(meses)) or 60), "km": int(num(str(km)) or 10000),
+        "url": urljoin(BASE_URL, str(slug)) if slug else BASE_URL + "/coches-renting",
+        "category": guess_cat(name, cat),
+        "image": urljoin(BASE_URL, str(img)) if img and not str(img).startswith("http") else (img or ""),
+    }
+
+def api_scrape():
+    offers, tried = [], []
+    for path, cat in API_ENDPOINTS:
+        for page in range(1, 60):
+            u = f"{BASE_URL}{path}?page={page}&limit=48"
+            h = fetch(u, verbose=(page == 1)); tried.append((u, bool(h)))
+            if not h: break
+            try:
+                data = json.loads(h)
+            except Exception:
+                if page == 1: print(f"    ⚠ {path} no devolvió JSON");
+                break
+            items = data if isinstance(data, list) else _g(data, "data", "items", "vehicles",
+                        "results", "records", "list", "rows") or []
+            if not isinstance(items, list) or not items:
+                break
+            got = 0
+            for v in items:
+                o = map_api_offer(v, cat)
+                if o: offers.append(o); got += 1
+            print(f"  {path} p{page}: {got}/{len(items)}")
+            if len(items) < 48: break
+            time.sleep(0.4)
+    uniq = {}
+    for o in offers:
+        uniq[(o["tipo"], o["make"], o["model"], o["version"], o["precio_desde"])] = o
+    return list(uniq.values()), tried
+
+
 def parse_listing(html, url, tipo="particular", cat=None):
     for strat in (_from_jsonld, _from_cards):
         try:
@@ -347,7 +425,10 @@ def merge_into_manuales(offers):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--inspect", nargs="?", const=BASE_URL + "/coches-renting/particulares")
+    ap.add_argument("--api-dump", nargs="?", const=BASE_URL + "/api-vehicles/coches-renting?page=1&limit=3",
+                    help="Descarga y muestra el JSON crudo de la API (para ver los campos)")
     ap.add_argument("--from-file")
+    ap.add_argument("--html", action="store_true", help="Fuerza scrape del HTML en vez de la API")
     ap.add_argument("--merge", action="store_true")
     args = ap.parse_args()
 
@@ -359,15 +440,29 @@ def main():
     if args.inspect:
         inspect(args.inspect); return
 
+    if args.api_dump is not None:
+        h = fetch(args.api_dump, verbose=True)
+        if not h:
+            print("  ✗ no cargó (403/anti-bot). Abre la URL en tu navegador y pégame el JSON.")
+        else:
+            try:
+                print(json.dumps(json.loads(h), ensure_ascii=False, indent=2)[:4000])
+            except Exception:
+                print(h[:3000])
+        return
+
     if args.from_file:
         html = Path(args.from_file).read_text(encoding="utf-8")
         offers, strat = parse_listing(html, BASE_URL)
         print(f"  (from-file) {len(offers)} ofertas ({strat})")
-    else:
-        print("── Scrapeando quadis.es (coches + furgonetas)…")
+    elif args.html:
+        print("── Scrapeando quadis.es por HTML…")
         offers, tried = scrape_all()
         for u, ok in tried:
             print(f"    {'✓' if ok else '✗'} {u}")
+    else:
+        print("── Scrapeando quadis.es por API (api-vehicles)…")
+        offers, tried = api_scrape()
 
     from collections import Counter
     print(f"\n✅ {len(offers)} ofertas de {FUENTE}")
