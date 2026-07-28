@@ -19,6 +19,12 @@ USO (en tu Mac, que sí tiene internet):
     # 3) FUSIONAR en ofertas-manuales.json (lo que consume la web)
     python3 scrape_mautomocion.py --merge
 
+    # 3b) CON MATRIZ km×meses por coche (más lento; visita cada ficha)
+    python3 scrape_mautomocion.py --matrix --merge
+
+    # ver la matriz de UN coche (diagnóstico)
+    python3 scrape_mautomocion.py --combos
+
     # parsear un HTML ya guardado (Ver código fuente -> guardar como pagina.html)
     python3 scrape_mautomocion.py --from-file pagina.html
 
@@ -593,6 +599,41 @@ def find_and_scrape(deep=True):
         o.pop("_id", None)
     return out, tried
 
+# ─── MATRIZ km×meses por oferta ───────────────────────────────────────────────
+def enrich_with_matrix(offers):
+    """Visita la ficha de cada oferta y le añade 'combinaciones': la matriz
+    km×meses×precio real (precio del segmento de esa ficha). Es LENTO: una
+    petición por ficha + varias por combinación."""
+    total = len(offers)
+    n_ok = n_combos = 0
+    print(f"── Extrayendo matriz km×meses de {total} ofertas (esto tarda)…")
+    for i, o in enumerate(offers, 1):
+        u = (o.get("url") or "").split("#")[0]
+        if "/oferta-renting-" not in u:
+            continue
+        h = fetch(u)
+        if not h:
+            continue
+        matriz, _ = matrix_from_product(h, u)
+        combos = []
+        for r in matriz:
+            p = r.get("price")
+            try:
+                p = float(str(p).replace(".", "").replace(",", ".")) if isinstance(p, str) and "," in str(p) else float(p)
+            except Exception:
+                p = None
+            if r.get("km") and r.get("meses") and p:
+                combos.append({"km": r["km"], "meses": r["meses"], "precio": round(p, 2)})
+        if combos:
+            o["combinaciones"] = sorted(combos, key=lambda x: (x["km"], x["meses"]))
+            n_ok += 1
+            n_combos += len(combos)
+        if i % 10 == 0 or i == total:
+            print(f"    {i}/{total}  (ofertas con matriz: {n_ok}, combinaciones: {n_combos})")
+        time.sleep(0.3)
+    print(f"  ✓ matriz añadida a {n_ok}/{total} ofertas ({n_combos} combinaciones en total)")
+
+
 # ─── MERGE ────────────────────────────────────────────────────────────────────
 def merge_into_manuales(offers):
     data = []
@@ -612,6 +653,8 @@ def main():
     ap.add_argument("--merge", action="store_true", help="Fusiona el resultado en ofertas-manuales.json")
     ap.add_argument("--combos", nargs="?", const="auto", metavar="URL",
                     help="Vuelca la matriz km×meses×precio de UNA ficha (sin URL: la busca solo)")
+    ap.add_argument("--matrix", action="store_true",
+                    help="Añade a cada oferta su matriz km×meses×precio (LENTO: visita cada ficha)")
     args = ap.parse_args()
 
     for pkg, imp in [("requests","requests"), ("beautifulsoup4","bs4"), ("lxml","lxml")]:
@@ -643,6 +686,9 @@ def main():
         print(f"   · [{o['tipo'][:4]}] {o['make']} {o['model']} — {o['precio_desde']}€/mes ({o['duracion']}m/{o['km']}km) [{o['category'] or '?'}]")
     if len(offers) > 10:
         print(f"   … y {len(offers)-10} más")
+
+    if args.matrix:
+        enrich_with_matrix(offers)
 
     OUT_DB.write_text(json.dumps(offers, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n💾 Guardado en {OUT_DB.name}")

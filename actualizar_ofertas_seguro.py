@@ -181,6 +181,10 @@ def main():
     if total < umbral:
         die(f'total {total} < umbral {umbral}. El scrape parece roto.')
 
+    # la matriz km×meses (combinaciones) vive en ofertas-manuales.json; el index
+    # solo necesita el precio 'desde' -> no la inyectamos (mantiene index.html ligero)
+    for o in final:
+        o.pop('combinaciones', None)
     final.sort(key=lambda o: float(o.get('precio_desde', 9999)))
     gestoras_n = len({o.get('fuente', '') for o in final if o.get('fuente')})
     fecha = f"{datetime.now().day} {_MESES[datetime.now().month-1]} {datetime.now().year}"
