@@ -108,14 +108,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hh-copy .hh-sub{margin:18px 0 0;max-width:46ch}
   .hh-copy .hs-card{grid-template-columns:1fr 1fr;max-width:560px;margin:28px 0 0;box-shadow:var(--sh-1)}
   .hh-copy .hs-card .search-btn{grid-column:1/-1;padding:14px}
-  .hh-panel{background:linear-gradient(150deg,#FF7A2E,#F04E00);border-radius:18px;color:#fff;padding:32px 34px;box-shadow:var(--sh-o);min-height:320px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+  .hh-panel{background:linear-gradient(150deg,#FF7A2E,#F04E00);border-radius:16px;color:#fff;padding:20px 22px;box-shadow:var(--sh-o);min-height:210px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
   .hp-info{transition:opacity .3s}
   .hp-model{font-size:15px;font-weight:700;opacity:.92}
-  .hp-price{font-size:2.7rem;font-weight:800;letter-spacing:-0.04em;margin-top:3px;line-height:1}
+  .hp-price{font-size:1.9rem;font-weight:800;letter-spacing:-0.04em;margin-top:2px;line-height:1}
   .hp-price small{font-size:1rem;font-weight:600;opacity:.85}
-  .hh-panel .car{width:100%;margin:6px 0}
+  .hh-panel .car{width:70%;margin:2px auto;display:block}
   .hp-brand{font-size:15px;font-weight:800;letter-spacing:-0.02em;opacity:.9}
-  @media(max-width:860px){.hh-panel{order:-1;min-height:230px}}
+  @media(max-width:860px){.hh-panel{order:-1;min-height:168px;padding:18px 20px}.hh-panel .car{width:62%}.hp-price{font-size:1.7rem}}
   .hh-sub{color:var(--g-500);font-size:clamp(1.02rem,1.7vw,1.2rem)}
   .hs-card{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#fff;border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2);padding:11px;text-align:left}
   .field{display:flex;flex-direction:column;gap:5px;padding:10px 13px;border-radius:var(--r);background:var(--surface);border:1.5px solid transparent;transition:.15s}
@@ -134,6 +134,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .link-more:hover{gap:11px}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+  @media(max-width:520px){.tiles{grid-template-columns:repeat(2,1fr);gap:11px}}
+  .ctile{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s,border-color .16s}
+  .ctile:hover{border-color:var(--line-2);box-shadow:var(--sh-1);transform:translateY(-3px)}
+  .ct-thumb{aspect-ratio:16/10;background:var(--surface);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+  .ct-thumb img{width:90%;height:82%;object-fit:contain}
+  .ct-thumb .car{width:80%}
+  .ct-info{padding:11px 13px 13px}
+  .ct-brand{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--g-400)}
+  .ct-model{font-size:14.5px;font-weight:800;letter-spacing:-.02em;margin-top:2px;line-height:1.2}
+  .ct-price{margin-top:8px;font-size:11.5px;color:var(--g-500)}
+  .ct-price b{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+  .ct-price b small{font-size:.7rem;font-weight:600;color:var(--g-500)}
+  .npgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
+  @media(max-width:520px){.npgrid{grid-template-columns:1fr}}
+  .npc{position:relative;background:linear-gradient(158deg,#FF7A2E,#F04E00 88%);border-radius:15px;color:#fff;overflow:hidden;box-shadow:0 1px 3px rgba(20,20,20,.05),0 14px 28px rgba(240,78,0,.14);cursor:pointer;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column;padding:14px 14px 0}
+  .npc:hover{transform:translateY(-4px);box-shadow:0 26px 48px rgba(240,78,0,.24)}
+  .npc::before{content:"";position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(closest-side,rgba(255,255,255,.15),transparent)}
+  .npc-top{display:flex;justify-content:space-between;gap:12px;position:relative;z-index:2}
+  .npc-name{font-size:1.02rem;font-weight:800;letter-spacing:-.02em;line-height:1.12}
+  .npc-ver{font-size:11px;opacity:.9;margin-top:3px}
+  .npc-pills{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+  .npc-pill{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;border:1.5px solid rgba(255,255,255,.4);border-radius:99px;padding:3px 8px}
+  .npc-pill svg{width:12px;height:12px}
+  .npc-price{text-align:right;flex:none}
+  .npc-price .d{font-size:10.5px;opacity:.85;font-weight:600}
+  .npc-price b{font-size:1.35rem;font-weight:800;letter-spacing:-.03em;line-height:1;display:block}
+  .npc-price small{font-size:9.5px;opacity:.85;font-weight:600}
+  .npc-ph{position:relative;z-index:2;height:112px;display:flex;align-items:center;justify-content:center;margin:6px 0 2px}
+  .npc-ph img{max-width:92%;max-height:112px;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(0,0,0,.32))}
+  .npc-ent{position:absolute;left:0;top:2px;z-index:3;background:rgba(255,255,255,.95);color:#F04E00;font-weight:800;font-size:9px;padding:3px 7px;border-radius:99px;display:inline-flex;align-items:center;gap:4px;box-shadow:0 3px 8px rgba(0,0,0,.14)}
+  .npc-ent svg{width:10px;height:10px}
+  .npc-dgt{position:absolute;right:0;top:2px;z-index:3;width:20px;height:20px;border-radius:50%;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;color:#fff;border:1.5px solid rgba(255,255,255,.7)}
+  .npc-dgt.CERO{background:#1d4ed8}.npc-dgt.ECO{background:#00A86B}.npc-dgt.C{background:#6b7280}
+  .npc-foot{margin:6px -14px 0;background:rgba(255,255,255,.15);border-top:1px solid rgba(255,255,255,.22);display:flex;justify-content:space-between;padding:9px 6px;position:relative;z-index:2}
+  .npc-spec{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;text-align:center}
+  .npc-spec svg{width:14px;height:14px;opacity:.85}
+  .npc-spec .v{font-size:11px;font-weight:800}
+  .npc-spec .k{font-size:7.5px;opacity:.75;font-weight:600;text-transform:uppercase}
   @media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.grid{grid-template-columns:1fr}}
   .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s,border-color .22s}
@@ -215,6 +254,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media(min-width:921px){.cat-side{position:sticky;top:24px}}
   @media(max-width:920px){.cat-layout{grid-template-columns:1fr;padding-top:8px}.cat-filter-btn{display:inline-flex}.cat-side{display:none}.cat-side.open{display:flex}}
   .fgroup h4{font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--g-400);margin-bottom:14px}
+  .fsel-full{width:100%;border:1.5px solid var(--line-2);border-radius:8px;background:#fff;padding:11px 13px;font-family:inherit;font-weight:700;font-size:14px;color:var(--ink);cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23FF5C00' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 12px center}
+  .fsel-full:focus{outline:none;border-color:var(--o)}
   .seg-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
   .seg-mini button{border:1.5px solid var(--line-2);background:#fff;border-radius:8px;padding:9px 0;font-weight:700;font-size:13px;color:var(--g-700);transition:.14s}
   .seg-mini button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -248,7 +289,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .fld textarea{resize:vertical;min-height:90px}
 
   .pdp{padding-top:clamp(20px,4vw,40px);padding-bottom:44px}
-  .pdp-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+  .pdp-grid{display:block}
   @media(max-width:980px){.pdp-grid{grid-template-columns:1fr}}
   .crumb{font-size:13px;color:var(--g-400);font-weight:500;margin-bottom:16px}.crumb a:hover{color:var(--o-accent)}
   .gallery{position:relative;aspect-ratio:16/10;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -260,7 +301,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .thumb{aspect-ratio:16/11;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);display:flex;align-items:center;justify-content:center;opacity:.6;transition:.15s;overflow:hidden}
   .thumb .car{width:70%}.thumb img{width:76%;height:70%;object-fit:contain}.thumb.on,.thumb:hover{opacity:1;border-color:var(--o)}
   .pdp-title{margin-top:32px}.pdp-title h1{font-size:clamp(1.7rem,3vw,2.2rem)}.pdp-title .t{color:var(--g-500);font-size:16px;margin-top:8px}
-  .spec2x2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+  .spec2x2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
   @media(max-width:640px){.spec2x2{grid-template-columns:1fr 1fr}}
   .specbox{border:1px solid var(--line);border-radius:var(--r);padding:18px}
   .specbox svg{color:var(--o-accent);margin-bottom:12px}
@@ -273,7 +314,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media(max-width:560px){.incl ul{grid-template-columns:1fr}}
   .incl li{display:flex;gap:12px;font-size:15px;color:var(--g-700);align-items:flex-start}
   .ck{flex:none;width:22px;height:22px;border-radius:6px;background:var(--green-50);color:var(--green);display:flex;align-items:center;justify-content:center;margin-top:2px}
-  .config{position:sticky;top:24px;border:1px solid var(--line-2);border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1);overflow:hidden}
+  .config{position:static;margin-top:26px;border:1px solid var(--line-2);border-radius:var(--r-lg);background:#fff;box-shadow:var(--sh-1);overflow:hidden}
   .config-head{padding:24px 26px 6px}
   .cfg-badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:#047a51;background:var(--green-50);border:1px solid #b7ead4;padding:6px 12px;border-radius:7px}
   .cfg-badge .d{width:6px;height:6px;border-radius:50%;background:var(--green)}
@@ -352,6 +393,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="hs-card">
         <label class="field"><span class="lab">Tipo de cliente</span><select id="hs-tipo"><option>Particular</option><option>Autónomo</option><option>Empresa</option></select></label>
         <label class="field"><span class="lab">Marca</span><select id="hs-marca"><option>Cualquier marca</option></select></label>
+        <label class="field"><span class="lab">Modelo</span><select id="hs-modelo"><option>Todos</option></select></label>
         <label class="field"><span class="lab">Kilómetros/año</span><select><option>10.000 km</option><option selected>15.000 km</option><option>20.000 km</option><option>25.000 km</option></select></label>
         <label class="field"><span class="lab">Meses</span><select><option>24</option><option selected>36</option><option>48</option></select></label>
         <button class="search-btn" id="hs-buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</button>
@@ -367,12 +409,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div></section>
 
-  <section class="wrap sec">
-    <div class="sec-topbar">
-      <div class="sec-head"><span class="eyebrow">Nuestra selección</span><h2>Coches listos para entregar</h2><p>Precios reales, sin letra pequeña. Elige, configura tu cuota y recíbelo en casa.</p></div>
-      <a class="link-more" data-go="part">Mirar todo el catálogo →</a>
-    </div>
-    <div class="grid" id="home-grid"></div>
+  <section class="wrap sec" style="padding-top:clamp(20px,3vw,32px)">
+    <div class="npgrid" id="home-grid"></div>
   </section>
 
   <section class="cities"><div class="wrap sec" style="padding-top:clamp(48px,6vw,72px);padding-bottom:clamp(48px,6vw,72px)">
@@ -413,7 +451,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span class="cnt" id="cat-count">Coches disponibles</span>
           <select class="fsort"><option>Ordenar: Relevancia</option><option>Cuota: menor a mayor</option><option>Cuota: mayor a menor</option><option>Novedades</option></select>
         </div>
-        <div class="grid" id="cat-grid"></div>
+        <div class="npgrid" id="cat-grid"></div>
       </div>
     </div>
   </div>
@@ -447,7 +485,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <section class="wrap sec" style="padding-top:20px">
     <div class="sec-head"><span class="eyebrow">Para empresas</span><h2>Vehículos disponibles para flotas</h2></div>
-    <div class="grid" id="emp-grid"></div>
+    <div class="npgrid" id="emp-grid"></div>
   </section>
 </main>
 
@@ -475,12 +513,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div class="thumbs" id="thumbs"></div>
         <div class="pdp-title"><h1 id="pdp-name">Coche</h1><div class="t" id="pdp-t">—</div></div>
-        <div class="spec2x2" id="pdp-specs"></div>
-        <div class="incl"><h3>Todo incluido en tu cuota <span class="bi">6 servicios</span></h3><ul id="incl-list"></ul></div>
-      </div>
-      <aside>
         <div class="config">
-          <div class="config-head"><span class="cfg-badge"><span class="d"></span>Stock verificado</span><h2>Configura tu cuota</h2><div class="trim" id="pdp-cfg-trim">—</div></div>
+          <div class="config-head"><h2>Configura tu cuota</h2><div class="trim" id="pdp-cfg-trim">—</div></div>
           <div class="config-body">
             <div><div class="sg-label">Plazo del contrato</div><div class="seg" id="seg-plazo">
               <button data-plazo="24">24<small>meses</small></button><button data-plazo="36" class="on">36<small>meses</small></button><button data-plazo="48">48<small>meses</small></button></div></div>
@@ -493,11 +527,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <button class="cta" onclick="openOfferPDP()">Pide la oferta<small>Sin compromiso · Respuesta rápida</small></button>
           </div>
         </div>
-      </aside>
+        <div class="spec2x2" id="pdp-specs"></div>
+        <div class="incl"><h3>Todo incluido en tu cuota <span class="bi">6 servicios</span></h3><ul id="incl-list"></ul></div>
+      </div>
     </div>
     <section class="sec" style="padding:56px 0 var(--pad-sec)">
-      <div class="sec-head"><span class="eyebrow">También te puede interesar</span><h2 style="font-size:1.7rem">Otras opciones parecidas</h2></div>
-      <div class="grid" id="similar-grid"></div>
+      <div class="sec-head" style="margin-bottom:30px"><span class="eyebrow">También te puede interesar</span><h2 style="font-size:1.7rem">Otras opciones parecidas</h2></div>
+      <div class="npgrid" id="similar-grid"></div>
     </section>
   </div>
 </main>
@@ -516,10 +552,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h3>Pide tu oferta</h3>
     <p class="modal-sub">Déjanos tus datos y te preparamos la mejor oferta para este coche. Sin compromiso.</p>
     <div class="frow"><div class="fld"><label>Nombre</label><input id="f-nombre" placeholder="Nombre"></div><div class="fld"><label>Apellido</label><input id="f-apellido" placeholder="Apellido"></div></div>
-    <div class="frow"><div class="fld"><label>Ciudad</label><input id="f-ciudad" placeholder="Ciudad"></div><div class="fld"><label>Gestora</label><select id="f-gestora"><option>Sin preferencia</option><option>Arval</option><option>Ayvens</option><option>Alphabet</option><option>Otra</option></select></div></div>
-    <div class="frow"><div class="fld"><label>Vehículo (marca)</label><input id="f-marca" placeholder="Marca"></div><div class="fld"><label>Modelo</label><input id="f-modelo" placeholder="Modelo"></div></div>
-    <div class="frow"><div class="fld"><label>Kilómetros/año</label><input id="f-km" placeholder="15.000 km"></div><div class="fld"><label>Plazo</label><input id="f-plazo" placeholder="36 meses"></div></div>
-    <div class="fld"><label>Precio (cuota)</label><input id="f-precio" placeholder="389 €/mes"></div>
+    <div class="frow"><div class="fld"><label>Ciudad</label><input id="f-ciudad" placeholder="Ciudad"></div><div class="fld"><label>Teléfono</label><input id="f-tel" type="tel" placeholder="6XX XXX XXX"></div></div>
+    <div class="fld"><label>Email</label><input id="f-email" type="email" placeholder="tu@email.com"></div>
+    <!-- datos auto (ocultos, se rellenan solos y se envían igualmente) -->
+    <input type="hidden" id="f-gestora"><input type="hidden" id="f-marca"><input type="hidden" id="f-modelo"><input type="hidden" id="f-km"><input type="hidden" id="f-plazo"><input type="hidden" id="f-precio">
     <div class="modal-actions">
       <button class="btn btn-o" id="send-mail">Enviar solicitud</button>
       <a class="btn wa" id="send-wa" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.2-3.7-.9-3.9-3.4-4-3.6-.9-1.4-.9-2.6.6-1.8.9-2.1.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c0 .2.1.4 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.6s.7 1.2 1.5 1.9c1 .9 1.8 1.2 2.1 1.3s.4.1.6-.1l.8-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3s0 .6-.2 1.1z"/></svg>WhatsApp</a>
@@ -566,6 +602,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   cars.forEach(c=>c.cv=CV[c.t]||"—");
   const TRANS={"Nissan Qashqai":"Automático","Volkswagen Golf":"Manual","Seat Arona":"Manual","Renault Clio":"Manual","Dacia Sandero":"Manual","Kia Stonic":"Manual","Fiat 500":"Manual","Opel Mokka":"Automático","Citroen C3 Aircross":"Manual","Skoda Fabia":"Manual","Hyundai Bayon":"Manual","Ford Focus":"Manual"};
   cars.forEach(c=>c.trans=TRANS[c.t]||"—");
+  const VER={"Nissan Qashqai":"1.3 DIG-T 140 CV mHEV Acenta","Volkswagen Golf":"1.5 eTSI 115 CV Life DSG","Seat Arona":"1.0 TSI 110 CV Style","Renault Clio":"1.0 TCe 90 CV Evolution","Dacia Sandero":"1.0 TCe 90 CV Expression","Kia Stonic":"1.0 T-GDi 115 CV MHEV","Fiat 500":"1.0 Hybrid 70 CV","Opel Mokka":"Eléctrico 136 CV GS","Citroen C3 Aircross":"1.5 BlueHDi 110 CV","Skoda Fabia":"1.0 MPI 80 CV","Hyundai Bayon":"1.0 T-GDi 100 CV MHEV","Ford Focus":"1.5 EcoBlue 115 CV"};
+  cars.forEach(c=>c.ver=VER[c.t]||c.trim);
+  const ENT={"Nissan Qashqai":"Entrega inmediata","Volkswagen Golf":"Entrega rápida","Seat Arona":"Entrega inmediata","Renault Clio":"Entrega rápida","Dacia Sandero":"Nuevo a estrenar","Kia Stonic":"Entrega inmediata","Fiat 500":"Entrega rápida","Opel Mokka":"Entrega 2-4 sem.","Citroen C3 Aircross":"Entrega rápida","Skoda Fabia":"Nuevo a estrenar","Hyundai Bayon":"Entrega inmediata","Ford Focus":"Entrega rápida"};
+  cars.forEach(c=>c.ent=ENT[c.t]||"Entrega rápida");
+  let ivaMode='inc';
   const dgtCls={CERO:'cero',ECO:'eco',C:'c'};
   const pf={24:1.12,36:1,48:.92}, kf={10000:.93,15000:1,20000:1.09,25000:1.16};
   let catKm=15000, catMonths=36;
@@ -573,6 +614,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function stockOf(c){return c.ofertas>=10?'Entrega inmediata':'Stock verificado';}
   function spec(ic,k,d){return `<div class="spec">${IC[ic]}<div class="sv"><span class="sk">${k}</span><span class="sd">${d}</span></div></div>`}
   function media(c){return c.img?`<img src="${c.img}" alt="${c.t}" loading="lazy" onerror="this.style.display='none'">`:carSVG('#334155');}
+  function compactTile(c){const i=cars.indexOf(c);const parts=c.t.split(' ');const brand=parts[0];const model=parts.slice(1).join(' ')||brand;return `<article class="ctile" data-pdp="${i}">
+    <div class="ct-thumb">${media(c)}</div>
+    <div class="ct-info"><div class="ct-brand">${brand}</div><div class="ct-model">${model}</div>
+      <div class="ct-price">desde <b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span><small> €/mes</small></b></div></div></article>`}
+  const CLOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  function npCard(c){const i=cars.indexOf(c);const iva=(ivaMode==='exc')?'mes + IVA':'mes · IVA incl.';return `<article class="npc" data-pdp="${i}">
+    <div class="npc-top"><div><div class="npc-name">${c.t}</div><div class="npc-ver">${c.ver}</div>
+      <div class="npc-pills"><span class="npc-pill">${IC.trans}${c.trans}</span><span class="npc-pill">${IC.fuel}${c.fuel}</span></div></div>
+      <div class="npc-price"><span class="d">Desde</span><b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span> €</b><small>${iva}</small></div></div>
+    <div class="npc-ph"><span class="npc-ent">${CLOCK}${c.ent}</span>${c.img?`<img src="${c.img}" alt="${c.t}">`:''}</div>
+    <div class="npc-foot">
+      <div class="npc-spec">${IC.power}<span class="v">${c.cv}</span><span class="k">Potencia</span></div>
+      <div class="npc-spec">${IC.fuel}<span class="v">${c.fuel}</span><span class="k">Combustible</span></div>
+      <div class="npc-spec">${IC.cons}<span class="v">${c.cons} l</span><span class="k">Consumo</span></div>
+      <div class="npc-spec">${IC.seats}<span class="v">${c.seats}</span><span class="k">Plazas</span></div></div>
+  </article>`}
   function card(c){const i=cars.indexOf(c);return `<article class="card">
     <div class="media">${media(c)}</div>
     <div class="card-body"><div class="c-title">${c.t}</div><div class="c-trim">${c.trim}</div>
@@ -581,14 +638,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="card-price"><div><span class="from">Cuota desde</span><b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span><small> €/mes</small></b><span class="iva">${ivaMode==='exc'?'+ IVA · deducible':'IVA incluido'}</span></div></div>
     <div class="card-cta"><button class="btn btn-line btn-sm" data-pdp="${i}">Ver ficha</button><button class="btn btn-o btn-sm" data-pdp="${i}">Reservar</button></div></article>`}
 
-  document.getElementById('home-grid').innerHTML=cars.slice(0,6).map(card).join('');
-  document.getElementById('emp-grid').innerHTML=cars.slice(0,6).map(card).join('');
-  document.getElementById('cat-grid').innerHTML=cars.map(card).join('');
+  document.getElementById('home-grid').innerHTML=cars.map(npCard).join('');
+  document.getElementById('emp-grid').innerHTML=cars.map(npCard).join('');
+  document.getElementById('cat-grid').innerHTML=cars.map(npCard).join('');
   document.getElementById('cat-count').innerHTML='<b>'+cars.length+'</b> coches disponibles';
 
   // buscador: marcas reales
   const marcas=[...new Set(cars.map(c=>c.t.split(' ')[0]))].sort();
   document.getElementById('hs-marca').innerHTML='<option>Cualquier marca</option>'+marcas.map(m=>`<option>${m}</option>`).join('');
+  function fillHomeModelos(){const marca=document.getElementById('hs-marca').value;const mods=cars.filter(c=>marca==='Cualquier marca'||c.t.split(' ')[0]===marca).map(c=>c.t);document.getElementById('hs-modelo').innerHTML='<option>Todos</option>'+mods.map(m=>`<option>${m}</option>`).join('');}
+  fillHomeModelos();
+  document.getElementById('hs-marca').addEventListener('change',fillHomeModelos);
 
   // Hero panel: rota coches reales con su cuota "desde" (48 meses / 10.000 km)
   const heroList=[...cars].sort((a,b)=>a.q-b.q);
@@ -628,20 +688,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   document.getElementById('blog-home').innerHTML=posts.slice(0,3).map(postCard).join('');
   document.getElementById('blog-full').innerHTML=posts.map(postCard).join('');
 
-  const filtGroups=[
-    {h:"Etiqueta DGT",o:[["CERO",1],["ECO",4],["C",7]]},
-    {h:"Carrocería",o:[["SUV/Crossover",6],["Hatchback",3],["Urbano",2]]},
-    {h:"Combustible",o:[["Gasolina",2],["Híbrido",4],["Diésel",4],["Eléctrico",1]]},
-    {h:"Gestora",o:[["Arval",5],["Ayvens",7],["Alphabet",2]]},
-  ];
-  document.getElementById('cat-side').innerHTML=
-    `<div class="fgroup"><h4>Kilómetros / año</h4><div class="seg-mini" id="cat-km"><button data-km="10000">10k</button><button data-km="15000" class="on">15k</button><button data-km="20000">20k</button></div><div class="dyn-note">Los precios se actualizan al instante</div></div>
-     <div class="fgroup"><h4>Duración</h4><div class="seg-mini" id="cat-months"><button data-m="24">24 m</button><button data-m="36" class="on">36 m</button><button data-m="48">48 m</button></div></div>`
-    +filtGroups.map(g=>`<div class="fgroup"><h4>${g.h}</h4><div class="fopts">${g.o.map(([l,n])=>`<label class="fopt"><input type="checkbox">${l}<span class="ct">${n}</span></label>`).join('')}</div></div>`).join('');
-
+  const FUELS=[...new Set(cars.map(c=>c.fuel))];
+  const catMarcas=[...new Set(cars.map(c=>c.t.split(' ')[0]))].sort();
+  function fv(id){const el=document.getElementById(id);return el?el.value:'';}
+  function fillModelos(){const marca=fv('cf-marca');const mods=cars.filter(c=>marca==='Todas'||c.t.split(' ')[0]===marca).map(c=>c.t);document.getElementById('cf-modelo').innerHTML='<option>Todos</option>'+mods.map(m=>`<option>${m}</option>`).join('');}
+  function catSideHTML(){return `
+    <div class="fgroup"><h4>Tipo de cliente</h4><select class="fsel-full" id="cf-tipo"><option>Particular</option><option>Autónomo</option><option>Empresa</option></select></div>
+    <div class="fgroup"><h4>Marca</h4><select class="fsel-full" id="cf-marca"><option>Todas</option>${catMarcas.map(m=>`<option>${m}</option>`).join('')}</select></div>
+    <div class="fgroup"><h4>Modelo</h4><select class="fsel-full" id="cf-modelo"><option>Todos</option></select></div>
+    <div class="fgroup"><h4>Kilómetros / año</h4><div class="seg-mini" id="cat-km"><button data-km="10000">10k</button><button data-km="15000" class="on">15k</button><button data-km="20000">20k</button></div><div class="dyn-note">Los precios se actualizan al instante</div></div>
+    <div class="fgroup"><h4>Meses</h4><div class="seg-mini" id="cat-months"><button data-m="24">24 m</button><button data-m="36" class="on">36 m</button><button data-m="48">48 m</button></div></div>
+    <div class="fgroup"><h4>Combustible</h4><div class="fopts">${FUELS.map(f=>`<label class="fopt"><input type="checkbox" class="cf-fuel" value="${f}">${f}</label>`).join('')}</div></div>
+    <button class="btn btn-line btn-sm" id="cf-reset" style="width:100%">Limpiar filtros</button>`;}
+  function applyCatFilters(){
+    const marca=fv('cf-marca'),modelo=fv('cf-modelo'),tipo=fv('cf-tipo');
+    const fuels=[...document.querySelectorAll('.cf-fuel:checked')].map(x=>x.value);
+    ivaMode=(tipo==='Autónomo')?'exc':'inc';
+    let list=cars.filter(c=>{
+      if(marca&&marca!=='Todas'&&c.t.split(' ')[0]!==marca)return false;
+      if(modelo&&modelo!=='Todos'&&c.t!==modelo)return false;
+      if(fuels.length&&!fuels.includes(c.fuel))return false;
+      return true;});
+    const grid=document.getElementById('cat-grid');
+    grid.innerHTML=list.length?list.map(npCard).join(''):'<p style="grid-column:1/-1;color:#6B6B6B;padding:24px 4px;font-weight:600">No hay coches con estos filtros. Prueba a quitar alguno.</p>';
+    const cc=document.getElementById('cat-count');if(cc)cc.innerHTML='<b>'+list.length+'</b> coches disponibles';}
+  function initCatSide(){
+    document.getElementById('cat-side').innerHTML=catSideHTML();
+    fillModelos();
+    document.getElementById('cf-marca').addEventListener('change',()=>{fillModelos();applyCatFilters();});
+    document.getElementById('cf-modelo').addEventListener('change',applyCatFilters);
+    document.getElementById('cf-tipo').addEventListener('change',applyCatFilters);
+    document.querySelectorAll('.cf-fuel').forEach(x=>x.addEventListener('change',applyCatFilters));
+    document.getElementById('cat-km').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#cat-km button').forEach(x=>x.classList.remove('on'));b.classList.add('on');catKm=+b.dataset.km;applyCatFilters();});
+    document.getElementById('cat-months').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#cat-months button').forEach(x=>x.classList.remove('on'));b.classList.add('on');catMonths=+b.dataset.m;applyCatFilters();});
+    document.getElementById('cf-reset').addEventListener('click',()=>{document.getElementById('cf-marca').value='Todas';fillModelos();document.getElementById('cf-tipo').value='Particular';document.querySelectorAll('.cf-fuel').forEach(x=>x.checked=false);catKm=15000;catMonths=36;document.querySelectorAll('#cat-km button').forEach(x=>x.classList.toggle('on',x.dataset.km==='15000'));document.querySelectorAll('#cat-months button').forEach(x=>x.classList.toggle('on',x.dataset.m==='36'));applyCatFilters();});
+    applyCatFilters();
+  }
+  initCatSide();
   function refreshPrices(){document.querySelectorAll('.pv').forEach(el=>{el.textContent=priceOf(+el.dataset.base);});}
-  document.getElementById('cat-km').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#cat-km button').forEach(x=>x.classList.remove('on'));b.classList.add('on');catKm=+b.dataset.km;refreshPrices();});
-  document.getElementById('cat-months').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#cat-months button').forEach(x=>x.classList.remove('on'));b.classList.add('on');catMonths=+b.dataset.m;refreshPrices();});
   document.getElementById('cat-filter-btn').addEventListener('click',()=>document.getElementById('cat-side').classList.toggle('open'));
 
   document.getElementById('incl-list').innerHTML=["Seguro a todo riesgo <b>sin franquicia</b>","Mantenimiento oficial completo","Cambio de neumáticos incluido","Asistencia en carretera 24 h","Impuesto de circulación","Coche de sustitución"].map(i=>`<li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M20 6 9 17l-5-5"/></svg></span> ${i}</li>`).join('');
@@ -658,13 +742,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     document.getElementById('pdp-dgt').textContent=c.dgt; document.getElementById('pdp-dgt').className='tag dgt '+dgtCls[c.dgt];
     document.getElementById('pdp-car').innerHTML=pdpImg(c);
     document.getElementById('pdp-specs').innerHTML=[
-      ['trans','Carrocería',c.trim],['fuel','Combustible',c.fuel],['seats','Plazas',c.seats+' plazas'],['dgt','Etiqueta DGT',c.dgt]
+      ['trans','Cambio',c.trans],['power','Potencia',c.cv],['fuel','Combustible',c.fuel],['cons','Consumo',(c.cons==='—'?'0 emisiones':c.cons+' '+(c.consUnit||'L/100'))],['seats','Plazas',c.seats+' plazas'],['dgt','Etiqueta DGT',c.dgt]
     ].map(([ic,k,v])=>`<div class="specbox">${IC[ic]}<div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
     document.getElementById('thumbs').innerHTML=[0,1,2,3].map(i=>`<div class="thumb ${i===0?'on':''}">${pdpImg(c)}</div>`).join('');
     document.querySelectorAll('#thumbs .thumb').forEach((t,i)=>t.addEventListener('click',()=>{document.querySelectorAll('#thumbs .thumb').forEach(x=>x.classList.remove('on'));t.classList.add('on');document.querySelectorAll('.g-dot').forEach((d,j)=>d.classList.toggle('on',j===i));}));
     document.querySelectorAll('#seg-plazo button').forEach(b=>b.classList.toggle('on',+b.dataset.plazo===plazo));
     document.querySelectorAll('#seg-km button').forEach(b=>b.classList.toggle('on',+b.dataset.km===km));
-    document.getElementById('similar-grid').innerHTML=cars.filter(x=>x!==c).slice(0,3).map(card).join('');
+    document.getElementById('similar-grid').innerHTML=cars.filter(x=>x!==c).slice(0,6).map(npCard).join('');
     recalc();
   }
   function recalc(){const v=Math.round(pdpCar.q*pf[plazo]*kf[km]);const buy=Math.round(pdpCar.q*2.1);const el=document.getElementById('qval');el.parentElement.style.opacity=0;setTimeout(()=>{el.textContent=v;document.getElementById('buyval').textContent='~'+buy+' €';document.getElementById('save').textContent=(buy-v)+' €';el.parentElement.style.opacity=1;},120);}
@@ -673,7 +757,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   // === Router de vistas ===
   const views={home:'view-home',part:'view-cat',auto:'view-cat',emp:'view-emp',blog:'view-blog',pdp:'view-pdp'};
-  let ivaMode='inc';
   const CHK='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>';
   const catTitles={
     part:['Particulares','Renting para particulares','Cuota fija todo incluido, sin entrada. Ajusta km y meses y los precios se actualizan al instante.',['Sin entrada','Seguro y mantenimiento incluidos','IVA incluido']],
@@ -685,7 +768,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if(catTitles[v]){document.getElementById('cat-eyebrow').textContent=catTitles[v][0];document.getElementById('cat-title').textContent=catTitles[v][1];document.getElementById('cat-sub').textContent=catTitles[v][2];
       document.getElementById('cat-highlights').innerHTML=catTitles[v][3].map(t=>`<span>${CHK}${t}</span>`).join('');
       ivaMode=(v==='auto')?'exc':'inc';
-      document.getElementById('cat-grid').innerHTML=cars.map(card).join('');}
+      const _tp=document.getElementById('cf-tipo');if(_tp)_tp.value=(v==='auto'?'Autónomo':'Particular');
+      applyCatFilters();}
     document.querySelectorAll('#navlinks a').forEach(a=>a.classList.toggle('on',a.dataset.go===v));
     document.getElementById('mobile-menu').classList.remove('open');
     window.scrollTo(0,0);
@@ -696,7 +780,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     const t=e.target.closest('[data-go]');if(t){e.preventDefault();go(t.dataset.go);}
   });
   document.getElementById('nav-burger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('open'));
-  document.getElementById('hs-buscar').addEventListener('click',()=>{const t=document.getElementById('hs-tipo').value;go(t==='Autónomo'?'auto':t==='Empresa'?'emp':'part');});
+  document.getElementById('hs-buscar').addEventListener('click',()=>{
+    const perfil=document.getElementById('hs-tipo').value;
+    const marca=document.getElementById('hs-marca').value;
+    const modelo=document.getElementById('hs-modelo').value;
+    ivaMode=(perfil==='Autónomo')?'exc':'inc';
+    let list=cars;
+    if(marca&&marca!=='Cualquier marca'){list=list.filter(c=>c.t.split(' ')[0]===marca);}
+    if(modelo&&modelo!=='Todos'){list=list.filter(c=>c.t===modelo);}
+    const grid=document.getElementById('home-grid');
+    grid.innerHTML=list.length?list.map(npCard).join(''):'<p style="grid-column:1/-1;color:#6B6B6B;padding:24px 4px;font-weight:600">No hay coches de esa marca ahora mismo. Prueba con otra.</p>';
+    grid.scrollIntoView({behavior:'smooth',block:'start'});
+  });
 
   // === Formulario "Pide la oferta" → email real (FormSubmit) + WhatsApp ===
   const offerModal=document.getElementById('offer-modal');
@@ -706,12 +801,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     document.getElementById('f-km').value=pf.km||'';
     document.getElementById('f-plazo').value=pf.plazo||'';
     document.getElementById('f-precio').value=pf.precio||'';
+    document.getElementById('f-gestora').value=pf.gestora||'';
     offerModal.classList.add('open');}
-  function openOfferPDP(){const parts=pdpCar.t.split(' ');openOffer({marca:parts[0],modelo:parts.slice(1).join(' '),km:(km/1000)+'.000 km',plazo:plazo+' meses',precio:document.getElementById('qval').textContent+' €/mes'});}
+  function openOfferPDP(){const parts=pdpCar.t.split(' ');openOffer({marca:parts[0],modelo:parts.slice(1).join(' '),km:(km/1000)+'.000 km',plazo:plazo+' meses',precio:document.getElementById('qval').textContent+' €/mes',gestora:(pdpCar.fuentes||[]).join(', ')});}
   document.getElementById('modal-x').addEventListener('click',()=>offerModal.classList.remove('open'));
   offerModal.addEventListener('click',e=>{if(e.target===offerModal)offerModal.classList.remove('open');});
   function offerObj(){const g=id=>document.getElementById(id).value||'—';
-    return {Nombre:g('f-nombre')+' '+g('f-apellido'),Ciudad:g('f-ciudad'),Gestora:g('f-gestora'),Vehiculo:g('f-marca')+' '+g('f-modelo'),Kilometros_ano:g('f-km'),Plazo:g('f-plazo'),Precio:g('f-precio')};}
+    return {Nombre:g('f-nombre')+' '+g('f-apellido'),Ciudad:g('f-ciudad'),Telefono:g('f-tel'),Email:g('f-email'),Vehiculo:g('f-marca')+' '+g('f-modelo'),Kilometros_ano:g('f-km'),Plazo:g('f-plazo'),Cuota:g('f-precio'),Gestora:g('f-gestora')};}
   function offerText(){const o=offerObj();return Object.entries(o).map(([k,v])=>`${k.replace(/_/g,' ')}: ${v}`).join('\n');}
   async function sendToEmail(subject,obj){
     try{

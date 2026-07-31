@@ -134,6 +134,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .link-more:hover{gap:11px}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+  @media(max-width:520px){.tiles{grid-template-columns:repeat(2,1fr);gap:11px}}
+  .ctile{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s,border-color .16s}
+  .ctile:hover{border-color:var(--line-2);box-shadow:var(--sh-1);transform:translateY(-3px)}
+  .ct-thumb{aspect-ratio:16/10;background:var(--surface);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+  .ct-thumb img{width:90%;height:82%;object-fit:contain}
+  .ct-thumb .car{width:80%}
+  .ct-info{padding:11px 13px 13px}
+  .ct-brand{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--g-400)}
+  .ct-model{font-size:14.5px;font-weight:800;letter-spacing:-.02em;margin-top:2px;line-height:1.2}
+  .ct-price{margin-top:8px;font-size:11.5px;color:var(--g-500)}
+  .ct-price b{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+  .ct-price b small{font-size:.7rem;font-weight:600;color:var(--g-500)}
   @media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.grid{grid-template-columns:1fr}}
   .card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s,border-color .22s}
@@ -372,7 +385,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="sec-head"><span class="eyebrow">Nuestra selección</span><h2>Coches listos para entregar</h2><p>Precios reales, sin letra pequeña. Elige, configura tu cuota y recíbelo en casa.</p></div>
       <a class="link-more" data-go="part">Mirar todo el catálogo →</a>
     </div>
-    <div class="grid" id="home-grid"></div>
+    <div class="tiles" id="home-grid"></div>
   </section>
 
   <section class="cities"><div class="wrap sec" style="padding-top:clamp(48px,6vw,72px);padding-bottom:clamp(48px,6vw,72px)">
@@ -413,7 +426,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span class="cnt" id="cat-count">Coches disponibles</span>
           <select class="fsort"><option>Ordenar: Relevancia</option><option>Cuota: menor a mayor</option><option>Cuota: mayor a menor</option><option>Novedades</option></select>
         </div>
-        <div class="grid" id="cat-grid"></div>
+        <div class="tiles" id="cat-grid"></div>
       </div>
     </div>
   </div>
@@ -447,7 +460,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <section class="wrap sec" style="padding-top:20px">
     <div class="sec-head"><span class="eyebrow">Para empresas</span><h2>Vehículos disponibles para flotas</h2></div>
-    <div class="grid" id="emp-grid"></div>
+    <div class="tiles" id="emp-grid"></div>
   </section>
 </main>
 
@@ -497,7 +510,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <section class="sec" style="padding:56px 0 var(--pad-sec)">
       <div class="sec-head"><span class="eyebrow">También te puede interesar</span><h2 style="font-size:1.7rem">Otras opciones parecidas</h2></div>
-      <div class="grid" id="similar-grid"></div>
+      <div class="tiles" id="similar-grid"></div>
     </section>
   </div>
 </main>
@@ -573,6 +586,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   function stockOf(c){return c.ofertas>=10?'Entrega inmediata':'Stock verificado';}
   function spec(ic,k,d){return `<div class="spec">${IC[ic]}<div class="sv"><span class="sk">${k}</span><span class="sd">${d}</span></div></div>`}
   function media(c){return c.img?`<img src="${c.img}" alt="${c.t}" loading="lazy" onerror="this.style.display='none'">`:carSVG('#334155');}
+  function compactTile(c){const i=cars.indexOf(c);const parts=c.t.split(' ');const brand=parts[0];const model=parts.slice(1).join(' ')||brand;return `<article class="ctile" data-pdp="${i}">
+    <div class="ct-thumb">${media(c)}</div>
+    <div class="ct-info"><div class="ct-brand">${brand}</div><div class="ct-model">${model}</div>
+      <div class="ct-price">desde <b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span><small> €/mes</small></b></div></div></article>`}
   function card(c){const i=cars.indexOf(c);return `<article class="card">
     <div class="media">${media(c)}</div>
     <div class="card-body"><div class="c-title">${c.t}</div><div class="c-trim">${c.trim}</div>
@@ -581,9 +598,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="card-price"><div><span class="from">Cuota desde</span><b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span><small> €/mes</small></b><span class="iva">${ivaMode==='exc'?'+ IVA · deducible':'IVA incluido'}</span></div></div>
     <div class="card-cta"><button class="btn btn-line btn-sm" data-pdp="${i}">Ver ficha</button><button class="btn btn-o btn-sm" data-pdp="${i}">Reservar</button></div></article>`}
 
-  document.getElementById('home-grid').innerHTML=cars.slice(0,6).map(card).join('');
-  document.getElementById('emp-grid').innerHTML=cars.slice(0,6).map(card).join('');
-  document.getElementById('cat-grid').innerHTML=cars.map(card).join('');
+  document.getElementById('home-grid').innerHTML=cars.map(compactTile).join('');
+  document.getElementById('emp-grid').innerHTML=cars.map(compactTile).join('');
+  document.getElementById('cat-grid').innerHTML=cars.map(compactTile).join('');
   document.getElementById('cat-count').innerHTML='<b>'+cars.length+'</b> coches disponibles';
 
   // buscador: marcas reales
@@ -664,7 +681,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     document.querySelectorAll('#thumbs .thumb').forEach((t,i)=>t.addEventListener('click',()=>{document.querySelectorAll('#thumbs .thumb').forEach(x=>x.classList.remove('on'));t.classList.add('on');document.querySelectorAll('.g-dot').forEach((d,j)=>d.classList.toggle('on',j===i));}));
     document.querySelectorAll('#seg-plazo button').forEach(b=>b.classList.toggle('on',+b.dataset.plazo===plazo));
     document.querySelectorAll('#seg-km button').forEach(b=>b.classList.toggle('on',+b.dataset.km===km));
-    document.getElementById('similar-grid').innerHTML=cars.filter(x=>x!==c).slice(0,3).map(card).join('');
+    document.getElementById('similar-grid').innerHTML=cars.filter(x=>x!==c).slice(0,6).map(compactTile).join('');
     recalc();
   }
   function recalc(){const v=Math.round(pdpCar.q*pf[plazo]*kf[km]);const buy=Math.round(pdpCar.q*2.1);const el=document.getElementById('qval');el.parentElement.style.opacity=0;setTimeout(()=>{el.textContent=v;document.getElementById('buyval').textContent='~'+buy+' €';document.getElementById('save').textContent=(buy-v)+' €';el.parentElement.style.opacity=1;},120);}
@@ -685,7 +702,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if(catTitles[v]){document.getElementById('cat-eyebrow').textContent=catTitles[v][0];document.getElementById('cat-title').textContent=catTitles[v][1];document.getElementById('cat-sub').textContent=catTitles[v][2];
       document.getElementById('cat-highlights').innerHTML=catTitles[v][3].map(t=>`<span>${CHK}${t}</span>`).join('');
       ivaMode=(v==='auto')?'exc':'inc';
-      document.getElementById('cat-grid').innerHTML=cars.map(card).join('');}
+      document.getElementById('cat-grid').innerHTML=cars.map(compactTile).join('');}
     document.querySelectorAll('#navlinks a').forEach(a=>a.classList.toggle('on',a.dataset.go===v));
     document.getElementById('mobile-menu').classList.remove('open');
     window.scrollTo(0,0);
