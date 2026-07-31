@@ -28,7 +28,7 @@ def M(make,model):
                 fichaslug='renting-'+slug(make+' '+model))
 
 CSS="""
-:root{--accent:#e8380d;--navy:#16224e;--ink:#1c2233;--ink2:#5a6072;--line:#e9e2d6;--bg:#f6f3ee;--panel:#fff}
+:root{--accent:#F04E00;--navy:#16224e;--ink:#1c2233;--ink2:#5a6072;--line:#e9e2d6;--bg:#f6f3ee;--panel:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65}
 .wrap{max-width:820px;margin:0 auto;padding:0 20px}
 nav{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 0}nav .wrap{display:flex;justify-content:space-between;align-items:center}

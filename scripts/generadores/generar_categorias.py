@@ -32,10 +32,10 @@ SUVY = {'QASHQAI','T-ROC','TIGUAN','ARONA','SPORTAGE','KONA','TUCSON','FORMENTOR
 CSS = """
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --accent:#F04E00;--accent-dk:#d94000;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --accent:#F04E00;--accent-dk:#E54E00;--accent-lt:#FFF4EE;--accent-border:#FFD4BD;
       --ink:#111110;--ink-2:#333;--ink-3:#5a5a56;--ink-4:#8a8a84;--ink-5:#b0b0aa;
       --border:#E8E8E5;--surface:#fff;--surface-2:#F7F7F5;--surface-3:#f0f0ee;
-      --green:#00c47a;--green-lt:#e6faf3;--green-dk:#00875a;
+      --green:#00A86B;--green-lt:#e6faf3;--green-dk:#047a51;
       --radius:12px;--radius-sm:8px;
       --shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.06);
     }

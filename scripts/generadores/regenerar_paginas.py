@@ -139,12 +139,13 @@ def build_page(data):
   <style>
     *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
     :root{{
-      --accent:#e8380d;--accent-dk:#c42e0a;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
-      --ink:#111;--ink-2:#444;--ink-3:#666;--ink-4:#999;--ink-5:#bbb;
-      --border:#ebebeb;--border-2:#e0e0e0;
-      --surface:#fff;--surface-2:#f7f7f5;--surface-3:#fafafa;
-      --green:#00c47a;--green-lt:#e8f5ee;--green-dk:#00875a;
-      --radius:12px;--radius-sm:7px;
+      --accent:#F04E00;--accent-dk:#E54E00;--accent-lt:#FFF4EE;--accent-border:#FFD4BD;
+      --brand:#FF5C00;
+      --ink:#111;--ink-2:#3D3D3D;--ink-3:#666;--ink-4:#999;--ink-5:#C8C8C8;
+      --border:#ECECEC;--border-2:#DEDEDE;
+      --surface:#fff;--surface-2:#F7F7F5;--surface-3:#FBFBF9;
+      --green:#00A86B;--green-lt:#E6F7F0;--green-dk:#047a51;
+      --radius:12px;--radius-sm:8px;
       --shadow:0 1px 4px rgba(0,0,0,.06),0 2px 12px rgba(0,0,0,.04);
       --shadow-lg:0 4px 24px rgba(0,0,0,.10);
     }}
