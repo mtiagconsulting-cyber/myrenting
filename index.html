@@ -658,6 +658,28 @@ a.model-card{text-decoration:none;color:inherit}
   .sbox-go{width:100%;text-align:center;border-radius:var(--r-sm)}
   .sbox-input{min-width:0}
 }
+/* === REBRAND: tarjeta naranja (estilo preview) sobre datos reales === */
+.models-grid{gap:16px}
+.model-card{background:linear-gradient(158deg,#FF7A2E,#F04E00 88%)!important;color:#fff!important;border:none!important;border-radius:15px!important;box-shadow:0 1px 3px rgba(20,20,20,.05),0 14px 28px rgba(240,78,0,.14)!important;overflow:hidden;position:relative}
+.model-card:hover{transform:translateY(-4px);box-shadow:0 26px 48px rgba(240,78,0,.24)!important}
+.model-card::after{content:"";position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(closest-side,rgba(255,255,255,.15),transparent);pointer-events:none;z-index:0}
+.card-img-zone,.card-img-zone.g-hybrid,.card-img-zone.g-elec,.card-img-zone.g-gas,.card-img-zone.g-diesel{background:transparent!important;height:150px!important;min-height:150px!important;position:relative;z-index:1}
+.card-img-zone img{height:132px!important;max-height:132px!important;mix-blend-mode:normal!important;filter:drop-shadow(0 12px 14px rgba(0,0,0,.3))!important}
+.card-body-v3{position:relative;z-index:1}
+.card-make-v3{color:rgba(255,255,255,.85)!important}
+.card-name-v3{color:#fff!important}
+.v3-plabel{color:rgba(255,255,255,.8)!important}
+.v3-price{color:#fff!important}
+.v3-price sub{color:rgba(255,255,255,.82)!important}
+.v3-iva.inc,.v3-iva.noinc{background:rgba(255,255,255,.18)!important;color:#fff!important}
+.card-meta-v3{color:rgba(255,255,255,.85)!important}
+.card-meta-v3 strong{color:#fff!important}
+.card-ftr{background:rgba(255,255,255,.14)!important;border-top:1px solid rgba(255,255,255,.22)!important;position:relative;z-index:1}
+.card-link-v3{color:#fff!important}
+.card-fuel-pill{background:rgba(255,255,255,.18)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.4)!important}
+.card-excl-pill{background:#111!important;color:#fff!important;border-color:#111!important}
+.card-fav{background:rgba(255,255,255,.92)!important;border-color:transparent!important}
+.gdots .gdot{border:1.5px solid rgba(255,255,255,.55)}
 </style>
 </head>
 <body>
