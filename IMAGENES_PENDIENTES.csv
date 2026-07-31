@@ -1,0 +1,72 @@
+Marca,Modelo,Version,Estado foto,Archivo esperado
+Alfa,Romeo Junior,Alfa Romeo Junior Ibrida Ti 1.2 Vgt,OK (local),/img/modelos/alfa-romeo-junior.png
+Audi,A1,Audi A1 Sb Adrenalin Edition 30Tfsi 116Cv Stronic,OK (local),/img/modelos/audi-a1.png
+Bmw,Ix1,Bmw Ix1 Edrive20,EXTERNA (falta local),/img/modelos/bmw-ix1.png
+Bmw,Serie 1,Bmw Serie 1 120,OK (local),/img/modelos/bmw-serie-1.png
+Byd,Atto,Byd Atto Atto 2 Dm-I,OK (local),/img/modelos/byd-atto.png
+Byd,Atto 2,Byd Atto 2 Dm-I Boost,OK (local),/img/modelos/byd-atto-2.png
+Byd,Dolphin,Byd Dolphin Dolphin Surf Boost,OK (local),/img/modelos/byd-dolphin.png
+Byd,Dolphin Surf,Byd Dolphin Surf Boost,OK (local),/img/modelos/byd-dolphin-surf.png
+Citroen,Berlingo,Citroen Berlingo Van Furgón M,OK (local),/img/modelos/citroen-berlingo.png
+Citroen,E Berlingo,Citroën Ë-Berlingo Ë-Berlingo Van M Carga Incr 100Kw 50Kwh,OK (local),/img/modelos/citroen-e-berlingo.png
+Citroen,E-Berlingo,Citroen Eberlingo Van Talla M,OK (local),/img/modelos/citroen-e-berlingo.png
+Dacia,Sandero,Dacia Sandero Stepway Expression Eco-G 120 Auto,OK (local),/img/modelos/dacia-sandero.png
+Ebro,S400,Ebro S400 1.5 Dhe Hev Excellence Cvt,OK (local),/img/modelos/ebro-s400.png
+Ebro,S800,Ebro S800 1.5 Tgdi Phev Luxury E-Cvt,EXTERNA (falta local),/img/modelos/ebro-s800.png
+Hyundai,Tucson,Hyundai Tucson 1.6T 239Cv Hev At Klass,OK (local),/img/modelos/hyundai-tucson.png
+Jaecoo,5,Jaecoo 5 Hev Exclusive 1.5T Dhe + 2 Motores Eléctricos 224 Cv,OK (local),/img/modelos/jaecoo-5.png
+Jaecoo,7,Jaecoo 7 Phev Business,OK (local),/img/modelos/jaecoo-7.png
+Jaecoo,8,Jaecoo 8 Phev Exclusive 1.5 Tgdi 428Cv 7 Plazas,EXTERNA (falta local),/img/modelos/jaecoo-8.png
+Kia,Pv5,Kia Pv5 Passenger L2H1 Long Range Plus,EXTERNA (falta local),/img/modelos/kia-pv5.png
+Kia,Pv5 Cargo,Kia Pv5 Cargo L2H1 Lr Essenitial,EXTERNA (falta local),/img/modelos/kia-pv5-cargo.png
+Kia,Pv5 Passenger,Kia Pv5 Passenger L2H1 Lr Plus,EXTERNA (falta local),/img/modelos/kia-pv5-passenger.png
+Lancia,Ypsilon,Lancia Ypsilon Lx Ibrida,OK (local),/img/modelos/lancia-ypsilon.png
+Maserati,Grecale,Maserati Grecale L4 Mhev 300Cv Awd,EXTERNA (falta local),/img/modelos/maserati-grecale.png
+Mazda,2,Mazda 2 Hybrid 2026 1.5 85Kw 116Cv Cvt Centre-Line,EXTERNA (falta local),/img/modelos/mazda-2.png
+Mazda,3,Mazda 3 2027 2.5L E-Skyactuv H Mhev 140Cv 6Mt Fwd Prime-Line,EXTERNA (falta local),/img/modelos/mazda-3.png
+Mazda,Cx-30,Mazda Cx-30 2027 2.5L E-Skyactiv H Mhev 140Cv 6Mt Fwd Prime-Line,OK (local),/img/modelos/mazda-cx-30.png
+Mazda,Cx-5,Mazda Cx-5 2.5 E-Skyactiv-G 141Cv Fwd Aut Centre-Line,OK (local),/img/modelos/mazda-cx-5.png
+Mazda,Cx-60,Mazda Cx-60 2.5L E-Skyactiv Phev Awd 241Kw (327 Cv) 8At Exclusive-Line,OK (local),/img/modelos/mazda-cx-60.png
+Mercedes,Benz Citan,Mercedes-Benz Citan 110 Cdi 70Kw Furgón Base Cargo,EXTERNA (falta local),/img/modelos/mercedes-benz-citan.png
+Mercedes,Benz Cla,Mercedes-Benz Cla Cla 250+ Con Tecnología Eq,EXTERNA (falta local),/img/modelos/mercedes-benz-cla.png
+Mercedes,Benz Clase Gle,Mercedes-Benz Clase Gle Gle 350 De 4Matic,EXTERNA (falta local),/img/modelos/mercedes-benz-clase-gle.png
+Mercedes,Benz Glb,Mercedes-Benz Glb Glb 250+,EXTERNA (falta local),/img/modelos/mercedes-benz-glb.png
+Mercedes,Benz Glc,Mercedes-Benz Glc Glc 220 D 4Matic,EXTERNA (falta local),/img/modelos/mercedes-benz-glc.png
+Mercedes,Benz Glc Coupe,Mercedes-Benz Glc Coupé Glc 300 De 4Matic,EXTERNA (falta local),/img/modelos/mercedes-benz-glc-coupe.png
+Mercedes,Benz Gle Coupe,Mercedes-Benz Gle Coupé,EXTERNA (falta local),/img/modelos/mercedes-benz-gle-coupe.png
+Mg,Mg3,Mg3 Hybrid+ Business My25.5,EXTERNA (falta local),/img/modelos/mg-mg3.png
+Mg,Zs,Mg Zs Hybrid+ Business,OK (local),/img/modelos/mg-zs.png
+Nissan,Interstar,"Nissan Interstar Furgón L2H2 3,5T 96Kw Fwd Acenta",EXTERNA (falta local),/img/modelos/nissan-interstar.png
+Nissan,Juke,Nissan Juke 1.6 Hybrid 105Kw (145Cv) N-Connecta,OK (local),/img/modelos/nissan-juke.png
+Nissan,Micra,Nissan Micra Standard Range 4X2 N-Connecta,OK (local),/img/modelos/nissan-micra.png
+Nissan,Qashqai,Nissan Qashqai Dig-T 103Kw (140Cv) Mhev 4X2 Acenta,OK (local),/img/modelos/nissan-qashqai.png
+Nissan,Townstar,Nissan Townstar 2 Plazas 45Kwh-90Kw L2 Comfort,local?,/img/modelos/nissan-townstar.png
+Omoda,5,Omoda 5 Hev Business,OK (local),/img/modelos/omoda-5.png
+Omoda,7,Omoda 7 Phev Premium,OK (local),/img/modelos/omoda-7.png
+Omoda,9,Omoda 9 Shs Premium 1.5 Tgdi 3Dht 395Kw (537Cv) Awd,OK (local),/img/modelos/omoda-9.png
+Opel,Combo E,Opel Combo-E Cargo M 800Kg Eléctrico 100Kw Batería 5,OK (local),/img/modelos/opel-combo-e.png
+Opel,Combo-E,Opel Combo-E Cargo M 800Kg,OK (local),/img/modelos/opel-combo-e.png
+Opel,Corsa,Opel Corsa Gs 1.2T,OK (local),/img/modelos/opel-corsa.png
+Opel,Frontera,Opel Frontera Gs 1.2 T Xht Hybrid Edct6 S/S,OK (local),/img/modelos/opel-frontera.png
+Opel,Mokka,Opel Mokka 1.2 T Xht Hybrid Edct6 Gs,OK (local),/img/modelos/opel-mokka.png
+Peugeot,208,Peugeot 208 Allure Gasolina 100 S&S 6 Vel. Man,OK (local),/img/modelos/peugeot-208.png
+Peugeot,Boxer,Peugeot Boxer 3.0 L2 H1 Bhdi 88Kw (120Cv),OK (local),/img/modelos/peugeot-boxer.png
+Peugeot,Rifter,Peugeot Rifter Active Business Standard N1 Bluehdi 100 S/S,OK (local),/img/modelos/peugeot-rifter.png
+Renault,Austral,Renault Austral Evolution E-Tech Full Hybrid,OK (local),/img/modelos/renault-austral.png
+Renault,Captur,Renault Captur Evolution Eco-G Ss,OK (local),/img/modelos/renault-captur.png
+Renault,Symbioz,Renault Symbioz Evolution E-Tech Full Hybrid,OK (local),/img/modelos/renault-symbioz.png
+Seat,Leon,Seat Leon 2.0 Tdi Cr St/Sp Style Xl,OK (local),/img/modelos/seat-leon.png
+Skoda,Elroq,Škoda Elroq 85 82 Kwh Batterie 210 Kw (286 Cv),OK (local),/img/modelos/skoda-elroq.png
+Skoda,Fabia,Skoda Fabia 1.5 Tsi 110Kw (150Cv) Dsg Plus,OK (local),/img/modelos/skoda-fabia.png
+Skoda,Kamiq,Škoda Kamiq Selection 1.0 Tsi 115Cv Manual,OK (local),/img/modelos/skoda-kamiq.png
+Skoda,Karoq,Škoda Karoq 2.0 Tdi 110Kw 150Cv Dsg 7 Vel.,OK (local),/img/modelos/skoda-karoq.png
+Skoda,Octavia,Škoda Octavia Limo Selection 2.0 Tdi 150Cv Dsg 7Vel,OK (local),/img/modelos/skoda-octavia.png
+Toyota,C-Hr,Toyota C-Hr Advance Hybrid 140 E-Cvt,OK (local),/img/modelos/toyota-c-hr.png
+Toyota,Hilux,Toyota Hilux Doble Cabina Gx 2.4B 150Cv 6At 4X4,OK (local),/img/modelos/toyota-hilux.png
+Toyota,Proace City,Toyota Proace City Van L1 Gx,OK (local),/img/modelos/toyota-proace-city.png
+Toyota,Proace Max,Toyota Proace Max L3H2 Gx 140 Cv,OK (local),/img/modelos/toyota-proace-max.png
+Toyota,Yaris,Toyota Yaris Active 120H 116Cv,OK (local),/img/modelos/toyota-yaris.png
+Toyota,Yaris Cross,Toyota Yaris Cross Active Plus 130H Active,OK (local),/img/modelos/toyota-yaris-cross.png
+Volkswagen,Polo,Volkswagen Polo Match 1.0 Tsi 70Kw 95Cv,OK (local),/img/modelos/volkswagen-polo.png
+Volkswagen,T-Roc,"Volkswagen T-Roc ""Más"" 1.5 Etsi 85Kw 116Cv Dsg",OK (local),/img/modelos/volkswagen-t-roc.png
+Volkswagen,Tiguan,"Volkswagen Tiguan ""Más"" 1.5 Etsi 110Kw 150Cv Dsg 7Vel",OK (local),/img/modelos/volkswagen-tiguan.png
