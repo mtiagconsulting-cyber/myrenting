@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/favicon.png">
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NHXGQF97');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,13 +30,12 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --accent:#F04E00;--accent-dk:#E54E00;--accent-lt:#FFF4EE;--accent-border:#FFD4BD;
-      --brand:#FF5C00;
-      --ink:#111;--ink-2:#3D3D3D;--ink-3:#666;--ink-4:#999;--ink-5:#C8C8C8;
-      --border:#ECECEC;--border-2:#DEDEDE;
-      --surface:#fff;--surface-2:#F7F7F5;--surface-3:#FBFBF9;
-      --green:#00A86B;--green-lt:#E6F7F0;--green-dk:#047a51;
-      --radius:12px;--radius-sm:8px;
+      --accent:#e8380d;--accent-dk:#c42e0a;--accent-lt:#fff5f2;--accent-border:#ffd5cc;
+      --ink:#111;--ink-2:#444;--ink-3:#666;--ink-4:#999;--ink-5:#bbb;
+      --border:#ebebeb;--border-2:#e0e0e0;
+      --surface:#fff;--surface-2:#f7f7f5;--surface-3:#fafafa;
+      --green:#00c47a;--green-lt:#e8f5ee;--green-dk:#00875a;
+      --radius:12px;--radius-sm:7px;
       --shadow:0 1px 4px rgba(0,0,0,.06),0 2px 12px rgba(0,0,0,.04);
       --shadow-lg:0 4px 24px rgba(0,0,0,.10);
     }
@@ -215,6 +215,23 @@
       .price-strong{font-size:16px;}
       .incluye-grid{grid-template-columns:1fr 1fr;}
     }
+  
+    /* ===== HUB v4 ===== */
+    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:6px;}
+    .hub-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s;}
+    .hub-card:hover{box-shadow:0 12px 30px rgba(30,20,15,.12);transform:translateY(-3px);border-color:#e0d6ce;}
+    .hub-img{height:120px;background:radial-gradient(circle at 50% 45%,#f6f3f0,#ece9e4);display:flex;align-items:center;justify-content:center;padding:12px;}
+    .hub-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12));}
+    .hub-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:3px;flex:1;}
+    .hub-brand{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);}
+    .hub-model{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--ink);line-height:1.15;}
+    .hub-meta{font-size:11.5px;color:var(--ink-4,#6a615b);margin-top:1px;}
+    .hub-price{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-4,#6a615b);}
+    .hub-price b{font-size:19px;color:var(--accent);font-weight:850;letter-spacing:-.5px;}
+    .hub-empty{padding:26px;text-align:center;color:var(--ink-4,#6a615b);font-size:14px;}
+    .seo-block{max-width:820px;line-height:1.7;color:var(--ink-3,#4a423d);font-size:15px;}
+    .seo-block p{margin:0 0 14px;}
+
   </style>
 </head>
 <body>
@@ -236,7 +253,7 @@
   <div>
     <div class="hero-badges">
       <span class="badge badge-type">Lexus</span>
-      <span class="badge-count">— ofertas · — gestoras</span>
+      <span class="badge-count">94 ofertas &middot; 3 gestoras</span>
     </div>
     <h1 class="hero-title">Renting <em>Lexus</em></h1>
     <p class="hero-sub"></p>
@@ -246,7 +263,7 @@
         <div class="precio-label">Mejor precio disponible</div>
         <div class="precio-val">
           <span class="precio-desde">desde</span>
-          <span class="precio-num">—</span>
+          <span class="precio-num">206</span>
           <span class="precio-unit">€/mes</span>
         </div>
         <div class="precio-sub">Segun condiciones · Ver tabla para mas detalles</div>
@@ -257,15 +274,15 @@
     <div class="hero-stats">
       <div class="stat-box">
         <div class="stat-label">Desde</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">206€</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Gestoras</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">3</div>
       </div>
       <div class="stat-box">
         <div class="stat-label">Ofertas</div>
-        <div class="stat-val">—</div>
+        <div class="stat-val">94</div>
       </div>
     </div>
 
@@ -278,39 +295,98 @@
   </div>
 
   <div class="hero-img">
-    <img src="/img/modelos/dacia-sandero.png" alt="Renting Lexus" loading="eager" decoding="async" onerror="this.parentElement.innerHTML='<div style="color:#ccc;font-size:12px;">Lexus</div>'">
+    <div style="color:#ccc;font-size:13px;text-align:center;">Lexus</div>
   </div>
 </section>
 
-<!-- OFERTAS DESPLEGABLES -->
+<!-- MODELOS -->
 <div class="section" style="margin-top:8px;">
-  <div class="section-title">Compara todas las ofertas</div>
-  <div class="section-sub">Haz clic para desplegar y filtra por km, perfil o gestora</div>
-
-  <div class="ofertas-header" onclick="toggleOfertas(this)">
-    <div class="ofertas-header-left">
-      <span class="ofertas-count-badge" id="badge-count">—</span>
-      <span class="ofertas-count">ofertas disponibles — Lexus</span>
-    </div>
-    <span class="ofertas-toggle-icon" id="toggle-icon">▼</span>
-  </div>
-  <div class="ofertas-body collapsed" id="ofertas-body">
-    <div class="filter-bar">
-      <div class="filter-bar-inner">
-        
+  <div class="section-title">24 modelos disponibles</div>
+  <div class="section-sub">Pulsa un modelo para comparar todas las gestoras</div>
+  <div class="hub-grid">
+    
+    <a class="hub-card" href="/renting-dacia-sandero.html">
+      <div class="hub-img"><img src="/img/modelos/dacia-sandero.png" alt="Dacia Sandero" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Dacia</div>
+        <div class="hub-model">Sandero</div>
+        <div class="hub-meta">2 gestoras &middot; 5 ofertas</div>
+        <div class="hub-price">desde <b>217&euro;</b>/mes</div>
       </div>
-    </div>
-    <div class="comp-table-wrap">
-      <table class="comp-table">
-        <thead></thead>
-        <tbody id="comp-tbody"></tbody>
-      </table>
-      <div class="no-results-filter" id="no-results-msg" style="display:none">
-        No hay ofertas con estos filtros. <button class="btn-reset" onclick="resetFiltros()">Ver todas</button>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    <a class="hub-card" href="/renting-opel-corsa.html">
+      <div class="hub-img"><img src="/img/modelos/opel-corsa.png" alt="Opel Corsa" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Opel</div>
+        <div class="hub-model">Corsa</div>
+        <div class="hub-meta">3 gestoras &middot; 6 ofertas</div>
+        <div class="hub-price">desde <b>244&euro;</b>/mes</div>
       </div>
-    </div>
+    </a>
+    
+    
+    
+    
+    <a class="hub-card" href="/renting-renault-captur.html">
+      <div class="hub-img"><img src="/img/modelos/renault-captur.png" alt="Renault Captur" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Renault</div>
+        <div class="hub-model">Captur</div>
+        <div class="hub-meta">3 gestoras &middot; 8 ofertas</div>
+        <div class="hub-price">desde <b>259&euro;</b>/mes</div>
+      </div>
+    </a>
+    
+    <a class="hub-card" href="/renting-toyota-yaris.html">
+      <div class="hub-img"><img src="/img/modelos/ma-toyota-yaris-particular.jpg" alt="Toyota Yaris" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Toyota</div>
+        <div class="hub-model">Yaris</div>
+        <div class="hub-meta">2 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>269&euro;</b>/mes</div>
+      </div>
+    </a>
+    
+    <a class="hub-card" href="/renting-skoda-kamiq.html">
+      <div class="hub-img"><img src="/img/modelos/skoda-kamiq.png" alt="Skoda Kamiq" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Skoda</div>
+        <div class="hub-model">Kamiq</div>
+        <div class="hub-meta">2 gestoras &middot; 10 ofertas</div>
+        <div class="hub-price">desde <b>271&euro;</b>/mes</div>
+      </div>
+    </a>
+    
+    <a class="hub-card" href="/renting-peugeot-rifter.html">
+      <div class="hub-img"><img src="/img/modelos/peugeot-rifter.png" alt="Peugeot Rifter" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Peugeot</div>
+        <div class="hub-model">Rifter</div>
+        <div class="hub-meta">3 gestoras &middot; 4 ofertas</div>
+        <div class="hub-price">desde <b>288&euro;</b>/mes</div>
+      </div>
+    </a>
+    
+    <a class="hub-card" href="/renting-skoda-karoq.html">
+      <div class="hub-img"><img src="/img/modelos/skoda-karoq.png" alt="Skoda Karoq" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="hub-body">
+        <div class="hub-brand">Skoda</div>
+        <div class="hub-model">Karoq</div>
+        <div class="hub-meta">3 gestoras &middot; 6 ofertas</div>
+        <div class="hub-price">desde <b>291&euro;</b>/mes</div>
+      </div>
+    </a>
+    
   </div>
 </div>
+
 
 <!-- QUE INCLUYE -->
 <div class="section">
@@ -326,9 +402,10 @@
 
 <!-- SEO CONTENT -->
 <div class="section">
-  
-  
+  <div class="section-title">Renting Lexus: como funciona</div>
+  <div class="seo-block"><p>Compara <strong>24 modelos en renting</strong> desde <strong>206&euro;/mes</strong>, con seguro y mantenimiento incluidos y sin entrada.</p></div>
 </div>
+
 
 <!-- FAQ -->
 <div class="section">
@@ -398,15 +475,7 @@
   }
 
   // Auto-abrir si hay pocas ofertas
-  window.addEventListener('DOMContentLoaded', () => {
-    const total = document.querySelectorAll('#comp-tbody tr').length;
-    document.getElementById('badge-count').textContent = total;
-    document.getElementById('filter-count') && (document.getElementById('filter-count').textContent = total + ' ofertas');
-    if (total <= 4) {
-      document.getElementById('ofertas-body').classList.remove('collapsed');
-      document.getElementById('toggle-icon').classList.add('open');
-    }
-  });
+  /* tabla antigua eliminada */
 
   // Filtros
   function filtrarTabla() {
@@ -472,7 +541,7 @@
     const form = e.target;
     const data = new FormData(form);
     try {
-      await fetch('https://formsubmit.co/ajax/info@myrenting.es', {
+      await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com', {
         method:'POST', headers:{'Accept':'application/json'}, body: data
       });
     } catch(err) {}
@@ -487,5 +556,6 @@
     item.classList.toggle('open');
   }
 </script>
+<a href="https://wa.me/34691766768?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20oferta%20de%20renting" target="_blank" rel="noopener" id="wa-float" aria-label="Contactar por WhatsApp" style="position:fixed;bottom:20px;right:20px;z-index:400;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.5-5.6c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/></svg></a>
 </body>
 </html>

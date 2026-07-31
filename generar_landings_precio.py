@@ -29,16 +29,16 @@ for (mk,md),offs in grp.items():
         fuels=' '.join(o.get('fuel','').lower() for o in offs), img=img,
         n=len(offs)))
 
-CSS=""":root{--accent:#F04E00;--navy:#16224e;--ink:#1c2233;--ink2:#5a6072;--line:#e9e2d6;--bg:#f6f3ee;--panel:#fff}
+CSS=""":root{--accent:#e8380d;--navy:#16224e;--ink:#1c2233;--ink2:#5a6072;--line:#e9e2d6;--bg:#f6f3ee;--panel:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
 .mrnav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:20px;background:#fff;border-bottom:1px solid #ece7e2;padding:0 32px;height:64px;}
 .mrnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
-.mrnav-ic{width:34px;height:34px;border-radius:9px;background:#F04E00;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;}
-.mrnav-tx{font-size:19px;font-weight:800;color:#17120f;letter-spacing:-.6px;}.mrnav-tx span{color:#F04E00;}
+.mrnav-ic{width:34px;height:34px;border-radius:9px;background:#e8380d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;}
+.mrnav-tx{font-size:19px;font-weight:800;color:#17120f;letter-spacing:-.6px;}.mrnav-tx span{color:#e8380d;}
 .mrnav-links{display:flex;align-items:center;gap:4px;flex:1;}
 .mrnav-links a{font-size:14px;font-weight:500;color:#5c534d;padding:6px 12px;border-radius:8px;text-decoration:none;}
 .mrnav-links a:hover{color:#17120f;background:#f5f2ef;}
-.mrnav-cta{background:#F04E00;color:#fff;text-decoration:none;font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:10px;flex-shrink:0;}
+.mrnav-cta{background:#e8380d;color:#fff;text-decoration:none;font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:10px;flex-shrink:0;}
 @media(max-width:760px){.mrnav{padding:0 18px;gap:12px;}.mrnav-links{display:none;}}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 .crumb{font-size:13px;color:var(--ink2);padding:16px 0}.crumb a{color:var(--ink2)}
@@ -54,7 +54,7 @@ h2{font-size:21px;font-weight:800;margin:30px 0 12px}
 .card-img{background:#faf7f5;height:120px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #f0ece8}
 .card-img img{width:100%;height:100%;object-fit:contain;padding:10px}
 .card-b{padding:12px 14px}.card-n{font-size:13.5px;font-weight:800;color:#17120f;margin-bottom:5px}
-.card-p{font-size:21px;font-weight:850;color:#F04E00;letter-spacing:-.5px;margin-bottom:9px}.card-p span{font-size:11px;color:#999;font-weight:600}
+.card-p{font-size:21px;font-weight:850;color:#e8380d;letter-spacing:-.5px;margin-bottom:9px}.card-p span{font-size:11px;color:#999;font-weight:600}
 .card-cta{background:#17120f;color:#fff;text-align:center;padding:8px;border-radius:8px;font-size:11.5px;font-weight:700}
 p{color:var(--ink2)}
 .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px 20px;margin-top:8px}
@@ -103,7 +103,7 @@ def page(fname,title,desc,h1,intro,filt,faqs,rel):
 <div class="grid">
     {cards}
   </div>
-<div style="text-align:center;margin:22px 0"><a href="/" style="display:inline-block;background:#F04E00;color:#fff;padding:12px 26px;border-radius:99px;font-weight:700;text-decoration:none;font-size:14px">Ver todas las ofertas &rarr;</a></div>
+<div style="text-align:center;margin:22px 0"><a href="/" style="display:inline-block;background:#e8380d;color:#fff;padding:12px 26px;border-radius:99px;font-weight:700;text-decoration:none;font-size:14px">Ver todas las ofertas &rarr;</a></div>
 <h2>Preguntas frecuentes</h2>
 {faq_html}
 <h2>También te puede interesar</h2>
