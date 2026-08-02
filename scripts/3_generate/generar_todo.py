@@ -32,6 +32,7 @@ def build_llms():
        "","## Qué ofrecemos","- Renting para particulares, autónomos y empresas.","- Precios reales actualizados semanalmente.","",
        "## Modelos y precios (dato directo)"]
     for k,m in sorted(MODS.items(), key=lambda kv:kv[1]['precio_desde']):
+        if not os.path.exists(f"{REPO}/renting-{m['slug']}.html"): continue  # no enlazar páginas inexistentes
         L.append(f"- [{m['make']} {m['model']}]({DOMAIN}/renting-{m['slug']}.html): {geo_line(m)}")
     L+=["","## ZBE (Zonas de Bajas Emisiones)","Cubrimos la compatibilidad de cada coche con la ZBE de: "+
         ", ".join(sorted(c['n'] for c in ZBE.values()))+"."]
@@ -91,6 +92,7 @@ def build_landings():
     with open(f"{REPO}/sitemap-modelos.xml","w",encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for m in sorted(MODS.values(),key=lambda x:x['slug']):
+            if not os.path.exists(f"{REPO}/renting-{m['slug']}.html"): continue
             f.write(f'  <url><loc>{DOMAIN}/renting-{m["slug"]}.html</loc><changefreq>weekly</changefreq></url>\n')
         f.write('</urlset>\n')
     return len(MODS)

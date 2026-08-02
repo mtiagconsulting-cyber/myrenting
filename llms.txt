@@ -23,7 +23,6 @@
 - [Skoda Fabia](https://myrenting.es/renting-skoda-fabia.html): El renting del Skoda Fabia cuesta desde 320 €/mes (Gasolina, 150 CV, 5 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
 - [Toyota Proace City](https://myrenting.es/renting-toyota-proace-city.html): El renting del Toyota Proace City cuesta desde 322 €/mes (Diésel, 100 CV, 2 plazas), sin entrada y con seguro y mantenimiento incluidos.
 - [Mg Mg3](https://myrenting.es/renting-mg-mg3.html): El renting del Mg Mg3 cuesta desde 325 €/mes (Híbrido, 194 CV, 5 plazas, etiqueta ECO), sin entrada y con seguro y mantenimiento incluidos.
-- [Mazda Cx-30 At](https://myrenting.es/renting-mazda-cx-30-at.html): El renting del Mazda Cx-30 At cuesta desde 328 €/mes (Híbrido, 140 CV, 5 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
 - [Audi A1](https://myrenting.es/renting-audi-a1.html): El renting del Audi A1 cuesta desde 329 €/mes (Gasolina, 116 CV, 5 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
 - [Nissan Qashqai](https://myrenting.es/renting-nissan-qashqai.html): El renting del Nissan Qashqai cuesta desde 333 €/mes (Híbrido, 140 CV, 5 plazas, etiqueta ECO), sin entrada y con seguro y mantenimiento incluidos.
 - [Citroen Berlingo](https://myrenting.es/renting-citroen-berlingo.html): El renting del Citroen Berlingo cuesta desde 335 €/mes (Diesel, 102 CV, 5 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
@@ -58,8 +57,6 @@
 - [Peugeot Boxer](https://myrenting.es/renting-peugeot-boxer.html): El renting del Peugeot Boxer cuesta desde 511 €/mes (Diesel, 140 CV, 3 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
 - [Nissan Micra](https://myrenting.es/renting-nissan-micra.html): El renting del Nissan Micra cuesta desde 514 €/mes (Gasolina, 122 CV, 5 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
 - [Bmw Serie 1](https://myrenting.es/renting-bmw-serie-1.html): El renting del Bmw Serie 1 cuesta desde 519 €/mes (Diésel, 163 CV, 5 plazas, etiqueta C), sin entrada y con seguro y mantenimiento incluidos.
-- [Citroen Opel Combo-E](https://myrenting.es/renting-citroen-opel-combo-e.html): El renting del Citroen Opel Combo-E cuesta desde 527 €/mes (Eléctrico, 136 CV, 3 plazas, etiqueta CERO), sin entrada y con seguro y mantenimiento incluidos.
-- [Citroen Eberlingo](https://myrenting.es/renting-citroen-eberlingo.html): El renting del Citroen Eberlingo cuesta desde 539 €/mes (Eléctrico, 136 CV, 3 plazas, etiqueta CERO), sin entrada y con seguro y mantenimiento incluidos.
 - [Toyota Hilux](https://myrenting.es/renting-toyota-hilux.html): El renting del Toyota Hilux cuesta desde 550 €/mes (Diésel, 150 CV, 5 plazas), sin entrada y con seguro y mantenimiento incluidos.
 - [Mazda Cx-60](https://myrenting.es/renting-mazda-cx-60.html): El renting del Mazda Cx-60 cuesta desde 552 €/mes (Micro híbrido Diésel, 327 CV, 5 plazas, etiqueta ECO), sin entrada y con seguro y mantenimiento incluidos.
 - [Omoda 7](https://myrenting.es/renting-omoda-7.html): El renting del Omoda 7 cuesta desde 553 €/mes (Híbrido enchufable, 279 CV, 5 plazas, etiqueta ECO), sin entrada y con seguro y mantenimiento incluidos.
