@@ -36,3 +36,10 @@ agente_enriquecer.log
 *.log
 *.pyc
 *.bak
+
+# pipeline nuevo
+data/raw/
+data/build/
+_site/
+*.bak
+!data/master/

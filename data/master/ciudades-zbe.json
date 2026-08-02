@@ -1,0 +1,162 @@
+{
+ "madrid": {
+  "n": "Madrid",
+  "prov": "Comunidad de Madrid",
+  "zbe": "Madrid 360",
+  "area": "toda la ciudad (ZBEDEP Distrito Centro y Plaza Elíptica en el interior)",
+  "multa": true,
+  "since": "2018 (ampliada en 2026)",
+  "b_centro": false,
+  "nota": "Desde el 1 de enero de 2026 los vehículos sin etiqueta tienen prohibido circular por todo Madrid. La etiqueta B no accede a la ZBE Distrito Centro ni a Plaza Elíptica; C, ECO y 0 circulan por todas las zonas."
+ },
+ "barcelona": {
+  "n": "Barcelona",
+  "prov": "área metropolitana",
+  "zbe": "ZBE Rondes de Barcelona",
+  "area": "toda la ciudad entre la Ronda de Dalt y la Ronda del Litoral, más municipios vecinos",
+  "multa": true,
+  "since": "2020",
+  "b_centro": false,
+  "nota": "Restricción de lunes a viernes de 7 a 20 h. Los diésel con etiqueta B (Euro 4) tienen el acceso restringido; 0, ECO y C circulan sin limitación."
+ },
+ "valencia": {
+  "n": "Valencia",
+  "prov": "área de Valencia",
+  "zbe": "ZBE de Valencia",
+  "area": "perímetro entre Ronda Nord, av. dels Tarongers, Serrería y Bulevard Sud",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "B y C circulan con normalidad salvo episodios de alta contaminación; ECO y 0 tienen ventajas de aparcamiento."
+ },
+ "sevilla": {
+  "n": "Sevilla",
+  "prov": "área de Sevilla",
+  "zbe": "ZBE de Sevilla",
+  "area": "centro histórico y entorno",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "Acceso restringido a los vehículos sin etiqueta; 0, ECO, C y B pueden circular."
+ },
+ "zaragoza": {
+  "n": "Zaragoza",
+  "prov": "área de Zaragoza",
+  "zbe": "ZBE de Zaragoza",
+  "area": "centro de la ciudad",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "Restricciones crecientes para los vehículos sin distintivo; el resto de etiquetas circula."
+ },
+ "bilbao": {
+  "n": "Bilbao",
+  "prov": "Bizkaia",
+  "zbe": "ZBE de Bilbao",
+  "area": "gran parte del término municipal",
+  "multa": true,
+  "since": "2025",
+  "b_centro": false,
+  "nota": "La etiqueta B empieza a tener limitaciones de acceso; 0, ECO y C circulan sin restricción."
+ },
+ "malaga": {
+  "n": "Málaga",
+  "prov": "área de Málaga",
+  "zbe": "ZBE de Málaga",
+  "area": "centro y ejes principales",
+  "multa": true,
+  "since": "2025",
+  "b_centro": false,
+  "nota": "Restricciones para etiqueta B en la zona centro; 0, ECO y C sin limitación."
+ },
+ "granada": {
+  "n": "Granada",
+  "prov": "área de Granada",
+  "zbe": "ZBE de Granada",
+  "area": "centro histórico",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "Acceso restringido a vehículos sin etiqueta; el resto circula."
+ },
+ "valladolid": {
+  "n": "Valladolid",
+  "prov": "área de Valladolid",
+  "zbe": "ZBE de Valladolid",
+  "area": "centro de la ciudad",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "Restricciones para vehículos sin distintivo; 0, ECO, C y B circulan."
+ },
+ "murcia": {
+  "n": "Murcia",
+  "prov": "área de Murcia",
+  "zbe": "ZBE de Murcia",
+  "area": "centro urbano",
+  "multa": true,
+  "since": "2024 (en despliegue)",
+  "b_centro": true,
+  "nota": "ZBE en despliegue con sanciones; los vehículos con etiqueta pueden circular."
+ },
+ "vigo": {
+  "n": "Vigo",
+  "prov": "área de Vigo",
+  "zbe": "ZBE de Vigo",
+  "area": "casco urbano",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "Acceso condicionado para los vehículos sin etiqueta; el resto circula."
+ },
+ "alicante": {
+  "n": "Alicante",
+  "prov": "área de Alicante",
+  "zbe": "ZBE de Alicante",
+  "area": "centro de la ciudad",
+  "multa": true,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "Restricciones para vehículos sin distintivo ambiental; el resto de etiquetas circula."
+ },
+ "gijon": {
+  "n": "Gijón",
+  "prov": "Asturias",
+  "zbe": "ZBE de Gijón",
+  "area": "centro urbano",
+  "multa": false,
+  "since": "2024",
+  "b_centro": true,
+  "nota": "ZBE activa; los vehículos con etiqueta pueden circular con normalidad."
+ },
+ "palma": {
+  "n": "Palma",
+  "prov": "Mallorca",
+  "zbe": "ZBE de Palma",
+  "area": "centro de Palma",
+  "multa": false,
+  "since": "en desarrollo",
+  "b_centro": true,
+  "nota": "ZBE en desarrollo; conviene circular con etiqueta ambiental para evitar futuras restricciones."
+ },
+ "las-palmas": {
+  "n": "Las Palmas de Gran Canaria",
+  "prov": "Gran Canaria",
+  "zbe": "ZBE de Las Palmas",
+  "area": "centro urbano",
+  "multa": false,
+  "since": "en trámite",
+  "b_centro": true,
+  "nota": "ZBE en trámite; disponer de etiqueta ambiental asegura el acceso presente y futuro."
+ },
+ "marbella": {
+  "n": "Marbella",
+  "prov": "Málaga",
+  "zbe": "ZBE de Marbella",
+  "area": "casco urbano",
+  "multa": false,
+  "since": "en trámite",
+  "b_centro": true,
+  "nota": "ZBE en trámite por su población; un coche con etiqueta 0/ECO/C garantiza el acceso."
+ }
+}

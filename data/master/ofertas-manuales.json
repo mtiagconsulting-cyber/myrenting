@@ -1,0 +1,24 @@
+[
+ {
+  "fuente": "Kia Renting",
+  "tipo": "particular",
+  "make": "KIA",
+  "model": "NIRO",
+  "version": "KIA NIRO HEV CONCEPT",
+  "fuel": "Híbrido",
+  "precio_desde": 0,
+  "duracion": 60,
+  "km": 10000,
+  "url": "",
+  "image": "",
+  "category": "SUV",
+  "combinaciones": [
+   {
+    "km": 10000,
+    "meses": 60,
+    "precio": 0
+   }
+  ],
+  "_nota": "PLANTILLA. Rellena aquí las ofertas de Kia u otras correcciones a mano. Estas GANAN sobre lo scrapeado."
+ }
+]
