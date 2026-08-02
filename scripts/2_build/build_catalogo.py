@@ -56,11 +56,11 @@ for o in final:
     if o.get("tipo"): m["tipos"].add(o["tipo"])
     if o.get("fuente"): m["fuentes"].add(o["fuente"])
 
-# --- 3. enriquecer con specs de modelos.json ---
-spec_by_key={ k:v for k,v in modelos.items() }
+# --- 3. enriquecer con specs de modelos.json (match normalizado) ---
+spec_norm={ norm(k.replace('||',' ')):v for k,v in modelos.items() }
 enr=0
 for key,m in cat.items():
-    sp=spec_by_key.get(key) or {}
+    sp=modelos.get(key) or spec_norm.get(norm(m['make']+' '+m['model'])) or spec_norm.get(norm(m['model'])) or {}
     m["specs"]={
       "potencia": sp.get("potencia"),
       "etiqueta_dgt": sp.get("etiqueta_dgt"),

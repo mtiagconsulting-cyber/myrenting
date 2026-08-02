@@ -365,7 +365,9 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "122 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "consumo_kwh100": 14.2,
+  "asientos": 5
  },
  "OPEL||CORSA": {
   "precio_desde": 256.0,
@@ -437,7 +439,8 @@
   "anio_inicio": 2019,
   "descripcion": "Crossover compacto de Renault, líder en su segmento con versión E-Tech enchufable.",
   "potencia": "140 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "consumo_l100": 5.8
  },
  "RENAULT||MEGANE": {
   "precio_desde": 261.0,
@@ -718,7 +721,8 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "115 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "asientos": 5
  },
  "KIA||CEED": {
   "precio_desde": 276.0,
@@ -869,7 +873,9 @@
   "category": "Furgón",
   "imagen_local": "/img/modelos/peugeot-rifter.png",
   "potencia": "102 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "consumo_l100": 5.4,
+  "asientos": 5
  },
  "PEUGEOT||208": {
   "precio_desde": 289.0,
@@ -963,7 +969,8 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "197 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "asientos": 5
  },
  "KIA||XCEED": {
   "precio_desde": 295.0,
@@ -1058,7 +1065,10 @@
   ],
   "category": "Furgonetas",
   "potencia": "102 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "consumo_l100": 5.1,
+  "asientos": 3,
+  "imagen_local": "/img/modelos/citroen-berlingo.webp"
  },
  "SEAT||LEÓN": {
   "precio_desde": 299.0,
@@ -1072,7 +1082,9 @@
   "category": "Berlina",
   "imagen_local": "/img/modelos/seat-leon.png",
   "potencia": "150 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "consumo_l100": 5.1,
+  "asientos": 5
  },
  "AUDI||A1": {
   "precio_desde": 300.0,
@@ -1089,7 +1101,8 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "116 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "asientos": 5
  },
  "JEEP||COMPASS": {
   "precio_desde": 301.0,
@@ -1189,7 +1202,8 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "145 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "asientos": 5
  },
  "TOYOTA||COROLLA": {
   "precio_desde": 312.0,
@@ -1220,7 +1234,8 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "224 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "asientos": 5
  },
  "MERCEDES BENZ||CITAN TOURER": {
   "precio_desde": 315.0,
@@ -1294,7 +1309,9 @@
   "consumo_l100": 6.5,
   "co2_gkm": 148,
   "potencia": "102 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "asientos": 5,
+  "imagen_local": "/img/modelos/opel-frontera.webp"
  },
  "SKODA||OCTAVIA": {
   "precio_desde": 330.0,
@@ -1352,7 +1369,8 @@
   "anio_inicio": 2023,
   "descripcion": "Crossover híbrido con diseño vanguardista y exclusividad de mecánica full hybrid.",
   "potencia": "140 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "consumo_l100": 4.8
  },
  "DS||DS 7 CROSSBACK": {
   "precio_desde": 333.0,
@@ -1559,7 +1577,10 @@
   ],
   "category": "SUV",
   "potencia": "145 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "consumo_l100": 5.0,
+  "asientos": 5,
+  "imagen_local": "/img/modelos/alfa-romeo-junior.webp"
  },
  "MERCEDES||B-CLASS": {
   "precio_desde": 361.0,
@@ -1823,7 +1844,8 @@
   "co2_gkm": 0,
   "descripcion": "SUV eléctrico compacto de BYD con batería Blade y hasta 312 km de autonomía WLTP.",
   "potencia": "212 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "consumo_l100": 3.1
  },
  "MITSUBISHI||ECLIPSE CROSS": {
   "precio_desde": 389.0,
@@ -2183,7 +2205,8 @@
   "anio_inicio": 2019,
   "descripcion": "Compacto premium de BMW con tracción delantera y motor de hasta 306 CV en versión M135i.",
   "potencia": "163 CV",
-  "etiqueta_dgt": "C"
+  "etiqueta_dgt": "C",
+  "consumo_l100": 5.3
  },
  "BMW||SERIE 2": {
   "precio_desde": 453.0,
@@ -2285,7 +2308,9 @@
   "category": "SUV",
   "imagen_local": "/img/modelos/jaecoo-7.png",
   "potencia": "279 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "consumo_l100": 2.4,
+  "asientos": 5
  },
  "FIAT||DUCATO FURGÓN": {
   "precio_desde": 495.0,
@@ -2382,7 +2407,8 @@
   "co2_gkm": 0,
   "descripcion": "SUV eléctrico compacto de BMW con 438 km de autonomía WLTP y carga rápida de 130 kW.",
   "potencia": "204 CV",
-  "etiqueta_dgt": "CERO"
+  "etiqueta_dgt": "CERO",
+  "imagen_local": "/img/modelos/bmw-ix1.webp"
  },
  "MAZDA||CX-60": {
   "precio_desde": 532.0,
@@ -2401,7 +2427,8 @@
   "anio_inicio": 2022,
   "descripcion": "SUV grande de Mazda con motor 6 cilindros en línea y versión enchufable PHEV de 327 CV.",
   "potencia": "327 CV",
-  "etiqueta_dgt": "ECO"
+  "etiqueta_dgt": "ECO",
+  "consumo_l100": 1.5
  },
  "RENAULT||TRAFIC FURGÓN": {
   "precio_desde": 534.0,
@@ -2712,5 +2739,562 @@
    "Híbrido enchufable"
   ],
   "category": "SUV"
+ },
+ "MAZDA||3": {
+  "imagen_local": "/img/modelos/mazda-3.webp",
+  "precio_desde": 266.16,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "140 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 5.3,
+  "asientos": 5
+ },
+ "TOYOTA||YARIS": {
+  "imagen_local": "/img/modelos/toyota-yaris.webp",
+  "precio_desde": 269.95,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "116 CV",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 4.5,
+  "asientos": 5
+ },
+ "MAZDA||2": {
+  "imagen_local": "/img/modelos/mazda-2.webp",
+  "precio_desde": 283.8,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "116 CV",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 3.8,
+  "asientos": 5
+ },
+ "LANCIA||YPSILON": {
+  "imagen_local": "/img/modelos/lancia-ypsilon.webp",
+  "precio_desde": 309.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "110 CV",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 5.9,
+  "asientos": 5
+ },
+ "MAZDA||CX-30 AT": {
+  "imagen_local": "/img/modelos/mazda-cx-30-at.webp",
+  "precio_desde": 328.18,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": "Crossover",
+  "potencia": "140 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 6.5,
+  "asientos": 5
+ },
+ "TOYOTA||YARIS CROSS": {
+  "imagen_local": "/img/modelos/toyota-yaris-cross.webp",
+  "precio_desde": 341.25,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "130 CV",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 4.5,
+  "asientos": 5
+ },
+ "EBRO||S400": {
+  "imagen_local": "/img/modelos/ebro-s400.webp",
+  "precio_desde": 362.95,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "211 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 5
+ },
+ "JAECOO||5": {
+  "imagen_local": "/img/modelos/jaecoo-5.webp",
+  "precio_desde": 369.43,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "224 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 5.3,
+  "asientos": 5
+ },
+ "BYD||DOLPHIN": {
+  "imagen_local": "/img/modelos/byd-dolphin.webp",
+  "precio_desde": 381.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "88 CV",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 16.0,
+  "asientos": 4
+ },
+ "BYD||ATTO": {
+  "imagen_local": "/img/modelos/byd-atto.webp",
+  "precio_desde": 405.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "212 CV",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 3.1,
+  "asientos": 5
+ },
+ "RENAULT||AUSTRAL": {
+  "imagen_local": "/img/modelos/renault-austral.webp",
+  "precio_desde": 411.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "200 CV",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 4.6,
+  "asientos": 5
+ },
+ "SKODA||ELROQ": {
+  "imagen_local": "/img/modelos/skoda-elroq.webp",
+  "precio_desde": 450.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "286 CV",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 15.8,
+  "asientos": 5
+ },
+ "OMODA||7": {
+  "imagen_local": "/img/modelos/omoda-7.webp",
+  "precio_desde": 553.8,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "279 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 2.3,
+  "asientos": 5
+ },
+ "OMODA||9": {
+  "imagen_local": "/img/modelos/omoda-9.webp",
+  "precio_desde": 621.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "537 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 1.7,
+  "asientos": 5
+ },
+ "JAECOO||8": {
+  "imagen_local": "/img/modelos/jaecoo-8.webp",
+  "precio_desde": 635.77,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "428 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 2.1,
+  "asientos": 7
+ },
+ "TOYOTA||PROACE CITY": {
+  "imagen_local": "/img/modelos/toyota-proace-city.webp",
+  "precio_desde": 322.6,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "100 CV",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 2
+ },
+ "KIA||PV5 PASSENGER": {
+  "imagen_local": "/img/modelos/kia-pv5-passenger.webp",
+  "precio_desde": 489.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "163 CV",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 16.3,
+  "asientos": 5
+ },
+ "KIA||PV5 CARGO": {
+  "imagen_local": "/img/modelos/kia-pv5-cargo.webp",
+  "precio_desde": 507.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "163 CV",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 19.0,
+  "asientos": 3
+ },
+ "CITROEN||OPEL COMBO-E": {
+  "imagen_local": "/img/modelos/citroen-opel-combo-e.webp",
+  "precio_desde": 527.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": "Furgoneta",
+  "potencia": "136 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 19.0,
+  "asientos": 3
+ },
+ "CITROEN||EBERLINGO": {
+  "imagen_local": "/img/modelos/citroen-eberlingo.webp",
+  "precio_desde": 539.0,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": "Furgoneta",
+  "potencia": "136 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 19.0,
+  "asientos": 3
+ },
+ "TOYOTA||HILUX": {
+  "imagen_local": "/img/modelos/toyota-hilux.webp",
+  "precio_desde": 550.19,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "150 CV",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 7.5,
+  "asientos": 5
+ },
+ "TOYOTA||PROACE MAX": {
+  "imagen_local": "/img/modelos/toyota-proace-max.webp",
+  "precio_desde": 475.47,
+  "fuentes": [
+   "M Automoción"
+  ],
+  "category": null,
+  "potencia": "140 CV",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 8.5,
+  "asientos": 3
+ },
+ "MG||MG3": {
+  "imagen_local": "/img/modelos/mg-mg3.webp",
+  "precio_desde": 325.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "194 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 4.4,
+  "asientos": 5
+ },
+ "BYD||DOLPHIN SURF": {
+  "imagen_local": "/img/modelos/byd-dolphin-surf.webp",
+  "precio_desde": 461.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "88 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 16.0,
+  "asientos": 4
+ },
+ "MERCEDES BENZ||CITAN": {
+  "imagen_local": "/img/modelos/mercedes-benz-citan.webp",
+  "precio_desde": 417.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Furgoneta",
+  "potencia": "95 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 3
+ },
+ "KIA||PV5": {
+  "imagen_local": "/img/modelos/kia-pv5.webp",
+  "precio_desde": 592.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "163 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 16.3,
+  "asientos": 5
+ },
+ "EBRO||S800": {
+  "imagen_local": "/img/modelos/ebro-s800.webp",
+  "precio_desde": 600.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "279 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 2.5,
+  "asientos": 7
+ },
+ "MERCEDES BENZ||GLC": {
+  "imagen_local": "/img/modelos/mercedes-benz-glc.webp",
+  "precio_desde": 928.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "197 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 5
+ },
+ "MERCEDES BENZ||CLA": {
+  "imagen_local": "/img/modelos/mercedes-benz-cla.webp",
+  "precio_desde": 984.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "272 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 13.1,
+  "asientos": 5
+ },
+ "MERCEDES BENZ||GLC COUPE": {
+  "imagen_local": "/img/modelos/mercedes-benz-glc-coupe.webp",
+  "precio_desde": 1003.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Coupé",
+  "potencia": "333 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 1.7,
+  "asientos": 5
+ },
+ "MERCEDES BENZ||GLB": {
+  "imagen_local": "/img/modelos/mercedes-benz-glb.webp",
+  "precio_desde": 1015.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "272 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 15.8,
+  "asientos": 7
+ },
+ "MERCEDES BENZ||GLE COUPE": {
+  "imagen_local": "/img/modelos/mercedes-benz-gle-coupe.webp",
+  "precio_desde": 1407.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Coupé",
+  "potencia": "286 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 7.5,
+  "asientos": 5
+ },
+ "MASERATI||GRECALE": {
+  "imagen_local": "/img/modelos/maserati-grecale.webp",
+  "precio_desde": 1441.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "300 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 8.8,
+  "asientos": 5
+ },
+ "MERCEDES BENZ||CLASE GLE": {
+  "imagen_local": "/img/modelos/mercedes-benz-clase-gle.webp",
+  "precio_desde": 1496.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "320 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido enchufable"
+  ],
+  "consumo_l100": 1.3,
+  "asientos": 5
+ },
+ "NISSAN||INTERSTAR": {
+  "imagen_local": "/img/modelos/nissan-interstar.webp",
+  "precio_desde": 498.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Furgoneta",
+  "potencia": "131 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 7.6,
+  "asientos": 3
+ },
+ "NISSAN||TOWNSTAR": {
+  "imagen_local": "/img/modelos/nissan-townstar.webp",
+  "precio_desde": 600.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Furgoneta",
+  "potencia": "122 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 18.2,
+  "asientos": 2
+ },
+ "OPEL||COMBO E": {
+  "imagen_local": "/img/modelos/opel-combo-e.webp",
+  "precio_desde": 638.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Furgoneta",
+  "potencia": "136 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 19.0,
+  "asientos": 3
+ },
+ "CITROEN||E BERLINGO": {
+  "imagen_local": "/img/modelos/citroen-e-berlingo.webp",
+  "precio_desde": 652.0,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": "Furgoneta",
+  "potencia": "136 CV",
+  "etiqueta_dgt": "CERO",
+  "fuels": [
+   "Eléctrico"
+  ],
+  "consumo_kwh100": 19.0,
+  "asientos": 3
  }
 }

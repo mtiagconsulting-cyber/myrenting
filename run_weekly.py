@@ -30,7 +30,10 @@ def main():
     else:
         print("· (scraping omitido, uso data/raw actual)")
     paso("2/5 BUILD catálogo", ["python3","scripts/2_build/build_catalogo.py"])
-    paso("3/5 GENERATE HTML",  ["python3","scripts/3_generate/generar_todo.py"])
+    paso("2b/5 ENRICH modelos", ["python3","scripts/2_build/enrich_modelos.py"])
+    paso("2c/5 REBUILD catálogo", ["python3","scripts/2_build/build_catalogo.py"])
+    paso("3/5 GENERATE home",  ["python3","scripts/3_generate/generar_home.py"])
+    paso("3/5 GENERATE resto", ["python3","scripts/3_generate/generar_todo.py"])
     paso("4/5 QA",             ["python3","scripts/4_qa/validar.py"])
     if "--sin-publicar" in args:
         print("\n✅ Ciclo OK (sin publicar). Revisa los cambios y sube a mano cuando quieras.")
