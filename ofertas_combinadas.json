@@ -1,0 +1,7086 @@
+[
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "OPEL",
+    "model": "CORSA",
+    "version": "OPEL CORSA GS 1.2T",
+    "fuel": "",
+    "precio_desde": 295.24,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-opel-corsa#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2182-home_default/oferta-renting-particular-opel-corsa.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 324.28
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 314.6
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 295.24
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 340.01
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 332.75
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 314.6
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "DACIA",
+    "model": "SANDERO",
+    "version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
+    "fuel": "",
+    "precio_desde": 309.76,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-dacia-sandero#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2206-home_default/oferta-renting-particular-dacia-sandero.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 309.76
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 363.0
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 375.1
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 325.49
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 322.05,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-3-mt#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2619-home_default/oferta-renting-particular-mazda-3-mt.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 322.05
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 337.49
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "TOYOTA",
+    "model": "YARIS",
+    "version": "TOYOTA YARIS ACTIVE 120H 116CV",
+    "fuel": "",
+    "precio_desde": 326.64,
+    "duracion": 72,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-toyota-yaris#/30-kms_al_ano-10000_kms/43-plazos-72_meses",
+    "category": "",
+    "image": "https://m-renting.com/2084-home_default/oferta-renting-particular-toyota-yaris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 342.58
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 326.64
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "KAMIQ",
+    "version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV MANUAL",
+    "fuel": "Gasolina",
+    "precio_desde": 327.91,
+    "duracion": 48,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-particular-skoda-kamiq#/31-kms_al_ano-15000_kms/32-plazos-48_meses",
+    "category": "",
+    "image": "https://m-renting.com/2312-home_default/oferta-renting-particular-skoda-kamiq.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 327.91
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 330.33
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 327.91
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 330.33
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "VOLKSWAGEN",
+    "model": "POLO",
+    "version": "VOLKSWAGEN POLO MATCH 1.0 TSI 70kW 95CV",
+    "fuel": "Gasolina",
+    "precio_desde": 329.07,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-volkswagen-polo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2489-home_default/oferta-renting-particular-volkswagen-polo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 337.09
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 329.07
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 357.63
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 349.01
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "2",
+    "version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 343.4,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-2-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2525-home_default/oferta-renting-particular-mazda-2-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 365.0
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 354.25
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 343.4
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 380.82
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 368.25
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 356.9
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "2",
+    "version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 347.63,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-2-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2532-home_default/oferta-renting-particular-mazda-2-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 358.61
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 347.63
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 372.84
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 361.35
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "KAMIQ",
+    "version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 350.9,
+    "duracion": 48,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-particular-skoda-kamiq-dsg#/31-kms_al_ano-15000_kms/32-plazos-48_meses",
+    "category": "",
+    "image": "https://m-renting.com/2307-home_default/oferta-renting-particular-skoda-kamiq-dsg.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 350.9
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 355.74
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 350.9
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 353.32
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6AT FWD CENTRE-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 365.23,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-3-at-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2571-home_default/oferta-renting-particular-mazda-3-at-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 372.91
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 365.23
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 392.28
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 384.1
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6AT FWD CENTRE-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 371.32,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-3-at-rojo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2595-home_default/oferta-renting-particular-mazda-3-at-rojo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 379.08
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 371.32
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 398.83
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 390.56
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "LANCIA",
+    "model": "YPSILON",
+    "version": "LANCIA YPSILON LX IBRIDA",
+    "fuel": "",
+    "precio_desde": 373.89,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-lancia-ypsilon#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2465-home_default/oferta-renting-particular-lancia-ypsilon.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 400.51
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 393.25
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373.89
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 415.03
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 411.4
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 393.25
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "CX-30",
+    "version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 374.16,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-cx-30-mt-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2649-home_default/oferta-renting-particular-mazda-cx-30-mt-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 380.41
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 378.66
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 374.16
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 397.92
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 394.02
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 387.74
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "CX-30",
+    "version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 379.42,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-cx-30-mt-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2673-home_default/oferta-renting-particular-mazda-cx-30-mt-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 385.65
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 383.95
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 379.42
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 403.45
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 399.57
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 393.23
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "OPEL",
+    "model": "FRONTERA",
+    "version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
+    "fuel": "",
+    "precio_desde": 385.99,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-opel-frontera#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2477-home_default/oferta-renting-particular-opel-frontera.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 415.03
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 385.99
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 430.76
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 408.98
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "RENAULT",
+    "model": "SYMBIOZ",
+    "version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
+    "fuel": "",
+    "precio_desde": 387.2,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-praticular-renault-symbioz#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2224-home_default/oferta-renting-praticular-renault-symbioz.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 416.24
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 399.3
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 387.2
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 439.23
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 423.5
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 413.82
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "CX-30 AT",
+    "version": "MAZDA CX-30 AT 2027 2.5L e-SKYACTIV H MHEV 140CV 6AT PFWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 397.1,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-cx-30-at#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2631-home_default/oferta-renting-particular-mazda-cx-30-at.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 403.23
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 401.68
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 397.1
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 421.79
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 417.95
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 411.47
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "AUDI",
+    "model": "A1",
+    "version": "AUDI A1 SB ADRENALIN EDITION 30TFSI 116CV STRONIC",
+    "fuel": "",
+    "precio_desde": 398.5,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-audi-a1#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1744-home_default/oferta-renting-particular-audi-a1.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 412.2
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 398.5
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 423.77
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 431.66
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 417.22
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 445.92
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SEAT",
+    "model": "LEON",
+    "version": "SEAT LEON 2.0 TDI CR ST/SP STYLE XL",
+    "fuel": "Diésel",
+    "precio_desde": 410.19,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-seat-leon#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2373-home_default/oferta-renting-particular-seat-leon.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 429.55
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 410.19
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 429.55
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 448.91
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 431.97
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 447.7
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "OMODA",
+    "model": "5",
+    "version": "OMODA 5 HEV BUSINESS",
+    "fuel": "Híbrido",
+    "precio_desde": 411.5,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-omoda-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2238-home_default/oferta-renting-particular-omoda-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 438.77
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 411.5
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 470.25
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 446.13
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "TOYOTA",
+    "model": "YARIS CROSS",
+    "version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
+    "fuel": "",
+    "precio_desde": 412.91,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particulares-toyota-yaris-cross#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/665-home_default/oferta-renting-particulares-toyota-yaris-cross.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 420.84
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 412.91
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 448.39
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 438.26
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "NISSAN QASHQAI DIG-T MILD HYBRID 12V ACENTA",
+    "fuel": "",
+    "precio_desde": 424.71,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-nissan-qashqai#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2349-home_default/oferta-renting-particular-nissan-qashqai.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 439.23
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 424.71
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 468.27
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 459.8
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 462.22
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 487.63
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "VOLKSWAGEN",
+    "model": "T-ROC",
+    "version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 433.54,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-volkswagen-t-roc-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1941-home_default/oferta-renting-particular-volkswagen-t-roc-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 444.8
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 433.54
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 465.18
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 451.73
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "VOLKSWAGEN",
+    "model": "T-ROC",
+    "version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 433.54,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-volkswagen-t-roc-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1919-home_default/oferta-renting-particular-volkswagen-t-roc-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 444.9
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 433.54
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 465.09
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 451.55
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "EBRO",
+    "model": "S400",
+    "version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
+    "fuel": "Híbrido",
+    "precio_desde": 439.17,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particulares-ebro-s400-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1878-home_default/oferta-renting-particulares-ebro-s400-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 455.42
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 439.17
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 475.48
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 491.48
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 469.46
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 451.61
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "OCTAVIA",
+    "version": "ŠKODA OCTAVIA LIMO SELECTION 2.0 TDI 150CV DSG 7vel",
+    "fuel": "Diésel",
+    "precio_desde": 440.44,
+    "duracion": 36,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-particular-skoda-octavia",
+    "category": "",
+    "image": "https://m-renting.com/1184-home_default/skoda-octavia-limo-particular.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "EBRO",
+    "model": "S400",
+    "version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
+    "fuel": "Híbrido",
+    "precio_desde": 442.12,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particulares-ebro-s400-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1882-home_default/oferta-renting-particulares-ebro-s400-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 458.48
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 442.12
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 472.63
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 454.65
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "HYUNDAI",
+    "model": "TUCSON",
+    "version": "HYUNDAI TUCSON 1.6T 239CV HEV AT KLASS",
+    "fuel": "Híbrido",
+    "precio_desde": 444.12,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-partculares-hyundai-tucson-hev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1544-home_default/oferta-renting-partculares-hyundai-tucson-hev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 464.24
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 453.79
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 444.12
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 485.56
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 472.35
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 460.43
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "JAECOO",
+    "model": "5",
+    "version": "JAECOO 5 HEV EXCLUSIVE 1.5T DHE + 2 MOTORES ELÉCTRICOS 224 CV",
+    "fuel": "Eléctrico",
+    "precio_desde": 447.01,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-jaecoo-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2274-home_default/oferta-renting-particular-jaecoo-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 480.52
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 447.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 514.12
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 483.69
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "OCTAVIA",
+    "version": "ŠKODA OCTAVIA COMBI SELECTION 2.0 TDI 150CV DSG 7vel",
+    "fuel": "Diésel",
+    "precio_desde": 453.75,
+    "duracion": 36,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-particular-skoda-octavia",
+    "category": "",
+    "image": "https://m-renting.com/1161-home_default/skoda-octavia-combi-particular.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "BYD",
+    "model": "DOLPHIN",
+    "version": "BYD DOLPHIN DOLPHIN SURF BOOST",
+    "fuel": "",
+    "precio_desde": 461.01,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-byd-dolphin#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2442-home_default/oferta-renting-particular-byd-dolphin.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 562.65
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 508.2
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 461.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 582.01
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 526.35
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 480.37
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "TOYOTA",
+    "model": "C-HR",
+    "version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
+    "fuel": "",
+    "precio_desde": 470.77,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-toyota-c-hr-mhev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2144-home_default/oferta-renting-particular-toyota-c-hr-mhev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 470.77
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 482.94
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 511.76
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 495.88
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "BYD",
+    "model": "ATTO",
+    "version": "BYD ATTO ATTO 2 DM-i",
+    "fuel": "",
+    "precio_desde": 490.05,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-byd-atto#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2428-home_default/oferta-renting-particular-byd-atto.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 548.13
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 511.83
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 490.05
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 566.28
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 528.77
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 513.04
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "VOLKSWAGEN",
+    "model": "TIGUAN",
+    "version": "VOLKSWAGEN TIGUAN \"MÁS\" 1.5 eTSI 110KW 150CV DSG 7vel",
+    "fuel": "Gasolina",
+    "precio_desde": 496.87,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-volkswagen-tiguan#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2003-home_default/oferta-renting-particular-volkswagen-tiguan.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 513.84
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 496.87
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 537.82
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 518.26
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "RENAULT",
+    "model": "AUSTRAL",
+    "version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
+    "fuel": "",
+    "precio_desde": 497.31,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-renault-austral#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2357-home_default/oferta-renting-particular-renault-austral.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 525.14
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 497.31
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 549.34
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 528.77
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "KAROQ",
+    "version": "ŠKODA KAROQ 2.0 TDI 110kW 150CV DSG 7 vel.",
+    "fuel": "Diésel",
+    "precio_desde": 509.41,
+    "duracion": 60,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-particular-skoda-karoq",
+    "category": "",
+    "image": "https://m-renting.com/1205-home_default/skoda-karoq.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "JAECOO",
+    "model": "7",
+    "version": "JAECOO 7 PHEV BUSINESS",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 541.67,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-jaecoo-7",
+    "category": "",
+    "image": "https://m-renting.com/2287-home_default/oferta-reniting-particular-jaecoo-7.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "ELROQ",
+    "version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
+    "fuel": "",
+    "precio_desde": 544.5,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-skoda-elroq",
+    "category": "",
+    "image": "https://m-renting.com/1222-home_default/skoda-elroq.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "JAECOO",
+    "model": "5",
+    "version": "JAECOO 5 BEV EXCLUSIVE 211CV",
+    "fuel": "",
+    "precio_desde": 596.75,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-jaecoo-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2499-home_default/oferta-renting-particular-jaecoo-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 480.52
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 447.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 514.12
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 483.69
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "MAZDA",
+    "model": "CX-60",
+    "version": "MAZDA CX-60 2.5L e-SKYACTIV PHEV AWD 241kW (327 CV) 8AT EXCLUSIVE-LINE",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 668.63,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-mazda-cx-60-phev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2709-home_default/oferta-renting-particular-mazda-cx-60-phev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 668.63
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 696.68
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "OMODA",
+    "model": "7",
+    "version": "OMODA 7 PHEV PREMIUM",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 670.1,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-omoda-7",
+    "category": "",
+    "image": "https://m-renting.com/2250-home_default/omoda-7.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "OMODA",
+    "model": "7",
+    "version": "OMODA 7 PHEV PREMIUM",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 681.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-omoda-7-mate#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2262-home_default/oferta-renting-particular-omoda-7-mate.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 734.88
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 681.0
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 812.6
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 777.26
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 732.12
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 856.95
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "OMODA",
+    "model": "9",
+    "version": "OMODA 9 SHS PREMIUM 1.5 TGDI 3DHT 395kW (537CV) AWD",
+    "fuel": "Gasolina",
+    "precio_desde": 751.41,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-omoda-9#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2120-home_default/oferta-renting-particular-omoda-9.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 807.07
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 751.41
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 873.62
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 913.55
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 840.95
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 785.29
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "particular",
+    "make": "JAECOO",
+    "model": "8",
+    "version": "JAECOO 8 PHEV EXCLUSIVE 1.5 TGDI 428CV 7 plazas",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 769.28,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-particular-jaecoo-8#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2507-home_default/oferta-renting-particular-jaecoo-8.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 832.37
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 769.28
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 923.59
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 968.48
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 874.98
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 820.74
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "OPEL",
+    "model": "CORSA",
+    "version": "OPEL CORSA GS 1.2T",
+    "fuel": "",
+    "precio_desde": 244.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-opel-corsa#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2176-home_default/oferta-renting-autonomo-opel-corsa.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 314.6
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 295.24
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 332.75
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 314.6
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "DACIA",
+    "model": "SANDERO",
+    "version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
+    "fuel": "",
+    "precio_desde": 256.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-dacia-sandero#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2200-home_default/oferta-renting-autonomo-dacia-sandero.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 363.0
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 336.38
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 309.76
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 375.1
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 349.69
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 325.49
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "RENAULT",
+    "model": "CAPTUR",
+    "version": "RENAULT CAPTUR EVOLUTION ECO-G SS",
+    "fuel": "",
+    "precio_desde": 259.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-renault-captur#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2363-home_default/oferta-renting-autonomo-renault-captur.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 313.39
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 332.75
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 266.16,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-3-mt#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2613-home_default/oferta-renting-autonomo-mazda-3-mt.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 329.37
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 322.05
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 333.83
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 345.24
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 337.49
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 351.55
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "YARIS",
+    "version": "TOYOTA YARIS ACTIVE 120H 116CV",
+    "fuel": "",
+    "precio_desde": 269.95,
+    "duracion": 72,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-toyota-yaris#/30-kms_al_ano-10000_kms/43-plazos-72_meses",
+    "category": "",
+    "image": "https://m-renting.com/2078-home_default/oferta-renting-autonomo-toyota-yaris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 346.71
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 342.58
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 326.64
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 371.29
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 362.3
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SKODA",
+    "model": "KAMIQ",
+    "version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV MANUAL",
+    "fuel": "Gasolina",
+    "precio_desde": 271.0,
+    "duracion": 48,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-skoda-kamiq#/31-kms_al_ano-15000_kms/32-plazos-48_meses",
+    "category": "",
+    "image": "https://m-renting.com/2317-home_default/oferta-renting-autonomo-skoda-kamiq.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 327.91
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 327.91
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 327.91
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 330.33
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 330.33
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "VOLKSWAGEN",
+    "model": "POLO",
+    "version": "VOLKSWAGEN POLO MATCH 1.0 TSI 70kW 95CV",
+    "fuel": "Gasolina",
+    "precio_desde": 271.96,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-volkswagen-polo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2483-home_default/oferta-renting-autonomo-volkswagen-polo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 329.07
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 337.09
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "2",
+    "version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 283.8,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-2-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2519-home_default/oferta-renting-autonomo-mazda-2-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 343.4
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 365.0
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 380.82
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 356.9
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "2",
+    "version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 287.3,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-2-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2541-home_default/oferta-renting-autonomo-mazda-2-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 347.63
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 369.47
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 361.35
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 385.55
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SKODA",
+    "model": "KAMIQ",
+    "version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 290.0,
+    "duracion": 48,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-skoda-kamiq-dsg#/31-kms_al_ano-15000_kms/32-plazos-48_meses",
+    "category": "",
+    "image": "https://m-renting.com/2302-home_default/oferta-renting-autonomo-skoda-kamiq-dsg.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 350.9
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 355.74
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 350.9
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 353.32
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6AT FWD CENTRE-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 301.84,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-3-at-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2565-home_default/oferta-renting-autonomo-mazda-3-at-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 365.23
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 384.1
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6AT FWD CENTRE-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 306.88,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-3-at-rojo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2584-home_default/oferta-renting-autonomo-mazda-3-at-rojo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 383.41
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 371.32
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 405.34
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 390.56
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "LANCIA",
+    "model": "YPSILON",
+    "version": "LANCIA YPSILON LX IBRIDA",
+    "fuel": "",
+    "precio_desde": 309.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-lancia-ypsilon#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2459-home_default/oferta-renting-autonomo-lancia-ypsilon.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373.89
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "PEUGEOT",
+    "model": "RIFTER",
+    "version": "PEUGEOT RIFTER ACTIVE BUSINESS STANDARD N1 BLUEHDi 100 S/S",
+    "fuel": "Diésel",
+    "precio_desde": 309.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-peugeot-rifter#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2102-home_default/oferta-renting-autonomo-peugeot-rifter.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 430.76
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373.89
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 447.7
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 394.46
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "CX-30",
+    "version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 309.22,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-cx-30-mt-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2643-home_default/oferta-renting-autonomo-mazda-cx-30-mt-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 374.16
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 387.74
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "CX-30",
+    "version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 313.57,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-cx-30-mt-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2667-home_default/oferta-renting-autonomo-mazda-cx-30-mt-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 379.42
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "OPEL",
+    "model": "FRONTERA",
+    "version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
+    "fuel": "",
+    "precio_desde": 319.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-opel-frontera#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2471-home_default/oferta-renting-autonomo-opel-frontera.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 385.99
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "RENAULT",
+    "model": "SYMBIOZ",
+    "version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
+    "fuel": "",
+    "precio_desde": 320.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-renault-symbioz#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2218-home_default/oferta-renting-autonomo-renault-symbioz.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 416.24
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 387.2
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 439.23
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 413.82
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "PROACE CITY",
+    "version": "TOYOTA PROACE CITY VAN L1 GX",
+    "fuel": "",
+    "precio_desde": 322.6,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-toyota-proace-city-gx#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1349-home_default/oferta-renting-autonomo-toyota-proace-city-gx.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 425.8
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 390.35
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 455.55
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 412.28
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "CX-30 AT",
+    "version": "MAZDA CX-30 AT 2027 2.5L e-SKYACTIV H MHEV 140CV 6AT PFWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 328.18,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-cx-30-at#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2625-home_default/oferta-renting-autonomo-mazda-cx-30-at.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 401.68
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 397.1
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 403.23
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 417.95
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 411.47
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 421.79
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "PROACE CITY",
+    "version": "TOYOTA PROACE CITY VAN L1 GX PLUS",
+    "fuel": "",
+    "precio_desde": 328.61,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-toyota-proace-city-gx-plus#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1323-home_default/oferta-renting-autonomo-toyota-proace-city-gx-plus.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 434.14
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 408.17
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 397.62
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 464.19
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 435.52
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 419.83
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "AUDI",
+    "model": "A1",
+    "version": "AUDI A1 SB ADRENALIN EDITION 30TFSI 116CV STRONIC",
+    "fuel": "",
+    "precio_desde": 329.34,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-audi-a1#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1738-home_default/oferta-renting-autonomo-audi-a1.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 398.5
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "PROACE CITY",
+    "version": "TOYOTA PROACE CITY COMBI L2 GX PLUS 100 CV",
+    "fuel": "",
+    "precio_desde": 334.37,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-toyota-proace-city-combi#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1315-home_default/oferta-renting-autonomo-toyota-proace-city-combi.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 404.59
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "CITROEN",
+    "model": "BERLINGO",
+    "version": "CITROEN BERLINGO VAN FURGÓN M",
+    "fuel": "",
+    "precio_desde": 335.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-citroen-berlingo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2335-home_default/oferta-renting-autonomo-citroen-berlingo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 456.17
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 405.35
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 509.41
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 469.48
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 421.08
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 523.93
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SEAT",
+    "model": "LEON",
+    "version": "SEAT LEON 2.0 TDI CR ST/SP STYLE XL",
+    "fuel": "Diésel",
+    "precio_desde": 339.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-seat-leon#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2368-home_default/oferta-renting-autonomo-seat-leon.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 410.19
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 429.55
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "OMODA",
+    "model": "5",
+    "version": "OMODA 5 HEV BUSINESS",
+    "fuel": "Híbrido",
+    "precio_desde": 340.08,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-omoda-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2235-home_default/oferta-renting-autonomo-omoda-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 411.5
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "YARIS CROSS",
+    "version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
+    "fuel": "",
+    "precio_desde": 341.25,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomos-toyota-yaris-cross#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/459-home_default/oferta-renting-autonomos-toyota-yaris-cross.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 412.91
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "NISSAN QASHQAI DIG-T MILD HYBRID 12V ACENTA",
+    "fuel": "",
+    "precio_desde": 351.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-nissan-qashqai#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2342-home_default/oferta-renting-autonomo-nissan-qashqai.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 468.27
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 439.23
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 424.71
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 487.63
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 459.8
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 462.22
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "VOLKSWAGEN",
+    "model": "T-ROC",
+    "version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 358.3,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-volkswagen-t-roc-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1949-home_default/oferta-renting-autonomo-volkswagen-t-roc-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 433.54
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "VOLKSWAGEN",
+    "model": "T-ROC",
+    "version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 358.3,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-volkswagen-t-roc-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1927-home_default/oferta-renting-autonomo-volkswagen-t-roc-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 444.9
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 433.54
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 465.09
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 451.55
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "EBRO",
+    "model": "S400",
+    "version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
+    "fuel": "Híbrido",
+    "precio_desde": 362.95,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-ebro-s400-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1875-home_default/oferta-renting-autonomo-ebro-s400-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 439.17
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 475.48
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SKODA",
+    "model": "OCTAVIA",
+    "version": "ŠKODA OCTAVIA LIMO SELECTION 2.0 TDI 150CV DSG 7vel",
+    "fuel": "Diésel",
+    "precio_desde": 364.0,
+    "duracion": 36,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-skoda-octavia",
+    "category": "",
+    "image": "https://m-renting.com/1167-home_default/skoda-octavia-limo-autonomo.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "ALFA ROMEO",
+    "model": "JUNIOR",
+    "version": "ALFA ROMEO JUNIOR IBRIDA TI 1.2 VGT",
+    "fuel": "",
+    "precio_desde": 365.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-alfa-romeo-junior#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2329-home_default/oferta-renting-autonomo-alfa-romeo-junior.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 473.11
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 451.33
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 441.65
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 494.89
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 476.74
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 469.48
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "EBRO",
+    "model": "S400",
+    "version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
+    "fuel": "Híbrido",
+    "precio_desde": 365.39,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-ebro-s400-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1885-home_default/oferta-renting-autonomo-ebro-s400-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 478.7
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 442.12
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 494.83
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 454.65
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "HYUNDAI",
+    "model": "TUCSON",
+    "version": "HYUNDAI TUCSON 1.6T 239CV HEV AT KLASS",
+    "fuel": "Híbrido",
+    "precio_desde": 367.04,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-hyundai-tucson-hev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1538-home_default/oferta-renting-autonomo-hyundai-tucson-hev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 453.79
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 444.12
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 464.24
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 472.35
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 460.43
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 485.56
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "JAECOO",
+    "model": "5",
+    "version": "JAECOO 5 HEV EXCLUSIVE 1.5T DHE + 2 MOTORES ELÉCTRICOS 224 CV",
+    "fuel": "Eléctrico",
+    "precio_desde": 369.43,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-jaecoo-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2271-home_default/oferta-renting-autonomo-jaecoo-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 480.52
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 463.83
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 447.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 514.12
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 494.97
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 483.69
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SKODA",
+    "model": "OCTAVIA",
+    "version": "ŠKODA OCTAVIA COMBI SELECTION 2.0 TDI 150CV DSG 7vel",
+    "fuel": "Diésel",
+    "precio_desde": 375.0,
+    "duracion": 36,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-skoda-octavia",
+    "category": "",
+    "image": "https://m-renting.com/1156-home_default/skoda-octavia-combi-autonomo.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "BYD",
+    "model": "DOLPHIN",
+    "version": "BYD DOLPHIN DOLPHIN SURF BOOST",
+    "fuel": "",
+    "precio_desde": 381.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-byd-dolphin#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2439-home_default/oferta-renting-autonomo-byd-dolphin.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 562.65
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 508.2
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 461.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 582.01
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 526.35
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 480.37
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "C-HR",
+    "version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
+    "fuel": "",
+    "precio_desde": 389.07,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-toyota-c-hr-mhev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2138-home_default/oferta-renting-autonomo-toyota-c-hr-mhev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 482.94
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 470.77
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 511.76
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 495.88
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "CX-5",
+    "version": "MAZDA CX-5 2.5 e-SKYACTIV-G 141CV FWD AUT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 404.46,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-cx-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2691-home_default/oferta-renting-autonomo-mazda-cx-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 489.4
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 514.32
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 507.68
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 537.48
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "BYD",
+    "model": "ATTO",
+    "version": "BYD ATTO ATTO 2 DM-i",
+    "fuel": "",
+    "precio_desde": 405.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-byd-atto#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2423-home_default/oferta-renting-autonomo-byd-atto.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 548.13
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 511.83
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 490.05
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 566.28
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 528.77
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 513.04
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "VOLKSWAGEN",
+    "model": "TIGUAN",
+    "version": "VOLKSWAGEN TIGUAN \"MÁS\" 1.5 eTSI 110KW 150CV DSG 7vel",
+    "fuel": "Gasolina",
+    "precio_desde": 410.64,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-volkswagen-tiguan#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1997-home_default/oferta-renting-autonomo-volkswagen-tiguan.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 496.87
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 535.68
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 561.61
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 518.26
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "RENAULT",
+    "model": "AUSTRAL",
+    "version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
+    "fuel": "",
+    "precio_desde": 411.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-renault-austral#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2353-home_default/oferta-renting-autonomo-renault-austral.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 525.14
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 517.88
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 497.31
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 549.34
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 543.29
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 528.77
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SKODA",
+    "model": "KAROQ",
+    "version": "ŠKODA KAROQ 2.0 TDI 110kW 150CV DSG 7 vel.",
+    "fuel": "Diésel",
+    "precio_desde": 421.0,
+    "duracion": 60,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-skoda-karoq",
+    "category": "",
+    "image": "https://m-renting.com/1200-home_default/skoda-karoq.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "JAECOO",
+    "model": "7",
+    "version": "JAECOO 7 PHEV BUSINESS",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 447.66,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-jaecoo-7#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2283-home_default/oferta-renting-autonomo-jaecoo-7.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 541.67
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 580.63
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "SKODA",
+    "model": "ELROQ",
+    "version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
+    "fuel": "",
+    "precio_desde": 450.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-skoda-elroq",
+    "category": "",
+    "image": "https://m-renting.com/1218-home_default/skoda-elroq.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "KIA",
+    "model": "PV5 PASSENGER",
+    "version": "KIA PV5 PASSENGER L2H1 LR PLUS",
+    "fuel": "",
+    "precio_desde": 489.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-kia-pv5-passenger",
+    "category": "",
+    "image": "https://m-renting.com/2757-home_default/oferta-renitng-autonomo-kia-pv5-passenger.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "JAECOO",
+    "model": "5",
+    "version": "JAECOO 5 BEV EXCLUSIVE 211CV",
+    "fuel": "",
+    "precio_desde": 493.18,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-jaecoo-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2497-home_default/oferta-renting-autonomo-jaecoo-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 480.52
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 463.83
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 447.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 514.12
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 494.97
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 483.69
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "KIA",
+    "model": "PV5 CARGO",
+    "version": "KIA PV5 CARGO L2H1 LR ESSENITIAL",
+    "fuel": "",
+    "precio_desde": 507.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-kia-pv5-cargo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2748-home_default/oferta-renting-autonomo-kia-pv5-cargo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 663.08
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 613.47
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 688.49
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 638.88
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "CITROEN",
+    "model": "OPEL COMBO-E",
+    "version": "OPEL COMBO-e CARGO M 800KG",
+    "fuel": "",
+    "precio_desde": 527.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-opel-combo-e#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2737-home_default/oferta-renting-autonomo-opel-combo-e.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 710.27
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 637.67
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 738.1
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 664.29
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "CITROEN",
+    "model": "EBERLINGO",
+    "version": "CITROEN eBERLINGO VAN TALLA M",
+    "fuel": "",
+    "precio_desde": 539.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-citroen-eberlingo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2721-home_default/oferta-renting-autonomo-citroen-eberlingo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 652.19
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "TOYOTA",
+    "model": "HILUX",
+    "version": "TOYOTA HILUX DOBLE CABINA GX 2.4B 150CV 6AT 4X4",
+    "fuel": "",
+    "precio_desde": 550.19,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-toyota-hilux#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2158-home_default/oferta-renting-autonomo-toyota-hilux.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 668.94
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 665.73
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 723.71
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 714.83
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "MAZDA",
+    "model": "CX-60",
+    "version": "MAZDA CX-60 2.5L e-SKYACTIV PHEV AWD 241kW (327 CV) 8AT EXCLUSIVE-LINE",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 552.59,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-mazda-cx-60-phev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2703-home_default/oferta-renting-autonomo-mazda-cx-60-phev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 686.4
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 668.63
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 717.6
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 696.68
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "OMODA",
+    "model": "7",
+    "version": "OMODA 7 PHEV PREMIUM",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 553.8,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-omoda-7",
+    "category": "",
+    "image": "https://m-renting.com/2247-home_default/oferta-renitng-autonomo-omoda-7.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "OMODA",
+    "model": "7",
+    "version": "OMODA 7 PHEV PREMIUM",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 562.81,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-omoda-7",
+    "category": "",
+    "image": "https://m-renting.com/2254-home_default/oferta-renitng-autonomo-omoda-7-mate.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "OMODA",
+    "model": "9",
+    "version": "OMODA 9 SHS PREMIUM 1.5 TGDI 3DHT 395kW (537CV) AWD",
+    "fuel": "Gasolina",
+    "precio_desde": 621.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-omoda-9#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2116-home_default/oferta-renting-autonomo-omoda-9.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 873.62
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 751.41
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 913.55
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 785.29
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "autonomo",
+    "make": "JAECOO",
+    "model": "8",
+    "version": "JAECOO 8 PHEV EXCLUSIVE 1.5 TGDI 428CV 7 plazas",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 635.77,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-autonomo-jaecoo-8#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2505-home_default/oferta-renting-autonomo-jaecoo-8.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 832.37
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 769.28
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 874.98
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 820.74
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "OPEL",
+    "model": "CORSA",
+    "version": "OPEL CORSA GS 1.2T",
+    "fuel": "",
+    "precio_desde": 244.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-opel-corsa#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2166-home_default/oferta-renting-empresa-opel-corsa.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 295.24
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 324.28
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 340.01
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 314.6
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "DACIA",
+    "model": "SANDERO",
+    "version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
+    "fuel": "",
+    "precio_desde": 256.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-dacia-sandero#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2190-home_default/oferta-renting-empresa-dacia-sandero.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 336.38
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 309.76
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 349.69
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 325.49
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "RENAULT",
+    "model": "CAPTUR",
+    "version": "RENAULT CAPTUR EVOLUTION ECO-G SS",
+    "fuel": "",
+    "precio_desde": 259.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-renault-captur#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/847-home_default/oferta-renting-empresa-renault-captur.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 338.8
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 330.33
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 313.39
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 354.53
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 347.27
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 332.75
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 266.16,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-3-mt#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2602-home_default/oferta-renting-empresa-mazda-3-mt.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 322.05
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 333.83
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 351.55
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 337.49
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "YARIS",
+    "version": "TOYOTA YARIS ACTIVE 120H 116CV",
+    "fuel": "",
+    "precio_desde": 269.95,
+    "duracion": 72,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-yaris#/30-kms_al_ano-10000_kms/43-plazos-72_meses",
+    "category": "",
+    "image": "https://m-renting.com/659-home_default/oferta-renting-empresa-toyota-yaris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 346.71
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 342.58
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 326.64
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 371.29
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 362.3
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "KAMIQ",
+    "version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV MANUAL",
+    "fuel": "Gasolina",
+    "precio_desde": 271.0,
+    "duracion": 48,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-empresa-skoda-kamiq#/31-kms_al_ano-15000_kms/32-plazos-48_meses",
+    "category": "",
+    "image": "https://m-renting.com/2322-home_default/oferta-renting-empresa-skoda-kamiq.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 327.91
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 330.33
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 327.91
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 330.33
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "VOLKSWAGEN",
+    "model": "POLO",
+    "version": "VOLKSWAGEN POLO MATCH 1.0 TSI 70kW 95CV",
+    "fuel": "Gasolina",
+    "precio_desde": 271.96,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-volkswagen-polo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1892-home_default/oferta-renting-empresa-volkswagen-polo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 337.09
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 329.07
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 357.63
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 349.01
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "2",
+    "version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 283.8,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-2-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2508-home_default/oferta-renting-empresa-mazda-2-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 343.4
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 365.0
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 356.9
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 380.82
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "2",
+    "version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 287.3,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-2-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2547-home_default/oferta-renting-empresa-mazda-2-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 369.47
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 347.63
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 385.55
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 361.35
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "KAMIQ",
+    "version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 290.0,
+    "duracion": 48,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-empresa-skoda-kamiq-dsg#/31-kms_al_ano-15000_kms/32-plazos-48_meses",
+    "category": "",
+    "image": "https://m-renting.com/2294-home_default/oferta-renting-empresa-skoda-kamiq-dsg.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 350.9
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 355.74
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 350.9
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 353.32
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6AT FWD CENTRE-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 301.84,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-3-at-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2555-home_default/oferta-renting-empresa-mazda-3-at-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 377.25
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 372.91
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 365.23
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 398.76
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 392.28
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 384.1
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "3",
+    "version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6AT FWD CENTRE-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 306.88,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-3-at-rojo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2579-home_default/oferta-renting-empresa-mazda-3-at-rojo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 379.08
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 371.32
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 383.41
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 398.83
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 390.56
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 405.34
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "LANCIA",
+    "model": "YPSILON",
+    "version": "LANCIA YPSILON LX IBRIDA",
+    "fuel": "",
+    "precio_desde": 309.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-lancia-ypsilon#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2449-home_default/oferta-renting-empresa-lancia-ypsilon.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 393.25
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373.89
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 400.51
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 411.4
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 393.25
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 415.03
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "PEUGEOT",
+    "model": "RIFTER",
+    "version": "PEUGEOT RIFTER ACTIVE BUSINESS STANDARD N1 BLUEHDi 100 S/S",
+    "fuel": "Diésel",
+    "precio_desde": 309.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-peugeot-rifter#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1011-home_default/oferta-renting-empresa-peugeot-rifter.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373.89
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 430.76
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "CX-30",
+    "version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 309.22,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-cx-30-mt-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2637-home_default/oferta-renting-empresa-mazda-cx-30-mt-blanco.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "CX-30",
+    "version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 313.57,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-cx-30-mt-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2657-home_default/oferta-renting-empresa-mazda-cx-30-mt-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 385.65
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 383.95
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 379.42
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 403.45
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 399.57
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 393.23
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "OPEL",
+    "model": "FRONTERA",
+    "version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
+    "fuel": "",
+    "precio_desde": 319.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-opel-frontera#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/911-home_default/oferta-renting-empresa-opel-frontera.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 415.03
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 395.67
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 385.99
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 430.76
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 416.24
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 408.98
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "RENAULT",
+    "model": "SYMBIOZ",
+    "version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
+    "fuel": "",
+    "precio_desde": 320.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-renault-symbioz#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2209-home_default/oferta-renting-empresa-renault-symbioz.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 387.2
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "PROACE CITY",
+    "version": "TOYOTA PROACE CITY VAN L1 GX",
+    "fuel": "",
+    "precio_desde": 322.6,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-proace-city-gx#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1342-home_default/oferta-renting-empresa-toyota-proace-city-gx.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 390.35
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 425.8
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 455.55
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 412.28
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "CX-30 AT",
+    "version": "MAZDA CX-30 AT 2027 2.5L e-SKYACTIV H MHEV 140CV 6AT PFWD PRIME-LINE",
+    "fuel": "Híbrido",
+    "precio_desde": 328.18,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-cx-30-at#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1266-home_default/oferta-renting-empresa-mazda-cx-30-at.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 397.1
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "PROACE CITY",
+    "version": "TOYOTA PROACE CITY VAN L1 GX PLUS",
+    "fuel": "",
+    "precio_desde": 328.61,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-proace-city-gx-plus#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1335-home_default/oferta-renting-empresa-toyota-proace-city-gx-plus.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 434.14
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 408.17
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 397.62
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 464.19
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 435.52
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 419.83
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "AUDI",
+    "model": "A1",
+    "version": "AUDI A1 SB ADRENALIN EDITION 30TFSI 116CV STRONIC",
+    "fuel": "",
+    "precio_desde": 329.34,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-audi-a1#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1728-home_default/oferta-renting-empresa-audi-a1.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 423.77
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 398.5
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 445.92
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 417.22
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "PROACE CITY",
+    "version": "TOYOTA PROACE CITY COMBI L2 GX PLUS 100 CV",
+    "fuel": "",
+    "precio_desde": 334.37,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-proace-city-combi#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1305-home_default/oferta-renting-empresa-toyota-proace-city-combi.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 418.18
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 404.59
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 445.0
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 426.27
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "CITROEN",
+    "model": "BERLINGO",
+    "version": "CITROEN BERLINGO VAN FURGÓN M",
+    "fuel": "",
+    "precio_desde": 335.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-citroen-berlingo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/335-home_default/oferta-renting-empresa-citroen-berlingo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 456.17
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 405.35
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 509.41
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 523.93
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 469.48
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 421.08
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SEAT",
+    "model": "LEON",
+    "version": "SEAT LEON 2.0 TDI CR ST/SP STYLE XL",
+    "fuel": "Diésel",
+    "precio_desde": 339.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-seat-leon#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/840-home_default/oferta-renting-empresa-seat-leon.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 429.55
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 410.19
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 429.55
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 447.7
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 448.91
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 431.97
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "OMODA",
+    "model": "5",
+    "version": "OMODA 5 HEV BUSINESS",
+    "fuel": "Híbrido",
+    "precio_desde": 340.08,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-omoda-5",
+    "category": "",
+    "image": "https://m-renting.com/2244-home_default/oferta-renitng-empresa-omoda-5.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "YARIS CROSS",
+    "version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
+    "fuel": "",
+    "precio_desde": 341.25,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-yaris-cross#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/671-home_default/oferta-renting-empresa-toyota-yaris-cross.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 431.91
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 412.91
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 463.39
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 438.26
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "NISSAN QASHQAI DIG-T MILD HYBRID 12V ACENTA",
+    "fuel": "",
+    "precio_desde": 351.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-nissan-qashqai#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1681-home_default/oferta-renting-empresa-nissan-qashqai.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 468.27
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 439.23
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 424.71
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 487.63
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 459.8
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 462.22
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "VOLKSWAGEN",
+    "model": "T-ROC",
+    "version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 358.3,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-volkswagen-t-roc-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1955-home_default/oferta-renting-empresa-volkswagen-t-roc-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 444.8
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 433.54
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 465.18
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 451.73
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "VOLKSWAGEN",
+    "model": "T-ROC",
+    "version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
+    "fuel": "Gasolina",
+    "precio_desde": 358.3,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-volkswagen-t-roc-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1933-home_default/oferta-renting-empresa-volkswagen-t-roc-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 433.54
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 458.43
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 481.24
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 451.55
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "EBRO",
+    "model": "S400",
+    "version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
+    "fuel": "Híbrido",
+    "precio_desde": 362.95,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-ebro-s400-blanco#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1872-home_default/oferta-renting-empresa-ebro-s400-blanco.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 439.17
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "OCTAVIA",
+    "version": "ŠKODA OCTAVIA LIMO SELECTION 2.0 TDI 150CV DSG 7vel",
+    "fuel": "Diésel",
+    "precio_desde": 364.0,
+    "duracion": 36,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-empresa-skoda-octavia",
+    "category": "",
+    "image": "https://m-renting.com/1178-home_default/skoda-octavia-limo-empresa.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "ALFA ROMEO",
+    "model": "JUNIOR",
+    "version": "ALFA ROMEO JUNIOR IBRIDA TI 1.2 VGT",
+    "fuel": "",
+    "precio_desde": 365.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-alfa-romeo-junior#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/949-home_default/oferta-renting-empresa-alfa-romeo-junior.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 473.11
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 441.65
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 494.89
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 469.48
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "EBRO",
+    "model": "S400",
+    "version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
+    "fuel": "Híbrido",
+    "precio_desde": 365.39,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-ebro-s400-gris#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1888-home_default/oferta-renting-empresa-ebro-s400-gris.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 442.12
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "HYUNDAI",
+    "model": "TUCSON",
+    "version": "HYUNDAI TUCSON 1.6T 239CV HEV AT KLASS",
+    "fuel": "Híbrido",
+    "precio_desde": 367.04,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-hyundai-tucson-hev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/775-home_default/oferta-renting-empresa-hyundai-tucson-hev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 444.12
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 464.24
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 485.56
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 460.43
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "JAECOO",
+    "model": "5",
+    "version": "JAECOO 5 HEV EXCLUSIVE 1.5T DHE + 2 MOTORES ELÉCTRICOS 224 CV",
+    "fuel": "Eléctrico",
+    "precio_desde": 369.43,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-jaecoo-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2268-home_default/oferta-renting-empresa-jaecoo-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 480.52
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 447.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 514.12
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 483.69
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "OCTAVIA",
+    "version": "ŠKODA OCTAVIA COMBI SELECTION 2.0 TDI 150CV DSG 7vel",
+    "fuel": "Diésel",
+    "precio_desde": 375.0,
+    "duracion": 36,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-empresa-skoda-octavia",
+    "category": "",
+    "image": "https://m-renting.com/1147-home_default/skoda-octavia-combi-empresa.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "BYD",
+    "model": "DOLPHIN",
+    "version": "BYD DOLPHIN DOLPHIN SURF BOOST",
+    "fuel": "",
+    "precio_desde": 381.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-byd-dolphin#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2436-home_default/oferta-renting-empresa-byd-dolphin.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 461.01
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 562.65
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 480.37
+      },
+      {
+        "km": 15000,
+        "meses": 72,
+        "precio": 582.01
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "C-HR",
+    "version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
+    "fuel": "",
+    "precio_desde": 389.07,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-c-hr-mhev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2127-home_default/oferta-renting-empresa-toyota-c-hr-mhev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 482.94
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 470.77
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 511.76
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 495.88
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "CX-5",
+    "version": "MAZDA CX-5 2.5 e-SKYACTIV-G 141CV FWD AUT CENTRE-LINE",
+    "fuel": "",
+    "precio_desde": 404.46,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-cx-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2680-home_default/oferta-renting-empresa-mazda-cx-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 514.32
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 489.4
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 537.48
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 507.68
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "BYD",
+    "model": "ATTO",
+    "version": "BYD ATTO ATTO 2 DM-i",
+    "fuel": "",
+    "precio_desde": 405.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-byd-atto#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2415-home_default/oferta-renting-empresa-byd-atto.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 511.83
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 490.05
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 528.77
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 513.04
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "VOLKSWAGEN",
+    "model": "TIGUAN",
+    "version": "VOLKSWAGEN TIGUAN \"MÁS\" 1.5 eTSI 110KW 150CV DSG 7vel",
+    "fuel": "Gasolina",
+    "precio_desde": 410.64,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-volkswagen-tiguan#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1987-home_default/oferta-renting-empresa-volkswagen-tiguan.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 535.68
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 513.84
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 496.87
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 562.82
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 537.82
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 518.26
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "RENAULT",
+    "model": "AUSTRAL",
+    "version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
+    "fuel": "",
+    "precio_desde": 411.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-renault-austral#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/877-home_default/oferta-renting-empresa-renault-austral.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 497.31
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 528.77
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "KAROQ",
+    "version": "ŠKODA KAROQ 2.0 TDI 110kW 150CV DSG 7 vel.",
+    "fuel": "Diésel",
+    "precio_desde": 421.0,
+    "duracion": 60,
+    "km": 15000,
+    "url": "https://m-renting.com/oferta-renting-empresa-skoda-karoq",
+    "category": "",
+    "image": "https://m-renting.com/1192-home_default/skoda-karoq.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "JAECOO",
+    "model": "7",
+    "version": "JAECOO 7 PHEV BUSINESS",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 447.66,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-jaecoo-7#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2278-home_default/oferta-renting-empresa-jaecoo-7.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 574.17
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 541.67
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 606.63
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 580.63
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "ELROQ",
+    "version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
+    "fuel": "",
+    "precio_desde": 450.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-skoda-elroq",
+    "category": "",
+    "image": "https://m-renting.com/1211-home_default/skoda-elroq.jpg"
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "PROACE MAX",
+    "version": "TOYOTA PROACE MAX L3H2 GX 140 CV",
+    "fuel": "",
+    "precio_desde": 475.47,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-proace-max-gx#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/1368-home_default/oferta-renting-empresa-toyota-proace-max-gx.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 575.32
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "KIA",
+    "model": "PV5 PASSENGER",
+    "version": "KIA PV5 PASSENGER L2H1 LR PLUS",
+    "fuel": "",
+    "precio_desde": 489.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-kia-pv5-passenger#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2752-home_default/oferta-renting-empresa-kia-pv5-passenger.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 591.69
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 620.73
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "JAECOO",
+    "model": "5",
+    "version": "JAECOO 5 BEV EXCLUSIVE 211CV",
+    "fuel": "",
+    "precio_desde": 493.18,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-jaecoo-5#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2495-home_default/oferta-renting-empresa-jaecoo-5.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 480.52
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 447.01
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 514.12
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 483.69
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "KIA",
+    "model": "PV5 CARGO",
+    "version": "KIA PV5 CARGO L2H1 LR ESSENITIAL",
+    "fuel": "",
+    "precio_desde": 507.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-kia-pv5-cargo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2745-home_default/oferta-renting-empresa-kia-pv5-cargo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 728.42
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 613.47
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 756.25
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 638.88
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "CITROEN",
+    "model": "OPEL COMBO-E",
+    "version": "OPEL COMBO-e CARGO M 800KG",
+    "fuel": "",
+    "precio_desde": 527.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-opel-combo-e#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2730-home_default/oferta-renting-empresa-opel-combo-e.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 815.54
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 637.67
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 845.79
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 664.29
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "CITROEN",
+    "model": "EBERLINGO",
+    "version": "CITROEN eBERLINGO VAN TALLA M",
+    "fuel": "",
+    "precio_desde": 539.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-citroen-eberlingo#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2715-home_default/oferta-renting-empresa-citroen-eberlingo.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 652.19
+      },
+      {
+        "km": 10000,
+        "meses": 72,
+        "precio": 839.74
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "TOYOTA",
+    "model": "HILUX",
+    "version": "TOYOTA HILUX DOBLE CABINA GX 2.4B 150CV 6AT 4X4",
+    "fuel": "",
+    "precio_desde": 550.19,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-toyota-hilux#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2152-home_default/oferta-renting-empresa-toyota-hilux.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 665.73
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "MAZDA",
+    "model": "CX-60",
+    "version": "MAZDA CX-60 2.5L e-SKYACTIV PHEV AWD 241kW (327 CV) 8AT EXCLUSIVE-LINE",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 552.59,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-mazda-cx-60-phev#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/683-home_default/oferta-renting-empresa-mazda-cx-60-phev.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 668.63
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "OMODA",
+    "model": "7",
+    "version": "OMODA 7 PHEV PREMIUM",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 553.8,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-omoda-7#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2240-home_default/oferta-renting-empresa-omoda-7.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 796.48
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 670.1
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 840.76
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 721.14
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "OMODA",
+    "model": "7",
+    "version": "OMODA 7 PHEV PREMIUM",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 562.81,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-omoda-7",
+    "category": "",
+    "image": "https://m-renting.com/2259-home_default/oferta-renitng-empresa-omoda-7-mate.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 796.48
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 670.1
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 840.76
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 721.14
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "OMODA",
+    "model": "9",
+    "version": "OMODA 9 SHS PREMIUM 1.5 TGDI 3DHT 395kW (537CV) AWD",
+    "fuel": "Gasolina",
+    "precio_desde": 621.0,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-omoda-9#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2110-home_default/oferta-renting-empresa-omoda-9.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 873.62
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 807.07
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 751.41
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 913.55
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 840.95
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 785.29
+      }
+    ]
+  },
+  {
+    "fuente": "M Automoción",
+    "tipo": "empresa",
+    "make": "JAECOO",
+    "model": "8",
+    "version": "JAECOO 8 PHEV EXCLUSIVE 1.5 TGDI 428CV 7 plazas",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 635.77,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://m-renting.com/oferta-renting-empresa-jaecoo-8#/30-kms_al_ano-10000_kms/33-plazos-60_meses",
+    "category": "",
+    "image": "https://m-renting.com/2503-home_default/oferta-renting-empresa-jaecoo-8.jpg",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 769.28
+      }
+    ]
+  },
+  {
+    "fuente": "Kia Renting",
+    "tipo": "particular",
+    "make": "KIA",
+    "model": "NIRO",
+    "version": "KIA NIRO HEV CONCEPT",
+    "fuel": "Híbrido",
+    "precio_desde": 340,
+    "duracion": 60,
+    "km": 5000,
+    "url": "",
+    "image": "/img/modelos/kia-niro.png",
+    "category": "SUV",
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 36,
+        "precio": 355
+      },
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 349
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 340
+      },
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 384
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 381
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 409
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 405
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 402
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 434
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 440
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 437
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES",
+    "model": "GLE 300D 4MATIC COUPE",
+    "version": "GLE 300d 4MATIC Coupé — Diésel mHEV 48V 269CV Auto",
+    "fuel": "Diésel",
+    "precio_desde": 1163,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1382
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1249
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1163
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1444
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1303
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1204
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1487
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1347
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1347
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1528
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1416
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1416
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1601
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1464
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1464
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES",
+    "model": "GLE 350D 4MATIC COUPE",
+    "version": "GLE 350d 4MATIC Coupé — PHEV 333CV Auto",
+    "fuel": "Híbrido Enchufable",
+    "precio_desde": 1250,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1486
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1342
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1250
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1555
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1402
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1293
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1602
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1448
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1372
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1646
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1528
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1451
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1732
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1579
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1515
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MERCEDES",
+    "model": "GLE 350D 4MATIC COUPE",
+    "version": "GLE 350d 4MATIC Coupé — PHEV 333CV Auto",
+    "fuel": "Híbrido Enchufable",
+    "precio_desde": 1513,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1798
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1624
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1513
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1882
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1696
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1565
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1938
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1752
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1660
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1992
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1849
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1756
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 2096
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1911
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1833
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "Qashqai DIG-T 103kW 140CV mHEV 4x2 Acenta",
+    "fuel": "Gasolina",
+    "precio_desde": 278,
+    "duracion": 60,
+    "km": 5000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 287
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 278
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 303
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 350
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 340
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 373
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 369
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 401
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 397
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 426
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 425
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "Qashqai DIG-T 103kW 140CV mHEV 4x2 Acenta",
+    "fuel": "Gasolina",
+    "precio_desde": 333,
+    "duracion": 60,
+    "km": 5000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 342
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 333
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 376
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 367
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 424
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 411
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 451
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 446
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 485
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 480
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 515
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 514
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "OPEL",
+    "model": "CORSA",
+    "version": "Corsa 5P berlina 1.2T XHL 74kW 100CV GS",
+    "fuel": "Gasolina",
+    "precio_desde": 245,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Utilitario",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 257
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 245
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 271
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 261
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 289
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 285
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 307
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 330
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 329
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "PEUGEOT",
+    "model": "208",
+    "version": "208 Allure Gasolina 100 S&S 6 Vel. MAN Turbo",
+    "fuel": "Gasolina",
+    "precio_desde": 243,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Utilitario",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 252
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 243
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 267
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 259
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 285
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 282
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 307
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 304
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 325
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 326
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "JUKE",
+    "version": "Juke 1.6 Hybrid 105kW 145CV N-Connecta Automático",
+    "fuel": "Gasolina",
+    "precio_desde": 319,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 321
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 321
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 319
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 338
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 337
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 334
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 356
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 353
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 348
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 381
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 377
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 373
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 406
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 403
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 397
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MASERATI",
+    "model": "GRECALE",
+    "version": "Grecale L4 MHEV 300CV AWD Automático",
+    "fuel": "Gasolina",
+    "precio_desde": 1191,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1405
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1290
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1191
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1447
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1335
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1229
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1499
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1383
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1275
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1550
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1434
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1326
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1606
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1496
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1380
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MASERATI",
+    "model": "GRECALE",
+    "version": "Grecale L4 MHEV 300CV AWD Automático",
+    "fuel": "Gasolina",
+    "precio_desde": 1441,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1700
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1561
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1441
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1751
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1615
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1487
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1814
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1673
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1543
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1876
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1735
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1604
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1943
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1810
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1670
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES",
+    "model": "GLC 220D 4MATIC",
+    "version": "GLC 220d 4MATIC 2022 todoterreno",
+    "fuel": "Diésel",
+    "precio_desde": 831,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 892
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 831
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 929
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 872
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 976
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 926
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1028
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 983
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1082
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1039
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES",
+    "model": "GLC 300 DE 4MATIC COUPE",
+    "version": "GLC 300de 4MATIC Coupé 2023 PHEV",
+    "fuel": "Híbrido Enchufable",
+    "precio_desde": 892,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 963
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 892
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1000
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 934
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1048
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 988
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1100
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1046
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1156
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1104
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES",
+    "model": "GLC 200 4MATIC COUPE",
+    "version": "GLC 200 4MATIC Coupé 2023 Gasolina",
+    "fuel": "Gasolina",
+    "precio_desde": 866,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 930
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 866
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 970
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 910
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1019
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 966
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1073
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1025
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1129
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1085
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MG",
+    "model": "MG3",
+    "version": "MG3 Hybrid+ Business Advanced Tech 5P HEV 195CV",
+    "fuel": "Híbrido",
+    "precio_desde": 269,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Utilitario",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 271
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 269
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 292
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 290
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 316
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 323
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MG",
+    "model": "MG3",
+    "version": "MG3 Hybrid+ Business Advanced Tech 5P HEV 195CV",
+    "fuel": "Híbrido",
+    "precio_desde": 325,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Utilitario",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 328
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 325
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 353
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 351
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 382
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 391
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "INTERSTAR",
+    "version": "Interstar Furgón N1 L2H2 3.5t dCi 96kW 130CV 6MT FWD Acenta",
+    "fuel": "Diésel",
+    "precio_desde": 459,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Furgoneta",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 474
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 459
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 506
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 489
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 538
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 531
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 576
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 569
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 610
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 608
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "FABIA",
+    "version": "Fabia Berlina 1.5 TSI 110kW 150CV DSG Plus",
+    "fuel": "Gasolina",
+    "precio_desde": 286,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Utilitario",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 294
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 286
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 305
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 332
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 332
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 358
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 358
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 381
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 384
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES",
+    "model": "CITAN",
+    "version": "Citan 110 CDI 70kW 95CV Furgón Base Cargo Manual",
+    "fuel": "Diésel",
+    "precio_desde": 372,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Furgoneta",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 406
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 385
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 372
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 432
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 409
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 394
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 454
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 432
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 425
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 474
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 461
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 454
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 501
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 486
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 482
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "AUDI",
+    "model": "A1",
+    "version": "A1 Sportback Adrenalin 30 TFSI 85kW 116CV S tronic Automático",
+    "fuel": "Gasolina",
+    "precio_desde": 315,
+    "duracion": 36,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "Utilitario",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 315
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 320
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 318
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 333
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 336
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 333
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 351
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 352
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 348
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 374
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 374
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 372
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 397
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 397
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 395
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MG",
+    "model": "ZS",
+    "version": "MG ZS Hybrid+ Business HEV 197CV Automático",
+    "fuel": "Híbrido",
+    "precio_desde": 305,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 308
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 305
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 332
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 329
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 359
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 368
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "EBRO",
+    "model": "S800",
+    "version": "S800 1.5 TGDI PHEV Luxury E-CVT 279CV Automático",
+    "fuel": "Híbrido Enchufable",
+    "precio_desde": 496,
+    "duracion": 60,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 538
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 515
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 496
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 564
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 541
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 525
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 601
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 575
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 560
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 635
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 609
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 596
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 671
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 645
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 638
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "HONDA",
+    "model": "CR-V",
+    "version": "CR-V 2.0 i-MMD PHEV 4X2 184CV Elegance Tech Automático",
+    "fuel": "Híbrido Enchufable",
+    "precio_desde": 446,
+    "duracion": 36,
+    "km": 10000,
+    "url": "https://www.quadis.es/empresas/renting",
+    "category": "SUV",
+    "image": "",
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 446
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 461
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 464
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 474
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 486
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 486
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 501
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 511
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 508
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 529
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 535
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 530
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 557
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 560
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 552
+      }
+    ]
+  }
+]
