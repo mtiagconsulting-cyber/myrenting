@@ -1,24 +1,78 @@
 [
- {
-  "fuente": "Kia Renting",
-  "tipo": "particular",
-  "make": "KIA",
-  "model": "NIRO",
-  "version": "KIA NIRO HEV CONCEPT",
-  "fuel": "Híbrido",
-  "precio_desde": 0,
-  "duracion": 60,
-  "km": 10000,
-  "url": "",
-  "image": "",
-  "category": "SUV",
-  "combinaciones": [
-   {
-    "km": 10000,
-    "meses": 60,
-    "precio": 0
-   }
-  ],
-  "_nota": "PLANTILLA. Rellena aquí las ofertas de Kia u otras correcciones a mano. Estas GANAN sobre lo scrapeado."
- }
+  {
+    "fuente": "Kia Renting",
+    "tipo": "particular",
+    "make": "KIA",
+    "model": "NIRO",
+    "version": "KIA NIRO HEV CONCEPT",
+    "fuel": "Híbrido",
+    "precio_desde": 340,
+    "duracion": 60,
+    "km": 5000,
+    "url": "",
+    "image": "/img/modelos/kia-niro.png",
+    "category": "SUV",
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 36,
+        "precio": 355
+      },
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 349
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 340
+      },
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 384
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 381
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 409
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 405
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 402
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 434
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 440
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 437
+      }
+    ]
+  }
 ]
