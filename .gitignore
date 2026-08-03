@@ -44,4 +44,3 @@ _site/
 *.bak
 !data/master/
 !ofertas_combinadas.json
-!data/master/ofertas-quadis-brokers.json

@@ -12,7 +12,7 @@ Reglas:
  - Se caducan ofertas sin precio (precio_desde<=0) salvo que sean manuales.
 """
 import json, os, glob, re, unicodedata, collections, datetime
-REPO="/workspace/myrenting"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 
 def norm(s): return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode().lower()).strip()
 def slug(s): return re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode().lower()).strip('-')

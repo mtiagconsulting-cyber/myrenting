@@ -8,7 +8,7 @@ Fuente de specs: index.html (cars: potencia, etiqueta, combustible, consumo, pla
 Es idempotente: se puede correr siempre.
 """
 import json, re, unicodedata, os
-REPO="/workspace/myrenting"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 def norm(s): return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode().lower()).strip()
 def slug(s): return re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode().lower()).strip('-')
 

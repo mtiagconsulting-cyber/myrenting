@@ -7,7 +7,7 @@ Salida: _site/renting-<modelo>-<ciudad>.html  (preview; no pisa producción)
 Uso:   python3 scripts/3_generate/generar_ciudades.py [--solo modelo1,modelo2] [--ciudades madrid,barcelona]
 """
 import json, os, re, html as H, sys
-REPO="/workspace/myrenting"; DOMAIN="https://myrenting.es"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2]); DOMAIN="https://myrenting.es"
 cat=json.load(open(f"{REPO}/data/build/catalogo.json",encoding='utf-8'))["modelos"]
 ZBE=json.load(open(f"{REPO}/data/master/ciudades-zbe.json",encoding='utf-8'))
 OUT=f"{REPO}/_site"; os.makedirs(OUT,exist_ok=True)

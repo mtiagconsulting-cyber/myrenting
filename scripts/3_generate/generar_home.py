@@ -5,7 +5,7 @@ El DISEÑO vive en templates/home.html (marcador /*__CARS__*/).
 Los DATOS vienen del catálogo. Así la home sobrevive a cada regeneración.
 """
 import json, re
-REPO="/workspace/myrenting"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 cat=json.load(open(f"{REPO}/data/build/catalogo.json",encoding='utf-8'))["modelos"]
 tpl=open(f"{REPO}/templates/home.html",encoding='utf-8').read()
 

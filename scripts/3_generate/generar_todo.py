@@ -11,7 +11,7 @@ NOTA: la home (index.html) y las landings de ciudad se enganchan aquí como mód
       adicionales una vez validado el modelo base.
 """
 import json, os, re, html as H
-REPO="/workspace/myrenting"; DOMAIN="https://myrenting.es"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2]); DOMAIN="https://myrenting.es"
 cat=json.load(open(f"{REPO}/data/build/catalogo.json",encoding='utf-8'))
 ZBE=json.load(open(f"{REPO}/data/master/ciudades-zbe.json",encoding='utf-8'))
 MODS=cat["modelos"]

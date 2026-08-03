@@ -2,40 +2,46 @@
 """
 CAPA 1 · SCRAPING
 Ejecuta los scrapers de cada fuente y deja el resultado crudo en data/raw/.
-Los scrapers reales viven en la raíz / scripts/scrapers/ (en tu Mac).
+Los scrapers reales viven en la raíz del repo.
 Este wrapper los llama; si uno falla, conserva el data/raw anterior (no lo borra a medias).
 
 Fuentes:
-  - M Automoción  -> scrape_mautomocion.py  -> data/raw/mautomocion.json
-  - Quadis        -> scrape_quadis.py       -> data/raw/quadis.json
+  - M Automoción  -> scrape_mautomocion.py  (--matrix) -> mautomocion-db.json -> data/raw/mautomocion.json
+  - Quadis        -> scrape_quadis.py                  -> quadis-db.json      -> data/raw/quadis.json
   - Kia Renting   -> (manual, en data/master/ofertas-manuales.json)
+
+Nota: cada scraper escribe su propio "<fuente>-db.json" en la raíz; este wrapper
+lo copia a data/raw/ (lo único que lee build_catalogo.py). Así el scrape de
+M Automoción llega de verdad al catálogo y a la web.
 """
 import subprocess, sys, os, shutil, datetime
-REPO="/workspace/myrenting"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 RAW=f"{REPO}/data/raw"
 
+# (nombre, comando, fichero-db que produce el scraper, salida en data/raw)
 SCRAPERS=[
-  ("M Automoción", ["python3", f"{REPO}/scrape_mautomocion.py"], f"{RAW}/mautomocion.json"),
-  ("Quadis",       ["python3", f"{REPO}/scrape_quadis.py"],       f"{RAW}/quadis.json"),
+  ("M Automoción", ["python3", f"{REPO}/scrape_mautomocion.py", "--matrix"], f"{REPO}/mautomocion-db.json", f"{RAW}/mautomocion.json"),
+  ("Quadis",       ["python3", f"{REPO}/scrape_quadis.py"],                  f"{REPO}/quadis-db.json",      f"{RAW}/quadis.json"),
 ]
 
 def run():
     os.makedirs(RAW,exist_ok=True)
     ok=True
-    for nombre,cmd,salida in SCRAPERS:
+    for nombre,cmd,db_src,salida in SCRAPERS:
         if not os.path.exists(cmd[1]):
             print(f"  ⏭️  {nombre}: scraper no encontrado ({cmd[1]}), se conserva data/raw anterior"); continue
         bak=salida+".bak"
         if os.path.exists(salida): shutil.copy(salida,bak)
         print(f"  ▶️  {nombre}...")
         r=subprocess.run(cmd,cwd=REPO)
-        if r.returncode!=0:
-            print(f"  ❌ {nombre} falló; restauro copia previa")
-            if os.path.exists(bak): shutil.move(bak,salida)
-            ok=False
-        else:
+        if r.returncode==0 and os.path.exists(db_src):
+            shutil.copy(db_src,salida)
             print(f"  ✅ {nombre} -> {os.path.basename(salida)}")
             if os.path.exists(bak): os.remove(bak)
+        else:
+            print(f"  ❌ {nombre} falló (rc={r.returncode}, db={'ok' if os.path.exists(db_src) else 'no generado'}); restauro copia previa")
+            if os.path.exists(bak): shutil.move(bak,salida)
+            ok=False
     return ok
 
 if __name__=="__main__":
