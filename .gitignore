@@ -44,3 +44,10 @@ _site/
 *.bak
 !data/master/
 !ofertas_combinadas.json
+
+# datos locales del usuario — NUNCA publicar (repo público / GitHub Pages)
+Clientes/
+Ofertas M-auto/
+img/marcas/Nuevos Vehiculos/
+img/marcas/Nuevos Vehiculos.zip
+*.zip
