@@ -3296,5 +3296,74 @@
   ],
   "consumo_kwh100": 19.0,
   "asientos": 3
+ },
+ "MERCEDES BENZ||GLE 300D COUPE": {
+  "imagen_local": "/img/modelos/mercedes-benz-gle-300d-coupe.webp",
+  "precio_desde": 1163,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null
+ },
+ "MERCEDES BENZ||GLC 220D": {
+  "imagen_local": "/img/modelos/mercedes-benz-glc-220d.webp",
+  "precio_desde": 831,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "197 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 5
+ },
+ "MERCEDES BENZ||GLC 300DE COUPE": {
+  "imagen_local": "/img/modelos/mercedes-benz-glc-300de-coupe.webp",
+  "precio_desde": 892,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "197 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 5
+ },
+ "MERCEDES BENZ||GLC 200 COUPE": {
+  "imagen_local": "/img/modelos/mercedes-benz-glc-200-coupe.webp",
+  "precio_desde": 866,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null,
+  "potencia": "197 CV",
+  "etiqueta_dgt": "C",
+  "fuels": [
+   "Diésel"
+  ],
+  "consumo_l100": 5.5,
+  "asientos": 5
+ },
+ "HONDA||CR-V": {
+  "imagen_local": "/img/modelos/honda-cr-v.webp",
+  "precio_desde": 446,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null
+ },
+ "MERCEDES BENZ||GLE 350DE COUPE": {
+  "imagen_local": "/img/modelos/mercedes-benz-gle-350de-coupe.webp",
+  "precio_desde": 1250,
+  "fuentes": [
+   "Quadis"
+  ],
+  "category": null
  }
 }

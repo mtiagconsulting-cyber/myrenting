@@ -1,4 +1,11 @@
 # MyRenting — myrenting.es
+> Comparador de renting de coches en España con precios reales de varias fuentes (M Automoción, Quadis, Kia Renting). Sin entrada, cuota todo incluido.
 
-Comparador de renting de coches todo incluido (sin entrada, seguro y mantenimiento incluidos).
-Catálogo completo con precios en la home: https://myrenting.es/
+## Qué ofrecemos
+- Renting para particulares, autónomos y empresas.
+- Precios reales actualizados semanalmente.
+
+## Modelos y precios (dato directo)
+
+## ZBE (Zonas de Bajas Emisiones)
+Cubrimos la compatibilidad de cada coche con la ZBE de: Alicante, Barcelona, Bilbao, Gijón, Granada, Las Palmas de Gran Canaria, Madrid, Marbella, Murcia, Málaga, Palma, Sevilla, Valencia, Valladolid, Vigo, Zaragoza.
