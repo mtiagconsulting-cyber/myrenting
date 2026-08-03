@@ -7,7 +7,8 @@ Este wrapper los llama; si uno falla, conserva el data/raw anterior (no lo borra
 
 Fuentes:
   - M Automoción  -> scrape_mautomocion.py  (--matrix) -> mautomocion-db.json -> data/raw/mautomocion.json
-  - Quadis        -> scrape_quadis.py                  -> quadis-db.json      -> data/raw/quadis.json
+  - Quadis        -> NO se scrapea. Las ofertas de Quadis vienen del PDF de precios,
+                     ya cargadas a mano en data/master/ofertas-manuales.json.
   - Kia Renting   -> (manual, en data/master/ofertas-manuales.json)
 
 Nota: cada scraper escribe su propio "<fuente>-db.json" en la raíz; este wrapper
@@ -19,9 +20,9 @@ import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 RAW=f"{REPO}/data/raw"
 
 # (nombre, comando, fichero-db que produce el scraper, salida en data/raw)
+# Quadis NO va aquí: sus ofertas son manuales (PDF) en data/master/ofertas-manuales.json.
 SCRAPERS=[
   ("M Automoción", ["python3", f"{REPO}/scrape_mautomocion.py", "--matrix"], f"{REPO}/mautomocion-db.json", f"{RAW}/mautomocion.json"),
-  ("Quadis",       ["python3", f"{REPO}/scrape_quadis.py"],                  f"{REPO}/quadis-db.json",      f"{RAW}/quadis.json"),
 ]
 
 def run():
