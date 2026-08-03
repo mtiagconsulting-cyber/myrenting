@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 ORQUESTADOR SEMANAL · myrenting.es
-Uso:  python3 run_weekly.py            (todo el ciclo)
+Uso:  python3 run_weekly.py            (todo el ciclo, scrape rápido)
+      python3 run_weekly.py --con-matrix   (scrape + matriz km×meses de M Automoción; LENTO ~15 min)
       python3 run_weekly.py --sin-scrape   (salta el scraping, usa data/raw actual)
       python3 run_weekly.py --sin-publicar (genera y valida, pero no hace commit/push)
 
@@ -26,7 +27,9 @@ def main():
     args=set(sys.argv[1:])
     print(f"### CICLO SEMANAL myrenting.es · {datetime.datetime.now():%Y-%m-%d %H:%M} ###")
     if "--sin-scrape" not in args:
-        paso("1/5 SCRAPE",    ["python3","scripts/1_scrape/run_scrapers.py"])
+        scrape_cmd=["python3","scripts/1_scrape/run_scrapers.py"]
+        if "--con-matrix" in args: scrape_cmd.append("--con-matrix")
+        paso("1/5 SCRAPE", scrape_cmd)
     else:
         print("· (scraping omitido, uso data/raw actual)")
     paso("2/5 BUILD catálogo", ["python3","scripts/2_build/build_catalogo.py"])

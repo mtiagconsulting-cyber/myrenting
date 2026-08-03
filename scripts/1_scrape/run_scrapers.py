@@ -19,10 +19,15 @@ import subprocess, sys, os, shutil, datetime
 import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 RAW=f"{REPO}/data/raw"
 
+# Con --con-matrix se extrae la matriz km×meses de cada ficha (LENTO, ~15 min).
+# Por defecto es rápido: solo el precio "desde" de cada oferta.
+CON_MATRIX = "--con-matrix" in sys.argv
+_mauto_cmd = ["python3", f"{REPO}/scrape_mautomocion.py"] + (["--matrix"] if CON_MATRIX else [])
+
 # (nombre, comando, fichero-db que produce el scraper, salida en data/raw)
 # Quadis NO va aquí: sus ofertas son manuales (PDF) en data/master/ofertas-manuales.json.
 SCRAPERS=[
-  ("M Automoción", ["python3", f"{REPO}/scrape_mautomocion.py", "--matrix"], f"{REPO}/mautomocion-db.json", f"{RAW}/mautomocion.json"),
+  ("M Automoción", _mauto_cmd, f"{REPO}/mautomocion-db.json", f"{RAW}/mautomocion.json"),
 ]
 
 def run():
