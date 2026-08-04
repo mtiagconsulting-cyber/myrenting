@@ -67,6 +67,27 @@ def landing(m):
       ("Plazas",s.get("plazas") or "—"),("Etiqueta DGT",dgt or "—"),("Categoría",s.get("category") or "—")] )
     precios="".join(f"<tr><td>{t.title()}</td><td class='p'>{int(min(o['precio_desde'] for o in m['ofertas'] if o.get('tipo')==t))}€</td></tr>"
         for t in m['tipos'] if any(o.get('tipo')==t for o in m['ofertas']))
+
+    # --- bloques de detalle scrapeado (equipamiento, coberturas, notas, FAQ) ---
+    det=m.get("detalle") or {}
+    def _lista(items,titulo):
+        items=[x for x in (items or []) if x]
+        if not items: return ""
+        lis="".join(f"<li>{e(x)}</li>" for x in items)
+        return f"<h3>{titulo}</h3><ul class='eq'>{lis}</ul>"
+    equip=_lista(det.get("equip_exterior"),"Equipamiento exterior")+_lista(det.get("equip_interior"),"Equipamiento interior")
+    equip=f"<h2>Equipamiento</h2>{equip}" if equip else ""
+    cob=f"<h2>Coberturas</h2><p>{e(det['coberturas'])}</p>" if det.get("coberturas") else ""
+    notas=f"<p class='notas'><small>{e(det['notas'])}</small></p>" if det.get("notas") else ""
+    faqs=[x for x in (det.get("faq") or []) if x.get("q") and x.get("a")]
+    faq_html=""
+    if faqs:
+        faq_html="<h2>Preguntas frecuentes</h2>"+"".join(
+            f"<details class='faq'><summary>{e(x['q'])}</summary><p>{e(x['a'])}</p></details>" for x in faqs)
+        ld["@graph"].append({"@type":"FAQPage","mainEntity":[
+            {"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in faqs]})
+    detalle_html=equip+cob+faq_html+notas
+
     return f"""<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Renting {e(name)} desde {q}€/mes | MyRenting</title>
 <meta name="description" content="{e(geo)[:158]}">
@@ -76,12 +97,18 @@ def landing(m):
 h1{{font-size:2rem}}.k{{background:#fff4ee;border:1px solid #f5c6b0;border-radius:12px;padding:12px 16px;margin:14px 0}}
 table{{width:100%;border-collapse:collapse;border:1px solid #eee;border-radius:12px;overflow:hidden}}
 th,td{{padding:10px 14px;text-align:left;border-bottom:1px solid #eee}}th{{background:#faf7f5;width:45%}}td.p{{font-weight:800;color:#F04E00}}
-img{{max-width:100%;border-radius:14px;background:#fff;border:1px solid #eee}}</style></head><body>
+img{{max-width:100%;border-radius:14px;background:#fff;border:1px solid #eee}}
+ul.eq{{columns:2;gap:24px;padding-left:18px}}ul.eq li{{margin:4px 0;break-inside:avoid}}
+h3{{font-size:1.05rem;margin:18px 0 6px}}
+details.faq{{border:1px solid #eee;border-radius:10px;padding:10px 14px;margin:8px 0}}
+details.faq summary{{font-weight:700;cursor:pointer}}details.faq p{{margin:8px 0 0;color:#4a5163}}
+.notas{{color:#8a90a0}}@media(max-width:640px){{ul.eq{{columns:1}}}}</style></head><body>
 <h1>Renting {e(name)}</h1>
 <p class="k"><b>{e(geo)}</b></p>
 <img src="{img}" alt="Renting {e(name)}" loading="lazy">
 <h2>Ficha técnica</h2><table>{ficha}</table>
 <h2>Precio por tipo de cliente</h2><table><tr><th>Cliente</th><th>Cuota/mes</th></tr>{precios}</table>
+{detalle_html}
 <p><small>Fuentes: {e(', '.join(m['fuentes']))}.</small></p>
 </body></html>"""
 

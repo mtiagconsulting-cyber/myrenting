@@ -26,6 +26,10 @@ for f in sorted(glob.glob(f"{REPO}/data/raw/*.json")):
     raw += load(f,[])
 manuales=[o for o in load(f"{REPO}/data/master/ofertas-manuales.json",[]) if o.get('precio_desde',0)>0]
 modelos=load(f"{REPO}/data/master/modelos.json",{})
+# detalle Quadis (specs + FAQ) scrapeado aparte -> {MAKE|MODEL: {especificaciones, faq}}
+quadis_det=load(f"{REPO}/data/master/quadis-detalle.json",{})
+def _qdet(make,model):
+    return quadis_det.get(f"{(make or '').upper()}|{(model or '').upper()}")
 
 # índice de overrides manuales por (make,model,tipo)
 man_idx={ (norm(o.get('make')),norm(o.get('model')),o.get('tipo')): o for o in manuales }
@@ -50,11 +54,14 @@ for o in final:
     if not make or not model: continue
     key=f"{make.upper()}||{model.upper()}"
     m=cat.setdefault(key,{"make":make.title(),"model":model.title(),"slug":slug(f"{make} {model}"),
-        "precio_desde":10**9,"ofertas":[],"tipos":set(),"fuentes":set()})
+        "precio_desde":10**9,"ofertas":[],"tipos":set(),"fuentes":set(),"detalle":None})
     m["ofertas"].append({k:o.get(k) for k in ("tipo","version","fuel","precio_desde","duracion","km","url","image","combinaciones")})
     m["precio_desde"]=min(m["precio_desde"],o.get("precio_desde",10**9))
     if o.get("tipo"): m["tipos"].add(o["tipo"])
     if o.get("fuente"): m["fuentes"].add(o["fuente"])
+    # detalle a nivel modelo: M Automoción lo trae en la oferta; Quadis, del mapa
+    if not m["detalle"]:
+        m["detalle"]=o.get("detalle") or _qdet(make,model)
 
 # --- 3. enriquecer con specs de modelos.json (match normalizado) ---
 spec_norm={ norm(k.replace('||',' ')):v for k,v in modelos.items() }
