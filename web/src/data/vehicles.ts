@@ -33,3 +33,23 @@ export function alternatives(v: Vehicle, n = 4): Vehicle[] {
     .sort((a, b) => Math.abs(a.precio - v.precio) - Math.abs(b.precio - v.precio))
     .slice(0, n);
 }
+
+/** Buckets de carrocería (mismos que el listado). */
+export const CARROCERIA: Record<string, string[]> = {
+  suv: ["SUV", "Crossover"],
+  urbano: ["Urbano", "Hatchback"],
+  familiar: ["Familiar", "Berlina con portón", "Sedán"],
+  furgoneta: ["Furgoneta", "Furgón", "LCV"],
+};
+
+export function byCarroceria(bucket: string): Vehicle[] {
+  const cats = CARROCERIA[bucket];
+  if (!cats) return [];
+  return [...vehicles].filter((v) => cats.includes(v.category)).sort((a, b) => a.precio - b.precio);
+}
+
+/** Rango de cuota ("desde X · hasta Y €/mes") de una lista. */
+export function priceRange(list: Vehicle[]): { min: number; max: number } {
+  const ps = list.map((v) => v.precio);
+  return { min: Math.min(...ps), max: Math.max(...ps) };
+}

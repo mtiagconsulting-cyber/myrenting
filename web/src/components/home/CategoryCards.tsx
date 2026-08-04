@@ -6,7 +6,7 @@ const pickImg = (title: string) => vehicles.find((v) => v.title === title)?.img;
 type Cat = { name: string; sub: string; href: string; img?: string };
 
 const cats: Cat[] = [
-  { name: "SUV", sub: "Espacio y versatilidad", href: "/categorias/suv", img: pickImg("Hyundai Tucson") },
+  { name: "SUV", sub: "Espacio y versatilidad", href: "/renting-suv", img: pickImg("Hyundai Tucson") },
   { name: "Familiares", sub: "Comodidad para todos", href: "/categorias/familiar", img: pickImg("Seat Leon") },
   { name: "Urbanos", sub: "Ágiles y eficientes", href: "/categorias/urbano", img: pickImg("Peugeot 208") },
   { name: "Eléctricos", sub: "Cero emisiones", href: "/renting-electricos", img: byFuel("electricos").find((v) => v.img)?.img },
