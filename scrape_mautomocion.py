@@ -88,6 +88,14 @@ def fetch(url, verbose=False, retries=2):
             return None
 
 
+def _es_listado(u):
+    """True si la URL es una página de listado/marca (no una ficha de vehículo)."""
+    u = (u or "").split("#")[0].rstrip("/")
+    if not u or u == BASE_URL.rstrip("/"):
+        return True
+    return bool(re.search(r"/(renting-(particulares?|empresas?|aut[oó]nomos?)|brand)\b", u))
+
+
 def parse_ficha_detalle(html):
     """Extrae de la ficha: especificaciones (clave/valor), equipamiento
     exterior/interior (listas), coberturas y notas (texto). Devuelve un dict."""
@@ -276,7 +284,7 @@ def parse_product(html, url):
     if not precio or not make:          # descarta contenido que no es un vehículo
         return None
     # descarta páginas de aterrizaje/listado ("Renting Empresas/Autónomos/Particulares")
-    if re.search(r"renting\s+(empresas?|aut[oó]nomos?|particulares?)", titulo, re.I) or "/oferta-renting-" not in url:
+    if re.search(r"renting\s+(empresas?|aut[oó]nomos?|particulares?)", titulo, re.I) or _es_listado(url):
         return None
     model = specs.get("modelo", "")
     if not model:
@@ -558,14 +566,21 @@ def parse_listing(html, base_url):
     for art in soup.select("article.js-product-miniature, article.product-miniature"):
         pid = art.get("data-id-product")
         if not pid: continue
-        # preferimos el enlace real a la ficha (/oferta-renting-...)
-        a = (art.select_one("a[href*='oferta-renting-']") or art.select_one("a.product_name")
-             or art.select_one("h3 a") or art.select_one("a[title]"))
+        # enlace real a la ficha: el <a.product-thumbnail> (imagen) lo lleva SIEMPRE,
+        # con cualquier formato (/skoda-karoq, erratas, sufijos de color…).
+        href = ""
+        for sel in ("a.product-thumbnail[href]", "a[href*='oferta-renting-']",
+                    "a.product_name[href]", "h3 a[href]", "a[title][href]"):
+            el = art.select_one(sel)
+            if el:
+                h = (el.get("href") or "").strip()
+                if h and h != "#":
+                    href = h; break
         d = art.select_one(".product-desc")
         img = art.select_one("img")
         src = (img.get("data-src") or img.get("src")) if img else ""
         mini.setdefault(pid, {
-            "url": urljoin(base_url, a["href"]) if a and a.get("href") else "",
+            "url": urljoin(base_url, href) if href else "",
             "trim": clean(d.get_text()) if d else "",
             "img": urljoin(base_url, src) if src else "",
         })
@@ -658,7 +673,7 @@ def enrich_with_matrix(offers):
     print(f"── Extrayendo matriz km×meses de {total} ofertas (esto tarda)…")
     for i, o in enumerate(offers, 1):
         u = (o.get("url") or "").split("#")[0]
-        if "/oferta-renting-" not in u:
+        if not u or _es_listado(u):
             skips["sin_url"] += 1
             if len(ejemplos) < 4: ejemplos.append(f"sin_url: {o.get('make')} {o.get('model')} -> {u!r}")
             continue
@@ -708,7 +723,7 @@ def enrich_with_detalle(offers):
     print(f"── Extrayendo ficha (specs/equipamiento/coberturas/notas) de {total} ofertas…")
     for i, o in enumerate(offers, 1):
         u = (o.get("url") or "").split("#")[0]
-        if "/oferta-renting-" not in u:
+        if not u or _es_listado(u):
             continue
         if u not in cache:
             h = fetch(u)
