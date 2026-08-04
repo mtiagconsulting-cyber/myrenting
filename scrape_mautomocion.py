@@ -71,18 +71,21 @@ CATS = {
 }
 
 # ─── HTTP ──────────────────────────────────────────────────────────────────────
-def fetch(url, verbose=False):
+def fetch(url, verbose=False, retries=2):
     import requests
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=25)
-        if r.status_code != 200:
-            if verbose:
-                print(f"    ⚠ HTTP {r.status_code} en {url}")
+    for intento in range(retries + 1):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=25)
+            if r.status_code != 200:
+                if verbose:
+                    print(f"    ⚠ HTTP {r.status_code} en {url}")
+                return None      # 404/redirección: no reintentar
+            return r.text
+        except Exception as e:
+            if intento < retries:   # timeout / corte de red: reintentar con backoff
+                time.sleep(2 * (intento + 1)); continue
+            print(f"    ⚠ error {url}: {e}")
             return None
-        return r.text
-    except Exception as e:
-        print(f"    ⚠ error {url}: {e}")
-        return None
 
 
 def parse_ficha_detalle(html):
@@ -603,7 +606,10 @@ def parse_listing(html, base_url):
         trim = mn.get("trim", "")
         txt = name + " " + trim
         real = mn.get("url", "")
-        url = real if "oferta-renting-" in real else f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
+        # usar SIEMPRE el enlace real capturado del listado (formatos irregulares:
+        # /skoda-karoq, erratas 'reniting', sufijos de color…). Solo inventar si no hay.
+        real_path = urlparse(real).path.strip("/") if real else ""
+        url = real if real_path else f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
         offers.append({
             "fuente": FUENTE, "tipo": tipo, "make": make.upper(),
             "model": (model or name).upper()[:40],
