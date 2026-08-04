@@ -44,6 +44,7 @@ data/build/
 _site/
 *.bak
 !data/master/
+!data/master/quadis-detalle.json
 !ofertas_combinadas.json
 
 # datos locales del usuario — NUNCA publicar (repo público / GitHub Pages)

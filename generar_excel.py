@@ -13,7 +13,7 @@ Salida: myrenting-precios.xlsx  (hojas Resumen · Precios · Fichas · una por g
 
 Uso:  python3 generar_excel.py
 """
-import json, os
+import json, os, re, unicodedata
 import pathlib as _pl
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -39,6 +39,28 @@ mauto = [o for o in mauto_raw if o.get("fuente") == "M Automoción"]
 
 master = load("data/master/ofertas-manuales.json") or []
 quadis_kia = [o for o in master if o.get("fuente") != "M Automoción"]
+
+# detalle de Quadis (specs + FAQ) scrapeado aparte -> {MAKE|MODEL: {especificaciones, faq}}
+quadis_det = load("data/master/quadis-detalle.json") or {}
+
+def _nrm(s):
+    s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().upper()
+    s = s.replace(" BENZ", "").replace("MERCEDES-", "MERCEDES ")
+    return re.sub(r"[^A-Z0-9]+", " ", s).strip()
+
+# índice normalizado de Quadis: clave "MARCA|PRIMEROS 2 TOKENS DEL MODELO"
+quadis_det_norm = {}
+for k, v in quadis_det.items():
+    mk, _, md = k.partition("|")
+    nk = _nrm(mk) + "|" + " ".join(_nrm(md).split()[:2])
+    quadis_det_norm.setdefault(nk, v)
+
+def quadis_detalle_de(make, model):
+    exact = quadis_det.get(f"{(make or '').upper()}|{(model or '').upper()}")
+    if exact:
+        return exact
+    nk = _nrm(make) + "|" + " ".join(_nrm(model).split()[:2])
+    return quadis_det_norm.get(nk)
 
 ofertas = mauto + quadis_kia
 print(f"M Automoción: {len(mauto)} ofertas (de {mauto_src})")
@@ -81,34 +103,46 @@ print(f"Total filas (combinaciones): {len(filas)}")
 # --- 2b. fichas: una fila por vehículo con TODO el detalle (si el scrape lo trae) ---
 def esp(det, *claves):
     e = (det or {}).get("especificaciones", {}) or {}
+    low = {str(k).strip().lower(): v for k, v in e.items()}
     for c in claves:
-        if e.get(c):
-            return e[c]
+        v = low.get(c.strip().lower())
+        if v:
+            return v
     return ""
 
+def faq_txt(det):
+    fs = (det or {}).get("faq", []) or []
+    return "  |  ".join(f"{x.get('q','')} {x.get('a','')}".strip() for x in fs)
+
 def fila_ficha(o):
+    # M Automoción trae 'detalle' en la oferta; Quadis lo trae del mapa por MAKE|MODEL
     det = o.get("detalle")
+    if not det and o.get("fuente") == "Quadis":
+        det = quadis_detalle_de(o.get("make"), o.get("model"))
     return {
         "gestora": o.get("fuente") or "",
         "tipo": TIPO_LBL.get(o.get("tipo") or "", (o.get("tipo") or "").title()),
         "marca": (o.get("make") or "").title(),
         "modelo": (o.get("model") or "").title(),
         "version": o.get("version") or "",
-        "combustible": esp(det, "COMBUSTIBLE") or o.get("fuel") or "",
-        "transmision": esp(det, "TRANSMISIÓN", "TRANSMISION"),
-        "etiqueta": esp(det, "ETIQUETA"),
-        "motor": esp(det, "MOTOR"),
-        "estado": esp(det, "ESTADO"),
-        "carroceria": esp(det, "CARROCERÍA", "CARROCERIA") or o.get("category") or "",
-        "traccion": esp(det, "TRACCIÓN", "TRACCION"),
-        "puertas": esp(det, "PUERTAS"),
-        "plazas": esp(det, "PLAZAS"),
-        "color": esp(det, "COLOR"),
-        "acabado": esp(det, "ACABADO"),
+        # etiquetas de M Automoción (MAYÚSCULAS) y de Quadis (Capitalizadas) a la vez
+        "combustible": esp(det, "COMBUSTIBLE", "Combustible") or o.get("fuel") or "",
+        "transmision": esp(det, "TRANSMISIÓN", "TRANSMISION", "Cambio"),
+        "etiqueta": esp(det, "ETIQUETA", "Etiqueta", "Distintivo"),
+        "motor": esp(det, "MOTOR", "Potencia"),
+        "estado": esp(det, "ESTADO", "Estado"),
+        "carroceria": esp(det, "CARROCERÍA", "CARROCERIA", "Carrocería") or o.get("category") or "",
+        "traccion": esp(det, "TRACCIÓN", "TRACCION", "Tracción"),
+        "puertas": esp(det, "PUERTAS", "Puertas"),
+        "plazas": esp(det, "PLAZAS", "Plazas"),
+        "color": esp(det, "COLOR", "Color"),
+        "acabado": esp(det, "ACABADO", "Acabado"),
+        "consumo": esp(det, "CONSUMO", "Consumo"),
         "equip_ext": " · ".join((det or {}).get("equip_exterior", [])),
         "equip_int": " · ".join((det or {}).get("equip_interior", [])),
         "coberturas": (det or {}).get("coberturas", ""),
         "notas": (det or {}).get("notas", ""),
+        "faq": faq_txt(det),
         "url": (o.get("url") or "").split("#")[0],
     }
 
@@ -165,7 +199,7 @@ def escribir_hoja(ws, rows, cols=COLS):
                 cell.number_format = "#,##0"
             if key in ("km", "meses", "precio", "puertas", "plazas"):
                 cell.alignment = Alignment(horizontal="center")
-            elif key in ("equip_ext", "equip_int", "coberturas", "notas"):
+            elif key in ("equip_ext", "equip_int", "coberturas", "notas", "faq"):
                 cell.alignment = Alignment(vertical="top", wrap_text=True)
     ws.freeze_panes = "A2"
     if rows:
@@ -178,9 +212,10 @@ FICHA_COLS = [
     ("Etiqueta", "etiqueta", 10), ("Motor", "motor", 10), ("Estado", "estado", 10),
     ("Carrocería", "carroceria", 13), ("Tracción", "traccion", 16),
     ("Puertas", "puertas", 8), ("Plazas", "plazas", 8),
-    ("Color", "color", 18), ("Acabado", "acabado", 14),
+    ("Color", "color", 18), ("Acabado", "acabado", 14), ("Consumo", "consumo", 14),
     ("Equip. exterior", "equip_ext", 55), ("Equip. interior", "equip_int", 65),
-    ("Coberturas", "coberturas", 55), ("Notas", "notas", 55), ("URL", "url", 40),
+    ("Coberturas", "coberturas", 55), ("Notas", "notas", 55),
+    ("FAQ", "faq", 60), ("URL", "url", 40),
 ]
 
 wb = Workbook()
