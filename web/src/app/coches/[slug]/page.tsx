@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { vehicles, getVehicle, getMatrix, alternatives } from "@/lib/data";
-import VehicleCard from "@/components/VehicleCard";
-import Configurator from "@/components/Configurator";
+import VehicleCard from "@/components/vehicles/VehicleCard";
+import Configurator from "@/components/vehicles/Configurator";
 
 export function generateStaticParams() { return vehicles.map(v => ({ slug: v.slug })); }
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import MobileNav from "@/components/layout/MobileNav";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://myrenting.es"),
@@ -15,8 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body className="font-sans antialiased">
         <Header />
-        <main>{children}</main>
+        <main className="pb-16 md:pb-0">{children}</main>
         <Footer />
+        <MobileNav />
       </body>
     </html>
   );

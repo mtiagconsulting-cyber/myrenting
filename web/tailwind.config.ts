@@ -1,10 +1,11 @@
 import type { Config } from "tailwindcss";
 export default {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
         orange: { DEFAULT: "#ff6a00", dark: "#e85f00", soft: "#fff3ea" },
+        brand: { orange: "#ff6a00", dark: "#101828", gray: "#344054", background: "#fafafa" },
         ink: "#101828",
         body: "#344054",
         muted: "#667085",

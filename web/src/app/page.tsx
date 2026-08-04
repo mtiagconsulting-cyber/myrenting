@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { vehicles, sortedByPrice } from "@/lib/data";
-import VehicleCard from "@/components/VehicleCard";
+import VehicleCard from "@/components/vehicles/VehicleCard";
 
 const pick = (t: string) => vehicles.find(v => v.title === t);
 const withImg = sortedByPrice.filter(v => v.img);
