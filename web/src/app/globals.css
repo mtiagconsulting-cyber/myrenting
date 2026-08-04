@@ -2,8 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{ color-scheme: light; }
-html{ scroll-behavior:smooth; }
-body{ background:#fafafa; color:#344054; }
-.mono{ font-variant-numeric: tabular-nums; letter-spacing:-.02em; }
-@media (prefers-reduced-motion: reduce){ *{ transition:none!important; animation:none!important; } }
+@layer base {
+  :root {
+    /* shadcn/ui tokens mapeados a la paleta MyRenting (light-only) */
+    --background: 0 0% 98%;            /* #FAFAFA */
+    --foreground: 220 43% 11%;         /* #101828 */
+    --card: 0 0% 100%;
+    --card-foreground: 220 43% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 43% 11%;
+    --primary: 25 100% 50%;            /* #FF6A00 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 17% 96%;
+    --secondary-foreground: 220 43% 11%;
+    --muted: 220 17% 96%;
+    --muted-foreground: 217 15% 45%;   /* ~#667085 */
+    --accent: 25 100% 96%;             /* naranja soft */
+    --accent-foreground: 25 100% 35%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 17% 93%;             /* #EAECF0 */
+    --input: 220 17% 93%;
+    --ring: 25 100% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-body; }
+}
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+.mono { font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+@media (prefers-reduced-motion: reduce) { *{ transition:none!important; animation:none!important; } }
