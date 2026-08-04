@@ -40,3 +40,5 @@ Allow: /
 
 Sitemap: https://myrenting.es/sitemap.xml
 Sitemap: https://myrenting.es/sitemap-modelos.xml
+Sitemap: https://myrenting.es/sitemap-hubs.xml
+Sitemap: https://myrenting.es/sitemap-ciudades.xml
