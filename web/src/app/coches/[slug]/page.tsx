@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { vehicles, getVehicle, getMatrix, alternatives } from "@/lib/data";
 import VehicleCard from "@/components/vehicles/VehicleCard";
 import Configurator from "@/components/vehicles/Configurator";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
 
 export function generateStaticParams() { return vehicles.map(v => ({ slug: v.slug })); }
 
@@ -25,13 +25,14 @@ export default async function Ficha({ params }: { params: Promise<{ slug: string
   const ld = { "@context":"https://schema.org","@graph":[
     { "@type":"Product","name":`Renting ${v.title}`,"brand":{"@type":"Brand","name":v.make},
       "offers":{"@type":"AggregateOffer","lowPrice":String(v.precio),"priceCurrency":"EUR","availability":"https://schema.org/InStock","url":`https://myrenting.es/coches/${v.slug}/`}},
-    { "@type":"Car","name":v.title,"fuelType":v.fuel,"seatingCapacity":v.seats.replace(/\D/g,"")||"5" },
+    { "@type":"Car","name":v.title,"brand":{"@type":"Brand","name":v.make},"model":v.model,"fuelType":v.fuel,"seatingCapacity":v.seats.replace(/\D/g,"")||"5","url":`https://myrenting.es/coches/${v.slug}/`,
+      ...(v.cv.replace(/\D/g,"") ? {"vehicleEngine":{"@type":"EngineSpecification","enginePower":{"@type":"QuantitativeValue","value":v.cv.replace(/\D/g,""),"unitText":"CV"}}} : {}) },
     { "@type":"FAQPage","mainEntity":faqs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}})) },
   ]};
   return (
     <div className="mx-auto max-w-[1200px] px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-      <div className="text-[12.5px] text-muted pt-6 pb-2"><Link href="/">Inicio</Link> › <Link href="/coches">Coches</Link> › <b className="text-ink">{v.title}</b></div>
+      <Breadcrumbs items={[{ name: "Coches", href: "/coches" }, { name: v.title }]} />
       <h1 className="text-[34px] font-extrabold text-ink tracking-tight">Renting {v.title}</h1>
       <div className="bg-white border border-line border-l-[3px] border-l-orange rounded-xl2 px-4.5 py-3.5 text-[15px] text-ink mt-3.5 max-w-[74ch]">
         El <b>{v.title}</b> ({v.fuel}{v.dgt&&v.dgt!=="—"?`, etiqueta ${v.dgt}`:""}) cuesta desde <b>{v.precio}€/mes</b>, sin entrada y con todo incluido.

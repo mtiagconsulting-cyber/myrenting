@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getVehicle } from "@/lib/data";
 import { pairs, parsePair, pairSlug } from "@/lib/pairs";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
 
 export function generateStaticParams() { return pairs.map(([a,b]) => ({ slug: pairSlug(a,b) })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -26,7 +26,7 @@ export default async function Comp({ params }: { params: Promise<{ slug: string 
   return (
     <div className="mx-auto max-w-[1000px] px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(ld)}} />
-      <div className="text-[12.5px] text-muted pt-6 pb-2"><Link href="/">Inicio</Link> › <Link href="/comparar">Comparativas</Link> › <b className="text-ink">{A.title} vs {B.title}</b></div>
+      <Breadcrumbs items={[{ name: "Comparativas", href: "/comparar" }, { name: `${A.title} vs ${B.title}` }]} />
       <h1 className="text-[34px] font-extrabold text-ink tracking-tight">{A.title} vs {B.title}</h1>
       <div className="bg-white border border-line border-l-[3px] border-l-orange rounded-xl2 px-4.5 py-3.5 text-[15px] text-ink mt-3.5"><b>¿Cuál elegir?</b> El <b>{cheaper.title}</b> es más económico ({cheaper.precio}€/mes). La decisión final depende del uso: mira consumo, etiqueta y plazas.</div>
       <table className="w-full border-collapse bg-white border border-line rounded-xl2 overflow-hidden text-sm mt-4">
@@ -40,6 +40,22 @@ export default async function Comp({ params }: { params: Promise<{ slug: string 
           <td className={`p-3.5 border-b border-line ${w==="B"?"text-orange font-extrabold":""}`}>{b}</td>
         </tr>))}</tbody>
       </table>
+      <div className="grid gap-4 mt-4 md:grid-cols-2">
+        <div className="rounded-xl2 border border-line bg-white p-5">
+          <h3 className="mb-1.5 text-[15.5px] font-extrabold text-ink">Elegiría el {A.title} si…</h3>
+          <p className="m-0 text-[14px] leading-relaxed text-body">
+            {A.precio <= B.precio ? "buscas la cuota más ajustada" : "prefieres su combustible o etiqueta"}
+            {A.dgt && A.dgt !== "—" ? `, quieres etiqueta ${A.dgt}` : ""} y encaja tu uso ({A.fuel.toLowerCase()}, {A.seats}).
+          </p>
+        </div>
+        <div className="rounded-xl2 border border-line bg-white p-5">
+          <h3 className="mb-1.5 text-[15.5px] font-extrabold text-ink">Elegiría el {B.title} si…</h3>
+          <p className="m-0 text-[14px] leading-relaxed text-body">
+            {B.precio <= A.precio ? "buscas la cuota más ajustada" : "prefieres su combustible o etiqueta"}
+            {B.dgt && B.dgt !== "—" ? `, quieres etiqueta ${B.dgt}` : ""} y encaja tu uso ({B.fuel.toLowerCase()}, {B.seats}).
+          </p>
+        </div>
+      </div>
       <div className="bg-orange-soft border border-[#ffdcc2] rounded-xl2 p-5.5 mt-4"><h3 className="text-ink font-extrabold mb-2">Veredicto</h3><p className="text-body text-[14.5px] m-0">Por cuota, gana el <b>{cheaper.title}</b>. Si tu prioridad es otra (espacio, etiqueta, potencia), revisa la tabla: ambos son buenas opciones según el perfil de uso.</p></div>
     </div>
   );
