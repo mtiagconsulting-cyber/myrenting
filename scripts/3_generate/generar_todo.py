@@ -2,8 +2,8 @@
 """
 CAPA 3 · GENERAR
 Lee:   data/build/catalogo.json + data/master/ciudades-zbe.json
-Escribe (seguro, no pisa producción hasta que valides):
-   _site/renting-<modelo>.html      · landings de modelo (valor real + JSON-LD)
+Escribe:
+   renting-<modelo>.html            · fichas de modelo en la raíz (se publican en Pages)
    llms.txt                          · índice para IAs (GEO)
    robots.txt                        · permite bots de IA + sitemap
    sitemap-modelos.xml               · sitemap de las landings nuevas
@@ -15,7 +15,7 @@ import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2]); DOMAIN
 cat=json.load(open(f"{REPO}/data/build/catalogo.json",encoding='utf-8'))
 ZBE=json.load(open(f"{REPO}/data/master/ciudades-zbe.json",encoding='utf-8'))
 MODS=cat["modelos"]
-OUT=f"{REPO}/_site"; os.makedirs(OUT,exist_ok=True)
+OUT=REPO   # publicar las fichas en la raíz (GitHub Pages las sirve). Se regeneran cada semana.
 e=H.escape
 
 def geo_line(m):
