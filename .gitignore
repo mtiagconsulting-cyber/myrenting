@@ -21,6 +21,7 @@ img/.DS_Store
 !actualizar_ofertas_seguro.py
 !actualizar_fichas.py
 !actualizar_hubs.py
+!generar_excel.py
 !scripts/generadores/regenerar_paginas.py
 !scripts/mantenimiento/expirar_ofertas.py
 !scripts/mantenimiento/salud_sitio.py
@@ -51,3 +52,4 @@ Ofertas M-auto/
 img/marcas/Nuevos Vehiculos/
 img/marcas/Nuevos Vehiculos.zip
 *.zip
+*.xlsx
