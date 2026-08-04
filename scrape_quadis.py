@@ -67,18 +67,21 @@ CATS = {"suv":"SUV","todoterreno":"SUV","berlina":"Berlina","sedan":"Berlina",
 
 
 # ─── HTTP + helpers ──────────────────────────────────────────────────────────
-def fetch(url, verbose=False):
+def fetch(url, verbose=False, retries=2):
     import requests
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=25)
-        if r.status_code != 200:
-            if verbose:
-                print(f"    ⚠ HTTP {r.status_code} en {url}")
+    for intento in range(retries + 1):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=25)
+            if r.status_code != 200:
+                if verbose:
+                    print(f"    ⚠ HTTP {r.status_code} en {url}")
+                return None
+            return r.text
+        except Exception as e:
+            if intento < retries:
+                time.sleep(2 * (intento + 1)); continue
+            print(f"    ⚠ error {url}: {e}")
             return None
-        return r.text
-    except Exception as e:
-        print(f"    ⚠ error {url}: {e}")
-        return None
 
 def clean(s):
     return re.sub(r"\s+", " ", _html.unescape(str(s or ""))).strip()
@@ -328,7 +331,7 @@ def enrich_quadis_detalle(offers):
     """Para cada ficha única (URL /coches-renting/.../{id}) baja specs + FAQ y las
     adjunta. Devuelve un mapa {MAKE|MODEL: detalle} para casar con el PDF."""
     cache, mapa = {}, {}
-    fichas = [o for o in offers if re.search(r"/coches-renting/.+/\d+", o.get("url", ""))]
+    fichas = [o for o in offers if re.search(r"-renting/.+/\d+", o.get("url", ""))]
     total = len(fichas)
     print(f"── Extrayendo ficha (specs + FAQ) de {total} vehículos Quadis…")
     for i, o in enumerate(fichas, 1):
