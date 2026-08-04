@@ -37,6 +37,7 @@ def main():
     paso("2c/5 REBUILD catálogo", ["python3","scripts/2_build/build_catalogo.py"])
     paso("3/5 GENERATE home",  ["python3","scripts/3_generate/generar_home.py"])
     paso("3/5 GENERATE resto", ["python3","scripts/3_generate/generar_todo.py"])
+    paso("3/5 GENERATE hubs",  ["python3","scripts/3_generate/generar_indices.py"])
     paso("4/5 QA",             ["python3","scripts/4_qa/validar.py"])
     # Excel de precios+fichas (no aborta el ciclo si falla, p.ej. sin openpyxl)
     print(f"\n{'='*54}\n▶ 4b/5 EXCEL de precios\n{'='*54}")
