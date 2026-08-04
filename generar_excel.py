@@ -9,7 +9,7 @@ Fuentes (con fallback, para que funcione aquí y en el Mac):
                    (necesita la matriz km×meses: scrape con `run_weekly.py --con-matrix`)
   - Quadis + Kia : data/master/ofertas-manuales.json  (Quadis = PDF oficial, Kia = manual)
 
-Salida: myrenting-precios.xlsx  (hoja "Todas" + una hoja por gestora + "Resumen")
+Salida: myrenting-precios.xlsx  (hojas Resumen · Precios · Fichas · una por gestora)
 
 Uso:  python3 generar_excel.py
 """
@@ -78,6 +78,48 @@ filas.sort(key=lambda f: (f["gestora"], f["marca"], f["modelo"], f["tipo"],
                           f["km"] or 0, f["meses"] or 0))
 print(f"Total filas (combinaciones): {len(filas)}")
 
+# --- 2b. fichas: una fila por vehículo con TODO el detalle (si el scrape lo trae) ---
+def esp(det, *claves):
+    e = (det or {}).get("especificaciones", {}) or {}
+    for c in claves:
+        if e.get(c):
+            return e[c]
+    return ""
+
+fichas = []
+vistas = set()
+for o in ofertas:
+    det = o.get("detalle")
+    clave = (o.get("fuente"), o.get("make"), o.get("model"), o.get("tipo"))
+    if clave in vistas:
+        continue
+    vistas.add(clave)
+    fichas.append({
+        "gestora": o.get("fuente") or "",
+        "tipo": TIPO_LBL.get(o.get("tipo") or "", (o.get("tipo") or "").title()),
+        "marca": (o.get("make") or "").title(),
+        "modelo": (o.get("model") or "").title(),
+        "version": o.get("version") or "",
+        "combustible": esp(det, "COMBUSTIBLE") or o.get("fuel") or "",
+        "transmision": esp(det, "TRANSMISIÓN", "TRANSMISION"),
+        "etiqueta": esp(det, "ETIQUETA"),
+        "motor": esp(det, "MOTOR"),
+        "estado": esp(det, "ESTADO"),
+        "carroceria": esp(det, "CARROCERÍA", "CARROCERIA") or o.get("category") or "",
+        "traccion": esp(det, "TRACCIÓN", "TRACCION"),
+        "puertas": esp(det, "PUERTAS"),
+        "plazas": esp(det, "PLAZAS"),
+        "color": esp(det, "COLOR"),
+        "acabado": esp(det, "ACABADO"),
+        "equip_ext": " · ".join((det or {}).get("equip_exterior", [])),
+        "equip_int": " · ".join((det or {}).get("equip_interior", [])),
+        "coberturas": (det or {}).get("coberturas", ""),
+        "notas": (det or {}).get("notas", ""),
+        "url": (o.get("url") or "").split("#")[0],
+    })
+con_detalle = sum(1 for f in fichas if f["equip_int"] or f["motor"])
+print(f"Total fichas (vehículos): {len(fichas)} ({con_detalle} con detalle completo)")
+
 # --- 3. escribir el .xlsx ---
 COLS = [
     ("Gestora", "gestora", 15),
@@ -99,16 +141,16 @@ CELL_FONT = Font(name="Arial", size=10)
 THIN = Side(style="thin", color="E5E5E5")
 BORDER = Border(bottom=THIN)
 
-def escribir_hoja(ws, rows):
+def escribir_hoja(ws, rows, cols=COLS):
     # cabecera
-    for ci, (titulo, _, ancho) in enumerate(COLS, 1):
+    for ci, (titulo, _, ancho) in enumerate(cols, 1):
         cell = ws.cell(1, ci, titulo)
         cell.fill = HEAD_FILL; cell.font = HEAD_FONT
         cell.alignment = Alignment(horizontal="center", vertical="center")
         ws.column_dimensions[get_column_letter(ci)].width = ancho
     # datos
     for ri, f in enumerate(rows, 2):
-        for ci, (_, key, _) in enumerate(COLS, 1):
+        for ci, (_, key, _) in enumerate(cols, 1):
             val = f.get(key)
             cell = ws.cell(ri, ci, val)
             cell.font = CELL_FONT
@@ -117,15 +159,30 @@ def escribir_hoja(ws, rows):
                 cell.number_format = '#,##0.00 "€"'
             elif key == "km" and isinstance(val, (int, float)):
                 cell.number_format = "#,##0"
-            if key in ("km", "meses", "precio"):
+            if key in ("km", "meses", "precio", "puertas", "plazas"):
                 cell.alignment = Alignment(horizontal="center")
+            elif key in ("equip_ext", "equip_int", "coberturas", "notas"):
+                cell.alignment = Alignment(vertical="top", wrap_text=True)
     ws.freeze_panes = "A2"
     if rows:
-        ws.auto_filter.ref = f"A1:{get_column_letter(len(COLS))}{len(rows)+1}"
+        ws.auto_filter.ref = f"A1:{get_column_letter(len(cols))}{len(rows)+1}"
+
+FICHA_COLS = [
+    ("Gestora", "gestora", 15), ("Tipo cliente", "tipo", 13),
+    ("Marca", "marca", 16), ("Modelo", "modelo", 24), ("Versión", "version", 40),
+    ("Combustible", "combustible", 18), ("Transmisión", "transmision", 14),
+    ("Etiqueta", "etiqueta", 10), ("Motor", "motor", 10), ("Estado", "estado", 10),
+    ("Carrocería", "carroceria", 13), ("Tracción", "traccion", 16),
+    ("Puertas", "puertas", 8), ("Plazas", "plazas", 8),
+    ("Color", "color", 18), ("Acabado", "acabado", 14),
+    ("Equip. exterior", "equip_ext", 55), ("Equip. interior", "equip_int", 65),
+    ("Coberturas", "coberturas", 55), ("Notas", "notas", 55), ("URL", "url", 40),
+]
 
 wb = Workbook()
-ws = wb.active; ws.title = "Todas"
+ws = wb.active; ws.title = "Precios"
 escribir_hoja(ws, filas)
+escribir_hoja(wb.create_sheet("Fichas"), fichas, FICHA_COLS)
 
 # una hoja por gestora
 gestoras = sorted({f["gestora"] for f in filas})
@@ -134,7 +191,7 @@ for g in gestoras:
     nombre = g[:28].replace("/", "-") or "s-gestora"
     escribir_hoja(wb.create_sheet(nombre), sub)
 
-# hoja Resumen (con COUNTIF en vivo sobre 'Todas')
+# hoja Resumen (recuento por gestora)
 rs = wb.create_sheet("Resumen")
 rs["A1"] = "Gestora"; rs["B1"] = "Combinaciones"
 for c in ("A1", "B1"):

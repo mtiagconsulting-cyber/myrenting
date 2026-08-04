@@ -84,6 +84,40 @@ def fetch(url, verbose=False):
         print(f"    ⚠ error {url}: {e}")
         return None
 
+
+def parse_ficha_detalle(html):
+    """Extrae de la ficha: especificaciones (clave/valor), equipamiento
+    exterior/interior (listas), coberturas y notas (texto). Devuelve un dict."""
+    from bs4 import BeautifulSoup
+    import re as _re
+    s = BeautifulSoup(html, "lxml")
+    d = {"especificaciones": {}, "equip_exterior": [], "equip_interior": [],
+         "coberturas": "", "notas": ""}
+    # 1) especificaciones: bloques con dd.value = [ETIQUETA, VALOR]
+    for dd in s.select("dd.value"):
+        block = dd.find_parent(["div", "li"])
+        if not block:
+            continue
+        txt = [t.strip() for t in block.stripped_strings if t.strip()]
+        if txt:
+            d["especificaciones"][txt[0]] = txt[1] if len(txt) >= 2 else ""
+    # 2) pestañas: extra-1 ext, extra-2 int, extra-3 coberturas, extra-4 notas
+    def items(pid):
+        pane = s.find(id=pid)
+        if not pane:
+            return []
+        out = [_re.sub(r"\s+", " ", p.get_text(" ", strip=True)).strip()
+               for p in pane.find_all("p")]
+        return [x for x in out if x]
+    def texto(pid):
+        pane = s.find(id=pid)
+        return _re.sub(r"\s+", " ", pane.get_text(" ", strip=True)).strip() if pane else ""
+    d["equip_exterior"] = items("extra-1")
+    d["equip_interior"] = items("extra-2")
+    d["coberturas"] = texto("extra-3")   # texto completo (conserva etiquetas)
+    d["notas"] = texto("extra-4")
+    return d
+
 # ─── HELPERS ────────────────────────────────────────────────────────────────────
 def clean(s):
     return re.sub(r"\s+", " ", _html.unescape(str(s or ""))).strip()
@@ -627,6 +661,11 @@ def enrich_with_matrix(offers):
             skips["fetch_fallo"] += 1
             if len(ejemplos) < 4: ejemplos.append(f"fetch_fallo (¿404?): {u}")
             continue
+        # detalle de ficha (specs + equipamiento + coberturas + notas), reusa 'h'
+        try:
+            o["detalle"] = parse_ficha_detalle(h)
+        except Exception:
+            pass
         matriz, _ = matrix_from_product(h, u)
         combos = []
         for r in matriz:
@@ -654,6 +693,29 @@ def enrich_with_matrix(offers):
             print(f"      · {e}")
 
 
+def enrich_with_detalle(offers):
+    """Añade a cada oferta 'detalle' (specs + equipamiento + coberturas + notas)
+    SIN la matriz. Descarga cada ficha única una sola vez (cachea por URL)."""
+    cache = {}
+    total = len(offers)
+    n_ok = 0
+    print(f"── Extrayendo ficha (specs/equipamiento/coberturas/notas) de {total} ofertas…")
+    for i, o in enumerate(offers, 1):
+        u = (o.get("url") or "").split("#")[0]
+        if "/oferta-renting-" not in u:
+            continue
+        if u not in cache:
+            h = fetch(u)
+            cache[u] = parse_ficha_detalle(h) if h else None
+        if cache[u]:
+            o["detalle"] = cache[u]
+            n_ok += 1
+        if i % 10 == 0 or i == total:
+            print(f"    {i}/{total}  (fichas con detalle: {n_ok}, únicas: {len(cache)})")
+        time.sleep(0.3)
+    print(f"  ✓ detalle añadido a {n_ok}/{total} ofertas ({len(cache)} fichas únicas)")
+
+
 # ─── MERGE ────────────────────────────────────────────────────────────────────
 def merge_into_manuales(offers):
     data = []
@@ -674,7 +736,9 @@ def main():
     ap.add_argument("--combos", nargs="?", const="auto", metavar="URL",
                     help="Vuelca la matriz km×meses×precio de UNA ficha (sin URL: la busca solo)")
     ap.add_argument("--matrix", action="store_true",
-                    help="Añade a cada oferta su matriz km×meses×precio (LENTO: visita cada ficha)")
+                    help="Añade a cada oferta su matriz km×meses×precio (LENTO: visita cada ficha). Incluye el detalle de ficha.")
+    ap.add_argument("--detalle", action="store_true",
+                    help="Añade a cada oferta el detalle de ficha (specs, equipamiento, coberturas, notas). LENTO: visita cada ficha.")
     args = ap.parse_args()
 
     for pkg, imp in [("requests","requests"), ("beautifulsoup4","bs4"), ("lxml","lxml")]:
@@ -708,7 +772,9 @@ def main():
         print(f"   … y {len(offers)-10} más")
 
     if args.matrix:
-        enrich_with_matrix(offers)
+        enrich_with_matrix(offers)   # la matriz ya adjunta también el detalle
+    elif args.detalle:
+        enrich_with_detalle(offers)
 
     OUT_DB.write_text(json.dumps(offers, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n💾 Guardado en {OUT_DB.name}")
