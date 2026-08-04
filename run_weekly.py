@@ -38,6 +38,8 @@ def main():
     paso("3/5 GENERATE home",  ["python3","scripts/3_generate/generar_home.py"])
     paso("3/5 GENERATE resto", ["python3","scripts/3_generate/generar_todo.py"])
     paso("3/5 GENERATE hubs",  ["python3","scripts/3_generate/generar_indices.py"])
+    if "--con-ciudades" in args:   # GEO (modelo×ciudad ZBE): mucho volumen, se despliega aparte
+        paso("3/5 GENERATE ciudades", ["python3","scripts/3_generate/generar_ciudades.py"])
     paso("4/5 QA",             ["python3","scripts/4_qa/validar.py"])
     # Excel de precios+fichas (no aborta el ciclo si falla, p.ej. sin openpyxl)
     print(f"\n{'='*54}\n▶ 4b/5 EXCEL de precios\n{'='*54}")

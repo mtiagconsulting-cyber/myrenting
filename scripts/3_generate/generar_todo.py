@@ -45,7 +45,8 @@ def build_robots():
           "PerplexityBot","Perplexity-User","Google-Extended","Applebot-Extended","CCBot","Bytespider"]
     lines=["# robots.txt — myrenting.es","User-agent: *","Allow: /",""]
     for b in bots: lines+=[f"User-agent: {b}","Allow: /",""]
-    lines+=[f"Sitemap: {DOMAIN}/sitemap.xml",f"Sitemap: {DOMAIN}/sitemap-modelos.xml"]
+    lines+=[f"Sitemap: {DOMAIN}/sitemap.xml",f"Sitemap: {DOMAIN}/sitemap-modelos.xml",
+            f"Sitemap: {DOMAIN}/sitemap-hubs.xml",f"Sitemap: {DOMAIN}/sitemap-ciudades.xml"]
     open(f"{REPO}/robots.txt","w",encoding='utf-8').write("\n".join(lines)+"\n")
     return len(bots)
 
