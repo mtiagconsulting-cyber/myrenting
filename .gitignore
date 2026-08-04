@@ -58,3 +58,6 @@ img/marcas/Nuevos Vehiculos.zip
 
 ficha-*.html
 listado*.html
+
+# proyecto Next.js (web/): reincluir json de config y datos
+!web/**/*.json

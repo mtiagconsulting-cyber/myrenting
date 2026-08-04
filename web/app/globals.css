@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{ color-scheme: light; }
+html{ scroll-behavior:smooth; }
+body{ background:#fafafa; color:#344054; }
+.mono{ font-variant-numeric: tabular-nums; letter-spacing:-.02em; }
+@media (prefers-reduced-motion: reduce){ *{ transition:none!important; animation:none!important; } }
