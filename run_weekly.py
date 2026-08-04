@@ -38,6 +38,11 @@ def main():
     paso("3/5 GENERATE home",  ["python3","scripts/3_generate/generar_home.py"])
     paso("3/5 GENERATE resto", ["python3","scripts/3_generate/generar_todo.py"])
     paso("4/5 QA",             ["python3","scripts/4_qa/validar.py"])
+    # Excel de precios+fichas (no aborta el ciclo si falla, p.ej. sin openpyxl)
+    print(f"\n{'='*54}\n▶ 4b/5 EXCEL de precios\n{'='*54}")
+    r=subprocess.run(["python3","generar_excel.py"], cwd=REPO)
+    if r.returncode!=0:
+        print("  ⚠ El Excel no se generó (¿falta 'pip3 install openpyxl'?). El ciclo continúa.")
     if "--sin-publicar" in args:
         print("\n✅ Ciclo OK (sin publicar). Revisa los cambios y sube a mano cuando quieras.")
         return
