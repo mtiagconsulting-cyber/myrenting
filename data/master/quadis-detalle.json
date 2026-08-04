@@ -1,0 +1,815 @@
+{
+  "PEUGEOT|208": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "74kW (100CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco / Gris",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.430m",
+      "Largo": "4.055 m",
+      "Ancho": "1.745 m",
+      "Vel. máxima": "194 km/h",
+      "Consumo": "5.2 / 100 km",
+      "Cilindrada": "1199 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "OPEL|CORSA": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "74kW (100CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Negro",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.433m",
+      "Largo": "4.060 m",
+      "Ancho": "1.765 m",
+      "Vel. máxima": "194 km/h",
+      "Consumo": "5.2 / 100 km",
+      "Cilindrada": "1199 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MG|MG3": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "85kW (116CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.502m",
+      "Largo": "4.113 m",
+      "Ancho": "1.797 m",
+      "Vel. máxima": "170 km/h",
+      "Consumo": "6.1 / 100 km",
+      "Cilindrada": "1495 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "NISSAN|QASHQAI": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "103kW (140CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Deep Ocean Blue",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.625m",
+      "Largo": "4.425 m",
+      "Ancho": "1.835 m",
+      "Vel. máxima": "196 km/h",
+      "Consumo": "6.3 / 100 km",
+      "Cilindrada": "1332 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "SKODA|FABIA": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "110kW (150CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco / Negro",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.459m",
+      "Largo": "4.108 m",
+      "Ancho": "1.780 m",
+      "Vel. máxima": "222 km/h",
+      "Consumo": "5.3 / 100 km",
+      "Cilindrada": "1498 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "OPEL|MOKKA": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "107kW (146CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "NEGRO/BLANCO",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.535m",
+      "Largo": "4.150 m",
+      "Ancho": "1.787 m",
+      "Vel. máxima": "207 km/h",
+      "Consumo": "4.8 / 100 km",
+      "Cilindrada": "1199 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MG|ZS": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "145kW (197CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "plata",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.635m",
+      "Largo": "4.430 m",
+      "Ancho": "1.818 m",
+      "Vel. máxima": "168 km/h",
+      "Consumo": "5.1 / 100 km",
+      "Cilindrada": "1498 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "AUDI|A1": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "85kW (116CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.409m",
+      "Largo": "4.029 m",
+      "Ancho": "1.740 m",
+      "Vel. máxima": "200 km/h",
+      "Consumo": "5.7 / 100 km",
+      "Cilindrada": "999 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "NISSAN|JUKE": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "105kW (143CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.593m",
+      "Largo": "4.210 m",
+      "Ancho": "1.800 m",
+      "Vel. máxima": "166 km/h",
+      "Consumo": "4.7 / 100 km",
+      "Cilindrada": "1598 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "OPEL|FRONTERA": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "75kW (102CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.631m",
+      "Largo": "4.389 m",
+      "Vel. máxima": "180 km/h",
+      "Consumo": "5.5 / 100 km",
+      "Cilindrada": "1199 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "ALFA ROMEO|JUNIOR": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "107kW (145CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Gris Arese",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.539m",
+      "Largo": "4.173 m",
+      "Ancho": "1.781 m",
+      "Vel. máxima": "206 km/h",
+      "Consumo": "4.8 / 100 km",
+      "Cilindrada": "1199 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "BYD|DOLPHIN SURF": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "65kW (88CV)",
+      "Puertas": "5",
+      "Plazas": "4",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.590m",
+      "Largo": "3.990 m",
+      "Ancho": "1.720 m",
+      "Vel. máxima": "150 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|CITAN": {
+    "especificaciones": {
+      "Matriculación": "2025",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "70kW (95CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "Monovolumen",
+      "Tipo": "Renting",
+      "Alto": "1.832m",
+      "Largo": "4.498 m",
+      "Ancho": "1.859 m",
+      "Vel. máxima": "164 km/h",
+      "Consumo": "5.3 / 100 km",
+      "Cilindrada": "1461 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "BYD|ATTO 2": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "156kW (212CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Time Grey",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.675m",
+      "Largo": "4.310 m",
+      "Ancho": "1.830 m",
+      "Vel. máxima": "180 km/h",
+      "Consumo": "1.8 / 100 km",
+      "Cilindrada": "1498 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "NISSAN|MICRA": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "90kW (122CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.499m",
+      "Largo": "3.974 m",
+      "Ancho": "1.830 m",
+      "Vel. máxima": "150 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "BMW|SERIE 1": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "120kW (163CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Gris",
+      "Carrocería": "Berlina",
+      "Tipo": "Renting",
+      "Alto": "1.459m",
+      "Largo": "4.361 m",
+      "Ancho": "1.800 m",
+      "Vel. máxima": "222 km/h",
+      "Consumo": "4.3 / 100 km",
+      "Cilindrada": "1995 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "HONDA|CR V": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "135kW (184CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "NEGRO / BLANCO",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.673m",
+      "Largo": "4.706 m",
+      "Ancho": "1.866 m",
+      "Vel. máxima": "195 km/h",
+      "Consumo": "2.6 / 100 km",
+      "Cilindrada": "1993 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "KIA|PV5": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "120kW (163CV)",
+      "Puertas": "4",
+      "Plazas": "2",
+      "Color": "Blanco",
+      "Carrocería": "No-Info",
+      "Tipo": "Renting",
+      "Alto": "1.923m",
+      "Largo": "4.695 m",
+      "Ancho": "1.895 m",
+      "Vel. máxima": "135 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "EBRO|S800": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "205kW (279CV)",
+      "Puertas": "5",
+      "Plazas": "7",
+      "Color": "Blanco",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.705m",
+      "Largo": "4.725 m",
+      "Ancho": "1.860 m",
+      "Vel. máxima": "180 km/h",
+      "Consumo": "2.5 / 100 km",
+      "Cilindrada": "1499 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "BMW|IX1": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "150kW (204CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Negro",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.616m",
+      "Largo": "4.500 m",
+      "Ancho": "1.845 m",
+      "Vel. máxima": "170 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|GLC": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "4x4",
+      "Potencia": "360kW (489CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Negro Obsidiana",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.644m",
+      "Largo": "4.845 m",
+      "Ancho": "1.913 m",
+      "Vel. máxima": "210 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|CLA": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Trasera",
+      "Potencia": "200kW (272CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "Familiar",
+      "Tipo": "Renting",
+      "Alto": "1.469m",
+      "Largo": "4.723 m",
+      "Ancho": "1.855 m",
+      "Vel. máxima": "210 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|GLB": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Trasera",
+      "Potencia": "200kW (272CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Negro",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.687m",
+      "Largo": "4.732 m",
+      "Ancho": "1.861 m",
+      "Vel. máxima": "210 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|GLC COUPE": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "4x4",
+      "Potencia": "245kW (333CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "Negro Obsidiana",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.614m",
+      "Largo": "4.764 m",
+      "Vel. máxima": "219 km/h",
+      "Consumo": "1.6 / 100 km",
+      "Cilindrada": "1993 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|GLE COUPE": {
+    "especificaciones": {
+      "Matriculación": "2025",
+      "Cambio": "Automático",
+      "Tracción": "4x4",
+      "Potencia": "245kW (333CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "GRIS ALPINO/NEGRO/BLANCO",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.730m",
+      "Largo": "5.027 m",
+      "Ancho": "2.018 m",
+      "Vel. máxima": "210 km/h",
+      "Consumo": "2 / 100 km",
+      "Cilindrada": "1993 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MASERATI|GRECALE": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Automático",
+      "Tracción": "4x4",
+      "Potencia": "221kW (300CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "NEGRO / BLANCO / GIORGIO",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.667m",
+      "Largo": "4.847 m",
+      "Ancho": "1.979 m",
+      "Vel. máxima": "240 km/h",
+      "Consumo": "8.8 / 100 km",
+      "Cilindrada": "1995 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ|CLASE GLE": {
+    "especificaciones": {
+      "Matriculación": "2025",
+      "Cambio": "Automático",
+      "Tracción": "4x4",
+      "Potencia": "245kW (333CV)",
+      "Puertas": "5",
+      "Plazas": "5",
+      "Color": "NEGRO/GRIS/BLANCO",
+      "Carrocería": "SUV",
+      "Tipo": "Renting",
+      "Alto": "1.797m",
+      "Largo": "5.027 m",
+      "Ancho": "2.010 m",
+      "Vel. máxima": "210 km/h",
+      "Consumo": "2.3 / 100 km",
+      "Cilindrada": "1993 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "PEUGEOT|RIFTER": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "74kW (100CV)",
+      "Puertas": "4",
+      "Plazas": "5",
+      "Color": "Blanco",
+      "Carrocería": "Mixto",
+      "Tipo": "Renting",
+      "Alto": "1.820m",
+      "Largo": "4.403 m",
+      "Ancho": "1.848 m",
+      "Vel. máxima": "165 km/h",
+      "Consumo": "5.5 / 100 km",
+      "Cilindrada": "1499 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "CITROEN|BERLINGO": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "75kW (102CV)",
+      "Puertas": "4",
+      "Plazas": "2",
+      "Color": "Blanco",
+      "Carrocería": "Furgón",
+      "Tipo": "Renting",
+      "Alto": "1.826m",
+      "Largo": "4.403 m",
+      "Ancho": "1.848 m",
+      "Consumo": "5.4 / 100 km",
+      "Cilindrada": "1499 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "MERCEDES BENZ INDUSTRIALES|CITAN": {
+    "especificaciones": {
+      "Matriculación": "2026",
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "70kW (95CV)",
+      "Puertas": "4",
+      "Plazas": "2",
+      "Color": "Blanco",
+      "Carrocería": "Furgón",
+      "Tipo": "Renting",
+      "Alto": "1.832m",
+      "Largo": "4.498 m",
+      "Ancho": "1.859 m",
+      "Vel. máxima": "164 km/h",
+      "Consumo": "5.1 / 100 km",
+      "Cilindrada": "1461 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "NISSAN|INTERSTAR": {
+    "especificaciones": {
+      "Cambio": "Manual",
+      "Tracción": "Delantera",
+      "Potencia": "96kW (130CV)",
+      "Puertas": "4",
+      "Plazas": "3",
+      "Color": "Blanco",
+      "Carrocería": "No-Info",
+      "Tipo": "Renting",
+      "Alto": "2.498m",
+      "Largo": "5.685 m",
+      "Ancho": "2.080 m",
+      "Vel. máxima": "161 km/h",
+      "Consumo": "8 / 100 km",
+      "Cilindrada": "1997 cc"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "NISSAN|TOWNSTAR": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "90kW (122CV)",
+      "Puertas": "4",
+      "Plazas": "2",
+      "Color": "Blanco",
+      "Carrocería": "No-Info",
+      "Tipo": "Renting",
+      "Alto": "1.864m",
+      "Largo": "4.910 m",
+      "Ancho": "1.860 m",
+      "Vel. máxima": "132 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "OPEL|COMBO E": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "100kW (136CV)",
+      "Puertas": "3",
+      "Plazas": "2",
+      "Color": "Blanco",
+      "Carrocería": "No-Info",
+      "Tipo": "Renting",
+      "Alto": "1.910m",
+      "Largo": "4.403 m",
+      "Ancho": "1.848 m",
+      "Vel. máxima": "132 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  },
+  "CITROEN|E BERLINGO": {
+    "especificaciones": {
+      "Cambio": "Automático",
+      "Tracción": "Delantera",
+      "Potencia": "100kW (136CV)",
+      "Puertas": "4",
+      "Plazas": "2",
+      "Color": "Blanco",
+      "Carrocería": "No-Info",
+      "Tipo": "Renting",
+      "Alto": "1.910m",
+      "Largo": "4.403 m",
+      "Ancho": "1.848 m",
+      "Vel. máxima": "135 km/h"
+    },
+    "faq": [
+      {
+        "q": "¿Qué incluye el renting?",
+        "a": "Mantenimiento y reparaciones mecánicas Neumáticos incluidos según plazo y kilómetros contratados Seguro a todo riesgo Gestión de multas e impuestos municipales incluidos Asistencia en carretera 24 / 365 Sin entrada"
+      }
+    ]
+  }
+}
