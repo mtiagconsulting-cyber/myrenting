@@ -86,15 +86,9 @@ def esp(det, *claves):
             return e[c]
     return ""
 
-fichas = []
-vistas = set()
-for o in ofertas:
+def fila_ficha(o):
     det = o.get("detalle")
-    clave = (o.get("fuente"), o.get("make"), o.get("model"), o.get("tipo"))
-    if clave in vistas:
-        continue
-    vistas.add(clave)
-    fichas.append({
+    return {
         "gestora": o.get("fuente") or "",
         "tipo": TIPO_LBL.get(o.get("tipo") or "", (o.get("tipo") or "").title()),
         "marca": (o.get("make") or "").title(),
@@ -116,7 +110,17 @@ for o in ofertas:
         "coberturas": (det or {}).get("coberturas", ""),
         "notas": (det or {}).get("notas", ""),
         "url": (o.get("url") or "").split("#")[0],
-    })
+    }
+
+# por (gestora,marca,modelo,tipo) elige la oferta CON detalle si la hay
+best = {}
+for o in ofertas:
+    clave = (o.get("fuente"), o.get("make"), o.get("model"), o.get("tipo"))
+    cur = best.get(clave)
+    if cur is None or (o.get("detalle") and not cur.get("detalle")):
+        best[clave] = o
+fichas = [fila_ficha(o) for o in best.values()]
+fichas.sort(key=lambda f: (f["gestora"], f["marca"], f["modelo"], f["tipo"]))
 con_detalle = sum(1 for f in fichas if f["equip_int"] or f["motor"])
 print(f"Total fichas (vehículos): {len(fichas)} ({con_detalle} con detalle completo)")
 
