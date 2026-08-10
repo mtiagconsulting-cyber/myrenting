@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 ORQUESTADOR SEMANAL · myrenting.es
-Uso:  python3 run_weekly.py            (todo el ciclo)
+Uso:  python3 run_weekly.py            (todo el ciclo, scrape rápido)
+      python3 run_weekly.py --con-matrix   (scrape + matriz km×meses + ficha completa de M Automoción; LENTO ~15 min)
       python3 run_weekly.py --sin-scrape   (salta el scraping, usa data/raw actual)
       python3 run_weekly.py --sin-publicar (genera y valida, pero no hace commit/push)
 
@@ -26,7 +27,9 @@ def main():
     args=set(sys.argv[1:])
     print(f"### CICLO SEMANAL myrenting.es · {datetime.datetime.now():%Y-%m-%d %H:%M} ###")
     if "--sin-scrape" not in args:
-        paso("1/5 SCRAPE",    ["python3","scripts/1_scrape/run_scrapers.py"])
+        scrape_cmd=["python3","scripts/1_scrape/run_scrapers.py"]
+        if "--con-matrix" in args: scrape_cmd.append("--con-matrix")
+        paso("1/5 SCRAPE", scrape_cmd)
     else:
         print("· (scraping omitido, uso data/raw actual)")
     paso("2/5 BUILD catálogo", ["python3","scripts/2_build/build_catalogo.py"])
@@ -34,7 +37,15 @@ def main():
     paso("2c/5 REBUILD catálogo", ["python3","scripts/2_build/build_catalogo.py"])
     paso("3/5 GENERATE home",  ["python3","scripts/3_generate/generar_home.py"])
     paso("3/5 GENERATE resto", ["python3","scripts/3_generate/generar_todo.py"])
+    paso("3/5 GENERATE hubs",  ["python3","scripts/3_generate/generar_indices.py"])
+    if "--con-ciudades" in args:   # GEO (modelo×ciudad ZBE): mucho volumen, se despliega aparte
+        paso("3/5 GENERATE ciudades", ["python3","scripts/3_generate/generar_ciudades.py"])
     paso("4/5 QA",             ["python3","scripts/4_qa/validar.py"])
+    # Excel de precios+fichas (no aborta el ciclo si falla, p.ej. sin openpyxl)
+    print(f"\n{'='*54}\n▶ 4b/5 EXCEL de precios\n{'='*54}")
+    r=subprocess.run(["python3","generar_excel.py"], cwd=REPO)
+    if r.returncode!=0:
+        print("  ⚠ El Excel no se generó (¿falta 'pip3 install openpyxl'?). El ciclo continúa.")
     if "--sin-publicar" in args:
         print("\n✅ Ciclo OK (sin publicar). Revisa los cambios y sube a mano cuando quieras.")
         return

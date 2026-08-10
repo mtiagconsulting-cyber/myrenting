@@ -4,7 +4,7 @@ CAPA 4 · QA (semáforo antes de publicar).
 Devuelve código de salida !=0 si algo está mal -> el orquestador ABORTA y NO publica.
 """
 import json, os, sys, glob
-REPO="/workspace/myrenting"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 errores=[]; avisos=[]
 
 cat_path=f"{REPO}/data/build/catalogo.json"

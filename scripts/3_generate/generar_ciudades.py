@@ -7,10 +7,10 @@ Salida: _site/renting-<modelo>-<ciudad>.html  (preview; no pisa producción)
 Uso:   python3 scripts/3_generate/generar_ciudades.py [--solo modelo1,modelo2] [--ciudades madrid,barcelona]
 """
 import json, os, re, html as H, sys
-REPO="/workspace/myrenting"; DOMAIN="https://myrenting.es"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2]); DOMAIN="https://myrenting.es"
 cat=json.load(open(f"{REPO}/data/build/catalogo.json",encoding='utf-8'))["modelos"]
 ZBE=json.load(open(f"{REPO}/data/master/ciudades-zbe.json",encoding='utf-8'))
-OUT=f"{REPO}/_site"; os.makedirs(OUT,exist_ok=True)
+OUT=REPO   # publicar en la raíz (Pages). Se regeneran cada semana.
 e=H.escape
 
 def verdict(dgt, ci):
@@ -131,12 +131,20 @@ if __name__=="__main__":
     solo=None; ciudades=list(ZBE.keys())
     if "--solo" in args: solo=set(args[args.index("--solo")+1].split(","))
     if "--ciudades" in args: ciudades=args[args.index("--ciudades")+1].split(",")
-    n=0
+    n=0; escritos=[]
     for k,m in cat.items():
         if solo and m['slug'] not in solo: continue
+        # puerta de calidad: el cruce ZBE solo aporta si el coche tiene etiqueta DGT
+        if not (m.get("specs") or {}).get("etiqueta_dgt"): continue
         for city in ciudades:
             ci=ZBE.get(city)
             if not ci: continue
-            open(f"{OUT}/renting-{m['slug']}-{city}.html","w",encoding='utf-8').write(render(m,city,ci))
-            n+=1
-    print(f"✅ {n} landings de ciudad generadas en _site/ ({len(ciudades)} ciudades)")
+            sl=f"renting-{m['slug']}-{city}"
+            open(f"{OUT}/{sl}.html","w",encoding='utf-8').write(render(m,city,ci))
+            escritos.append(sl); n+=1
+    with open(f"{REPO}/sitemap-ciudades.xml","w",encoding='utf-8') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for sl in sorted(escritos):
+            f.write(f'  <url><loc>{DOMAIN}/{sl}.html</loc><changefreq>weekly</changefreq></url>\n')
+        f.write('</urlset>\n')
+    print(f"✅ {n} fichas de ciudad publicadas en la raíz ({len(ciudades)} ciudades) + sitemap-ciudades.xml")

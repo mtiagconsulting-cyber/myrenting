@@ -37,6 +37,7 @@ BASE_URL = "https://www.quadis.es"
 FUENTE = "Quadis"
 OUT_DB = BASE / "quadis-db.json"
 MANUALES = BASE / "ofertas-manuales.json"
+DETALLE_OUT = BASE / "data" / "master" / "quadis-detalle.json"
 
 HEADERS = {
     "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -66,18 +67,21 @@ CATS = {"suv":"SUV","todoterreno":"SUV","berlina":"Berlina","sedan":"Berlina",
 
 
 # ─── HTTP + helpers ──────────────────────────────────────────────────────────
-def fetch(url, verbose=False):
+def fetch(url, verbose=False, retries=2):
     import requests
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=25)
-        if r.status_code != 200:
-            if verbose:
-                print(f"    ⚠ HTTP {r.status_code} en {url}")
+    for intento in range(retries + 1):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=25)
+            if r.status_code != 200:
+                if verbose:
+                    print(f"    ⚠ HTTP {r.status_code} en {url}")
+                return None
+            return r.text
+        except Exception as e:
+            if intento < retries:
+                time.sleep(2 * (intento + 1)); continue
+            print(f"    ⚠ error {url}: {e}")
             return None
-        return r.text
-    except Exception as e:
-        print(f"    ⚠ error {url}: {e}")
-        return None
 
 def clean(s):
     return re.sub(r"\s+", " ", _html.unescape(str(s or ""))).strip()
@@ -295,6 +299,56 @@ def parse_quadis_cards(frag, tipo="particular", cat=None):
     return offers
 
 
+def parse_ficha_quadis(html):
+    """Extrae de una ficha de quadis.es: especificaciones (clave/valor) y FAQ."""
+    from bs4 import BeautifulSoup
+    s = BeautifulSoup(html, "lxml")
+    d = {"especificaciones": {}, "faq": []}
+    LABELS = {"combustible", "cambio", "tracción", "traccion", "potencia", "puertas",
+              "plazas", "color", "carrocería", "carroceria", "consumo", "cilindrada",
+              "alto", "largo", "ancho", "vel. máxima", "vel. maxima", "matriculación",
+              "matriculacion", "distintivo", "etiqueta", "tipo"}
+    for b in s.select("div.d-block.d-lg-flex"):
+        spans = [re.sub(r"\s+", " ", x.get_text(" ", strip=True))
+                 for x in b.find_all("span") if x.get_text(strip=True)]
+        if len(spans) >= 2:
+            label, val = spans[0].strip(), " ".join(spans[1:]).strip()
+            if label and val and label.lower() in LABELS:
+                d["especificaciones"][label] = val
+    # FAQ: pregunta (span destacado que acaba en ?) + respuesta en el bloque siguiente
+    seen = set()
+    for q in s.select("span.h3.font-weight-bold, span.font-weight-bold"):
+        qt = re.sub(r"\s+", " ", q.get_text(" ", strip=True))
+        if qt.endswith("?") and 12 < len(qt) < 160 and qt not in seen:
+            ans = q.find_next(["p", "div"])
+            at = re.sub(r"\s+", " ", ans.get_text(" ", strip=True))[:600] if ans else ""
+            if at and at != qt:
+                seen.add(qt); d["faq"].append({"q": qt, "a": at})
+    return d
+
+
+def enrich_quadis_detalle(offers):
+    """Para cada ficha única (URL /coches-renting/.../{id}) baja specs + FAQ y las
+    adjunta. Devuelve un mapa {MAKE|MODEL: detalle} para casar con el PDF."""
+    cache, mapa = {}, {}
+    fichas = [o for o in offers if re.search(r"-renting/.+/\d+", o.get("url", ""))]
+    total = len(fichas)
+    print(f"── Extrayendo ficha (specs + FAQ) de {total} vehículos Quadis…")
+    for i, o in enumerate(fichas, 1):
+        u = o["url"].split("#")[0]
+        if u not in cache:
+            h = fetch(u)
+            cache[u] = parse_ficha_quadis(h) if h else None
+            time.sleep(0.3)
+        det = cache[u]
+        if det:
+            o["detalle"] = det
+            mapa[f"{o.get('make','').upper()}|{o.get('model','').upper()}"] = det
+        if i % 10 == 0 or i == total:
+            print(f"    {i}/{total}  (fichas con detalle: {len(mapa)})")
+    return mapa
+
+
 def detail_inspect(url):
     """Explora una ficha de detalle para localizar cómo sirve la matriz km×meses."""
     print(f"── Inspeccionando detalle: {url}")
@@ -499,6 +553,8 @@ def main():
     ap.add_argument("--from-file")
     ap.add_argument("--html", action="store_true", help="Fuerza scrape del HTML en vez de la API")
     ap.add_argument("--merge", action="store_true")
+    ap.add_argument("--detalle", action="store_true",
+                    help="Baja specs + FAQ de cada ficha y escribe data/master/quadis-detalle.json")
     args = ap.parse_args()
 
     for imp in ("requests", "bs4", "lxml"):
@@ -544,6 +600,12 @@ def main():
         print(f"   · [{o['tipo'][:4]}] {o['make']} {o['model']} — {o['precio_desde']}€ ({o['duracion']}m/{o['km']}km) [{o['category'] or '?'}]")
     if len(offers) > 12:
         print(f"   … y {len(offers)-12} más")
+
+    if args.detalle:
+        mapa = enrich_quadis_detalle(offers)
+        DETALLE_OUT.parent.mkdir(parents=True, exist_ok=True)
+        DETALLE_OUT.write_text(json.dumps(mapa, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  ✓ {DETALLE_OUT.relative_to(BASE)}: {len(mapa)} fichas con specs+FAQ")
 
     OUT_DB.write_text(json.dumps(offers, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n💾 Guardado en {OUT_DB.name}")

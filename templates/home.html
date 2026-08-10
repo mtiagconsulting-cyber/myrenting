@@ -149,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .ct-price b small{font-size:.7rem;font-weight:600;color:var(--g-500)}
   .npgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
   @media(max-width:520px){.npgrid{grid-template-columns:1fr}}
-  .npc{position:relative;background:linear-gradient(158deg,#FF7A2E,#F04E00 88%);border-radius:15px;color:#fff;overflow:hidden;box-shadow:0 1px 3px rgba(20,20,20,.05),0 14px 28px rgba(240,78,0,.14);cursor:pointer;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column;padding:14px 14px 0}
+  .npc{position:relative;background:linear-gradient(158deg,#FF7A2E,#F04E00 88%);border-radius:15px;color:#fff;text-decoration:none;overflow:hidden;box-shadow:0 1px 3px rgba(20,20,20,.05),0 14px 28px rgba(240,78,0,.14);cursor:pointer;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column;padding:14px 14px 0}
   .npc:hover{transform:translateY(-4px);box-shadow:0 26px 48px rgba(240,78,0,.24)}
   .npc::before{content:"";position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(closest-side,rgba(255,255,255,.15),transparent)}
   .npc-top{display:flex;justify-content:space-between;gap:12px;position:relative;z-index:2}
@@ -363,8 +363,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 
-<div class="preview-bar">PREVIEW DE MIGRACIÓN &mdash; <b>página de prueba</b>, no indexada. La web actual (index.html) no se ha modificado.</div>
-
 <header class="nav">
   <div class="wrap nav-in">
     <a class="logo" data-go="home">My<b>Renting</b><i>.es</i></a>
@@ -545,7 +543,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <span class="logo">My<b style="color:var(--o)">Renting</b>.es</span>
     <div class="foot-links"><a data-go="part">Particulares</a><a data-go="auto">Autónomos</a><a data-go="emp">Empresas</a><a data-go="blog">Blog</a><a href="/aviso-legal.html">Aviso legal</a></div>
   </div>
-  <div class="foot-bot"><span>© 2026 MyRenting.es · Preview de migración</span><span>+34 691 766 768 · Hecho en España</span></div>
+  <div class="foot-bot"><span>© 2026 myrenting.es</span><span>+34 691 766 768 · Hecho en España</span></div>
 </div></footer>
 
 <div class="modal-ov" id="offer-modal">
@@ -603,9 +601,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   const CLOCK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
   function npCard(c){const i=cars.indexOf(c);
     const iva=(ivaMode==='exc')?'mes · + IVA':(c.minTipo==='particular'?'mes · IVA incl.':'mes · + IVA');
-    return `<article class="npc" data-pdp="${i}">
+    const pill=(v)=>v&&v!=='—';
+    return `<a class="npc" href="/renting-${c.slug}.html">
     <div class="npc-top"><div><div class="npc-name">${c.t}</div>${c.ver?`<div class="npc-ver">${c.ver}</div>`:''}
-      <div class="npc-pills"><span class="npc-pill">${IC.trans}${c.trans}</span><span class="npc-pill">${IC.fuel}${c.fuel}</span></div></div>
+      <div class="npc-pills">${pill(c.trans)?`<span class="npc-pill">${IC.trans}${c.trans}</span>`:''}${pill(c.fuel)?`<span class="npc-pill">${IC.fuel}${c.fuel}</span>`:''}</div></div>
       <div class="npc-price"><span class="d">Desde</span><b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span> €</b><small>${iva}</small></div></div>
     <div class="npc-ph">${c.img?`<img src="${c.img}" alt="${c.t}" onerror="this.style.display='none'">`:''}</div>
     <div class="npc-foot">
@@ -613,7 +612,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="npc-spec">${IC.fuel}<span class="v">${c.fuel}</span><span class="k">Combustible</span></div>
       <div class="npc-spec">${IC.cons}<span class="v">${c.cons}</span><span class="k">Consumo</span></div>
       <div class="npc-spec">${IC.seats}<span class="v">${c.seats}</span><span class="k">Plazas</span></div></div>
-  </article>`}
+  </a>`}
   function card(c){const i=cars.indexOf(c);return `<article class="card">
     <div class="media">${media(c)}</div>
     <div class="card-body"><div class="c-title">${c.t}</div><div class="c-trim">${c.trim}</div>

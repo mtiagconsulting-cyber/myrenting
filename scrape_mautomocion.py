@@ -71,18 +71,63 @@ CATS = {
 }
 
 # ─── HTTP ──────────────────────────────────────────────────────────────────────
-def fetch(url, verbose=False):
+def fetch(url, verbose=False, retries=2):
     import requests
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=25)
-        if r.status_code != 200:
-            if verbose:
-                print(f"    ⚠ HTTP {r.status_code} en {url}")
+    for intento in range(retries + 1):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=25)
+            if r.status_code != 200:
+                if verbose:
+                    print(f"    ⚠ HTTP {r.status_code} en {url}")
+                return None      # 404/redirección: no reintentar
+            return r.text
+        except Exception as e:
+            if intento < retries:   # timeout / corte de red: reintentar con backoff
+                time.sleep(2 * (intento + 1)); continue
+            print(f"    ⚠ error {url}: {e}")
             return None
-        return r.text
-    except Exception as e:
-        print(f"    ⚠ error {url}: {e}")
-        return None
+
+
+def _es_listado(u):
+    """True si la URL es una página de listado/marca (no una ficha de vehículo)."""
+    u = (u or "").split("#")[0].rstrip("/")
+    if not u or u == BASE_URL.rstrip("/"):
+        return True
+    return bool(re.search(r"/(renting-(particulares?|empresas?|aut[oó]nomos?)|brand)\b", u))
+
+
+def parse_ficha_detalle(html):
+    """Extrae de la ficha: especificaciones (clave/valor), equipamiento
+    exterior/interior (listas), coberturas y notas (texto). Devuelve un dict."""
+    from bs4 import BeautifulSoup
+    import re as _re
+    s = BeautifulSoup(html, "lxml")
+    d = {"especificaciones": {}, "equip_exterior": [], "equip_interior": [],
+         "coberturas": "", "notas": ""}
+    # 1) especificaciones: bloques con dd.value = [ETIQUETA, VALOR]
+    for dd in s.select("dd.value"):
+        block = dd.find_parent(["div", "li"])
+        if not block:
+            continue
+        txt = [t.strip() for t in block.stripped_strings if t.strip()]
+        if txt:
+            d["especificaciones"][txt[0]] = txt[1] if len(txt) >= 2 else ""
+    # 2) pestañas: extra-1 ext, extra-2 int, extra-3 coberturas, extra-4 notas
+    def items(pid):
+        pane = s.find(id=pid)
+        if not pane:
+            return []
+        out = [_re.sub(r"\s+", " ", p.get_text(" ", strip=True)).strip()
+               for p in pane.find_all("p")]
+        return [x for x in out if x]
+    def texto(pid):
+        pane = s.find(id=pid)
+        return _re.sub(r"\s+", " ", pane.get_text(" ", strip=True)).strip() if pane else ""
+    d["equip_exterior"] = items("extra-1")
+    d["equip_interior"] = items("extra-2")
+    d["coberturas"] = texto("extra-3")   # texto completo (conserva etiquetas)
+    d["notas"] = texto("extra-4")
+    return d
 
 # ─── HELPERS ────────────────────────────────────────────────────────────────────
 def clean(s):
@@ -239,7 +284,7 @@ def parse_product(html, url):
     if not precio or not make:          # descarta contenido que no es un vehículo
         return None
     # descarta páginas de aterrizaje/listado ("Renting Empresas/Autónomos/Particulares")
-    if re.search(r"renting\s+(empresas?|aut[oó]nomos?|particulares?)", titulo, re.I) or "/oferta-renting-" not in url:
+    if re.search(r"renting\s+(empresas?|aut[oó]nomos?|particulares?)", titulo, re.I) or _es_listado(url):
         return None
     model = specs.get("modelo", "")
     if not model:
@@ -521,14 +566,21 @@ def parse_listing(html, base_url):
     for art in soup.select("article.js-product-miniature, article.product-miniature"):
         pid = art.get("data-id-product")
         if not pid: continue
-        # preferimos el enlace real a la ficha (/oferta-renting-...)
-        a = (art.select_one("a[href*='oferta-renting-']") or art.select_one("a.product_name")
-             or art.select_one("h3 a") or art.select_one("a[title]"))
+        # enlace real a la ficha: el <a.product-thumbnail> (imagen) lo lleva SIEMPRE,
+        # con cualquier formato (/skoda-karoq, erratas, sufijos de color…).
+        href = ""
+        for sel in ("a.product-thumbnail[href]", "a[href*='oferta-renting-']",
+                    "a.product_name[href]", "h3 a[href]", "a[title][href]"):
+            el = art.select_one(sel)
+            if el:
+                h = (el.get("href") or "").strip()
+                if h and h != "#":
+                    href = h; break
         d = art.select_one(".product-desc")
         img = art.select_one("img")
         src = (img.get("data-src") or img.get("src")) if img else ""
         mini.setdefault(pid, {
-            "url": urljoin(base_url, a["href"]) if a and a.get("href") else "",
+            "url": urljoin(base_url, href) if href else "",
             "trim": clean(d.get_text()) if d else "",
             "img": urljoin(base_url, src) if src else "",
         })
@@ -569,7 +621,10 @@ def parse_listing(html, base_url):
         trim = mn.get("trim", "")
         txt = name + " " + trim
         real = mn.get("url", "")
-        url = real if "oferta-renting-" in real else f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
+        # usar SIEMPRE el enlace real capturado del listado (formatos irregulares:
+        # /skoda-karoq, erratas 'reniting', sufijos de color…). Solo inventar si no hay.
+        real_path = urlparse(real).path.strip("/") if real else ""
+        url = real if real_path else f"{BASE_URL}/oferta-renting-{tipo}-{slugify(make + ' ' + model)}"
         offers.append({
             "fuente": FUENTE, "tipo": tipo, "make": make.upper(),
             "model": (model or name).upper()[:40],
@@ -618,7 +673,7 @@ def enrich_with_matrix(offers):
     print(f"── Extrayendo matriz km×meses de {total} ofertas (esto tarda)…")
     for i, o in enumerate(offers, 1):
         u = (o.get("url") or "").split("#")[0]
-        if "/oferta-renting-" not in u:
+        if not u or _es_listado(u):
             skips["sin_url"] += 1
             if len(ejemplos) < 4: ejemplos.append(f"sin_url: {o.get('make')} {o.get('model')} -> {u!r}")
             continue
@@ -627,6 +682,11 @@ def enrich_with_matrix(offers):
             skips["fetch_fallo"] += 1
             if len(ejemplos) < 4: ejemplos.append(f"fetch_fallo (¿404?): {u}")
             continue
+        # detalle de ficha (specs + equipamiento + coberturas + notas), reusa 'h'
+        try:
+            o["detalle"] = parse_ficha_detalle(h)
+        except Exception:
+            pass
         matriz, _ = matrix_from_product(h, u)
         combos = []
         for r in matriz:
@@ -654,6 +714,29 @@ def enrich_with_matrix(offers):
             print(f"      · {e}")
 
 
+def enrich_with_detalle(offers):
+    """Añade a cada oferta 'detalle' (specs + equipamiento + coberturas + notas)
+    SIN la matriz. Descarga cada ficha única una sola vez (cachea por URL)."""
+    cache = {}
+    total = len(offers)
+    n_ok = 0
+    print(f"── Extrayendo ficha (specs/equipamiento/coberturas/notas) de {total} ofertas…")
+    for i, o in enumerate(offers, 1):
+        u = (o.get("url") or "").split("#")[0]
+        if not u or _es_listado(u):
+            continue
+        if u not in cache:
+            h = fetch(u)
+            cache[u] = parse_ficha_detalle(h) if h else None
+        if cache[u]:
+            o["detalle"] = cache[u]
+            n_ok += 1
+        if i % 10 == 0 or i == total:
+            print(f"    {i}/{total}  (fichas con detalle: {n_ok}, únicas: {len(cache)})")
+        time.sleep(0.3)
+    print(f"  ✓ detalle añadido a {n_ok}/{total} ofertas ({len(cache)} fichas únicas)")
+
+
 # ─── MERGE ────────────────────────────────────────────────────────────────────
 def merge_into_manuales(offers):
     data = []
@@ -674,7 +757,9 @@ def main():
     ap.add_argument("--combos", nargs="?", const="auto", metavar="URL",
                     help="Vuelca la matriz km×meses×precio de UNA ficha (sin URL: la busca solo)")
     ap.add_argument("--matrix", action="store_true",
-                    help="Añade a cada oferta su matriz km×meses×precio (LENTO: visita cada ficha)")
+                    help="Añade a cada oferta su matriz km×meses×precio (LENTO: visita cada ficha). Incluye el detalle de ficha.")
+    ap.add_argument("--detalle", action="store_true",
+                    help="Añade a cada oferta el detalle de ficha (specs, equipamiento, coberturas, notas). LENTO: visita cada ficha.")
     args = ap.parse_args()
 
     for pkg, imp in [("requests","requests"), ("beautifulsoup4","bs4"), ("lxml","lxml")]:
@@ -708,7 +793,9 @@ def main():
         print(f"   … y {len(offers)-10} más")
 
     if args.matrix:
-        enrich_with_matrix(offers)
+        enrich_with_matrix(offers)   # la matriz ya adjunta también el detalle
+    elif args.detalle:
+        enrich_with_detalle(offers)
 
     OUT_DB.write_text(json.dumps(offers, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n💾 Guardado en {OUT_DB.name}")

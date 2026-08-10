@@ -129,10 +129,46 @@ footer{border-top:1px solid var(--line);padding:22px 0;font-size:13px;color:var(
 <footer><div class="wrap">MyRenting · Comparador de renting con precios reales. Sin registro.</div></footer>
 <a aria-label="WhatsApp" class="wafloat" href="https://wa.me/34691766768?text=Hola%2C%20me%20interesa%20la%20oferta%20del%20Kia%20Niro" rel="noopener" target="_blank"><svg fill="#fff" height="30" viewbox="0 0 24 24" width="30"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"></path></svg></a>
 <script>
-async function enviarLead(e){e.preventDefault();var form=e.target,data=new FormData(form);
- try{await fetch('https://formsubmit.co/ajax/mtiagconsulting@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:data});}catch(err){}
- form.querySelectorAll('input,button').forEach(function(el){el.style.display='none';});
- document.getElementById('lead-ok').style.display='block';return false;}
-</script>
-</body>
-</html>
+const M={"con": {"5000|36": 355, "5000|48": 349, "5000|60": 340, "10000|36": 384, "10000|48": 381, "10000|60": 373, "15000|36": 409, "15000|48": 405, "15000|60": 402, "20000|36": 434, "20000|48": 440, "20000|60": 437}, "sin": null, "desde": 340, "name": "Kia Niro"};
+const hasCon=M.con&&Object.keys(M.con).length, hasSin=M.sin&&Object.keys(M.sin).length;
+let iva=hasCon?'con':(hasSin?'sin':null), km=null, ms=null, tipo=hasCon?'particular':'empresa';
+const el=id=>document.getElementById(id);
+function mat(){return iva==='con'?M.con:(iva==='sin'?M.sin:null);}
+function flip(id,txt){const e=el(id);if(!e)return;e.style.opacity=0;setTimeout(()=>{e.textContent=txt;e.style.opacity=1;},130);}
+function buildChips(){
+  const c=mat();
+  if(!c){el('cfgWrap').style.display='none';return;}
+  const kms=[...new Set(Object.keys(c).map(k=>+k.split('|')[0]))].sort((a,b)=>a-b);
+  const mss=[...new Set(Object.keys(c).map(k=>+k.split('|')[1]))].sort((a,b)=>a-b);
+  if(!kms.includes(km)) km=kms.includes(15000)?15000:kms[0];
+  if(!mss.includes(ms)) ms=mss.includes(60)?60:mss[mss.length-1];
+  el('kmChips').innerHTML=kms.map(k=>'<button class="chip" '+(k===km?'data-on':'')+' data-km="'+k+'">'+(k/1000)+'.000<small>km/año</small></button>').join('');
+  el('msChips').innerHTML=mss.map(x=>'<button class="chip" '+(x===ms?'data-on':'')+' data-ms="'+x+'">'+x+'<small>meses</small></button>').join('');
+}
+function ivaButtons(){
+  const t=el('ivaToggle');let h='';
+  if(hasCon) h+='<button data-iva="con" '+(iva==='con'?'data-on':'')+'>Con IVA · particular</button>';
+  if(hasSin) h+='<button data-iva="sin" '+(iva==='sin'?'data-on':'')+'>Sin IVA · autónomo/empresa</button>';
+  t.innerHTML=h; if(!(hasCon&&hasSin)) t.style.display='none';
+}
+function price(){const c=mat();return c?c[km+'|'+ms]:M.desde;}
+function fmt(n){return n==null?M.desde:Math.round(n);}
+function render(){
+  const p=price(), ivaTxt=iva==='con'?'IVA incluido':(iva==='sin'?'+ IVA · deducible':'');
+  flip('cfgPrice',fmt(p));flip('heroPrice',fmt(p));
+  if(el('ivaNote'))el('ivaNote').textContent=ivaTxt; if(el('heroIva'))el('heroIva').textContent=ivaTxt;
+  const kmt=(km&&mat())?((km/1000)+'.000 km/año · '+ms+' meses · '):'';
+  el('formSummary').innerHTML='<b>'+M.name+'</b> · '+kmt+'<b>'+fmt(p)+' €/mes</b>'+(ivaTxt?' ('+ivaTxt+')':'');
+  const msg='Hola, me interesa el renting del '+M.name+': '+kmt+fmt(p)+' €/mes'+(ivaTxt?' ('+ivaTxt+')':'')+'. Tipo cliente: '+tipo+'.';
+  el('waBtn').href='https://wa.me/34691766768?text='+encodeURIComponent(msg);
+  el('emBtn').href='mailto:mtiagconsulting@gmail.com?subject='+encodeURIComponent('Renting '+M.name)+'&body='+encodeURIComponent(msg);
+}
+function on(id,fn){const e=el(id);if(e)e.addEventListener('click',e2=>{const b=e2.target.closest('button');if(!b)return;fn(b);});}
+on('kmChips',b=>{document.querySelectorAll('#kmChips button').forEach(x=>x.removeAttribute('data-on'));b.setAttribute('data-on','');km=+b.dataset.km;render();});
+on('msChips',b=>{document.querySelectorAll('#msChips button').forEach(x=>x.removeAttribute('data-on'));b.setAttribute('data-on','');ms=+b.dataset.ms;render();});
+on('ivaToggle',b=>{iva=b.dataset.iva;tipo=(iva==='con')?'particular':'empresa';ivaButtons();buildChips();syncTipo();render();});
+on('tipoSeg',b=>{tipo=b.dataset.t;document.querySelectorAll('#tipoSeg button').forEach(x=>x.removeAttribute('data-on'));b.setAttribute('data-on','');
+  const ni=(tipo==='particular')?'con':'sin'; if((ni==='con'&&hasCon)||(ni==='sin'&&hasSin)){iva=ni;ivaButtons();buildChips();} render();});
+function syncTipo(){document.querySelectorAll('#tipoSeg button').forEach(x=>x.toggleAttribute('data-on',x.dataset.t===tipo));}
+ivaButtons();buildChips();syncTipo();render();
+</script></body></html>

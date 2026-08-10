@@ -2,20 +2,23 @@
 """
 CAPA 3 · GENERAR
 Lee:   data/build/catalogo.json + data/master/ciudades-zbe.json
-Escribe (seguro, no pisa producción hasta que valides):
-   _site/renting-<modelo>.html      · landings de modelo (valor real + JSON-LD)
+Escribe:
+   renting-<modelo>.html            · fichas de modelo en la raíz (se publican en Pages)
    llms.txt                          · índice para IAs (GEO)
    robots.txt                        · permite bots de IA + sitemap
    sitemap-modelos.xml               · sitemap de las landings nuevas
 NOTA: la home (index.html) y las landings de ciudad se enganchan aquí como módulos
       adicionales una vez validado el modelo base.
 """
-import json, os, re, html as H
-REPO="/workspace/myrenting"; DOMAIN="https://myrenting.es"
+import json, os, re, html as H, unicodedata
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2]); DOMAIN="https://myrenting.es"
+def slugcat(x):
+    x=unicodedata.normalize("NFKD",str(x or "")).encode("ascii","ignore").decode().lower()
+    return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",x)).strip("-")
 cat=json.load(open(f"{REPO}/data/build/catalogo.json",encoding='utf-8'))
 ZBE=json.load(open(f"{REPO}/data/master/ciudades-zbe.json",encoding='utf-8'))
 MODS=cat["modelos"]
-OUT=f"{REPO}/_site"; os.makedirs(OUT,exist_ok=True)
+OUT=REPO   # publicar las fichas en la raíz (GitHub Pages las sirve). Se regeneran cada semana.
 e=H.escape
 
 def geo_line(m):
@@ -45,45 +48,247 @@ def build_robots():
           "PerplexityBot","Perplexity-User","Google-Extended","Applebot-Extended","CCBot","Bytespider"]
     lines=["# robots.txt — myrenting.es","User-agent: *","Allow: /",""]
     for b in bots: lines+=[f"User-agent: {b}","Allow: /",""]
-    lines+=[f"Sitemap: {DOMAIN}/sitemap.xml",f"Sitemap: {DOMAIN}/sitemap-modelos.xml"]
+    lines+=[f"Sitemap: {DOMAIN}/sitemap.xml",f"Sitemap: {DOMAIN}/sitemap-modelos.xml",
+            f"Sitemap: {DOMAIN}/sitemap-hubs.xml",f"Sitemap: {DOMAIN}/sitemap-ciudades.xml"]
     open(f"{REPO}/robots.txt","w",encoding='utf-8').write("\n".join(lines)+"\n")
     return len(bots)
 
+# ---------- diseño de la ficha (naranja myrenting, tema claro/oscuro) ----------
+FICHA_CSS = """
+:root{--bg:#f4f1ea;--surface:#fff;--surface2:#faf7f2;--ink:#181d2a;--ink2:#5c6474;--line:#e7e0d3;--o:#ff5c00;--o2:#f04e00;--navy:#16224e;--green:#0a7d43;--shadow:0 1px 2px rgba(20,20,20,.04),0 12px 30px rgba(240,78,0,.10)}
+@media(prefers-color-scheme:dark){:root{--bg:#12141a;--surface:#1b1e27;--surface2:#20242f;--ink:#f0f2f6;--ink2:#a4abb9;--line:#2b303c;--navy:#c9d4ff;--shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.45)}}
+:root[data-theme=dark]{--bg:#12141a;--surface:#1b1e27;--surface2:#20242f;--ink:#f0f2f6;--ink2:#a4abb9;--line:#2b303c;--navy:#c9d4ff;--shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.45)}
+:root[data-theme=light]{--bg:#f4f1ea;--surface:#fff;--surface2:#faf7f2;--ink:#181d2a;--ink2:#5c6474;--line:#e7e0d3;--navy:#16224e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:850;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}.logo span{color:var(--o)}
+.crumb{font-size:12.5px;color:var(--ink2);padding:18px 0 4px}.crumb a{color:var(--ink2);text-decoration:none}
+h1{font-size:clamp(28px,4.5vw,40px);font-weight:850;letter-spacing:-.03em;margin:2px 0 14px;text-wrap:balance}
+.hero{background:linear-gradient(150deg,#ff7a2e,#f04e00 92%);color:#fff;border-radius:22px;padding:22px 24px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;background:radial-gradient(closest-side,rgba(255,255,255,.18),transparent)}
+.hero .row{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;position:relative;z-index:1}
+.hero .ver{font-size:13px;opacity:.9;margin-top:2px}.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11.5px;font-weight:700;border:1.5px solid rgba(255,255,255,.45);border-radius:99px;padding:4px 11px}
+.price-tag{text-align:right}.price-tag .d{font-size:12px;opacity:.85;font-weight:600}
+.price-tag .v{font-size:clamp(34px,6vw,46px);font-weight:850;letter-spacing:-.03em;line-height:1;transition:opacity .18s}
+.price-tag .u{font-size:14px;font-weight:600;opacity:.85}.price-tag .iva{font-size:11.5px;opacity:.85;margin-top:2px}
+.photo{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px;margin:18px 0;box-shadow:var(--shadow)}
+.photo img{width:100%;display:block;object-fit:contain;max-height:340px}
+h2{font-size:19px;font-weight:800;letter-spacing:-.02em;margin:30px 0 14px;display:flex;align-items:center;gap:9px}
+h2::before{content:"";width:8px;height:20px;border-radius:3px;background:var(--o);display:inline-block}
+h3{font-size:14px;font-weight:800;margin:16px 0 8px;color:var(--ink2);text-transform:uppercase;letter-spacing:.04em}
+.specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.spec{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:13px 15px}
+.spec svg{width:26px;height:26px;color:var(--o);flex:none}
+.spec .sv{font-weight:800;font-size:15px}.spec .sk{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);font-weight:700}
+.cfg{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.lbl{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);font-weight:800;margin:2px 0 9px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chip{font:inherit;cursor:pointer;background:var(--surface2);border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:800;font-size:14px;color:var(--ink);display:flex;flex-direction:column;align-items:center;line-height:1.15;transition:.15s}
+.chip small{font-size:10px;font-weight:600;color:var(--ink2);text-transform:uppercase;letter-spacing:.04em}
+.chip:hover{border-color:var(--o)}.chip[data-on]{background:var(--navy);border-color:var(--navy);color:#fff}.chip[data-on] small{color:rgba(255,255,255,.8)}
+.iva-toggle{display:inline-flex;background:var(--surface2);border:1.5px solid var(--line);border-radius:12px;padding:4px;gap:4px;flex-wrap:wrap}
+.iva-toggle button{font:inherit;cursor:pointer;border:0;background:transparent;color:var(--ink2);font-weight:800;font-size:13.5px;padding:8px 16px;border-radius:9px;transition:.15s}
+.iva-toggle button[data-on]{background:var(--o);color:#fff}
+.result{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--surface2);border:1px dashed var(--line);border-radius:14px;padding:16px 18px;margin-top:18px}
+.result .big{font-size:40px;font-weight:850;letter-spacing:-.03em;line-height:1;transition:opacity .18s}.result .big small{font-size:15px;color:var(--ink2);font-weight:700}
+.result .meta{text-align:right;font-size:13px;color:var(--ink2)}.result .meta b{color:var(--green)}
+.inc{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.inc li{font-size:13.5px;color:var(--ink2);padding-left:22px;position:relative}.inc li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+form{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-size:12px;font-weight:700;color:var(--ink2);margin:0 0 5px}
+input,select{width:100%;font:inherit;padding:11px 13px;border:1.5px solid var(--line);border-radius:11px;background:var(--surface2);color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--o);outline-offset:1px;border-color:var(--o)}
+.field{margin-bottom:13px}.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{font:inherit;cursor:pointer;flex:1;min-width:96px;background:var(--surface2);border:1.5px solid var(--line);border-radius:11px;padding:11px;font-weight:800;font-size:13.5px;color:var(--ink);transition:.15s}
+.seg button[data-on]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cfg-summary{background:var(--surface2);border-radius:12px;padding:12px 15px;font-size:13.5px;color:var(--ink2);margin-bottom:16px}.cfg-summary b{color:var(--ink)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.btn{flex:1;min-width:150px;text-align:center;font:inherit;font-weight:800;font-size:15px;border:0;border-radius:13px;padding:15px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn.wa{background:#25d366;color:#0b3d1e}.btn.em{background:var(--o);color:#fff}.btn:hover{filter:brightness(1.05)}
+ul.eq{list-style:none;padding:0;margin:0;columns:2;column-gap:24px}ul.eq li{font-size:13.5px;color:var(--ink2);padding-left:20px;position:relative;margin:5px 0;break-inside:avoid}ul.eq li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+details.faq{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:2px 18px;margin:8px 0}
+details.faq summary{list-style:none;cursor:pointer;font-weight:800;padding:14px 0;display:flex;justify-content:space-between;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}details.faq .chev{color:var(--o);font-size:20px;transition:.2s}details.faq[open] .chev{transform:rotate(45deg)}
+details.faq p{margin:0 0 14px;color:var(--ink2);font-size:14px}
+.alts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+a.alt{display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 15px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14px}a.alt:hover{border-color:var(--o)}a.alt b{color:var(--o2)}
+.notas{font-size:12px;color:var(--ink2)}.src{font-size:12px;color:var(--ink2);margin-top:8px}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:22px 0;font-size:13px;color:var(--ink2)}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}.inc,ul.eq{grid-template-columns:1fr;columns:1}.price-tag{text-align:left}.hero .row{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+"""
+
+FICHA_JS = """
+const M=__DATA__;
+const hasCon=M.con&&Object.keys(M.con).length, hasSin=M.sin&&Object.keys(M.sin).length;
+let iva=hasCon?'con':(hasSin?'sin':null), km=null, ms=null, tipo=hasCon?'particular':'empresa';
+const el=id=>document.getElementById(id);
+function mat(){return iva==='con'?M.con:(iva==='sin'?M.sin:null);}
+function flip(id,txt){const e=el(id);if(!e)return;e.style.opacity=0;setTimeout(()=>{e.textContent=txt;e.style.opacity=1;},130);}
+function buildChips(){
+  const c=mat();
+  if(!c){el('cfgWrap').style.display='none';return;}
+  const kms=[...new Set(Object.keys(c).map(k=>+k.split('|')[0]))].sort((a,b)=>a-b);
+  const mss=[...new Set(Object.keys(c).map(k=>+k.split('|')[1]))].sort((a,b)=>a-b);
+  if(!kms.includes(km)) km=kms.includes(15000)?15000:kms[0];
+  if(!mss.includes(ms)) ms=mss.includes(60)?60:mss[mss.length-1];
+  el('kmChips').innerHTML=kms.map(k=>'<button class="chip" '+(k===km?'data-on':'')+' data-km="'+k+'">'+(k/1000)+'.000<small>km/año</small></button>').join('');
+  el('msChips').innerHTML=mss.map(x=>'<button class="chip" '+(x===ms?'data-on':'')+' data-ms="'+x+'">'+x+'<small>meses</small></button>').join('');
+}
+function ivaButtons(){
+  const t=el('ivaToggle');let h='';
+  if(hasCon) h+='<button data-iva="con" '+(iva==='con'?'data-on':'')+'>Con IVA · particular</button>';
+  if(hasSin) h+='<button data-iva="sin" '+(iva==='sin'?'data-on':'')+'>Sin IVA · autónomo/empresa</button>';
+  t.innerHTML=h; if(!(hasCon&&hasSin)) t.style.display='none';
+}
+function price(){const c=mat();return c?c[km+'|'+ms]:M.desde;}
+function fmt(n){return n==null?M.desde:Math.round(n);}
+function render(){
+  const p=price(), ivaTxt=iva==='con'?'IVA incluido':(iva==='sin'?'+ IVA · deducible':'');
+  flip('cfgPrice',fmt(p));flip('heroPrice',fmt(p));
+  if(el('ivaNote'))el('ivaNote').textContent=ivaTxt; if(el('heroIva'))el('heroIva').textContent=ivaTxt;
+  const kmt=(km&&mat())?((km/1000)+'.000 km/año · '+ms+' meses · '):'';
+  el('formSummary').innerHTML='<b>'+M.name+'</b> · '+kmt+'<b>'+fmt(p)+' €/mes</b>'+(ivaTxt?' ('+ivaTxt+')':'');
+  const msg='Hola, me interesa el renting del '+M.name+': '+kmt+fmt(p)+' €/mes'+(ivaTxt?' ('+ivaTxt+')':'')+'. Tipo cliente: '+tipo+'.';
+  el('waBtn').href='https://wa.me/34691766768?text='+encodeURIComponent(msg);
+  el('emBtn').href='mailto:mtiagconsulting@gmail.com?subject='+encodeURIComponent('Renting '+M.name)+'&body='+encodeURIComponent(msg);
+}
+function on(id,fn){const e=el(id);if(e)e.addEventListener('click',e2=>{const b=e2.target.closest('button');if(!b)return;fn(b);});}
+on('kmChips',b=>{document.querySelectorAll('#kmChips button').forEach(x=>x.removeAttribute('data-on'));b.setAttribute('data-on','');km=+b.dataset.km;render();});
+on('msChips',b=>{document.querySelectorAll('#msChips button').forEach(x=>x.removeAttribute('data-on'));b.setAttribute('data-on','');ms=+b.dataset.ms;render();});
+on('ivaToggle',b=>{iva=b.dataset.iva;tipo=(iva==='con')?'particular':'empresa';ivaButtons();buildChips();syncTipo();render();});
+on('tipoSeg',b=>{tipo=b.dataset.t;document.querySelectorAll('#tipoSeg button').forEach(x=>x.removeAttribute('data-on'));b.setAttribute('data-on','');
+  const ni=(tipo==='particular')?'con':'sin'; if((ni==='con'&&hasCon)||(ni==='sin'&&hasSin)){iva=ni;ivaButtons();buildChips();} render();});
+function syncTipo(){document.querySelectorAll('#tipoSeg button').forEach(x=>x.toggleAttribute('data-on',x.dataset.t===tipo));}
+ivaButtons();buildChips();syncTipo();render();
+"""
+
+ICONS={
+"bolt":'<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
+"fuel":'<path d="M3 22V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v18"/><path d="M3 12h10"/><path d="M13 8h3l3 3v7a2 2 0 0 1-4 0v-3"/>',
+"gear":'<circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1L14.5 2h-5l-.4 2.6a7 7 0 0 0-1.7 1l-2.3-1-2 3.4L3.1 11a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1L9.5 22h5l.4-2.6a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5Z"/>',
+"seat":'<path d="M4 18v-6a4 4 0 0 1 4-4h4l2 8"/><path d="M4 18h12"/><path d="M18 10v8"/>',
+"gauge":'<path d="M12 14 16 10"/><circle cx="12" cy="13" r="9"/><path d="M12 4v2"/>',
+"leaf":'<path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-3 16-9 16Z"/><path d="M4 20c3-4 6-6 10-7"/>',
+"car":'<path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Z"/><circle cx="8" cy="16" r="0.6"/><circle cx="16" cy="16" r="0.6"/>',
+"road":'<path d="M4 22 8 2h8l4 20"/><path d="M12 6v3M12 13v3"/>',
+"dot":'<circle cx="12" cy="12" r="3"/>',
+}
+
 # ---------- landing de modelo ----------
 def landing(m):
-    s=m.get("specs") or {}; name=f"{m['make']} {m['model']}"; sl=m['slug']
+    s=m.get("specs") or {}; det=m.get("detalle") or {}; esp=det.get("especificaciones") or {}
+    name=f"{m['make']} {m['model']}"; sl=m['slug']
     q=int(m['precio_desde']); url=f"{DOMAIN}/renting-{sl}.html"; img=s.get("imagen") or f"/img/modelos/{sl}.webp"
-    geo=geo_line(m); dgt=s.get("etiqueta_dgt")
-    ld={"@context":"https://schema.org","@graph":[
+    geo=geo_line(m); dgt=s.get("etiqueta_dgt"); fuel=s.get("combustible") or ""
+
+    # matrices km×meses por segmento -> con IVA (particular) / sin IVA (empresa|autónomo)
+    mats={}
+    for o in m['ofertas']:
+        for c in (o.get('combinaciones') or []):
+            if c.get('km') and c.get('meses') and c.get('precio'):
+                mats.setdefault(o.get('tipo'),{})[f"{c['km']}|{c['meses']}"]=round(c['precio'])
+    con=mats.get('particular'); sin=mats.get('empresa') or mats.get('autonomo')
+    data_js=json.dumps({"con":con,"sin":sin,"desde":q,"name":name},ensure_ascii=False)
+
+    # badges
+    badges=[b for b in [fuel, (f"Etiqueta {dgt}" if dgt else ""), s.get("potencia") or ""] if b]+list(m.get("fuentes") or [])
+    badges_html="".join(f'<span class="badge">{e(b)}</span>' for b in badges[:5])
+
+    # spec cards
+    cons=(f"{s['consumo_l100']} L/100" if s.get('consumo_l100') else (f"{s['consumo_kwh100']} kWh/100" if s.get('consumo_kwh100') else esp.get("Consumo")))
+    trans=esp.get("TRANSMISIÓN") or esp.get("TRANSMISION") or esp.get("Cambio")
+    scards=[]
+    for ic,lab,val in [("bolt","Potencia",s.get("potencia")),("fuel","Combustible",fuel),("gear","Cambio",trans),
+                       ("seat","Plazas",(f"{s['plazas']} plazas" if s.get('plazas') else None)),("gauge","Consumo",cons),
+                       ("leaf","Etiqueta DGT",dgt),("car","Carrocería",s.get("category")),("road","Tracción",esp.get("Tracción") or esp.get("TRACCIÓN"))]:
+        if val: scards.append((ic,lab,val))
+    specs_html="".join(
+        f'<div class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS.get(ic,ICONS["dot"])}</svg>'
+        f'<div><div class="sv">{e(str(val))}</div><div class="sk">{e(lab)}</div></div></div>' for ic,lab,val in scards)
+
+    incluye=["Seguro a todo riesgo","Mantenimiento y averías","Neumáticos","Impuestos e ITV","Asistencia 24 h","Gestión de multas"]
+    inc_html="".join(f"<li>{x}</li>" for x in incluye)
+
+    # equipamiento / coberturas / FAQ (del detalle scrapeado)
+    def _lista(items,titulo):
+        items=[x for x in (items or []) if x]
+        return (f"<h3>{titulo}</h3><ul class='eq'>"+"".join(f"<li>{e(x)}</li>" for x in items)+"</ul>") if items else ""
+    equip=_lista(det.get("equip_exterior"),"Exterior")+_lista(det.get("equip_interior"),"Interior")
+    equip_html=f'<h2>Equipamiento</h2>{equip}' if equip else ""
+    cob_html=f'<h2>Coberturas</h2><p class="notas">{e(det["coberturas"])}</p>' if det.get("coberturas") else ""
+    faqs=[x for x in (det.get("faq") or []) if x.get("q") and x.get("a")]
+    faq_html=""
+    ld_graph=[
       {"@type":"Product","name":f"Renting {name}","description":geo,"brand":{"@type":"Brand","name":m['make']},
        "image":DOMAIN+img if img.startswith('/') else img,
        "offers":{"@type":"AggregateOffer","lowPrice":str(q),"priceCurrency":"EUR","offerCount":str(len(m['ofertas'])),
         "availability":"https://schema.org/InStock","url":url}},
-      {"@type":"Car","name":name,"fuelType":s.get("combustible") or "","seatingCapacity":str(s.get("plazas") or 5),
-       **({"vehicleEngine":{"@type":"EngineSpecification","enginePower":{"@type":"QuantitativeValue","value":re.sub(r'\\D','',s['potencia']),"unitText":"CV"}}} if s.get("potencia") else {})}]}
-    ficha="".join(f"<tr><th>{a}</th><td>{b}</td></tr>" for a,b in [
-      ("Potencia",s.get("potencia") or "—"),("Combustible",s.get("combustible") or "—"),
-      ("Consumo",(f"{s['consumo_l100']} L/100" if s.get('consumo_l100') else (f"{s['consumo_kwh100']} kWh/100" if s.get('consumo_kwh100') else "—"))),
-      ("Plazas",s.get("plazas") or "—"),("Etiqueta DGT",dgt or "—"),("Categoría",s.get("category") or "—")] )
-    precios="".join(f"<tr><td>{t.title()}</td><td class='p'>{int(min(o['precio_desde'] for o in m['ofertas'] if o.get('tipo')==t))}€</td></tr>"
-        for t in m['tipos'] if any(o.get('tipo')==t for o in m['ofertas']))
-    return f"""<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Renting {e(name)} desde {q}€/mes | MyRenting</title>
-<meta name="description" content="{e(geo)[:158]}">
-<link rel="canonical" href="{url}">
-<script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>
-<style>body{{font-family:Inter,system-ui,sans-serif;max-width:860px;margin:0 auto;padding:20px;color:#1c2233;line-height:1.6}}
-h1{{font-size:2rem}}.k{{background:#fff4ee;border:1px solid #f5c6b0;border-radius:12px;padding:12px 16px;margin:14px 0}}
-table{{width:100%;border-collapse:collapse;border:1px solid #eee;border-radius:12px;overflow:hidden}}
-th,td{{padding:10px 14px;text-align:left;border-bottom:1px solid #eee}}th{{background:#faf7f5;width:45%}}td.p{{font-weight:800;color:#F04E00}}
-img{{max-width:100%;border-radius:14px;background:#fff;border:1px solid #eee}}</style></head><body>
+      {"@type":"Car","name":name,"fuelType":fuel,"seatingCapacity":str(s.get("plazas") or 5),
+       **({"vehicleEngine":{"@type":"EngineSpecification","enginePower":{"@type":"QuantitativeValue","value":re.sub(r'\D','',s['potencia']),"unitText":"CV"}}} if s.get("potencia") else {})}]
+    if faqs:
+        faq_html='<h2>Preguntas frecuentes</h2>'+"".join(
+            f'<details class="faq"{" open" if i==0 else ""}><summary>{e(x["q"])}<span class="chev">+</span></summary><p>{e(x["a"])}</p></details>' for i,x in enumerate(faqs))
+        ld_graph.append({"@type":"FAQPage","mainEntity":[
+            {"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in faqs]})
+    ld={"@context":"https://schema.org","@graph":ld_graph}
+
+    # alternativas por precio (enlazado interno)
+    alts=[x for x in sorted(MODS.values(),key=lambda z:abs(z['precio_desde']-m['precio_desde'])) if x['slug']!=sl][:4]
+    alts_html="".join(f'<a class="alt" href="/renting-{a["slug"]}.html"><span>{e(a["make"])} {e(a["model"])}</span><b>{round(a["precio_desde"])}€</b></a>' for a in alts)
+
+    body=f'''<nav><div class="wrap"><a class="logo" href="/">my<span>renting</span></a><span style="font-size:12.5px;color:var(--ink2);font-weight:700">☎ 691 766 768</span></div></nav>
+<div class="wrap">
+<div class="crumb"><a href="/">Inicio</a> › {(f'<a href="/renting-{slugcat(s["category"])}.html">{e(s["category"])}</a>' if s.get("category") else "Coches")} › {e(name)}</div>
 <h1>Renting {e(name)}</h1>
-<p class="k"><b>{e(geo)}</b></p>
-<img src="{img}" alt="Renting {e(name)}" loading="lazy">
-<h2>Ficha técnica</h2><table>{ficha}</table>
-<h2>Precio por tipo de cliente</h2><table><tr><th>Cliente</th><th>Cuota/mes</th></tr>{precios}</table>
-<p><small>Fuentes: {e(', '.join(m['fuentes']))}.</small></p>
-</body></html>"""
+<div class="hero"><div class="row">
+ <div><div style="font-size:22px;font-weight:850;letter-spacing:-.02em">{e(name)}</div>
+ <div class="ver">{e(geo)}</div><div class="badges">{badges_html}</div></div>
+ <div class="price-tag"><div class="d">Cuota desde · sin entrada</div><div><span class="v" id="heroPrice">{q}</span><span class="u"> €/mes</span></div><div class="iva" id="heroIva">IVA incluido</div></div>
+</div></div>
+<div class="photo"><img src="{img}" alt="Renting {e(name)}" loading="lazy" onerror="this.style.display='none'"></div>
+<h2>Ficha técnica</h2><div class="specs">{specs_html}</div>
+<h2>Configura tu cuota</h2>
+<div class="cfg"><div id="cfgWrap">
+ <div class="lbl">Kilómetros al año</div><div class="chips" id="kmChips"></div>
+ <div class="lbl">Plazo del contrato</div><div class="chips" id="msChips"></div>
+ <div class="lbl">Precio</div><div class="iva-toggle" id="ivaToggle"></div></div>
+ <div class="result"><div><span class="big" id="cfgPrice">{q}</span><small> €/mes</small></div>
+ <div class="meta">Sin entrada · sin permanencia<br><b id="ivaNote">IVA incluido</b></div></div>
+ <ul class="inc">{inc_html}</ul>
+</div>
+<h2>Pide tu oferta</h2>
+<form onsubmit="return false">
+ <div class="cfg-summary" id="formSummary">—</div>
+ <div class="grid2"><div class="field"><label>Nombre</label><input placeholder="Tu nombre"></div><div class="field"><label>Apellidos</label><input placeholder="Tus apellidos"></div></div>
+ <div class="grid2"><div class="field"><label>Ciudad</label><input placeholder="Madrid, Barcelona…"></div><div class="field"><label>Teléfono</label><input placeholder="6XX XXX XXX"></div></div>
+ <div class="field"><label>Email</label><input placeholder="tucorreo@email.com"></div>
+ <div class="field"><label>Tipo de cliente</label><div class="seg" id="tipoSeg"><button data-t="particular" data-on>Particular</button><button data-t="autonomo">Autónomo</button><button data-t="empresa">Empresa</button></div></div>
+ <div class="actions"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a><a class="btn em" id="emBtn" href="#">Enviar por email</a></div>
+</form>
+<h2>Qué incluye tu cuota</h2><ul class="inc" style="background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px">{inc_html}</ul>
+{equip_html}
+{cob_html}
+{faq_html}
+<h2>Alternativas por precio</h2><div class="alts">{alts_html}</div>
+<p class="src">Fuentes: {e(', '.join(m['fuentes']))}. Precios reales actualizados; la cuota puede variar según km y plazo.</p>
+</div>
+<footer><div class="wrap">myrenting · Renting {e(name)} · precios reales, sin entrada, todo incluido.</div></footer>
+<script>{FICHA_JS.replace("__DATA__", data_js)}</script>'''
+
+    return (f'<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1">'
+            f'<title>Renting {e(name)} desde {q}€/mes | myrenting</title>'
+            f'<meta name="description" content="{e(geo)[:158]}">'
+            f'<link rel="canonical" href="{url}">'
+            f'<meta property="og:title" content="Renting {e(name)} desde {q}€/mes"><meta property="og:description" content="{e(geo)[:158]}">'
+            f'<meta property="og:image" content="{DOMAIN}{img}"><meta property="og:type" content="product">'
+            f'<script type="application/ld+json">{json.dumps(ld,ensure_ascii=False)}</script>'
+            f'<style>{FICHA_CSS}</style></head><body>{body}</body></html>')
 
 def build_landings():
     for k,m in MODS.items():

@@ -1,24 +1,2537 @@
 [
- {
-  "fuente": "Kia Renting",
-  "tipo": "particular",
-  "make": "KIA",
-  "model": "NIRO",
-  "version": "KIA NIRO HEV CONCEPT",
-  "fuel": "Híbrido",
-  "precio_desde": 0,
-  "duracion": 60,
-  "km": 10000,
-  "url": "",
-  "image": "",
-  "category": "SUV",
-  "combinaciones": [
-   {
+  {
+    "fuente": "Kia Renting",
+    "tipo": "particular",
+    "make": "KIA",
+    "model": "NIRO",
+    "version": "KIA NIRO HEV CONCEPT",
+    "fuel": "Híbrido",
+    "precio_desde": 340,
+    "duracion": 60,
+    "km": 5000,
+    "url": "",
+    "image": "/img/modelos/kia-niro.png",
+    "category": "SUV",
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 36,
+        "precio": 355
+      },
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 349
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 340
+      },
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 384
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 381
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 373
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 409
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 405
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 402
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 434
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 440
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 437
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES BENZ",
+    "model": "GLE 300d COUPE",
+    "version": "GLE 300d 4MATIC Coupé",
+    "fuel": "Diésel",
+    "precio_desde": 1163,
+    "duracion": 60,
     "km": 10000,
-    "meses": 60,
-    "precio": 0
-   }
-  ],
-  "_nota": "PLANTILLA. Rellena aquí las ofertas de Kia u otras correcciones a mano. Estas GANAN sobre lo scrapeado."
- }
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1382
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1249
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1163
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1444
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1303
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1204
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1487
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1347
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1347
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1528
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1416
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1416
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1601
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1464
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1464
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "DIG-T 103kW (140CV) mHEV 4x2 Acenta",
+    "fuel": "Gasolina",
+    "precio_desde": 278,
+    "duracion": 60,
+    "km": 5000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 287
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 278
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 303
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 350
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 340
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 373
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 369
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 401
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 397
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 426
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 425
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "NISSAN",
+    "model": "QASHQAI",
+    "version": "DIG-T 103kW (140CV) mHEV 4x2 Acenta",
+    "fuel": "Gasolina",
+    "precio_desde": 333,
+    "duracion": 60,
+    "km": 5000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 5000,
+        "meses": 48,
+        "precio": 342
+      },
+      {
+        "km": 5000,
+        "meses": 60,
+        "precio": 333
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 376
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 367
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 424
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 411
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 451
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 446
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 485
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 480
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 515
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 514
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "OPEL",
+    "model": "CORSA",
+    "version": "1.2T XHL 74kW (100CV) GS",
+    "fuel": "Gasolina",
+    "precio_desde": 245,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 257
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 245
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 271
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 261
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 289
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 285
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 307
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 330
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 329
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "OPEL",
+    "model": "CORSA",
+    "version": "1.2T XHL 74kW (100CV) GS",
+    "fuel": "Gasolina",
+    "precio_desde": 296,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 296
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 328
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 316
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 350
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 345
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 376
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 371
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 399
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 398
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "PEUGEOT",
+    "model": "208",
+    "version": "Allure Gasolina 100 S&S 6 Vel. MAN",
+    "fuel": "Gasolina",
+    "precio_desde": 243,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 252
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 243
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 267
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 259
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 285
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 282
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 307
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 304
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 325
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 326
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "PEUGEOT",
+    "model": "208",
+    "version": "Allure Gasolina 100 S&S 6 Vel. MAN",
+    "fuel": "Gasolina",
+    "precio_desde": 294,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 305
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 294
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 323
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 313
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 345
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 341
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 371
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 368
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 393
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 394
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "JUKE",
+    "version": "1.6 Hybrid 105kW (145CV) N-Connecta",
+    "fuel": "Híbrido",
+    "precio_desde": 319,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 321
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 321
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 319
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 338
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 337
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 334
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 356
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 353
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 348
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 381
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 377
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 373
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 406
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 403
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 397
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "NISSAN",
+    "model": "JUKE",
+    "version": "1.6 Hybrid 105kW (145CV) N-Connecta",
+    "fuel": "Híbrido",
+    "precio_desde": 386,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 388
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 388
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 386
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 409
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 408
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 404
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 431
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 427
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 421
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 461
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 456
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 451
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 491
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 488
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 480
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MASERATI",
+    "model": "GRECALE",
+    "version": "L4 MHEV 300CV AWD",
+    "fuel": "Híbrido",
+    "precio_desde": 1191,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1405
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1290
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1191
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1447
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1335
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1229
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1499
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1383
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1275
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1550
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1434
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1326
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1606
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1496
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1380
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MASERATI",
+    "model": "GRECALE",
+    "version": "L4 MHEV 300CV AWD",
+    "fuel": "Híbrido",
+    "precio_desde": 1441,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1700
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1561
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1441
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1751
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1615
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1487
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1814
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1673
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1543
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1876
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1735
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1604
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1943
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1810
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1670
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES BENZ",
+    "model": "GLC 220d",
+    "version": "GLC 220 d 4MATIC (2022)",
+    "fuel": "Diésel",
+    "precio_desde": 831,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 892
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 831
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 929
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 872
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 976
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 926
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1028
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 983
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1082
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1039
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES BENZ",
+    "model": "GLC 300de COUPE",
+    "version": "GLC 300 de 4MATIC Coupé (2023)",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 892,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 963
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 892
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1000
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 934
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1048
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 988
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1100
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1046
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1156
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1104
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES BENZ",
+    "model": "GLC 200 COUPE",
+    "version": "GLC 200 4MATIC Coupé (2023)",
+    "fuel": "Gasolina",
+    "precio_desde": 866,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 930
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 866
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 970
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 910
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1019
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 966
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1073
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1025
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1129
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1085
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MG",
+    "model": "MG3",
+    "version": "Hybrid+ Business Advanced Tech",
+    "fuel": "Híbrido",
+    "precio_desde": 269,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 271
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 269
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 292
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 290
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 316
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 323
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MG",
+    "model": "MG3",
+    "version": "Hybrid+ Business Advanced Tech",
+    "fuel": "Híbrido",
+    "precio_desde": 325,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 328
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 325
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 353
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 351
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 382
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 391
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "NISSAN",
+    "model": "INTERSTAR",
+    "version": "Furgón N1 L2H2 (3,5t) dCi 96kW (130CV) 6M/T FWD Acenta",
+    "fuel": "Diésel",
+    "precio_desde": 459,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Furgoneta",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 474
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 459
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 506
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 489
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 538
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 531
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 576
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 569
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 610
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 608
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "NISSAN",
+    "model": "INTERSTAR",
+    "version": "Furgón N1 L2H2 (3,5t) dCi 96kW (130CV) 6M/T FWD Acenta",
+    "fuel": "Diésel",
+    "precio_desde": 555,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Furgoneta",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 574
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 555
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 612
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 592
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 651
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 643
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 697
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 688
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 738
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 736
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "SKODA",
+    "model": "FABIA",
+    "version": "1.5 TSI 110KW (150CV) DSG Plus",
+    "fuel": "Gasolina",
+    "precio_desde": 286,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 294
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 286
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 311
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 305
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 332
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 332
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 358
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 358
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 381
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 384
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "SKODA",
+    "model": "FABIA",
+    "version": "1.5 TSI 110KW (150CV) DSG Plus",
+    "fuel": "Gasolina",
+    "precio_desde": 346,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 356
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 346
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 376
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 369
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 402
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 402
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 433
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 433
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 461
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 465
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES BENZ",
+    "model": "CITAN",
+    "version": "110 CDI 70kW Furgón Base Cargo",
+    "fuel": "Diésel",
+    "precio_desde": 372,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Furgoneta",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 406
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 385
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 372
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 432
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 409
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 394
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 454
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 432
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 425
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 474
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 461
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 454
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 501
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 486
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 482
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MERCEDES BENZ",
+    "model": "CITAN",
+    "version": "110 CDI 70kW Furgón Base Cargo",
+    "fuel": "Diésel",
+    "precio_desde": 450,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Furgoneta",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 491
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 466
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 450
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 523
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 495
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 477
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 549
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 523
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 514
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 574
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 558
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 549
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 606
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 588
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 583
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "AUDI",
+    "model": "A1",
+    "version": "Sportback Adrenalin 30 TFSI 85kW S tronic",
+    "fuel": "Gasolina",
+    "precio_desde": 315,
+    "duracion": 36,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 315
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 320
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 318
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 333
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 336
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 333
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 351
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 352
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 348
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 374
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 374
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 372
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 397
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 397
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 395
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "AUDI",
+    "model": "A1",
+    "version": "Sportback Adrenalin 30 TFSI 85kW S tronic",
+    "fuel": "Gasolina",
+    "precio_desde": 381,
+    "duracion": 36,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "Urbano",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 381
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 387
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 385
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 403
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 407
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 403
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 425
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 426
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 421
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 453
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 453
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 450
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 480
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 480
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 478
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MG",
+    "model": "ZS",
+    "version": "Hybrid+ Business",
+    "fuel": "Híbrido",
+    "precio_desde": 305,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 308
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 305
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 332
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 329
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 359
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 368
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MG",
+    "model": "ZS",
+    "version": "Hybrid+ Business",
+    "fuel": "Híbrido",
+    "precio_desde": 369,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 373
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 369
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 402
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 398
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 434
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 445
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "EBRO",
+    "model": "S800",
+    "version": "1.5 TGDI PHEV Luxury E-CVT",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 504,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 546
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 522
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 504
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 573
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 549
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 532
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 610
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 584
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 568
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 644
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 617
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 605
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 680
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 654
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 647
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "EBRO",
+    "model": "S800",
+    "version": "1.5 TGDI PHEV Luxury E-CVT",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 610,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 661
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 632
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 610
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 693
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 664
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 644
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 738
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 707
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 687
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 779
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 747
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 732
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 823
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 791
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 783
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "HONDA",
+    "model": "CR-V",
+    "version": "2.0 i-MMD PHEV 4X2 Elegance Tech",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 446,
+    "duracion": 36,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 446
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 461
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 464
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 474
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 486
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 486
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 501
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 511
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 508
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 529
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 535
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 530
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 557
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 560
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 552
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "HONDA",
+    "model": "CR-V",
+    "version": "2.0 i-MMD PHEV 4X2 Elegance Tech",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 540,
+    "duracion": 36,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 540
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 558
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 561
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 574
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 588
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 588
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 606
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 618
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 615
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 640
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 647
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 641
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 674
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 678
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 668
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "empresa",
+    "make": "MERCEDES BENZ",
+    "model": "GLE 350de COUPE",
+    "version": "GLE 350de 4MATIC Coupé",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 1250,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": false,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1486
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1342
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1250
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1555
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1402
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1293
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1602
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1448
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1372
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1646
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1528
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1451
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 1732
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1579
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1515
+      }
+    ]
+  },
+  {
+    "fuente": "Quadis",
+    "tipo": "particular",
+    "make": "MERCEDES BENZ",
+    "model": "GLE 350de COUPE",
+    "version": "GLE 350de 4MATIC Coupé",
+    "fuel": "Híbrido enchufable",
+    "precio_desde": 1513,
+    "duracion": 60,
+    "km": 10000,
+    "url": "",
+    "image": "",
+    "category": "SUV",
+    "iva_incluido": true,
+    "combinaciones": [
+      {
+        "km": 10000,
+        "meses": 36,
+        "precio": 1798
+      },
+      {
+        "km": 10000,
+        "meses": 48,
+        "precio": 1624
+      },
+      {
+        "km": 10000,
+        "meses": 60,
+        "precio": 1513
+      },
+      {
+        "km": 15000,
+        "meses": 36,
+        "precio": 1882
+      },
+      {
+        "km": 15000,
+        "meses": 48,
+        "precio": 1696
+      },
+      {
+        "km": 15000,
+        "meses": 60,
+        "precio": 1565
+      },
+      {
+        "km": 20000,
+        "meses": 36,
+        "precio": 1938
+      },
+      {
+        "km": 20000,
+        "meses": 48,
+        "precio": 1752
+      },
+      {
+        "km": 20000,
+        "meses": 60,
+        "precio": 1660
+      },
+      {
+        "km": 25000,
+        "meses": 36,
+        "precio": 1992
+      },
+      {
+        "km": 25000,
+        "meses": 48,
+        "precio": 1849
+      },
+      {
+        "km": 25000,
+        "meses": 60,
+        "precio": 1756
+      },
+      {
+        "km": 30000,
+        "meses": 36,
+        "precio": 2096
+      },
+      {
+        "km": 30000,
+        "meses": 48,
+        "precio": 1911
+      },
+      {
+        "km": 30000,
+        "meses": 60,
+        "precio": 1833
+      }
+    ]
+  }
 ]

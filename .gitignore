@@ -21,9 +21,11 @@ img/.DS_Store
 !actualizar_ofertas_seguro.py
 !actualizar_fichas.py
 !actualizar_hubs.py
+!generar_excel.py
 !scripts/generadores/regenerar_paginas.py
 !scripts/mantenimiento/expirar_ofertas.py
 !scripts/mantenimiento/salud_sitio.py
+!scripts/3_generate/generar_indices.py
 index_redesign.html
 scraper-concesionarios/
 *.json
@@ -43,3 +45,19 @@ data/build/
 _site/
 *.bak
 !data/master/
+!data/master/quadis-detalle.json
+!ofertas_combinadas.json
+
+# datos locales del usuario — NUNCA publicar (repo público / GitHub Pages)
+Clientes/
+Ofertas M-auto/
+img/marcas/Nuevos Vehiculos/
+img/marcas/Nuevos Vehiculos.zip
+*.zip
+*.xlsx
+
+ficha-*.html
+listado*.html
+
+# proyecto Next.js (web/): reincluir json de config y datos
+!web/**/*.json

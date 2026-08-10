@@ -8,7 +8,7 @@ NO scrapea. Solo reorganiza lo que ya existe.
   (crea)                   -> data/master/ciudades-zbe.json      (dataset ZBE para GEO)
 """
 import json, os, re, unicodedata, collections
-REPO="/workspace/myrenting"
+import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 
 def norm(s):
     return re.sub(r'[^a-z0-9]+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode().lower()).strip()
