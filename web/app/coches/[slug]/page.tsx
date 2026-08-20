@@ -49,16 +49,6 @@ export default async function Ficha({ params }: { params: Promise<{ slug: string
               <div className="border border-line rounded-xl p-3.5"><h4 className="text-ink text-sm font-bold">Quizá no si…</h4><p className="text-[13px] text-muted mt-1">Necesitas un perfil muy distinto de uso; compara con las alternativas de abajo.</p></div>
             </div>
           </div>
-          {v.ofertas.length > 0 && <div className="bg-white border border-line rounded-xl2 p-5 mt-4">
-            <h2 className="text-[19px] font-extrabold text-ink">Ofertas directas de Marcos Renting</h2>
-            <p className="text-[13px] text-muted mt-1 mb-3">Disponibilidad y condiciones finales en la web del proveedor.</p>
-            <div className="space-y-3">
-              {v.ofertas.map((offer, index) => <div key={`${offer.url}-${index}`} className="border border-line rounded-xl p-3.5 md:flex md:items-center md:justify-between gap-4">
-                <div><b className="text-ink text-sm">{offer.version}</b><div className="text-xs text-muted mt-1">{offer.fuel}{offer.km ? ` · ${offer.km.toLocaleString("es-ES")} km/año` : ""}{offer.duracion ? ` · ${offer.duracion} meses` : ""}</div></div>
-                <div className="flex items-center justify-between md:justify-end gap-3 mt-3 md:mt-0"><b className="mono text-xl text-ink">{offer.precio} €/mes</b><a href={offer.url} target="_blank" rel="sponsored noopener" className="bg-orange text-white font-bold text-sm rounded-[10px] px-4 py-2.5">Ver oferta</a></div>
-              </div>)}
-            </div>
-          </div>}
           <div className="bg-white border border-line rounded-xl2 p-5 mt-4">
             <h2 className="text-[19px] font-extrabold text-ink mb-2">Preguntas frecuentes</h2>
             {faqs.map(([q,a],i)=>(<details key={i} open={i===0} className="border-b border-line last:border-0 py-3"><summary className="font-bold text-ink cursor-pointer list-none">{q}</summary><p className="text-[14px] text-muted mt-2">{a}</p></details>))}
