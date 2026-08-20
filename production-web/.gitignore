@@ -6,6 +6,12 @@
 /.open-next/
 /tmp/
 /work/
+
+# El repositorio raíz ignora JSON y Python de forma global. Este proyecto los
+# necesita para poder reconstruir exactamente el inventario publicado.
+!/*.json
+!/src/data/*.json
+!/scripts/**/*.py
 /out/
 
 # production

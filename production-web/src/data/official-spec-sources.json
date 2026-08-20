@@ -1,0 +1,936 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "mercedes-gla-200d-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/gla/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "GLA", "versionRegex": "GLA 200 d(?!.*4MATIC)", "powerCv": 150, "fuel": "Diésel" },
+      "requiredEvidence": ["GLA 200 d", "5,3 l/100km", "427 l", "4.412 mm"],
+      "facts": {
+        "trunk": 427,
+        "consumption": 5.3,
+        "dimensions": { "lengthMm": 4412, "widthMm": 1834, "heightMm": 1616 },
+        "seats": 5,
+        "doors": 5,
+        "emissionsCo2GKm": 140
+      }
+    },
+    {
+      "id": "kia-niro-hev-138-es-2026",
+      "url": "https://www.kia.com/es/todo-sobre-kia/territorio-kia/guias-y-ayuda/analisis-oficial-kia-niro/",
+      "publisher": "Kia Iberia",
+      "officialDomains": ["kia.com"],
+      "match": { "brand": "Kia", "model": "Niro", "versionRegex": "101,5kW.*138CV.*MY27", "powerCv": 138, "fuel": "Híbrido" },
+      "requiredEvidence": ["138 CV", "430 litros", "4,43 metros"],
+      "facts": {
+        "trunk": 430,
+        "dimensions": { "lengthMm": 4430 }
+      }
+    },
+    {
+      "id": "opel-corsa-12t-100-es-2026",
+      "url": "https://store.opel.es/selector/configurable/corsa-berlina/edition/1-2t-gasolina-100cv-cambio-manual-6-velocidades-gasolina/voltaik-blue/tela-melange-grey",
+      "publisher": "Opel España",
+      "officialDomains": ["opel.es"],
+      "match": { "brand": "Opel", "model": "Corsa", "versionRegex": "1\\.2T XHL 74kW \\(100CV\\) GS", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.2T Gasolina 100cv Manual", "116 g/km", "5.1 l/100km"],
+      "facts": {
+        "consumption": 5.1,
+        "emissionsCo2GKm": 116
+      }
+    },
+    {
+      "id": "honda-crv-phev-elegance-tech-es-2026",
+      "url": "https://www.honda.es/cars/new/cr-v-plug-in-hybrid-suv/specifications.html",
+      "publisher": "Honda España",
+      "officialDomains": ["honda.es"],
+      "match": { "brand": "Honda", "model": "CR-V", "versionRegex": "2\\.0 i-MMD PHEV 4x2 Elegance Tech", "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["Elegance Tech Plug-In Hybrid 4x2", "Hasta 78 km", "Longitud: 4706 mm", "Ancho: 1866 mm", "Altura: 1673 mm", "5 cómodas plazas", "Capacidad de batería (kWh): 17.7", "Capacidad de maletero: 617 litros", "5 puertas", "CO2 ponderado 58 g/km", "consumo ponderado 2,6 l/100 km"],
+      "facts": {
+        "trunk": 617,
+        "dimensions": { "lengthMm": 4706, "widthMm": 1866, "heightMm": 1673 },
+        "seats": 5,
+        "doors": 5,
+        "consumption": 2.6,
+        "emissionsCo2GKm": 58,
+        "electricRangeKm": 78,
+        "batteryCapacityKWh": 17.7
+      }
+    },
+    {
+      "id": "mercedes-glc-200-4matic-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glc/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "GLC", "versionRegex": "^GLC 200 4MATIC$", "powerCv": 204, "fuel": "Gasolina" },
+      "requiredEvidence": ["GLC 200 4MATIC", "7 l/100km", "158 g/km", "4.716 mm", "620 l"],
+      "facts": { "trunk": 620, "consumption": 7, "dimensions": { "lengthMm": 4716, "widthMm": 1890, "heightMm": 1640 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 158 }
+    },
+    {
+      "id": "mercedes-glc-220d-4matic-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glc/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "GLC", "versionRegex": "^GLC 220 d 4MATIC$", "powerCv": 197, "fuel": "Diésel" },
+      "requiredEvidence": ["GLC 220 d 4MATIC", "5,1 l/100km", "134 g/km", "4.716 mm", "620 l"],
+      "facts": { "trunk": 620, "consumption": 5.1, "dimensions": { "lengthMm": 4716, "widthMm": 1890, "heightMm": 1640 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 134 }
+    },
+    {
+      "id": "mercedes-glc-coupe-300de-4matic-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glc-coupe/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "GLC Coupé", "versionRegex": "^GLC 300 de 4MATIC$", "powerCv": 333, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["GLC 300 de 4MATIC", "1,6 l/100km", "123 km", "41 g/km", "25,28 kWh", "390 l"],
+      "facts": { "trunk": 390, "consumption": 1.6, "dimensions": { "lengthMm": 4764, "widthMm": 1890, "heightMm": 1614 }, "seats": 5, "doors": 5, "electricRangeKm": 123, "emissionsCo2GKm": 41, "batteryCapacityKWh": 25.28 }
+    },
+    {
+      "id": "toyota-yaris-hybrid-120-my26-es",
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/yaris/Catalogo-Toyota-Yaris-MY26.pdf",
+      "publisher": "Toyota España",
+      "officialDomains": ["toyota.es"],
+      "match": { "brand": "Toyota", "model": "Yaris", "versionRegex": "ACTIVE 120H 116CV", "powerCv": 116, "fuel": "Híbrido" },
+      "requiredEvidence": ["HYBRID 120", "116", "3.940", "286", "3,9 - 4,3", "88 - 97"],
+      "facts": { "trunk": 286, "consumptionRange": { "min": 3.9, "max": 4.3 }, "dimensions": { "lengthMm": 3940, "widthMm": 1745, "heightMm": 1500 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 88, "max": 97 } }
+    },
+    {
+      "id": "bmw-ix1-edrive20-es-2026",
+      "url": "https://www.bmw.es/content/bmw/marketES/bmw_es/es/coches-bmw/bmw-i/ix1/datos-tecnicos-bmw-ix1.html",
+      "publisher": "BMW España",
+      "officialDomains": ["bmw.es"],
+      "match": { "brand": "BMW", "model": "iX1", "versionRegex": "^eDrive20$", "powerCv": 204, "fuel": "Eléctrico" },
+      "requiredEvidence": ["iX1 eDrive20", "14,3–16,1", "514–457", "65,2", "4.500", "490–1.495"],
+      "facts": { "trunk": 490, "consumptionRange": { "min": 14.3, "max": 16.1 }, "dimensions": { "lengthMm": 4500, "widthMm": 1845, "heightMm": 1616 }, "electricRangeKm": 514, "emissionsCo2GKm": 0, "batteryCapacityKWh": 65.2 }
+    },
+    {
+      "id": "bmw-serie1-120-es-2026",
+      "url": "https://www.bmw.es/es/coches-bmw/serie-1/bmw-serie-1/caracteristicas.html",
+      "publisher": "BMW España",
+      "officialDomains": ["bmw.es"],
+      "match": { "brand": "BMW", "model": "Serie 1", "versionRegex": "^120$", "powerCv": 170, "fuel": "Gasolina" },
+      "requiredEvidence": ["BMW 120", "170 CV", "5,3–5,5", "121–124", "380 litros"],
+      "facts": { "trunk": 380, "consumptionRange": { "min": 5.3, "max": 5.5 }, "emissionsCo2Range": { "min": 121, "max": 124 } }
+    },
+    {
+      "id": "kia-pv5-passenger-lr-plus-es-2026",
+      "url": "https://www.kia.com/content/dam/kwcms/kme/es/es/assets/contents/catalogos/pbv/Catalogo_PV5Passenger_MY26.pdf",
+      "publisher": "Kia Iberia",
+      "officialDomains": ["kia.com"],
+      "match": { "brand": "KIA", "model": "PV5", "versionRegex": "Passenger L2H1 Long Range Plus", "powerCv": 163, "fuel": "Eléctrico" },
+      "requiredEvidence": ["L2H1 Passenger", "Long Range", "163", "19,3", "412", "71,2"],
+      "facts": { "trunk": 1330, "consumption": 19.3, "dimensions": { "lengthMm": 4695, "widthMm": 1895, "heightMm": 1923 }, "electricRangeKm": 412, "emissionsCo2GKm": 0, "batteryCapacityKWh": 71.2 }
+    },
+    {
+      "id": "kia-pv5-passenger-lr-plus-import-es-2026",
+      "url": "https://www.kia.com/content/dam/kwcms/kme/es/es/assets/contents/catalogos/pbv/Catalogo_PV5Passenger_MY26.pdf",
+      "publisher": "Kia Iberia",
+      "officialDomains": ["kia.com"],
+      "match": { "brand": "KIA", "model": "PV5 PASSENGER", "versionRegex": "L2H1 LR PLUS", "fuel": "Eléctrico" },
+      "requiredEvidence": ["L2H1 Passenger", "Long Range", "163", "19,3", "412", "71,2"],
+      "facts": { "trunk": 1330, "consumption": 19.3, "dimensions": { "lengthMm": 4695, "widthMm": 1895, "heightMm": 1923 }, "electricRangeKm": 412, "emissionsCo2GKm": 0, "batteryCapacityKWh": 71.2 }
+    },
+    {
+      "id": "renault-austral-etech-200-es-2026",
+      "url": "https://www.renault.es/hibridos/austral/motores.html",
+      "publisher": "Renault España",
+      "officialDomains": ["renault.es"],
+      "match": { "brand": "RENAULT", "model": "AUSTRAL", "versionRegex": "EVOLUTION E-TECH FULL HYBRID", "powerCv": 200, "fuel": "Híbrido" },
+      "requiredEvidence": ["full hybrid E-Tech 200 CV", "4,8 l/100 km", "106 g/km"],
+      "facts": { "consumption": 4.8, "emissionsCo2GKm": 106 }
+    },
+    {
+      "id": "renault-symbioz-etech-160-es-2026",
+      "url": "https://catalogo.renault.es/es/mobile/symbioz/mobile/ct_ebro_renault_symbioz_es_april_2026.pdf",
+      "publisher": "Renault España",
+      "officialDomains": ["renault.es"],
+      "match": { "brand": "RENAULT", "model": "SYMBIOZ", "versionRegex": "EVOLUTION E-TECH FULL HYBRID", "powerCv": 160, "fuel": "Híbrido" },
+      "requiredEvidence": ["full hybrid E-Tech 160", "1,4", "98", "4,3", "4413", "1575", "492"],
+      "facts": { "trunk": 492, "consumption": 4.3, "dimensions": { "lengthMm": 4413, "widthMm": 2037, "heightMm": 1575 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 98, "batteryCapacityKWh": 1.4 }
+    },
+    {
+      "id": "seat-ibiza-style-115-es-2026",
+      "url": "https://www.seat.es/coches/ibiza/style",
+      "publisher": "SEAT España",
+      "officialDomains": ["seat.es"],
+      "match": { "brand": "SEAT", "model": "IBIZA", "versionRegex": "1\\.0 TSI 85KW 115CV.*STYLE", "powerCv": 115, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.0 TSI 85kW (115CV)", "355", "4070 mm", "1780 mm", "1447 mm", "Asientos", "5"],
+      "facts": { "trunk": 355, "dimensions": { "lengthMm": 4070, "widthMm": 1780, "heightMm": 1447 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "seat-ibiza-tsi115-manual-wltp-es-2026",
+      "url": "https://www.seat-mediacenter.es/content/dam/seat-media-center/models-all-brands/seat-models/seat-ibiza/technical-data/Ficha%20t%C3%A9cnicaSEAT%20Ibiza%20%282024%29.pdf",
+      "publisher": "SEAT España",
+      "officialDomains": ["seat-mediacenter.es"],
+      "match": { "brand": "SEAT", "model": "IBIZA", "versionRegex": "1\\.0 TSI 85KW 115CV.*STYLE", "powerCv": 115, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.0 TSI 115 CV manual", "117 - 131", "5 - 5,8", "Manual 6v"],
+      "facts": { "consumptionRange": { "min": 5.0, "max": 5.8 }, "emissionsCo2Range": { "min": 117, "max": 131 } }
+    },
+    {
+      "id": "volkswagen-tiguan-etsi-150-es-2026",
+      "url": "https://www.volkswagen.es/comunicacion/nuevo-tiguan-una-clase-superior/",
+      "publisher": "Volkswagen España",
+      "officialDomains": ["volkswagen.es"],
+      "match": { "brand": "VOLKSWAGEN", "model": "TIGUAN", "versionRegex": "1\\.5 eTSI 110KW 150CV DSG", "fuel": "Gasolina" },
+      "requiredEvidence": ["eTSI 110 kW (150 CV) DSG", "6,5 y 6,9 l/100 km", "144", "652 litros", "4.539 mm", "1.842 mm", "1.639 mm"],
+      "facts": { "trunk": 652, "consumptionRange": { "min": 6.5, "max": 6.9 }, "dimensions": { "lengthMm": 4539, "widthMm": 1842, "heightMm": 1639 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 144 }
+    },
+    {
+      "id": "jaecoo-7-shs-phev-es-2026",
+      "url": "https://jaecoo.es/wp-content/uploads/2025/05/J7_SHS_catalogo.pdf",
+      "publisher": "JAECOO España",
+      "officialDomains": ["jaecoo.es"],
+      "match": { "brand": "JAECOO", "model": "7", "versionRegex": "PHEV BUSINESS", "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["JAECOO 7 SHS", "4500*1865*1670", "340/1265", "18.3", "90", "0.7", "23"],
+      "facts": { "trunk": 340, "consumption": 0.7, "dimensions": { "lengthMm": 4500, "widthMm": 1865, "heightMm": 1670 }, "seats": 5, "doors": 5, "electricRangeKm": 90, "emissionsCo2GKm": 23, "batteryCapacityKWh": 18.3 }
+    },
+    {
+      "id": "mg-zs-hybrid-plus-business-es-2026",
+      "url": "https://cdn.mgmotor.eu/files/MG-ZS-ICEHybrid-ES-16052025.pdf",
+      "publisher": "MG Motor España",
+      "officialDomains": ["mgmotor.eu"],
+      "match": { "brand": "MG", "model": "ZS", "versionRegex": "Hybrid\\+ Business", "powerCv": 197, "fuel": "Híbrido" },
+      "requiredEvidence": ["1.5 Hybrid+", "145/197", "443", "4430", "1818", "1635", "1,83", "5,1", "115"],
+      "facts": { "trunk": 443, "consumptionRange": { "min": 5, "max": 5.1 }, "dimensions": { "lengthMm": 4430, "widthMm": 1818, "heightMm": 1635 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 113, "max": 115 }, "batteryCapacityKWh": 1.83 }
+    },
+    {
+      "id": "ebro-s800-phev-279-es-2026",
+      "url": "https://www.ebroauto.com/modelos/s800-phev/especificaciones",
+      "publisher": "EBRO España",
+      "officialDomains": ["ebroauto.com"],
+      "match": { "brand": "Ebro", "model": "S800", "versionRegex": "1\\.5 TGDI PHEV Luxury E-CVT", "powerCv": 279, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["205 kW (279 CV)", "18,3 kWh", "56 g/km", "90 km", "6 l/100 km", "4.725 mm", "1.860 mm", "1.705 mm", "7 pasajeros"],
+      "facts": { "consumption": 6, "dimensions": { "lengthMm": 4725, "widthMm": 1860, "heightMm": 1705 }, "seats": 7, "doors": 5, "electricRangeKm": 90, "emissionsCo2GKm": 56, "batteryCapacityKWh": 18.3 }
+    },
+    {
+      "id": "byd-atto2-dmi-boost-es-2026",
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/atto-2-dmi/ATTO-2-DM-i-1125-BPS-ES-V2-web.pdf",
+      "publisher": "BYD España",
+      "officialDomains": ["byd.com"],
+      "match": { "brand": "BYD", "model": "Atto 2", "versionRegex": "DM-i Boost", "powerCv": 212, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["Boost", "156", "18,0", "90", "1.000", "15,8", "1,8"],
+      "facts": { "trunk": 425, "consumption": 1.8, "dimensions": { "lengthMm": 4330, "widthMm": 1830, "heightMm": 1675 }, "seats": 5, "doors": 5, "electricRangeKm": 90, "emissionsCo2GKm": 41, "batteryCapacityKWh": 18 }
+    },
+    {
+      "id": "mazda-cx60-phev-327-es-2026",
+      "url": "https://www.mazda.es/especificaciones-mazda/",
+      "publisher": "Mazda España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "CX-60", "versionRegex": "2\\.5L e-SKYACTIV PHEV AWD 241kW \\(327 CV\\)", "powerCv": 327, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["CX‑60 e-SKYACTIV PHEV 241 kW (327 CV) AWD", "63 km", "17,8 kWh", "1,5", "33"],
+      "facts": { "consumption": 1.5, "electricRangeKm": 63, "emissionsCo2GKm": 33, "batteryCapacityKWh": 17.8 }
+    },
+    {
+      "id": "nissan-qashqai-mhev-140-acenta-es-2026",
+      "url": "https://www.nissan.es/vehiculos/nuevos-vehiculos/qashqai-my225/precios-versiones.html",
+      "publisher": "Nissan España",
+      "officialDomains": ["nissan.es"],
+      "match": { "brand": "Nissan", "model": "Qashqai", "versionRegex": "DIG-T 103kW \\(140CV\\) mHEV 4x2 Acenta", "powerCv": 140, "fuel": "Híbrido" },
+      "requiredEvidence": ["Acenta", "Gasolina DIG-T 140CV (103kW) Mild Hybrid 12V Manual 6 velocidades 4x2", "6,3", "144"],
+      "facts": { "consumption": 6.3, "emissionsCo2GKm": 144 }
+    },
+    {
+      "id": "nissan-juke-hybrid-145-nconnecta-es-2026",
+      "url": "https://www.nissan.es/content/dam/Nissan/es/vehicles/newjuke/jukemy24/Catalogo_JUKE_2024.pdf",
+      "publisher": "Nissan España",
+      "officialDomains": ["nissan.es"],
+      "match": { "brand": "Nissan", "model": "Juke", "versionRegex": "1\\.6 Hybrid 105kW \\(145CV\\) N-Connecta", "fuel": "Híbrido" },
+      "requiredEvidence": ["HYBRID", "105", "143", "4,7-4,9", "107-111", "354", "4210", "1827", "1593", "5 PUERTAS / 5 PLAZAS"],
+      "facts": { "trunk": 354, "consumptionRange": { "min": 4.7, "max": 4.9 }, "dimensions": { "lengthMm": 4210, "widthMm": 1827, "heightMm": 1593 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 107, "max": 111 } }
+    },
+    {
+      "id": "alfa-junior-ibrida-ti-145-es-2026",
+      "url": "https://www.alfaromeo.es/modelos/junior-ibrida",
+      "publisher": "Alfa Romeo España",
+      "officialDomains": ["alfaromeo.es"],
+      "match": { "brand": "Alfa Romeo", "model": "Junior", "versionRegex": "Ibrida Ti 108kW \\(145CV\\)", "powerCv": 145, "fuel": "Gasolina" },
+      "requiredEvidence": ["JUNIOR IBRIDA 107KW (145CV)", "4,8 – 4,9", "109 – 110", "415 litros", "4.173 mm", "1.539 mm", "1.781 mm"],
+      "facts": { "trunk": 415, "consumptionRange": { "min": 4.8, "max": 4.9 }, "dimensions": { "lengthMm": 4173, "widthMm": 1781, "heightMm": 1539 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 109, "max": 110 } }
+    },
+    {
+      "id": "alfa-junior-ibrida-ti-import-es-2026",
+      "url": "https://www.alfaromeo.es/modelos/junior-ibrida",
+      "publisher": "Alfa Romeo España",
+      "officialDomains": ["alfaromeo.es"],
+      "match": { "brand": "ALFA ROMEO", "model": "JUNIOR", "versionRegex": "IBRIDA TI 1\\.2 VGT", "fuel": "Gasolina" },
+      "requiredEvidence": ["1.2 Hybrid 145 CV", "4,8 – 4,9", "109 – 110", "415 litros", "4.173 mm", "1.539 mm", "1.781 mm"],
+      "facts": { "trunk": 415, "consumptionRange": { "min": 4.8, "max": 4.9 }, "dimensions": { "lengthMm": 4173, "widthMm": 1781, "heightMm": 1539 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 109, "max": 110 } }
+    },
+    {
+      "id": "lancia-ypsilon-lx-ibrida-es-2026",
+      "url": "https://www.lancia.es/models/ypsilon-ibrida/especificaciones-tecnicas",
+      "publisher": "Lancia España",
+      "officialDomains": ["lancia.es"],
+      "match": { "brand": "LANCIA", "model": "YPSILON", "versionRegex": "LX IBRIDA", "fuel": "Híbrido" },
+      "requiredEvidence": ["Lancia Ypsilon LX", "103 g/km", "110cv", "0,432 kWh", "4,6", "4.080 mm", "1.768 mm", "1.440 mm", "352 litros"],
+      "facts": { "trunk": 352, "consumption": 4.6, "dimensions": { "lengthMm": 4080, "widthMm": 1768, "heightMm": 1440 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 103, "batteryCapacityKWh": 0.432 }
+    },
+    {
+      "id": "dacia-sandero-stepway-ecog120-auto-es-2026",
+      "url": "https://www.dacia.es/dacia-webstore/detalles.html?productId=VEH_UU1DJF00X76583636",
+      "publisher": "Dacia España",
+      "officialDomains": ["dacia.es"],
+      "match": { "brand": "DACIA", "model": "SANDERO", "versionRegex": "STEPWAY EXPRESSION ECO-G 120 AUTO", "powerCv": 120, "fuel": "Gasolina" },
+      "requiredEvidence": ["SANDERO", "Expression Eco-G 120 Auto", "7.2", "116", "88 (120)", "número de puertas 5", "número de plazas 5"],
+      "facts": { "consumption": 7.2, "seats": 5, "doors": 5, "emissionsCo2GKm": 116 }
+    },
+    {
+      "id": "opel-mokka-hybrid-gs-145-es-2026",
+      "url": "https://www.opel.es/coches/gama-mokka/mokka/resumen.html",
+      "publisher": "Opel España",
+      "officialDomains": ["opel.es"],
+      "match": { "brand": "Opel", "model": "Mokka", "versionRegex": "1\\.2T XHT Hybrid eDCT6 GS", "fuel": "Híbrido" },
+      "requiredEvidence": ["Mokka", "Hybrid", "145 CV", "4,5 - 5,5", "102 - 125", "350 litros", "4.151 mm", "1.531 mm", "1.987 mm"],
+      "facts": { "trunk": 350, "consumptionRange": { "min": 4.5, "max": 5.5 }, "dimensions": { "lengthMm": 4151, "widthMm": 1987, "heightMm": 1531 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 102, "max": 125 } }
+    },
+    {
+      "id": "opel-frontera-hybrid-102-es-2026",
+      "url": "https://www.opel.es/coches/frontera/frontera-bev/resumen.html",
+      "publisher": "Opel España",
+      "officialDomains": ["opel.es"],
+      "match": { "brand": "OPEL", "model": "FRONTERA", "versionRegex": "GS 1\\.2 T XHT HYBRID eDCT6 S/S", "powerCv": 102, "fuel": "Gasolina" },
+      "requiredEvidence": ["Frontera Hybrid", "4,9 - 6,0", "111 - 135"],
+      "facts": { "consumptionRange": { "min": 4.9, "max": 6.0 }, "emissionsCo2Range": { "min": 111, "max": 135 } }
+    },
+    {
+      "id": "opel-frontera-hybrid-102-quadis-es-2026",
+      "url": "https://www.opel.es/coches/frontera/frontera-bev/resumen.html",
+      "publisher": "Opel España",
+      "officialDomains": ["opel.es"],
+      "match": { "brand": "Opel", "model": "Frontera", "versionRegex": "1\\.2T XHT Hybrid eDCT6 75kW GS", "powerCv": 102, "fuel": "Gasolina" },
+      "requiredEvidence": ["Frontera Hybrid", "4,9 - 6,0", "111 - 135"],
+      "facts": { "consumptionRange": { "min": 4.9, "max": 6.0 }, "emissionsCo2Range": { "min": 111, "max": 135 } }
+    },
+    {
+      "id": "peugeot-208-puretech100-manual-es-2026",
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf",
+      "publisher": "Peugeot España",
+      "officialDomains": ["peugeot.es"],
+      "match": { "brand": "Peugeot", "model": "208", "versionRegex": "Allure Gasolina 100 S&S 6 Vel\\. MAN", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["Gasolina 100 S&S BVM6", "4.055", "1.745", "1.430", "309"],
+      "facts": { "trunk": 309, "dimensions": { "lengthMm": 4055, "widthMm": 1745, "heightMm": 1430 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "peugeot-208-puretech100-manual-paper-es-2026",
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf",
+      "publisher": "Peugeot España",
+      "officialDomains": ["peugeot.es"],
+      "match": { "brand": "Peugeot", "model": "208", "versionRegex": "Allure Gasolina 100 S&S 6 Vel\\. Manual Turbo", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["Gasolina 100 S&S BVM6", "4.055", "1.745", "1.430", "309"],
+      "facts": { "trunk": 309, "dimensions": { "lengthMm": 4055, "widthMm": 1745, "heightMm": 1430 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "byd-dolphin-surf-boost-es-2026",
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/dolphin-surf/Dolphin%20surf-0826-BPS-ES-V4.pdf",
+      "publisher": "BYD España",
+      "officialDomains": ["byd.com"],
+      "match": { "brand": "BYD", "model": "Dolphin Surf", "versionRegex": "^Boost$", "powerCv": 88, "fuel": "Eléctrico" },
+      "requiredEvidence": ["Boost", "43,2", "322", "15,6", "308/1.037", "3.990", "1.720", "1.590"],
+      "facts": { "trunk": 308, "consumption": 15.6, "dimensions": { "lengthMm": 3990, "widthMm": 1720, "heightMm": 1590 }, "electricRangeKm": 322, "emissionsCo2GKm": 0, "batteryCapacityKWh": 43.2 }
+    },
+    {
+      "id": "byd-dolphin-surf-boost-import-es-2026",
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/dolphin-surf/Dolphin%20surf-0826-BPS-ES-V4.pdf",
+      "publisher": "BYD España",
+      "officialDomains": ["byd.com"],
+      "match": { "brand": "BYD", "model": "DOLPHIN", "versionRegex": "DOLPHIN SURF BOOST", "fuel": "Eléctrico" },
+      "requiredEvidence": ["Boost", "43,2", "322", "15,6", "308/1.037", "3.990", "1.720", "1.590"],
+      "facts": { "trunk": 308, "consumption": 15.6, "dimensions": { "lengthMm": 3990, "widthMm": 1720, "heightMm": 1590 }, "electricRangeKm": 322, "emissionsCo2GKm": 0, "batteryCapacityKWh": 43.2 }
+    },
+    {
+      "id": "byd-atto2-dmi-import-es-2026",
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/atto-2-dmi/ATTO-2-DM-i-1125-BPS-ES-V2-web.pdf",
+      "publisher": "BYD España",
+      "officialDomains": ["byd.com"],
+      "match": { "brand": "BYD", "model": "ATTO", "versionRegex": "ATTO 2 DM-i", "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["Boost", "156", "18,0", "90", "1.000", "15,8", "1,8"],
+      "facts": { "trunk": 425, "consumption": 1.8, "dimensions": { "lengthMm": 4330, "widthMm": 1830, "heightMm": 1675 }, "seats": 5, "doors": 5, "electricRangeKm": 90, "emissionsCo2GKm": 41, "batteryCapacityKWh": 18 }
+    },
+    {
+      "id": "ebro-s400-hev-excellence-es-2026",
+      "url": "https://www.ebroauto.com/modelos/s400-hev/especificaciones",
+      "publisher": "EBRO",
+      "officialDomains": ["ebroauto.com"],
+      "match": { "brand": "EBRO", "model": "S400", "versionRegex": "1\\.5 DHE HEV EXCELLENCE CVT", "fuel": "Híbrido" },
+      "requiredEvidence": ["EBRO s400", "1.5 L DHE", "5,3", "120", "1,83", "4.320", "1.646", "1.831", "5 plazas"],
+      "facts": { "consumption": 5.3, "dimensions": { "lengthMm": 4320, "widthMm": 1831, "heightMm": 1646 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 120, "batteryCapacityKWh": 1.83 }
+    },
+    {
+      "id": "hyundai-tucson-hev-239-klass-es-2026",
+      "url": "https://www.hyundai.com/es/es/modelos/tucson-hibrido.html",
+      "publisher": "Hyundai Motor España",
+      "officialDomains": ["hyundai.com"],
+      "match": { "brand": "HYUNDAI", "model": "TUCSON", "versionRegex": "1\\.6T 239CV HEV AT KLASS", "powerCv": 239, "fuel": "Híbrido" },
+      "requiredEvidence": ["239cv", "KLASS", "5,6", "616 litros", "1,65", "1,85", "4,51", "1,49 kWh"],
+      "facts": { "trunk": 616, "consumption": 5.6, "dimensions": { "lengthMm": 4510, "widthMm": 1850, "heightMm": 1650 }, "seats": 5, "doors": 5, "batteryCapacityKWh": 1.49 }
+    },
+    {
+      "id": "audi-a1-30tfsi-stronic-import-es-2026",
+      "url": "https://prensa.audi.es/wp-content/uploads/2018/11/Dossier-nuevo-Audi-A1-Sportback.pdf",
+      "publisher": "Audi MediaCenter España",
+      "officialDomains": ["audi.es"],
+      "match": { "brand": "AUDI", "model": "A1", "versionRegex": "SB ADRENALIN EDITION 30TFSI 116CV STRONIC", "powerCv": 116, "fuel": "Gasolina" },
+      "requiredEvidence": ["30 TFSI", "85 kW (116 CV)", "S tronic", "5,9–6,2", "123-140"],
+      "facts": { "consumptionRange": { "min": 5.9, "max": 6.2 }, "emissionsCo2Range": { "min": 123, "max": 140 } }
+    },
+    {
+      "id": "audi-a1-30tfsi-stronic-quadis-es-2026",
+      "url": "https://prensa.audi.es/wp-content/uploads/2018/11/Dossier-nuevo-Audi-A1-Sportback.pdf",
+      "publisher": "Audi MediaCenter España",
+      "officialDomains": ["audi.es"],
+      "match": { "brand": "Audi", "model": "A1", "versionRegex": "Sportback Adrenalin 30 TFSI 85kW S tron", "powerCv": 116, "fuel": "Gasolina" },
+      "requiredEvidence": ["30 TFSI", "85 kW (116 CV)", "S tronic", "5,9–6,2", "123-140"],
+      "facts": { "consumptionRange": { "min": 5.9, "max": 6.2 }, "emissionsCo2Range": { "min": 123, "max": 140 } }
+    },
+    {
+      "id": "mazda2-hybrid-116-centreline-es-2026",
+      "url": "https://www.mazda.es/promociones/promociones-actuales/mazda2-hybrid/flexiopcion/",
+      "publisher": "Mazda Automóviles España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "2", "versionRegex": "HYBRID 2026 1\\.5 85KW 116CV CVT CENTRE-LINE", "powerCv": 116, "fuel": "Híbrido" },
+      "requiredEvidence": ["Mazda2 Hybrid", "1.5 85 kW (116 CV) CVT Centre-Line", "3,8-4", "87-92"],
+      "facts": { "consumptionRange": { "min": 3.8, "max": 4.0 }, "emissionsCo2Range": { "min": 87, "max": 92 } }
+    },
+    {
+      "id": "volkswagen-troc-etsi116-dsg-mas-es-2026",
+      "url": "https://www.volkswagen.es/es/modelos/t-roc.html/__layer/layers/modelos/t_roc/t_roc_my26/cambio-dsg-de-serie/master.layer",
+      "publisher": "Volkswagen España",
+      "officialDomains": ["volkswagen.es"],
+      "match": { "brand": "VOLKSWAGEN", "model": "T-ROC", "versionRegex": "\\\"MÁS\\\" 1\\.5 eTSI 85kW 116CV DSG", "fuel": "Gasolina" },
+      "requiredEvidence": ["85 Kw (116CV)", "Automático DSG", "475 L", "5,5 - 5,9", "125 – 135"],
+      "facts": { "trunk": 475, "consumptionRange": { "min": 5.5, "max": 5.9 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 125, "max": 135 } }
+    },
+    {
+      "id": "mazda-cx30-mhev140-manual-primeline-es-2026",
+      "url": "https://www.mazda.es/gama/mazda-cx-30/especificaciones-y-comparativa/",
+      "publisher": "Mazda Automóviles España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "CX-30", "versionRegex": "2027 2\\.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE", "powerCv": 140, "fuel": "Gasolina" },
+      "requiredEvidence": ["2.5L e-SKYACTIV G 140", "Manual 6 velocidades", "Prime-Line", "5,7 - 6,6", "129 - 148"],
+      "facts": { "trunk": 430, "consumptionRange": { "min": 5.7, "max": 6.6 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 129, "max": 148 } }
+    },
+    {
+      "id": "mazda3-mhev140-manual-primeline-es-2026",
+      "url": "https://www.mazda.es/gama/mazda3-hatchback/especificaciones-y-comparativa/",
+      "publisher": "Mazda Automóviles España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "3", "versionRegex": "2027 2\\.5L e-SKYACTUV H MHEV 140CV 6MT FWD PRIME-LINE", "powerCv": 140, "fuel": "Híbrido" },
+      "requiredEvidence": ["MAZDA3 5 Puertas", "Prime-Line", "2.5L e-SKYACTIV G 140", "Manual 6 velocidades", "WLTP: 133"],
+      "facts": { "emissionsCo2GKm": 133 }
+    },
+    {
+      "id": "toyota-chr-hybrid140-advance-es-2026",
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/toyota-c-hr/Brochure_Toyota_C-HR_Hybrid_25_ok.pdf",
+      "publisher": "Toyota España",
+      "officialDomains": ["toyota.es"],
+      "match": { "brand": "TOYOTA", "model": "C-HR", "versionRegex": "ADVANCE HYBRID 140 e-CVT", "fuel": "Gasolina" },
+      "requiredEvidence": ["HYBRID", "140", "4362", "1832", "1564", "388", "4,7-4,8", "105-109", "0,85"],
+      "facts": { "trunk": 388, "consumptionRange": { "min": 4.7, "max": 4.8 }, "dimensions": { "lengthMm": 4362, "widthMm": 1832, "heightMm": 1564 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 105, "max": 109 }, "batteryCapacityKWh": 0.85 }
+    },
+    {
+      "id": "toyota-yariscross-hybrid130-activeplus-es-2026",
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/yaris-cross/Catalogo_TOYOTA_YarisCross_MY25.pdf",
+      "publisher": "Toyota España",
+      "officialDomains": ["toyota.es"],
+      "match": { "brand": "TOYOTA", "model": "YARIS CROSS", "versionRegex": "ACTIVE PLUS 130H ACTIVE", "powerCv": 131, "fuel": "Híbrido" },
+      "requiredEvidence": ["HYBRID 130", "Active Plus", "4172", "1765", "1595", "397", "4,5-4,8", "101-109"],
+      "facts": { "trunk": 397, "consumptionRange": { "min": 4.5, "max": 4.8 }, "dimensions": { "lengthMm": 4172, "widthMm": 1765, "heightMm": 1595 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 101, "max": 109 } }
+    },
+    {
+      "id": "skoda-elroq85-286-es-2026",
+      "url": "https://www.skoda.es/modelos/elroq/elroq/skoda-elroq-engines",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "ELROQ", "versionRegex": "85 82 kWh BATTERIE 210 KW \\(286 CV\\)", "powerCv": 286, "fuel": "Eléctrico" },
+      "requiredEvidence": ["Škoda Elroq", "82 kWh 286 CV", "77 kWh", "470 litros", "1.580 litros", "más de 560 kilómetros"],
+      "facts": { "trunk": 470, "seats": 5, "doors": 5, "electricRangeKm": 560, "emissionsCo2GKm": 0, "batteryCapacityKWh": 77 }
+    },
+    {
+      "id": "nissan-qashqai-mhev140-acenta-import-es-2026",
+      "url": "https://www.nissan.es/content/dam/Nissan/es/brochures/E-Catalogo_Nissan_Qashqai_ES.pdf",
+      "publisher": "Nissan España",
+      "officialDomains": ["nissan.es"],
+      "match": { "brand": "NISSAN", "model": "QASHQAI", "versionRegex": "DIG-T MILD HYBRID 12V ACENTA", "fuel": "Híbrido" },
+      "requiredEvidence": ["103 kW (140 CV)", "Mild Hybrid 12V", "4 425", "1 835", "1 625", "142 - 146", "6,3 - 6,5"],
+      "facts": { "trunk": 504, "consumptionRange": { "min": 6.3, "max": 6.5 }, "dimensions": { "lengthMm": 4425, "widthMm": 1835, "heightMm": 1625 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 142, "max": 146 } }
+    },
+    {
+      "id": "seat-leon-st-tdi115-style-es-2026",
+      "url": "https://www.seat.es/coches/leon-sportstourer/fr",
+      "publisher": "SEAT España",
+      "officialDomains": ["seat.es"],
+      "match": { "brand": "SEAT", "model": "LEON", "versionRegex": "2\\.0 TDI CR ST/SP STYLE XL", "powerCv": 115, "fuel": "Diésel" },
+      "requiredEvidence": ["León Sportstourer Style", "2.0 TDI evo 85 kW (115 CV)", "620", "4.642", "1.448", "1.800"],
+      "facts": { "trunk": 620, "dimensions": { "lengthMm": 4642, "widthMm": 1800, "heightMm": 1448 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "lynkco-01-core-276-es-2026",
+      "url": "https://www.lynkco.com/es-es/cars/01",
+      "publisher": "Lynk & Co España",
+      "officialDomains": ["lynkco.com"],
+      "match": { "brand": "LYNK&CO", "model": "01", "versionRegex": "01 CORE", "powerCv": 276, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["01 Core", "276 CV", "75 km", "0,9 l/100 km", "63 g/km", "466 litros", "1,860", "4,545", "1,694"],
+      "facts": { "trunk": 466, "consumption": 0.9, "dimensions": { "lengthMm": 4545, "widthMm": 1860, "heightMm": 1694 }, "seats": 5, "doors": 5, "electricRangeKm": 75, "emissionsCo2GKm": 63 }
+    },
+    {
+      "id": "lynkco-08-core-345-es-2026",
+      "url": "https://www.lynkco.com/es-es/cars/08",
+      "publisher": "Lynk & Co España",
+      "officialDomains": ["lynkco.com"],
+      "match": { "brand": "LYNK&CO", "model": "08", "versionRegex": "08 CORE", "powerCv": 345, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["08 Core", "200 km", "1000 km", "540 litros", "20,8 kWh/100 km", "0,9 l/100 km", "23 g/km", "4.820", "2.140", "1.690"],
+      "facts": { "trunk": 540, "consumption": 0.9, "dimensions": { "lengthMm": 4820, "widthMm": 2140, "heightMm": 1690 }, "seats": 5, "doors": 5, "electricRangeKm": 200, "emissionsCo2GKm": 23 }
+    },
+    {
+      "id": "kia-pv5-cargo-l2h1-lr-essential-es-2026",
+      "url": "https://www.kia.com/es/pbv/vehiculos/pv5-cargo/discover/",
+      "publisher": "Kia Iberia",
+      "officialDomains": ["kia.com"],
+      "match": { "brand": "KIA", "model": "PV5 CARGO", "versionRegex": "L2H1 LR ESSENITIAL", "fuel": "Eléctrico" },
+      "requiredEvidence": ["Kia PV5 Cargo", "FWD LR (71.2kWh)", "71,2 kWh", "191", "412 km", "4,695", "1,895", "1,923", "4.4"],
+      "facts": { "trunk": 4400, "consumption": 19.1, "dimensions": { "lengthMm": 4695, "widthMm": 1895, "heightMm": 1923 }, "seats": 2, "doors": 3, "electricRangeKm": 412, "emissionsCo2GKm": 0, "batteryCapacityKWh": 71.2 }
+    },
+    {
+      "id": "opel-corsa-gs-12t100-import-es-2026",
+      "url": "https://store.opel.es/selector/configurable/corsa-berlina/edition/1-2t-gasolina-100cv-cambio-manual-6-velocidades-gasolina/voltaik-blue/tela-melange-grey",
+      "publisher": "Opel España",
+      "officialDomains": ["opel.es"],
+      "match": { "brand": "OPEL", "model": "CORSA", "versionRegex": "GS 1\\.2T", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.2T Gasolina 100cv Manual", "116 g/km", "5.1 l/100km"],
+      "facts": { "consumption": 5.1, "emissionsCo2GKm": 116 }
+    },
+    {
+      "id": "omoda9-shs-537-import-es-2026",
+      "url": "https://omodaoficial.es/wp-content/uploads/2025/07/OMODA-9-CATA%CC%81LOGO.pdf",
+      "publisher": "OMODA España",
+      "officialDomains": ["omodaoficial.es"],
+      "match": { "brand": "OMODA", "model": "9", "versionRegex": "SHS PREMIUM 1\\.5 TGDI 3DHT 395kW \\(537CV\\) AWD" },
+      "requiredEvidence": ["OMODA 9 SHS", "1.5TGDI", "3DHT", "395 kW", "537 CV", "1,7", "38", "4.775", "1.920", "1.671", "34,46", "145"],
+      "facts": { "consumption": 1.7, "dimensions": { "lengthMm": 4775, "widthMm": 1920, "heightMm": 1671 }, "seats": 5, "doors": 5, "electricRangeKm": 145, "emissionsCo2GKm": 38, "batteryCapacityKWh": 34.46 }
+    },
+    {
+      "id": "maserati-grecale-gt-mhev300-es-2026",
+      "url": "https://www.maserati.com/content/dam/maserati/worldwide/brochures/catalogues/grecale/Grecale-Digital-Catalogue-ES_low.pdf",
+      "publisher": "Maserati",
+      "officialDomains": ["maserati.com"],
+      "match": { "brand": "Maserati", "model": "Grecale", "versionRegex": "L4 MHEV 300CV AWD", "powerCv": 300 },
+      "requiredEvidence": ["Grecale GT", "L4 MHEV", "300 CV", "4.846", "1.948", "1.670", "535", "8,7-9,2", "198-208"],
+      "facts": { "trunk": 535, "consumptionRange": { "min": 8.7, "max": 9.2 }, "dimensions": { "lengthMm": 4846, "widthMm": 1948, "heightMm": 1670 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 198, "max": 208 } }
+    },
+    {
+      "id": "renault-captur-ecog100-evolution-es-2026",
+      "url": "https://catalogo.renault.es/es/mobile/captur/ct_captur_ph2_es_september_2024.pdf",
+      "publisher": "Renault España",
+      "officialDomains": ["renault.es"],
+      "match": { "brand": "RENAULT", "model": "CAPTUR", "versionRegex": "EVOLUTION ECO-G SS", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["Eco-G 100", "74 (100)", "7,6-8", "119-125"],
+      "facts": { "consumptionRange": { "min": 7.6, "max": 8.0 }, "emissionsCo2Range": { "min": 119, "max": 125 } }
+    },
+    {
+      "id": "renault-captur-ecog100-evolution-webstore-es-2026",
+      "url": "https://www.renault.es/renault-webstore/detalles.html?productId=VEH_VF1RJB00674684523",
+      "publisher": "Renault España",
+      "officialDomains": ["renault.es"],
+      "match": { "brand": "RENAULT", "model": "CAPTUR", "versionRegex": "EVOLUTION ECO-G SS", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["CAPTUR", "evolution Eco-G 100cv", "número de puertas 5", "número de plazas 5"],
+      "facts": { "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "nissan-micra-standard-range-nconnecta-es-2026",
+      "url": "https://micra.nissan.es/dimensiones",
+      "publisher": "Nissan España",
+      "officialDomains": ["nissan.es"],
+      "match": { "brand": "Nissan", "model": "Micra", "versionRegex": "Standard Range 4x2 N-Connecta", "powerCv": 122, "fuel": "Eléctrico" },
+      "requiredEvidence": ["Nissan MICRA", "3.974 mm", "1.830 mm", "1.498 mm", "326 L", "5 puertas", "5 plazas", "40 kWh", "317 km", "14.3 kWh/100 km", "0 g/km"],
+      "facts": { "trunk": 326, "consumption": 14.3, "dimensions": { "lengthMm": 3974, "widthMm": 1830, "heightMm": 1498 }, "seats": 5, "doors": 5, "electricRangeKm": 317, "emissionsCo2GKm": 0, "batteryCapacityKWh": 40 }
+    },
+    {
+      "id": "mg3-gasoline-comfort-115-es-2026",
+      "url": "https://cdn.mgmotor.eu/files/MG3-espanol-2025-31-enero.pdf",
+      "publisher": "MG Motor España",
+      "officialDomains": ["mgmotor.eu"],
+      "match": { "brand": "MG", "model": "MG3", "versionRegex": "1\\.5 Comfort", "fuel": "Gasolina" },
+      "requiredEvidence": ["1.5 Manual", "Comfort", "85 kW / 115 CV", "4113", "1 797", "1 502", "293", "6,1", "137"],
+      "facts": { "trunk": 293, "consumption": 6.1, "dimensions": { "lengthMm": 4113, "widthMm": 1797, "heightMm": 1502 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 137 }
+    },
+    {
+      "id": "omoda7-shs-premium-279-import-es-2026",
+      "url": "https://www.omodajaecoo.es/modelos/omoda-7/hibrido-ficha-tecnica",
+      "publisher": "OMODA & JAECOO España",
+      "officialDomains": ["omodajaecoo.es"],
+      "match": { "brand": "OMODA", "model": "7", "versionRegex": "PHEV PREMIUM", "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["OMODA 7 SHS", "1.5 TGDI Automática", "279CV", "2,3l/100km", "53g/km", "18,4kWh", "92km"],
+      "facts": { "consumption": 2.3, "electricRangeKm": 92, "emissionsCo2GKm": 53, "batteryCapacityKWh": 18.4 }
+    },
+    {
+      "id": "audi-a1-sportback-capacity-es-2026",
+      "url": "https://www.audi.es/es/modelos/a1/dimensiones/",
+      "publisher": "Audi España",
+      "officialDomains": ["audi.es"],
+      "match": { "brand": "Audi", "model": "A1", "versionRegex": "(?:SB ADRENALIN EDITION 30TFSI 116CV STRONIC|Sportback Adrenalin 30 TFSI 85kW S tron(?:ic)?)", "powerCv": 116, "fuel": "Gasolina" },
+      "requiredEvidence": ["Medidas Audi A1 Sportback", "335 litros"],
+      "facts": { "trunk": 335 }
+    },
+    {
+      "id": "nissan-qashqai-body-capacity-es-2026",
+      "url": "https://www.nissan.es/cf/vehiculos/nuevos-vehiculos/qashqai/dimensiones",
+      "publisher": "Nissan España",
+      "officialDomains": ["nissan.es"],
+      "match": { "brand": "Nissan", "model": "Qashqai", "versionRegex": "(?:DIG-T 103kW \\(140CV\\) mHEV 4x2 Acenta|DIG-T MILD HYBRID 12V ACENTA)", "fuel": "Híbrido" },
+      "requiredEvidence": ["Nissan Qashqai", "4.425 mm", "1.835 mm", "1.625 mm", "Hasta 504 L", "5 personas"],
+      "facts": { "trunk": 504, "dimensions": { "lengthMm": 4425, "widthMm": 1835, "heightMm": 1625 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "volkswagen-troc-etsi116-dimensions-eu-2026",
+      "url": "https://www.volkswagen-newsroom.com/en/publications/more/the-new-t-roc-factsheet-3133/download",
+      "publisher": "Volkswagen Newsroom",
+      "officialDomains": ["volkswagen-newsroom.com"],
+      "match": { "brand": "VOLKSWAGEN", "model": "T-ROC", "versionRegex": "\\\"MÁS\\\" 1\\.5 eTSI 85kW 116CV DSG", "fuel": "Gasolina" },
+      "requiredEvidence": ["1.5 eTSI", "85 kW (116 PS)", "Seven-speed DSG", "4,373 mm", "1,828 mm", "1,573 mm", "475 litres"],
+      "facts": { "dimensions": { "lengthMm": 4373, "widthMm": 1828, "heightMm": 1573 } }
+    },
+    {
+      "id": "toyota-proace-city-l1-capacity-es-2026",
+      "url": "https://www.toyota.es/empresas/coches/proace-city/caracteristicas/medidas",
+      "publisher": "Toyota España",
+      "officialDomains": ["toyota.es"],
+      "match": { "brand": "TOYOTA", "model": "PROACE CITY", "versionRegex": "VAN L1 GX(?: PLUS)?", "fuel": "Diésel" },
+      "requiredEvidence": ["Proace City", "L1 (media)", "4.403 mm", "Volumen de carga sin Smart Cargo", "3.300 litros"],
+      "facts": { "trunk": 3300, "dimensions": { "lengthMm": 4403 } }
+    },
+    {
+      "id": "toyota-proace-city-l2-capacity-es-2026",
+      "url": "https://www.toyota.es/empresas/coches/proace-city/caracteristicas/medidas",
+      "publisher": "Toyota España",
+      "officialDomains": ["toyota.es"],
+      "match": { "brand": "TOYOTA", "model": "PROACE CITY", "versionRegex": "COMBI L2 GX PLUS 100 CV", "fuel": "Diésel" },
+      "requiredEvidence": ["Proace City", "L2 (larga)", "4.753 mm", "Volumen de carga sin Smart Cargo", "3.900 litros"],
+      "facts": { "trunk": 3900, "dimensions": { "lengthMm": 4753 } }
+    },
+    {
+      "id": "toyota-proace-city-diesel100-wltp-es-2026",
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/proace-city/PROACE_CITY_MY25.pdf",
+      "publisher": "Toyota España",
+      "officialDomains": ["toyota.es"],
+      "match": { "brand": "TOYOTA", "model": "PROACE CITY", "versionRegex": "(?:COMBI L2 GX PLUS 100 CV|VAN L1 GX(?: PLUS)?)", "fuel": "Diésel" },
+      "requiredEvidence": ["1.5 l 100 CV", "5,3-5,9", "138-156", "EURO 6"],
+      "facts": { "consumptionRange": { "min": 5.3, "max": 5.9 }, "emissionsCo2Range": { "min": 138, "max": 156 } }
+    },
+    {
+      "id": "bmw-serie1-120-dimensions-es-2026",
+      "url": "https://www.bmw.es/es/coches-bmw/serie-1/bmw-serie-1/caracteristicas.html",
+      "publisher": "BMW España",
+      "officialDomains": ["bmw.es"],
+      "match": { "brand": "BMW", "model": "Serie 1", "versionRegex": "^120$", "powerCv": 170, "fuel": "Gasolina" },
+      "requiredEvidence": ["BMW Serie 1", "4.361 mm", "1.800 mm", "1.459 mm"],
+      "facts": { "dimensions": { "lengthMm": 4361, "widthMm": 1800, "heightMm": 1459 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "bmw-serie1-120d-163-es-2026",
+      "url": "https://www.bmw.es/es/coches-bmw/serie-1/bmw-serie-1/datos-tecnicos-bmw-serie1.html",
+      "publisher": "BMW España",
+      "officialDomains": ["bmw.es"],
+      "match": { "brand": "BMW", "model": "Serie 1", "versionRegex": "^120d$", "powerCv": 163, "fuel": "Diésel" },
+      "requiredEvidence": ["BMW 120d", "120 (163)", "4,3–4,4", "112–115", "0,9", "4.361", "1.800", "1.459", "300–1.135"],
+      "facts": { "trunk": 300, "consumptionRange": { "min": 4.3, "max": 4.4 }, "dimensions": { "lengthMm": 4361, "widthMm": 1800, "heightMm": 1459 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 112, "max": 115 }, "batteryCapacityKWh": 0.9 }
+    },
+    {
+      "id": "mazda-cx60-phev-capacity-es-2026",
+      "url": "https://www.mazda.es/mazda-spirit/diseno/",
+      "publisher": "Mazda España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "CX-60", "versionRegex": "2\\.5L e-SKYACTIV PHEV AWD 241kW \\(327 CV\\)", "powerCv": 327, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["Mazda CX-60", "híbrido enchufable", "570-1.726 litros"],
+      "facts": { "trunk": 570 }
+    },
+    {
+      "id": "skoda-octavia-combi-tdi150-dsg-es-2026",
+      "url": "https://www.skoda.es/_doc/b969cacf-03b5-47f4-aa6f-3a2398b6344a",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "OCTAVIA", "versionRegex": "COMBI SELECTION 2\\.0 TDI 150CV DSG 7vel", "powerCv": 150 },
+      "requiredEvidence": ["2.0 TDI 110 kW (150 CV)", "Automática de 7 velocidades DSG", "4,5–4,9", "119–128", "640/1.700", "4.698", "1.829", "1.468", "5 asientos, 5 puertas"],
+      "facts": { "trunk": 640, "consumptionRange": { "min": 4.5, "max": 4.9 }, "dimensions": { "lengthMm": 4698, "widthMm": 1829, "heightMm": 1468 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 119, "max": 128 } }
+    },
+    {
+      "id": "skoda-octavia-limo-tdi150-dsg-es-2026",
+      "url": "https://www.skoda.es/_doc/b969cacf-03b5-47f4-aa6f-3a2398b6344a",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "OCTAVIA", "versionRegex": "LIMO SELECTION 2\\.0 TDI 150CV DSG 7vel", "powerCv": 150 },
+      "requiredEvidence": ["2.0 TDI 110 kW (150 CV)", "Automática de 7 velocidades DSG", "4,5–4,9", "119–128", "600 litros", "4.698", "1.829", "1.468", "5 asientos, 5 puertas"],
+      "facts": { "trunk": 600, "consumptionRange": { "min": 4.5, "max": 4.9 }, "dimensions": { "lengthMm": 4698, "widthMm": 1829, "heightMm": 1468 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 119, "max": 128 } }
+    },
+    {
+      "id": "skoda-fabia-15tsi150-dsg-es-2026",
+      "url": "https://www.skoda.es/_doc/51bb7bed-879e-4311-b015-4d9f9237cc69",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "Skoda", "model": "Fabia", "versionRegex": "1\\.5 TSI 110KW \\(150CV\\) DSG Plus", "powerCv": 150, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.5 TSI 110 kW (150 CV)", "DSG automática de 7 velocidades", "5,5", "124–125", "380/1.190", "4.108/1.780", "1.459", "5 asientos, 5 puertas"],
+      "facts": { "trunk": 380, "consumption": 5.5, "dimensions": { "lengthMm": 4108, "widthMm": 1780, "heightMm": 1459 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 124, "max": 125 } }
+    },
+    {
+      "id": "skoda-elroq85-range-es-2026",
+      "url": "https://comunicacion.skoda.es/2025/02/04/skoda-presenta-en-espana-el-elroq-su-apuesta-electrica-en-el-importante-segmento-de-los-suv-compactos/",
+      "publisher": "Škoda España",
+      "officialDomains": ["comunicacion.skoda.es"],
+      "match": { "brand": "SKODA", "model": "ELROQ", "versionRegex": "85 82 kWh BATTERIE 210 KW \\(286 CV\\)", "powerCv": 286, "fuel": "Eléctrico" },
+      "requiredEvidence": ["Elroq 85", "82 kWh", "77 kWh neto", "210 kW", "578 kilómetros"],
+      "facts": { "electricRangeKm": 578, "batteryCapacityKWh": 77 }
+    },
+    {
+      "id": "skoda-elroq85-consumption-es-2026",
+      "url": "https://www.skoda.es/_doc/2023e3d9-8c55-4fdb-a991-58025dd004d0",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "ELROQ", "versionRegex": "85 82 kWh BATTERIE 210 KW \\(286 CV\\)", "powerCv": 286, "fuel": "Eléctrico" },
+      "requiredEvidence": ["ELROQ 85", "82 kWh", "210kW", "153,1 Wh/km", "0 g/km"],
+      "facts": { "consumption": 15.31, "emissionsCo2GKm": 0 }
+    },
+    {
+      "id": "skoda-kamiq-tsi115-manual-es-2026",
+      "url": "https://www.skoda.es/_doc/210fd3b2-79d7-41eb-9332-fc05af2eed7b",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "KAMIQ", "versionRegex": "SELECTION 1\\.0 TSI 115CV MANUAL", "powerCv": 115, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.0 TSI/85 kW", "Manual de 6 velocidades", "5,4", "122", "400/1.395", "4.241/1.793", "1.562", "5 asientos, 5 puertas"],
+      "facts": { "trunk": 400, "consumption": 5.4, "dimensions": { "lengthMm": 4241, "widthMm": 1793, "heightMm": 1562 }, "seats": 5, "doors": 5, "emissionsCo2GKm": 122 }
+    },
+    {
+      "id": "skoda-kamiq-tsi115-dsg-es-2026",
+      "url": "https://www.skoda.es/_doc/210fd3b2-79d7-41eb-9332-fc05af2eed7b",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "KAMIQ", "versionRegex": "SELECTION 1\\.0 TSI 115CV DSG", "powerCv": 115, "fuel": "Gasolina" },
+      "requiredEvidence": ["1.0 TSI/85 kW", "DSG automática de 7 velocidades", "5,6-5,8", "126-127", "400/1.395", "4.241/1.793", "1.562", "5 asientos, 5 puertas"],
+      "facts": { "trunk": 400, "consumptionRange": { "min": 5.6, "max": 5.8 }, "dimensions": { "lengthMm": 4241, "widthMm": 1793, "heightMm": 1562 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 126, "max": 127 } }
+    },
+    {
+      "id": "skoda-karoq-tdi150-dsg-es-2026",
+      "url": "https://www.skoda.es/_doc/be2ee69c-63db-412f-bc1a-93f98b5d9ac6",
+      "publisher": "Škoda España",
+      "officialDomains": ["skoda.es"],
+      "match": { "brand": "SKODA", "model": "KAROQ", "versionRegex": "2\\.0 TDI 110kW 150CV DSG 7 vel\\.", "powerCv": 150, "fuel": "Diésel" },
+      "requiredEvidence": ["2.0 TDI 110 kW (150 CV)", "4×4", "Automática de 7 velocidades DSG", "5,6–6,1", "147–160", "521/1.630", "4.390/1.841", "1.603", "5 asientos, 5 puertas"],
+      "facts": { "trunk": 521, "consumptionRange": { "min": 5.6, "max": 6.1 }, "dimensions": { "lengthMm": 4390, "widthMm": 1841, "heightMm": 1603 }, "seats": 5, "doors": 5, "emissionsCo2Range": { "min": 147, "max": 160 } }
+    },
+    {
+      "id": "jaecoo5-shs-hev224-exclusive-es-2026",
+      "url": "https://www.omodajaecoo.es/modelos/jaecoo-5",
+      "publisher": "OMODA & JAECOO España",
+      "officialDomains": ["omodajaecoo.es"],
+      "match": { "brand": "JAECOO", "model": "5", "versionRegex": "HEV EXCLUSIVE 1\\.5T DHE \\+ 2 MOTORES ELÉCTRICOS 224 CV", "fuel": "Híbrido" },
+      "requiredEvidence": ["JAECOO 5", "HÍBRIDO", "224CV", "5,3 l/100km", "120 g/km", "maletero de hasta 480L"],
+      "facts": { "trunk": 480, "consumption": 5.3, "seats": 5, "doors": 5, "emissionsCo2GKm": 120 }
+    },
+    {
+      "id": "omoda5-shs-hev224-business-es-2026",
+      "url": "https://www.omodajaecoo.es/modelos/omoda-5/hibrido-ficha-tecnica",
+      "publisher": "OMODA & JAECOO España",
+      "officialDomains": ["omodajaecoo.es"],
+      "match": { "brand": "OMODA", "model": "5", "versionRegex": "HEV BUSINESS", "fuel": "Híbrido" },
+      "requiredEvidence": ["OMODA 5 SHS", "1.5T SHS", "224CV", "5,3l/100km", "120g/km"],
+      "facts": { "consumption": 5.3, "emissionsCo2GKm": 120 }
+    },
+    {
+      "id": "mazda-cx30-body-es-2026",
+      "url": "https://www.mazda.es/gama/coches-suv/",
+      "publisher": "Mazda Automóviles España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "CX-30", "versionRegex": "2027 2\\.5L e-SKYACTIV H MHEV 140CV 6(?:AT PFWD|MT FWD) PRIME-LINE", "powerCv": 140, "fuel": "Gasolina" },
+      "requiredEvidence": ["MAZDA CX‑30", "Longitd: 4,395mm", "Anchura: 1,795mm", "Altura: 1,540mm", "5 adultos", "430", "1,406"],
+      "facts": { "trunk": 430, "dimensions": { "lengthMm": 4395, "widthMm": 1795, "heightMm": 1540 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "mazda-cx60-body-es-2026",
+      "url": "https://www.mazda.es/gama/coches-suv/",
+      "publisher": "Mazda Automóviles España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "CX-60", "versionRegex": "2\\.5L e-SKYACTIV PHEV AWD 241kW \\(327 CV\\) 8AT EXCLUSIVE-LINE", "powerCv": 327, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["MAZDA CX‑60", "Longitud: 4,745mm", "Anchura: 1,890mm", "Altura: 1,685mm", "5 adultos", "570", "1,726"],
+      "facts": { "trunk": 570, "dimensions": { "lengthMm": 4745, "widthMm": 1890, "heightMm": 1685 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "omoda7-shs-body-es-2026",
+      "url": "https://www.omodajaecoo.es/prensa/omoda-7-shs-diseno-avanzado-tecnologia-inteligente-y-excelencia-hibrida-enchufable",
+      "publisher": "OMODA & JAECOO España",
+      "officialDomains": ["omodajaecoo.es"],
+      "match": { "brand": "OMODA", "model": "7", "versionRegex": "PHEV PREMIUM", "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["OMODA 7 SHS", "4.660 mm", "1.875 mm", "1.670 mm", "cinco ocupantes", "537 litros", "1.294 litros"],
+      "facts": { "trunk": 537, "dimensions": { "lengthMm": 4660, "widthMm": 1875, "heightMm": 1670 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "opel-corsa-capacity-es-2026",
+      "url": "https://www.opel.es/content/opel/worldwide/spain/es/index/coches/categorias/coches-pequenos.html",
+      "publisher": "Opel España",
+      "officialDomains": ["opel.es"],
+      "match": { "brand": "OPEL", "model": "CORSA", "versionRegex": "(?:GS 1\\.2T|1\\.2T XHL 74kW \\(100CV\\) GS)", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["Opel Corsa", "Longitud total 4.060 mm", "altura: 1.433 mm", "anchura: 1.765 mm", "Volumen de carga: 309 litros", "5 puertas"],
+      "facts": { "trunk": 309, "dimensions": { "lengthMm": 4060, "widthMm": 1765, "heightMm": 1433 }, "doors": 5 }
+    },
+    {
+      "id": "audi-a1-sportback-body-es-2026",
+      "url": "https://www.audi.es/es/modelos/a1/dimensiones/",
+      "publisher": "Audi España",
+      "officialDomains": ["audi.es"],
+      "match": { "brand": "AUDI", "model": "A1", "versionRegex": "(?:SB ADRENALIN EDITION 30TFSI 116CV STRONIC|Sportback Adrenalin 30 TFSI 85kW S tron(?:ic)?)", "fuel": "Gasolina" },
+      "requiredEvidence": ["Medidas Audi A1 Sportback", "Largo: 4029 mm", "Ancho: 1940 mm", "Alto: 1409 mm", "335 litros"],
+      "facts": { "trunk": 335, "dimensions": { "lengthMm": 4029, "widthMm": 1940, "heightMm": 1409 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "renault-austral-etech200-body-es-2026",
+      "url": "https://www.renault.es/hibridos/austral/medidas.html",
+      "publisher": "Renault España",
+      "officialDomains": ["renault.es"],
+      "match": { "brand": "RENAULT", "model": "AUSTRAL", "versionRegex": "EVOLUTION E-TECH FULL HYBRID", "powerCv": 200, "fuel": "Híbrido" },
+      "requiredEvidence": ["Renault Austral", "full hybrid E-Tech", "largo", "4510", "alto", "1618", "ancho", "1825", "527", "1.736"],
+      "facts": { "trunk": 527, "dimensions": { "lengthMm": 4510, "widthMm": 1825, "heightMm": 1618 }, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "renault-austral-etech200-battery-es-2026",
+      "url": "https://catalogo.renault.es/es/mobile/austral/mobile/ct_austral_hhn_es_mai_2024.pdf",
+      "publisher": "Renault España",
+      "officialDomains": ["catalogo.renault.es"],
+      "match": { "brand": "RENAULT", "model": "AUSTRAL", "versionRegex": "EVOLUTION E-TECH FULL HYBRID", "powerCv": 200, "fuel": "Híbrido" },
+      "requiredEvidence": ["E-Tech full hybrid 200", "iones de litio", "400", "capacidad (kWh)", "2"],
+      "facts": { "batteryCapacityKWh": 2 }
+    },
+    {
+      "id": "lynkco-08-core-battery-es-2026",
+      "url": "https://press.lynkco.com/es-ES/260342-lynk-co-08-logra-un-record-guinness-al-alcanzar-293-km-en-modo-100-electrico/",
+      "publisher": "Lynk & Co España",
+      "officialDomains": ["press.lynkco.com"],
+      "match": { "brand": "LYNK&CO", "model": "08", "versionRegex": "08 CORE", "powerCv": 345, "fuel": "Híbrido enchufable" },
+      "requiredEvidence": ["Lynk & Co 08", "batería de alta energía de 39,6 kWh", "200 km"],
+      "facts": { "batteryCapacityKWh": 39.6 }
+    },
+    {
+      "id": "mercedes-cla-250plus-electric-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/saloon/cla-electric/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "CLA", "versionRegex": "CLA 250\\+ con tecnología EQ", "powerCv": 272, "fuel": "Eléctrico" },
+      "requiredEvidence": ["CLA 250+ eléctrico", "12,3 kWh/100km", "789 km", "85 kWh", "4.723 mm", "1.855 mm", "1.468 mm", "405 l", "Plazas de asiento: 5", "Puertas: 4"],
+      "facts": { "trunk": 405, "consumption": 12.3, "dimensions": { "lengthMm": 4723, "widthMm": 1855, "heightMm": 1468 }, "seats": 5, "doors": 4, "electricRangeKm": 789, "emissionsCo2GKm": 0, "batteryCapacityKWh": 85 }
+    },
+    {
+      "id": "mercedes-cla-250plus-sb-electric-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/estate/cla-shooting-brake-electric/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "CLA", "versionRegex": "CLA 250\\+ SB con tecnología EQ", "powerCv": 272, "fuel": "Eléctrico" },
+      "requiredEvidence": ["CLA 250+ SB eléctrico", "12,8 kWh/100km", "767 km", "85 kWh", "455 l", "Plazas de asiento: 5", "Puertas: 5"],
+      "facts": { "trunk": 455, "consumption": 12.8, "seats": 5, "doors": 5, "electricRangeKm": 767, "emissionsCo2GKm": 0, "batteryCapacityKWh": 85 }
+    },
+    {
+      "id": "mercedes-glb-250plus-electric-es-2026",
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glb-electric/overview.html",
+      "publisher": "Mercedes-Benz España",
+      "officialDomains": ["mercedes-benz.es"],
+      "match": { "brand": "Mercedes-Benz", "model": "GLB", "versionRegex": "GLB 250\\+", "powerCv": 272, "fuel": "Eléctrico" },
+      "requiredEvidence": ["GLB 250+ eléctrico", "15,8 kWh/100km", "630 km", "85 kWh", "4.732 mm", "1.861 mm", "1.687 mm", "540 l", "Plazas de asiento: 5", "Puertas: 5"],
+      "facts": { "trunk": 540, "consumption": 15.8, "dimensions": { "lengthMm": 4732, "widthMm": 1861, "heightMm": 1687 }, "seats": 5, "doors": 5, "electricRangeKm": 630, "emissionsCo2GKm": 0, "batteryCapacityKWh": 85 }
+    },
+    {
+      "id": "citroen-eberlingo-van-m-50kwh-es-2026",
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/caracteristicas-tecnicas/CT_NUEVO_BERLINGO_VAN.pdf",
+      "publisher": "Citroën España",
+      "officialDomains": ["citroen.es"],
+      "match": { "brand": "CITROEN", "model": "EBERLINGO", "versionRegex": "(?:CARGO M 800KG|VAN TALLA M)", "fuel": "Eléctrico" },
+      "requiredEvidence": ["FEBRERO 2026", "ë-Berlingo Van eléctrico 50 kWh Talla M", "Consumo 184 Wh/km", "Autonomía 337 km", "CO2 WLTP 0 g/km"],
+      "facts": { "consumption": 18.4, "electricRangeKm": 337, "emissionsCo2GKm": 0, "batteryCapacityKWh": 50 }
+    },
+    {
+      "id": "mazda2-hybrid-116-capacity-es-2026",
+      "url": "https://www.mazda.es/promociones/promociones-actuales/",
+      "publisher": "Mazda Automóviles España",
+      "officialDomains": ["mazda.es"],
+      "match": { "brand": "MAZDA", "model": "2", "versionRegex": "HYBRID 2026 1\\.5 85KW 116CV CVT CENTRE-LINE", "powerCv": 116, "fuel": "Híbrido" },
+      "requiredEvidence": ["Mazda2 Hybrid", "5 puertas", "Capacidad del maletero: 286 litros", "CVT"],
+      "facts": { "trunk": 286, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "kia-niro-hev-138-efficiency-es-2026",
+      "url": "https://www.kia.com/es/todo-sobre-kia/territorio-kia/movilidad-electrica-y-sostenibilidad/hibrido-electrico-ciudad/",
+      "publisher": "Kia Iberia",
+      "officialDomains": ["kia.com"],
+      "match": { "brand": "Kia", "model": "Niro", "versionRegex": "101,5kW.*138CV.*MY27", "powerCv": 138, "fuel": "Híbrido" },
+      "requiredEvidence": ["Niro HEV", "Batería: 1,32 kWh", "Consumo combinado (WLTP): 4,4 l/100 km", "Emisiones CO₂ (WLTP): 100-105 g/km"],
+      "facts": { "consumption": 4.4, "emissionsCo2Range": { "min": 100, "max": 105 }, "batteryCapacityKWh": 1.32 }
+    },
+    {
+      "id": "peugeot-208-puretech100-wltp-es-2026",
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/b2c/our-range/208/nuevo-208/NUEVO-208.pdf",
+      "publisher": "Peugeot España",
+      "officialDomains": ["peugeot.es"],
+      "match": { "brand": "Peugeot", "model": "208", "versionRegex": "Allure Gasolina 100 S&S 6 Vel\\. (?:MAN|Manual Turbo)", "powerCv": 100, "fuel": "Gasolina" },
+      "requiredEvidence": ["PureTech 100 S&S BVM6", "Consumo combinado WLTP: 5,0-5,2 l/100 km", "Emisiones combinadas CO2 WLTP: 113-116 g/km"],
+      "facts": { "consumptionRange": { "min": 5.0, "max": 5.2 }, "emissionsCo2Range": { "min": 113, "max": 116 } }
+    },
+    {
+      "id": "volkswagen-polo-match-95-capacity-es-2026",
+      "url": "https://www.volkswagen.es/comunicacion/reinventando-un-exito-de-ventas-el-id-polo-camino-de-la-produccion-en-serie/",
+      "publisher": "Volkswagen España",
+      "officialDomains": ["volkswagen.es"],
+      "match": { "brand": "VOLKSWAGEN", "model": "POLO", "versionRegex": "MATCH 1\\.0 TSI 70kW 95CV", "fuel": "Gasolina" },
+      "requiredEvidence": ["Polo clásico", "351", "1.125 litros", "cinco personas"],
+      "facts": { "trunk": 351, "seats": 5, "doors": 5 }
+    },
+    {
+      "id": "peugeot-rifter-active-business-standard-bluehdi100-wltp-es-2026",
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/Rifter-equipamientos-caracteristicas.pdf?srsltid=AfmBOorXLqL3zogj5uRuoWZqdQogR0VXfH8Y5WczNzBfjObxwkh9Hpbb",
+      "publisher": "Peugeot España",
+      "officialDomains": ["peugeot.es"],
+      "match": { "brand": "PEUGEOT", "model": "RIFTER", "versionRegex": "ACTIVE BUSINESS STANDARD N1 BLUEHDi 100 S/S", "fuel": "Diésel" },
+      "requiredEvidence": ["Rifter Active Business Standard BlueHDi 100 S&S Manual 6 Vel. (N1)", "Diesel", "145", "136 - 161", "5,50", "5,2 - 6,1", "1499"],
+      "facts": { "consumption": 5.5, "consumptionRange": { "min": 5.2, "max": 6.1 }, "emissionsCo2GKm": 145, "emissionsCo2Range": { "min": 136, "max": 161 } }
+    },
+    {
+      "id": "dacia-sandero-stepway-body-es-2026",
+      "url": "https://www.dacia.es/modelos/sandero-stepway/medidas.html",
+      "publisher": "Dacia España",
+      "officialDomains": ["dacia.es"],
+      "match": { "brand": "DACIA", "model": "SANDERO", "versionRegex": "STEPWAY EXPRESSION ECO-G 120 AUTO", "powerCv": 120, "fuel": "Gasolina" },
+      "requiredEvidence": ["medidas Dacia Sandero Stepway", "largo", "4102", "alto", "1586", "ancho", "2012", "volumen del maletero", "328/410"],
+      "facts": { "trunk": 328, "dimensions": { "lengthMm": 4102, "widthMm": 2012, "heightMm": 1586 } }
+    },
+    {
+      "id": "hyundai-tucson-hev-239-klass-emissions-es-2026",
+      "url": "https://www.hyundai.com/es/es/compra/servicios-compra/promociones.html",
+      "publisher": "Hyundai Motor España",
+      "officialDomains": ["hyundai.com"],
+      "match": { "brand": "HYUNDAI", "model": "TUCSON", "versionRegex": "1\\.6T 239CV HEV AT KLASS", "powerCv": 239, "fuel": "Híbrido" },
+      "requiredEvidence": ["TUCSON HEV", "Emisiones CO2 (gr/km): 129-149", "1.6T 239CV HEV AT KLASS", "WLTP"],
+      "facts": { "emissionsCo2Range": { "min": 129, "max": 149 } }
+    },
+    {
+      "id": "citroen-eberlingo-van-m-body-es-2026",
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/c-book/CITROEN_E_BERLINGO_VAN_c-book-ES.pdf",
+      "publisher": "Citroën España",
+      "officialDomains": ["citroen.es"],
+      "match": { "brand": "CITROEN", "model": "EBERLINGO", "versionRegex": "(?:CARGO M 800KG|VAN TALLA M)", "fuel": "Eléctrico" },
+      "requiredEvidence": ["ë-BERLINGO VAN", "DIMENSIONES", "1796 mm", "4401 mm", "2107 mm", "TALLA M"],
+      "facts": { "dimensions": { "lengthMm": 4401, "widthMm": 2107, "heightMm": 1796 } }
+    },
+    {
+      "id": "citroen-berlingo-van-m-cargo-es",
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/catalogos/BERLINGO_VAN_y_eBERLINGO_VAN.pdf",
+      "publisher": "Citroën España",
+      "officialDomains": ["citroen.es"],
+      "match": { "brand": "CITROEN", "model": "BERLINGO", "versionRegex": "VAN FURGÓN M", "fuel": "Diésel" },
+      "requiredEvidence": ["Berlingo Van dispone de un volumen de carga de", "3,30 m3", "talla M"],
+      "facts": { "trunk": 3300 }
+    },
+    {
+      "id": "citroen-eberlingo-van-m-cargo-es",
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/catalogos/BERLINGO_VAN_y_eBERLINGO_VAN.pdf",
+      "publisher": "Citroën España",
+      "officialDomains": ["citroen.es"],
+      "match": { "brand": "CITROEN", "model": "EBERLINGO", "versionRegex": "(?:CARGO M 800KG|VAN TALLA M)", "fuel": "Eléctrico" },
+      "requiredEvidence": ["Berlingo Van dispone de un volumen de carga de", "3,30 m3", "talla M", "DISPONIBLE EN 100% ELÉCTRICO"],
+      "facts": { "trunk": 3300 }
+    }
+  ]
+}

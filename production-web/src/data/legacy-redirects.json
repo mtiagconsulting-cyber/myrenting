@@ -1,0 +1,507 @@
+[
+  {
+    "source": "/index.html",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/renting-alfa-romeo-junior.html",
+    "destination": "/coches/quadis-522128?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-audi-a1.html",
+    "destination": "/coches/quadis-521147?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-byd-atto.html",
+    "destination": "/coches/quadis-522122?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-byd-dolphin.html",
+    "destination": "/coches/quadis-507194?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-citroen-berlingo.html",
+    "destination": "/coches/m-autonomo-400?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-citroen-eberlingo.html",
+    "destination": "/coches/m-autonomo-462?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-citroen-opel-combo-e.html",
+    "destination": "/coches",
+    "permanent": true
+  },
+  {
+    "source": "/renting-dacia-sandero.html",
+    "destination": "/coches/m-particular-375?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-ebro-s400.html",
+    "destination": "/coches/m-particular-328?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-ebro-s800.html",
+    "destination": "/coches/quadis-522997?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-honda-cr-v.html",
+    "destination": "/coches/quadis-523298?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-hyundai-tucson.html",
+    "destination": "/coches/m-particular-283?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-jaecoo-5.html",
+    "destination": "/coches/m-particular-389?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-jaecoo-7.html",
+    "destination": "/coches/m-particular-392?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-jaecoo-8.html",
+    "destination": "/coches",
+    "permanent": true
+  },
+  {
+    "source": "/renting-kia-niro.html",
+    "destination": "/coches/quadis-514005?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-kia-pv5-cargo.html",
+    "destination": "/coches/quadis-523064?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-kia-pv5-passenger.html",
+    "destination": "/coches/quadis-523064?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-lancia-ypsilon.html",
+    "destination": "/coches/m-particular-421?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-maserati-grecale.html",
+    "destination": "/coches/quadis-511649?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda-2.html",
+    "destination": "/coches/m-particular-433?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda-3.html",
+    "destination": "/coches/m-particular-445?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda-cx-30.html",
+    "destination": "/coches/m-particular-450?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda-cx-30-at.html",
+    "destination": "/coches/m-particular-450?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda-cx-5.html",
+    "destination": "/coches/m-autonomo-455?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda-cx-60.html",
+    "destination": "/coches/m-particular-458?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz-citan.html",
+    "destination": "/coches/quadis-504803?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz-glc-200-coupe.html",
+    "destination": "/coches/quadis-510235?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz-glc-220d.html",
+    "destination": "/coches/quadis-510235?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz-glc-300de-coupe.html",
+    "destination": "/coches/quadis-510235?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz-gle-300d-coupe.html",
+    "destination": "/coches",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz-gle-350de-coupe.html",
+    "destination": "/coches",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mg-mg3.html",
+    "destination": "/coches/quadis-515717?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mg-zs.html",
+    "destination": "/coches/quadis-522422?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-nissan-interstar.html",
+    "destination": "/coches",
+    "permanent": true
+  },
+  {
+    "source": "/renting-nissan-juke.html",
+    "destination": "/coches/quadis-511312?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-nissan-qashqai.html",
+    "destination": "/coches/quadis-493813?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-omoda-5.html",
+    "destination": "/coches/m-particular-380?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-omoda-7.html",
+    "destination": "/coches/m-particular-383?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-omoda-9.html",
+    "destination": "/coches/m-particular-364?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-opel-corsa.html",
+    "destination": "/coches/quadis-508905?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-opel-frontera.html",
+    "destination": "/coches/quadis-509319?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-peugeot-208.html",
+    "destination": "/coches/quadis-512258?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-peugeot-rifter.html",
+    "destination": "/coches/m-autonomo-361?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-renault-austral.html",
+    "destination": "/coches/m-particular-404?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-renault-captur.html",
+    "destination": "/coches/m-autonomo-405?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-renault-symbioz.html",
+    "destination": "/coches/m-particular-377?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-seat-ibiza.html",
+    "destination": "/coches/m-particular-469?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-seat-leon.html",
+    "destination": "/coches/m-particular-407?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-skoda-elroq.html",
+    "destination": "/coches/m-particular-239?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-skoda-fabia.html",
+    "destination": "/coches/quadis-520823?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-skoda-kamiq.html",
+    "destination": "/coches/m-particular-396?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-skoda-karoq.html",
+    "destination": "/coches/m-particular-236?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-skoda-octavia.html",
+    "destination": "/coches/m-particular-233?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota-c-hr.html",
+    "destination": "/coches/m-particular-367?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota-hilux.html",
+    "destination": "/coches/m-autonomo-369?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota-proace-city.html",
+    "destination": "/coches/m-autonomo-256?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota-proace-max.html",
+    "destination": "/coches/m-autonomo-257?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota-yaris.html",
+    "destination": "/coches/m-particular-358?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota-yaris-cross.html",
+    "destination": "/coches/m-particular-358?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-volkswagen-polo.html",
+    "destination": "/coches/m-particular-425?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-volkswagen-t-roc.html",
+    "destination": "/coches/m-particular-338?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-volkswagen-tiguan.html",
+    "destination": "/coches/m-particular-346?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-autonomos.html",
+    "destination": "/coches?publico=autonomo",
+    "permanent": true
+  },
+  {
+    "source": "/renting-byd.html",
+    "destination": "/marcas/byd",
+    "permanent": true
+  },
+  {
+    "source": "/renting-citroen.html",
+    "destination": "/marcas/citroen",
+    "permanent": true
+  },
+  {
+    "source": "/renting-crossover.html",
+    "destination": "/categorias/suv",
+    "permanent": true
+  },
+  {
+    "source": "/renting-diesel.html",
+    "destination": "/coches?combustible=diésel",
+    "permanent": true
+  },
+  {
+    "source": "/renting-ebro.html",
+    "destination": "/marcas/ebro",
+    "permanent": true
+  },
+  {
+    "source": "/renting-electricos.html",
+    "destination": "/renting-electricos",
+    "permanent": true
+  },
+  {
+    "source": "/renting-empresas.html",
+    "destination": "/coches?publico=empresa",
+    "permanent": true
+  },
+  {
+    "source": "/renting-etiqueta-c.html",
+    "destination": "/coches",
+    "permanent": true
+  },
+  {
+    "source": "/renting-etiqueta-cero.html",
+    "destination": "/renting-electricos",
+    "permanent": true
+  },
+  {
+    "source": "/renting-etiqueta-eco.html",
+    "destination": "/renting-hibridos",
+    "permanent": true
+  },
+  {
+    "source": "/renting-furgoneta.html",
+    "destination": "/categorias/furgonetas",
+    "permanent": true
+  },
+  {
+    "source": "/renting-gasolina.html",
+    "destination": "/coches?combustible=gasolina",
+    "permanent": true
+  },
+  {
+    "source": "/renting-hatchback.html",
+    "destination": "/categorias/urbanos",
+    "permanent": true
+  },
+  {
+    "source": "/renting-hibridos.html",
+    "destination": "/renting-hibridos",
+    "permanent": true
+  },
+  {
+    "source": "/renting-hibridos-enchufables.html",
+    "destination": "/coches?combustible=híbrido%20enchufable",
+    "permanent": true
+  },
+  {
+    "source": "/renting-jaecoo.html",
+    "destination": "/marcas/jaecoo",
+    "permanent": true
+  },
+  {
+    "source": "/renting-kia.html",
+    "destination": "/marcas/kia",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mazda.html",
+    "destination": "/marcas/mazda",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mercedes-benz.html",
+    "destination": "/marcas/mercedes-benz",
+    "permanent": true
+  },
+  {
+    "source": "/renting-mg.html",
+    "destination": "/marcas/mg",
+    "permanent": true
+  },
+  {
+    "source": "/renting-nissan.html",
+    "destination": "/marcas/nissan",
+    "permanent": true
+  },
+  {
+    "source": "/renting-omoda.html",
+    "destination": "/marcas/omoda",
+    "permanent": true
+  },
+  {
+    "source": "/renting-opel.html",
+    "destination": "/marcas/opel",
+    "permanent": true
+  },
+  {
+    "source": "/renting-particulares.html",
+    "destination": "/coches?publico=particular",
+    "permanent": true
+  },
+  {
+    "source": "/renting-peugeot.html",
+    "destination": "/marcas/peugeot",
+    "permanent": true
+  },
+  {
+    "source": "/renting-renault.html",
+    "destination": "/marcas/renault",
+    "permanent": true
+  },
+  {
+    "source": "/renting-seat.html",
+    "destination": "/marcas/seat",
+    "permanent": true
+  },
+  {
+    "source": "/renting-skoda.html",
+    "destination": "/marcas/skoda",
+    "permanent": true
+  },
+  {
+    "source": "/renting-suv.html",
+    "destination": "/renting-suv",
+    "permanent": true
+  },
+  {
+    "source": "/renting-toyota.html",
+    "destination": "/marcas/toyota",
+    "permanent": true
+  },
+  {
+    "source": "/renting-urbano.html",
+    "destination": "/categorias/urbanos",
+    "permanent": true
+  },
+  {
+    "source": "/renting-volkswagen.html",
+    "destination": "/marcas/volkswagen",
+    "permanent": true
+  },
+  {
+    "source": "/blog/index.html",
+    "destination": "/blog",
+    "permanent": true
+  },
+  {
+    "source": "/aviso-legal.html",
+    "destination": "/legal/aviso-legal",
+    "permanent": true
+  },
+  {
+    "source": "/politica-privacidad.html",
+    "destination": "/legal/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/politica-cookies.html",
+    "destination": "/legal/cookies",
+    "permanent": true
+  }
+]

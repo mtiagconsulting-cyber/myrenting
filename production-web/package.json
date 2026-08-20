@@ -1,0 +1,69 @@
+{
+  "name": "myrenting",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:cloudflare": "opennextjs-cloudflare build && node scripts/cloudflare/copy-prerendered-assets.mjs",
+    "preview:cloudflare": "opennextjs-cloudflare preview",
+    "deploy:cloudflare": "npm run build:cloudflare && wrangler deploy --config wrangler.jsonc --keep-vars",
+    "db:migrate:cloudflare": "wrangler d1 migrations apply myrenting-reviews-staging --remote --config wrangler.jsonc",
+    "upload:cloudflare": "npm run build:cloudflare && wrangler versions upload --config wrangler.jsonc --keep-vars",
+    "indexnow:submit": "node scripts/seo/submit-indexnow.mjs",
+    "audit:inventory": "node scripts/seo/audit-inventory.mjs",
+    "audit:official-specs": "node scripts/seo/audit-official-specs.mjs",
+    "audit:leads": "node --no-warnings --experimental-strip-types scripts/seo/audit-lead-flow.mjs",
+    "audit:seo": "node scripts/seo/audit-build.mjs",
+    "snapshot:market": "node scripts/seo/snapshot-market.mjs",
+    "benchmark:ai": "node scripts/seo/calculate-ai-share.mjs",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "ingest:m-renting": "node scripts/ingest/scrape-m-renting.mjs",
+    "ingest:m-renting-reconcile": "node scripts/ingest/reconcile-m-renting.mjs",
+    "ingest:provider-content": "node scripts/ingest/scrape-provider-content.mjs",
+    "ingest:paper-offers": "node scripts/ingest/build-paper-offers.mjs",
+    "ingest:quadis-specs": "node scripts/ingest/scrape-quadis-specs.mjs",
+    "ingest:official-specs": "node scripts/ingest/enrich-official-specs.mjs",
+    "ingest:quadis-catalog": "node scripts/ingest/scrape-quadis-catalog.mjs",
+    "ingest:photos": "node scripts/ingest/import-vehicle-photos.mjs",
+    "ingest:live-seo": "node scripts/ingest/import-live-seo.mjs",
+    "ingest:normalize": "node scripts/ingest/normalize-inventory.mjs",
+    "ingest:reconcile": "node scripts/ingest/reconcile-inventory.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@supabase/supabase-js": "^2.57.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.28.0",
+    "next": "15.5.22",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@opennextjs/cloudflare": "^1.20.2",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/node": "^20.19.19",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "cheerio": "^1.2.0",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "15.5.22",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.118.0"
+  },
+  "overrides": {
+    "postcss": "8.5.25",
+    "sharp": "0.35.3"
+  }
+}

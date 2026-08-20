@@ -1,0 +1,384 @@
+{
+  "snapshots": [
+    {
+      "period": "2026-08",
+      "reviewedAt": "2026-08-11",
+      "inventoryGeneratedAt": "2026-08-04T23:52:33.375Z",
+      "vehicles": 202,
+      "offers": 3662,
+      "audiences": {
+        "particular": {
+          "offers": 1136,
+          "minimum": 289,
+          "median": 511,
+          "maximum": 2096
+        },
+        "autonomo": {
+          "offers": 1278,
+          "minimum": 239,
+          "median": 428.31,
+          "maximum": 1732
+        },
+        "empresa": {
+          "offers": 1248,
+          "minimum": 239,
+          "median": 434.32,
+          "maximum": 4412.7
+        }
+      },
+      "entry": {
+        "withEntry": 0,
+        "withoutEntry": 3662,
+        "medianTotalWithoutEntry": 22560
+      },
+      "brands": [
+        {
+          "brand": "Mercedes-Benz",
+          "offers": 495,
+          "minimum": 405,
+          "median": 1203
+        },
+        {
+          "brand": "MAZDA",
+          "offers": 420,
+          "minimum": 266.16,
+          "median": 372.91
+        },
+        {
+          "brand": "OPEL",
+          "offers": 255,
+          "minimum": 242,
+          "median": 356
+        },
+        {
+          "brand": "TOYOTA",
+          "offers": 248,
+          "minimum": 256.95,
+          "median": 419.99
+        },
+        {
+          "brand": "SKODA",
+          "offers": 192,
+          "minimum": 271,
+          "median": 387
+        },
+        {
+          "brand": "OMODA",
+          "offers": 180,
+          "minimum": 340.08,
+          "median": 702.84
+        },
+        {
+          "brand": "NISSAN",
+          "offers": 171,
+          "minimum": 275,
+          "median": 425
+        },
+        {
+          "brand": "VOLKSWAGEN",
+          "offers": 165,
+          "minimum": 271.96,
+          "median": 433.54
+        },
+        {
+          "brand": "KIA",
+          "offers": 162,
+          "minimum": 315,
+          "median": 546
+        },
+        {
+          "brand": "BYD",
+          "offers": 150,
+          "minimum": 381,
+          "median": 496
+        },
+        {
+          "brand": "EBRO",
+          "offers": 135,
+          "minimum": 362.95,
+          "median": 472.6
+        },
+        {
+          "brand": "JAECOO",
+          "offers": 135,
+          "minimum": 369.43,
+          "median": 596.13
+        },
+        {
+          "brand": "BMW",
+          "offers": 135,
+          "minimum": 429,
+          "median": 578
+        },
+        {
+          "brand": "RENAULT",
+          "offers": 120,
+          "minimum": 259,
+          "median": 423.5
+        },
+        {
+          "brand": "LYNK&CO",
+          "offers": 90,
+          "minimum": 469,
+          "median": 630.41
+        },
+        {
+          "brand": "CITROEN",
+          "offers": 90,
+          "minimum": 335,
+          "median": 597
+        },
+        {
+          "brand": "SEAT",
+          "offers": 75,
+          "minimum": 247.52,
+          "median": 371
+        },
+        {
+          "brand": "AUDI",
+          "offers": 75,
+          "minimum": 315,
+          "median": 395
+        },
+        {
+          "brand": "MG",
+          "offers": 69,
+          "minimum": 305,
+          "median": 400
+        },
+        {
+          "brand": "PEUGEOT",
+          "offers": 60,
+          "minimum": 239,
+          "median": 338
+        },
+        {
+          "brand": "DACIA",
+          "offers": 45,
+          "minimum": 256,
+          "median": 322
+        },
+        {
+          "brand": "LANCIA",
+          "offers": 45,
+          "minimum": 309,
+          "median": 379
+        },
+        {
+          "brand": "HYUNDAI",
+          "offers": 45,
+          "minimum": 367.04,
+          "median": 441.5
+        },
+        {
+          "brand": "ALFA ROMEO",
+          "offers": 45,
+          "minimum": 365,
+          "median": 456
+        },
+        {
+          "brand": "Maserati",
+          "offers": 45,
+          "minimum": 1191,
+          "median": 1447
+        },
+        {
+          "brand": "Honda",
+          "offers": 15,
+          "minimum": 540,
+          "median": 615
+        }
+      ]
+    },
+    {
+      "period": "2026-09",
+      "reviewedAt": "2026-08-11",
+      "inventoryGeneratedAt": "2026-08-04T23:52:33.375Z",
+      "vehicles": 202,
+      "offers": 3662,
+      "audiences": {
+        "particular": {
+          "offers": 1136,
+          "minimum": 289,
+          "median": 511,
+          "maximum": 2096
+        },
+        "autonomo": {
+          "offers": 1278,
+          "minimum": 239,
+          "median": 428.31,
+          "maximum": 1732
+        },
+        "empresa": {
+          "offers": 1248,
+          "minimum": 239,
+          "median": 434.32,
+          "maximum": 4412.7
+        }
+      },
+      "entry": {
+        "withEntry": 0,
+        "withoutEntry": 3662,
+        "medianTotalWithoutEntry": 22560
+      },
+      "brands": [
+        {
+          "brand": "Mercedes-Benz",
+          "offers": 495,
+          "minimum": 405,
+          "median": 1203
+        },
+        {
+          "brand": "MAZDA",
+          "offers": 420,
+          "minimum": 266.16,
+          "median": 372.91
+        },
+        {
+          "brand": "OPEL",
+          "offers": 255,
+          "minimum": 242,
+          "median": 356
+        },
+        {
+          "brand": "TOYOTA",
+          "offers": 248,
+          "minimum": 256.95,
+          "median": 419.99
+        },
+        {
+          "brand": "SKODA",
+          "offers": 192,
+          "minimum": 271,
+          "median": 387
+        },
+        {
+          "brand": "OMODA",
+          "offers": 180,
+          "minimum": 340.08,
+          "median": 702.84
+        },
+        {
+          "brand": "NISSAN",
+          "offers": 171,
+          "minimum": 275,
+          "median": 425
+        },
+        {
+          "brand": "VOLKSWAGEN",
+          "offers": 165,
+          "minimum": 271.96,
+          "median": 433.54
+        },
+        {
+          "brand": "KIA",
+          "offers": 162,
+          "minimum": 315,
+          "median": 546
+        },
+        {
+          "brand": "BYD",
+          "offers": 150,
+          "minimum": 381,
+          "median": 496
+        },
+        {
+          "brand": "EBRO",
+          "offers": 135,
+          "minimum": 362.95,
+          "median": 472.6
+        },
+        {
+          "brand": "JAECOO",
+          "offers": 135,
+          "minimum": 369.43,
+          "median": 596.13
+        },
+        {
+          "brand": "BMW",
+          "offers": 135,
+          "minimum": 429,
+          "median": 578
+        },
+        {
+          "brand": "RENAULT",
+          "offers": 120,
+          "minimum": 259,
+          "median": 423.5
+        },
+        {
+          "brand": "LYNK&CO",
+          "offers": 90,
+          "minimum": 469,
+          "median": 630.41
+        },
+        {
+          "brand": "CITROEN",
+          "offers": 90,
+          "minimum": 335,
+          "median": 597
+        },
+        {
+          "brand": "SEAT",
+          "offers": 75,
+          "minimum": 247.52,
+          "median": 371
+        },
+        {
+          "brand": "AUDI",
+          "offers": 75,
+          "minimum": 315,
+          "median": 395
+        },
+        {
+          "brand": "MG",
+          "offers": 69,
+          "minimum": 305,
+          "median": 400
+        },
+        {
+          "brand": "PEUGEOT",
+          "offers": 60,
+          "minimum": 239,
+          "median": 338
+        },
+        {
+          "brand": "DACIA",
+          "offers": 45,
+          "minimum": 256,
+          "median": 322
+        },
+        {
+          "brand": "LANCIA",
+          "offers": 45,
+          "minimum": 309,
+          "median": 379
+        },
+        {
+          "brand": "HYUNDAI",
+          "offers": 45,
+          "minimum": 367.04,
+          "median": 441.5
+        },
+        {
+          "brand": "ALFA ROMEO",
+          "offers": 45,
+          "minimum": 365,
+          "median": 456
+        },
+        {
+          "brand": "Maserati",
+          "offers": 45,
+          "minimum": 1191,
+          "median": 1447
+        },
+        {
+          "brand": "Honda",
+          "offers": 15,
+          "minimum": 540,
+          "median": 615
+        }
+      ]
+    }
+  ]
+}

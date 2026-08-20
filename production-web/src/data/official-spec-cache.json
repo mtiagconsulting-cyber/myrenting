@@ -1,0 +1,509 @@
+{
+  "snapshots": {
+    "mercedes-gla-200d-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/gla/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Todos los datos técnicos Diésel. GLA 200 d. Emisiones de CO2 en el ciclo mixto 140 g/km. Consumo Combinado 5,3 l/100km. Potencia 110 kW 150 CV. Cambio automático 8G-DCT. Longitud 4.412 mm. Ancho sin retrovisores exteriores 1.834 mm. Altura 1.616 mm. Volumen del maletero 427 l. Plazas de asiento 5. Puertas 5."
+    },
+    "kia-niro-hev-138-es-2026": {
+      "url": "https://www.kia.com/es/todo-sobre-kia/territorio-kia/guias-y-ayuda/analisis-oficial-kia-niro/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Kia Niro. Sistema híbrido autorrecargable HEV de 138 CV. Dimensiones 4,43 metros de longitud. Maletero 430 litros y hasta 1.424 litros con los respaldos abatidos."
+    },
+    "opel-corsa-12t-100-es-2026": {
+      "url": "https://store.opel.es/selector/configurable/corsa-berlina/edition/1-2t-gasolina-100cv-cambio-manual-6-velocidades-gasolina/voltaik-blue/tela-melange-grey",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Tu nuevo Corsa. 1.2T Gasolina 100cv Manual. 116 g/km Emisiones CO2 combinadas. 5.1 l/100km Consumo de combustible combinado."
+    },
+    "honda-crv-phev-elegance-tech-es-2026": {
+      "url": "https://www.honda.es/cars/new/cr-v-plug-in-hybrid-suv/specifications.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Especificaciones del Honda CR-V. Elegance Tech Plug-In Hybrid 4x2. 2.0 i-MMD eCVT PHEV. 5 cómodas plazas y 5 puertas. Hasta 78 km de autonomía 100% eléctrica. Longitud: 4706 mm. Ancho: 1866 mm. Altura: 1673 mm. Capacidad de batería (kWh): 17.7. Capacidad de maletero: 617 litros. Combinado CO2 ponderado 58 g/km. Combinado consumo ponderado 2,6 l/100 km."
+    },
+    "mercedes-glc-200-4matic-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glc/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "GLC 200 4MATIC. Consumo Combinado 7 l/100km. Emisiones de CO2 158 g/km. Longitud 4.716 mm. Ancho sin retrovisores 1.890 mm. Altura 1.640 mm. Volumen del maletero 620 l. Plazas 5. Puertas 5."
+    },
+    "mercedes-glc-220d-4matic-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glc/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "GLC 220 d 4MATIC. Consumo Combinado 5,1 l/100km. Emisiones de CO2 134 g/km. Longitud 4.716 mm. Ancho sin retrovisores 1.890 mm. Altura 1.640 mm. Volumen del maletero 620 l. Plazas 5. Puertas 5."
+    },
+    "mercedes-glc-coupe-300de-4matic-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glc-coupe/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "GLC 300 de 4MATIC. Consumo ponderado 1,6 l/100km. Autonomía eléctrica 123 km. Emisiones 41 g/km. Contenido energético útil de la batería 25,28 kWh. Longitud 4.764 mm. Ancho 1.890 mm. Altura 1.614 mm. Volumen del maletero 390 l. Plazas 5. Puertas 5."
+    },
+    "toyota-yaris-hybrid-120-my26-es": {
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/yaris/Catalogo-Toyota-Yaris-MY26.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Toyota Yaris MY26. HYBRID 120 116 CV. Largo 3.940 mm. Ancho 1.745 mm. Alto 1.500 mm. Capacidad de maletero 286 l. Consumo combinado 3,9 - 4,3 l/100 km. Emisiones de CO2 88 - 97 g/km. 5 puertas. 5 plazas."
+    },
+    "bmw-ix1-edrive20-es-2026": {
+      "url": "https://www.bmw.es/content/bmw/marketES/bmw_es/es/coches-bmw/bmw-i/ix1/datos-tecnicos-bmw-ix1.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BMW iX1 eDrive20. Consumo 14,3–16,1 kWh/100 km. Autonomía 514–457 km. Capacidad de batería 65,2 kWh. Longitud 4.500 mm. Anchura 1.845 mm. Altura 1.616 mm. Capacidad del maletero 490–1.495 l. Emisiones CO2 0."
+    },
+    "bmw-serie1-120-es-2026": {
+      "url": "https://www.bmw.es/es/coches-bmw/serie-1/bmw-serie-1/caracteristicas.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BMW 120. Potencia 125 kW 170 CV. Consumo de combustible promedio WLTP 5,3–5,5 l/100 km. Emisiones CO2 promedio WLTP 121–124 g/km. Capacidad de maletero 380 litros."
+    },
+    "kia-pv5-passenger-lr-plus-es-2026": {
+      "url": "https://www.kia.com/content/dam/kwcms/kme/es/es/assets/contents/catalogos/pbv/Catalogo_PV5Passenger_MY26.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Kia PV5 L2H1 Passenger Long Range FWD. Potencia 163 CV. Consumo combinado 19,3 kWh/100 km. Autonomía WLTP ciclo combinado 412 km. Capacidad energética 71,2 kWh. Largo 4.695 mm. Ancho 1.895 mm. Alto 1.923 mm. Capacidad de equipaje 1.330 l."
+    },
+    "kia-pv5-passenger-lr-plus-import-es-2026": {
+      "url": "https://www.kia.com/content/dam/kwcms/kme/es/es/assets/contents/catalogos/pbv/Catalogo_PV5Passenger_MY26.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Kia PV5 L2H1 Passenger Long Range FWD. Potencia 163 CV. Consumo combinado 19,3 kWh/100 km. Autonomía WLTP ciclo combinado 412 km. Capacidad energética 71,2 kWh. Largo 4.695 mm. Ancho 1.895 mm. Alto 1.923 mm. Capacidad de equipaje 1.330 l."
+    },
+    "renault-austral-etech-200-es-2026": {
+      "url": "https://www.renault.es/hibridos/austral/motores.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Renault Austral full hybrid E-Tech 200 CV. Consumo de carburante 4,8 l/100 km. Emisiones de CO2 106 g/km. Largo 4510 mm. Ancho 1825 mm. Alto 1618 mm. Maletero full hybrid E-Tech 527 litros. 5 plazas. 5 puertas. Batería 2 kWh."
+    },
+    "renault-symbioz-etech-160-es-2026": {
+      "url": "https://catalogo.renault.es/es/mobile/symbioz/mobile/ct_ebro_renault_symbioz_es_april_2026.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Renault Symbioz full hybrid E-Tech 160. Batería capacidad 1,4 kWh. CO2 ciclo mixto 98 g/km. Consumo ciclo mixto 4,3 l/100 km. Largo 4413 mm. Alto 1575 mm. Ancho 2037 mm. Maletero mínimo 492 litros. 5 plazas. 5 puertas."
+    },
+    "seat-ibiza-style-115-es-2026": {
+      "url": "https://www.seat.es/coches/ibiza/style",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "SEAT Ibiza Style. 1.0 TSI 85kW (115CV). Capacidad de maletero 355 L. Longitud 4070 mm. Anchura 1780 mm. Altura 1447 mm. Asientos 5. Puertas 5."
+    },
+    "seat-ibiza-tsi115-manual-wltp-es-2026": {
+      "url": "https://www.seat-mediacenter.es/content/dam/seat-media-center/models-all-brands/seat-models/seat-ibiza/technical-data/Ficha%20t%C3%A9cnicaSEAT%20Ibiza%20%282024%29.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Ficha técnica SEAT Ibiza gasolina. 1.0 TSI 115 CV manual, caja Manual 6v. Emisiones de CO2 ponderadas WLTP 117 - 131 g/km. Consumo ponderado WLTP 5 - 5,8 l/100 km."
+    },
+    "volkswagen-tiguan-etsi-150-es-2026": {
+      "url": "https://www.volkswagen.es/comunicacion/nuevo-tiguan-una-clase-superior/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nuevo Tiguan eTSI 110 kW (150 CV) DSG. Consumo medio homologado entre 6,5 y 6,9 l/100 km. Emisiones CO2 144 g/km. Maletero 652 litros con cinco plazas. Longitud 4.539 mm. Anchura 1.842 mm. Altura 1.639 mm. 5 puertas."
+    },
+    "jaecoo-7-shs-phev-es-2026": {
+      "url": "https://jaecoo.es/wp-content/uploads/2025/05/J7_SHS_catalogo.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "JAECOO 7 SHS. Dimensiones 4500*1865*1670 mm. Número de asientos 5. Volumen maletero 340/1265 l. Capacidad batería 18.3 kWh. Autonomía eléctrica WLTP 90 km. Consumo ponderado 0.7 l/100km. Emisiones 23 g/km. 5 puertas."
+    },
+    "mg-zs-hybrid-plus-business-es-2026": {
+      "url": "https://cdn.mgmotor.eu/files/MG-ZS-ICEHybrid-ES-16052025.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "MG ZS 1.5 Hybrid+ 145/197 kW/CV. Longitud 4430 mm. Anchura 1818 mm. Altura 1635 mm. Capacidad maletero 443 l. Capacidad batería 1,83 kWh. Número de plazas 5. Consumo 5-5,1 l/100km. Emisiones 113-115 g/km. 5 puertas."
+    },
+    "ebro-s800-phev-279-es-2026": {
+      "url": "https://www.ebroauto.com/modelos/s800-phev/especificaciones",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "EBRO s800 PHEV. Potencia 205 kW (279 CV). Capacidad batería 18,3 kWh. Emisiones 56 g/km. Autonomía eléctrica 90 km. Consumo 6 l/100 km. Largo 4.725 mm. Ancho 1.860 mm. Alto 1.705 mm. Hasta 7 pasajeros. 5 puertas."
+    },
+    "byd-atto2-dmi-boost-es-2026": {
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/atto-2-dmi/ATTO-2-DM-i-1125-BPS-ES-V2-web.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BYD ATTO 2 DM-i Boost. Potencia 156 kW 212 CV. Batería 18,0 kWh. Autonomía eléctrica 90 km. Autonomía combinada 1.000 km. Consumo eléctrico 15,8 kWh/100km. Consumo ponderado 1,8 l/100km. Emisiones CO2 41 g/km. Dimensiones 4.330 / 1.830 / 1.675 mm. Maletero 425 / 1335 l. 5 plazas. 5 puertas."
+    },
+    "mazda-cx60-phev-327-es-2026": {
+      "url": "https://www.mazda.es/especificaciones-mazda/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mazda CX‑60 e-SKYACTIV PHEV 241 kW (327 CV) AWD. Autonomía eléctrica 63 km. Batería 17,8 kWh. Consumo 1,5 l/100km. Emisiones CO2 33 g/km."
+    },
+    "nissan-qashqai-mhev-140-acenta-es-2026": {
+      "url": "https://www.nissan.es/vehiculos/nuevos-vehiculos/qashqai-my225/precios-versiones.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nissan Qashqai Acenta. Gasolina DIG-T 140CV (103kW) Mild Hybrid 12V Manual 6 velocidades 4x2. Consumo combinado 6,3 l/100km. Emisiones CO2 144 g/km."
+    },
+    "nissan-juke-hybrid-145-nconnecta-es-2026": {
+      "url": "https://www.nissan.es/content/dam/Nissan/es/vehicles/newjuke/jukemy24/Catalogo_JUKE_2024.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nissan Juke N-Connecta HYBRID 105 kW 143 CV, comercializado como 145 CV. Consumo combinado 4,7-4,9 l/100km. Emisiones 107-111 g/km. Maletero 354 l. Dimensiones 4210 mm, 1827 mm, 1593 mm. 5 PUERTAS / 5 PLAZAS."
+    },
+    "alfa-junior-ibrida-ti-145-es-2026": {
+      "url": "https://www.alfaromeo.es/modelos/junior-ibrida",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Alfa Romeo JUNIOR IBRIDA 107KW (145CV). Motor 1.2 Hybrid 145 CV. Consumo 4,8 – 4,9 l/100 km. Emisiones 109 – 110 g/km. Maletero 415 litros. Dimensiones 4.173 mm, 1.539 mm y 1.781 mm. 5 plazas. 5 puertas."
+    },
+    "alfa-junior-ibrida-ti-import-es-2026": {
+      "url": "https://www.alfaromeo.es/modelos/junior-ibrida",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Alfa Romeo JUNIOR IBRIDA 107KW (145CV). Motor 1.2 Hybrid 145 CV. Consumo 4,8 – 4,9 l/100 km. Emisiones 109 – 110 g/km. Maletero 415 litros. Dimensiones 4.173 mm, 1.539 mm y 1.781 mm. 5 plazas. 5 puertas."
+    },
+    "lancia-ypsilon-lx-ibrida-es-2026": {
+      "url": "https://www.lancia.es/models/ypsilon-ibrida/especificaciones-tecnicas",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Lancia Ypsilon LX. Potencia 110cv. Batería 0,432 kWh. Consumo 4,6 l/100 km. Emisiones 103 g/km. Longitud 4.080 mm. Anchura 1.768 mm. Altura 1.440 mm. Maletero 352 litros. 5 plazas. 5 puertas."
+    },
+    "dacia-sandero-stepway-ecog120-auto-es-2026": {
+      "url": "https://www.dacia.es/dacia-webstore/detalles.html?productId=VEH_UU1DJF00X76583636",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Dacia SANDERO Stepway Expression Eco-G 120 Auto. Potencia 88 (120) kW CV. Consumo GLP 7.2 l/100 km. CO2 116 g/km. número de puertas 5. número de plazas 5."
+    },
+    "opel-mokka-hybrid-gs-145-es-2026": {
+      "url": "https://www.opel.es/coches/gama-mokka/mokka/resumen.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Opel Mokka Hybrid 1,2 T XHT Hybrid eDCT6 S/S 145 CV. Consumo mixto 4,5 - 5,5 l/100 km. Emisiones CO2 102 - 125 g/km. Opel Mokka Gasolina e Hybrid: maletero 350 litros, hasta 1.105 litros. Dimensiones exteriores: longitud 4.151 mm, altura 1.531 mm, anchura 1.987 mm. 5 plazas. 5 puertas."
+    },
+    "opel-frontera-hybrid-102-es-2026": {
+      "url": "https://www.opel.es/coches/frontera/frontera-bev/resumen.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Opel Frontera Hybrid. Consumo mixto 4,9 - 6,0 l/100 km. Emisiones CO2 111 - 135 g/km."
+    },
+    "opel-frontera-hybrid-102-quadis-es-2026": {
+      "url": "https://www.opel.es/coches/frontera/frontera-bev/resumen.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Opel Frontera Hybrid. Consumo mixto 4,9 - 6,0 l/100 km. Emisiones CO2 111 - 135 g/km."
+    },
+    "peugeot-208-puretech100-manual-es-2026": {
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "PEUGEOT 208 Gasolina 100 S&S BVM6. Largo 4.055 m. Ancho 1.745 m. Alto 1.430 m. Volumen de maletero bajo bandeja 309 dm3. 5 plazas. 5 puertas."
+    },
+    "peugeot-208-puretech100-manual-paper-es-2026": {
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/208-equipamientos-caracteristicas.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "PEUGEOT 208 Gasolina 100 S&S BVM6. Largo 4.055 m. Ancho 1.745 m. Alto 1.430 m. Volumen de maletero bajo bandeja 309 dm3. 5 plazas. 5 puertas."
+    },
+    "byd-dolphin-surf-boost-es-2026": {
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/dolphin-surf/Dolphin%20surf-0826-BPS-ES-V4.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BYD DOLPHIN SURF Boost. Blade Battery 43,2 kWh. Autonomía eléctrica combinada 322 km. Consumo combinado 15,6 kWh/100 km. Emisiones CO2 0 g/km. Volumen del maletero 308/1.037 L. Dimensiones: longitud 3.990 mm, anchura 1.720 mm, altura 1.590 mm."
+    },
+    "byd-dolphin-surf-boost-import-es-2026": {
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/dolphin-surf/Dolphin%20surf-0826-BPS-ES-V4.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BYD DOLPHIN SURF Boost. Blade Battery 43,2 kWh. Autonomía eléctrica combinada 322 km. Consumo combinado 15,6 kWh/100 km. Emisiones CO2 0 g/km. Volumen del maletero 308/1.037 L. Dimensiones: longitud 3.990 mm, anchura 1.720 mm, altura 1.590 mm."
+    },
+    "byd-atto2-dmi-import-es-2026": {
+      "url": "https://www.byd.com/content/dam/byd-site/es-es/pdfs/atto-2-dmi/ATTO-2-DM-i-1125-BPS-ES-V2-web.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BYD ATTO 2 DM-i Boost. Potencia conjunta 156 kW. Batería 18,0 kWh. Autonomía eléctrica 90 km. Autonomía total superior a 1.000 km. Consumo combinado 1,8 l/100 km. Consumo con batería descargada 5,1 l/100 km. Consumo eléctrico 15,8 kWh/100 km. Emisiones 41 g/km. Maletero 425 l. Dimensiones 4.330 x 1.830 x 1.675 mm. 5 plazas y 5 puertas."
+    },
+    "ebro-s400-hev-excellence-es-2026": {
+      "url": "https://www.ebroauto.com/modelos/s400-hev/especificaciones",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "EBRO s400 HEV Excellence. Motor 1.5 L DHE. Consumo combinado 5,3 l/100 km. Emisiones CO2 120 g/km. Batería de iones de litio NCM de 1,83 kWh. Dimensiones: largo 4.320 mm, alto 1.646 mm, ancho 1.831 mm. Habitáculo con 5 plazas. 5 puertas."
+    },
+    "hyundai-tucson-hev-239-klass-es-2026": {
+      "url": "https://www.hyundai.com/es/es/modelos/tucson-hibrido.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Hyundai TUCSON Híbrido eléctrico 239cv, acabado KLASS. Consumo mixto WLTP 5,6 l/100 km. Maletero 616 litros. Medidas 1,65 metros de alto, 1,85 metros de ancho y 4,51 metros de largo. Batería de polímero de iones de litio de 1,49 kWh. 5 plazas y 5 puertas."
+    },
+    "audi-a1-30tfsi-stronic-import-es-2026": {
+      "url": "https://prensa.audi.es/wp-content/uploads/2018/11/Dossier-nuevo-Audi-A1-Sportback.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Audi A1 Sportback 30 TFSI 85 kW (116 CV), cambio S tronic de siete velocidades. Consumo combinado 5,9–6,2 l/100 km. Emisiones combinadas CO2 123-140 g/km."
+    },
+    "audi-a1-30tfsi-stronic-quadis-es-2026": {
+      "url": "https://prensa.audi.es/wp-content/uploads/2018/11/Dossier-nuevo-Audi-A1-Sportback.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Audi A1 Sportback 30 TFSI 85 kW (116 CV), cambio S tronic de siete velocidades. Consumo combinado 5,9–6,2 l/100 km. Emisiones combinadas CO2 123-140 g/km."
+    },
+    "mazda2-hybrid-116-centreline-es-2026": {
+      "url": "https://www.mazda.es/promociones/promociones-actuales/mazda2-hybrid/flexiopcion/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mazda2 Hybrid 2026 1.5 85 kW (116 CV) CVT Centre-Line. Consumo de combustible combinado WLTP 3,8-4 l/100 km. Emisiones CO2 WLTP 87-92 g/km."
+    },
+    "volkswagen-troc-etsi116-dsg-mas-es-2026": {
+      "url": "https://www.volkswagen.es/es/modelos/t-roc.html/__layer/layers/modelos/t_roc/t_roc_my26/cambio-dsg-de-serie/master.layer",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Volkswagen Nuevo T-Roc 1.5 eTSI, motor mild hybrid de 85 Kw (116CV), transmisión Automático DSG. Maletero hasta 475 L. Consumo combinado 5,5 - 5,9 l/100 km. Emisiones CO2 125 – 135 g/km. 5 plazas y 5 puertas."
+    },
+    "mazda-cx30-mhev140-manual-primeline-es-2026": {
+      "url": "https://www.mazda.es/gama/mazda-cx-30/especificaciones-y-comparativa/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mazda CX-30 Prime-Line 2.5L e-SKYACTIV G 140, gasolina Mazda M Hybrid, Manual 6 velocidades, tracción delantera. Consumo combinado WLTP 5,7 - 6,6 l/100 km. Emisiones CO2 WLTP 129 - 148 g/km. Volumen de carga hasta 430 l. 5 plazas y 5 puertas."
+    },
+    "mazda3-mhev140-manual-primeline-es-2026": {
+      "url": "https://www.mazda.es/gama/mazda3-hatchback/especificaciones-y-comparativa/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "MAZDA3 5 Puertas Prime-Line. 2.5L e-SKYACTIV G 140, 140 CV, gasolina Mazda M Hybrid, Manual 6 velocidades, tracción delantera FWD. Emisiones WLTP: 133 g/km."
+    },
+    "toyota-chr-hybrid140-advance-es-2026": {
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/toyota-c-hr/Brochure_Toyota_C-HR_Hybrid_25_ok.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Toyota C-HR Advance HYBRID 140 e-CVT. Potencia 140 CV. Dimensiones 4362 x 1832 x 1564 mm. Maletero 388 l. Consumo combinado 4,7-4,8 l/100 km. Emisiones CO2 105-109 g/km. Batería 0,85 kWh. 5 plazas y 5 puertas."
+    },
+    "toyota-yariscross-hybrid130-activeplus-es-2026": {
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/yaris-cross/Catalogo_TOYOTA_YarisCross_MY25.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Toyota Yaris Cross Active Plus HYBRID 130, potencia comercial 130 CV. Dimensiones: largo 4172 mm, ancho 1765 mm, alto 1595 mm. Maletero 397 l. Consumo combinado 4,5-4,8 l/100 km. Emisiones CO2 101-109 g/km. 5 plazas y 5 puertas."
+    },
+    "skoda-elroq85-286-es-2026": {
+      "url": "https://www.skoda.es/modelos/elroq/elroq/skoda-elroq-engines",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Elroq 85, 82 kWh 286 CV Automático, batería útil 77 kWh. Autonomía eléctrica más de 560 kilómetros. Maletero 470 litros y hasta 1.580 litros. Emisiones CO2 0 g/km. 5 plazas y 5 puertas."
+    },
+    "nissan-qashqai-mhev140-acenta-import-es-2026": {
+      "url": "https://www.nissan.es/content/dam/Nissan/es/brochures/E-Catalogo_Nissan_Qashqai_ES.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nissan Qashqai Acenta DIG-T 103 kW (140 CV) Mild Hybrid 12V. Longitud 4 425 mm, anchura 1 835 mm, altura 1 625 mm. Maletero hasta 504 l. Consumo combinado 6,3 - 6,5 l/100 km. Emisiones CO2 142 - 146 g/km. 5 plazas y 5 puertas."
+    },
+    "seat-leon-st-tdi115-style-es-2026": {
+      "url": "https://www.seat.es/coches/leon-sportstourer/fr",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "SEAT León Sportstourer Style, motor 2.0 TDI evo 85 kW (115 CV). Maletero 620 l. Dimensiones: longitud 4.642 mm, altura 1.448 mm, anchura 1.800 mm. 5 plazas y 5 puertas."
+    },
+    "lynkco-01-core-276-es-2026": {
+      "url": "https://www.lynkco.com/es-es/cars/01",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Lynk & Co 01 Core, híbrido enchufable de 276 CV. Autonomía eléctrica 75 km. Consumo ponderado 0,9 l/100 km. Emisiones CO2 63 g/km. Maletero 466 litros. Dimensiones: ancho 1,860 mm, longitud 4,545 mm, altura 1,694 mm. 5 plazas y 5 puertas."
+    },
+    "lynkco-08-core-345-es-2026": {
+      "url": "https://www.lynkco.com/es-es/cars/08",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Lynk & Co 08 Core, híbrido enchufable de 345 CV. Autonomía eléctrica 200 km y autonomía combinada más de 1000 km. Consumo eléctrico 20,8 kWh/100 km. Consumo combustible 0,9 l/100 km. Emisiones CO2 23 g/km. Maletero 540 litros. Dimensiones: longitud 4.820 mm, ancho 2.140 mm, altura 1.690 mm. 5 plazas y 5 puertas."
+    },
+    "kia-pv5-cargo-l2h1-lr-essential-es-2026": {
+      "url": "https://www.kia.com/es/pbv/vehiculos/pv5-cargo/discover/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Kia PV5 Cargo L2H1 Essential FWD LR (71.2kWh). Batería de iones de litio de 71,2 kWh. Consumo combinado 191 Wh/km, equivalente a 19,1 kWh/100 km. Autonomía oficial Kia Iberia 412 km. Emisiones CO2 0 g/km. Dimensiones: longitud 4,695 mm, ancho 1,895 mm, altura 1,923 mm. Volumen de carga 4.4 m3. 2 plazas y 3 puertas."
+    },
+    "opel-corsa-gs-12t100-import-es-2026": {
+      "url": "https://store.opel.es/selector/configurable/corsa-berlina/edition/1-2t-gasolina-100cv-cambio-manual-6-velocidades-gasolina/voltaik-blue/tela-melange-grey",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Opel Corsa GS 1.2T Gasolina 100cv Manual. Consumo combinado 5.1 l/100km. Emisiones CO2 116 g/km."
+    },
+    "omoda9-shs-537-import-es-2026": {
+      "url": "https://omodaoficial.es/wp-content/uploads/2025/07/OMODA-9-CATA%CC%81LOGO.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "OMODA 9 SHS Premium. Motor 1.5TGDI y transmisión 3DHT. Potencia combinada 395 kW / 537 CV AWD. Consumo combinado WLTP 1,7 l/100 km. Emisiones CO2 38 g/km. Dimensiones: longitud 4.775 mm, anchura 1.920 mm y altura 1.671 mm. Batería 34,46 kWh. Autonomía eléctrica WLTP 145 km. 5 plazas y 5 puertas."
+    },
+    "maserati-grecale-gt-mhev300-es-2026": {
+      "url": "https://www.maserati.com/content/dam/maserati/worldwide/brochures/catalogues/grecale/Grecale-Digital-Catalogue-ES_low.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Maserati Grecale GT L4 MHEV 300 CV. Dimensiones: longitud 4.846 mm, anchura sin retrovisores 1.948 mm y altura 1.670 mm. Maletero 535 litros. Consumo combinado WLTP 8,7-9,2 l/100 km. Emisiones CO2 WLTP 198-208 g/km. 5 plazas y 5 puertas."
+    },
+    "renault-captur-ecog100-evolution-es-2026": {
+      "url": "https://catalogo.renault.es/es/mobile/captur/ct_captur_ph2_es_september_2024.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Renault Captur evolution Eco-G 100. Potencia 74 (100) kW (CV). Consumo WLTP con GLP 7,6-8 l/100 km. Emisiones CO2 WLTP 119-125 g/km."
+    },
+    "renault-captur-ecog100-evolution-webstore-es-2026": {
+      "url": "https://www.renault.es/renault-webstore/detalles.html?productId=VEH_VF1RJB00674684523",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Renault España Webstore. CAPTUR evolution Eco-G 100cv (74kW) -SS, GLP, manual. Características técnicas: número de puertas 5; número de plazas 5."
+    },
+    "nissan-micra-standard-range-nconnecta-es-2026": {
+      "url": "https://micra.nissan.es/dimensiones",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nissan MICRA Standard Range N-Connecta eléctrico de 122 CV. Batería 40 kWh. Autonomía combinada WLTP 317 km y consumo eléctrico 14.3 kWh/100 km. Emisiones 0 g/km. Dimensiones: longitud 3.974 mm, anchura 1.830 mm y altura 1.498 mm. Maletero 326 L. 5 puertas y 5 plazas."
+    },
+    "mg3-gasoline-comfort-115-es-2026": {
+      "url": "https://cdn.mgmotor.eu/files/MG3-espanol-2025-31-enero.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "MG3 Gasolina 1.5 Manual Comfort. Potencia 85 kW / 115 CV. Dimensiones: longitud 4113 mm, anchura 1 797 mm y altura 1 502 mm. Maletero 293 litros. Consumo WLTP 6,1 l/100 km y emisiones CO2 137 g/km. 5 plazas y 5 puertas."
+    },
+    "omoda7-shs-premium-279-import-es-2026": {
+      "url": "https://www.omodajaecoo.es/modelos/omoda-7/hibrido-ficha-tecnica",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "OMODA 7 SHS Premium 1.5 TGDI Automática. Potencia máxima del sistema 205 kW / 279CV. Consumo combinado WLTP 2,3l/100km. Emisiones de CO2 WLTP 53g/km. Capacidad de la batería 18,4kWh. Autonomía en modo eléctrico 92km."
+    },
+    "audi-a1-sportback-capacity-es-2026": {
+      "url": "https://www.audi.es/es/modelos/a1/dimensiones/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Medidas Audi A1 Sportback. Capacidad del maletero 335 litros."
+    },
+    "nissan-qashqai-body-capacity-es-2026": {
+      "url": "https://www.nissan.es/cf/vehiculos/nuevos-vehiculos/qashqai/dimensiones",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nissan Qashqai. Longitud 4.425 mm, anchura sin retrovisores 1.835 mm y altura 1.625 mm. Capacidad del maletero: Hasta 504 L. El Nissan Qashqai tiene capacidad para 5 personas y carrocería de 5 puertas."
+    },
+    "volkswagen-troc-etsi116-dimensions-eu-2026": {
+      "url": "https://www.volkswagen-newsroom.com/en/publications/more/the-new-t-roc-factsheet-3133/download",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "The new Volkswagen T-Roc 1.5 eTSI, mild hybrid, 85 kW (116 PS), Seven-speed DSG. Length 4,373 mm. Width excluding exterior mirrors 1,828 mm. Height 1,573 mm. Luggage compartment capacity 475 litres."
+    },
+    "toyota-proace-city-l1-capacity-es-2026": {
+      "url": "https://www.toyota.es/empresas/coches/proace-city/caracteristicas/medidas",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Medidas de la Toyota Proace City y capacidad de carga. L1 (media): longitud total 4.403 mm. Volumen de carga sin Smart Cargo: 3.300 litros."
+    },
+    "toyota-proace-city-l2-capacity-es-2026": {
+      "url": "https://www.toyota.es/empresas/coches/proace-city/caracteristicas/medidas",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Medidas de la Toyota Proace City y capacidad de carga. L2 (larga): longitud total 4.753 mm. Volumen de carga sin Smart Cargo: 3.900 litros."
+    },
+    "toyota-proace-city-diesel100-wltp-es-2026": {
+      "url": "https://www.toyota.es/content/dam/toyota/nmsc/spain/cross-model/new-cars/catalogos-precios/pdf/proace-city/PROACE_CITY_MY25.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Toyota Proace City diésel 1.5 l 100 CV manual. Consumo combinado WLTP 5,3-5,9 l/100 km. Emisiones CO2 combinadas WLTP 138-156 g/km. Clasificación EURO 6. Aplicable a distancia entre ejes Media L1 y Larga L2."
+    },
+    "bmw-serie1-120-dimensions-es-2026": {
+      "url": "https://www.bmw.es/es/coches-bmw/serie-1/bmw-serie-1/caracteristicas.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BMW Serie 1 120. Longitud 4.361 mm, anchura 1.800 mm y altura 1.459 mm. 5 plazas y 5 puertas."
+    },
+    "bmw-serie1-120d-163-es-2026": {
+      "url": "https://www.bmw.es/es/coches-bmw/serie-1/bmw-serie-1/datos-tecnicos-bmw-serie1.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "BMW 120d. Diésel Mild-Hybrid de 48 voltios, potencia 120 (163) kW (CV). Consumo WLTP 4,3–4,4 l/100 km y emisiones CO2 112–115 g/km. Capacidad de batería 0,9 kWh. Longitud 4.361 mm, anchura 1.800 mm y altura 1.459 mm. Capacidad del maletero 300–1.135 l. 5 plazas y 5 puertas."
+    },
+    "mazda-cx60-phev-capacity-es-2026": {
+      "url": "https://www.mazda.es/mazda-spirit/diseno/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mazda CX-60, SUV grande híbrido enchufable. Capacidad del maletero: 570-1.726 litros."
+    },
+    "skoda-octavia-combi-tdi150-dsg-es-2026": {
+      "url": "https://www.skoda.es/_doc/b969cacf-03b5-47f4-aa6f-3a2398b6344a",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Octavia Combi Selection 2.0 TDI 110 kW (150 CV). Automática de 7 velocidades DSG. Consumo WLTP 4,5–4,9 l/100 km. Emisiones CO2 119–128 g/km. Maletero 640/1.700 l. Dimensiones: longitud 4.698 mm, anchura 1.829 mm y altura 1.468 mm. 5 asientos, 5 puertas."
+    },
+    "skoda-octavia-limo-tdi150-dsg-es-2026": {
+      "url": "https://www.skoda.es/_doc/b969cacf-03b5-47f4-aa6f-3a2398b6344a",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Octavia Limo Selection 2.0 TDI 110 kW (150 CV). Automática de 7 velocidades DSG. Consumo WLTP 4,5–4,9 l/100 km. Emisiones CO2 119–128 g/km. Maletero 600 litros. Dimensiones: longitud 4.698 mm, anchura 1.829 mm y altura 1.468 mm. 5 asientos, 5 puertas."
+    },
+    "skoda-fabia-15tsi150-dsg-es-2026": {
+      "url": "https://www.skoda.es/_doc/51bb7bed-879e-4311-b015-4d9f9237cc69",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Fabia Plus 1.5 TSI 110 kW (150 CV), DSG automática de 7 velocidades. Consumo combinado WLTP 5,5 l/100 km. Emisiones CO2 combinadas WLTP 124–125 g/km. Maletero 380/1.190 litros. Dimensiones: largo/ancho 4.108/1.780 mm y alto 1.459 mm. 5 asientos, 5 puertas."
+    },
+    "skoda-elroq85-range-es-2026": {
+      "url": "https://comunicacion.skoda.es/2025/02/04/skoda-presenta-en-espana-el-elroq-su-apuesta-electrica-en-el-importante-segmento-de-los-suv-compactos/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Elroq 85 con batería de 82 kWh, 77 kWh neto, potencia de 210 kW y autonomía eléctrica WLTP de 578 kilómetros."
+    },
+    "skoda-elroq85-consumption-es-2026": {
+      "url": "https://www.skoda.es/_doc/2023e3d9-8c55-4fdb-a991-58025dd004d0",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda ELROQ 85 82 kWh - 210kW. Consumo de energía ELROQ 85 combinado WLTP: 153,1 Wh/km. Emisiones de CO2 WLTP: 0 g/km."
+    },
+    "skoda-kamiq-tsi115-manual-es-2026": {
+      "url": "https://www.skoda.es/_doc/210fd3b2-79d7-41eb-9332-fc05af2eed7b",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Kamiq Selection 1.0 TSI/85 kW (115 CV), gasolina, Manual de 6 velocidades. Consumo combinado WLTP 5,4 l/100 km y emisiones CO2 122 g/km. Maletero 400/1.395 litros. Dimensiones 4.241/1.793 mm y altura 1.562 mm. 5 asientos, 5 puertas."
+    },
+    "skoda-kamiq-tsi115-dsg-es-2026": {
+      "url": "https://www.skoda.es/_doc/210fd3b2-79d7-41eb-9332-fc05af2eed7b",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Kamiq Selection 1.0 TSI/85 kW (115 CV), gasolina, DSG automática de 7 velocidades. Consumo combinado WLTP 5,6-5,8 l/100 km y emisiones CO2 126-127 g/km. Maletero 400/1.395 litros. Dimensiones 4.241/1.793 mm y altura 1.562 mm. 5 asientos, 5 puertas."
+    },
+    "skoda-karoq-tdi150-dsg-es-2026": {
+      "url": "https://www.skoda.es/_doc/be2ee69c-63db-412f-bc1a-93f98b5d9ac6",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Škoda Karoq 2.0 TDI 110 kW (150 CV), diésel, 4×4 y Automática de 7 velocidades DSG. Consumo combinado WLTP 5,6–6,1 l/100 km y emisiones CO2 147–160 g/km. Maletero 521/1.630 litros. Dimensiones 4.390/1.841 mm y altura 1.603 mm. 5 asientos, 5 puertas."
+    },
+    "jaecoo5-shs-hev224-exclusive-es-2026": {
+      "url": "https://www.omodajaecoo.es/modelos/jaecoo-5",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "JAECOO 5 SHS híbrido Exclusive, sistema 1.5T DHE con dos motores eléctricos. Potencia máxima 224CV. Consumo combinado WLTP 5,3 l/100km y emisiones WLTP 120 g/km. Maletero de hasta 480L. 5 plazas y 5 puertas."
+    },
+    "omoda5-shs-hev224-business-es-2026": {
+      "url": "https://www.omodajaecoo.es/modelos/omoda-5/hibrido-ficha-tecnica",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Ficha técnica oficial OMODA 5 SHS. Motorización 1.5T SHS, transmisión DHT automática y potencia máxima 224CV. Consumo combinado WLTP 5,3l/100km. Emisiones WLTP 120g/km."
+    },
+    "mazda-cx30-body-es-2026": {
+      "url": "https://www.mazda.es/gama/coches-suv/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "MAZDA CX‑30 2.5L e-SKYACTIV G M Hybrid 140 CV, manual o automático, tracción delantera. Longitd: 4,395mm. Anchura: 1,795mm. Altura: 1,540mm. Capacidad de maletero 430-1,406 litros. 5 adultos y 5 puertas."
+    },
+    "mazda-cx60-body-es-2026": {
+      "url": "https://www.mazda.es/gama/coches-suv/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "MAZDA CX‑60 e-SKYACTIV PHEV AWD 241 kW (327 CV). Longitud: 4,745mm. Anchura: 1,890mm. Altura: 1,685mm. Capacidad de maletero 570-1,726 litros. 5 adultos y 5 puertas."
+    },
+    "omoda7-shs-body-es-2026": {
+      "url": "https://www.omodajaecoo.es/prensa/omoda-7-shs-diseno-avanzado-tecnologia-inteligente-y-excelencia-hibrida-enchufable",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "OMODA 7 SHS Premium híbrido enchufable. Dimensiones: 4.660 mm de longitud, 1.875 mm de anchura y 1.670 mm de altura. Habitáculo para cinco ocupantes. Maletero de 537 litros, ampliable a 1.294 litros. 5 puertas."
+    },
+    "opel-corsa-capacity-es-2026": {
+      "url": "https://www.opel.es/content/opel/worldwide/spain/es/index/coches/categorias/coches-pequenos.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Opel Corsa gasolina 1.2T 100 CV GS. Dimensiones exteriores: Longitud total 4.060 mm, altura: 1.433 mm, anchura: 1.765 mm. Volumen de carga: 309 litros. Coche urbano de 5 puertas."
+    },
+    "audi-a1-sportback-body-es-2026": {
+      "url": "https://www.audi.es/es/modelos/a1/dimensiones/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Medidas Audi A1 Sportback 30 TFSI. Largo: 4029 mm. Ancho: 1940 mm. Alto: 1409 mm. Capacidad del maletero: 335 litros. 5 plazas y 5 puertas."
+    },
+    "renault-austral-etech200-body-es-2026": {
+      "url": "https://www.renault.es/hibridos/austral/medidas.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Renault Austral full hybrid E-Tech 200. Largo 4510 mm, alto 1618 mm y ancho 1825 mm. Maletero full hybrid E-Tech de 527 litros con banqueta fija, hasta 657 litros desplazada y 1.736 litros abatida. 5 plazas y 5 puertas."
+    },
+    "renault-austral-etech200-battery-es-2026": {
+      "url": "https://catalogo.renault.es/es/mobile/austral/mobile/ct_austral_hhn_es_mai_2024.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Renault Austral E-Tech full hybrid 200 CV. Batería: tipo de batería, iones de litio; tensión (V), 400; capacidad (kWh), 2."
+    },
+    "lynkco-08-core-battery-es-2026": {
+      "url": "https://press.lynkco.com/es-ES/260342-lynk-co-08-logra-un-record-guinness-al-alcanzar-293-km-en-modo-100-electrico/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Lynk & Co 08 híbrido enchufable. Su batería de alta energía de 39,6 kWh ofrece 200 km de autonomía eléctrica homologada WLTP."
+    },
+    "mercedes-cla-250plus-electric-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/saloon/cla-electric/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mercedes-Benz CLA 250+ eléctrico, 200 kW (272 CV). Consumo 12,3 kWh/100km, autonomía 789 km y emisiones de CO2 0 g/km. Contenido energético útil de la batería 85 kWh. Longitud 4.723 mm, ancho sin retrovisores 1.855 mm y altura 1.468 mm. Maletero 405 l. Plazas de asiento: 5. Puertas: 4."
+    },
+    "mercedes-cla-250plus-sb-electric-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/estate/cla-shooting-brake-electric/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mercedes-Benz CLA 250+ SB eléctrico, 200 kW (272 CV). Consumo 12,8 kWh/100km, autonomía 767 km y emisiones de CO2 0 g/km. Contenido energético útil de la batería 85 kWh. Maletero 455 l. Plazas de asiento: 5. Puertas: 5."
+    },
+    "mercedes-glb-250plus-electric-es-2026": {
+      "url": "https://www.mercedes-benz.es/passengercars/models/suv/glb-electric/overview.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mercedes-Benz GLB 250+ eléctrico, 200 kW (272 CV). Consumo 15,8 kWh/100km, autonomía 630 km y emisiones de CO2 0 g/km. Contenido energético útil de la batería 85 kWh. Longitud 4.732 mm, ancho sin retrovisores 1.861 mm y altura 1.687 mm. Maletero 540 l. Plazas de asiento: 5. Puertas: 5."
+    },
+    "citroen-eberlingo-van-m-50kwh-es-2026": {
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/caracteristicas-tecnicas/CT_NUEVO_BERLINGO_VAN.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Citroën Berlingo Van, características técnicas FEBRERO 2026. ë-Berlingo Van eléctrico 50 kWh Talla M, motor de 100 kW (136 CV). Ciclo combinado WLTP: Consumo 184 Wh/km, equivalente a 18,4 kWh/100 km; Autonomía 337 km; CO2 WLTP 0 g/km."
+    },
+    "mazda2-hybrid-116-capacity-es-2026": {
+      "url": "https://www.mazda.es/promociones/promociones-actuales/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Mazda2 Hybrid, carrocería de 5 puertas, híbrido con transmisión CVT. Capacidad del maletero: 286 litros. Habitáculo para 5 plazas."
+    },
+    "kia-niro-hev-138-efficiency-es-2026": {
+      "url": "https://www.kia.com/es/todo-sobre-kia/territorio-kia/movilidad-electrica-y-sostenibilidad/hibrido-electrico-ciudad/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Kia Niro HEV con motor gasolina 1.6 GDi y motor eléctrico. Batería: 1,32 kWh. Consumo combinado (WLTP): 4,4 l/100 km. Emisiones CO₂ (WLTP): 100-105 g/km. Etiqueta DGT ECO."
+    },
+    "peugeot-208-puretech100-wltp-es-2026": {
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/b2c/our-range/208/nuevo-208/NUEVO-208.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nuevo Peugeot 208 PureTech 100 S&S BVM6, gasolina de 100 CV y cambio manual de 6 marchas. Consumo combinado WLTP: 5,0-5,2 l/100 km. Emisiones combinadas CO2 WLTP: 113-116 g/km."
+    },
+    "volkswagen-polo-match-95-capacity-es-2026": {
+      "url": "https://www.volkswagen.es/comunicacion/reinventando-un-exito-de-ventas-el-id-polo-camino-de-la-produccion-en-serie/",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Volkswagen Polo clásico de combustión, con espacio para cinco personas. El volumen del maletero es de 351 litros y aumenta hasta 1.125 litros con los respaldos traseros abatidos. Carrocería de 5 puertas."
+    },
+    "peugeot-rifter-active-business-standard-bluehdi100-wltp-es-2026": {
+      "url": "https://www.peugeot.es/content/dam/peugeot/spain/pdf/equipamientos-y-caracteristicas/Rifter-equipamientos-caracteristicas.pdf?srsltid=AfmBOorXLqL3zogj5uRuoWZqdQogR0VXfH8Y5WczNzBfjObxwkh9Hpbb",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Peugeot Rifter N1 Standard (Homologación N1). Rifter Active Business Standard BlueHDi 100 S&S Manual 6 Vel. (N1). Diesel. CO2 WLTP versión básica 145 g/km, min/max 136 - 161 g/km. Consumo WLTP versión básica 5,50 l/100 km, min/max 5,2 - 6,1 l/100 km. Cilindrada 1499 cm3."
+    },
+    "dacia-sandero-stepway-body-es-2026": {
+      "url": "https://www.dacia.es/modelos/sandero-stepway/medidas.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Medidas Dacia Sandero Stepway. Dimensiones interiores y exteriores: largo 4102 mm, alto 1586 mm, ancho 2012 mm. Volumen del maletero (dm3 VDA/litros): volumen del maletero 328/410; con la banqueta abatida 1108/1455."
+    },
+    "hyundai-tucson-hev-239-klass-emissions-es-2026": {
+      "url": "https://www.hyundai.com/es/es/compra/servicios-compra/promociones.html",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Gama Nuevo Hyundai TUCSON HEV: Emisiones CO2 (gr/km): 129-149. Consumo mixto (l/100km): 5,7-6,6. Valores obtenidos según WLTP. Ejemplo TUCSON FL 1.6T 239CV HEV AT KLASS."
+    },
+    "citroen-eberlingo-van-m-body-es-2026": {
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/c-book/CITROEN_E_BERLINGO_VAN_c-book-ES.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "Nuevo Citroën ë-Berlingo Van. Dimensiones: Talla M, 4401 mm de longitud, 2107 mm de anchura y 1796 mm de altura; Talla XL 4751 mm y 1812 mm."
+    },
+    "citroen-berlingo-van-m-cargo-es": {
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/catalogos/BERLINGO_VAN_y_eBERLINGO_VAN.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "El Citroën Berlingo Van dispone de un volumen de carga de 3,30 m3 en el talla M, que llega hasta 3,90 m3 en la talla XL."
+    },
+    "citroen-eberlingo-van-m-cargo-es": {
+      "url": "https://www.citroen.es/content/dam/citroen/spain/pdf/catalogos/BERLINGO_VAN_y_eBERLINGO_VAN.pdf",
+      "retrievedAt": "2026-08-12T00:00:00.000Z",
+      "text": "El Citroën Berlingo Van dispone de un volumen de carga de 3,30 m3 en el talla M, que llega hasta 3,90 m3 en la talla XL. Disponible en 100% eléctrico."
+    }
+  }
+}
