@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { SeoListingPage } from "@/components/seo/SeoListingPage";
-import { findSeoLanding, indexableSeoLandings, landingVehicles, offerMatchesLanding, preparedNoindexLandings, seoConsolidationDestination } from "@/lib/seo-landing-engine";
+import { findSeoLanding, getLandingPairs, indexableSeoLandings, landingVehicles, offerMatchesLanding, preparedNoindexLandings, seoConsolidationDestination } from "@/lib/seo-landing-engine";
 import { contentSlug } from "@/lib/content-slug";
 import { generateGeoFacts } from "@/lib/geo-facts";
 
@@ -15,6 +15,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { segments } = await params;
   const landing = findSeoLanding(segments);
   if (!landing) return {};
+  if (landing.type === "model") {
+    const pairs = getLandingPairs(landing);
+    const cheapest = [...pairs].sort((a, b) => a.offer.monthlyPrice - b.offer.monthlyPrice)[0];
+    const cheapestParticular = pairs.filter(({ offer }) => offer.audience === "particular").sort((a, b) => a.offer.monthlyPrice - b.offer.monthlyPrice)[0];
+    const name = `${landing.dimensions.brand} ${landing.dimensions.model}`;
+    const minimum = cheapest?.offer.monthlyPrice.toLocaleString("es-ES", { maximumFractionDigits: 2 }) ?? "—";
+    const particular = cheapestParticular?.offer.monthlyPriceIncVat?.toLocaleString("es-ES", { maximumFractionDigits: 2 }) ?? cheapestParticular?.offer.monthlyPrice.toLocaleString("es-ES", { maximumFractionDigits: 2 });
+    const title = `Renting ${name} desde ${minimum} €/mes | ${pairs.length} ofertas`;
+    const description = `Compara ${pairs.length} ofertas de renting ${name} desde ${minimum} €/mes sin IVA${particular ? ` y para particulares desde ${particular} €/mes con IVA` : ""}. Versiones, km, plazos y proveedores.`;
+    return { title, description, alternates: { canonical: landing.canonical }, robots: landing.indexable ? { index: true, follow: true } : { index: false, follow: true }, openGraph: { type: "website", title, description, url: landing.canonical } };
+  }
   return {
     title: landing.title,
     description: landing.description,
@@ -43,6 +54,9 @@ export default async function ProgrammaticRentingPage({ params }: Props) {
   ] : [{ question: "¿Hay ofertas disponibles?", answer: "Todavía no existe inventario suficiente y verificable para publicar esta selección en buscadores." }];
   const brand = typeof landing.dimensions.brand === "string" ? landing.dimensions.brand : undefined;
   const model = typeof landing.dimensions.model === "string" ? landing.dimensions.model : undefined;
+  const items = landing.type === "model"
+    ? [...new Map(getLandingPairs(landing).map(({ vehicle }) => [vehicle.id, vehicle])).values()]
+    : landingVehicles(landing);
   const baseEntityPath = model ? `/renting/${contentSlug(brand!)}/${contentSlug(model)}` : brand ? `/renting/${contentSlug(brand)}` : "/renting";
   const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Renting", path: "/renting" }, ...(brand ? [{ name: brand, path: `/renting/${contentSlug(brand)}` }] : []), ...(model ? [{ name: model, path: baseEntityPath }] : []), ...(landing.canonical !== baseEntityPath ? [{ name: landing.h1, path: landing.canonical }] : [])];
   const contextualLinks = indexableSeoLandings.filter((candidate) => candidate.canonical !== landing.canonical && ((brand && candidate.dimensions.brand === brand && (!model || candidate.dimensions.model === model)) || (!brand && landing.dimensions.body && candidate.dimensions.body === landing.dimensions.body) || (!brand && landing.dimensions.fuel && candidate.dimensions.fuel === landing.dimensions.fuel))).slice(0, 12).map((candidate) => ({ label: candidate.h1, href: candidate.canonical }));
@@ -51,7 +65,7 @@ export default async function ProgrammaticRentingPage({ params }: Props) {
     summary={landing.summary}
     idealFor={landing.idealFor}
     canonical={landing.canonical}
-    items={landingVehicles(landing)}
+    items={items}
     faqs={faqs}
     audience={landing.filters.audience}
     offerFilter={(offer) => offerMatchesLanding(offer, landing.filters)}

@@ -91,8 +91,8 @@ const fuelTaxonomies = [
 ];
 
 function matchesFilters({ vehicle, offer }: VehicleOffer, filters: SeoLandingFilters) {
-  return (!filters.brand || vehicle.brand === filters.brand)
-    && (!filters.model || vehicle.model === filters.model)
+  return (!filters.brand || contentSlug(vehicle.brand) === contentSlug(filters.brand))
+    && (!filters.model || contentSlug(vehicle.model.replace(new RegExp(`^${vehicle.brand}\\s+`, "i"), "")) === contentSlug(filters.model.replace(new RegExp(`^${filters.brand ?? ""}\\s+`, "i"), "")))
     && (!filters.audience || offer.audience === filters.audience)
     && (!filters.maxPrice || offer.monthlyPrice <= filters.maxPrice)
     && (!filters.noEntry || offer.initialPayment === 0)
@@ -152,8 +152,30 @@ function basicLanding({ slug, family, type, dimensions = {}, filters = {}, title
   return makeLanding({ slug, family, type, dimensions, filters, title: `${title} | Ofertas desde ${minimum} €/mes`, h1, description: `Compara ${stats?.offerCount ?? 0} ofertas de ${noun} desde ${minimum} €/mes. Consulta modelos, duración, kilometraje, entrada, IVA y disponibilidad.`, summary: `Compara ${stats?.offerCount ?? 0} configuraciones de ${noun} correspondientes a ${stats?.vehicleCount ?? 0} vehículos y ${stats?.modelCount ?? 0} modelos. La cuota publicada más baja parte de ${minimum} €/mes.`, idealFor, authorized, minVehicles });
 }
 
-const brandNames = [...new Map(vehicles.map((vehicle) => [contentSlug(vehicle.brand), vehicle.brand])).entries()];
-const modelNames = [...new Map(vehicles.map((vehicle) => [`${contentSlug(vehicle.brand)}/${contentSlug(vehicle.model)}`, { brand: vehicle.brand, model: vehicle.model }])).entries()];
+function preferredName(current: string | undefined, candidate: string) {
+  if (!current) return candidate;
+  if (current === current.toUpperCase() && candidate !== candidate.toUpperCase()) return candidate;
+  return current;
+}
+
+const brandNameMap = new Map<string, string>();
+for (const vehicle of vehicles) {
+  const key = contentSlug(vehicle.brand);
+  brandNameMap.set(key, preferredName(brandNameMap.get(key), vehicle.brand));
+}
+const brandNames = [...brandNameMap.entries()];
+const modelNameMap = new Map<string, { brand: string; model: string }>();
+for (const vehicle of vehicles) {
+  const brandKey = contentSlug(vehicle.brand);
+  const modelWithoutBrand = vehicle.model.replace(new RegExp(`^${vehicle.brand}\\s+`, "i"), "");
+  const key = `${brandKey}/${contentSlug(modelWithoutBrand)}`;
+  const current = modelNameMap.get(key);
+  modelNameMap.set(key, {
+    brand: brandNameMap.get(brandKey) ?? vehicle.brand,
+    model: preferredName(current?.model, modelWithoutBrand),
+  });
+}
+const modelNames = [...modelNameMap.entries()];
 
 const primary: SeoLanding[] = [
   basicLanding({ slug: "/renting", family: "renting", type: "root", title: "Renting de coches", h1: "Renting de coches", noun: "renting de coches", idealFor: "Quien quiere comparar en un único lugar las campañas activas para particulares, autónomos y empresas." }),

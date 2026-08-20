@@ -2,7 +2,7 @@ import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQ } from "@/components/seo/FAQ";
 import { Schema, faqSchema, itemListSchema } from "@/components/seo/Schema";
 import { SourceStatus } from "@/components/seo/SourceStatus";
-import { GeoComparisonTable, GeoRanking, KeyFacts, QuickAnswer } from "@/components/seo/GeoAnswerBlocks";
+import { GeoComparisonTable, GeoRanking, KeyFacts, ModelOfferComparison, QuickAnswer, type ModelOfferRow } from "@/components/seo/GeoAnswerBlocks";
 import { VehicleGrid } from "@/components/vehicles/VehicleGrid";
 import { offers } from "@/data/offers";
 import type { Vehicle } from "@/types/vehicle";
@@ -37,6 +37,17 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
     return offer ? [{ vehicle, offer }] : [];
   });
   const prices = listings.map(({ offer }) => offer.monthlyPrice);
+  const modelOfferRows = (() => {
+    if (landing?.type !== "model") return [];
+    const rows: ModelOfferRow[] = [];
+    for (const vehicle of items) {
+      for (const profile of ["particular", "autonomo", "empresa"] as const) {
+        const offer = offers.filter((item) => item.vehicleId === vehicle.id && item.audience === profile && (!offerFilter || offerFilter(item))).sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
+        if (offer) rows.push({ vehicle, offer });
+      }
+    }
+    return rows.sort((first, second) => first.offer.monthlyPrice - second.offer.monthlyPrice);
+  })();
 
   return (
     <main id="contenido-principal" className="mx-auto max-w-7xl px-5 py-7 sm:px-8 sm:py-10">
@@ -66,8 +77,8 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
         <div className="mb-6"><h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink">Ofertas para comparar</h2><p className="mt-2 text-xs text-muted">Inventario recopilado de fuentes de proveedor y separado por tipo de cliente.</p></div>
         <VehicleGrid items={listings} />
       </section>
-      {geoFacts ? <GeoComparisonTable facts={geoFacts} /> : null}
-      {geoFacts ? <GeoRanking facts={geoFacts} heading={heading} /> : null}
+      {landing?.type === "model" && modelOfferRows.length ? <ModelOfferComparison brand={String(landing.dimensions.brand)} model={String(landing.dimensions.model)} rows={modelOfferRows} /> : geoFacts ? <GeoComparisonTable facts={geoFacts} /> : null}
+      {landing?.type !== "model" && geoFacts ? <GeoRanking facts={geoFacts} heading={heading} /> : null}
       <section className="mb-14 grid gap-5 rounded-xl bg-ink p-6 text-white sm:p-8 lg:grid-cols-[0.45fr_1fr]"><p className="text-xs font-bold tracking-[0.1em] text-orange-400 uppercase">Ideal para</p><p className="font-display text-2xl font-semibold tracking-[-0.035em]">{idealFor}</p></section>
       <FAQ items={faqs} />
     </main>

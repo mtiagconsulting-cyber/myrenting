@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { GeoFacts } from "@/lib/geo-facts";
 import type { SeoLanding } from "@/lib/seo-landing-engine";
+import type { Offer } from "@/types/offer";
+import type { Vehicle } from "@/types/vehicle";
 
 const money = (value: number) => `${value.toLocaleString("es-ES", { maximumFractionDigits: 2 })} €/mes`;
 
@@ -34,6 +36,47 @@ export function KeyFacts({ facts }: { facts: GeoFacts }) {
 
 export function GeoComparisonTable({ facts }: { facts: GeoFacts }) {
   return <section aria-labelledby="comparativa-datos" className="py-12"><div className="mb-5"><h2 id="comparativa-datos" className="font-display text-3xl font-semibold text-ink">Comparativa de los modelos más económicos</h2><p className="mt-2 text-sm text-muted">Una fila por modelo, usando su configuración publicada de menor precio.</p></div><div className="overflow-x-auto rounded-xl border border-line"><table className="w-full border-collapse bg-surface text-left text-sm"><thead className="bg-slate-50 text-xs text-muted"><tr><th className="px-4 py-3">Modelo</th><th className="px-4 py-3">Desde</th><th className="px-4 py-3">Combustible</th><th className="px-4 py-3">Cambio</th><th className="px-4 py-3">Entrega</th><th className="px-4 py-3">Condiciones</th></tr></thead><tbody>{facts.ranking.map((row) => <tr key={`${row.name}-${row.price}`} className="border-t border-line"><th className="px-4 py-4 font-semibold"><Link href={row.path} className="text-ink hover:text-brand">{row.name}</Link></th><td className="font-data whitespace-nowrap px-4 py-4 font-semibold">{money(row.price)}</td><td className="px-4 py-4">{row.fuel}</td><td className="px-4 py-4">{row.transmission}</td><td className="px-4 py-4">{row.availability}</td><td className="whitespace-nowrap px-4 py-4">{row.duration} meses · {row.kilometers.toLocaleString("es-ES")} km/año</td></tr>)}</tbody></table></div></section>;
+}
+
+export type ModelOfferRow = { vehicle: Vehicle; offer: Offer };
+
+const audienceLabel: Record<Offer["audience"], string> = {
+  particular: "Particular",
+  autonomo: "Autónomo",
+  empresa: "Empresa",
+};
+
+function vatPrices(offer: Offer) {
+  const withoutVat = offer.monthlyPriceExVat ?? (offer.priceIncludesVat ? offer.monthlyPrice / 1.21 : offer.monthlyPrice);
+  const withVat = offer.monthlyPriceIncVat ?? (offer.priceIncludesVat ? offer.monthlyPrice : offer.monthlyPrice * 1.21);
+  return { withoutVat, withVat };
+}
+
+export function ModelOfferComparison({ brand, model, rows }: { brand: string; model: string; rows: ModelOfferRow[] }) {
+  return <section aria-labelledby="comparativa-versiones" className="py-12">
+    <div className="mb-5">
+      <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Versiones y condiciones</p>
+      <h2 id="comparativa-versiones" className="font-display mt-2 text-3xl font-semibold text-ink">Precios de renting del {brand} {model}</h2>
+      <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">Comparamos la cuota más baja de cada versión y perfil. Se muestran el precio sin IVA y con IVA para que puedas comparar las ofertas con el mismo criterio.</p>
+    </div>
+    <div className="overflow-x-auto rounded-xl border border-line">
+      <table className="w-full border-collapse bg-surface text-left text-sm">
+        <thead className="bg-slate-50 text-xs text-muted"><tr><th className="px-4 py-3">Versión</th><th className="px-4 py-3">Perfil</th><th className="px-4 py-3">Sin IVA</th><th className="px-4 py-3">Con IVA</th><th className="px-4 py-3">Contrato</th><th className="px-4 py-3">Proveedor</th></tr></thead>
+        <tbody>{rows.map(({ vehicle, offer }) => {
+          const prices = vatPrices(offer);
+          return <tr key={`${vehicle.id}-${offer.audience}`} className="border-t border-line align-top">
+            <th className="min-w-64 px-4 py-4 font-semibold text-ink"><span className="block">{vehicle.version}</span><span className="mt-1 block text-xs font-normal text-muted">{vehicle.fuel} · {vehicle.power} CV · {vehicle.transmission || "Cambio por confirmar"}</span></th>
+            <td className="px-4 py-4">{audienceLabel[offer.audience]}</td>
+            <td className="font-data whitespace-nowrap px-4 py-4 font-semibold">{money(prices.withoutVat)}</td>
+            <td className="font-data whitespace-nowrap px-4 py-4 font-semibold">{money(prices.withVat)}</td>
+            <td className="whitespace-nowrap px-4 py-4">{offer.duration} meses<br /><span className="text-xs text-muted">{offer.kilometers.toLocaleString("es-ES")} km/año · {offer.initialPayment === 0 ? "sin entrada" : `${offer.initialPayment.toLocaleString("es-ES")} € de entrada`}</span></td>
+            <td className="px-4 py-4">{offer.provider}<span className="mt-1 block text-xs text-muted">{offer.availability}</span></td>
+          </tr>;
+        })}</tbody>
+      </table>
+    </div>
+    <p className="mt-3 text-xs leading-5 text-muted">Las cuotas pueden cambiar según duración, kilometraje y perfil. Confirma disponibilidad y precio final con el proveedor antes de contratar.</p>
+  </section>;
 }
 
 export function GeoRanking({ facts, heading }: { facts: GeoFacts; heading: string }) {
