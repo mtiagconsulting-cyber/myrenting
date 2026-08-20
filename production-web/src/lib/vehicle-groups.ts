@@ -23,7 +23,12 @@ export function vehicleGroupKey(vehicle: Vehicle) {
 }
 
 export function vehicleModelKey(vehicle: Vehicle) {
-  return [vehicle.brand, vehicle.model].map(normalizeIdentityPart).join("|");
+  const brand = normalizeIdentityPart(vehicle.brand);
+  let model = normalizeIdentityPart(vehicle.model);
+  // Algunos proveedores repiten la marca dentro del modelo (p. ej.
+  // "ALFA-ROMEO / ALFA ROMEO JUNIOR").
+  if (model.startsWith(`${brand} `)) model = model.slice(brand.length + 1);
+  return `${brand}|${model}`;
 }
 
 export function vehiclesInSameGroup(vehicle: Vehicle, allVehicles: Vehicle[]) {

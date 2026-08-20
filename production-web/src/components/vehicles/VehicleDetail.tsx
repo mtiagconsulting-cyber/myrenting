@@ -5,15 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { OfferConfigurator } from "@/components/vehicles/OfferConfigurator";
 import type { Offer } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
+import Link from "next/link";
+import { vehiclePublicPath } from "@/lib/vehicle-groups";
 
-export function VehicleDetail({ vehicle, offer, offers, summary }: { vehicle: Vehicle; offer: Offer; offers: Offer[]; summary: string }) {
+export function VehicleDetail({ vehicle, offer, offers, variants, summary }: { vehicle: Vehicle; offer: Offer; offers: Offer[]; variants: Vehicle[]; summary: string }) {
   return (
     <section className="grid gap-7 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
       <div>
         <div className="mb-5 flex flex-wrap items-center gap-2"><Badge tone="brand">{vehicle.fuel}</Badge><Badge>{vehicle.bodyType}</Badge><Badge>{vehicle.label}</Badge></div>
         <p className="text-sm font-bold text-muted">{vehicle.brand}</p>
         <h1 className="font-display mt-1 text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">{vehicle.model}</h1>
-        <p className="mt-3 text-sm font-semibold text-copy">{vehicle.version}</p>
+        <p className="mt-3 text-sm font-semibold text-copy">{vehicle.version} · {vehicle.fuel} · {vehicle.power} CV · {vehicle.transmission}</p>
+        {variants.length > 1 ? <div className="mt-5"><p className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Motorizaciones disponibles</p><div className="mt-2 flex flex-wrap gap-2">{variants.map((variant) => <Link key={variant.id} href={vehiclePublicPath(variant)} className={`rounded-full border px-4 py-2 text-xs font-bold ${variant.id === vehicle.id ? "border-ink bg-ink text-white" : "border-line bg-white text-copy hover:border-brand"}`}>{variant.version} · {variant.fuel} · {variant.power} CV</Link>)}</div></div> : null}
+        {vehicle.colors?.length ? <p className="mt-4 text-xs text-muted"><strong className="text-copy">Color:</strong> {vehicle.colors.join(", ")}</p> : null}
         <p className="mt-5 max-w-2xl text-base leading-7 text-muted">{summary}</p>
 
         {vehicle.images ? <div className="relative mt-7 aspect-[16/9] overflow-hidden rounded-xl bg-slate-100"><Image src={vehicle.images.hero} alt={`${vehicle.brand} ${vehicle.model}`} fill priority sizes="(max-width: 1024px) 100vw, 65vw" className="object-cover" /></div> : <div className="mt-7 grid aspect-[16/7] place-items-center rounded-xl border border-line bg-[linear-gradient(135deg,#f8fafc,#e2e8f0)] text-center"><div><ImageOff className="mx-auto mb-4 text-slate-400" size={28} aria-hidden="true" /><p className="font-display text-4xl font-semibold text-slate-500">{vehicle.brand} {vehicle.model}</p><p className="mt-2 text-xs font-semibold text-muted">Imagen oficial pendiente de autorización</p></div></div>}

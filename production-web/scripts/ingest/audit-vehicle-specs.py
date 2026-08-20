@@ -11,7 +11,6 @@ OVERRIDES = {
     ("ALFA ROMEO", "JUNIOR"): (145, "Automático"),
     ("ALFA-ROMEO", "ALFA ROMEO JUNIOR"): (145, "Automático"),
     ("BMW", "IX1"): (204, "Automático"),
-    ("BMW", "SERIE 1"): (170, "Automático"),
     ("BYD", "ATTO"): (212, "Automático"),
     ("BYD", "DOLPHIN"): (88, "Automático"),
     ("CITROEN", "EBERLINGO"): (136, "Automático"),
@@ -71,8 +70,13 @@ def main() -> None:
     for vehicle in data["vehicles"]:
         key = (vehicle["brand"].upper(), vehicle["model"].upper())
         override = OVERRIDES.get(key)
+        if key == ("BMW", "SERIE 1"):
+            override = (163 if re.search(r"\b120d\b", vehicle["version"], re.I) else 170, "Automático")
         power = override[0] if override else inferred_power(vehicle["version"])
         gearbox = override[1] if override else inferred_transmission(vehicle)
+        if key == ("BMW", "SERIE 1") and power and vehicle.get("power") != power:
+            vehicle["power"] = power
+            changes += 1
         if not vehicle.get("power") and power:
             vehicle["power"] = power
             changes += 1

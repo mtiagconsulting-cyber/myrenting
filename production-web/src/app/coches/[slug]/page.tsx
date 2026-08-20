@@ -15,7 +15,7 @@ import { vehicles } from "@/data/vehicles";
 import { fuelPages } from "@/lib/catalog-taxonomy";
 import { contentSlug } from "@/lib/content-slug";
 import { recommendVehicles } from "@/lib/recommendations";
-import { canonicalVehicle, canonicalVehicles, vehiclePublicPath, vehiclePublicSlug, vehiclesInSameGroup } from "@/lib/vehicle-groups";
+import { canonicalVehicle, canonicalVehicles, representativeVehicle, vehicleGroupKey, vehicleModelKey, vehiclePublicPath, vehiclePublicSlug, vehiclesInSameGroup } from "@/lib/vehicle-groups";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -49,6 +49,12 @@ export default async function VehiclePage({ params }: Props) {
   if (!requestedVehicle) notFound();
   const vehicle = canonicalVehicle(requestedVehicle, vehicles);
   const groupedVehicles = vehiclesInSameGroup(vehicle, vehicles);
+  const variantGroups = new Map<string, typeof vehicles>();
+  for (const item of vehicles.filter((candidate) => vehicleModelKey(candidate) === vehicleModelKey(vehicle))) {
+    const key = vehicleGroupKey(item);
+    variantGroups.set(key, [...(variantGroups.get(key) ?? []), item]);
+  }
+  const variants = [...variantGroups.values()].map(representativeVehicle);
   const groupedIds = new Set(groupedVehicles.map((item) => item.id));
   const vehicleOffers = offers.filter((item) => groupedIds.has(item.vehicleId));
   const offer = vehicleOffers.sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
@@ -61,7 +67,7 @@ export default async function VehiclePage({ params }: Props) {
     <main id="contenido-principal" className="mx-auto max-w-7xl px-5 py-7 sm:px-8 sm:py-10">
       <Schema data={vehicleSchema(vehicle, vehicleOffers, offer, editorial.summary, editorial.faqs)} />
       <nav aria-label="Migas de pan" className="mb-8 flex items-center gap-2 text-xs text-muted"><Link href="/" className="hover:text-ink">Inicio</Link><span>/</span><Link href={`/renting/${contentSlug(vehicle.brand)}`} className="hover:text-ink">{vehicle.brand}</Link><span>/</span><Link href={`/renting/${contentSlug(vehicle.brand)}/${contentSlug(vehicle.model)}`} className="hover:text-ink">{vehicle.model}</Link><span>/</span><span className="truncate text-copy">{vehicle.version}</span></nav>
-      <VehicleDetail vehicle={vehicle} offer={offer} offers={vehicleOffers} summary={editorial.summary} />
+      <VehicleDetail vehicle={vehicle} offer={offer} offers={vehicleOffers} variants={variants} summary={editorial.summary} />
 
       <div className="mt-8 space-y-3">
         <AnswerSummary
