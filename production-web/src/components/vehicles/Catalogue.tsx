@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { GitCompareArrows, X } from "lucide-react";
 import { Filters } from "@/components/search/Filters";
 import { VehicleGrid } from "@/components/vehicles/VehicleGrid";
-import { representativeVehicle, vehicleGroupKey } from "@/lib/vehicle-groups";
+import { vehicleModelKey } from "@/lib/vehicle-groups";
 import type { Offer } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
 
@@ -39,33 +39,21 @@ function FilteredCatalogue({ items }: { items: Item[] }) {
     // Elegimos la mejor cuota después de filtrar todas las combinaciones.
     // Si se hace antes, los tramos de kilometraje distintos al más barato
     // desaparecen aunque estén disponibles en la campaña.
-    const bestByVehicleAndAudience = new Map<string, Item>();
+    const bestByModel = new Map<string, Item>();
     for (const item of matching) {
-      const key = `${vehicleGroupKey(item.vehicle)}:${item.offer.audience}`;
-      const current = bestByVehicleAndAudience.get(key);
-      if (!current || item.offer.monthlyPrice < current.offer.monthlyPrice) {
-        bestByVehicleAndAudience.set(key, item);
+      const key = vehicleModelKey(item.vehicle);
+      const current = bestByModel.get(key);
+      const itemPrice = item.offer.monthlyPriceExVat ?? item.offer.monthlyPrice / (item.offer.priceIncludesVat ? 1.21 : 1);
+      const currentPrice = current ? current.offer.monthlyPriceExVat ?? current.offer.monthlyPrice / (current.offer.priceIncludesVat ? 1.21 : 1) : Infinity;
+      if (!current || itemPrice < currentPrice) {
+        bestByModel.set(key, item);
       }
     }
-    const bestItems = [...bestByVehicleAndAudience.values()];
-    if (audience) return bestItems.sort((first, second) => first.offer.monthlyPrice - second.offer.monthlyPrice);
-
-    // Unimos los registros que los proveedores separan por tipo de cliente.
-    // La identidad incluye versión, combustible y potencia, de modo que no se
-    // mezclan generaciones ni motorizaciones distintas del mismo modelo.
-    const groupedByVehicle = new Map<string, Item>();
-    for (const item of bestItems) {
-      const key = vehicleGroupKey(item.vehicle);
-      const current = groupedByVehicle.get(key);
-      if (!current) {
-        const groupVehicles = items.filter((candidate) => vehicleGroupKey(candidate.vehicle) === key).map((candidate) => candidate.vehicle);
-        groupedByVehicle.set(key, { ...item, vehicle: representativeVehicle(groupVehicles), profileOffers: [item.offer] });
-        continue;
-      }
-      current.profileOffers = [...(current.profileOffers ?? []), item.offer].sort((first, second) => first.monthlyPrice - second.monthlyPrice);
-      if (item.offer.monthlyPrice < current.offer.monthlyPrice) current.offer = item.offer;
-    }
-    return [...groupedByVehicle.values()].sort((first, second) => first.offer.monthlyPrice - second.offer.monthlyPrice);
+    return [...bestByModel.values()].sort((first, second) => {
+      const firstPrice = first.offer.monthlyPriceExVat ?? first.offer.monthlyPrice / (first.offer.priceIncludesVat ? 1.21 : 1);
+      const secondPrice = second.offer.monthlyPriceExVat ?? second.offer.monthlyPrice / (second.offer.priceIncludesVat ? 1.21 : 1);
+      return firstPrice - secondPrice;
+    });
   }, [items, params]);
   useEffect(() => setVisibleCount(24), [params]);
 

@@ -10,15 +10,20 @@ function normalizeIdentityPart(value: string | number) {
     .trim();
 }
 
-/**
- * Identidad comercial de una versión. Los proveedores crean registros separados
- * por público, pero marca, modelo y versión permanecen iguales. Combustible y
- * potencia evitan unir accidentalmente dos motorizaciones con nombres parecidos.
+/** Identidad de motorización compartida entre proveedores.
+ *
+ * Las gestoras suelen escribir de forma distinta la misma versión (por ejemplo,
+ * "6 Vel. MAN" y "6 Vel. Manual Turbo"). Marca, modelo, combustible, potencia y
+ * cambio son más estables y permiten reunir esas variantes sin mezclar motores.
  */
 export function vehicleGroupKey(vehicle: Vehicle) {
-  return [vehicle.brand, vehicle.model, vehicle.version, vehicle.fuel, vehicle.power]
+  return [vehicle.brand, vehicle.model, vehicle.fuel, vehicle.power, vehicle.transmission ?? ""]
     .map(normalizeIdentityPart)
     .join("|");
+}
+
+export function vehicleModelKey(vehicle: Vehicle) {
+  return [vehicle.brand, vehicle.model].map(normalizeIdentityPart).join("|");
 }
 
 export function vehiclesInSameGroup(vehicle: Vehicle, allVehicles: Vehicle[]) {
@@ -41,7 +46,7 @@ export function canonicalVehicle(vehicle: Vehicle, allVehicles: Vehicle[]) {
 export function canonicalVehicles(allVehicles: Vehicle[]) {
   const groups = new Map<string, Vehicle[]>();
   for (const vehicle of allVehicles) {
-    const key = vehicleGroupKey(vehicle);
+    const key = vehicleModelKey(vehicle);
     groups.set(key, [...(groups.get(key) ?? []), vehicle]);
   }
   return [...groups.values()].map(representativeVehicle);

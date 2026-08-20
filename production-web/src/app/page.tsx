@@ -9,7 +9,7 @@ import { offers } from "@/data/offers";
 import { vehicles } from "@/data/vehicles";
 import { brands } from "@/data/vehicles";
 import { getComparison, popularComparisonSlugs } from "@/lib/comparison";
-import { canonicalVehicles, vehiclesInSameGroup } from "@/lib/vehicle-groups";
+import { canonicalVehicles, vehicleModelKey } from "@/lib/vehicle-groups";
 
 export const metadata: Metadata = {
   title: "Renting de coches para particulares, autónomos y empresas | MyRenting",
@@ -21,16 +21,15 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const popularComparisons = popularComparisonSlugs.map((slug) => ({ slug, comparison: getComparison(slug) })).filter((item) => item.comparison !== null);
   const cheapestVehicles = canonicalVehicles(vehicles).flatMap((vehicle) => {
-    const groupIds = new Set(vehiclesInSameGroup(vehicle, vehicles).map((item) => item.id));
+    const modelKey = vehicleModelKey(vehicle);
+    const modelVehicles = vehicles.filter((item) => vehicleModelKey(item) === modelKey);
+    const groupIds = new Set(modelVehicles.map((item) => item.id));
     const groupOffers = offers.filter((offer) => groupIds.has(offer.vehicleId));
     if (!groupOffers.length) return [];
-    const profileOffers = (["particular", "autonomo", "empresa"] as const).flatMap((audience) => {
-      const profile = groupOffers.filter((offer) => offer.audience === audience).sort((first, second) => first.monthlyPrice - second.monthlyPrice)[0];
-      return profile ? [profile] : [];
-    });
-    const offer = profileOffers.find((item) => item.audience === "particular") ?? [...groupOffers].sort((first, second) => first.monthlyPrice - second.monthlyPrice)[0];
-    return [{ vehicle, offer, profileOffers }];
-  }).sort((first, second) => first.offer.monthlyPrice - second.offer.monthlyPrice).slice(0, 6);
+    const offer = [...groupOffers].sort((first, second) => (first.monthlyPriceExVat ?? first.monthlyPrice / (first.priceIncludesVat ? 1.21 : 1)) - (second.monthlyPriceExVat ?? second.monthlyPrice / (second.priceIncludesVat ? 1.21 : 1)))[0];
+    const selectedVehicle = modelVehicles.find((item) => item.id === offer.vehicleId) ?? vehicle;
+    return [{ vehicle: selectedVehicle, offer }];
+  }).sort((first, second) => (first.offer.monthlyPriceExVat ?? first.offer.monthlyPrice) - (second.offer.monthlyPriceExVat ?? second.offer.monthlyPrice)).slice(0, 6);
   return (
     <main id="contenido-principal">
       <section className="border-b border-line bg-surface">
@@ -61,12 +60,12 @@ export default function HomePage() {
             <div>
               <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Cuotas más bajas</p>
               <h2 className="font-display mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink">Los coches de renting más baratos</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">Las cuotas más competitivas del inventario, ordenadas por precio y diferenciadas por perfil.</p>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">Las cuotas más competitivas del inventario, ordenadas por precio con IVA y sin IVA.</p>
             </div>
             <Link href="/coches" className="hidden items-center gap-2 text-sm font-bold text-ink sm:flex">Ver coches <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {cheapestVehicles.map((item) => <VehicleCard key={item.vehicle.id} vehicle={item.vehicle} offer={item.offer} profileOffers={item.profileOffers} />)}
+            {cheapestVehicles.map((item) => <VehicleCard key={item.vehicle.id} vehicle={item.vehicle} offer={item.offer} />)}
           </div>
           <Link href="/coches" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-5 text-sm font-bold text-white hover:bg-brand-hover">Ver todos los coches <ArrowRight size={16} aria-hidden="true" /></Link>
         </section>
