@@ -69,11 +69,30 @@ export interface SeoLanding {
   stats: SeoLandingStats | null;
 }
 
-type VehicleOffer = { vehicle: Vehicle; offer: Offer };
+type VehicleOffer = { vehicle: Vehicle; offer: Offer; brandKey: string; modelKey: string };
+const slugKeyCache = new Map<string, string>();
+const modelKeyCache = new Map<string, string>();
+function slugKey(value: string) {
+  const cached = slugKeyCache.get(value);
+  if (cached !== undefined) return cached;
+  const key = contentSlug(value);
+  slugKeyCache.set(value, key);
+  return key;
+}
+function normalizedModelKey(brand: string, model: string) {
+  const cacheKey = `${brand}\u0000${model}`;
+  const cached = modelKeyCache.get(cacheKey);
+  if (cached !== undefined) return cached;
+  const brandKey = slugKey(brand);
+  const rawModelKey = slugKey(model);
+  const key = rawModelKey.startsWith(`${brandKey}-`) ? rawModelKey.slice(brandKey.length + 1) : rawModelKey;
+  modelKeyCache.set(cacheKey, key);
+  return key;
+}
 const vehicleById = new Map(vehicles.map((vehicle) => [vehicle.id, vehicle]));
 const inventoryPairs: VehicleOffer[] = offers.flatMap((offer) => {
   const vehicle = vehicleById.get(offer.vehicleId);
-  return vehicle ? [{ vehicle, offer }] : [];
+  return vehicle ? [{ vehicle, offer, brandKey: slugKey(vehicle.brand), modelKey: normalizedModelKey(vehicle.brand, vehicle.model) }] : [];
 });
 
 const bodyTaxonomies = [
@@ -90,9 +109,9 @@ const fuelTaxonomies = [
   { slug: "diesel", label: "coches diésel", fuels: ["Diésel"] as FuelType[] },
 ];
 
-function matchesFilters({ vehicle, offer }: VehicleOffer, filters: SeoLandingFilters) {
-  return (!filters.brand || contentSlug(vehicle.brand) === contentSlug(filters.brand))
-    && (!filters.model || contentSlug(vehicle.model.replace(new RegExp(`^${vehicle.brand}\\s+`, "i"), "")) === contentSlug(filters.model.replace(new RegExp(`^${filters.brand ?? ""}\\s+`, "i"), "")))
+function matchesFilters({ vehicle, offer, brandKey, modelKey }: VehicleOffer, filters: SeoLandingFilters) {
+  return (!filters.brand || brandKey === slugKey(filters.brand))
+    && (!filters.model || modelKey === normalizedModelKey(filters.brand ?? vehicle.brand, filters.model))
     && (!filters.audience || offer.audience === filters.audience)
     && (!filters.maxPrice || offer.monthlyPrice <= filters.maxPrice)
     && (!filters.noEntry || offer.initialPayment === 0)
@@ -160,15 +179,15 @@ function preferredName(current: string | undefined, candidate: string) {
 
 const brandNameMap = new Map<string, string>();
 for (const vehicle of vehicles) {
-  const key = contentSlug(vehicle.brand);
+  const key = slugKey(vehicle.brand);
   brandNameMap.set(key, preferredName(brandNameMap.get(key), vehicle.brand));
 }
 const brandNames = [...brandNameMap.entries()];
 const modelNameMap = new Map<string, { brand: string; model: string }>();
 for (const vehicle of vehicles) {
-  const brandKey = contentSlug(vehicle.brand);
-  const modelWithoutBrand = vehicle.model.replace(new RegExp(`^${vehicle.brand}\\s+`, "i"), "");
-  const key = `${brandKey}/${contentSlug(modelWithoutBrand)}`;
+  const brandKey = slugKey(vehicle.brand);
+  const modelWithoutBrand = normalizedModelKey(vehicle.brand, vehicle.model) === slugKey(vehicle.model) ? vehicle.model : vehicle.model.replace(new RegExp(`^${vehicle.brand}\\s+`, "i"), "");
+  const key = `${brandKey}/${normalizedModelKey(vehicle.brand, vehicle.model)}`;
   const current = modelNameMap.get(key);
   modelNameMap.set(key, {
     brand: brandNameMap.get(brandKey) ?? vehicle.brand,
