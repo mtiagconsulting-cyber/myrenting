@@ -1,4 +1,4 @@
-import { link, mkdir, readdir, rm } from "node:fs/promises";
+import { link, mkdir, readFile, readdir, rm } from "node:fs/promises";
 import { basename, dirname, join, relative } from "node:path";
 
 const source = join(process.cwd(), ".next/server/app");
@@ -21,6 +21,21 @@ async function walk(directory) {
     const isMetadataAsset = Boolean(bodyRoute && basename(bodyRoute).includes("."));
     if (!isPageAsset && !isMetadataAsset) continue;
     const target = join(destination, bodyRoute ?? sourceRelative);
+    if (isPageAsset) {
+      const metadataPath = absolute.replace(/\.(html|rsc)$/, ".meta");
+      try {
+        const metadata = JSON.parse(await readFile(metadataPath, "utf8"));
+        if (metadata.status >= 300 && metadata.status < 400) {
+          // Redirect prerenders need their status and Location header. If their
+          // HTML/RSC is uploaded as a static asset, Cloudflare serves it as 200
+          // before the Worker can apply the redirect metadata.
+          await rm(target, { force: true });
+          continue;
+        }
+      } catch {
+        // A regular page may not have a metadata file; copy it normally.
+      }
+    }
     await mkdir(dirname(target), { recursive: true });
     // Both build directories live on the same disk. A hard link avoids storing
     // a second 50+ MB copy of the prerendered catalogue on space-constrained

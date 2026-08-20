@@ -39,13 +39,13 @@ export function GET() {
     ...[...new Map(vehicles.map((vehicle) => [modelPath(vehicle.brand, vehicle.model), vehicle])).entries()].map(([path, vehicle]) => `- [Renting ${vehicle.brand} ${vehicle.model}](${absoluteUrl(path)})`),
     "",
     "## Combustibles",
-    ...fuelPages.map((page) => `- [Renting de coches ${page.label}](${absoluteUrl(`/combustibles/${page.slug}`)})`),
+    ...fuelPages.map((page) => `- [Renting de coches ${page.label}](${absoluteUrl(`/renting/${page.slug}`)})`),
     "",
     "## Comparativas",
     ...popularComparisonSlugs.map((slug) => `- [${slug.replaceAll("-", " ")}](${absoluteUrl(`/comparar/${slug}`)})`),
     "",
     "## Marcas",
-    ...brands.map((brand) => `- [Renting ${brand}](${absoluteUrl(`/marcas/${contentSlug(brand)}`)})`),
+    ...brands.map((brand) => `- [Renting ${brand}](${absoluteUrl(`/renting/${contentSlug(brand)}`)})`),
   ];
   return new Response(lines.join("\n"), { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=3600" } });
 }

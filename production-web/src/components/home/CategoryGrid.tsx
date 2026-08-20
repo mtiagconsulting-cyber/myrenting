@@ -4,11 +4,11 @@ import { ArrowUpRight } from "lucide-react";
 
 const categories = [
   { label: "SUV", href: "/renting/suv", image: "/images/home/suv.webp", position: "center 64%" },
-  { label: "Familiares", href: "/categorias/familiares", image: "/images/home/familiares.webp", position: "center 54%" },
-  { label: "Urbanos", href: "/categorias/urbanos", image: "/images/home/urbanos.webp", position: "center 58%" },
+  { label: "Familiares", href: "/renting/familiares", image: "/images/home/familiares.webp", position: "center 54%" },
+  { label: "Urbanos", href: "/renting/coches-pequenos", image: "/images/home/urbanos.webp", position: "center 58%" },
   { label: "Eléctricos", href: "/renting/electricos", image: "/images/home/electricos.webp", position: "center 55%" },
   { label: "Híbridos", href: "/renting/hibridos", image: "/images/home/hibridos.webp", position: "center 55%" },
-  { label: "Empresas", href: "/categorias/empresas", image: "/images/home/empresas.webp", position: "center 55%" },
+  { label: "Empresas", href: "/renting/empresas", image: "/images/home/empresas.webp", position: "center 55%" },
 ];
 
 export function CategoryGrid() {

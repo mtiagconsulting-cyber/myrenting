@@ -208,9 +208,38 @@ const taxonomyIntent: SeoLanding[] = [
 
 const unique = new Map<string, SeoLanding>();
 for (const landing of [...primary, ...brandIntent, ...modelIntent, ...taxonomyIntent]) if (!unique.has(landing.slug)) unique.set(landing.slug, landing);
-export const seoLandings = [...unique.values()];
+const corePriceSlugs = new Set([
+  "/renting/baratos",
+  "/renting/menos-de-300-euros",
+  "/renting/menos-de-400-euros",
+  "/renting/menos-de-500-euros",
+  "/renting/sin-entrada",
+  "/renting/entrega-inmediata",
+]);
+
+export const seoLandings = [...unique.values()].map((landing) => landing.family === "prices" && !corePriceSlugs.has(landing.slug)
+  ? { ...landing, indexable: false }
+  : landing);
 export const indexableSeoLandings = seoLandings.filter((landing) => landing.indexable);
 export const preparedNoindexLandings = seoLandings.filter((landing) => !landing.indexable);
+
+export function seoConsolidationDestination(landing: SeoLanding) {
+  if (landing.family !== "prices" || corePriceSlugs.has(landing.slug)) return null;
+  const brand = typeof landing.dimensions.brand === "string" ? contentSlug(landing.dimensions.brand) : null;
+  const model = typeof landing.dimensions.model === "string" ? contentSlug(landing.dimensions.model) : null;
+  if (brand && model) return `/renting/${brand}/${model}`;
+  if (brand) return `/renting/${brand}`;
+  if (typeof landing.dimensions.body === "string") return `/renting/${landing.dimensions.body}`;
+  if (typeof landing.dimensions.fuel === "string") return `/renting/${landing.dimensions.fuel}`;
+  if (typeof landing.dimensions.audience === "string") return `/renting/${audienceSlugs[landing.dimensions.audience as OfferAudience]}`;
+  const maximum = typeof landing.dimensions.maxPrice === "number" ? landing.dimensions.maxPrice : null;
+  if (maximum !== null) {
+    if (maximum <= 300) return "/renting/menos-de-300-euros";
+    if (maximum <= 400) return "/renting/menos-de-400-euros";
+    return "/renting/menos-de-500-euros";
+  }
+  return "/renting/baratos";
+}
 
 export function findSeoLanding(segments: string[] = []) {
   const slug = `/renting${segments.length ? `/${segments.join("/")}` : ""}`;

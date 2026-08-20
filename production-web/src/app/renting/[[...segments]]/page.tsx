@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { SeoListingPage } from "@/components/seo/SeoListingPage";
-import { findSeoLanding, indexableSeoLandings, landingVehicles, offerMatchesLanding, preparedNoindexLandings } from "@/lib/seo-landing-engine";
+import { findSeoLanding, indexableSeoLandings, landingVehicles, offerMatchesLanding, preparedNoindexLandings, seoConsolidationDestination } from "@/lib/seo-landing-engine";
 import { contentSlug } from "@/lib/content-slug";
 import { generateGeoFacts } from "@/lib/geo-facts";
 
@@ -28,6 +28,8 @@ export default async function ProgrammaticRentingPage({ params }: Props) {
   const { segments } = await params;
   const landing = findSeoLanding(segments);
   if (!landing) notFound();
+  const consolidationDestination = seoConsolidationDestination(landing);
+  if (consolidationDestination) permanentRedirect(consolidationDestination);
   const stats = landing.stats;
   const geoFacts = landing.indexable ? generateGeoFacts(landing) : null;
   const minimum = stats?.minimumPrice.toLocaleString("es-ES", { maximumFractionDigits: 2 }) ?? "—";

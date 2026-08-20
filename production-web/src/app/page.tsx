@@ -54,7 +54,7 @@ export default function HomePage() {
       </section>
 
       <div className="mx-auto max-w-7xl space-y-16 px-5 py-12 sm:px-8 sm:py-16 lg:space-y-22">
-        <nav aria-label="Búsquedas frecuentes" className="flex flex-wrap gap-2">{[{label:"Sin entrada",href:"/renting-sin-entrada"},{label:"Menos de 300 €",href:"/renting-menos-300-euros"},{label:"Menos de 500 €",href:"/renting-menos-500-euros"},{label:"Para autónomos",href:"/renting-autonomos"},{label:"Entrega disponible",href:"/renting-entrega-inmediata"}].map((item)=><Link key={item.href} href={item.href} className="rounded-full border border-line bg-surface px-4 py-2.5 text-xs font-bold text-copy hover:border-brand hover:text-brand">{item.label}</Link>)}</nav>
+        <nav aria-label="Búsquedas frecuentes" className="flex flex-wrap gap-2">{[{label:"Sin entrada",href:"/renting/sin-entrada"},{label:"Menos de 300 €",href:"/renting/menos-de-300-euros"},{label:"Menos de 500 €",href:"/renting/menos-de-500-euros"},{label:"Para autónomos",href:"/renting/autonomos"},{label:"Entrega disponible",href:"/renting/entrega-inmediata"}].map((item)=><Link key={item.href} href={item.href} className="rounded-full border border-line bg-surface px-4 py-2.5 text-xs font-bold text-copy hover:border-brand hover:text-brand">{item.label}</Link>)}</nav>
         <section>
           <div className="mb-7 flex items-end justify-between gap-5">
             <div>

@@ -12,10 +12,10 @@ export const fuelPages: Array<{ slug: string; fuel: FuelType; label: string }> =
   { slug: "electricos", fuel: "Eléctrico", label: "eléctricos" },
 ];
 
-export function modelPath(brand: string, model: string) { return `/modelos/${contentSlug(brand)}/${contentSlug(model)}`; }
+export function modelPath(brand: string, model: string) { return `/renting/${contentSlug(brand)}/${contentSlug(model)}`; }
 export function categoryPath(bodyType: string) {
-  if (bodyType === "SUV") return "/categorias/suv";
-  if (bodyType === "Familiar" || bodyType === "Furgoneta") return "/categorias/familiares";
-  if (bodyType === "Compacto") return "/categorias/urbanos";
-  return "/categorias/berlinas";
+  if (bodyType === "SUV") return "/renting/suv";
+  if (bodyType === "Familiar" || bodyType === "Furgoneta") return "/renting/familiares";
+  if (bodyType === "Compacto") return "/renting/coches-pequenos";
+  return "/renting";
 }
