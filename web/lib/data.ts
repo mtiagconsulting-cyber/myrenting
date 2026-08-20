@@ -21,6 +21,8 @@ export function byFuel(bucket: string) {
   return vehicles.filter(map[bucket] ?? (()=>true));
 }
 export const sortedByPrice = [...vehicles].sort((a,b)=>a.precio-b.precio);
+export const offerCount = vehicles.reduce((total, vehicle) => total + vehicle.fuentes.length, 0);
+export const sourceCount = new Set(vehicles.flatMap(vehicle => vehicle.fuentes)).size;
 export function alternatives(v: Vehicle, n=4) {
   return [...vehicles].filter(x=>x.slug!==v.slug)
     .sort((a,b)=>Math.abs(a.precio-v.precio)-Math.abs(b.precio-v.precio)).slice(0,n);

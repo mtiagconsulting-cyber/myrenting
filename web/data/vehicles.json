@@ -1,1202 +1,1388 @@
 [
-{
-"slug": "peugeot-208",
-"make": "Peugeot",
-"model": "208",
-"title": "Peugeot 208",
-"version": "Allure Gasolina 100 S&S 6 Vel. MAN",
-"fuel": "Micro híbrido Gasolina",
-"category": "Urbano",
-"dgt": "ECO",
-"cv": "100 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 243,
-"img": "/img/modelos/peugeot-208.png",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "opel-corsa",
-"make": "Opel",
-"model": "Corsa",
-"title": "Opel Corsa",
-"version": "OPEL CORSA GS 1.2T",
-"fuel": "Gasolina",
-"category": "Hatchback",
-"dgt": "C",
-"cv": "100 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 244,
-"img": "/img/modelos/opel-corsa.png",
-"fuentes": [
-"M Automoción",
-"Quadis"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "seat-ibiza",
-"make": "Seat",
-"model": "Ibiza +",
-"title": "Seat Ibiza +",
-"version": "SEAT IBIZA + 1.0 TSI 85KW 115CV Start/Stop STYLE +",
-"fuel": "GLP",
-"category": "Urbano",
-"dgt": "—",
-"cv": "—",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 250,
-"img": "/img/modelos/seat-ibiza.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "dacia-sandero",
-"make": "Dacia",
-"model": "Sandero",
-"title": "Dacia Sandero",
-"version": "DACIA SANDERO STEPWAY EXPRESSION ECO-G 120 AUTO",
-"fuel": "Gasolina",
-"category": "Berlina con portón",
-"dgt": "C",
-"cv": "120 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 256,
-"img": "/img/modelos/dacia-sandero.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "renault-captur",
-"make": "Renault",
-"model": "Captur",
-"title": "Renault Captur",
-"version": "RENAULT CAPTUR EVOLUTION ECO-G SS",
-"fuel": "Híbrido",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "140 CV",
-"seats": "5 plazas",
-"cons": "5,8 L/100",
-"precio": 259,
-"img": "/img/modelos/renault-captur.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mazda-3",
-"make": "Mazda",
-"model": "3",
-"title": "Mazda 3",
-"version": "MAZDA 3 2027 2.5L e-SKYACTUV H MHEV 140CV 6MT FWD PRIME-LINE",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "ECO",
-"cv": "140 CV",
-"seats": "5 plazas",
-"cons": "5,3 L/100",
-"precio": 266,
-"img": "/img/modelos/mazda-3.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mg-mg3",
-"make": "Mg",
-"model": "Mg3",
-"title": "Mg Mg3",
-"version": "Hybrid+ Business Advanced Tech",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "ECO",
-"cv": "194 CV",
-"seats": "5 plazas",
-"cons": "4,4 L/100",
-"precio": 269,
-"img": "/img/modelos/mg-mg3.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "toyota-yaris",
-"make": "Toyota",
-"model": "Yaris",
-"title": "Toyota Yaris",
-"version": "TOYOTA YARIS ACTIVE 120H 116CV",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "—",
-"cv": "116 CV",
-"seats": "5 plazas",
-"cons": "4,5 L/100",
-"precio": 270,
-"img": "/img/modelos/toyota-yaris.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "skoda-kamiq",
-"make": "Skoda",
-"model": "Kamiq",
-"title": "Skoda Kamiq",
-"version": "ŠKODA KAMIQ SELECTION 1.0 TSI 115CV MANUAL",
-"fuel": "Gasolina",
-"category": "Crossover",
-"dgt": "C",
-"cv": "115 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 271,
-"img": "/img/modelos/skoda-kamiq.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "volkswagen-polo",
-"make": "Volkswagen",
-"model": "Polo",
-"title": "Volkswagen Polo",
-"version": "VOLKSWAGEN POLO MATCH 1.0 TSI 70kW 95CV",
-"fuel": "Gasolina",
-"category": "Urbano",
-"dgt": "C",
-"cv": "95 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 272,
-"img": "/img/modelos/volkswagen-polo.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "nissan-qashqai",
-"make": "Nissan",
-"model": "Qashqai",
-"title": "Nissan Qashqai",
-"version": "DIG-T 103kW (140CV) mHEV 4x2 Acenta",
-"fuel": "Híbrido",
-"category": "Crossover",
-"dgt": "ECO",
-"cv": "140 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 278,
-"img": "/img/modelos/nissan-qashqai.png",
-"fuentes": [
-"M Automoción",
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "mazda-2",
-"make": "Mazda",
-"model": "2",
-"title": "Mazda 2",
-"version": "MAZDA 2 HYBRID 2026 1.5 85KW 116CV CVT CENTRE-LINE",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "—",
-"cv": "116 CV",
-"seats": "5 plazas",
-"cons": "3,8 L/100",
-"precio": 284,
-"img": "/img/modelos/mazda-2.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "skoda-fabia",
-"make": "Skoda",
-"model": "Fabia",
-"title": "Skoda Fabia",
-"version": "1.5 TSI 110KW (150CV) DSG Plus",
-"fuel": "Gasolina",
-"category": "Urbano",
-"dgt": "C",
-"cv": "150 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 286,
-"img": "/img/modelos/skoda-fabia.png",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "mg-zs",
-"make": "Mg",
-"model": "Zs",
-"title": "Mg Zs",
-"version": "Hybrid+ Business",
-"fuel": "Híbrido Gasolina",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "197 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 305,
-"img": "/img/modelos/mg-zs.png",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "lancia-ypsilon",
-"make": "Lancia",
-"model": "Ypsilon",
-"title": "Lancia Ypsilon",
-"version": "LANCIA YPSILON LX IBRIDA",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "—",
-"cv": "110 CV",
-"seats": "5 plazas",
-"cons": "5,9 L/100",
-"precio": 309,
-"img": "/img/modelos/lancia-ypsilon.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "peugeot-rifter",
-"make": "Peugeot",
-"model": "Rifter",
-"title": "Peugeot Rifter",
-"version": "PEUGEOT RIFTER ACTIVE BUSINESS STANDARD N1 BLUEHDi 100 S/S",
-"fuel": "Diésel",
-"category": "Furgón",
-"dgt": "C",
-"cv": "102 CV",
-"seats": "5 plazas",
-"cons": "5,4 L/100",
-"precio": 309,
-"img": "/img/modelos/peugeot-rifter.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mazda-cx-30",
-"make": "Mazda",
-"model": "Cx-30",
-"title": "Mazda Cx-30",
-"version": "MAZDA CX-30 2027 2.5L e-SKYACTIV H MHEV 140CV 6MT FWD PRIME-LINE",
-"fuel": "Gasolina",
-"category": "Crossover",
-"dgt": "C",
-"cv": "140 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 309,
-"img": "/img/modelos/mazda-cx-30.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "audi-a1",
-"make": "Audi",
-"model": "A1",
-"title": "Audi A1",
-"version": "Sportback Adrenalin 30 TFSI 85kW S tronic",
-"fuel": "Gasolina",
-"category": "Hatchback",
-"dgt": "C",
-"cv": "116 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 315,
-"img": "/img/modelos/audi-a1.png",
-"fuentes": [
-"M Automoción",
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "opel-frontera",
-"make": "Opel",
-"model": "Frontera",
-"title": "Opel Frontera",
-"version": "OPEL FRONTERA GS 1.2 T XHT HYBRID eDCT6 S/S",
-"fuel": "Gasolina",
-"category": "SUV",
-"dgt": "C",
-"cv": "102 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 319,
-"img": "/img/modelos/opel-frontera.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "nissan-juke",
-"make": "Nissan",
-"model": "Juke",
-"title": "Nissan Juke",
-"version": "1.6 Hybrid 105kW (145CV) N-Connecta",
-"fuel": "Gasolina",
-"category": "Crossover",
-"dgt": "C",
-"cv": "145 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 319,
-"img": "/img/modelos/nissan-juke.png",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "renault-symbioz",
-"make": "Renault",
-"model": "Symbioz",
-"title": "Renault Symbioz",
-"version": "RENAULT SYMBIOZ EVOLUTION E-TECH FULL HYBRID",
-"fuel": "Híbrido Gasolina",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "145 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 320,
-"img": "/img/modelos/renault-symbioz.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "toyota-proace-city",
-"make": "Toyota",
-"model": "Proace City",
-"title": "Toyota Proace City",
-"version": "TOYOTA PROACE CITY VAN L1 GX",
-"fuel": "Diésel",
-"category": "—",
-"dgt": "—",
-"cv": "100 CV",
-"seats": "2 plazas",
-"cons": "5,5 L/100",
-"precio": 323,
-"img": "/img/modelos/toyota-proace-city.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mazda-cx-30-at",
-"make": "Mazda",
-"model": "Cx-30 At",
-"title": "Mazda Cx-30 At",
-"version": "MAZDA CX-30 AT 2027 2.5L e-SKYACTIV H MHEV 140CV 6AT PFWD PRIME-LINE",
-"fuel": "Híbrido",
-"category": "Crossover",
-"dgt": "C",
-"cv": "140 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 328,
-"img": "/img/modelos/mazda-cx-30-at.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "citroen-berlingo",
-"make": "Citroen",
-"model": "Berlingo",
-"title": "Citroen Berlingo",
-"version": "CITROEN BERLINGO VAN FURGÓN M",
-"fuel": "Diesel",
-"category": "LCV",
-"dgt": "C",
-"cv": "102 CV",
-"seats": "5 plazas",
-"cons": "5,1 L/100",
-"precio": 335,
-"img": "/img/modelos/citroen-berlingo.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "seat-leon",
-"make": "Seat",
-"model": "Leon",
-"title": "Seat Leon",
-"version": "SEAT LEON 2.0 TDI CR ST/SP STYLE XL",
-"fuel": "Diésel",
-"category": "Familiar",
-"dgt": "C",
-"cv": "150 CV",
-"seats": "5 plazas",
-"cons": "5,1 L/100",
-"precio": 339,
-"img": "/img/modelos/seat-leon.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "kia-niro",
-"make": "Kia",
-"model": "Niro",
-"title": "Kia Niro",
-"version": "KIA NIRO HEV CONCEPT",
-"fuel": "Híbrido",
-"category": "Hatchback",
-"dgt": "—",
-"cv": "—",
-"seats": "—",
-"cons": "—",
-"precio": 340,
-"img": "/img/modelos/kia-niro.png",
-"fuentes": [
-"Kia Renting"
-],
-"tipoMin": "particular"
-},
-{
-"slug": "omoda-5",
-"make": "Omoda",
-"model": "5",
-"title": "Omoda 5",
-"version": "OMODA 5 HEV BUSINESS",
-"fuel": "Gasolina",
-"category": "SUV",
-"dgt": "C",
-"cv": "224 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 340,
-"img": "/img/modelos/omoda-5.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "toyota-yaris-cross",
-"make": "Toyota",
-"model": "Yaris Cross",
-"title": "Toyota Yaris Cross",
-"version": "TOYOTA YARIS CROSS ACTIVE PLUS 130H ACTIVE",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "—",
-"cv": "130 CV",
-"seats": "5 plazas",
-"cons": "4,5 L/100",
-"precio": 341,
-"img": "/img/modelos/toyota-yaris-cross.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "volkswagen-t-roc",
-"make": "Volkswagen",
-"model": "T-Roc",
-"title": "Volkswagen T-Roc",
-"version": "VOLKSWAGEN T-ROC \"MÁS\" 1.5 eTSI 85kW 116CV DSG",
-"fuel": "Micro híbrido Gasolina",
-"category": "Crossover",
-"dgt": "ECO",
-"cv": "116 CV",
-"seats": "5 plazas",
-"cons": "5,1 L/100",
-"precio": 358,
-"img": "/img/modelos/volkswagen-t-roc.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "ebro-s400",
-"make": "Ebro",
-"model": "S400",
-"title": "Ebro S400",
-"version": "EBRO S400 1.5 DHE HEV EXCELLENCE CVT",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "ECO",
-"cv": "211 CV",
-"seats": "5 plazas",
-"cons": "5,5 L/100",
-"precio": 363,
-"img": "/img/modelos/ebro-s400.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "skoda-octavia",
-"make": "Skoda",
-"model": "Octavia",
-"title": "Skoda Octavia",
-"version": "ŠKODA OCTAVIA LIMO SELECTION 2.0 TDI 150CV DSG 7vel",
-"fuel": "Micro híbrido Gasolina",
-"category": "Sedán",
-"dgt": "ECO",
-"cv": "150 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 364,
-"img": "/img/modelos/skoda-octavia.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "alfa-romeo-junior",
-"make": "Alfa",
-"model": "Romeo Junior",
-"title": "Alfa Romeo Junior",
-"version": "ALFA ROMEO JUNIOR IBRIDA TI 1.2 VGT",
-"fuel": "Híbrido",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "145 CV",
-"seats": "5 plazas",
-"cons": "5,0 L/100",
-"precio": 365,
-"img": "/img/modelos/alfa-romeo-junior.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "hyundai-tucson",
-"make": "Hyundai",
-"model": "Tucson",
-"title": "Hyundai Tucson",
-"version": "HYUNDAI TUCSON 1.6T 239CV HEV AT KLASS",
-"fuel": "Híbrido",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "239 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 367,
-"img": "/img/modelos/hyundai-tucson.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "jaecoo-5",
-"make": "Jaecoo",
-"model": "5",
-"title": "Jaecoo 5",
-"version": "JAECOO 5 HEV EXCLUSIVE 1.5T DHE + 2 MOTORES ELÉCTRICOS 224 CV",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "CERO",
-"cv": "224 CV",
-"seats": "5 plazas",
-"cons": "5,3 L/100",
-"precio": 369,
-"img": "/img/modelos/jaecoo-5.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mercedes-benz-citan",
-"make": "Mercedes",
-"model": "Benz Citan",
-"title": "Mercedes Benz Citan",
-"version": "110 CDI 70kW Furgón Base Cargo",
-"fuel": "Diésel",
-"category": "Furgoneta",
-"dgt": "C",
-"cv": "95 CV",
-"seats": "3 plazas",
-"cons": "5,5 L/100",
-"precio": 372,
-"img": "/img/modelos/mercedes-benz-citan.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "byd-dolphin",
-"make": "Byd",
-"model": "Dolphin",
-"title": "Byd Dolphin",
-"version": "BYD DOLPHIN DOLPHIN SURF BOOST",
-"fuel": "Eléctrico",
-"category": "—",
-"dgt": "—",
-"cv": "88 CV",
-"seats": "4 plazas",
-"cons": "16,0 kWh/100",
-"precio": 381,
-"img": "/img/modelos/byd-dolphin.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "toyota-c-hr",
-"make": "Toyota",
-"model": "C-Hr",
-"title": "Toyota C-Hr",
-"version": "TOYOTA C-HR ADVANCE HYBRID 140 e-CVT",
-"fuel": "Híbrido",
-"category": "Hatchback",
-"dgt": "ECO",
-"cv": "140 CV",
-"seats": "5 plazas",
-"cons": "4,8 L/100",
-"precio": 389,
-"img": "/img/modelos/toyota-c-hr.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mazda-cx-5",
-"make": "Mazda",
-"model": "Cx-5",
-"title": "Mazda Cx-5",
-"version": "MAZDA CX-5 2.5 e-SKYACTIV-G 141CV FWD AUT CENTRE-LINE",
-"fuel": "Diesel",
-"category": "Crossover",
-"dgt": "C",
-"cv": "141 CV",
-"seats": "5 plazas",
-"cons": "5,1 L/100",
-"precio": 404,
-"img": "/img/modelos/mazda-cx-5.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "byd-atto",
-"make": "Byd",
-"model": "Atto",
-"title": "Byd Atto",
-"version": "BYD ATTO ATTO 2 DM-i",
-"fuel": "Híbrido enchufable",
-"category": "—",
-"dgt": "—",
-"cv": "212 CV",
-"seats": "5 plazas",
-"cons": "3,1 L/100",
-"precio": 405,
-"img": "/img/modelos/byd-atto.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "volkswagen-tiguan",
-"make": "Volkswagen",
-"model": "Tiguan",
-"title": "Volkswagen Tiguan",
-"version": "VOLKSWAGEN TIGUAN \"MÁS\" 1.5 eTSI 110KW 150CV DSG 7vel",
-"fuel": "Híbrido Enchufable",
-"category": "Crossover",
-"dgt": "ECO",
-"cv": "150 CV",
-"seats": "5 plazas",
-"cons": "5,1 L/100",
-"precio": 411,
-"img": "/img/modelos/volkswagen-tiguan.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "renault-austral",
-"make": "Renault",
-"model": "Austral",
-"title": "Renault Austral",
-"version": "RENAULT AUSTRAL EVOLUTION E-TECH FULL HYBRID",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "—",
-"cv": "200 CV",
-"seats": "5 plazas",
-"cons": "4,6 L/100",
-"precio": 411,
-"img": "/img/modelos/renault-austral.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "skoda-karoq",
-"make": "Skoda",
-"model": "Karoq",
-"title": "Skoda Karoq",
-"version": "ŠKODA KAROQ 2.0 TDI 110kW 150CV DSG 7 vel.",
-"fuel": "Diesel",
-"category": "SUV",
-"dgt": "C",
-"cv": "150 CV",
-"seats": "5 plazas",
-"cons": "6,5 L/100",
-"precio": 421,
-"img": "/img/modelos/skoda-karoq.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "honda-cr-v",
-"make": "Honda",
-"model": "Cr-V",
-"title": "Honda Cr-V",
-"version": "2.0 i-MMD PHEV 4X2 Elegance Tech",
-"fuel": "—",
-"category": "—",
-"dgt": "—",
-"cv": "—",
-"seats": "—",
-"cons": "—",
-"precio": 446,
-"img": "/img/modelos/honda-cr-v.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "jaecoo-7",
-"make": "Jaecoo",
-"model": "7",
-"title": "Jaecoo 7",
-"version": "JAECOO 7 PHEV BUSINESS",
-"fuel": "Híbrido enchufable",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "279 CV",
-"seats": "5 plazas",
-"cons": "2,4 L/100",
-"precio": 448,
-"img": "/img/modelos/jaecoo-7.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "skoda-elroq",
-"make": "Skoda",
-"model": "Elroq",
-"title": "Skoda Elroq",
-"version": "ŠKODA ELROQ 85 82 kWh BATTERIE 210 KW (286 CV)",
-"fuel": "Eléctrico",
-"category": "—",
-"dgt": "—",
-"cv": "286 CV",
-"seats": "5 plazas",
-"cons": "15,8 kWh/100",
-"precio": 450,
-"img": "/img/modelos/skoda-elroq.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "nissan-interstar",
-"make": "Nissan",
-"model": "Interstar",
-"title": "Nissan Interstar",
-"version": "Furgón N1 L2H2 (3,5t) dCi 96kW (130CV) 6M/T FWD Acenta",
-"fuel": "Diésel",
-"category": "Furgoneta",
-"dgt": "C",
-"cv": "131 CV",
-"seats": "3 plazas",
-"cons": "7,6 L/100",
-"precio": 459,
-"img": "/img/modelos/nissan-interstar.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "toyota-proace-max",
-"make": "Toyota",
-"model": "Proace Max",
-"title": "Toyota Proace Max",
-"version": "TOYOTA PROACE MAX L3H2 GX 140 CV",
-"fuel": "Diésel",
-"category": "—",
-"dgt": "—",
-"cv": "140 CV",
-"seats": "3 plazas",
-"cons": "8,5 L/100",
-"precio": 475,
-"img": "/img/modelos/toyota-proace-max.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "kia-pv5-passenger",
-"make": "Kia",
-"model": "Pv5 Passenger",
-"title": "Kia Pv5 Passenger",
-"version": "KIA PV5 PASSENGER L2H1 LR PLUS",
-"fuel": "Eléctrico",
-"category": "—",
-"dgt": "—",
-"cv": "163 CV",
-"seats": "5 plazas",
-"cons": "16,3 kWh/100",
-"precio": 489,
-"img": "/img/modelos/kia-pv5-passenger.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "ebro-s800",
-"make": "Ebro",
-"model": "S800",
-"title": "Ebro S800",
-"version": "1.5 TGDI PHEV Luxury E-CVT",
-"fuel": "Híbrido enchufable",
-"category": "—",
-"dgt": "ECO",
-"cv": "279 CV",
-"seats": "7 plazas",
-"cons": "2,5 L/100",
-"precio": 504,
-"img": "/img/modelos/ebro-s800.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "kia-pv5-cargo",
-"make": "Kia",
-"model": "Pv5 Cargo",
-"title": "Kia Pv5 Cargo",
-"version": "KIA PV5 CARGO L2H1 LR ESSENITIAL",
-"fuel": "Eléctrico",
-"category": "—",
-"dgt": "—",
-"cv": "163 CV",
-"seats": "3 plazas",
-"cons": "19,0 kWh/100",
-"precio": 507,
-"img": "/img/modelos/kia-pv5-cargo.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "citroen-opel-combo-e",
-"make": "Citroen",
-"model": "Opel Combo-E",
-"title": "Citroen Opel Combo-E",
-"version": "OPEL COMBO-e CARGO M 800KG",
-"fuel": "Eléctrico",
-"category": "Furgoneta",
-"dgt": "CERO",
-"cv": "136 CV",
-"seats": "3 plazas",
-"cons": "19,0 kWh/100",
-"precio": 527,
-"img": "/img/modelos/citroen-opel-combo-e.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "citroen-eberlingo",
-"make": "Citroen",
-"model": "Eberlingo",
-"title": "Citroen Eberlingo",
-"version": "CITROEN eBERLINGO VAN TALLA M",
-"fuel": "Eléctrico",
-"category": "Furgoneta",
-"dgt": "CERO",
-"cv": "136 CV",
-"seats": "3 plazas",
-"cons": "19,0 kWh/100",
-"precio": 539,
-"img": "/img/modelos/citroen-eberlingo.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "toyota-hilux",
-"make": "Toyota",
-"model": "Hilux",
-"title": "Toyota Hilux",
-"version": "TOYOTA HILUX DOBLE CABINA GX 2.4B 150CV 6AT 4X4",
-"fuel": "Diésel",
-"category": "—",
-"dgt": "—",
-"cv": "150 CV",
-"seats": "5 plazas",
-"cons": "7,5 L/100",
-"precio": 550,
-"img": "/img/modelos/toyota-hilux.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mazda-cx-60",
-"make": "Mazda",
-"model": "Cx-60",
-"title": "Mazda Cx-60",
-"version": "MAZDA CX-60 2.5L e-SKYACTIV PHEV AWD 241kW (327 CV) 8AT EXCLUSIVE-LINE",
-"fuel": "Micro híbrido Diésel",
-"category": "SUV",
-"dgt": "ECO",
-"cv": "327 CV",
-"seats": "5 plazas",
-"cons": "1,5 L/100",
-"precio": 553,
-"img": "/img/modelos/mazda-cx-60.png",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "omoda-7",
-"make": "Omoda",
-"model": "7",
-"title": "Omoda 7",
-"version": "OMODA 7 PHEV PREMIUM",
-"fuel": "Híbrido enchufable",
-"category": "—",
-"dgt": "ECO",
-"cv": "279 CV",
-"seats": "5 plazas",
-"cons": "2,3 L/100",
-"precio": 554,
-"img": "/img/modelos/omoda-7.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "omoda-9",
-"make": "Omoda",
-"model": "9",
-"title": "Omoda 9",
-"version": "OMODA 9 SHS PREMIUM 1.5 TGDI 3DHT 395kW (537CV) AWD",
-"fuel": "Híbrido enchufable",
-"category": "—",
-"dgt": "C",
-"cv": "537 CV",
-"seats": "5 plazas",
-"cons": "1,7 L/100",
-"precio": 621,
-"img": "/img/modelos/omoda-9.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "jaecoo-8",
-"make": "Jaecoo",
-"model": "8",
-"title": "Jaecoo 8",
-"version": "JAECOO 8 PHEV EXCLUSIVE 1.5 TGDI 428CV 7 plazas",
-"fuel": "Híbrido enchufable",
-"category": "—",
-"dgt": "ECO",
-"cv": "428 CV",
-"seats": "7 plazas",
-"cons": "2,1 L/100",
-"precio": 636,
-"img": "/img/modelos/jaecoo-8.webp",
-"fuentes": [
-"M Automoción"
-],
-"tipoMin": "autonomo"
-},
-{
-"slug": "mercedes-benz-glc-220d",
-"make": "Mercedes",
-"model": "Benz Glc 220D",
-"title": "Mercedes Benz Glc 220D",
-"version": "GLC 220 d 4MATIC (2022)",
-"fuel": "Diésel",
-"category": "—",
-"dgt": "C",
-"cv": "197 CV",
-"seats": "5 plazas",
-"cons": "5,5 L/100",
-"precio": 831,
-"img": "/img/modelos/mercedes-benz-glc-220d.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "mercedes-benz-glc-200-coupe",
-"make": "Mercedes",
-"model": "Benz Glc 200 Coupe",
-"title": "Mercedes Benz Glc 200 Coupe",
-"version": "GLC 200 4MATIC Coupé (2023)",
-"fuel": "Diésel",
-"category": "—",
-"dgt": "C",
-"cv": "197 CV",
-"seats": "5 plazas",
-"cons": "5,5 L/100",
-"precio": 866,
-"img": "/img/modelos/mercedes-benz-glc-200-coupe.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "mercedes-benz-glc-300de-coupe",
-"make": "Mercedes",
-"model": "Benz Glc 300De Coupe",
-"title": "Mercedes Benz Glc 300De Coupe",
-"version": "GLC 300 de 4MATIC Coupé (2023)",
-"fuel": "Diésel",
-"category": "—",
-"dgt": "C",
-"cv": "197 CV",
-"seats": "5 plazas",
-"cons": "5,5 L/100",
-"precio": 892,
-"img": "/img/modelos/mercedes-benz-glc-300de-coupe.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "mercedes-benz-gle-300d-coupe",
-"make": "Mercedes",
-"model": "Benz Gle 300D Coupe",
-"title": "Mercedes Benz Gle 300D Coupe",
-"version": "GLE 300d 4MATIC Coupé",
-"fuel": "—",
-"category": "—",
-"dgt": "—",
-"cv": "—",
-"seats": "—",
-"cons": "—",
-"precio": 1163,
-"img": "/img/modelos/mercedes-benz-gle-300d-coupe.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "maserati-grecale",
-"make": "Maserati",
-"model": "Grecale",
-"title": "Maserati Grecale",
-"version": "L4 MHEV 300CV AWD",
-"fuel": "Híbrido",
-"category": "—",
-"dgt": "C",
-"cv": "300 CV",
-"seats": "5 plazas",
-"cons": "8,8 L/100",
-"precio": 1191,
-"img": "/img/modelos/maserati-grecale.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-},
-{
-"slug": "mercedes-benz-gle-350de-coupe",
-"make": "Mercedes",
-"model": "Benz Gle 350De Coupe",
-"title": "Mercedes Benz Gle 350De Coupe",
-"version": "GLE 350de 4MATIC Coupé",
-"fuel": "—",
-"category": "—",
-"dgt": "—",
-"cv": "—",
-"seats": "—",
-"cons": "—",
-"precio": 1250,
-"img": "/img/modelos/mercedes-benz-gle-350de-coupe.webp",
-"fuentes": [
-"Quadis"
-],
-"tipoMin": "empresa"
-}
+  {
+    "slug": "peugeot-208",
+    "make": "Peugeot",
+    "model": "208",
+    "title": "Peugeot 208",
+    "version": "Allure Gasolina 100 S&S 6 Vel. MAN",
+    "fuel": "Micro híbrido Gasolina",
+    "category": "Urbano",
+    "dgt": "ECO",
+    "cv": "100 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 243,
+    "img": "/img/modelos/peugeot-208.png",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "opel-corsa",
+    "make": "Opel",
+    "model": "Corsa",
+    "title": "Opel Corsa",
+    "version": "1.2T XHL 74kW (100CV) GS",
+    "fuel": "Gasolina",
+    "category": "Hatchback",
+    "dgt": "C",
+    "cv": "100 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 245,
+    "img": "/img/modelos/opel-corsa.png",
+    "fuentes": [
+      "Marcos Renting",
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.2T XHL 74kW (100CV) GS",
+        "fuel": "Gasolina",
+        "precio": 295,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/opel/corsa/1-2t-xhl-74kw-100cv-gs-2301209"
+      }
+    ]
+  },
+  {
+    "slug": "mg-mg3",
+    "make": "Mg",
+    "model": "Mg3",
+    "title": "Mg Mg3",
+    "version": "Hybrid+ Business Advanced Tech",
+    "fuel": "Híbrido",
+    "category": "—",
+    "dgt": "ECO",
+    "cv": "194 CV",
+    "seats": "5 plazas",
+    "cons": "4,4 L/100 km",
+    "precio": 269,
+    "img": "/img/modelos/mg-mg3.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "nissan-qashqai",
+    "make": "Nissan",
+    "model": "Qashqai",
+    "title": "Nissan Qashqai",
+    "version": "DIG-T 103kW (140CV) mHEV 4x2 Acenta",
+    "fuel": "Híbrido",
+    "category": "Crossover",
+    "dgt": "ECO",
+    "cv": "140 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 278,
+    "img": "/img/modelos/nissan-qashqai.png",
+    "fuentes": [
+      "Marcos Renting",
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "DIG-T 117kW (158CV) mHEV 4x2 Acenta",
+        "fuel": "Híbrido",
+        "precio": 409,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/nissan/qashqai/dig-t-117kw-158cv-mhev-4x2-acenta-2298716"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "DIG-T 117kW (158CV) mHEV CVT Acenta",
+        "fuel": "Híbrido",
+        "precio": 453,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/nissan/qashqai/dig-t-117kw-158cv-mhev-cvt-acenta-2884543"
+      }
+    ]
+  },
+  {
+    "slug": "skoda-fabia",
+    "make": "Skoda",
+    "model": "Fabia",
+    "title": "Skoda Fabia",
+    "version": "1.5 TSI 110KW (150CV) DSG Plus",
+    "fuel": "Gasolina",
+    "category": "Urbano",
+    "dgt": "C",
+    "cv": "150 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 286,
+    "img": "/img/modelos/skoda-fabia.png",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "mg-zs",
+    "make": "Mg",
+    "model": "Zs",
+    "title": "Mg Zs",
+    "version": "Hybrid+ Business",
+    "fuel": "Híbrido Gasolina",
+    "category": "SUV",
+    "dgt": "ECO",
+    "cv": "197 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 305,
+    "img": "/img/modelos/mg-zs.png",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "dacia-sandero",
+    "make": "Dacia",
+    "model": "Sandero",
+    "title": "Dacia Sandero",
+    "version": "Stepway Expression ECO-G 120 Auto",
+    "fuel": "Gasolina",
+    "category": "Berlina con portón",
+    "dgt": "C",
+    "cv": "120 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 310,
+    "img": "/img/modelos/dacia-sandero.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Stepway Expression ECO-G 120 Auto",
+        "fuel": "GLP",
+        "precio": 310,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/dacia/sandero/stepway-expression-eco-g-120-auto-2844298"
+      }
+    ]
+  },
+  {
+    "slug": "renault-captur",
+    "make": "Renault",
+    "model": "Captur",
+    "title": "Renault Captur",
+    "version": "Captur evolution Eco-G 120cv 5P manual",
+    "fuel": "Híbrido",
+    "category": "SUV",
+    "dgt": "ECO",
+    "cv": "140 CV",
+    "seats": "5 plazas",
+    "cons": "5,8 L/100 km",
+    "precio": 313,
+    "img": "/img/modelos/renault-captur.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Captur evolution Eco-G 120cv 5P manual",
+        "fuel": "GLP",
+        "precio": 313,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/captur/captur-evolution-eco-g-120cv-5p-manual-2113186"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "techno full hybrid E-Tech 117 kW (160CV)",
+        "fuel": "Híbrido",
+        "precio": 378,
+        "duracion": 36,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/captur/techno-full-hybrid-e-tech-117-kw-160cv-2827524"
+      }
+    ]
+  },
+  {
+    "slug": "audi-a1",
+    "make": "Audi",
+    "model": "A1",
+    "title": "Audi A1",
+    "version": "Sportback Adrenalin 30 TFSI 85kW S tronic",
+    "fuel": "Gasolina",
+    "category": "Hatchback",
+    "dgt": "C",
+    "cv": "116 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 315,
+    "img": "/img/modelos/audi-a1.png",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "nissan-juke",
+    "make": "Nissan",
+    "model": "Juke",
+    "title": "Nissan Juke",
+    "version": "1.6 Hybrid 105kW (145CV) N-Connecta",
+    "fuel": "Gasolina",
+    "category": "Crossover",
+    "dgt": "C",
+    "cv": "145 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 319,
+    "img": "/img/modelos/nissan-juke.png",
+    "fuentes": [
+      "Marcos Renting",
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "DIG-T 84 kW (114 CV) 6M/T N-Connecta",
+        "fuel": "Gasolina",
+        "precio": 337,
+        "duracion": 48,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/nissan/juke/dig-t-84-kw-114-cv-6m-t-n-connecta-2150384"
+      }
+    ]
+  },
+  {
+    "slug": "ford-puma",
+    "make": "Ford",
+    "model": "Puma",
+    "title": "Ford Puma",
+    "version": "1.0 EcoBoost 125cv ST-Line MHEV",
+    "fuel": "Gasolina",
+    "category": "Crossover",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 320,
+    "img": "/img/modelos/ford-puma.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.0 EcoBoost 125cv ST-Line MHEV",
+        "fuel": "Híbrido",
+        "precio": 320,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/puma/1-0-ecoboost-125cv-st-line-mhev-1973003"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "Puma Gen-E 43kWh 168CV FWD",
+        "fuel": "Eléctrico",
+        "precio": 440,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/puma/puma-gen-e-43kwh-168cv-fwd-2234648"
+      }
+    ]
+  },
+  {
+    "slug": "kia-niro",
+    "make": "Kia",
+    "model": "Niro",
+    "title": "Kia Niro",
+    "version": "KIA NIRO HEV CONCEPT",
+    "fuel": "Híbrido",
+    "category": "Hatchback",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 340,
+    "img": "/img/modelos/kia-niro.png",
+    "fuentes": [
+      "Kia Renting",
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.6 GDi HEV 101,5kW (138CV) Concept",
+        "fuel": "Híbrido",
+        "precio": 351,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/kia/niro/1-6-gdi-hev-101-5kw-138cv-concept-1927316"
+      }
+    ]
+  },
+  {
+    "slug": "ford-transit-courier-kombi-diesel",
+    "make": "Ford",
+    "model": "Transit Courier Kombi Diesel",
+    "title": "Ford Transit Courier Kombi Diesel",
+    "version": "Courier Kombi 1.5 Ecoblue 75kW Trend combi 75kW 5P manual",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 365,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1939229_67f4e83ccc81d.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Courier Kombi 1.5 Ecoblue 75kW Trend combi 75kW 5P manual",
+        "fuel": "Diésel",
+        "precio": 365,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/transit-courier-kombi-diesel/courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-1939229"
+      }
+    ]
+  },
+  {
+    "slug": "mercedes-benz-citan",
+    "make": "Mercedes Benz",
+    "model": "Citan",
+    "title": "Mercedes Benz Citan",
+    "version": "110 CDI 70kW Furgón Base Cargo",
+    "fuel": "Diésel",
+    "category": "Furgoneta",
+    "dgt": "C",
+    "cv": "95 CV",
+    "seats": "3 plazas",
+    "cons": "5,5 L/100 km",
+    "precio": 372,
+    "img": "/img/modelos/mercedes-benz-citan.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "peugeot-rifter",
+    "make": "Peugeot",
+    "model": "Rifter",
+    "title": "Peugeot Rifter",
+    "version": "Active Business Standard BlueHDi 100",
+    "fuel": "Diésel",
+    "category": "Furgón",
+    "dgt": "C",
+    "cv": "102 CV",
+    "seats": "5 plazas",
+    "cons": "5,4 L/100 km",
+    "precio": 374,
+    "img": "/img/modelos/peugeot-rifter.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Active Business Standard BlueHDi 100",
+        "fuel": "Diésel",
+        "precio": 374,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/peugeot/rifter/active-business-standard-bluehdi-100-2251166"
+      }
+    ]
+  },
+  {
+    "slug": "mazda-cx-30",
+    "make": "Mazda",
+    "model": "Cx-30",
+    "title": "Mazda Cx-30",
+    "version": "2.5L e-SKYACTIV G MHEV 103kW (140CV) 6AT FWD Centre-line",
+    "fuel": "Gasolina",
+    "category": "Crossover",
+    "dgt": "C",
+    "cv": "140 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 382,
+    "img": "/img/modelos/mazda-cx-30.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.5L e-SKYACTIV G MHEV 103kW (140CV) 6AT FWD Centre-line",
+        "fuel": "Híbrido",
+        "precio": 382,
+        "duracion": 36,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/mazda/cx-30/2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-2887111"
+      }
+    ]
+  },
+  {
+    "slug": "renault-symbioz",
+    "make": "Renault",
+    "model": "Symbioz",
+    "title": "Renault Symbioz",
+    "version": "Evolution E-Tech full hybr 117kW (160CV)",
+    "fuel": "Híbrido Gasolina",
+    "category": "SUV",
+    "dgt": "ECO",
+    "cv": "145 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 387,
+    "img": "/img/modelos/renault-symbioz.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Evolution E-Tech full hybr 117kW (160CV)",
+        "fuel": "Híbrido",
+        "precio": 387,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/symbioz/evolution-e-tech-full-hybr-117kw-160cv-2304100"
+      }
+    ]
+  },
+  {
+    "slug": "citroen-berlingo",
+    "make": "Citroen",
+    "model": "Berlingo",
+    "title": "Citroen Berlingo",
+    "version": "Van M Diésel 100CV Manual",
+    "fuel": "Diesel",
+    "category": "LCV",
+    "dgt": "C",
+    "cv": "102 CV",
+    "seats": "5 plazas",
+    "cons": "5,1 L/100 km",
+    "precio": 405,
+    "img": "/img/modelos/citroen-berlingo.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Van M Diésel 100CV Manual",
+        "fuel": "Diésel",
+        "precio": 405,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/citroen/berlingo/van-m-diesel-100cv-manual-2894715"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "Talla M BlueHDi 100 S&S YOU",
+        "fuel": "Diésel",
+        "precio": 422,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/citroen/berlingo/talla-m-bluehdi-100-s-s-you-2043387"
+      }
+    ]
+  },
+  {
+    "slug": "seat-leon",
+    "make": "Seat",
+    "model": "Leon",
+    "title": "Seat Leon",
+    "version": "2.0 TDI 85kW Style XL",
+    "fuel": "Diésel",
+    "category": "Familiar",
+    "dgt": "C",
+    "cv": "150 CV",
+    "seats": "5 plazas",
+    "cons": "5,1 L/100 km",
+    "precio": 410,
+    "img": "/img/modelos/seat-leon.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.0 TDI 85kW Style XL",
+        "fuel": "Diésel",
+        "precio": 410,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/seat/leon/2-0-tdi-85kw-style-xl-2780629"
+      }
+    ]
+  },
+  {
+    "slug": "ford-transit-courier",
+    "make": "Ford",
+    "model": "Transit Courier",
+    "title": "Ford Transit Courier",
+    "version": "Van 1.5 Ecoblue 75kW Trend",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 412,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2251093_695f8bac8b976.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Van 1.5 Ecoblue 75kW Trend",
+        "fuel": "Diésel",
+        "precio": 412,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/transit-courier/van-1-5-ecoblue-75kw-trend-2251093"
+      }
+    ]
+  },
+  {
+    "slug": "hyundai-tucson",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "title": "Hyundai Tucson",
+    "version": "1.6D 100kW (136CV) 48V DT Black Line",
+    "fuel": "Híbrido",
+    "category": "SUV",
+    "dgt": "ECO",
+    "cv": "239 CV",
+    "seats": "5 plazas",
+    "cons": "6,5 L/100 km",
+    "precio": 430,
+    "img": "/img/modelos/hyundai-tucson.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.6D 100kW (136CV) 48V DT Black Line",
+        "fuel": "Diésel",
+        "precio": 430,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/hyundai/tucson/1-6d-100kw-136cv-48v-dt-black-line-2790507"
+      }
+    ]
+  },
+  {
+    "slug": "honda-jazz",
+    "make": "Honda",
+    "model": "Jazz",
+    "title": "Honda Jazz",
+    "version": "1.5 i-MMD ADVANCE",
+    "fuel": "Gasolina",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 440,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884428_6a3a52a6ede8e.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.5 i-MMD ADVANCE",
+        "fuel": "Gasolina",
+        "precio": 440,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/honda/jazz/1-5-i-mmd-advance-2884428"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.5 i-MMD CROSSTAR",
+        "fuel": "Gasolina",
+        "precio": 459,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/honda/jazz/1-5-i-mmd-crosstar-2885759"
+      }
+    ]
+  },
+  {
+    "slug": "alfa-romeo-alfa-romeo-junior",
+    "make": "Alfa-Romeo",
+    "model": "Alfa Romeo Junior",
+    "title": "Alfa-Romeo Alfa Romeo Junior",
+    "version": "Ibrida 108kW (145CV)",
+    "fuel": "Híbrido",
+    "category": "SUV",
+    "dgt": "ECO",
+    "cv": "145 CV",
+    "seats": "5 plazas",
+    "cons": "5,0 L/100 km",
+    "precio": 442,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2044074_67f5107dba2cf.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Ibrida 108kW (145CV)",
+        "fuel": "Gasolina",
+        "precio": 442,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/alfa-romeo/junior/ibrida-108kw-145cv-2044074"
+      }
+    ]
+  },
+  {
+    "slug": "honda-cr-v",
+    "make": "Honda",
+    "model": "Cr-V",
+    "title": "Honda Cr-V",
+    "version": "2.0 i-MMD PHEV 4X2 Elegance Tech",
+    "fuel": "Híbrido enchufable",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 446,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884465_6a3a6139f066d.jpeg",
+    "fuentes": [
+      "Marcos Renting",
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.0 i-MMD HEV 4X2 Elegance",
+        "fuel": "Híbrido",
+        "precio": 681,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/honda/cr-v/2-0-i-mmd-hev-4x2-elegance-2884465"
+      }
+    ]
+  },
+  {
+    "slug": "nissan-interstar",
+    "make": "Nissan",
+    "model": "Interstar",
+    "title": "Nissan Interstar",
+    "version": "Furgón N1 L2H2 (3,5t) dCi 96kW (130CV) 6M/T FWD Acenta",
+    "fuel": "Diésel",
+    "category": "Furgoneta",
+    "dgt": "C",
+    "cv": "131 CV",
+    "seats": "3 plazas",
+    "cons": "7,6 L/100 km",
+    "precio": 459,
+    "img": "/img/modelos/nissan-interstar.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "ford-kuga",
+    "make": "Ford",
+    "model": "Kuga",
+    "title": "Ford Kuga",
+    "version": "ST-Line 2.5 Duratec FHEV 132kW Auto",
+    "fuel": "Híbrido",
+    "category": "Crossover",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "5 plazas",
+    "cons": "—",
+    "precio": 461,
+    "img": "/img/modelos/ford-kuga.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "ST-Line 2.5 Duratec FHEV 132kW Auto",
+        "fuel": "Híbrido",
+        "precio": 461,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/kuga/st-line-2-5-duratec-fhev-132kw-auto-2920907"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "ST-Line 2.5 Duratec PHEV 178kW Auto",
+        "fuel": "Híbrido enchufable",
+        "precio": 532,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/kuga/st-line-2-5-duratec-phev-178kw-auto-2055150"
+      }
+    ]
+  },
+  {
+    "slug": "ford-transit-custom",
+    "make": "Ford",
+    "model": "Transit Custom",
+    "title": "Ford Transit Custom",
+    "version": "Van 2.0 Ecoblue 100kW 280 L1 Trend",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 461,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2800510_69fc5759be60d.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Van 2.0 Ecoblue 100kW 280 L1 Trend",
+        "fuel": "Diésel",
+        "precio": 461,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/ford/transit-custom/van-2-0-ecoblue-100kw-280-l1-trend-2800510"
+      }
+    ]
+  },
+  {
+    "slug": "renault-austral",
+    "make": "Renault",
+    "model": "Austral",
+    "title": "Renault Austral",
+    "version": "Techno Mild Hybrid 110Auto",
+    "fuel": "Híbrido",
+    "category": "—",
+    "dgt": "—",
+    "cv": "200 CV",
+    "seats": "5 plazas",
+    "cons": "4,6 L/100 km",
+    "precio": 490,
+    "img": "/img/modelos/renault-austral.webp",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Techno Mild Hybrid 110Auto",
+        "fuel": "Híbrido",
+        "precio": 490,
+        "duracion": 36,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/austral/techno-mild-hybrid-110auto-2827534"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "Evolution E-Tech Full Hybrid 147kW",
+        "fuel": "Híbrido",
+        "precio": 497,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/austral/evolution-e-tech-full-hybrid-147kw-2152691"
+      }
+    ]
+  },
+  {
+    "slug": "mazda-cx-5",
+    "make": "Mazda",
+    "model": "Cx-5",
+    "title": "Mazda Cx-5",
+    "version": "2.5L e-SKYACTIV G MHEV 104 kW (141 CV) AT AWD Centre-Line",
+    "fuel": "Diesel",
+    "category": "Crossover",
+    "dgt": "C",
+    "cv": "141 CV",
+    "seats": "5 plazas",
+    "cons": "5,1 L/100 km",
+    "precio": 495,
+    "img": "/img/modelos/mazda-cx-5.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.5L e-SKYACTIV G MHEV 104 kW (141 CV) AT AWD Centre-Line",
+        "fuel": "Híbrido",
+        "precio": 495,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/mazda/cx-5/2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-2881163"
+      }
+    ]
+  },
+  {
+    "slug": "ebro-s800",
+    "make": "Ebro",
+    "model": "S800",
+    "title": "Ebro S800",
+    "version": "1.5 TGDI PHEV Luxury E-CVT",
+    "fuel": "Híbrido enchufable",
+    "category": "—",
+    "dgt": "ECO",
+    "cv": "279 CV",
+    "seats": "7 plazas",
+    "cons": "2,5 L/100 km",
+    "precio": 504,
+    "img": "/img/modelos/ebro-s800.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "honda-hr-v",
+    "make": "Honda",
+    "model": "Hr-V",
+    "title": "Honda Hr-V",
+    "version": "1.5 i-MMD Elegance 4x2",
+    "fuel": "Gasolina",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 518,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885996_6a3cc6eabeb74.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "1.5 i-MMD Elegance 4x2",
+        "fuel": "Gasolina",
+        "precio": 518,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/honda/hr-v/1-5-i-mmd-elegance-4x2-2885996"
+      }
+    ]
+  },
+  {
+    "slug": "bmw-serie-1",
+    "make": "Bmw",
+    "model": "Serie 1",
+    "title": "Bmw Serie 1",
+    "version": "120",
+    "fuel": "Diésel",
+    "category": "Berlina con portón",
+    "dgt": "C",
+    "cv": "163 CV",
+    "seats": "5 plazas",
+    "cons": "5,3 L/100 km",
+    "precio": 519,
+    "img": "/img/modelos/bmw-serie-1.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "120",
+        "fuel": "Gasolina",
+        "precio": 519,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/bmw/serie-1/120-2908258"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "120d",
+        "fuel": "Diésel",
+        "precio": 526,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/bmw/serie-1/120d-2908248"
+      }
+    ]
+  },
+  {
+    "slug": "nissan-primastar",
+    "make": "Nissan",
+    "model": "Primastar",
+    "title": "Nissan Primastar",
+    "version": "2.0dCi 96kW (130CV) L1H1 1T Acenta",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 532,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1954000_67af0a1651f9c.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.0dCi 96kW (130CV) L1H1 1T Acenta",
+        "fuel": "Diésel",
+        "precio": 532,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/nissan/primastar/2-0dci-96kw-130cv-l1h1-1t-acenta-1954000"
+      }
+    ]
+  },
+  {
+    "slug": "opel-vivaro",
+    "make": "Opel",
+    "model": "Vivaro",
+    "title": "Opel Vivaro",
+    "version": "VIVARO 1.5 BlueHDi 88kW (120CV)",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 536,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2028268_67d7e67098934.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "VIVARO 1.5 BlueHDi 88kW (120CV)",
+        "fuel": "Diésel",
+        "precio": 536,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/opel/vivaro/vivaro-1-5-bluehdi-88kw-120cv-2028268"
+      },
+      {
+        "fuente": "Marcos Renting",
+        "version": "Vivaro Doble Cabina Plegable 1.5 BlueHDi 120",
+        "fuel": "Diésel",
+        "precio": 564,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/opel/vivaro/vivaro-doble-cabina-plegable-1-5-bluehdi-120-2178133"
+      }
+    ]
+  },
+  {
+    "slug": "honda-civic",
+    "make": "Honda",
+    "model": "Civic",
+    "title": "Honda Civic",
+    "version": "2.0 i-MMD Sport CVT",
+    "fuel": "Gasolina",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 572,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885756_6a3c3241d9363.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.0 i-MMD Sport CVT",
+        "fuel": "Gasolina",
+        "precio": 572,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/honda/civic/2-0-i-mmd-sport-cvt-2885756"
+      }
+    ]
+  },
+  {
+    "slug": "renault-espace",
+    "make": "Renault",
+    "model": "Espace",
+    "title": "Renault Espace",
+    "version": "Techno full hybrid E-Tech 200 (147kw) 7 plazas",
+    "fuel": "Híbrido",
+    "category": "SUV",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "6,5 L/100 km",
+    "precio": 580,
+    "img": "/img/modelos/renault-espace.png",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Techno full hybrid E-Tech 200 (147kw) 7 plazas",
+        "fuel": "Híbrido",
+        "precio": 580,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/espace/techno-full-hybrid-e-tech-200-147kw-7-plazas-2827518"
+      }
+    ]
+  },
+  {
+    "slug": "kia-pv5",
+    "make": "Kia",
+    "model": "Pv5",
+    "title": "Kia Pv5",
+    "version": "Passenger L2H1 Long Range Plus",
+    "fuel": "Eléctrico",
+    "category": "—",
+    "dgt": "CERO",
+    "cv": "163 CV",
+    "seats": "5 plazas",
+    "cons": "16,3 kWh/100 km",
+    "precio": 592,
+    "img": "/img/modelos/kia-pv5.webp",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Passenger L2H1 Long Range Plus",
+        "fuel": "Eléctrico",
+        "precio": 592,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/kia/pv5/passenger-l2h1-long-range-plus-2917468"
+      }
+    ]
+  },
+  {
+    "slug": "renault-trafic-combi-diesel",
+    "make": "Renault",
+    "model": "Trafic Combi Diesel",
+    "title": "Renault Trafic Combi Diesel",
+    "version": "Mixto N1 5/6 Largo Energy Blue dCi 81kW 9 Plazas",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 629,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2159193_68d33901c63ae.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Mixto N1 5/6 Largo Energy Blue dCi 81kW 9 Plazas",
+        "fuel": "Diésel",
+        "precio": 629,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/renault/trafic-combi-diesel/mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas-2159193"
+      }
+    ]
+  },
+  {
+    "slug": "opel-combo-electric",
+    "make": "Opel",
+    "model": "Combo Electric",
+    "title": "Opel Combo Electric",
+    "version": "Cargo Electric M 800kg Eléctrico 100kW Batería 50kWH",
+    "fuel": "Eléctrico",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 638,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917438_6a75b7ef3f633.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "Cargo Electric M 800kg Eléctrico 100kW Batería 50kWH",
+        "fuel": "Eléctrico",
+        "precio": 638,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/opel/combo-electric/cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-2917438"
+      }
+    ]
+  },
+  {
+    "slug": "citroen-e-berlingo",
+    "make": "Citroen",
+    "model": "Ë-Berlingo",
+    "title": "Citroen Ë-Berlingo",
+    "version": "ë-Berlingo Van M Carga Incrementada eléctrico 100kW 50kWh Automática",
+    "fuel": "Eléctrico",
+    "category": "Furgoneta",
+    "dgt": "CERO",
+    "cv": "136 CV",
+    "seats": "3 plazas",
+    "cons": "19,0 kWh/100 km",
+    "precio": 652,
+    "img": "/img/modelos/citroen-e-berlingo.webp",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "ë-Berlingo Van M Carga Incrementada eléctrico 100kW 50kWh Automática",
+        "fuel": "Eléctrico",
+        "precio": 652,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/citroen/e-berlingo/e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-2917414"
+      }
+    ]
+  },
+  {
+    "slug": "honda-zr-v",
+    "make": "Honda",
+    "model": "Zr-V",
+    "title": "Honda Zr-V",
+    "version": "2.0 i-MMD 4x2 Advance CVT",
+    "fuel": "Gasolina",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 674,
+    "img": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2886067_6a3cebcc83fa6.jpeg",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "2.0 i-MMD 4x2 Advance CVT",
+        "fuel": "Gasolina",
+        "precio": 674,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/honda/zr-v/2-0-i-mmd-4x2-advance-cvt-2886067"
+      }
+    ]
+  },
+  {
+    "slug": "bmw-ix1",
+    "make": "Bmw",
+    "model": "Ix1",
+    "title": "Bmw Ix1",
+    "version": "eDrive20",
+    "fuel": "Eléctrico 100%",
+    "category": "SUV",
+    "dgt": "CERO",
+    "cv": "204 CV",
+    "seats": "5 plazas",
+    "cons": "18,5 kWh/100 km",
+    "precio": 676,
+    "img": "/img/modelos/bmw-ix1.webp",
+    "fuentes": [
+      "Marcos Renting"
+    ],
+    "tipoMin": "particular",
+    "ofertas": [
+      {
+        "fuente": "Marcos Renting",
+        "version": "eDrive20",
+        "fuel": "Eléctrico",
+        "precio": 676,
+        "duracion": 60,
+        "km": 10000,
+        "url": "https://ofertas.marcosautomocion.es/marcos-renting-stock/bmw/ix1/edrive20-2805036"
+      }
+    ]
+  },
+  {
+    "slug": "mercedes-benz-glc-220d",
+    "make": "Mercedes Benz",
+    "model": "Glc 220D",
+    "title": "Mercedes Benz Glc 220D",
+    "version": "GLC 220 d 4MATIC (2022)",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "C",
+    "cv": "197 CV",
+    "seats": "5 plazas",
+    "cons": "5,5 L/100 km",
+    "precio": 831,
+    "img": "/img/modelos/mercedes-benz-glc-220d.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "mercedes-benz-glc-200-coupe",
+    "make": "Mercedes Benz",
+    "model": "Glc 200 Coupe",
+    "title": "Mercedes Benz Glc 200 Coupe",
+    "version": "GLC 200 4MATIC Coupé (2023)",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "C",
+    "cv": "197 CV",
+    "seats": "5 plazas",
+    "cons": "5,5 L/100 km",
+    "precio": 866,
+    "img": "/img/modelos/mercedes-benz-glc-200-coupe.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "mercedes-benz-glc-300de-coupe",
+    "make": "Mercedes Benz",
+    "model": "Glc 300De Coupe",
+    "title": "Mercedes Benz Glc 300De Coupe",
+    "version": "GLC 300 de 4MATIC Coupé (2023)",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "C",
+    "cv": "197 CV",
+    "seats": "5 plazas",
+    "cons": "5,5 L/100 km",
+    "precio": 892,
+    "img": "/img/modelos/mercedes-benz-glc-300de-coupe.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "mercedes-benz-gle-300d-coupe",
+    "make": "Mercedes Benz",
+    "model": "Gle 300D Coupe",
+    "title": "Mercedes Benz Gle 300D Coupe",
+    "version": "GLE 300d 4MATIC Coupé",
+    "fuel": "Diésel",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 1163,
+    "img": "/img/modelos/mercedes-benz-gle-300d-coupe.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "maserati-grecale",
+    "make": "Maserati",
+    "model": "Grecale",
+    "title": "Maserati Grecale",
+    "version": "L4 MHEV 300CV AWD",
+    "fuel": "Híbrido",
+    "category": "—",
+    "dgt": "C",
+    "cv": "300 CV",
+    "seats": "5 plazas",
+    "cons": "8,8 L/100 km",
+    "precio": 1191,
+    "img": "/img/modelos/maserati-grecale.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  },
+  {
+    "slug": "mercedes-benz-gle-350de-coupe",
+    "make": "Mercedes Benz",
+    "model": "Gle 350De Coupe",
+    "title": "Mercedes Benz Gle 350De Coupe",
+    "version": "GLE 350de 4MATIC Coupé",
+    "fuel": "Híbrido enchufable",
+    "category": "—",
+    "dgt": "—",
+    "cv": "—",
+    "seats": "—",
+    "cons": "—",
+    "precio": 1250,
+    "img": "/img/modelos/mercedes-benz-gle-350de-coupe.webp",
+    "fuentes": [
+      "Quadis"
+    ],
+    "tipoMin": "empresa",
+    "ofertas": []
+  }
 ]

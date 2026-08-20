@@ -27,6 +27,7 @@ img/.DS_Store
 !scripts/mantenimiento/expirar_ofertas.py
 !scripts/mantenimiento/salud_sitio.py
 !scripts/3_generate/generar_indices.py
+!scripts/3_generate/generar_web_data.py
 index_redesign.html
 scraper-concesionarios/
 *.json

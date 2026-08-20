@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { vehicles, sortedByPrice } from "@/lib/data";
+import { vehicles, sortedByPrice, offerCount, sourceCount } from "@/lib/data";
 import VehicleCard from "@/components/VehicleCard";
 
 const pick = (t: string) => vehicles.find(v => v.title === t);
@@ -98,6 +98,15 @@ export default function Home() {
       {/* COMPARATIVAS POPULARES */}
       <section className="py-7">
         <div className="flex justify-between items-center mb-4.5">
+          <h2 className="text-[clamp(23px,2.4vw,30px)] font-extrabold text-ink">Coches destacados</h2>
+          <Link href="/coches" className="text-orange font-semibold text-[13.5px]">Ver todos los coches ›</Link>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">{withImg.slice(0,8).map(v=><VehicleCard key={v.slug} v={v} />)}</div>
+      </section>
+
+      {/* COMPARATIVAS POPULARES */}
+      <section className="py-7">
+        <div className="flex justify-between items-center mb-4.5">
           <h2 className="text-[clamp(23px,2.4vw,30px)] font-extrabold text-ink">Comparativas populares</h2>
           <Link href="/comparar" className="text-orange font-semibold text-[13.5px]">Ver todas las comparativas ›</Link>
         </div>
@@ -124,7 +133,7 @@ export default function Home() {
       {/* CIFRAS */}
       <section className="py-7">
         <div className="grid grid-cols-2 md:grid-cols-5 bg-white border border-line rounded-xl2 overflow-hidden">
-          {[["63","Modelos comparados"],["190","Ofertas actualizadas"],["3","Gestoras oficiales"],["Semanal","Actualización"],["0€","De entrada"]].map(([n,l],i)=>(
+          {[[String(vehicles.length),"Modelos comparados"],[String(offerCount),"Ofertas actualizadas"],[String(sourceCount),"Gestoras oficiales"],["Semanal","Actualización"],["0€","De entrada"]].map(([n,l],i)=>(
             <div key={i} className="p-6 text-center border-r border-line last:border-0"><div className="text-[26px] font-extrabold text-orange tracking-tight">{n}</div><div className="text-[12.5px] text-muted mt-1">{l}</div></div>
           ))}
         </div>
