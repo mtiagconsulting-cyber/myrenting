@@ -8,7 +8,8 @@ Escribe: data/build/catalogo.json  (lo único que consumen los generadores)
 
 Reglas:
  - Se agrupa por modelo (make+model). El precio del modelo = el más barato disponible.
- - ofertas-manuales GANA sobre lo scrapeado si coinciden make+model+tipo.
+ - ofertas-manuales GANA sobre lo scrapeado si coinciden fuente+make+model+tipo.
+   Una gestora nunca puede ocultar la oferta de otra gestora.
  - Se caducan ofertas sin precio (precio_desde<=0) salvo que sean manuales.
 """
 import json, os, glob, re, unicodedata, collections, datetime
@@ -31,15 +32,17 @@ quadis_det=load(f"{REPO}/data/master/quadis-detalle.json",{})
 def _qdet(make,model):
     return quadis_det.get(f"{(make or '').upper()}|{(model or '').upper()}")
 
-# índice de overrides manuales por (make,model,tipo)
-man_idx={ (norm(o.get('make')),norm(o.get('model')),o.get('tipo')): o for o in manuales }
+# índice de overrides manuales por (fuente,make,model,tipo)
+def offer_key(o):
+    return (norm(o.get('fuente')),norm(o.get('make')),norm(o.get('model')),o.get('tipo'))
+man_idx={offer_key(o): o for o in manuales}
 
 ofertas=[o for o in raw if o.get('precio_desde',0)>0]
 # aplicar overrides manuales (sustituyen / se añaden)
 seen=set()
 final=[]
 for o in ofertas:
-    k=(norm(o.get('make')),norm(o.get('model')),o.get('tipo'))
+    k=offer_key(o)
     if k in man_idx:
         if k not in seen: final.append(man_idx[k]); seen.add(k)
     else:
@@ -55,7 +58,7 @@ for o in final:
     key=f"{make.upper()}||{model.upper()}"
     m=cat.setdefault(key,{"make":make.title(),"model":model.title(),"slug":slug(f"{make} {model}"),
         "precio_desde":10**9,"ofertas":[],"tipos":set(),"fuentes":set(),"detalle":None})
-    m["ofertas"].append({k:o.get(k) for k in ("tipo","version","fuel","precio_desde","duracion","km","url","image","combinaciones")})
+    m["ofertas"].append({k:o.get(k) for k in ("fuente","tipo","version","fuel","precio_desde","duracion","km","url","image","combinaciones","iva_incluido")})
     m["precio_desde"]=min(m["precio_desde"],o.get("precio_desde",10**9))
     if o.get("tipo"): m["tipos"].add(o["tipo"])
     if o.get("fuente"): m["fuentes"].add(o["fuente"])
@@ -68,6 +71,11 @@ spec_norm={ norm(k.replace('||',' ')):v for k,v in modelos.items() }
 enr=0
 for key,m in cat.items():
     sp=modelos.get(key) or spec_norm.get(norm(m['make']+' '+m['model'])) or spec_norm.get(norm(m['model'])) or {}
+    local_image=sp.get("imagen_local") or f"/img/modelos/{m['slug']}.webp"
+    local_exists=(not local_image.startswith('/') or os.path.exists(REPO+local_image) or
+                  os.path.exists((REPO+local_image).rsplit('.',1)[0]+'.webp'))
+    offer_image=next((o.get('image') for o in m['ofertas'] if o.get('image')), None)
+    display_image=local_image if local_exists else (offer_image or local_image)
     m["specs"]={
       "potencia": sp.get("potencia"),
       "etiqueta_dgt": sp.get("etiqueta_dgt"),
@@ -76,7 +84,7 @@ for key,m in cat.items():
       "consumo_kwh100": sp.get("consumo_kwh100"),
       "plazas": sp.get("asientos"),
       "category": sp.get("category"),
-      "imagen": sp.get("imagen_local") or f"/img/modelos/{m['slug']}.webp",
+      "imagen": display_image,
       "descripcion": sp.get("descripcion"),
     }
     if sp: enr+=1

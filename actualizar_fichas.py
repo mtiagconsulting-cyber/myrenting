@@ -129,7 +129,7 @@ NEW_CSS = """
 JS_RENDER = r"""
 <script>
 (function(){
-  var GC={arval:'#C41E1E',ayvens:'#1E4DB7',alphabet:'#6D28D9',kinto:'#15803D',quadis:'#B45309','kia armotors':'#B91C1C',leasys:'#0891B2',revel:'#0F766E','m automoción':'#16224E','m automocion':'#16224E'};
+  var GC={arval:'#C41E1E',ayvens:'#1E4DB7',alphabet:'#6D28D9',kinto:'#15803D',quadis:'#B45309','kia armotors':'#B91C1C',leasys:'#0891B2',revel:'#0F766E','m automoción':'#16224E','m automocion':'#16224E','marcos renting':'#16224E'};
   function ini(n){return (n||'').split(' ').slice(0,2).map(function(w){return w[0]||'';}).join('').toUpperCase();}
   function gslug(n){return (n||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
   function ocLogo(fuente,gestora,color){return '<div class="oc-logo" style="background:'+color+'"><span>'+ini(gestora)+'</span><img src="/img/gestoras/'+gslug(fuente)+'.png" alt="'+esc(gestora)+'" loading="lazy" onload="this.parentNode.classList.add(\'has-logo\')" onerror="this.remove()"></div>';}

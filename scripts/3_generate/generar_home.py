@@ -40,6 +40,20 @@ for k,m in sorted(cat.items(), key=lambda kv:kv[1]['precio_desde']):
       "dgt": s.get('etiqueta_dgt') or "—",
     })
 
+# La portada enseña una selección manejable. El catálogo completo sigue
+# disponible en la pestaña Catálogo y en todas las páginas de marca/categoría.
+# La selección combina precio competitivo y variedad de marcas.
+featured=[]
+seen_brands=set()
+for car in cars:
+    brand=car["t"].split()[0].lower()
+    if brand not in seen_brands:
+        featured.append(car)
+        seen_brands.add(brand)
+    if len(featured)==12:
+        break
+
 out=tpl.replace("/*__CARS__*/", json.dumps(cars, ensure_ascii=False))
+out=out.replace("/*__FEATURED__*/", json.dumps(featured, ensure_ascii=False))
 open(f"{REPO}/index.html","w",encoding='utf-8').write(out)
 print(f"index.html generado desde plantilla · {len(cars)} coches")

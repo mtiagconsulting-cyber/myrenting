@@ -585,11 +585,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* === DATOS REALES (extraídos de coches-specs.json) === */
   const cars=/*__CARS__*/;
+  const featured=/*__FEATURED__*/;
   let ivaMode='inc';
   const dgtCls={CERO:'cero',ECO:'eco',C:'c'};
   const pf={24:1.12,36:1,48:.92}, kf={10000:.93,15000:1,20000:1.09,25000:1.16};
   let catKm=15000, catMonths=36;
-  const GESTORA_DOT={"M Automoción":{bg:'#1e3a8a',lbl:'M'},"Quadis":{bg:'#047a51',lbl:'Q'},"Kia":{bg:'#bb162b',lbl:'K'}};
+  const GESTORA_DOT={"Marcos Renting":{bg:'#16224e',lbl:'M'},"Quadis":{bg:'#047a51',lbl:'Q'},"Kia Renting":{bg:'#bb162b',lbl:'K'}};
   function priceOf(base){return base;}
   function stockOf(c){return c.ofertas>=10?'Entrega inmediata':'Stock verificado';}
   function spec(ic,k,d){return `<div class="spec">${IC[ic]}<div class="sv"><span class="sk">${k}</span><span class="sd">${d}</span></div></div>`}
@@ -621,7 +622,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="card-price"><div><span class="from">Cuota desde</span><b><span class="pv" data-base="${c.q}">${priceOf(c.q)}</span><small> €/mes</small></b><span class="iva">${ivaMode==='exc'?'+ IVA · deducible':'IVA incluido'}</span></div></div>
     <div class="card-cta"><button class="btn btn-line btn-sm" data-pdp="${i}">Ver ficha</button><button class="btn btn-o btn-sm" data-pdp="${i}">Reservar</button></div></article>`}
 
-  document.getElementById('home-grid').innerHTML=cars.map(npCard).join('');
+  document.getElementById('home-grid').innerHTML=featured.map(npCard).join('');
   document.getElementById('emp-grid').innerHTML=cars.map(npCard).join('');
   document.getElementById('cat-grid').innerHTML=cars.map(npCard).join('');
   document.getElementById('cat-count').innerHTML='<b>'+cars.length+'</b> coches disponibles';

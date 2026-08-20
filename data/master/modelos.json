@@ -3365,5 +3365,108 @@
    "Quadis"
   ],
   "category": null
+ },
+ "FORD||TRANSIT COURIER KOMBI DIESEL": {
+  "imagen_local": "/img/modelos/ford-transit-courier-kombi-diesel.webp",
+  "precio_desde": 365.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "FORD||TRANSIT COURIER": {
+  "imagen_local": "/img/modelos/ford-transit-courier.webp",
+  "precio_desde": 412.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "HONDA||JAZZ": {
+  "imagen_local": "/img/modelos/honda-jazz.webp",
+  "precio_desde": 440.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "ALFA-ROMEO||ALFA ROMEO JUNIOR": {
+  "imagen_local": "/img/modelos/alfa-romeo-alfa-romeo-junior.webp",
+  "precio_desde": 442.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": "SUV",
+  "potencia": "145 CV",
+  "etiqueta_dgt": "ECO",
+  "fuels": [
+   "Híbrido"
+  ],
+  "consumo_l100": 5.0,
+  "asientos": 5
+ },
+ "FORD||TRANSIT CUSTOM": {
+  "imagen_local": "/img/modelos/ford-transit-custom.webp",
+  "precio_desde": 461.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "HONDA||HR-V": {
+  "imagen_local": "/img/modelos/honda-hr-v.webp",
+  "precio_desde": 518.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "NISSAN||PRIMASTAR": {
+  "imagen_local": "/img/modelos/nissan-primastar.webp",
+  "precio_desde": 532.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "OPEL||VIVARO": {
+  "imagen_local": "/img/modelos/opel-vivaro.webp",
+  "precio_desde": 536.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "HONDA||CIVIC": {
+  "imagen_local": "/img/modelos/honda-civic.webp",
+  "precio_desde": 572.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "RENAULT||TRAFIC COMBI DIESEL": {
+  "imagen_local": "/img/modelos/renault-trafic-combi-diesel.webp",
+  "precio_desde": 629.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "OPEL||COMBO ELECTRIC": {
+  "imagen_local": "/img/modelos/opel-combo-electric.webp",
+  "precio_desde": 638.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
+ },
+ "HONDA||ZR-V": {
+  "imagen_local": "/img/modelos/honda-zr-v.webp",
+  "precio_desde": 674.0,
+  "fuentes": [
+   "Marcos Renting"
+  ],
+  "category": null
  }
 }

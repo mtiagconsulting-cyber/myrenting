@@ -6,7 +6,7 @@ Los scrapers reales viven en la raíz del repo.
 Este wrapper los llama; si uno falla, conserva el data/raw anterior (no lo borra a medias).
 
 Fuentes:
-  - M Automoción  -> scrape_mautomocion.py  (--matrix) -> mautomocion-db.json -> data/raw/mautomocion.json
+  - Marcos Renting Stock -> scrape_marcos_stock.py -> mautomocion-db.json -> data/raw/mautomocion.json
   - Quadis        -> NO se scrapea. Las ofertas de Quadis vienen del PDF de precios,
                      ya cargadas a mano en data/master/ofertas-manuales.json.
   - Kia Renting   -> (manual, en data/master/ofertas-manuales.json)
@@ -19,16 +19,14 @@ import subprocess, sys, os, shutil, datetime
 import pathlib as _pl; REPO=str(_pl.Path(__file__).resolve().parents[2])
 RAW=f"{REPO}/data/raw"
 
-# Con --con-matrix se extrae la matriz km×meses + la ficha completa (specs,
-# equipamiento, coberturas, notas) de cada oferta (LENTO, ~15 min).
-# Por defecto es rápido: solo el precio "desde" de cada oferta.
-CON_MATRIX = "--con-matrix" in sys.argv
-_mauto_cmd = ["python3", f"{REPO}/scrape_mautomocion.py"] + (["--matrix"] if CON_MATRIX else [])
+# La landing comisionable incluye la matriz km×meses dentro de cada ficha. Se
+# extrae siempre para que el configurador de Myrenting muestre precios reales.
+_marcos_cmd = ["python3", f"{REPO}/scrape_marcos_stock.py"]
 
 # (nombre, comando, fichero-db que produce el scraper, salida en data/raw)
 # Quadis NO va aquí: sus ofertas son manuales (PDF) en data/master/ofertas-manuales.json.
 SCRAPERS=[
-  ("M Automoción", _mauto_cmd, f"{REPO}/mautomocion-db.json", f"{RAW}/mautomocion.json"),
+  ("Marcos Renting Stock", _marcos_cmd, f"{REPO}/mautomocion-db.json", f"{RAW}/mautomocion.json"),
 ]
 
 def run():

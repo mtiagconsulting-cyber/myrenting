@@ -3,7 +3,7 @@
 """
 ORQUESTADOR SEMANAL · myrenting.es
 Uso:  python3 run_weekly.py            (todo el ciclo, scrape rápido)
-      python3 run_weekly.py --con-matrix   (scrape + matriz km×meses + ficha completa de M Automoción; LENTO ~15 min)
+      python3 run_weekly.py --con-matrix   (compatibilidad; Marcos ya incluye siempre la matriz km×meses)
       python3 run_weekly.py --sin-scrape   (salta el scraping, usa data/raw actual)
       python3 run_weekly.py --sin-publicar (genera y valida, pero no hace commit/push)
 

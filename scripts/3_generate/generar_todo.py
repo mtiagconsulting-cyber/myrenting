@@ -31,7 +31,7 @@ def geo_line(m):
 # ---------- llms.txt (GEO) ----------
 def build_llms():
     L=["# MyRenting — myrenting.es",
-       "> Comparador de renting de coches en España con precios reales de varias fuentes (M Automoción, Quadis, Kia Renting). Sin entrada, cuota todo incluido.",
+       "> Comparador de renting de coches en España con precios reales de varias fuentes (Marcos Renting, Quadis, Kia Renting). Sin entrada, cuota todo incluido.",
        "","## Qué ofrecemos","- Renting para particulares, autónomos y empresas.","- Precios reales actualizados semanalmente.","",
        "## Modelos y precios (dato directo)"]
     for k,m in sorted(MODS.items(), key=lambda kv:kv[1]['precio_desde']):
@@ -116,9 +116,10 @@ details.faq summary::-webkit-details-marker{display:none}details.faq .chev{color
 details.faq p{margin:0 0 14px;color:var(--ink2);font-size:14px}
 .alts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
 a.alt{display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 15px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14px}a.alt:hover{border-color:var(--o)}a.alt b{color:var(--o2)}
+.offers{display:grid;gap:10px}.offer{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 16px}.offer-name{font-weight:850}.offer-ver{font-size:12.5px;color:var(--ink2);margin-top:2px}.offer-meta{font-size:12px;color:var(--ink2);margin-top:5px}.offer-side{text-align:right}.offer-price{font-size:21px;font-weight:850;color:var(--o2);white-space:nowrap}.offer-link{display:inline-block;margin-top:5px;background:var(--o);color:#fff;text-decoration:none;border-radius:9px;padding:8px 12px;font-size:12.5px;font-weight:850}.offer-link:hover{filter:brightness(1.05)}
 .notas{font-size:12px;color:var(--ink2)}.src{font-size:12px;color:var(--ink2);margin-top:8px}
 footer{border-top:1px solid var(--line);margin-top:34px;padding:22px 0;font-size:13px;color:var(--ink2)}
-@media(max-width:560px){.grid2{grid-template-columns:1fr}.inc,ul.eq{grid-template-columns:1fr;columns:1}.price-tag{text-align:left}.hero .row{flex-direction:column}}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}.inc,ul.eq{grid-template-columns:1fr;columns:1}.price-tag{text-align:left}.hero .row{flex-direction:column}.offer{grid-template-columns:1fr}.offer-side{text-align:left}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 """
 
@@ -241,9 +242,34 @@ def landing(m):
     alts=[x for x in sorted(MODS.values(),key=lambda z:abs(z['precio_desde']-m['precio_desde'])) if x['slug']!=sl][:4]
     alts_html="".join(f'<a class="alt" href="/renting-{a["slug"]}.html"><span>{e(a["make"])} {e(a["model"])}</span><b>{round(a["precio_desde"])}€</b></a>' for a in alts)
 
+    # ofertas reales por fuente/motorización. Los enlaces externos conservan la
+    # landing comisionable; las ofertas sin URL llevan al formulario propio.
+    offer_rows=[]
+    for o in sorted(m['ofertas'],key=lambda x:x.get('precio_desde') or 10**9):
+        source=o.get('fuente') or 'Gestora'
+        version=o.get('version') or name
+        price=round(o.get('precio_desde') or q)
+        meta=' · '.join(x for x in [o.get('fuel') or '',
+              (f"{o.get('duracion')} meses" if o.get('duracion') else ''),
+              (f"{int(o.get('km')):,} km/año".replace(',', '.') if o.get('km') else '')] if x)
+        href=o.get('url') or '#solicitar'
+        external=href.startswith('http')
+        attrs=' target="_blank" rel="sponsored nofollow noopener"' if external else ''
+        label='Ver oferta' if external else 'Solicitar'
+        offer_rows.append(f'''<div class="offer"><div><div class="offer-name">{e(source)}</div>
+          <div class="offer-ver">{e(version)}</div><div class="offer-meta">{e(meta)}</div></div>
+          <div class="offer-side"><div class="offer-price">{price} €/mes</div><a class="offer-link" href="{e(href)}"{attrs}>{label} →</a></div></div>''')
+    offers_html=''.join(offer_rows)
+
+    category=s.get("category") or ""
+    category_slug=slugcat(category)
+    category_file=f"{REPO}/renting-{category_slug}.html"
+    category_crumb=(f'<a href="/renting-{category_slug}.html">{e(category)}</a>'
+                    if category and os.path.exists(category_file) else e(category or "Coches"))
+
     body=f'''<nav><div class="wrap"><a class="logo" href="/">my<span>renting</span></a><span style="font-size:12.5px;color:var(--ink2);font-weight:700">☎ 691 766 768</span></div></nav>
 <div class="wrap">
-<div class="crumb"><a href="/">Inicio</a> › {(f'<a href="/renting-{slugcat(s["category"])}.html">{e(s["category"])}</a>' if s.get("category") else "Coches")} › {e(name)}</div>
+<div class="crumb"><a href="/">Inicio</a> › {category_crumb} › {e(name)}</div>
 <h1>Renting {e(name)}</h1>
 <div class="hero"><div class="row">
  <div><div style="font-size:22px;font-weight:850;letter-spacing:-.02em">{e(name)}</div>
@@ -261,8 +287,9 @@ def landing(m):
  <div class="meta">Sin entrada · sin permanencia<br><b id="ivaNote">IVA incluido</b></div></div>
  <ul class="inc">{inc_html}</ul>
 </div>
+<h2>Ofertas disponibles</h2><div class="offers">{offers_html}</div>
 <h2>Pide tu oferta</h2>
-<form onsubmit="return false">
+<form id="solicitar" onsubmit="return false">
  <div class="cfg-summary" id="formSummary">—</div>
  <div class="grid2"><div class="field"><label>Nombre</label><input placeholder="Tu nombre"></div><div class="field"><label>Apellidos</label><input placeholder="Tus apellidos"></div></div>
  <div class="grid2"><div class="field"><label>Ciudad</label><input placeholder="Madrid, Barcelona…"></div><div class="field"><label>Teléfono</label><input placeholder="6XX XXX XXX"></div></div>
