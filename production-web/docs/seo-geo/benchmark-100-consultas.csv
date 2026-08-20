@@ -1,0 +1,101 @@
+id,grupo,consulta,intencion,prioridad
+Q001,marca_modelo,"renting Toyota Yaris",comercial,alta
+Q002,marca_modelo,"renting Toyota Yaris Cross",comercial,alta
+Q003,marca_modelo,"renting Mazda CX-30",comercial,alta
+Q004,marca_modelo,"renting Kia Niro",comercial,alta
+Q005,marca_modelo,"renting Opel Mokka",comercial,alta
+Q006,marca_modelo,"renting Volkswagen T-Roc",comercial,alta
+Q007,marca_modelo,"renting Skoda Kamiq",comercial,alta
+Q008,marca_modelo,"renting Nissan Qashqai",comercial,alta
+Q009,marca_modelo,"renting Renault Austral",comercial,alta
+Q010,marca_modelo,"renting BYD Atto",comercial,media
+Q011,precio,"renting barato",comercial,alta
+Q012,precio,"coches de renting baratos",comercial,alta
+Q013,precio,"renting por menos de 300 euros",comercial,alta
+Q014,precio,"renting por menos de 400 euros",comercial,alta
+Q015,precio,"renting por menos de 500 euros",comercial,alta
+Q016,precio,"renting sin entrada barato",comercial,alta
+Q017,precio,"renting con entrada o sin entrada",comparacion,media
+Q018,precio,"cuánto cuesta un coche de renting al mes",informativa,alta
+Q019,precio,"renting precio total contrato",informativa,media
+Q020,precio,"ofertas de renting actuales",comercial,alta
+Q021,particular,"mejor renting para particulares",comercial,alta
+Q022,particular,"renting para particulares sin entrada",comercial,alta
+Q023,particular,"renting particulares 15000 km",comercial,alta
+Q024,particular,"renting particulares 20000 km",comercial,media
+Q025,particular,"renting particulares con IVA incluido",comercial,alta
+Q026,particular,"documentación para renting particular",informativa,alta
+Q027,particular,"requisitos para contratar renting particular",informativa,alta
+Q028,particular,"renting particular merece la pena",comparacion,alta
+Q029,particular,"renting particular coche híbrido",comercial,media
+Q030,particular,"renting particular SUV",comercial,alta
+Q031,autonomo,"mejor renting para autónomos",comercial,alta
+Q032,autonomo,"renting autónomos barato",comercial,alta
+Q033,autonomo,"renting autónomos sin entrada",comercial,alta
+Q034,autonomo,"renting autónomos deducible",informativa,alta
+Q035,autonomo,"IVA renting autónomos",informativa,alta
+Q036,autonomo,"IRPF renting autónomos",informativa,alta
+Q037,autonomo,"documentación renting autónomo",informativa,media
+Q038,autonomo,"renting autónomo coche eléctrico",comercial,media
+Q039,autonomo,"renting autónomo 30000 km",comercial,media
+Q040,autonomo,"renting autónomo o comprar coche",comparacion,alta
+Q041,empresa,"renting coches para empresas",comercial,alta
+Q042,empresa,"mejor renting para empresas",comercial,alta
+Q043,empresa,"renting empresa barato",comercial,alta
+Q044,empresa,"renting flota pequeña empresa",comercial,media
+Q045,empresa,"renting empresa sin IVA",informativa,alta
+Q046,empresa,"deducción renting empresa",informativa,alta
+Q047,empresa,"renting empresa 30000 km",comercial,media
+Q048,empresa,"renting furgoneta empresa",comercial,alta
+Q049,empresa,"renting coche eléctrico empresa",comercial,media
+Q050,empresa,"renting empresa o leasing",comparacion,alta
+Q051,suv,"SUV renting menos de 400 euros",comercial,alta
+Q052,suv,"mejor SUV de renting",comercial,alta
+Q053,suv,"SUV híbrido de renting",comercial,alta
+Q054,suv,"SUV eléctrico de renting",comercial,media
+Q055,suv,"SUV familiar de renting",comercial,alta
+Q056,suv,"SUV pequeño de renting",comercial,alta
+Q057,suv,"SUV renting 20000 km",comercial,media
+Q058,suv,"SUV renting sin entrada",comercial,alta
+Q059,suv,"SUV renting para autónomos",comercial,media
+Q060,suv,"SUV renting para empresas",comercial,media
+Q061,combustible,"renting coche híbrido",comercial,alta
+Q062,combustible,"renting híbrido enchufable",comercial,media
+Q063,combustible,"renting coche eléctrico",comercial,alta
+Q064,combustible,"renting coche gasolina",comercial,media
+Q065,combustible,"renting coche diésel",comercial,media
+Q066,combustible,"renting coche etiqueta ECO",comercial,alta
+Q067,combustible,"renting coche etiqueta cero",comercial,alta
+Q068,combustible,"eléctrico o híbrido para renting",comparacion,media
+Q069,combustible,"renting eléctrico barato",comercial,alta
+Q070,combustible,"renting híbrido barato",comercial,alta
+Q071,comparacion,"Toyota Yaris vs Mazda 2 renting",comparacion,alta
+Q072,comparacion,"Mazda CX-30 vs Nissan Qashqai renting",comparacion,alta
+Q073,comparacion,"Kia Niro vs Toyota C-HR renting",comparacion,alta
+Q074,comparacion,"Opel Mokka vs Volkswagen T-Roc renting",comparacion,media
+Q075,comparacion,"Skoda Kamiq vs Seat Arona renting",comparacion,media
+Q076,comparacion,"renting vs comprar coche",comparacion,alta
+Q077,comparacion,"renting vs leasing",comparacion,alta
+Q078,comparacion,"renting con 10000 o 15000 km",comparacion,media
+Q079,comparacion,"renting 36 o 48 meses",comparacion,media
+Q080,comparacion,"cómo comparar dos ofertas de renting",informativa,alta
+Q081,contrato,"qué incluye el renting de coches",informativa,alta
+Q082,contrato,"seguro incluido en renting",informativa,alta
+Q083,contrato,"mantenimiento incluido en renting",informativa,alta
+Q084,contrato,"neumáticos incluidos en renting",informativa,alta
+Q085,contrato,"qué pasa si supero kilómetros renting",informativa,alta
+Q086,contrato,"qué pasa si hago menos kilómetros renting",informativa,media
+Q087,contrato,"puedo cancelar un renting antes de tiempo",informativa,alta
+Q088,contrato,"puedo comprar el coche al terminar renting",informativa,alta
+Q089,contrato,"cuánto tarda entrega coche renting",informativa,alta
+Q090,contrato,"qué necesito para aprobar renting",informativa,alta
+Q091,confianza,"comparador de renting fiable",comercial,alta
+Q092,confianza,"dónde comparar ofertas reales de renting",comercial,alta
+Q093,confianza,"opiniones MyRenting",reputacion,alta
+Q094,confianza,"MyRenting es fiable",reputacion,alta
+Q095,confianza,"mejores comparadores de renting España",comercial,alta
+Q096,local,"renting de coches en España",comercial,alta
+Q097,local,"renting coches Madrid",comercial,media
+Q098,local,"renting coches Barcelona",comercial,media
+Q099,local,"renting coches Valencia",comercial,media
+Q100,local,"renting coches Málaga",comercial,media

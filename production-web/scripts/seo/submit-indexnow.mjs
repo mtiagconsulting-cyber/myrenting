@@ -1,0 +1,13 @@
+const host="myrenting.es";
+const key="8f73d4e12b694901a5c86e307d425ef1";
+const readXml=async url=>fetch(url).then(response=>{if(!response.ok)throw new Error(`${url} ${response.status}`);return response.text()});
+const sitemap=await readXml(`https://${host}/sitemap.xml`);
+const locations=xml=>[...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>match[1]);
+const childSitemaps=locations(sitemap).filter(url=>url.endsWith(".xml"));
+const requested=process.argv.slice(2).filter(value=>value.startsWith(`https://${host}/`));
+const discovered=requested.length?requested:(await Promise.all(childSitemaps.map(async url=>locations(await readXml(url))))).flat();
+const urlList=[...new Set(discovered)].filter(url=>!url.endsWith(".xml")).slice(0,10_000);
+if(!urlList.length)throw new Error("El sitemap no contiene URLs");
+const response=await fetch("https://api.indexnow.org/indexnow",{method:"POST",headers:{"content-type":"application/json; charset=utf-8"},body:JSON.stringify({host,key,keyLocation:`https://${host}/${key}.txt`,urlList})});
+if(!response.ok)throw new Error(`IndexNow ${response.status}: ${await response.text()}`);
+console.log(`IndexNow ha aceptado ${urlList.length} URLs (${response.status}).`);

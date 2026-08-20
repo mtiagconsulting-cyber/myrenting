@@ -1,0 +1,35 @@
+# dependencies
+/node_modules
+
+# Next.js
+/.next/
+/.open-next/
+/tmp/
+/work/
+/out/
+
+# production
+/build
+
+# local environment files
+.env*
+!.env.example
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# system and tooling
+.DS_Store
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# Local Cloudflare authentication and logs
+/work/wrangler-config/
+/work/wrangler-logs/

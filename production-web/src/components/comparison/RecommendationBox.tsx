@@ -1,0 +1,9 @@
+import { getVehicleEditorial } from "@/data/vehicle-details";
+import type { VehicleComparison } from "@/types/comparison";
+
+export function RecommendationBox({ comparison }: { comparison: VehicleComparison }) {
+  const sides = [comparison.first, comparison.second];
+  return (
+    <section aria-labelledby="como-elegir"><p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Ayuda para decidir</p><h2 id="como-elegir" className="font-display mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink">¿Cuál encaja mejor contigo?</h2><p className="mt-3 max-w-3xl text-sm leading-6 text-muted">No existe un ganador universal. La elección depende del uso, el presupuesto total y las condiciones que necesitas.</p><div className="mt-7 grid gap-4 md:grid-cols-2">{sides.map((side, index) => { const other = sides[index === 0 ? 1 : 0]; const editorial = getVehicleEditorial(side.vehicle.slug, `${side.vehicle.brand} ${side.vehicle.model}`, side.vehicle.fuel, side.vehicle); const priceDifference = side.offer.monthlyPrice - other.offer.monthlyPrice; return <article key={side.vehicle.id} className="rounded-xl border border-line bg-surface p-6 sm:p-7"><p className="text-xs font-bold text-muted">Elegiría {side.vehicle.brand} si…</p><h3 className="font-display mt-2 text-2xl font-semibold tracking-[-0.04em] text-ink">{side.vehicle.model}</h3><p className="mt-4 text-sm leading-6 text-copy">{editorial.idealFor}</p><div className="mt-5 border-t border-line pt-5 text-xs leading-5 text-muted">{priceDifference < 0 ? `Su cuota es ${Math.abs(priceDifference)} € al mes menor en las ofertas comparadas.` : priceDifference > 0 ? `Su cuota es ${priceDifference} € al mes mayor; valora si sus diferencias compensan el coste.` : "Ambas ofertas tienen la misma cuota mensual; revisa entrada y equipamiento."}</div></article>; })}</div></section>
+  );
+}

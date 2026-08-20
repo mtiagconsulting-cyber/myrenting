@@ -1,0 +1,81 @@
+@import "@fontsource-variable/archivo";
+@import "@fontsource-variable/manrope";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-ink: var(--ink);
+  --color-copy: var(--copy);
+  --color-muted: var(--muted);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-positive: var(--positive);
+  --font-display: "Archivo Variable", sans-serif;
+  --font-sans: "Manrope Variable", sans-serif;
+  --font-data: "IBM Plex Mono", monospace;
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 8px 24px rgb(16 24 40 / 0.05);
+}
+
+:root {
+  --brand: #ff6a00;
+  --brand-hover: #e85f00;
+  --ink: #101828;
+  --copy: #344054;
+  --muted: #667085;
+  --canvas: #fafafa;
+  --surface: #ffffff;
+  --line: #eaecf0;
+  --positive: #087443;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--line);
+}
+
+html {
+  min-height: 100%;
+  background: var(--canvas);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--copy);
+  font-family: "Manrope Variable", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgb(255 106 0 / 0.2);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid rgb(255 106 0 / 0.32);
+  outline-offset: 3px;
+}
+
+.legacy-article h2 { margin-top: 2.5rem; font-family: "Archivo Variable", sans-serif; font-size: 1.75rem; font-weight: 650; letter-spacing: -0.035em; color: var(--ink); }
+.legacy-article h3 { margin-top: 1.75rem; font-weight: 750; color: var(--ink); }
+.legacy-article p { margin-top: 1rem; line-height: 1.8; color: var(--copy); }
+.legacy-article ul, .legacy-article ol { margin-top: 1rem; padding-left: 1.5rem; color: var(--copy); }
+.legacy-article li { margin-top: .5rem; line-height: 1.7; }
+.legacy-article table { margin-top: 1.5rem; width: 100%; border-collapse: collapse; font-size: .875rem; }
+.legacy-article th, .legacy-article td { border: 1px solid var(--line); padding: .75rem; text-align: left; }
+.legacy-article th { background: var(--ink); color: white; }
+.legacy-article a { color: var(--brand); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }

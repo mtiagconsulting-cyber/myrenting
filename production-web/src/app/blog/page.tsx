@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import legacy from "@/data/legacy-articles.json";
+
+export const metadata:Metadata={title:"Guías de renting",description:"Guías prácticas para comparar renting, entender la fiscalidad y elegir vehículo.",alternates:{canonical:"/blog"}};
+export default function BlogPage(){return <main id="contenido-principal" className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-16"><p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Aprender antes de elegir</p><h1 className="font-display mt-3 text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">Guías de renting</h1><p className="mt-5 max-w-2xl text-base leading-7 text-muted">Fiscalidad, costes, comparativas y criterios prácticos para tomar una decisión informada.</p><div className="mt-10 grid gap-4 md:grid-cols-2">{legacy.articles.map(article=><Link key={article.slug} href={`/blog/${article.slug}`} className="group flex min-h-52 flex-col rounded-xl border border-line bg-surface p-6 shadow-card"><h2 className="font-display text-2xl font-semibold tracking-[-0.04em] text-ink">{article.headline}</h2><p className="mt-3 line-clamp-3 text-sm leading-6 text-muted">{article.description}</p><span className="mt-auto flex items-center gap-2 pt-6 text-sm font-bold text-brand">Leer guía <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" /></span></Link>)}</div></main>;}

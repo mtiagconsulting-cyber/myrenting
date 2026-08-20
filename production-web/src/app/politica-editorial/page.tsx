@@ -1,0 +1,13 @@
+import type {Metadata} from "next";
+import {Breadcrumb} from "@/components/seo/Breadcrumb";
+export const metadata:Metadata={title:"Política editorial y de opiniones",description:"Criterios de fuentes, actualización, correcciones, automatización y moderación de opiniones de MyRenting.",alternates:{canonical:"/politica-editorial"}};
+const sections=[
+["Fuentes","Priorizamos documentos facilitados por proveedores, páginas oficiales y fichas públicas. Indicamos la procedencia y la fecha de revisión siempre que resulta posible."],
+["Normalización","Convertimos las ofertas a campos comparables: perfil, cuota, IVA, entrada, duración, kilómetros, disponibilidad y coberturas. No completamos una condición desconocida con una suposición silenciosa."],
+["Automatización","Utilizamos extracción y normalización automatizadas para trabajar con inventarios extensos. Los recuentos, discrepancias y transformaciones se validan antes de publicar."],
+["Contenido editorial","Las guías deben responder una necesidad real, distinguir hechos de recomendaciones y evitar afirmaciones económicas o fiscales absolutas sin contexto."],
+["Correcciones","Cuando detectamos un error, corregimos la fuente normalizada y las páginas derivadas. Puedes comunicar incidencias en mtiagconsulting@gmail.com."],
+["Opiniones","Solo aceptamos opiniones mediante invitación individual. Publicamos tanto valoraciones positivas como negativas, siempre que no contengan spam, datos personales, amenazas o contenido ilícito. No alteramos su significado."],
+["Relaciones comerciales","Una posible comisión no modifica el precio para el usuario ni el criterio mostrado. Los acuerdos comerciales deben identificarse y no garantizan una recomendación."],
+];
+export default function EditorialPolicyPage(){return <main className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12"><Breadcrumb items={[{name:"Inicio",path:"/"},{name:"Política editorial",path:"/politica-editorial"}]}/><p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Confianza y rendición de cuentas</p><h1 className="font-display mt-3 text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">Política editorial</h1><p className="mt-5 text-base leading-7 text-muted">Cómo obtenemos, transformamos, revisamos y corregimos la información publicada por MyRenting.</p><div className="mt-10 divide-y divide-line border-y border-line">{sections.map(([title,text])=><section key={title} className="grid gap-3 py-7 sm:grid-cols-[11rem_1fr]"><h2 className="font-display text-xl font-semibold">{title}</h2><p className="text-sm leading-7 text-copy">{text}</p></section>)}</div><p className="mt-7 text-xs text-muted">Última actualización: 4 de agosto de 2026.</p></main>}

@@ -1,0 +1,4 @@
+id,inicio,fin,cohorte,hipotesis,cambio,url_tipo,metrica_base,metrica_final,ai_sov_base,ai_sov_final,decision,observaciones
+EXP-001,,,answer-first,"Una respuesta breve y factual aumenta las citas","AnswerSummary antes del contenido extenso",respuestas,,,,,,pendiente,"Medir durante dos cortes mensuales"
+EXP-002,,,tablas,"Las tablas homogéneas aumentan las citas en comparativas","Tabla con configuración equivalente",comparativas,,,,,,pendiente,"No cambiar simultáneamente título y contenido"
+EXP-003,,,fuentes,"Las fuentes primarias mejoran menciones en consultas fiscales","Bloque de fuentes AEAT con fecha",fiscalidad,,,,,,pendiente,"Comparar consultas Q034-Q036 y Q046"
