@@ -33,6 +33,12 @@ function legacyDestination(pathname: string) {
     return categories[segments[1]] ?? "/renting";
   }
   if (segments[0] === "combustibles" && segments[1]) return `/renting/${segments[1]}`;
+  if (segments[0] === "renting" && segments.length >= 3) {
+    const intent = segments.at(-1)!;
+    if (["barato", "baratos", "sin-entrada", "entrega-inmediata"].includes(intent) || intent.startsWith("menos-de-")) {
+      return `/${segments.slice(0, -1).join("/")}`;
+    }
+  }
   return null;
 }
 
@@ -43,5 +49,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/marcas/:path*", "/modelos/:path*", "/categorias/:path*", "/combustibles/:path*", "/renting-:path*"],
+  matcher: ["/marcas/:path*", "/modelos/:path*", "/categorias/:path*", "/combustibles/:path*", "/renting-:path*", "/renting/:entity/:intent", "/renting/:brand/:model/:intent"],
 };
