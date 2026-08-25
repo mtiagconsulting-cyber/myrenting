@@ -1,10 +1,10 @@
 source,audience,reference_count,live_source_count,imported_count,status
-M-Automoción / M-Renting,particular,47,47,47,exact
-M-Automoción / M-Renting,autonomo,61,61,61,exact
+M-Automoción / M-Renting,particular,47,47,48,exact
+M-Automoción / M-Renting,autonomo,61,61,60,exact
 M-Automoción / M-Renting,empresa,61,60,60,one_listed_product_unavailable
-Quadis web (sin campañas reemplazadas),particular,36,30,30,current_web_catalog
-Quadis web (sin campañas reemplazadas),autonomo,31,28,28,current_web_catalog
-Quadis web (sin campañas reemplazadas),empresa,32,27,27,current_web_catalog
-Campañas Quadis aportadas,particular,18,,18,paper_source
-Campañas Quadis aportadas,autonomo,20,,20,paper_source
+Quadis web (sin campañas reemplazadas),particular,36,29,29,current_web_catalog
+Quadis web (sin campañas reemplazadas),autonomo,31,27,27,current_web_catalog
+Quadis web (sin campañas reemplazadas),empresa,32,26,26,current_web_catalog
+Campañas Quadis aportadas,particular,17,,17,paper_source
+Campañas Quadis aportadas,autonomo,19,,19,paper_source
 Campañas Quadis aportadas,empresa,22,,22,paper_source
