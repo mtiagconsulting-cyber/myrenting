@@ -15,7 +15,8 @@ const slug=value=>value.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerC
 const folderRows=[...folders].map(([key,files])=>{const [provider,name]=key.split("/");return{key,provider,name,normalized:normalize(name),files};});
 
 const generatedPhotos={
-  "veh-quadis-paper-nissan-interstar-furgon-n1-l2h2-3-5t-dci-96kw-130cv-6m-t-fwd-acenta-11":"generated-nissan-interstar",
+  "veh-quadis-494501":"generated-mercedes-benz-gla-200d",
+  "veh-quadis-paper-nissan-interstar-furgon-n1-l2h2-3-5t-dci-96kw-130cv-6m-t-fwd-acenta-12":"generated-nissan-interstar",
   "veh-quadis-paper-mercedes-benz-gla-gla-200-d-amg-line-advanced-plus-ayvens":"generated-mercedes-benz-gla-200d",
 };
 

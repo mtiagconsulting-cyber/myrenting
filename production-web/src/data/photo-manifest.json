@@ -1,1097 +1,9 @@
 {
-  "generatedAt": "2026-08-12T10:19:31.544Z",
+  "generatedAt": "2026-08-26T08:55:35.578Z",
   "source": "fotos_organizadas.zip",
-  "vehicleCount": 221,
+  "vehicleCount": 217,
   "missing": [],
   "photos": {
-    "veh-m-autonomo-229": {
-      "hero": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-card.webp",
-      "sourceFolder": "MRenting/SKODAOCTAVIA_Autonomo_229"
-    },
-    "veh-m-autonomo-231": {
-      "hero": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-card.webp",
-      "sourceFolder": "MRenting/SKODAOCTAVIA_Autonomo_231"
-    },
-    "veh-m-autonomo-235": {
-      "hero": "/vehicle-images/mrenting-skodakaroq-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakaroq-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakaroq-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakaroq-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakaroq-card.webp",
-      "sourceFolder": "MRenting/SKODAKAROQ"
-    },
-    "veh-m-autonomo-238": {
-      "hero": "/vehicle-images/mrenting-skodaelroq-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaelroq-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaelroq-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaelroq-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaelroq-card.webp",
-      "sourceFolder": "MRenting/SKODAELROQ"
-    },
-    "veh-m-autonomo-252": {
-      "hero": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACECITY_Autonomo_252"
-    },
-    "veh-m-autonomo-253": {
-      "hero": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACECITY_Autonomo_253"
-    },
-    "veh-m-autonomo-256": {
-      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_256"
-    },
-    "veh-m-autonomo-257": {
-      "hero": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACEMAX_Empresa_257"
-    },
-    "veh-m-autonomo-282": {
-      "hero": "/vehicle-images/mrenting-hyundaitucson-hero.webp",
-      "card": "/vehicle-images/mrenting-hyundaitucson-card.webp",
-      "interior": "/vehicle-images/mrenting-hyundaitucson-interior.webp",
-      "trunk": "/vehicle-images/mrenting-hyundaitucson-trunk.webp",
-      "compare": "/vehicle-images/mrenting-hyundaitucson-card.webp",
-      "sourceFolder": "MRenting/HYUNDAITUCSON"
-    },
-    "veh-m-autonomo-311": {
-      "hero": "/vehicle-images/mrenting-audia1-hero.webp",
-      "card": "/vehicle-images/mrenting-audia1-card.webp",
-      "interior": "/vehicle-images/mrenting-audia1-interior.webp",
-      "trunk": "/vehicle-images/mrenting-audia1-trunk.webp",
-      "compare": "/vehicle-images/mrenting-audia1-card.webp",
-      "sourceFolder": "MRenting/AUDIA1"
-    },
-    "veh-m-autonomo-327": {
-      "hero": "/vehicle-images/mrenting-ebros400-autonomo-327-hero.webp",
-      "card": "/vehicle-images/mrenting-ebros400-autonomo-327-card.webp",
-      "interior": "/vehicle-images/mrenting-ebros400-autonomo-327-interior.webp",
-      "trunk": "/vehicle-images/mrenting-ebros400-autonomo-327-trunk.webp",
-      "compare": "/vehicle-images/mrenting-ebros400-autonomo-327-card.webp",
-      "sourceFolder": "MRenting/EBROS400_Autonomo_327"
-    },
-    "veh-m-autonomo-330": {
-      "hero": "/vehicle-images/mrenting-ebros400-autonomo-330-hero.webp",
-      "card": "/vehicle-images/mrenting-ebros400-autonomo-330-card.webp",
-      "interior": "/vehicle-images/mrenting-ebros400-autonomo-330-interior.webp",
-      "trunk": "/vehicle-images/mrenting-ebros400-autonomo-330-trunk.webp",
-      "compare": "/vehicle-images/mrenting-ebros400-autonomo-330-card.webp",
-      "sourceFolder": "MRenting/EBROS400_Autonomo_330"
-    },
-    "veh-m-autonomo-336": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Autonomo_336"
-    },
-    "veh-m-autonomo-339": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Autonomo_339"
-    },
-    "veh-m-autonomo-345": {
-      "hero": "/vehicle-images/mrenting-volkswagentiguan-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentiguan-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentiguan-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTIGUAN"
-    },
-    "veh-m-autonomo-357": {
-      "hero": "/vehicle-images/mrenting-toyotayaris-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotayaris-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotayaris-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotayaris-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotayaris-card.webp",
-      "sourceFolder": "MRenting/TOYOTAYARIS"
-    },
-    "veh-m-autonomo-361": {
-      "hero": "/vehicle-images/mrenting-peugeotrifter-hero.webp",
-      "card": "/vehicle-images/mrenting-peugeotrifter-card.webp",
-      "interior": "/vehicle-images/mrenting-peugeotrifter-interior.webp",
-      "trunk": "/vehicle-images/mrenting-peugeotrifter-trunk.webp",
-      "compare": "/vehicle-images/mrenting-peugeotrifter-card.webp",
-      "sourceFolder": "MRenting/PEUGEOTRIFTER"
-    },
-    "veh-m-autonomo-363": {
-      "hero": "/vehicle-images/mrenting-omoda9-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda9-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda9-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda9-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda9-card.webp",
-      "sourceFolder": "MRenting/OMODA9"
-    },
-    "veh-m-autonomo-366": {
-      "hero": "/vehicle-images/mrenting-toyotachr-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotachr-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotachr-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotachr-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotachr-card.webp",
-      "sourceFolder": "MRenting/TOYOTACHR"
-    },
-    "veh-m-autonomo-369": {
-      "hero": "/vehicle-images/mrenting-toyotahilux-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotahilux-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotahilux-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotahilux-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotahilux-card.webp",
-      "sourceFolder": "MRenting/TOYOTAHILUX"
-    },
-    "veh-m-autonomo-371": {
-      "hero": "/vehicle-images/mrenting-opelcorsa-hero.webp",
-      "card": "/vehicle-images/mrenting-opelcorsa-card.webp",
-      "interior": "/vehicle-images/mrenting-opelcorsa-interior.webp",
-      "trunk": "/vehicle-images/mrenting-opelcorsa-trunk.webp",
-      "compare": "/vehicle-images/mrenting-opelcorsa-card.webp",
-      "sourceFolder": "MRenting/OPELCORSA"
-    },
-    "veh-m-autonomo-374": {
-      "hero": "/vehicle-images/mrenting-daciasandero-hero.webp",
-      "card": "/vehicle-images/mrenting-daciasandero-card.webp",
-      "interior": "/vehicle-images/mrenting-daciasandero-interior.webp",
-      "trunk": "/vehicle-images/mrenting-daciasandero-trunk.webp",
-      "compare": "/vehicle-images/mrenting-daciasandero-card.webp",
-      "sourceFolder": "MRenting/DACIASANDERO"
-    },
-    "veh-m-autonomo-376": {
-      "hero": "/vehicle-images/mrenting-renaultsymbioz-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultsymbioz-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultsymbioz-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
-      "sourceFolder": "MRenting/RENAULTSYMBIOZ"
-    },
-    "veh-m-autonomo-379": {
-      "hero": "/vehicle-images/mrenting-omoda5-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda5-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda5-card.webp",
-      "sourceFolder": "MRenting/OMODA5"
-    },
-    "veh-m-autonomo-382": {
-      "hero": "/vehicle-images/mrenting-omoda7-autonomo-382-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda7-autonomo-382-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda7-autonomo-382-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda7-autonomo-382-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda7-autonomo-382-card.webp",
-      "sourceFolder": "MRenting/OMODA7_Autonomo_382"
-    },
-    "veh-m-autonomo-384": {
-      "hero": "/vehicle-images/mrenting-omoda7-autonomo-384-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda7-autonomo-384-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda7-autonomo-384-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda7-autonomo-384-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda7-autonomo-384-card.webp",
-      "sourceFolder": "MRenting/OMODA7_Autonomo_384"
-    },
-    "veh-m-autonomo-388": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-autonomo-391": {
-      "hero": "/vehicle-images/mrenting-jaecoo7-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo7-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo7-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo7-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo7-card.webp",
-      "sourceFolder": "MRenting/JAECOO7"
-    },
-    "veh-m-autonomo-394": {
-      "hero": "/vehicle-images/mrenting-skodakamiq-autonomo-394-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakamiq-autonomo-394-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakamiq-autonomo-394-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakamiq-autonomo-394-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakamiq-autonomo-394-card.webp",
-      "sourceFolder": "MRenting/SKODAKAMIQ_Autonomo_394"
-    },
-    "veh-m-autonomo-397": {
-      "hero": "/vehicle-images/mrenting-skodakamiq-autonomo-397-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakamiq-autonomo-397-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakamiq-autonomo-397-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakamiq-autonomo-397-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakamiq-autonomo-397-card.webp",
-      "sourceFolder": "MRenting/SKODAKAMIQ_Autonomo_397"
-    },
-    "veh-m-autonomo-399": {
-      "hero": "/vehicle-images/mrenting-alfaromeojunior-hero.webp",
-      "card": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
-      "interior": "/vehicle-images/mrenting-alfaromeojunior-interior.webp",
-      "trunk": "/vehicle-images/mrenting-alfaromeojunior-trunk.webp",
-      "compare": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
-      "sourceFolder": "MRenting/ALFAROMEOJUNIOR"
-    },
-    "veh-m-autonomo-400": {
-      "hero": "/vehicle-images/mrenting-citroenberlingo-hero.webp",
-      "card": "/vehicle-images/mrenting-citroenberlingo-card.webp",
-      "interior": "/vehicle-images/mrenting-citroenberlingo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-citroenberlingo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-citroenberlingo-card.webp",
-      "sourceFolder": "MRenting/CITROENBERLINGO"
-    },
-    "veh-m-autonomo-401": {
-      "hero": "/vehicle-images/mrenting-nissanqashqai-hero.webp",
-      "card": "/vehicle-images/mrenting-nissanqashqai-card.webp",
-      "interior": "/vehicle-images/mrenting-nissanqashqai-interior.webp",
-      "trunk": "/vehicle-images/mrenting-nissanqashqai-trunk.webp",
-      "compare": "/vehicle-images/mrenting-nissanqashqai-card.webp",
-      "sourceFolder": "MRenting/NISSANQASHQAI"
-    },
-    "veh-m-autonomo-403": {
-      "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultaustral-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultaustral-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultaustral-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultaustral-card.webp",
-      "sourceFolder": "MRenting/RENAULTAUSTRAL"
-    },
-    "veh-m-autonomo-405": {
-      "hero": "/vehicle-images/mrenting-renaultcaptur-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultcaptur-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultcaptur-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultcaptur-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultcaptur-card.webp",
-      "sourceFolder": "MRenting/RENAULTCAPTUR"
-    },
-    "veh-m-autonomo-406": {
-      "hero": "/vehicle-images/mrenting-seatleon-hero.webp",
-      "card": "/vehicle-images/mrenting-seatleon-card.webp",
-      "interior": "/vehicle-images/mrenting-seatleon-interior.webp",
-      "trunk": "/vehicle-images/mrenting-seatleon-trunk.webp",
-      "compare": "/vehicle-images/mrenting-seatleon-card.webp",
-      "sourceFolder": "MRenting/SEATLEON"
-    },
-    "veh-m-autonomo-408": {
-      "hero": "/vehicle-images/mrenting-lynkco01-hero.webp",
-      "card": "/vehicle-images/mrenting-lynkco01-card.webp",
-      "interior": "/vehicle-images/mrenting-lynkco01-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lynkco01-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lynkco01-card.webp",
-      "sourceFolder": "MRenting/LYNKCO01"
-    },
-    "veh-m-autonomo-411": {
-      "hero": "/vehicle-images/mrenting-lynkco08-hero.webp",
-      "card": "/vehicle-images/mrenting-lynkco08-card.webp",
-      "interior": "/vehicle-images/mrenting-lynkco08-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lynkco08-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lynkco08-card.webp",
-      "sourceFolder": "MRenting/LYNKCO08"
-    },
-    "veh-m-autonomo-414": {
-      "hero": "/vehicle-images/mrenting-bydatto-hero.webp",
-      "card": "/vehicle-images/mrenting-bydatto-card.webp",
-      "interior": "/vehicle-images/mrenting-bydatto-interior.webp",
-      "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
-      "compare": "/vehicle-images/mrenting-bydatto-card.webp",
-      "sourceFolder": "MRenting/BYDATTO"
-    },
-    "veh-m-autonomo-417": {
-      "hero": "/vehicle-images/mrenting-byddolphin-hero.webp",
-      "card": "/vehicle-images/mrenting-byddolphin-card.webp",
-      "interior": "/vehicle-images/mrenting-byddolphin-interior.webp",
-      "trunk": "/vehicle-images/mrenting-byddolphin-trunk.webp",
-      "compare": "/vehicle-images/mrenting-byddolphin-card.webp",
-      "sourceFolder": "MRenting/BYDDOLPHIN"
-    },
-    "veh-m-autonomo-420": {
-      "hero": "/vehicle-images/mrenting-lanciaypsilon-hero.webp",
-      "card": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
-      "interior": "/vehicle-images/mrenting-lanciaypsilon-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lanciaypsilon-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
-      "sourceFolder": "MRenting/LANCIAYPSILON"
-    },
-    "veh-m-autonomo-422": {
-      "hero": "/vehicle-images/mrenting-opelfrontera-hero.webp",
-      "card": "/vehicle-images/mrenting-opelfrontera-card.webp",
-      "interior": "/vehicle-images/mrenting-opelfrontera-interior.webp",
-      "trunk": "/vehicle-images/mrenting-opelfrontera-trunk.webp",
-      "compare": "/vehicle-images/mrenting-opelfrontera-card.webp",
-      "sourceFolder": "MRenting/OPELFRONTERA"
-    },
-    "veh-m-autonomo-424": {
-      "hero": "/vehicle-images/mrenting-volkswagenpolo-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagenpolo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagenpolo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENPOLO"
-    },
-    "veh-m-autonomo-427": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-autonomo-430": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-autonomo-432": {
-      "hero": "/vehicle-images/mrenting-mazda2-autonomo-432-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda2-autonomo-432-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda2-autonomo-432-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda2-autonomo-432-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda2-autonomo-432-card.webp",
-      "sourceFolder": "MRenting/MAZDA2_Autonomo_432"
-    },
-    "veh-m-autonomo-435": {
-      "hero": "/vehicle-images/mrenting-mazda2-autonomo-435-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda2-autonomo-435-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda2-autonomo-435-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda2-autonomo-435-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda2-autonomo-435-card.webp",
-      "sourceFolder": "MRenting/MAZDA2_Autonomo_435"
-    },
-    "veh-m-autonomo-438": {
-      "hero": "/vehicle-images/mrenting-mazda3-autonomo-438-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-autonomo-438-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-autonomo-438-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-autonomo-438-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-autonomo-438-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Autonomo_438"
-    },
-    "veh-m-autonomo-441": {
-      "hero": "/vehicle-images/mrenting-mazda3-autonomo-441-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-autonomo-441-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-autonomo-441-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-autonomo-441-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-autonomo-441-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Autonomo_441"
-    },
-    "veh-m-autonomo-444": {
-      "hero": "/vehicle-images/mrenting-mazda3-autonomo-444-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-autonomo-444-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-autonomo-444-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-autonomo-444-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-autonomo-444-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Autonomo_444"
-    },
-    "veh-m-autonomo-446": {
-      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
-    },
-    "veh-m-autonomo-449": {
-      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-449-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-449-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-449-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-449-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-449-card.webp",
-      "sourceFolder": "MRenting/MAZDACX30_Autonomo_449"
-    },
-    "veh-m-autonomo-452": {
-      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
-    },
-    "veh-m-autonomo-455": {
-      "hero": "/vehicle-images/mrenting-mazdacx5-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx5-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx5-card.webp",
-      "sourceFolder": "MRenting/MAZDACX5"
-    },
-    "veh-m-autonomo-457": {
-      "hero": "/vehicle-images/mrenting-mazdacx60-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx60-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx60-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx60-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx60-card.webp",
-      "sourceFolder": "MRenting/MAZDACX60"
-    },
-    "veh-m-autonomo-460": {
-      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
-      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "sourceFolder": "MRenting/CITROENeBERLINGO"
-    },
-    "veh-m-autonomo-462": {
-      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
-      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "sourceFolder": "MRenting/CITROENeBERLINGO"
-    },
-    "veh-m-autonomo-464": {
-      "hero": "/vehicle-images/mrenting-kiapv5cargo-hero.webp",
-      "card": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
-      "interior": "/vehicle-images/mrenting-kiapv5cargo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-kiapv5cargo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
-      "sourceFolder": "MRenting/KIAPV5CARGO"
-    },
-    "veh-m-autonomo-466": {
-      "hero": "/vehicle-images/mrenting-kiapv5passenger-hero.webp",
-      "card": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
-      "interior": "/vehicle-images/mrenting-kiapv5passenger-interior.webp",
-      "trunk": "/vehicle-images/mrenting-kiapv5passenger-trunk.webp",
-      "compare": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
-      "sourceFolder": "MRenting/KIAPV5PASSENGER"
-    },
-    "veh-m-autonomo-468": {
-      "hero": "/vehicle-images/mrenting-seatibiza-hero.webp",
-      "card": "/vehicle-images/mrenting-seatibiza-card.webp",
-      "interior": "/vehicle-images/mrenting-seatibiza-interior.webp",
-      "trunk": "/vehicle-images/mrenting-seatibiza-trunk.webp",
-      "compare": "/vehicle-images/mrenting-seatibiza-card.webp",
-      "sourceFolder": "MRenting/SEATIBIZA"
-    },
-    "veh-m-autonomo-47": {
-      "hero": "/vehicle-images/mrenting-toyotayariscross-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotayariscross-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotayariscross-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotayariscross-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotayariscross-card.webp",
-      "sourceFolder": "MRenting/TOYOTAYARISCROSS"
-    },
-    "veh-m-empresa-152": {
-      "hero": "/vehicle-images/mrenting-toyotayaris-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotayaris-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotayaris-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotayaris-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotayaris-card.webp",
-      "sourceFolder": "MRenting/TOYOTAYARIS"
-    },
-    "veh-m-empresa-154": {
-      "hero": "/vehicle-images/mrenting-toyotayariscross-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotayariscross-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotayariscross-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotayariscross-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotayariscross-card.webp",
-      "sourceFolder": "MRenting/TOYOTAYARISCROSS"
-    },
-    "veh-m-empresa-156": {
-      "hero": "/vehicle-images/mrenting-mazdacx60-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx60-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx60-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx60-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx60-card.webp",
-      "sourceFolder": "MRenting/MAZDACX60"
-    },
-    "veh-m-empresa-163": {
-      "hero": "/vehicle-images/mrenting-hyundaitucson-hero.webp",
-      "card": "/vehicle-images/mrenting-hyundaitucson-card.webp",
-      "interior": "/vehicle-images/mrenting-hyundaitucson-interior.webp",
-      "trunk": "/vehicle-images/mrenting-hyundaitucson-trunk.webp",
-      "compare": "/vehicle-images/mrenting-hyundaitucson-card.webp",
-      "sourceFolder": "MRenting/HYUNDAITUCSON"
-    },
-    "veh-m-empresa-167": {
-      "hero": "/vehicle-images/mrenting-ebros400-empresa-167-hero.webp",
-      "card": "/vehicle-images/mrenting-ebros400-empresa-167-card.webp",
-      "interior": "/vehicle-images/mrenting-ebros400-empresa-167-interior.webp",
-      "trunk": "/vehicle-images/mrenting-ebros400-empresa-167-trunk.webp",
-      "compare": "/vehicle-images/mrenting-ebros400-empresa-167-card.webp",
-      "sourceFolder": "MRenting/EBROS400_Empresa_167"
-    },
-    "veh-m-empresa-187": {
-      "hero": "/vehicle-images/mrenting-seatleon-hero.webp",
-      "card": "/vehicle-images/mrenting-seatleon-card.webp",
-      "interior": "/vehicle-images/mrenting-seatleon-interior.webp",
-      "trunk": "/vehicle-images/mrenting-seatleon-trunk.webp",
-      "compare": "/vehicle-images/mrenting-seatleon-card.webp",
-      "sourceFolder": "MRenting/SEATLEON"
-    },
-    "veh-m-empresa-188": {
-      "hero": "/vehicle-images/mrenting-renaultcaptur-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultcaptur-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultcaptur-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultcaptur-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultcaptur-card.webp",
-      "sourceFolder": "MRenting/RENAULTCAPTUR"
-    },
-    "veh-m-empresa-192": {
-      "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultaustral-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultaustral-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultaustral-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultaustral-card.webp",
-      "sourceFolder": "MRenting/RENAULTAUSTRAL"
-    },
-    "veh-m-empresa-193": {
-      "hero": "/vehicle-images/mrenting-renaultsymbioz-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultsymbioz-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultsymbioz-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
-      "sourceFolder": "MRenting/RENAULTSYMBIOZ"
-    },
-    "veh-m-empresa-195": {
-      "hero": "/vehicle-images/mrenting-lynkco01-hero.webp",
-      "card": "/vehicle-images/mrenting-lynkco01-card.webp",
-      "interior": "/vehicle-images/mrenting-lynkco01-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lynkco01-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lynkco01-card.webp",
-      "sourceFolder": "MRenting/LYNKCO01"
-    },
-    "veh-m-empresa-196": {
-      "hero": "/vehicle-images/mrenting-opelfrontera-hero.webp",
-      "card": "/vehicle-images/mrenting-opelfrontera-card.webp",
-      "interior": "/vehicle-images/mrenting-opelfrontera-interior.webp",
-      "trunk": "/vehicle-images/mrenting-opelfrontera-trunk.webp",
-      "compare": "/vehicle-images/mrenting-opelfrontera-card.webp",
-      "sourceFolder": "MRenting/OPELFRONTERA"
-    },
-    "veh-m-empresa-202": {
-      "hero": "/vehicle-images/mrenting-alfaromeojunior-hero.webp",
-      "card": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
-      "interior": "/vehicle-images/mrenting-alfaromeojunior-interior.webp",
-      "trunk": "/vehicle-images/mrenting-alfaromeojunior-trunk.webp",
-      "compare": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
-      "sourceFolder": "MRenting/ALFAROMEOJUNIOR"
-    },
-    "veh-m-empresa-210": {
-      "hero": "/vehicle-images/mrenting-peugeotrifter-hero.webp",
-      "card": "/vehicle-images/mrenting-peugeotrifter-card.webp",
-      "interior": "/vehicle-images/mrenting-peugeotrifter-interior.webp",
-      "trunk": "/vehicle-images/mrenting-peugeotrifter-trunk.webp",
-      "compare": "/vehicle-images/mrenting-peugeotrifter-card.webp",
-      "sourceFolder": "MRenting/PEUGEOTRIFTER"
-    },
-    "veh-m-empresa-228": {
-      "hero": "/vehicle-images/mrenting-skodaoctavia-empresa-228-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaoctavia-empresa-228-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaoctavia-empresa-228-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaoctavia-empresa-228-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaoctavia-empresa-228-card.webp",
-      "sourceFolder": "MRenting/SKODAOCTAVIA_Empresa_228"
-    },
-    "veh-m-empresa-232": {
-      "hero": "/vehicle-images/mrenting-skodaoctavia-empresa-232-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaoctavia-empresa-232-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaoctavia-empresa-232-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaoctavia-empresa-232-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaoctavia-empresa-232-card.webp",
-      "sourceFolder": "MRenting/SKODAOCTAVIA_Empresa_232"
-    },
-    "veh-m-empresa-234": {
-      "hero": "/vehicle-images/mrenting-skodakaroq-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakaroq-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakaroq-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakaroq-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakaroq-card.webp",
-      "sourceFolder": "MRenting/SKODAKAROQ"
-    },
-    "veh-m-empresa-237": {
-      "hero": "/vehicle-images/mrenting-skodaelroq-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaelroq-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaelroq-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaelroq-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaelroq-card.webp",
-      "sourceFolder": "MRenting/SKODAELROQ"
-    },
-    "veh-m-empresa-245": {
-      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
-    },
-    "veh-m-empresa-251": {
-      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_251"
-    },
-    "veh-m-empresa-254": {
-      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_254"
-    },
-    "veh-m-empresa-255": {
-      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_255"
-    },
-    "veh-m-empresa-258": {
-      "hero": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-card.webp",
-      "sourceFolder": "MRenting/TOYOTAPROACEMAX_Empresa_258"
-    },
-    "veh-m-empresa-272": {
-      "hero": "/vehicle-images/mrenting-mazda2-empresa-272-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda2-empresa-272-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda2-empresa-272-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda2-empresa-272-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda2-empresa-272-card.webp",
-      "sourceFolder": "MRenting/MAZDA2_Empresa_272"
-    },
-    "veh-m-empresa-304": {
-      "hero": "/vehicle-images/mrenting-nissanqashqai-hero.webp",
-      "card": "/vehicle-images/mrenting-nissanqashqai-card.webp",
-      "interior": "/vehicle-images/mrenting-nissanqashqai-interior.webp",
-      "trunk": "/vehicle-images/mrenting-nissanqashqai-trunk.webp",
-      "compare": "/vehicle-images/mrenting-nissanqashqai-card.webp",
-      "sourceFolder": "MRenting/NISSANQASHQAI"
-    },
-    "veh-m-empresa-310": {
-      "hero": "/vehicle-images/mrenting-audia1-hero.webp",
-      "card": "/vehicle-images/mrenting-audia1-card.webp",
-      "interior": "/vehicle-images/mrenting-audia1-interior.webp",
-      "trunk": "/vehicle-images/mrenting-audia1-trunk.webp",
-      "compare": "/vehicle-images/mrenting-audia1-card.webp",
-      "sourceFolder": "MRenting/AUDIA1"
-    },
-    "veh-m-empresa-331": {
-      "hero": "/vehicle-images/mrenting-ebros400-empresa-331-hero.webp",
-      "card": "/vehicle-images/mrenting-ebros400-empresa-331-card.webp",
-      "interior": "/vehicle-images/mrenting-ebros400-empresa-331-interior.webp",
-      "trunk": "/vehicle-images/mrenting-ebros400-empresa-331-trunk.webp",
-      "compare": "/vehicle-images/mrenting-ebros400-empresa-331-card.webp",
-      "sourceFolder": "MRenting/EBROS400_Empresa_331"
-    },
-    "veh-m-empresa-332": {
-      "hero": "/vehicle-images/mrenting-volkswagenpolo-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagenpolo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagenpolo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENPOLO"
-    },
-    "veh-m-empresa-337": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-empresa-337-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-empresa-337-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-empresa-337-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-empresa-337-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-empresa-337-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Empresa_337"
-    },
-    "veh-m-empresa-340": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-empresa-340-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-empresa-340-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-empresa-340-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-empresa-340-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-empresa-340-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Empresa_340"
-    },
-    "veh-m-empresa-344": {
-      "hero": "/vehicle-images/mrenting-volkswagentiguan-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentiguan-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentiguan-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTIGUAN"
-    },
-    "veh-m-empresa-362": {
-      "hero": "/vehicle-images/mrenting-omoda9-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda9-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda9-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda9-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda9-card.webp",
-      "sourceFolder": "MRenting/OMODA9"
-    },
-    "veh-m-empresa-365": {
-      "hero": "/vehicle-images/mrenting-toyotachr-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotachr-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotachr-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotachr-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotachr-card.webp",
-      "sourceFolder": "MRenting/TOYOTACHR"
-    },
-    "veh-m-empresa-368": {
-      "hero": "/vehicle-images/mrenting-toyotahilux-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotahilux-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotahilux-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotahilux-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotahilux-card.webp",
-      "sourceFolder": "MRenting/TOYOTAHILUX"
-    },
-    "veh-m-empresa-370": {
-      "hero": "/vehicle-images/mrenting-opelcorsa-hero.webp",
-      "card": "/vehicle-images/mrenting-opelcorsa-card.webp",
-      "interior": "/vehicle-images/mrenting-opelcorsa-interior.webp",
-      "trunk": "/vehicle-images/mrenting-opelcorsa-trunk.webp",
-      "compare": "/vehicle-images/mrenting-opelcorsa-card.webp",
-      "sourceFolder": "MRenting/OPELCORSA"
-    },
-    "veh-m-empresa-373": {
-      "hero": "/vehicle-images/mrenting-daciasandero-hero.webp",
-      "card": "/vehicle-images/mrenting-daciasandero-card.webp",
-      "interior": "/vehicle-images/mrenting-daciasandero-interior.webp",
-      "trunk": "/vehicle-images/mrenting-daciasandero-trunk.webp",
-      "compare": "/vehicle-images/mrenting-daciasandero-card.webp",
-      "sourceFolder": "MRenting/DACIASANDERO"
-    },
-    "veh-m-empresa-378": {
-      "hero": "/vehicle-images/mrenting-omoda7-empresa-378-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda7-empresa-378-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda7-empresa-378-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda7-empresa-378-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda7-empresa-378-card.webp",
-      "sourceFolder": "MRenting/OMODA7_Empresa_378"
-    },
-    "veh-m-empresa-381": {
-      "hero": "/vehicle-images/mrenting-omoda5-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda5-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda5-card.webp",
-      "sourceFolder": "MRenting/OMODA5"
-    },
-    "veh-m-empresa-385": {
-      "hero": "/vehicle-images/mrenting-omoda7-empresa-385-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda7-empresa-385-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda7-empresa-385-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda7-empresa-385-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda7-empresa-385-card.webp",
-      "sourceFolder": "MRenting/OMODA7_Empresa_385"
-    },
-    "veh-m-empresa-387": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-empresa-390": {
-      "hero": "/vehicle-images/mrenting-jaecoo7-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo7-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo7-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo7-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo7-card.webp",
-      "sourceFolder": "MRenting/JAECOO7"
-    },
-    "veh-m-empresa-393": {
-      "hero": "/vehicle-images/mrenting-skodakamiq-empresa-393-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakamiq-empresa-393-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakamiq-empresa-393-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakamiq-empresa-393-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakamiq-empresa-393-card.webp",
-      "sourceFolder": "MRenting/SKODAKAMIQ_Empresa_393"
-    },
-    "veh-m-empresa-398": {
-      "hero": "/vehicle-images/mrenting-skodakamiq-empresa-398-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakamiq-empresa-398-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakamiq-empresa-398-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakamiq-empresa-398-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakamiq-empresa-398-card.webp",
-      "sourceFolder": "MRenting/SKODAKAMIQ_Empresa_398"
-    },
-    "veh-m-empresa-410": {
-      "hero": "/vehicle-images/mrenting-lynkco08-hero.webp",
-      "card": "/vehicle-images/mrenting-lynkco08-card.webp",
-      "interior": "/vehicle-images/mrenting-lynkco08-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lynkco08-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lynkco08-card.webp",
-      "sourceFolder": "MRenting/LYNKCO08"
-    },
-    "veh-m-empresa-413": {
-      "hero": "/vehicle-images/mrenting-bydatto-hero.webp",
-      "card": "/vehicle-images/mrenting-bydatto-card.webp",
-      "interior": "/vehicle-images/mrenting-bydatto-interior.webp",
-      "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
-      "compare": "/vehicle-images/mrenting-bydatto-card.webp",
-      "sourceFolder": "MRenting/BYDATTO"
-    },
-    "veh-m-empresa-416": {
-      "hero": "/vehicle-images/mrenting-byddolphin-hero.webp",
-      "card": "/vehicle-images/mrenting-byddolphin-card.webp",
-      "interior": "/vehicle-images/mrenting-byddolphin-interior.webp",
-      "trunk": "/vehicle-images/mrenting-byddolphin-trunk.webp",
-      "compare": "/vehicle-images/mrenting-byddolphin-card.webp",
-      "sourceFolder": "MRenting/BYDDOLPHIN"
-    },
-    "veh-m-empresa-419": {
-      "hero": "/vehicle-images/mrenting-lanciaypsilon-hero.webp",
-      "card": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
-      "interior": "/vehicle-images/mrenting-lanciaypsilon-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lanciaypsilon-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
-      "sourceFolder": "MRenting/LANCIAYPSILON"
-    },
-    "veh-m-empresa-426": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-empresa-429": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-empresa-436": {
-      "hero": "/vehicle-images/mrenting-mazda2-empresa-436-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda2-empresa-436-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda2-empresa-436-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda2-empresa-436-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda2-empresa-436-card.webp",
-      "sourceFolder": "MRenting/MAZDA2_Empresa_436"
-    },
-    "veh-m-empresa-437": {
-      "hero": "/vehicle-images/mrenting-mazda3-empresa-437-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-empresa-437-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-empresa-437-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-empresa-437-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-empresa-437-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Empresa_437"
-    },
-    "veh-m-empresa-440": {
-      "hero": "/vehicle-images/mrenting-mazda3-empresa-440-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-empresa-440-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-empresa-440-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-empresa-440-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-empresa-440-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Empresa_440"
-    },
-    "veh-m-empresa-443": {
-      "hero": "/vehicle-images/mrenting-mazda3-empresa-443-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-empresa-443-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-empresa-443-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-empresa-443-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-empresa-443-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Empresa_443"
-    },
-    "veh-m-empresa-451": {
-      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
-    },
-    "veh-m-empresa-454": {
-      "hero": "/vehicle-images/mrenting-mazdacx5-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx5-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx5-card.webp",
-      "sourceFolder": "MRenting/MAZDACX5"
-    },
-    "veh-m-empresa-459": {
-      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
-      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "sourceFolder": "MRenting/CITROENeBERLINGO"
-    },
-    "veh-m-empresa-461": {
-      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
-      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
-      "sourceFolder": "MRenting/CITROENeBERLINGO"
-    },
-    "veh-m-empresa-463": {
-      "hero": "/vehicle-images/mrenting-kiapv5cargo-hero.webp",
-      "card": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
-      "interior": "/vehicle-images/mrenting-kiapv5cargo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-kiapv5cargo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
-      "sourceFolder": "MRenting/KIAPV5CARGO"
-    },
-    "veh-m-empresa-465": {
-      "hero": "/vehicle-images/mrenting-kiapv5passenger-hero.webp",
-      "card": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
-      "interior": "/vehicle-images/mrenting-kiapv5passenger-interior.webp",
-      "trunk": "/vehicle-images/mrenting-kiapv5passenger-trunk.webp",
-      "compare": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
-      "sourceFolder": "MRenting/KIAPV5PASSENGER"
-    },
-    "veh-m-empresa-467": {
-      "hero": "/vehicle-images/mrenting-seatibiza-hero.webp",
-      "card": "/vehicle-images/mrenting-seatibiza-card.webp",
-      "interior": "/vehicle-images/mrenting-seatibiza-interior.webp",
-      "trunk": "/vehicle-images/mrenting-seatibiza-trunk.webp",
-      "compare": "/vehicle-images/mrenting-seatibiza-card.webp",
-      "sourceFolder": "MRenting/SEATIBIZA"
-    },
-    "veh-m-empresa-69": {
-      "hero": "/vehicle-images/mrenting-citroenberlingo-hero.webp",
-      "card": "/vehicle-images/mrenting-citroenberlingo-card.webp",
-      "interior": "/vehicle-images/mrenting-citroenberlingo-interior.webp",
-      "trunk": "/vehicle-images/mrenting-citroenberlingo-trunk.webp",
-      "compare": "/vehicle-images/mrenting-citroenberlingo-card.webp",
-      "sourceFolder": "MRenting/CITROENBERLINGO"
-    },
-    "veh-m-particular-153": {
-      "hero": "/vehicle-images/mrenting-toyotayariscross-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotayariscross-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotayariscross-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotayariscross-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotayariscross-card.webp",
-      "sourceFolder": "MRenting/TOYOTAYARISCROSS"
-    },
-    "veh-m-particular-230": {
-      "hero": "/vehicle-images/mrenting-skodaoctavia-particular-230-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaoctavia-particular-230-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaoctavia-particular-230-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaoctavia-particular-230-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaoctavia-particular-230-card.webp",
-      "sourceFolder": "MRenting/SKODAOCTAVIA_Particular_230"
-    },
-    "veh-m-particular-233": {
-      "hero": "/vehicle-images/mrenting-skodaoctavia-particular-233-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaoctavia-particular-233-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaoctavia-particular-233-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaoctavia-particular-233-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaoctavia-particular-233-card.webp",
-      "sourceFolder": "MRenting/SKODAOCTAVIA_Particular_233"
-    },
-    "veh-m-particular-236": {
-      "hero": "/vehicle-images/mrenting-skodakaroq-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakaroq-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakaroq-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakaroq-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakaroq-card.webp",
-      "sourceFolder": "MRenting/SKODAKAROQ"
-    },
-    "veh-m-particular-239": {
-      "hero": "/vehicle-images/mrenting-skodaelroq-hero.webp",
-      "card": "/vehicle-images/mrenting-skodaelroq-card.webp",
-      "interior": "/vehicle-images/mrenting-skodaelroq-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodaelroq-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodaelroq-card.webp",
-      "sourceFolder": "MRenting/SKODAELROQ"
-    },
-    "veh-m-particular-283": {
-      "hero": "/vehicle-images/mrenting-hyundaitucson-hero.webp",
-      "card": "/vehicle-images/mrenting-hyundaitucson-card.webp",
-      "interior": "/vehicle-images/mrenting-hyundaitucson-interior.webp",
-      "trunk": "/vehicle-images/mrenting-hyundaitucson-trunk.webp",
-      "compare": "/vehicle-images/mrenting-hyundaitucson-card.webp",
-      "sourceFolder": "MRenting/HYUNDAITUCSON"
-    },
-    "veh-m-particular-312": {
-      "hero": "/vehicle-images/mrenting-audia1-hero.webp",
-      "card": "/vehicle-images/mrenting-audia1-card.webp",
-      "interior": "/vehicle-images/mrenting-audia1-interior.webp",
-      "trunk": "/vehicle-images/mrenting-audia1-trunk.webp",
-      "compare": "/vehicle-images/mrenting-audia1-card.webp",
-      "sourceFolder": "MRenting/AUDIA1"
-    },
-    "veh-m-particular-328": {
-      "hero": "/vehicle-images/mrenting-ebros400-particular-328-hero.webp",
-      "card": "/vehicle-images/mrenting-ebros400-particular-328-card.webp",
-      "interior": "/vehicle-images/mrenting-ebros400-particular-328-interior.webp",
-      "trunk": "/vehicle-images/mrenting-ebros400-particular-328-trunk.webp",
-      "compare": "/vehicle-images/mrenting-ebros400-particular-328-card.webp",
-      "sourceFolder": "MRenting/EBROS400_Particular_328"
-    },
-    "veh-m-particular-329": {
-      "hero": "/vehicle-images/mrenting-ebros400-particular-329-hero.webp",
-      "card": "/vehicle-images/mrenting-ebros400-particular-329-card.webp",
-      "interior": "/vehicle-images/mrenting-ebros400-particular-329-interior.webp",
-      "trunk": "/vehicle-images/mrenting-ebros400-particular-329-trunk.webp",
-      "compare": "/vehicle-images/mrenting-ebros400-particular-329-card.webp",
-      "sourceFolder": "MRenting/EBROS400_Particular_329"
-    },
-    "veh-m-particular-335": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-particular-335-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-particular-335-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-particular-335-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-particular-335-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-particular-335-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Particular_335"
-    },
-    "veh-m-particular-338": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-particular-338-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-particular-338-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-particular-338-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-particular-338-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-particular-338-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Particular_338"
-    },
-    "veh-m-particular-346": {
-      "hero": "/vehicle-images/mrenting-volkswagentiguan-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentiguan-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentiguan-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTIGUAN"
-    },
-    "veh-m-particular-358": {
-      "hero": "/vehicle-images/mrenting-toyotayaris-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotayaris-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotayaris-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotayaris-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotayaris-card.webp",
-      "sourceFolder": "MRenting/TOYOTAYARIS"
-    },
-    "veh-m-particular-364": {
-      "hero": "/vehicle-images/mrenting-omoda9-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda9-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda9-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda9-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda9-card.webp",
-      "sourceFolder": "MRenting/OMODA9"
-    },
-    "veh-m-particular-367": {
-      "hero": "/vehicle-images/mrenting-toyotachr-hero.webp",
-      "card": "/vehicle-images/mrenting-toyotachr-card.webp",
-      "interior": "/vehicle-images/mrenting-toyotachr-interior.webp",
-      "trunk": "/vehicle-images/mrenting-toyotachr-trunk.webp",
-      "compare": "/vehicle-images/mrenting-toyotachr-card.webp",
-      "sourceFolder": "MRenting/TOYOTACHR"
-    },
     "veh-m-particular-372": {
       "hero": "/vehicle-images/mrenting-opelcorsa-hero.webp",
       "card": "/vehicle-images/mrenting-opelcorsa-card.webp",
@@ -1099,6 +11,14 @@
       "trunk": "/vehicle-images/mrenting-opelcorsa-trunk.webp",
       "compare": "/vehicle-images/mrenting-opelcorsa-card.webp",
       "sourceFolder": "MRenting/OPELCORSA"
+    },
+    "veh-m-particular-469": {
+      "hero": "/vehicle-images/mrenting-seatibiza-hero.webp",
+      "card": "/vehicle-images/mrenting-seatibiza-card.webp",
+      "interior": "/vehicle-images/mrenting-seatibiza-interior.webp",
+      "trunk": "/vehicle-images/mrenting-seatibiza-trunk.webp",
+      "compare": "/vehicle-images/mrenting-seatibiza-card.webp",
+      "sourceFolder": "MRenting/SEATIBIZA"
     },
     "veh-m-particular-375": {
       "hero": "/vehicle-images/mrenting-daciasandero-hero.webp",
@@ -1108,61 +28,21 @@
       "compare": "/vehicle-images/mrenting-daciasandero-card.webp",
       "sourceFolder": "MRenting/DACIASANDERO"
     },
-    "veh-m-particular-377": {
-      "hero": "/vehicle-images/mrenting-renaultsymbioz-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultsymbioz-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultsymbioz-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
-      "sourceFolder": "MRenting/RENAULTSYMBIOZ"
+    "veh-m-particular-445": {
+      "hero": "/vehicle-images/mrenting-mazda3-particular-445-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-particular-445-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-particular-445-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-particular-445-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-particular-445-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Particular_445"
     },
-    "veh-m-particular-380": {
-      "hero": "/vehicle-images/mrenting-omoda5-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda5-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda5-card.webp",
-      "sourceFolder": "MRenting/OMODA5"
-    },
-    "veh-m-particular-383": {
-      "hero": "/vehicle-images/mrenting-omoda7-particular-383-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda7-particular-383-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda7-particular-383-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda7-particular-383-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda7-particular-383-card.webp",
-      "sourceFolder": "MRenting/OMODA7_Particular_383"
-    },
-    "veh-m-particular-386": {
-      "hero": "/vehicle-images/mrenting-omoda7-particular-386-hero.webp",
-      "card": "/vehicle-images/mrenting-omoda7-particular-386-card.webp",
-      "interior": "/vehicle-images/mrenting-omoda7-particular-386-interior.webp",
-      "trunk": "/vehicle-images/mrenting-omoda7-particular-386-trunk.webp",
-      "compare": "/vehicle-images/mrenting-omoda7-particular-386-card.webp",
-      "sourceFolder": "MRenting/OMODA7_Particular_386"
-    },
-    "veh-m-particular-389": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-particular-392": {
-      "hero": "/vehicle-images/mrenting-jaecoo7-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo7-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo7-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo7-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo7-card.webp",
-      "sourceFolder": "MRenting/JAECOO7"
-    },
-    "veh-m-particular-395": {
-      "hero": "/vehicle-images/mrenting-skodakamiq-particular-395-hero.webp",
-      "card": "/vehicle-images/mrenting-skodakamiq-particular-395-card.webp",
-      "interior": "/vehicle-images/mrenting-skodakamiq-particular-395-interior.webp",
-      "trunk": "/vehicle-images/mrenting-skodakamiq-particular-395-trunk.webp",
-      "compare": "/vehicle-images/mrenting-skodakamiq-particular-395-card.webp",
-      "sourceFolder": "MRenting/SKODAKAMIQ_Particular_395"
+    "veh-m-particular-358": {
+      "hero": "/vehicle-images/mrenting-toyotayaris-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotayaris-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotayaris-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotayaris-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotayaris-card.webp",
+      "sourceFolder": "MRenting/TOYOTAYARIS"
     },
     "veh-m-particular-396": {
       "hero": "/vehicle-images/mrenting-skodakamiq-particular-396-hero.webp",
@@ -1172,78 +52,6 @@
       "compare": "/vehicle-images/mrenting-skodakamiq-particular-396-card.webp",
       "sourceFolder": "MRenting/SKODAKAMIQ_Particular_396"
     },
-    "veh-m-particular-402": {
-      "hero": "/vehicle-images/mrenting-nissanqashqai-hero.webp",
-      "card": "/vehicle-images/mrenting-nissanqashqai-card.webp",
-      "interior": "/vehicle-images/mrenting-nissanqashqai-interior.webp",
-      "trunk": "/vehicle-images/mrenting-nissanqashqai-trunk.webp",
-      "compare": "/vehicle-images/mrenting-nissanqashqai-card.webp",
-      "sourceFolder": "MRenting/NISSANQASHQAI"
-    },
-    "veh-m-particular-404": {
-      "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
-      "card": "/vehicle-images/mrenting-renaultaustral-card.webp",
-      "interior": "/vehicle-images/mrenting-renaultaustral-interior.webp",
-      "trunk": "/vehicle-images/mrenting-renaultaustral-trunk.webp",
-      "compare": "/vehicle-images/mrenting-renaultaustral-card.webp",
-      "sourceFolder": "MRenting/RENAULTAUSTRAL"
-    },
-    "veh-m-particular-407": {
-      "hero": "/vehicle-images/mrenting-seatleon-hero.webp",
-      "card": "/vehicle-images/mrenting-seatleon-card.webp",
-      "interior": "/vehicle-images/mrenting-seatleon-interior.webp",
-      "trunk": "/vehicle-images/mrenting-seatleon-trunk.webp",
-      "compare": "/vehicle-images/mrenting-seatleon-card.webp",
-      "sourceFolder": "MRenting/SEATLEON"
-    },
-    "veh-m-particular-409": {
-      "hero": "/vehicle-images/mrenting-lynkco01-hero.webp",
-      "card": "/vehicle-images/mrenting-lynkco01-card.webp",
-      "interior": "/vehicle-images/mrenting-lynkco01-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lynkco01-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lynkco01-card.webp",
-      "sourceFolder": "MRenting/LYNKCO01"
-    },
-    "veh-m-particular-412": {
-      "hero": "/vehicle-images/mrenting-lynkco08-hero.webp",
-      "card": "/vehicle-images/mrenting-lynkco08-card.webp",
-      "interior": "/vehicle-images/mrenting-lynkco08-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lynkco08-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lynkco08-card.webp",
-      "sourceFolder": "MRenting/LYNKCO08"
-    },
-    "veh-m-particular-415": {
-      "hero": "/vehicle-images/mrenting-bydatto-hero.webp",
-      "card": "/vehicle-images/mrenting-bydatto-card.webp",
-      "interior": "/vehicle-images/mrenting-bydatto-interior.webp",
-      "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
-      "compare": "/vehicle-images/mrenting-bydatto-card.webp",
-      "sourceFolder": "MRenting/BYDATTO"
-    },
-    "veh-m-particular-418": {
-      "hero": "/vehicle-images/mrenting-byddolphin-hero.webp",
-      "card": "/vehicle-images/mrenting-byddolphin-card.webp",
-      "interior": "/vehicle-images/mrenting-byddolphin-interior.webp",
-      "trunk": "/vehicle-images/mrenting-byddolphin-trunk.webp",
-      "compare": "/vehicle-images/mrenting-byddolphin-card.webp",
-      "sourceFolder": "MRenting/BYDDOLPHIN"
-    },
-    "veh-m-particular-421": {
-      "hero": "/vehicle-images/mrenting-lanciaypsilon-hero.webp",
-      "card": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
-      "interior": "/vehicle-images/mrenting-lanciaypsilon-interior.webp",
-      "trunk": "/vehicle-images/mrenting-lanciaypsilon-trunk.webp",
-      "compare": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
-      "sourceFolder": "MRenting/LANCIAYPSILON"
-    },
-    "veh-m-particular-423": {
-      "hero": "/vehicle-images/mrenting-opelfrontera-hero.webp",
-      "card": "/vehicle-images/mrenting-opelfrontera-card.webp",
-      "interior": "/vehicle-images/mrenting-opelfrontera-interior.webp",
-      "trunk": "/vehicle-images/mrenting-opelfrontera-trunk.webp",
-      "compare": "/vehicle-images/mrenting-opelfrontera-card.webp",
-      "sourceFolder": "MRenting/OPELFRONTERA"
-    },
     "veh-m-particular-425": {
       "hero": "/vehicle-images/mrenting-volkswagenpolo-hero.webp",
       "card": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
@@ -1251,22 +59,6 @@
       "trunk": "/vehicle-images/mrenting-volkswagenpolo-trunk.webp",
       "compare": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
       "sourceFolder": "MRenting/VOLKSWAGENPOLO"
-    },
-    "veh-m-particular-428": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
-    },
-    "veh-m-particular-431": {
-      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
-      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
-      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
-      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
-      "sourceFolder": "MRenting/JAECOO5"
     },
     "veh-m-particular-433": {
       "hero": "/vehicle-images/mrenting-mazda2-particular-433-hero.webp",
@@ -1284,6 +76,14 @@
       "compare": "/vehicle-images/mrenting-mazda2-particular-434-card.webp",
       "sourceFolder": "MRenting/MAZDA2_Particular_434"
     },
+    "veh-m-particular-395": {
+      "hero": "/vehicle-images/mrenting-skodakamiq-particular-395-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakamiq-particular-395-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakamiq-particular-395-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakamiq-particular-395-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakamiq-particular-395-card.webp",
+      "sourceFolder": "MRenting/SKODAKAMIQ_Particular_395"
+    },
     "veh-m-particular-439": {
       "hero": "/vehicle-images/mrenting-mazda3-particular-439-hero.webp",
       "card": "/vehicle-images/mrenting-mazda3-particular-439-card.webp",
@@ -1300,21 +100,13 @@
       "compare": "/vehicle-images/mrenting-mazda3-particular-442-card.webp",
       "sourceFolder": "MRenting/MAZDA3_Particular_442"
     },
-    "veh-m-particular-445": {
-      "hero": "/vehicle-images/mrenting-mazda3-particular-445-hero.webp",
-      "card": "/vehicle-images/mrenting-mazda3-particular-445-card.webp",
-      "interior": "/vehicle-images/mrenting-mazda3-particular-445-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazda3-particular-445-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazda3-particular-445-card.webp",
-      "sourceFolder": "MRenting/MAZDA3_Particular_445"
-    },
-    "veh-m-particular-447": {
-      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
-      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
-      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
-      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
-      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
+    "veh-m-particular-421": {
+      "hero": "/vehicle-images/mrenting-lanciaypsilon-hero.webp",
+      "card": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
+      "interior": "/vehicle-images/mrenting-lanciaypsilon-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lanciaypsilon-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
+      "sourceFolder": "MRenting/LANCIAYPSILON"
     },
     "veh-m-particular-450": {
       "hero": "/vehicle-images/mrenting-mazdacx30-particular-450-hero.webp",
@@ -1332,6 +124,222 @@
       "compare": "/vehicle-images/mrenting-mazdacx30-particular-453-card.webp",
       "sourceFolder": "MRenting/MAZDACX30_Particular_453"
     },
+    "veh-m-particular-423": {
+      "hero": "/vehicle-images/mrenting-opelfrontera-hero.webp",
+      "card": "/vehicle-images/mrenting-opelfrontera-card.webp",
+      "interior": "/vehicle-images/mrenting-opelfrontera-interior.webp",
+      "trunk": "/vehicle-images/mrenting-opelfrontera-trunk.webp",
+      "compare": "/vehicle-images/mrenting-opelfrontera-card.webp",
+      "sourceFolder": "MRenting/OPELFRONTERA"
+    },
+    "veh-m-particular-377": {
+      "hero": "/vehicle-images/mrenting-renaultsymbioz-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultsymbioz-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultsymbioz-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
+      "sourceFolder": "MRenting/RENAULTSYMBIOZ"
+    },
+    "veh-m-particular-447": {
+      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
+    },
+    "veh-m-particular-312": {
+      "hero": "/vehicle-images/mrenting-audia1-hero.webp",
+      "card": "/vehicle-images/mrenting-audia1-card.webp",
+      "interior": "/vehicle-images/mrenting-audia1-interior.webp",
+      "trunk": "/vehicle-images/mrenting-audia1-trunk.webp",
+      "compare": "/vehicle-images/mrenting-audia1-card.webp",
+      "sourceFolder": "MRenting/AUDIA1"
+    },
+    "veh-m-particular-407": {
+      "hero": "/vehicle-images/mrenting-seatleon-hero.webp",
+      "card": "/vehicle-images/mrenting-seatleon-card.webp",
+      "interior": "/vehicle-images/mrenting-seatleon-interior.webp",
+      "trunk": "/vehicle-images/mrenting-seatleon-trunk.webp",
+      "compare": "/vehicle-images/mrenting-seatleon-card.webp",
+      "sourceFolder": "MRenting/SEATLEON"
+    },
+    "veh-m-particular-153": {
+      "hero": "/vehicle-images/mrenting-toyotayariscross-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotayariscross-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotayariscross-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotayariscross-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotayariscross-card.webp",
+      "sourceFolder": "MRenting/TOYOTAYARISCROSS"
+    },
+    "veh-m-particular-402": {
+      "hero": "/vehicle-images/mrenting-nissanqashqai-hero.webp",
+      "card": "/vehicle-images/mrenting-nissanqashqai-card.webp",
+      "interior": "/vehicle-images/mrenting-nissanqashqai-interior.webp",
+      "trunk": "/vehicle-images/mrenting-nissanqashqai-trunk.webp",
+      "compare": "/vehicle-images/mrenting-nissanqashqai-card.webp",
+      "sourceFolder": "MRenting/NISSANQASHQAI"
+    },
+    "veh-m-particular-380": {
+      "hero": "/vehicle-images/mrenting-omoda5-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda5-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda5-card.webp",
+      "sourceFolder": "MRenting/OMODA5"
+    },
+    "veh-m-particular-338": {
+      "hero": "/vehicle-images/mrenting-volkswagentroc-particular-338-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentroc-particular-338-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentroc-particular-338-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentroc-particular-338-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentroc-particular-338-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTROC_Particular_338"
+    },
+    "veh-m-particular-335": {
+      "hero": "/vehicle-images/mrenting-volkswagentroc-particular-335-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentroc-particular-335-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentroc-particular-335-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentroc-particular-335-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentroc-particular-335-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTROC_Particular_335"
+    },
+    "veh-m-particular-328": {
+      "hero": "/vehicle-images/mrenting-ebros400-particular-328-hero.webp",
+      "card": "/vehicle-images/mrenting-ebros400-particular-328-card.webp",
+      "interior": "/vehicle-images/mrenting-ebros400-particular-328-interior.webp",
+      "trunk": "/vehicle-images/mrenting-ebros400-particular-328-trunk.webp",
+      "compare": "/vehicle-images/mrenting-ebros400-particular-328-card.webp",
+      "sourceFolder": "MRenting/EBROS400_Particular_328"
+    },
+    "veh-m-particular-329": {
+      "hero": "/vehicle-images/mrenting-ebros400-particular-329-hero.webp",
+      "card": "/vehicle-images/mrenting-ebros400-particular-329-card.webp",
+      "interior": "/vehicle-images/mrenting-ebros400-particular-329-interior.webp",
+      "trunk": "/vehicle-images/mrenting-ebros400-particular-329-trunk.webp",
+      "compare": "/vehicle-images/mrenting-ebros400-particular-329-card.webp",
+      "sourceFolder": "MRenting/EBROS400_Particular_329"
+    },
+    "veh-m-particular-283": {
+      "hero": "/vehicle-images/mrenting-hyundaitucson-hero.webp",
+      "card": "/vehicle-images/mrenting-hyundaitucson-card.webp",
+      "interior": "/vehicle-images/mrenting-hyundaitucson-interior.webp",
+      "trunk": "/vehicle-images/mrenting-hyundaitucson-trunk.webp",
+      "compare": "/vehicle-images/mrenting-hyundaitucson-card.webp",
+      "sourceFolder": "MRenting/HYUNDAITUCSON"
+    },
+    "veh-m-particular-233": {
+      "hero": "/vehicle-images/mrenting-skodaoctavia-particular-233-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaoctavia-particular-233-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaoctavia-particular-233-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaoctavia-particular-233-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaoctavia-particular-233-card.webp",
+      "sourceFolder": "MRenting/SKODAOCTAVIA_Particular_233"
+    },
+    "veh-m-particular-418": {
+      "hero": "/vehicle-images/mrenting-byddolphin-hero.webp",
+      "card": "/vehicle-images/mrenting-byddolphin-card.webp",
+      "interior": "/vehicle-images/mrenting-byddolphin-interior.webp",
+      "trunk": "/vehicle-images/mrenting-byddolphin-trunk.webp",
+      "compare": "/vehicle-images/mrenting-byddolphin-card.webp",
+      "sourceFolder": "MRenting/BYDDOLPHIN"
+    },
+    "veh-m-particular-230": {
+      "hero": "/vehicle-images/mrenting-skodaoctavia-particular-230-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaoctavia-particular-230-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaoctavia-particular-230-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaoctavia-particular-230-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaoctavia-particular-230-card.webp",
+      "sourceFolder": "MRenting/SKODAOCTAVIA_Particular_230"
+    },
+    "veh-m-particular-367": {
+      "hero": "/vehicle-images/mrenting-toyotachr-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotachr-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotachr-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotachr-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotachr-card.webp",
+      "sourceFolder": "MRenting/TOYOTACHR"
+    },
+    "veh-m-particular-389": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-particular-456": {
+      "hero": "/vehicle-images/mrenting-mazdacx5-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx5-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx5-card.webp",
+      "sourceFolder": "MRenting/MAZDACX5"
+    },
+    "veh-m-particular-415": {
+      "hero": "/vehicle-images/mrenting-bydatto-hero.webp",
+      "card": "/vehicle-images/mrenting-bydatto-card.webp",
+      "interior": "/vehicle-images/mrenting-bydatto-interior.webp",
+      "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
+      "compare": "/vehicle-images/mrenting-bydatto-card.webp",
+      "sourceFolder": "MRenting/BYDATTO"
+    },
+    "veh-m-particular-346": {
+      "hero": "/vehicle-images/mrenting-volkswagentiguan-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentiguan-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentiguan-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTIGUAN"
+    },
+    "veh-m-particular-404": {
+      "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultaustral-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultaustral-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultaustral-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultaustral-card.webp",
+      "sourceFolder": "MRenting/RENAULTAUSTRAL"
+    },
+    "veh-m-particular-236": {
+      "hero": "/vehicle-images/mrenting-skodakaroq-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakaroq-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakaroq-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakaroq-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakaroq-card.webp",
+      "sourceFolder": "MRenting/SKODAKAROQ"
+    },
+    "veh-m-particular-392": {
+      "hero": "/vehicle-images/mrenting-jaecoo7-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo7-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo7-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo7-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo7-card.webp",
+      "sourceFolder": "MRenting/JAECOO7"
+    },
+    "veh-m-particular-239": {
+      "hero": "/vehicle-images/mrenting-skodaelroq-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaelroq-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaelroq-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaelroq-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaelroq-card.webp",
+      "sourceFolder": "MRenting/SKODAELROQ"
+    },
+    "veh-m-particular-409": {
+      "hero": "/vehicle-images/mrenting-lynkco01-hero.webp",
+      "card": "/vehicle-images/mrenting-lynkco01-card.webp",
+      "interior": "/vehicle-images/mrenting-lynkco01-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lynkco01-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lynkco01-card.webp",
+      "sourceFolder": "MRenting/LYNKCO01"
+    },
+    "veh-m-particular-428": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
     "veh-m-particular-458": {
       "hero": "/vehicle-images/mrenting-mazdacx60-hero.webp",
       "card": "/vehicle-images/mrenting-mazdacx60-card.webp",
@@ -1340,13 +348,1013 @@
       "compare": "/vehicle-images/mrenting-mazdacx60-card.webp",
       "sourceFolder": "MRenting/MAZDACX60"
     },
-    "veh-m-particular-469": {
+    "veh-m-particular-383": {
+      "hero": "/vehicle-images/mrenting-omoda7-particular-383-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda7-particular-383-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda7-particular-383-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda7-particular-383-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda7-particular-383-card.webp",
+      "sourceFolder": "MRenting/OMODA7_Particular_383"
+    },
+    "veh-m-particular-412": {
+      "hero": "/vehicle-images/mrenting-lynkco08-hero.webp",
+      "card": "/vehicle-images/mrenting-lynkco08-card.webp",
+      "interior": "/vehicle-images/mrenting-lynkco08-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lynkco08-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lynkco08-card.webp",
+      "sourceFolder": "MRenting/LYNKCO08"
+    },
+    "veh-m-particular-386": {
+      "hero": "/vehicle-images/mrenting-omoda7-particular-386-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda7-particular-386-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda7-particular-386-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda7-particular-386-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda7-particular-386-card.webp",
+      "sourceFolder": "MRenting/OMODA7_Particular_386"
+    },
+    "veh-m-particular-364": {
+      "hero": "/vehicle-images/mrenting-omoda9-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda9-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda9-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda9-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda9-card.webp",
+      "sourceFolder": "MRenting/OMODA9"
+    },
+    "veh-m-particular-431": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-autonomo-371": {
+      "hero": "/vehicle-images/mrenting-opelcorsa-hero.webp",
+      "card": "/vehicle-images/mrenting-opelcorsa-card.webp",
+      "interior": "/vehicle-images/mrenting-opelcorsa-interior.webp",
+      "trunk": "/vehicle-images/mrenting-opelcorsa-trunk.webp",
+      "compare": "/vehicle-images/mrenting-opelcorsa-card.webp",
+      "sourceFolder": "MRenting/OPELCORSA"
+    },
+    "veh-m-autonomo-468": {
       "hero": "/vehicle-images/mrenting-seatibiza-hero.webp",
       "card": "/vehicle-images/mrenting-seatibiza-card.webp",
       "interior": "/vehicle-images/mrenting-seatibiza-interior.webp",
       "trunk": "/vehicle-images/mrenting-seatibiza-trunk.webp",
       "compare": "/vehicle-images/mrenting-seatibiza-card.webp",
       "sourceFolder": "MRenting/SEATIBIZA"
+    },
+    "veh-m-autonomo-374": {
+      "hero": "/vehicle-images/mrenting-daciasandero-hero.webp",
+      "card": "/vehicle-images/mrenting-daciasandero-card.webp",
+      "interior": "/vehicle-images/mrenting-daciasandero-interior.webp",
+      "trunk": "/vehicle-images/mrenting-daciasandero-trunk.webp",
+      "compare": "/vehicle-images/mrenting-daciasandero-card.webp",
+      "sourceFolder": "MRenting/DACIASANDERO"
+    },
+    "veh-m-autonomo-405": {
+      "hero": "/vehicle-images/mrenting-renaultcaptur-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultcaptur-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultcaptur-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultcaptur-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultcaptur-card.webp",
+      "sourceFolder": "MRenting/RENAULTCAPTUR"
+    },
+    "veh-m-autonomo-444": {
+      "hero": "/vehicle-images/mrenting-mazda3-autonomo-444-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-autonomo-444-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-autonomo-444-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-autonomo-444-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-autonomo-444-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Autonomo_444"
+    },
+    "veh-m-autonomo-357": {
+      "hero": "/vehicle-images/mrenting-toyotayaris-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotayaris-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotayaris-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotayaris-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotayaris-card.webp",
+      "sourceFolder": "MRenting/TOYOTAYARIS"
+    },
+    "veh-m-autonomo-397": {
+      "hero": "/vehicle-images/mrenting-skodakamiq-autonomo-397-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakamiq-autonomo-397-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakamiq-autonomo-397-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakamiq-autonomo-397-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakamiq-autonomo-397-card.webp",
+      "sourceFolder": "MRenting/SKODAKAMIQ_Autonomo_397"
+    },
+    "veh-m-autonomo-424": {
+      "hero": "/vehicle-images/mrenting-volkswagenpolo-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagenpolo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagenpolo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENPOLO"
+    },
+    "veh-m-autonomo-432": {
+      "hero": "/vehicle-images/mrenting-mazda2-autonomo-432-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda2-autonomo-432-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda2-autonomo-432-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda2-autonomo-432-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda2-autonomo-432-card.webp",
+      "sourceFolder": "MRenting/MAZDA2_Autonomo_432"
+    },
+    "veh-m-autonomo-435": {
+      "hero": "/vehicle-images/mrenting-mazda2-autonomo-435-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda2-autonomo-435-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda2-autonomo-435-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda2-autonomo-435-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda2-autonomo-435-card.webp",
+      "sourceFolder": "MRenting/MAZDA2_Autonomo_435"
+    },
+    "veh-m-autonomo-394": {
+      "hero": "/vehicle-images/mrenting-skodakamiq-autonomo-394-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakamiq-autonomo-394-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakamiq-autonomo-394-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakamiq-autonomo-394-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakamiq-autonomo-394-card.webp",
+      "sourceFolder": "MRenting/SKODAKAMIQ_Autonomo_394"
+    },
+    "veh-m-autonomo-438": {
+      "hero": "/vehicle-images/mrenting-mazda3-autonomo-438-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-autonomo-438-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-autonomo-438-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-autonomo-438-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-autonomo-438-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Autonomo_438"
+    },
+    "veh-m-autonomo-441": {
+      "hero": "/vehicle-images/mrenting-mazda3-autonomo-441-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-autonomo-441-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-autonomo-441-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-autonomo-441-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-autonomo-441-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Autonomo_441"
+    },
+    "veh-m-autonomo-420": {
+      "hero": "/vehicle-images/mrenting-lanciaypsilon-hero.webp",
+      "card": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
+      "interior": "/vehicle-images/mrenting-lanciaypsilon-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lanciaypsilon-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
+      "sourceFolder": "MRenting/LANCIAYPSILON"
+    },
+    "veh-m-autonomo-361": {
+      "hero": "/vehicle-images/mrenting-peugeotrifter-hero.webp",
+      "card": "/vehicle-images/mrenting-peugeotrifter-card.webp",
+      "interior": "/vehicle-images/mrenting-peugeotrifter-interior.webp",
+      "trunk": "/vehicle-images/mrenting-peugeotrifter-trunk.webp",
+      "compare": "/vehicle-images/mrenting-peugeotrifter-card.webp",
+      "sourceFolder": "MRenting/PEUGEOTRIFTER"
+    },
+    "veh-m-autonomo-449": {
+      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-449-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-449-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-449-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-449-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-449-card.webp",
+      "sourceFolder": "MRenting/MAZDACX30_Autonomo_449"
+    },
+    "veh-m-autonomo-452": {
+      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
+    },
+    "veh-m-autonomo-422": {
+      "hero": "/vehicle-images/mrenting-opelfrontera-hero.webp",
+      "card": "/vehicle-images/mrenting-opelfrontera-card.webp",
+      "interior": "/vehicle-images/mrenting-opelfrontera-interior.webp",
+      "trunk": "/vehicle-images/mrenting-opelfrontera-trunk.webp",
+      "compare": "/vehicle-images/mrenting-opelfrontera-card.webp",
+      "sourceFolder": "MRenting/OPELFRONTERA"
+    },
+    "veh-m-autonomo-376": {
+      "hero": "/vehicle-images/mrenting-renaultsymbioz-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultsymbioz-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultsymbioz-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
+      "sourceFolder": "MRenting/RENAULTSYMBIOZ"
+    },
+    "veh-m-autonomo-256": {
+      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-256-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_256"
+    },
+    "veh-m-autonomo-446": {
+      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
+    },
+    "veh-m-autonomo-253": {
+      "hero": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacecity-autonomo-253-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACECITY_Autonomo_253"
+    },
+    "veh-m-autonomo-311": {
+      "hero": "/vehicle-images/mrenting-audia1-hero.webp",
+      "card": "/vehicle-images/mrenting-audia1-card.webp",
+      "interior": "/vehicle-images/mrenting-audia1-interior.webp",
+      "trunk": "/vehicle-images/mrenting-audia1-trunk.webp",
+      "compare": "/vehicle-images/mrenting-audia1-card.webp",
+      "sourceFolder": "MRenting/AUDIA1"
+    },
+    "veh-m-autonomo-252": {
+      "hero": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacecity-autonomo-252-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACECITY_Autonomo_252"
+    },
+    "veh-m-autonomo-400": {
+      "hero": "/vehicle-images/mrenting-citroenberlingo-hero.webp",
+      "card": "/vehicle-images/mrenting-citroenberlingo-card.webp",
+      "interior": "/vehicle-images/mrenting-citroenberlingo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-citroenberlingo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-citroenberlingo-card.webp",
+      "sourceFolder": "MRenting/CITROENBERLINGO"
+    },
+    "veh-m-autonomo-406": {
+      "hero": "/vehicle-images/mrenting-seatleon-hero.webp",
+      "card": "/vehicle-images/mrenting-seatleon-card.webp",
+      "interior": "/vehicle-images/mrenting-seatleon-interior.webp",
+      "trunk": "/vehicle-images/mrenting-seatleon-trunk.webp",
+      "compare": "/vehicle-images/mrenting-seatleon-card.webp",
+      "sourceFolder": "MRenting/SEATLEON"
+    },
+    "veh-m-autonomo-47": {
+      "hero": "/vehicle-images/mrenting-toyotayariscross-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotayariscross-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotayariscross-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotayariscross-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotayariscross-card.webp",
+      "sourceFolder": "MRenting/TOYOTAYARISCROSS"
+    },
+    "veh-m-autonomo-401": {
+      "hero": "/vehicle-images/mrenting-nissanqashqai-hero.webp",
+      "card": "/vehicle-images/mrenting-nissanqashqai-card.webp",
+      "interior": "/vehicle-images/mrenting-nissanqashqai-interior.webp",
+      "trunk": "/vehicle-images/mrenting-nissanqashqai-trunk.webp",
+      "compare": "/vehicle-images/mrenting-nissanqashqai-card.webp",
+      "sourceFolder": "MRenting/NISSANQASHQAI"
+    },
+    "veh-m-autonomo-379": {
+      "hero": "/vehicle-images/mrenting-omoda5-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda5-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda5-card.webp",
+      "sourceFolder": "MRenting/OMODA5"
+    },
+    "veh-m-autonomo-339": {
+      "hero": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTROC_Autonomo_339"
+    },
+    "veh-m-autonomo-336": {
+      "hero": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTROC_Autonomo_336"
+    },
+    "veh-m-autonomo-327": {
+      "hero": "/vehicle-images/mrenting-ebros400-autonomo-327-hero.webp",
+      "card": "/vehicle-images/mrenting-ebros400-autonomo-327-card.webp",
+      "interior": "/vehicle-images/mrenting-ebros400-autonomo-327-interior.webp",
+      "trunk": "/vehicle-images/mrenting-ebros400-autonomo-327-trunk.webp",
+      "compare": "/vehicle-images/mrenting-ebros400-autonomo-327-card.webp",
+      "sourceFolder": "MRenting/EBROS400_Autonomo_327"
+    },
+    "veh-m-autonomo-399": {
+      "hero": "/vehicle-images/mrenting-alfaromeojunior-hero.webp",
+      "card": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
+      "interior": "/vehicle-images/mrenting-alfaromeojunior-interior.webp",
+      "trunk": "/vehicle-images/mrenting-alfaromeojunior-trunk.webp",
+      "compare": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
+      "sourceFolder": "MRenting/ALFAROMEOJUNIOR"
+    },
+    "veh-m-autonomo-330": {
+      "hero": "/vehicle-images/mrenting-ebros400-autonomo-330-hero.webp",
+      "card": "/vehicle-images/mrenting-ebros400-autonomo-330-card.webp",
+      "interior": "/vehicle-images/mrenting-ebros400-autonomo-330-interior.webp",
+      "trunk": "/vehicle-images/mrenting-ebros400-autonomo-330-trunk.webp",
+      "compare": "/vehicle-images/mrenting-ebros400-autonomo-330-card.webp",
+      "sourceFolder": "MRenting/EBROS400_Autonomo_330"
+    },
+    "veh-m-autonomo-282": {
+      "hero": "/vehicle-images/mrenting-hyundaitucson-hero.webp",
+      "card": "/vehicle-images/mrenting-hyundaitucson-card.webp",
+      "interior": "/vehicle-images/mrenting-hyundaitucson-interior.webp",
+      "trunk": "/vehicle-images/mrenting-hyundaitucson-trunk.webp",
+      "compare": "/vehicle-images/mrenting-hyundaitucson-card.webp",
+      "sourceFolder": "MRenting/HYUNDAITUCSON"
+    },
+    "veh-m-autonomo-231": {
+      "hero": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaoctavia-autonomo-231-card.webp",
+      "sourceFolder": "MRenting/SKODAOCTAVIA_Autonomo_231"
+    },
+    "veh-m-autonomo-417": {
+      "hero": "/vehicle-images/mrenting-byddolphin-hero.webp",
+      "card": "/vehicle-images/mrenting-byddolphin-card.webp",
+      "interior": "/vehicle-images/mrenting-byddolphin-interior.webp",
+      "trunk": "/vehicle-images/mrenting-byddolphin-trunk.webp",
+      "compare": "/vehicle-images/mrenting-byddolphin-card.webp",
+      "sourceFolder": "MRenting/BYDDOLPHIN"
+    },
+    "veh-m-autonomo-229": {
+      "hero": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaoctavia-autonomo-229-card.webp",
+      "sourceFolder": "MRenting/SKODAOCTAVIA_Autonomo_229"
+    },
+    "veh-m-autonomo-366": {
+      "hero": "/vehicle-images/mrenting-toyotachr-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotachr-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotachr-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotachr-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotachr-card.webp",
+      "sourceFolder": "MRenting/TOYOTACHR"
+    },
+    "veh-m-autonomo-388": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-autonomo-455": {
+      "hero": "/vehicle-images/mrenting-mazdacx5-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx5-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx5-card.webp",
+      "sourceFolder": "MRenting/MAZDACX5"
+    },
+    "veh-m-autonomo-414": {
+      "hero": "/vehicle-images/mrenting-bydatto-hero.webp",
+      "card": "/vehicle-images/mrenting-bydatto-card.webp",
+      "interior": "/vehicle-images/mrenting-bydatto-interior.webp",
+      "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
+      "compare": "/vehicle-images/mrenting-bydatto-card.webp",
+      "sourceFolder": "MRenting/BYDATTO"
+    },
+    "veh-m-autonomo-403": {
+      "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultaustral-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultaustral-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultaustral-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultaustral-card.webp",
+      "sourceFolder": "MRenting/RENAULTAUSTRAL"
+    },
+    "veh-m-autonomo-235": {
+      "hero": "/vehicle-images/mrenting-skodakaroq-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakaroq-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakaroq-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakaroq-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakaroq-card.webp",
+      "sourceFolder": "MRenting/SKODAKAROQ"
+    },
+    "veh-m-autonomo-391": {
+      "hero": "/vehicle-images/mrenting-jaecoo7-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo7-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo7-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo7-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo7-card.webp",
+      "sourceFolder": "MRenting/JAECOO7"
+    },
+    "veh-m-autonomo-238": {
+      "hero": "/vehicle-images/mrenting-skodaelroq-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaelroq-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaelroq-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaelroq-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaelroq-card.webp",
+      "sourceFolder": "MRenting/SKODAELROQ"
+    },
+    "veh-m-autonomo-408": {
+      "hero": "/vehicle-images/mrenting-lynkco01-hero.webp",
+      "card": "/vehicle-images/mrenting-lynkco01-card.webp",
+      "interior": "/vehicle-images/mrenting-lynkco01-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lynkco01-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lynkco01-card.webp",
+      "sourceFolder": "MRenting/LYNKCO01"
+    },
+    "veh-m-autonomo-257": {
+      "hero": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacemax-empresa-257-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACEMAX_Empresa_257"
+    },
+    "veh-m-autonomo-466": {
+      "hero": "/vehicle-images/mrenting-kiapv5passenger-hero.webp",
+      "card": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
+      "interior": "/vehicle-images/mrenting-kiapv5passenger-interior.webp",
+      "trunk": "/vehicle-images/mrenting-kiapv5passenger-trunk.webp",
+      "compare": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
+      "sourceFolder": "MRenting/KIAPV5PASSENGER"
+    },
+    "veh-m-autonomo-427": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-autonomo-464": {
+      "hero": "/vehicle-images/mrenting-kiapv5cargo-hero.webp",
+      "card": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
+      "interior": "/vehicle-images/mrenting-kiapv5cargo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-kiapv5cargo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
+      "sourceFolder": "MRenting/KIAPV5CARGO"
+    },
+    "veh-m-autonomo-462": {
+      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
+      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "sourceFolder": "MRenting/CITROENeBERLINGO"
+    },
+    "veh-m-autonomo-460": {
+      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
+      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "sourceFolder": "MRenting/CITROENeBERLINGO"
+    },
+    "veh-m-autonomo-369": {
+      "hero": "/vehicle-images/mrenting-toyotahilux-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotahilux-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotahilux-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotahilux-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotahilux-card.webp",
+      "sourceFolder": "MRenting/TOYOTAHILUX"
+    },
+    "veh-m-autonomo-457": {
+      "hero": "/vehicle-images/mrenting-mazdacx60-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx60-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx60-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx60-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx60-card.webp",
+      "sourceFolder": "MRenting/MAZDACX60"
+    },
+    "veh-m-autonomo-382": {
+      "hero": "/vehicle-images/mrenting-omoda7-autonomo-382-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda7-autonomo-382-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda7-autonomo-382-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda7-autonomo-382-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda7-autonomo-382-card.webp",
+      "sourceFolder": "MRenting/OMODA7_Autonomo_382"
+    },
+    "veh-m-autonomo-411": {
+      "hero": "/vehicle-images/mrenting-lynkco08-hero.webp",
+      "card": "/vehicle-images/mrenting-lynkco08-card.webp",
+      "interior": "/vehicle-images/mrenting-lynkco08-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lynkco08-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lynkco08-card.webp",
+      "sourceFolder": "MRenting/LYNKCO08"
+    },
+    "veh-m-autonomo-384": {
+      "hero": "/vehicle-images/mrenting-omoda7-autonomo-384-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda7-autonomo-384-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda7-autonomo-384-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda7-autonomo-384-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda7-autonomo-384-card.webp",
+      "sourceFolder": "MRenting/OMODA7_Autonomo_384"
+    },
+    "veh-m-autonomo-363": {
+      "hero": "/vehicle-images/mrenting-omoda9-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda9-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda9-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda9-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda9-card.webp",
+      "sourceFolder": "MRenting/OMODA9"
+    },
+    "veh-m-autonomo-430": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-empresa-370": {
+      "hero": "/vehicle-images/mrenting-opelcorsa-hero.webp",
+      "card": "/vehicle-images/mrenting-opelcorsa-card.webp",
+      "interior": "/vehicle-images/mrenting-opelcorsa-interior.webp",
+      "trunk": "/vehicle-images/mrenting-opelcorsa-trunk.webp",
+      "compare": "/vehicle-images/mrenting-opelcorsa-card.webp",
+      "sourceFolder": "MRenting/OPELCORSA"
+    },
+    "veh-m-empresa-467": {
+      "hero": "/vehicle-images/mrenting-seatibiza-hero.webp",
+      "card": "/vehicle-images/mrenting-seatibiza-card.webp",
+      "interior": "/vehicle-images/mrenting-seatibiza-interior.webp",
+      "trunk": "/vehicle-images/mrenting-seatibiza-trunk.webp",
+      "compare": "/vehicle-images/mrenting-seatibiza-card.webp",
+      "sourceFolder": "MRenting/SEATIBIZA"
+    },
+    "veh-m-empresa-373": {
+      "hero": "/vehicle-images/mrenting-daciasandero-hero.webp",
+      "card": "/vehicle-images/mrenting-daciasandero-card.webp",
+      "interior": "/vehicle-images/mrenting-daciasandero-interior.webp",
+      "trunk": "/vehicle-images/mrenting-daciasandero-trunk.webp",
+      "compare": "/vehicle-images/mrenting-daciasandero-card.webp",
+      "sourceFolder": "MRenting/DACIASANDERO"
+    },
+    "veh-m-empresa-188": {
+      "hero": "/vehicle-images/mrenting-renaultcaptur-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultcaptur-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultcaptur-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultcaptur-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultcaptur-card.webp",
+      "sourceFolder": "MRenting/RENAULTCAPTUR"
+    },
+    "veh-m-empresa-443": {
+      "hero": "/vehicle-images/mrenting-mazda3-empresa-443-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-empresa-443-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-empresa-443-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-empresa-443-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-empresa-443-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Empresa_443"
+    },
+    "veh-m-empresa-152": {
+      "hero": "/vehicle-images/mrenting-toyotayaris-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotayaris-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotayaris-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotayaris-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotayaris-card.webp",
+      "sourceFolder": "MRenting/TOYOTAYARIS"
+    },
+    "veh-m-empresa-398": {
+      "hero": "/vehicle-images/mrenting-skodakamiq-empresa-398-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakamiq-empresa-398-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakamiq-empresa-398-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakamiq-empresa-398-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakamiq-empresa-398-card.webp",
+      "sourceFolder": "MRenting/SKODAKAMIQ_Empresa_398"
+    },
+    "veh-m-empresa-332": {
+      "hero": "/vehicle-images/mrenting-volkswagenpolo-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagenpolo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagenpolo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagenpolo-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENPOLO"
+    },
+    "veh-m-empresa-272": {
+      "hero": "/vehicle-images/mrenting-mazda2-empresa-272-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda2-empresa-272-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda2-empresa-272-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda2-empresa-272-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda2-empresa-272-card.webp",
+      "sourceFolder": "MRenting/MAZDA2_Empresa_272"
+    },
+    "veh-m-empresa-436": {
+      "hero": "/vehicle-images/mrenting-mazda2-empresa-436-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda2-empresa-436-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda2-empresa-436-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda2-empresa-436-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda2-empresa-436-card.webp",
+      "sourceFolder": "MRenting/MAZDA2_Empresa_436"
+    },
+    "veh-m-empresa-393": {
+      "hero": "/vehicle-images/mrenting-skodakamiq-empresa-393-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakamiq-empresa-393-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakamiq-empresa-393-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakamiq-empresa-393-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakamiq-empresa-393-card.webp",
+      "sourceFolder": "MRenting/SKODAKAMIQ_Empresa_393"
+    },
+    "veh-m-empresa-437": {
+      "hero": "/vehicle-images/mrenting-mazda3-empresa-437-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-empresa-437-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-empresa-437-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-empresa-437-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-empresa-437-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Empresa_437"
+    },
+    "veh-m-empresa-440": {
+      "hero": "/vehicle-images/mrenting-mazda3-empresa-440-hero.webp",
+      "card": "/vehicle-images/mrenting-mazda3-empresa-440-card.webp",
+      "interior": "/vehicle-images/mrenting-mazda3-empresa-440-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazda3-empresa-440-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazda3-empresa-440-card.webp",
+      "sourceFolder": "MRenting/MAZDA3_Empresa_440"
+    },
+    "veh-m-empresa-419": {
+      "hero": "/vehicle-images/mrenting-lanciaypsilon-hero.webp",
+      "card": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
+      "interior": "/vehicle-images/mrenting-lanciaypsilon-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lanciaypsilon-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lanciaypsilon-card.webp",
+      "sourceFolder": "MRenting/LANCIAYPSILON"
+    },
+    "veh-m-empresa-210": {
+      "hero": "/vehicle-images/mrenting-peugeotrifter-hero.webp",
+      "card": "/vehicle-images/mrenting-peugeotrifter-card.webp",
+      "interior": "/vehicle-images/mrenting-peugeotrifter-interior.webp",
+      "trunk": "/vehicle-images/mrenting-peugeotrifter-trunk.webp",
+      "compare": "/vehicle-images/mrenting-peugeotrifter-card.webp",
+      "sourceFolder": "MRenting/PEUGEOTRIFTER"
+    },
+    "veh-m-empresa-451": {
+      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
+    },
+    "veh-m-empresa-196": {
+      "hero": "/vehicle-images/mrenting-opelfrontera-hero.webp",
+      "card": "/vehicle-images/mrenting-opelfrontera-card.webp",
+      "interior": "/vehicle-images/mrenting-opelfrontera-interior.webp",
+      "trunk": "/vehicle-images/mrenting-opelfrontera-trunk.webp",
+      "compare": "/vehicle-images/mrenting-opelfrontera-card.webp",
+      "sourceFolder": "MRenting/OPELFRONTERA"
+    },
+    "veh-m-empresa-193": {
+      "hero": "/vehicle-images/mrenting-renaultsymbioz-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultsymbioz-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultsymbioz-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultsymbioz-card.webp",
+      "sourceFolder": "MRenting/RENAULTSYMBIOZ"
+    },
+    "veh-m-empresa-255": {
+      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-255-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_255"
+    },
+    "veh-m-empresa-245": {
+      "hero": "/vehicle-images/mrenting-mazdacx30-autonomo-452-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx30-autonomo-452-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx30-autonomo-452-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx30-autonomo-452-card.webp",
+      "sourceFolder": "MRenting/MAZDACX30_Autonomo_452"
+    },
+    "veh-m-empresa-254": {
+      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-254-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_254"
+    },
+    "veh-m-empresa-310": {
+      "hero": "/vehicle-images/mrenting-audia1-hero.webp",
+      "card": "/vehicle-images/mrenting-audia1-card.webp",
+      "interior": "/vehicle-images/mrenting-audia1-interior.webp",
+      "trunk": "/vehicle-images/mrenting-audia1-trunk.webp",
+      "compare": "/vehicle-images/mrenting-audia1-card.webp",
+      "sourceFolder": "MRenting/AUDIA1"
+    },
+    "veh-m-empresa-251": {
+      "hero": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacecity-empresa-251-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACECITY_Empresa_251"
+    },
+    "veh-m-empresa-69": {
+      "hero": "/vehicle-images/mrenting-citroenberlingo-hero.webp",
+      "card": "/vehicle-images/mrenting-citroenberlingo-card.webp",
+      "interior": "/vehicle-images/mrenting-citroenberlingo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-citroenberlingo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-citroenberlingo-card.webp",
+      "sourceFolder": "MRenting/CITROENBERLINGO"
+    },
+    "veh-m-empresa-187": {
+      "hero": "/vehicle-images/mrenting-seatleon-hero.webp",
+      "card": "/vehicle-images/mrenting-seatleon-card.webp",
+      "interior": "/vehicle-images/mrenting-seatleon-interior.webp",
+      "trunk": "/vehicle-images/mrenting-seatleon-trunk.webp",
+      "compare": "/vehicle-images/mrenting-seatleon-card.webp",
+      "sourceFolder": "MRenting/SEATLEON"
+    },
+    "veh-m-empresa-154": {
+      "hero": "/vehicle-images/mrenting-toyotayariscross-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotayariscross-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotayariscross-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotayariscross-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotayariscross-card.webp",
+      "sourceFolder": "MRenting/TOYOTAYARISCROSS"
+    },
+    "veh-m-empresa-304": {
+      "hero": "/vehicle-images/mrenting-nissanqashqai-hero.webp",
+      "card": "/vehicle-images/mrenting-nissanqashqai-card.webp",
+      "interior": "/vehicle-images/mrenting-nissanqashqai-interior.webp",
+      "trunk": "/vehicle-images/mrenting-nissanqashqai-trunk.webp",
+      "compare": "/vehicle-images/mrenting-nissanqashqai-card.webp",
+      "sourceFolder": "MRenting/NISSANQASHQAI"
+    },
+    "veh-m-empresa-381": {
+      "hero": "/vehicle-images/mrenting-omoda5-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda5-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda5-card.webp",
+      "sourceFolder": "MRenting/OMODA5"
+    },
+    "veh-m-empresa-340": {
+      "hero": "/vehicle-images/mrenting-volkswagentroc-empresa-340-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentroc-empresa-340-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentroc-empresa-340-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentroc-empresa-340-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentroc-empresa-340-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTROC_Empresa_340"
+    },
+    "veh-m-empresa-337": {
+      "hero": "/vehicle-images/mrenting-volkswagentroc-empresa-337-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentroc-empresa-337-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentroc-empresa-337-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentroc-empresa-337-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentroc-empresa-337-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTROC_Empresa_337"
+    },
+    "veh-m-empresa-167": {
+      "hero": "/vehicle-images/mrenting-ebros400-empresa-167-hero.webp",
+      "card": "/vehicle-images/mrenting-ebros400-empresa-167-card.webp",
+      "interior": "/vehicle-images/mrenting-ebros400-empresa-167-interior.webp",
+      "trunk": "/vehicle-images/mrenting-ebros400-empresa-167-trunk.webp",
+      "compare": "/vehicle-images/mrenting-ebros400-empresa-167-card.webp",
+      "sourceFolder": "MRenting/EBROS400_Empresa_167"
+    },
+    "veh-m-empresa-202": {
+      "hero": "/vehicle-images/mrenting-alfaromeojunior-hero.webp",
+      "card": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
+      "interior": "/vehicle-images/mrenting-alfaromeojunior-interior.webp",
+      "trunk": "/vehicle-images/mrenting-alfaromeojunior-trunk.webp",
+      "compare": "/vehicle-images/mrenting-alfaromeojunior-card.webp",
+      "sourceFolder": "MRenting/ALFAROMEOJUNIOR"
+    },
+    "veh-m-empresa-331": {
+      "hero": "/vehicle-images/mrenting-ebros400-empresa-331-hero.webp",
+      "card": "/vehicle-images/mrenting-ebros400-empresa-331-card.webp",
+      "interior": "/vehicle-images/mrenting-ebros400-empresa-331-interior.webp",
+      "trunk": "/vehicle-images/mrenting-ebros400-empresa-331-trunk.webp",
+      "compare": "/vehicle-images/mrenting-ebros400-empresa-331-card.webp",
+      "sourceFolder": "MRenting/EBROS400_Empresa_331"
+    },
+    "veh-m-empresa-163": {
+      "hero": "/vehicle-images/mrenting-hyundaitucson-hero.webp",
+      "card": "/vehicle-images/mrenting-hyundaitucson-card.webp",
+      "interior": "/vehicle-images/mrenting-hyundaitucson-interior.webp",
+      "trunk": "/vehicle-images/mrenting-hyundaitucson-trunk.webp",
+      "compare": "/vehicle-images/mrenting-hyundaitucson-card.webp",
+      "sourceFolder": "MRenting/HYUNDAITUCSON"
+    },
+    "veh-m-empresa-232": {
+      "hero": "/vehicle-images/mrenting-skodaoctavia-empresa-232-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaoctavia-empresa-232-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaoctavia-empresa-232-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaoctavia-empresa-232-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaoctavia-empresa-232-card.webp",
+      "sourceFolder": "MRenting/SKODAOCTAVIA_Empresa_232"
+    },
+    "veh-m-empresa-416": {
+      "hero": "/vehicle-images/mrenting-byddolphin-hero.webp",
+      "card": "/vehicle-images/mrenting-byddolphin-card.webp",
+      "interior": "/vehicle-images/mrenting-byddolphin-interior.webp",
+      "trunk": "/vehicle-images/mrenting-byddolphin-trunk.webp",
+      "compare": "/vehicle-images/mrenting-byddolphin-card.webp",
+      "sourceFolder": "MRenting/BYDDOLPHIN"
+    },
+    "veh-m-empresa-228": {
+      "hero": "/vehicle-images/mrenting-skodaoctavia-empresa-228-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaoctavia-empresa-228-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaoctavia-empresa-228-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaoctavia-empresa-228-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaoctavia-empresa-228-card.webp",
+      "sourceFolder": "MRenting/SKODAOCTAVIA_Empresa_228"
+    },
+    "veh-m-empresa-365": {
+      "hero": "/vehicle-images/mrenting-toyotachr-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotachr-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotachr-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotachr-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotachr-card.webp",
+      "sourceFolder": "MRenting/TOYOTACHR"
+    },
+    "veh-m-empresa-387": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-empresa-454": {
+      "hero": "/vehicle-images/mrenting-mazdacx5-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx5-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx5-card.webp",
+      "sourceFolder": "MRenting/MAZDACX5"
+    },
+    "veh-m-empresa-413": {
+      "hero": "/vehicle-images/mrenting-bydatto-hero.webp",
+      "card": "/vehicle-images/mrenting-bydatto-card.webp",
+      "interior": "/vehicle-images/mrenting-bydatto-interior.webp",
+      "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
+      "compare": "/vehicle-images/mrenting-bydatto-card.webp",
+      "sourceFolder": "MRenting/BYDATTO"
+    },
+    "veh-m-empresa-344": {
+      "hero": "/vehicle-images/mrenting-volkswagentiguan-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentiguan-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentiguan-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTIGUAN"
+    },
+    "veh-m-empresa-192": {
+      "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
+      "card": "/vehicle-images/mrenting-renaultaustral-card.webp",
+      "interior": "/vehicle-images/mrenting-renaultaustral-interior.webp",
+      "trunk": "/vehicle-images/mrenting-renaultaustral-trunk.webp",
+      "compare": "/vehicle-images/mrenting-renaultaustral-card.webp",
+      "sourceFolder": "MRenting/RENAULTAUSTRAL"
+    },
+    "veh-m-empresa-234": {
+      "hero": "/vehicle-images/mrenting-skodakaroq-hero.webp",
+      "card": "/vehicle-images/mrenting-skodakaroq-card.webp",
+      "interior": "/vehicle-images/mrenting-skodakaroq-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodakaroq-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodakaroq-card.webp",
+      "sourceFolder": "MRenting/SKODAKAROQ"
+    },
+    "veh-m-empresa-390": {
+      "hero": "/vehicle-images/mrenting-jaecoo7-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo7-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo7-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo7-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo7-card.webp",
+      "sourceFolder": "MRenting/JAECOO7"
+    },
+    "veh-m-empresa-237": {
+      "hero": "/vehicle-images/mrenting-skodaelroq-hero.webp",
+      "card": "/vehicle-images/mrenting-skodaelroq-card.webp",
+      "interior": "/vehicle-images/mrenting-skodaelroq-interior.webp",
+      "trunk": "/vehicle-images/mrenting-skodaelroq-trunk.webp",
+      "compare": "/vehicle-images/mrenting-skodaelroq-card.webp",
+      "sourceFolder": "MRenting/SKODAELROQ"
+    },
+    "veh-m-empresa-195": {
+      "hero": "/vehicle-images/mrenting-lynkco01-hero.webp",
+      "card": "/vehicle-images/mrenting-lynkco01-card.webp",
+      "interior": "/vehicle-images/mrenting-lynkco01-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lynkco01-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lynkco01-card.webp",
+      "sourceFolder": "MRenting/LYNKCO01"
+    },
+    "veh-m-empresa-258": {
+      "hero": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotaproacemax-empresa-258-card.webp",
+      "sourceFolder": "MRenting/TOYOTAPROACEMAX_Empresa_258"
+    },
+    "veh-m-empresa-465": {
+      "hero": "/vehicle-images/mrenting-kiapv5passenger-hero.webp",
+      "card": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
+      "interior": "/vehicle-images/mrenting-kiapv5passenger-interior.webp",
+      "trunk": "/vehicle-images/mrenting-kiapv5passenger-trunk.webp",
+      "compare": "/vehicle-images/mrenting-kiapv5passenger-card.webp",
+      "sourceFolder": "MRenting/KIAPV5PASSENGER"
+    },
+    "veh-m-empresa-426": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-m-empresa-463": {
+      "hero": "/vehicle-images/mrenting-kiapv5cargo-hero.webp",
+      "card": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
+      "interior": "/vehicle-images/mrenting-kiapv5cargo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-kiapv5cargo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-kiapv5cargo-card.webp",
+      "sourceFolder": "MRenting/KIAPV5CARGO"
+    },
+    "veh-m-empresa-461": {
+      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
+      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "sourceFolder": "MRenting/CITROENeBERLINGO"
+    },
+    "veh-m-empresa-459": {
+      "hero": "/vehicle-images/mrenting-citroeneberlingo-hero.webp",
+      "card": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "interior": "/vehicle-images/mrenting-citroeneberlingo-interior.webp",
+      "trunk": "/vehicle-images/mrenting-citroeneberlingo-trunk.webp",
+      "compare": "/vehicle-images/mrenting-citroeneberlingo-card.webp",
+      "sourceFolder": "MRenting/CITROENeBERLINGO"
+    },
+    "veh-m-empresa-368": {
+      "hero": "/vehicle-images/mrenting-toyotahilux-hero.webp",
+      "card": "/vehicle-images/mrenting-toyotahilux-card.webp",
+      "interior": "/vehicle-images/mrenting-toyotahilux-interior.webp",
+      "trunk": "/vehicle-images/mrenting-toyotahilux-trunk.webp",
+      "compare": "/vehicle-images/mrenting-toyotahilux-card.webp",
+      "sourceFolder": "MRenting/TOYOTAHILUX"
+    },
+    "veh-m-empresa-156": {
+      "hero": "/vehicle-images/mrenting-mazdacx60-hero.webp",
+      "card": "/vehicle-images/mrenting-mazdacx60-card.webp",
+      "interior": "/vehicle-images/mrenting-mazdacx60-interior.webp",
+      "trunk": "/vehicle-images/mrenting-mazdacx60-trunk.webp",
+      "compare": "/vehicle-images/mrenting-mazdacx60-card.webp",
+      "sourceFolder": "MRenting/MAZDACX60"
+    },
+    "veh-m-empresa-378": {
+      "hero": "/vehicle-images/mrenting-omoda7-empresa-378-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda7-empresa-378-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda7-empresa-378-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda7-empresa-378-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda7-empresa-378-card.webp",
+      "sourceFolder": "MRenting/OMODA7_Empresa_378"
+    },
+    "veh-m-empresa-410": {
+      "hero": "/vehicle-images/mrenting-lynkco08-hero.webp",
+      "card": "/vehicle-images/mrenting-lynkco08-card.webp",
+      "interior": "/vehicle-images/mrenting-lynkco08-interior.webp",
+      "trunk": "/vehicle-images/mrenting-lynkco08-trunk.webp",
+      "compare": "/vehicle-images/mrenting-lynkco08-card.webp",
+      "sourceFolder": "MRenting/LYNKCO08"
+    },
+    "veh-m-empresa-385": {
+      "hero": "/vehicle-images/mrenting-omoda7-empresa-385-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda7-empresa-385-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda7-empresa-385-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda7-empresa-385-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda7-empresa-385-card.webp",
+      "sourceFolder": "MRenting/OMODA7_Empresa_385"
+    },
+    "veh-m-empresa-362": {
+      "hero": "/vehicle-images/mrenting-omoda9-hero.webp",
+      "card": "/vehicle-images/mrenting-omoda9-card.webp",
+      "interior": "/vehicle-images/mrenting-omoda9-interior.webp",
+      "trunk": "/vehicle-images/mrenting-omoda9-trunk.webp",
+      "compare": "/vehicle-images/mrenting-omoda9-card.webp",
+      "sourceFolder": "MRenting/OMODA9"
+    },
+    "veh-m-empresa-429": {
+      "hero": "/vehicle-images/mrenting-jaecoo5-hero.webp",
+      "card": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "interior": "/vehicle-images/mrenting-jaecoo5-interior.webp",
+      "trunk": "/vehicle-images/mrenting-jaecoo5-trunk.webp",
+      "compare": "/vehicle-images/mrenting-jaecoo5-card.webp",
+      "sourceFolder": "MRenting/JAECOO5"
+    },
+    "veh-quadis-511117": {
+      "hero": "/vehicle-images/quadis-opelcorsa-hero.webp",
+      "card": "/vehicle-images/quadis-opelcorsa-card.webp",
+      "interior": "/vehicle-images/quadis-opelcorsa-interior.webp",
+      "trunk": "/vehicle-images/quadis-opelcorsa-trunk.webp",
+      "compare": "/vehicle-images/quadis-opelcorsa-card.webp",
+      "sourceFolder": "Quadis/OpelCorsa"
     },
     "veh-quadis-512258": {
       "hero": "/vehicle-images/quadis-peugeot208-hero.webp",
@@ -1371,14 +1379,6 @@
       "trunk": "/vehicle-images/quadis-skodafabia-trunk.webp",
       "compare": "/vehicle-images/quadis-skodafabia-card.webp",
       "sourceFolder": "Quadis/SkodaFabia"
-    },
-    "veh-quadis-522422": {
-      "hero": "/vehicle-images/quadis-mgzs-hero.webp",
-      "card": "/vehicle-images/quadis-mgzs-card.webp",
-      "interior": "/vehicle-images/quadis-mgzs-interior.webp",
-      "trunk": "/vehicle-images/quadis-mgzs-trunk.webp",
-      "compare": "/vehicle-images/quadis-mgzs-card.webp",
-      "sourceFolder": "Quadis/MGZS"
     },
     "veh-quadis-521147": {
       "hero": "/vehicle-images/quadis-audia1-hero.webp",
@@ -1420,14 +1420,6 @@
       "compare": "/vehicle-images/quadis-alfaromeojunior-card.webp",
       "sourceFolder": "Quadis/AlfaRomeoJunior"
     },
-    "veh-quadis-507194": {
-      "hero": "/vehicle-images/quadis-byddolphinsurf-hero.webp",
-      "card": "/vehicle-images/quadis-byddolphinsurf-card.webp",
-      "interior": "/vehicle-images/quadis-byddolphinsurf-interior.webp",
-      "trunk": "/vehicle-images/quadis-byddolphinsurf-trunk.webp",
-      "compare": "/vehicle-images/quadis-byddolphinsurf-card.webp",
-      "sourceFolder": "Quadis/BYDDolphinSurf"
-    },
     "veh-quadis-504803": {
       "hero": "/vehicle-images/quadis-mercedesbenzcitan-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzcitan-card.webp",
@@ -1452,21 +1444,13 @@
       "compare": "/vehicle-images/quadis-nissanmicra-card.webp",
       "sourceFolder": "Quadis/NissanMicra"
     },
-    "veh-quadis-523043": {
-      "hero": "/vehicle-images/quadis-bmwserie1-523043-hero.webp",
-      "card": "/vehicle-images/quadis-bmwserie1-523043-card.webp",
-      "interior": "/vehicle-images/quadis-bmwserie1-523043-interior.webp",
-      "trunk": "/vehicle-images/quadis-bmwserie1-523043-trunk.webp",
-      "compare": "/vehicle-images/quadis-bmwserie1-523043-card.webp",
-      "sourceFolder": "Quadis/BMWSerie1_523043"
-    },
-    "veh-quadis-523025": {
-      "hero": "/vehicle-images/quadis-bmwserie1-523025-hero.webp",
-      "card": "/vehicle-images/quadis-bmwserie1-523025-card.webp",
-      "interior": "/vehicle-images/quadis-bmwserie1-523025-interior.webp",
-      "trunk": "/vehicle-images/quadis-bmwserie1-523025-trunk.webp",
-      "compare": "/vehicle-images/quadis-bmwserie1-523025-card.webp",
-      "sourceFolder": "Quadis/BMWSerie1_523025"
+    "veh-quadis-494501": {
+      "hero": "/vehicle-images/generated-mercedes-benz-gla-200d-hero.webp",
+      "card": "/vehicle-images/generated-mercedes-benz-gla-200d-card.webp",
+      "interior": "/vehicle-images/generated-mercedes-benz-gla-200d-hero.webp",
+      "trunk": "/vehicle-images/generated-mercedes-benz-gla-200d-hero.webp",
+      "compare": "/vehicle-images/generated-mercedes-benz-gla-200d-card.webp",
+      "sourceFolder": "Generada/generated-mercedes-benz-gla-200d"
     },
     "veh-quadis-523064": {
       "hero": "/vehicle-images/quadis-kiapv5-hero.webp",
@@ -1483,14 +1467,6 @@
       "trunk": "/vehicle-images/quadis-ebros800-trunk.webp",
       "compare": "/vehicle-images/quadis-ebros800-card.webp",
       "sourceFolder": "Quadis/EBROS800"
-    },
-    "veh-quadis-523044": {
-      "hero": "/vehicle-images/quadis-bmwix1-hero.webp",
-      "card": "/vehicle-images/quadis-bmwix1-card.webp",
-      "interior": "/vehicle-images/quadis-bmwix1-interior.webp",
-      "trunk": "/vehicle-images/quadis-bmwix1-trunk.webp",
-      "compare": "/vehicle-images/quadis-bmwix1-card.webp",
-      "sourceFolder": "Quadis/BMWiX1"
     },
     "veh-quadis-510235": {
       "hero": "/vehicle-images/quadis-mercedesbenzglc-510235-hero.webp",
@@ -1612,7 +1588,7 @@
       "compare": "/vehicle-images/quadis-nissanqashqai-card.webp",
       "sourceFolder": "Quadis/NissanQashqai"
     },
-    "veh-quadis-paper-opel-corsa-1-2t-xhl-74kw-100cv-gs-4": {
+    "veh-quadis-paper-opel-corsa-1-2t-xhl-74kw-100cv-gs-arval": {
       "hero": "/vehicle-images/quadis-opelcorsa-hero.webp",
       "card": "/vehicle-images/quadis-opelcorsa-card.webp",
       "interior": "/vehicle-images/quadis-opelcorsa-interior.webp",
@@ -1620,7 +1596,15 @@
       "compare": "/vehicle-images/quadis-opelcorsa-card.webp",
       "sourceFolder": "Quadis/OpelCorsa"
     },
-    "veh-quadis-paper-peugeot-208-allure-gasolina-100-s-s-6-vel-manual-turbo-5": {
+    "veh-quadis-paper-opel-corsa-1-2t-xhl-74kw-100cv-gs-blanco-alphabet-blanco": {
+      "hero": "/vehicle-images/quadis-opelcorsa-hero.webp",
+      "card": "/vehicle-images/quadis-opelcorsa-card.webp",
+      "interior": "/vehicle-images/quadis-opelcorsa-interior.webp",
+      "trunk": "/vehicle-images/quadis-opelcorsa-trunk.webp",
+      "compare": "/vehicle-images/quadis-opelcorsa-card.webp",
+      "sourceFolder": "Quadis/OpelCorsa"
+    },
+    "veh-quadis-paper-peugeot-208-allure-gasolina-100-s-s-6-vel-manual-turbo-arval": {
       "hero": "/vehicle-images/quadis-peugeot208-hero.webp",
       "card": "/vehicle-images/quadis-peugeot208-card.webp",
       "interior": "/vehicle-images/quadis-peugeot208-interior.webp",
@@ -1628,7 +1612,7 @@
       "compare": "/vehicle-images/quadis-peugeot208-card.webp",
       "sourceFolder": "Quadis/Peugeot208"
     },
-    "veh-quadis-paper-nissan-juke-1-6-hybrid-105kw-145cv-n-connecta-6": {
+    "veh-quadis-paper-nissan-juke-1-6-hybrid-105kw-145cv-n-connecta-7": {
       "hero": "/vehicle-images/quadis-nissanjuke-hero.webp",
       "card": "/vehicle-images/quadis-nissanjuke-card.webp",
       "interior": "/vehicle-images/quadis-nissanjuke-interior.webp",
@@ -1636,7 +1620,7 @@
       "compare": "/vehicle-images/quadis-nissanjuke-card.webp",
       "sourceFolder": "Quadis/NissanJuke"
     },
-    "veh-quadis-paper-maserati-grecale-l4-mhev-300cv-awd-7": {
+    "veh-quadis-paper-maserati-grecale-l4-mhev-300cv-awd-8": {
       "hero": "/vehicle-images/quadis-maseratigrecale-hero.webp",
       "card": "/vehicle-images/quadis-maseratigrecale-card.webp",
       "interior": "/vehicle-images/quadis-maseratigrecale-interior.webp",
@@ -1644,7 +1628,7 @@
       "compare": "/vehicle-images/quadis-maseratigrecale-card.webp",
       "sourceFolder": "Quadis/MaseratiGrecale"
     },
-    "veh-quadis-paper-mercedes-benz-glc-glc-220-d-4matic-2022-8": {
+    "veh-quadis-paper-mercedes-benz-glc-glc-220-d-4matic-2022-9": {
       "hero": "/vehicle-images/quadis-mercedesbenzglc-510232-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzglc-510232-card.webp",
       "interior": "/vehicle-images/quadis-mercedesbenzglc-510232-interior.webp",
@@ -1652,7 +1636,7 @@
       "compare": "/vehicle-images/quadis-mercedesbenzglc-510232-card.webp",
       "sourceFolder": "Quadis/MercedesBenzGLC_510232"
     },
-    "veh-quadis-paper-mercedes-benz-glc-coupe-glc-300-de-4matic-2023-9": {
+    "veh-quadis-paper-mercedes-benz-glc-coupe-glc-300-de-4matic-2023-10": {
       "hero": "/vehicle-images/quadis-mercedesbenzglccoupe-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzglccoupe-card.webp",
       "interior": "/vehicle-images/quadis-mercedesbenzglccoupe-interior.webp",
@@ -1660,7 +1644,7 @@
       "compare": "/vehicle-images/quadis-mercedesbenzglccoupe-card.webp",
       "sourceFolder": "Quadis/MercedesBenzGLCCoupe"
     },
-    "veh-quadis-paper-mercedes-benz-glc-coupe-glc-200-4matic-2023-10": {
+    "veh-quadis-paper-mercedes-benz-glc-coupe-glc-200-4matic-2023-11": {
       "hero": "/vehicle-images/quadis-mercedesbenzglccoupe-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzglccoupe-card.webp",
       "interior": "/vehicle-images/quadis-mercedesbenzglccoupe-interior.webp",
@@ -1668,7 +1652,7 @@
       "compare": "/vehicle-images/quadis-mercedesbenzglccoupe-card.webp",
       "sourceFolder": "Quadis/MercedesBenzGLCCoupe"
     },
-    "veh-quadis-paper-nissan-interstar-furgon-n1-l2h2-3-5t-dci-96kw-130cv-6m-t-fwd-acenta-11": {
+    "veh-quadis-paper-nissan-interstar-furgon-n1-l2h2-3-5t-dci-96kw-130cv-6m-t-fwd-acenta-12": {
       "hero": "/vehicle-images/generated-nissan-interstar-hero.webp",
       "card": "/vehicle-images/generated-nissan-interstar-card.webp",
       "interior": "/vehicle-images/generated-nissan-interstar-hero.webp",
@@ -1676,7 +1660,7 @@
       "compare": "/vehicle-images/generated-nissan-interstar-card.webp",
       "sourceFolder": "Generada/generated-nissan-interstar"
     },
-    "veh-quadis-paper-skoda-fabia-1-5-tsi-110kw-150cv-dsg-plus-12": {
+    "veh-quadis-paper-skoda-fabia-1-5-tsi-110kw-150cv-dsg-plus-13": {
       "hero": "/vehicle-images/quadis-skodafabia-hero.webp",
       "card": "/vehicle-images/quadis-skodafabia-card.webp",
       "interior": "/vehicle-images/quadis-skodafabia-interior.webp",
@@ -1684,7 +1668,7 @@
       "compare": "/vehicle-images/quadis-skodafabia-card.webp",
       "sourceFolder": "Quadis/SkodaFabia"
     },
-    "veh-quadis-paper-mercedes-benz-citan-110-cdi-70kw-furgon-base-cargo-13": {
+    "veh-quadis-paper-mercedes-benz-citan-110-cdi-70kw-furgon-base-cargo-14": {
       "hero": "/vehicle-images/quadis-mercedesbenzcitan-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzcitan-card.webp",
       "interior": "/vehicle-images/quadis-mercedesbenzcitan-interior.webp",
@@ -1692,21 +1676,13 @@
       "compare": "/vehicle-images/quadis-mercedesbenzcitan-card.webp",
       "sourceFolder": "Quadis/MercedesBenzCITAN"
     },
-    "veh-quadis-paper-audi-a1-sportback-adrenalin-30-tfsi-85kw-s-tronic-14": {
+    "veh-quadis-paper-audi-a1-sportback-adrenalin-30-tfsi-85kw-s-tronic-15": {
       "hero": "/vehicle-images/quadis-audia1-hero.webp",
       "card": "/vehicle-images/quadis-audia1-card.webp",
       "interior": "/vehicle-images/quadis-audia1-interior.webp",
       "trunk": "/vehicle-images/quadis-audia1-trunk.webp",
       "compare": "/vehicle-images/quadis-audia1-card.webp",
       "sourceFolder": "Quadis/AudiA1"
-    },
-    "veh-quadis-paper-mg-zs-hybrid-business-15": {
-      "hero": "/vehicle-images/quadis-mgzs-hero.webp",
-      "card": "/vehicle-images/quadis-mgzs-card.webp",
-      "interior": "/vehicle-images/quadis-mgzs-interior.webp",
-      "trunk": "/vehicle-images/quadis-mgzs-trunk.webp",
-      "compare": "/vehicle-images/quadis-mgzs-card.webp",
-      "sourceFolder": "Quadis/MGZS"
     },
     "veh-quadis-paper-ebro-s800-1-5-tgdi-phev-luxury-e-cvt-gris-16": {
       "hero": "/vehicle-images/quadis-ebros800-hero.webp",
@@ -1740,15 +1716,7 @@
       "compare": "/vehicle-images/quadis-opelmokka-514117-card.webp",
       "sourceFolder": "Quadis/OpelMokka_514117"
     },
-    "veh-quadis-paper-kia-niro-1-6-gdi-hev-102kw-139cv-drive-modelo-anterior-100-combustible": {
-      "hero": "/vehicle-images/quadis-kianiro-hero.webp",
-      "card": "/vehicle-images/quadis-kianiro-card.webp",
-      "interior": "/vehicle-images/quadis-kianiro-interior.webp",
-      "trunk": "/vehicle-images/quadis-kianiro-trunk.webp",
-      "compare": "/vehicle-images/quadis-kianiro-card.webp",
-      "sourceFolder": "Quadis/KIANiro"
-    },
-    "veh-quadis-paper-kia-niro-1-6-gdi-hev-101-5kw-138cv-drive-my27-ayvens-my27": {
+    "veh-quadis-paper-kia-niro-1-6-gdi-hev-102kw-139cv-drive-my27-ayvens-my27": {
       "hero": "/vehicle-images/quadis-kianiro-hero.webp",
       "card": "/vehicle-images/quadis-kianiro-card.webp",
       "interior": "/vehicle-images/quadis-kianiro-interior.webp",
@@ -1771,393 +1739,6 @@
       "trunk": "/vehicle-images/generated-mercedes-benz-gla-200d-hero.webp",
       "compare": "/vehicle-images/generated-mercedes-benz-gla-200d-card.webp",
       "sourceFolder": "Generada/generated-mercedes-benz-gla-200d"
-    },
-    "veh-marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs": {
-      "hero": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
-      "card": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
-      "compare": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
-      "interior": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
-      "trunk": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2301209_699dfc78c1cb0.jpeg"
-    },
-    "veh-marcos-dacia-sandero-stepway-expression-eco-g-120-auto": {
-      "hero": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
-      "card": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
-      "compare": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
-      "interior": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
-      "trunk": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2844298_6a2664d8f2bcd.jpeg"
-    },
-    "veh-marcos-renault-captur-captur-evolution-eco-g-120cv-5p-manual": {
-      "hero": "/vehicle-images/marcos-renault-captur-captur-evolution-eco-g-120cv-5p-manual-card.webp",
-      "card": "/vehicle-images/marcos-renault-captur-captur-evolution-eco-g-120cv-5p-manual-card.webp",
-      "compare": "/vehicle-images/marcos-renault-captur-captur-evolution-eco-g-120cv-5p-manual-card.webp",
-      "interior": "/vehicle-images/marcos-renault-captur-captur-evolution-eco-g-120cv-5p-manual-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-captur-captur-evolution-eco-g-120cv-5p-manual-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2113186_686e4de35d795.jpeg"
-    },
-    "veh-marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev": {
-      "hero": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
-      "card": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
-      "compare": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
-      "interior": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1973003_677d20ea3d9b6.jpeg"
-    },
-    "veh-marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta": {
-      "hero": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
-      "card": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
-      "compare": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
-      "interior": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
-      "trunk": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2150384_68c02b3232b2a.jpeg"
-    },
-    "veh-marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept": {
-      "hero": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
-      "card": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
-      "compare": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
-      "interior": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
-      "trunk": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1927316_6a86bbae6df20.jpeg"
-    },
-    "veh-marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual": {
-      "hero": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
-      "card": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
-      "compare": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
-      "interior": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1939229_67f4e83ccc81d.jpeg"
-    },
-    "veh-marcos-peugeot-rifter-active-business-standard-bluehdi-100": {
-      "hero": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
-      "card": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
-      "compare": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
-      "interior": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
-      "trunk": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2251166_695fae13b601c.jpeg"
-    },
-    "veh-marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv": {
-      "hero": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
-      "card": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
-      "compare": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
-      "interior": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2827524_6a1d4f757ff2e.jpeg"
-    },
-    "veh-marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line": {
-      "hero": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
-      "card": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
-      "compare": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
-      "interior": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
-      "trunk": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2887111_6a3e452cea358.jpeg"
-    },
-    "veh-marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv": {
-      "hero": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
-      "card": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
-      "compare": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
-      "interior": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2304100_6a266aadc398f.jpeg"
-    },
-    "veh-marcos-citroen-berlingo-van-m-diesel-100cv-manual": {
-      "hero": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
-      "card": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
-      "compare": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
-      "interior": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
-      "trunk": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2894715_6a4b677e511dc.jpeg"
-    },
-    "veh-marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta": {
-      "hero": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
-      "card": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
-      "compare": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
-      "interior": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
-      "trunk": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2298716_699dacb174d3f.jpeg"
-    },
-    "veh-marcos-seat-leon-2-0-tdi-85kw-style-xl": {
-      "hero": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
-      "card": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
-      "compare": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
-      "interior": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
-      "trunk": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2780629_69e72026d92c2.jpeg"
-    },
-    "veh-marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend": {
-      "hero": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
-      "card": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
-      "compare": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
-      "interior": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2251093_695f8bac8b976.jpeg"
-    },
-    "veh-marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you": {
-      "hero": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
-      "card": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
-      "compare": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
-      "interior": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
-      "trunk": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2043387_67f3ea6be4abf.jpeg"
-    },
-    "veh-marcos-hyundai-tucson-1-6d-100kw-136cv-48v-dt-black-line": {
-      "hero": "/vehicle-images/marcos-hyundai-tucson-1-6d-100kw-136cv-48v-dt-black-line-card.webp",
-      "card": "/vehicle-images/marcos-hyundai-tucson-1-6d-100kw-136cv-48v-dt-black-line-card.webp",
-      "compare": "/vehicle-images/marcos-hyundai-tucson-1-6d-100kw-136cv-48v-dt-black-line-card.webp",
-      "interior": "/vehicle-images/marcos-hyundai-tucson-1-6d-100kw-136cv-48v-dt-black-line-card.webp",
-      "trunk": "/vehicle-images/marcos-hyundai-tucson-1-6d-100kw-136cv-48v-dt-black-line-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2790507_69f21dede531d.jpeg"
-    },
-    "veh-marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd": {
-      "hero": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
-      "card": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
-      "compare": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
-      "interior": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2234648_6943627352733.jpeg"
-    },
-    "veh-marcos-honda-jazz-1-5-i-mmd-advance": {
-      "hero": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
-      "card": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
-      "compare": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
-      "interior": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
-      "trunk": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884428_6a3a52a6ede8e.jpeg"
-    },
-    "veh-marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv": {
-      "hero": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
-      "card": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
-      "compare": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
-      "interior": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
-      "trunk": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2044074_67f5107dba2cf.jpeg"
-    },
-    "veh-marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta": {
-      "hero": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
-      "card": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
-      "compare": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
-      "interior": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
-      "trunk": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884543_6a3a6be631ad2.jpeg"
-    },
-    "veh-marcos-honda-jazz-1-5-i-mmd-crosstar": {
-      "hero": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
-      "card": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
-      "compare": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
-      "interior": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
-      "trunk": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885759_6a3c404d61409.jpeg"
-    },
-    "veh-marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto": {
-      "hero": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
-      "card": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
-      "compare": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
-      "interior": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2920907_6a7ef19a015f2.jpeg"
-    },
-    "veh-marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend": {
-      "hero": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
-      "card": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
-      "compare": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
-      "interior": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2800510_69fc5759be60d.jpeg"
-    },
-    "veh-marcos-renault-austral-techno-mild-hybrid-110auto": {
-      "hero": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
-      "card": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
-      "compare": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
-      "interior": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2827534_6a1d526597cf2.jpeg"
-    },
-    "veh-marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line": {
-      "hero": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
-      "card": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
-      "compare": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
-      "interior": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
-      "trunk": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2881163_6a38e3c1cafcd.jpeg"
-    },
-    "veh-marcos-renault-austral-evolution-e-tech-full-hybrid-147kw": {
-      "hero": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
-      "card": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
-      "compare": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
-      "interior": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2152691_68c405807019a.jpeg"
-    },
-    "veh-marcos-honda-hr-v-1-5-i-mmd-elegance-4x2": {
-      "hero": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
-      "card": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
-      "compare": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
-      "interior": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
-      "trunk": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885996_6a3cc6eabeb74.jpeg"
-    },
-    "veh-marcos-bmw-serie-1-120": {
-      "hero": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
-      "card": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
-      "compare": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
-      "interior": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
-      "trunk": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2908258_6a63441d631f6.jpeg"
-    },
-    "veh-marcos-bmw-serie-1-120d": {
-      "hero": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
-      "card": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
-      "compare": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
-      "interior": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
-      "trunk": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2908248_6a634085963ab.jpeg"
-    },
-    "veh-marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto": {
-      "hero": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
-      "card": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
-      "compare": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
-      "interior": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
-      "trunk": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2055150_68121d5aee73b.jpeg"
-    },
-    "veh-marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta": {
-      "hero": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
-      "card": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
-      "compare": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
-      "interior": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
-      "trunk": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1954000_67af0a1651f9c.jpeg"
-    },
-    "veh-marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv": {
-      "hero": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
-      "card": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
-      "compare": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
-      "interior": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
-      "trunk": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2028268_67d7e67098934.jpeg"
-    },
-    "veh-marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120": {
-      "hero": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
-      "card": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
-      "compare": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
-      "interior": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
-      "trunk": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2178133_68f603cb774fd.jpeg"
-    },
-    "veh-marcos-honda-civic-2-0-i-mmd-sport-cvt": {
-      "hero": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
-      "card": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
-      "compare": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
-      "interior": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
-      "trunk": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885756_6a3c3241d9363.jpeg"
-    },
-    "veh-marcos-renault-espace-techno-full-hybrid-e-tech-200-147kw-7-plazas": {
-      "hero": "/vehicle-images/marcos-renault-espace-techno-full-hybrid-e-tech-200-147kw-7-plazas-card.webp",
-      "card": "/vehicle-images/marcos-renault-espace-techno-full-hybrid-e-tech-200-147kw-7-plazas-card.webp",
-      "compare": "/vehicle-images/marcos-renault-espace-techno-full-hybrid-e-tech-200-147kw-7-plazas-card.webp",
-      "interior": "/vehicle-images/marcos-renault-espace-techno-full-hybrid-e-tech-200-147kw-7-plazas-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-espace-techno-full-hybrid-e-tech-200-147kw-7-plazas-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2827518_6a1d4dd768e31.jpeg"
-    },
-    "veh-marcos-kia-pv5-passenger-l2h1-long-range-plus": {
-      "hero": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
-      "card": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
-      "compare": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
-      "interior": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
-      "trunk": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917468_6a75bcb4dbd0f.jpeg"
-    },
-    "veh-marcos-renault-trafic-combi-diesel-mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas": {
-      "hero": "/vehicle-images/marcos-renault-trafic-combi-diesel-mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas-card.webp",
-      "card": "/vehicle-images/marcos-renault-trafic-combi-diesel-mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas-card.webp",
-      "compare": "/vehicle-images/marcos-renault-trafic-combi-diesel-mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas-card.webp",
-      "interior": "/vehicle-images/marcos-renault-trafic-combi-diesel-mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas-card.webp",
-      "trunk": "/vehicle-images/marcos-renault-trafic-combi-diesel-mixto-n1-5-6-largo-energy-blue-dci-81kw-9-plazas-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2159193_68d33901c63ae.jpeg"
-    },
-    "veh-marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh": {
-      "hero": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
-      "card": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
-      "compare": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
-      "interior": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
-      "trunk": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917438_6a75b7ef3f633.jpeg"
-    },
-    "veh-marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica": {
-      "hero": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
-      "card": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
-      "compare": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
-      "interior": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
-      "trunk": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917414_6a75ae0ccb0a6.jpeg"
-    },
-    "veh-marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt": {
-      "hero": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
-      "card": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
-      "compare": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
-      "interior": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
-      "trunk": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2886067_6a3cebcc83fa6.jpeg"
-    },
-    "veh-marcos-bmw-ix1-edrive20": {
-      "hero": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
-      "card": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
-      "compare": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
-      "interior": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
-      "trunk": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2805036_6a02f51f399f4.jpeg"
-    },
-    "veh-marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance": {
-      "hero": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
-      "card": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
-      "compare": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
-      "interior": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
-      "trunk": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
-      "sourceFolder": "Marcos Automoción",
-      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884465_6a3a6139f066d.jpeg"
     }
   }
 }
