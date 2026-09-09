@@ -12,7 +12,7 @@ const destinations: Record<string, string> = {
   "renting-menos-600-euros": "/renting/menos-de-500-euros", "renting-menos-700-euros": "/renting/menos-de-500-euros",
 };
 
-export function generateStaticParams() { return seoPages.map(({ slug: landing }) => ({ landing })); }
+export function generateStaticParams() { return []; }
 
 export default async function LegacyLandingPage({ params }: Props) {
   const { landing } = await params;

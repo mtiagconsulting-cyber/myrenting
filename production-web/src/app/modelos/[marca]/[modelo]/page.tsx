@@ -5,7 +5,7 @@ import { contentSlug } from "@/lib/content-slug";
 type Props = { params: Promise<{ marca: string; modelo: string }> };
 const groups = [...new Set(vehicles.map((vehicle) => `${contentSlug(vehicle.brand)}/${contentSlug(vehicle.model)}`))];
 
-export function generateStaticParams() { return groups.map((path) => { const [marca, modelo] = path.split("/"); return { marca, modelo }; }); }
+export function generateStaticParams() { return []; }
 
 export default async function LegacyModelPage({ params }: Props) {
   const { marca, modelo } = await params;

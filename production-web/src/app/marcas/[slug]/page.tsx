@@ -4,7 +4,7 @@ import { contentSlug } from "@/lib/content-slug";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() { return brands.map((brand) => ({ slug: contentSlug(brand) })); }
+export function generateStaticParams() { return []; }
 
 export default async function LegacyBrandPage({ params }: Props) {
   const { slug } = await params;

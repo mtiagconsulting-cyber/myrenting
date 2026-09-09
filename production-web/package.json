@@ -18,6 +18,7 @@
     "audit:official-specs": "node scripts/seo/audit-official-specs.mjs",
     "audit:leads": "node --no-warnings --experimental-strip-types scripts/seo/audit-lead-flow.mjs",
     "audit:seo": "node scripts/seo/audit-build.mjs",
+    "test:seo-p0": "node --test scripts/seo/p0-routing.test.mjs",
     "snapshot:market": "node scripts/seo/snapshot-market.mjs",
     "benchmark:ai": "node scripts/seo/calculate-ai-share.mjs",
     "start": "next start",

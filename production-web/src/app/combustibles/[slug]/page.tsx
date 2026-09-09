@@ -3,7 +3,7 @@ import { fuelPages } from "@/lib/catalog-taxonomy";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() { return fuelPages.map(({ slug }) => ({ slug })); }
+export function generateStaticParams() { return []; }
 
 export default async function LegacyFuelPage({ params }: Props) {
   const { slug } = await params;

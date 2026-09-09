@@ -1,0 +1,2718 @@
+{
+  "totalP0": 339,
+  "redirected": 338,
+  "decisions": [
+    {
+      "url": "/renting-madrid.html",
+      "action": "301",
+      "destination": "/renting/madrid",
+      "reason": "ciudad canónica existente",
+      "clicks": "3",
+      "impressions": "3094"
+    },
+    {
+      "url": "/renting-barcelona.html",
+      "action": "301",
+      "destination": "/renting/barcelona",
+      "reason": "ciudad canónica existente",
+      "clicks": "5",
+      "impressions": "2354"
+    },
+    {
+      "url": "/renting-barato.html",
+      "action": "301",
+      "destination": "/renting/baratos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "11",
+      "impressions": "1832"
+    },
+    {
+      "url": "/renting-kia-madrid.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "1388"
+    },
+    {
+      "url": "/renting-valencia.html",
+      "action": "301",
+      "destination": "/renting/valencia",
+      "reason": "ciudad canónica existente",
+      "clicks": "4",
+      "impressions": "1335"
+    },
+    {
+      "url": "/renting-hyundai-madrid.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "1082"
+    },
+    {
+      "url": "/renting-hibrido.html",
+      "action": "301",
+      "destination": "/renting/hibridos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "1057"
+    },
+    {
+      "url": "/renting-mazda-madrid.html",
+      "action": "301",
+      "destination": "/renting/mazda",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "1011"
+    },
+    {
+      "url": "/renting-kia-barcelona.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "856"
+    },
+    {
+      "url": "/renting-mazda-barcelona.html",
+      "action": "301",
+      "destination": "/renting/mazda",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "633"
+    },
+    {
+      "url": "/renting-malaga.html",
+      "action": "301",
+      "destination": "/renting/malaga",
+      "reason": "ciudad canónica existente",
+      "clicks": "1",
+      "impressions": "568"
+    },
+    {
+      "url": "/renting-kia-malaga.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "549"
+    },
+    {
+      "url": "/renting-electrico.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "480"
+    },
+    {
+      "url": "/renting-kia-sevilla.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "405"
+    },
+    {
+      "url": "/renting-kia-valencia.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "402"
+    },
+    {
+      "url": "/renting-ford.html",
+      "action": "301",
+      "destination": "/renting/ford",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "399"
+    },
+    {
+      "url": "/renting-hyundai-sevilla.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "372"
+    },
+    {
+      "url": "/renting-murcia.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "316"
+    },
+    {
+      "url": "/renting-mini-cooper-c.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "5",
+      "impressions": "268"
+    },
+    {
+      "url": "/renting-renault-megane.html",
+      "action": "301_contextual",
+      "destination": "/renting/renault",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "228"
+    },
+    {
+      "url": "/renting-cupra.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "228"
+    },
+    {
+      "url": "/renting-hyundai-kona.html",
+      "action": "301",
+      "destination": "/renting/hyundai/kona",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "227"
+    },
+    {
+      "url": "/renting-hyundai-santa-fe.html",
+      "action": "301_contextual",
+      "destination": "/renting/hyundai",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "223"
+    },
+    {
+      "url": "/renting-hasta-250.html",
+      "action": "301_contextual",
+      "destination": "/renting/menos-de-300-euros",
+      "reason": "presupuesto antiguo; tramo vigente más próximo",
+      "clicks": "11",
+      "impressions": "219"
+    },
+    {
+      "url": "/renting-audi-q8.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "205"
+    },
+    {
+      "url": "/renting-land-rover-defender.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "201"
+    },
+    {
+      "url": "/renting-nissan-juke.html",
+      "action": "301",
+      "destination": "/renting/nissan/juke",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "199"
+    },
+    {
+      "url": "/renting-dacia.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "198"
+    },
+    {
+      "url": "/renting-ford-kuga.html",
+      "action": "301",
+      "destination": "/renting/ford/kuga",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "188"
+    },
+    {
+      "url": "/renting-nissan-barcelona.html",
+      "action": "301",
+      "destination": "/renting/nissan",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "183"
+    },
+    {
+      "url": "/renting-audi-a1.html",
+      "action": "301",
+      "destination": "/renting/audi/a1",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "175"
+    },
+    {
+      "url": "/renting-mercedes-cla.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz/cla",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "168"
+    },
+    {
+      "url": "/renting-hyundai-malaga.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "158"
+    },
+    {
+      "url": "/renting-fiat-500.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "150"
+    },
+    {
+      "url": "/coches/m-empresa-340",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "143"
+    },
+    {
+      "url": "/renting-hibrido-enchufable.html",
+      "action": "301",
+      "destination": "/renting/hibridos-enchufables",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "140"
+    },
+    {
+      "url": "/renting-bmw-x3.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "139"
+    },
+    {
+      "url": "/renting-volkswagen-tiguan-madrid.html",
+      "action": "301",
+      "destination": "/renting/volkswagen/tiguan",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "137"
+    },
+    {
+      "url": "/renting-mazda-cx-30.html",
+      "action": "301",
+      "destination": "/renting/mazda/cx-30",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "136"
+    },
+    {
+      "url": "/renting-hyundai-barcelona.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "134"
+    },
+    {
+      "url": "/modelos/volkswagen/t-roc",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "134"
+    },
+    {
+      "url": "/renting-menos-200.html",
+      "action": "301_contextual",
+      "destination": "/renting/menos-de-300-euros",
+      "reason": "presupuesto antiguo; tramo vigente más próximo",
+      "clicks": "5",
+      "impressions": "130"
+    },
+    {
+      "url": "/renting/volkswagen/t-roc/sin-entrada",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "124"
+    },
+    {
+      "url": "/renting/volkswagen/t-roc/barato",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "124"
+    },
+    {
+      "url": "/renting-electrico-menos-400.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "1",
+      "impressions": "123"
+    },
+    {
+      "url": "/renting-audi-q3.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "119"
+    },
+    {
+      "url": "/renting-land-rover-range-rover-sport.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "118"
+    },
+    {
+      "url": "/renting-toyota-sevilla.html",
+      "action": "301",
+      "destination": "/renting/toyota",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "116"
+    },
+    {
+      "url": "/renting-coches-menos-350.html",
+      "action": "301",
+      "destination": "/renting/menos-de-400-euros",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "2",
+      "impressions": "113"
+    },
+    {
+      "url": "/renting-citroen-c3-aircross.html",
+      "action": "301_contextual",
+      "destination": "/renting/citroen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "108"
+    },
+    {
+      "url": "/renting-fiat-doblo.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "102"
+    },
+    {
+      "url": "/renting-hasta-400.html",
+      "action": "301",
+      "destination": "/renting/menos-de-400-euros",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "2",
+      "impressions": "96"
+    },
+    {
+      "url": "/renting-tesla-model-3.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "93"
+    },
+    {
+      "url": "/renting-toyota-aygo-x-cross.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "93"
+    },
+    {
+      "url": "/renting-toyota-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/toyota",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "91"
+    },
+    {
+      "url": "/renting-jeep.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "91"
+    },
+    {
+      "url": "/renting-toyota-proace-ev-van.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "motorización vigente equivalente",
+      "clicks": "0",
+      "impressions": "88"
+    },
+    {
+      "url": "/renting-kia-xceed.html",
+      "action": "301_contextual",
+      "destination": "/renting/kia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "88"
+    },
+    {
+      "url": "/renting-honda-valencia.html",
+      "action": "301",
+      "destination": "/renting/honda",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "87"
+    },
+    {
+      "url": "/renting-mazda-malaga.html",
+      "action": "301",
+      "destination": "/renting/mazda",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "87"
+    },
+    {
+      "url": "/renting-nissan-malaga.html",
+      "action": "301",
+      "destination": "/renting/nissan",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "86"
+    },
+    {
+      "url": "/renting-ford-malaga.html",
+      "action": "301",
+      "destination": "/renting/ford",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "84"
+    },
+    {
+      "url": "/renting-toyota-corolla.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "83"
+    },
+    {
+      "url": "/renting-electrico-puro.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "82"
+    },
+    {
+      "url": "/renting-kia-ev3.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "motorización vigente equivalente",
+      "clicks": "1",
+      "impressions": "80"
+    },
+    {
+      "url": "/renting-toyota-proace-verso-ev.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "motorización vigente equivalente",
+      "clicks": "0",
+      "impressions": "80"
+    },
+    {
+      "url": "/renting-volkswagen-t-roc.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "5",
+      "impressions": "75"
+    },
+    {
+      "url": "/renting-toyota-hilux-sevilla.html",
+      "action": "301",
+      "destination": "/renting/toyota/hilux",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "74"
+    },
+    {
+      "url": "/renting-hibrido-menos-350.html",
+      "action": "301",
+      "destination": "/renting/hibridos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "1",
+      "impressions": "74"
+    },
+    {
+      "url": "/renting-hyundai.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "74"
+    },
+    {
+      "url": "/renting/volkswagen/t-roc/entrega-inmediata",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "73"
+    },
+    {
+      "url": "/renting-dacia-duster.html",
+      "action": "301_contextual",
+      "destination": "/renting/dacia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "72"
+    },
+    {
+      "url": "/renting-audi-a4.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "72"
+    },
+    {
+      "url": "/renting-mazda-sevilla.html",
+      "action": "301",
+      "destination": "/renting/mazda",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "71"
+    },
+    {
+      "url": "/renting-autonomo.html",
+      "action": "301",
+      "destination": "/renting/autonomos",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "71"
+    },
+    {
+      "url": "/renting-bilbao.html",
+      "action": "301",
+      "destination": "/renting/bilbao",
+      "reason": "ciudad canónica existente",
+      "clicks": "0",
+      "impressions": "69"
+    },
+    {
+      "url": "/renting/menos-de-250-euros",
+      "action": "301_contextual",
+      "destination": "/renting/menos-de-300-euros",
+      "reason": "presupuesto antiguo; tramo vigente más próximo",
+      "clicks": "5",
+      "impressions": "68"
+    },
+    {
+      "url": "/renting-tesla.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "67"
+    },
+    {
+      "url": "/renting-fiat-zaragoza.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "65"
+    },
+    {
+      "url": "/renting-suv-menos-400.html",
+      "action": "301",
+      "destination": "/renting/suv",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "2",
+      "impressions": "63"
+    },
+    {
+      "url": "/renting-mercedes-cla.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz/cla",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "63"
+    },
+    {
+      "url": "/renting-jaecoo-5-bilbao.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/5",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "63"
+    },
+    {
+      "url": "/renting-mg-hs.html",
+      "action": "301_contextual",
+      "destination": "/renting/mg",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "60"
+    },
+    {
+      "url": "/renting-kia-bilbao.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "60"
+    },
+    {
+      "url": "/renting-hyundai-valencia.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "59"
+    },
+    {
+      "url": "/renting-renault-rafale.html",
+      "action": "301",
+      "destination": "/renting/renault/rafale",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "58"
+    },
+    {
+      "url": "/renting-hasta-300.html",
+      "action": "301",
+      "destination": "/renting/menos-de-300-euros",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "58"
+    },
+    {
+      "url": "/renting-mercedes-benz-glc-class.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "55"
+    },
+    {
+      "url": "/renting-leapmotor.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "54"
+    },
+    {
+      "url": "/renting-volkswagen-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/volkswagen",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "53"
+    },
+    {
+      "url": "/renting-honda-cr-v.html",
+      "action": "301",
+      "destination": "/renting/honda/cr-v",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "52"
+    },
+    {
+      "url": "/renting-kia-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "52"
+    },
+    {
+      "url": "/renting-200-300.html",
+      "action": "301_contextual",
+      "destination": "/renting/menos-de-300-euros",
+      "reason": "presupuesto antiguo; tramo vigente más próximo",
+      "clicks": "0",
+      "impressions": "51"
+    },
+    {
+      "url": "/renting-leapmotor-b10.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "2",
+      "impressions": "50"
+    },
+    {
+      "url": "/renting-volkswagen-t-cross.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "49"
+    },
+    {
+      "url": "/renting-bmw-x2.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "48"
+    },
+    {
+      "url": "/renting-mercedes-benz-gla.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz/gla",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "48"
+    },
+    {
+      "url": "/renting-peugeot-malaga.html",
+      "action": "301",
+      "destination": "/renting/peugeot",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "48"
+    },
+    {
+      "url": "/renting-seat-ateca.html",
+      "action": "301_contextual",
+      "destination": "/renting/seat",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "48"
+    },
+    {
+      "url": "/renting-volkswagen-malaga.html",
+      "action": "301",
+      "destination": "/renting/volkswagen",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "47"
+    },
+    {
+      "url": "/renting-cupra-formentor.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "46"
+    },
+    {
+      "url": "/renting-skoda-madrid.html",
+      "action": "301",
+      "destination": "/renting/skoda",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "46"
+    },
+    {
+      "url": "/renting-land.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "45"
+    },
+    {
+      "url": "/renting-toyota-rav4-plug-in.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "45"
+    },
+    {
+      "url": "/renting-peugeot-3008.html",
+      "action": "301_contextual",
+      "destination": "/renting/peugeot",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "44"
+    },
+    {
+      "url": "/renting-byd-seal-u-dm-i.html",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "44"
+    },
+    {
+      "url": "/renting-300-500.html",
+      "action": "301_contextual",
+      "destination": "/renting/menos-de-500-euros",
+      "reason": "presupuesto antiguo; tramo vigente más próximo",
+      "clicks": "0",
+      "impressions": "43"
+    },
+    {
+      "url": "/renting-nissan-madrid.html",
+      "action": "301",
+      "destination": "/renting/nissan",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "43"
+    },
+    {
+      "url": "/modelos/mg/zs",
+      "action": "301_contextual",
+      "destination": "/renting/mg",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "42"
+    },
+    {
+      "url": "/renting-lancia-ypsilon-madrid.html",
+      "action": "301",
+      "destination": "/renting/lancia/ypsilon",
+      "reason": "modelo activo equivalente",
+      "clicks": "3",
+      "impressions": "41"
+    },
+    {
+      "url": "/renting-renault-trafic.html",
+      "action": "301_contextual",
+      "destination": "/renting/renault",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "40"
+    },
+    {
+      "url": "/renting/volkswagen/t-roc",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "39"
+    },
+    {
+      "url": "/renting/renault/trafic-combi-diesel",
+      "action": "301_contextual",
+      "destination": "/renting/renault",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "39"
+    },
+    {
+      "url": "/renting-hyundai-bayon.html",
+      "action": "301_contextual",
+      "destination": "/renting/hyundai",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "39"
+    },
+    {
+      "url": "/renting-mercedes-benz-citan-furgon.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "39"
+    },
+    {
+      "url": "/coches/m-empresa-337",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "37"
+    },
+    {
+      "url": "/renting-kia-sportage.html",
+      "action": "301_contextual",
+      "destination": "/renting/kia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "37"
+    },
+    {
+      "url": "/renting-renault-arkana.html",
+      "action": "301_contextual",
+      "destination": "/renting/renault",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "36"
+    },
+    {
+      "url": "/renting-skoda-fabia.html",
+      "action": "301_contextual",
+      "destination": "/renting/skoda",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "36"
+    },
+    {
+      "url": "/renting-opel-crossland.html",
+      "action": "301_contextual",
+      "destination": "/renting/opel",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "36"
+    },
+    {
+      "url": "/renting-land-rover-range-rover-evoque.html",
+      "action": "301",
+      "destination": "/renting/electricos",
+      "reason": "motorización vigente equivalente",
+      "clicks": "0",
+      "impressions": "35"
+    },
+    {
+      "url": "/renting-seat-arona.html",
+      "action": "301_contextual",
+      "destination": "/renting/seat",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "35"
+    },
+    {
+      "url": "/renting-byd-dolphin-surf-madrid.html",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "34"
+    },
+    {
+      "url": "/renting-kia-sportage-malaga.html",
+      "action": "301_contextual",
+      "destination": "/renting/kia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "34"
+    },
+    {
+      "url": "/renting-kia-sportage-bilbao.html",
+      "action": "301_contextual",
+      "destination": "/renting/kia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "34"
+    },
+    {
+      "url": "/renting-mercedes-gle.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-mercedes-glc-class.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-audi-q5-sportback.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-volkswagen-golf.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-mercedes-glb.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz/glb",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-nissan-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/nissan",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-peugeot-barcelona.html",
+      "action": "301",
+      "destination": "/renting/peugeot",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/coches/m-particular-233",
+      "action": "301",
+      "destination": "/coches/skoda-octavia-combi-selection-2-0-tdi-150cv-dsg-7vel-150-cv-gasolina",
+      "reason": "ficha canónica del modelo activo",
+      "clicks": "0",
+      "impressions": "33"
+    },
+    {
+      "url": "/renting-kia-sorento.html",
+      "action": "301_contextual",
+      "destination": "/renting/kia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "32"
+    },
+    {
+      "url": "/coches/mercedes-benz-glc-glc-400-4matic-con-tecnologia-eq-489-cv-electrico",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "32"
+    },
+    {
+      "url": "/renting-cupra-terramar.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "32"
+    },
+    {
+      "url": "/renting-ford-transit-connect.html",
+      "action": "301_contextual",
+      "destination": "/renting/ford",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "32"
+    },
+    {
+      "url": "/coches/quadis-523377",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "32"
+    },
+    {
+      "url": "/renting-renault-trafic-furgon.html",
+      "action": "301_contextual",
+      "destination": "/renting/renault",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "31"
+    },
+    {
+      "url": "/renting-todoterreno.html",
+      "action": "301",
+      "destination": "/renting/suv",
+      "reason": "categoría vigente equivalente",
+      "clicks": "0",
+      "impressions": "31"
+    },
+    {
+      "url": "/renting-audi-a5.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "30"
+    },
+    {
+      "url": "/renting-bmw-x5.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "30"
+    },
+    {
+      "url": "/renting-toyota-madrid.html",
+      "action": "301",
+      "destination": "/renting/toyota",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "30"
+    },
+    {
+      "url": "/renting-mitsubishi.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "30"
+    },
+    {
+      "url": "/renting-toyota-yaris-cross-barcelona.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris-cross",
+      "reason": "modelo activo equivalente",
+      "clicks": "3",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting-ford-puma-5p-todoterreno.html",
+      "action": "301",
+      "destination": "/renting/suv",
+      "reason": "categoría vigente equivalente",
+      "clicks": "2",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting-bmw-ix1.html",
+      "action": "301",
+      "destination": "/renting/bmw/ix1",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting/mg/zs",
+      "action": "301_contextual",
+      "destination": "/renting/mg",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting-volvo-xc40-madrid.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting-hyundai-tucson-madrid.html",
+      "action": "301",
+      "destination": "/renting/hyundai/tucson",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/zaragoza",
+      "reason": "ciudad canónica existente",
+      "clicks": "0",
+      "impressions": "29"
+    },
+    {
+      "url": "/renting-dacia-duster-madrid.html",
+      "action": "301_contextual",
+      "destination": "/renting/dacia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "3",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-bmw-x3-20d-xdrive.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-coches-menos-500.html",
+      "action": "301",
+      "destination": "/renting/menos-de-500-euros",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "1",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-lexus-rx.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-audi-q5.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-fiat.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-toyota-rav4.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-berlina.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "28"
+    },
+    {
+      "url": "/coches/quadis-514005",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "28"
+    },
+    {
+      "url": "/renting-audi-a1-malaga.html",
+      "action": "301",
+      "destination": "/renting/audi/a1",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-toyota-yaris-madrid.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-mercedes-benz-vito.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-empresa.html",
+      "action": "301",
+      "destination": "/renting/empresas",
+      "reason": "perfil equivalente",
+      "clicks": "0",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-mercedes-a-class.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-lexus.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-opel-sevilla.html",
+      "action": "301",
+      "destination": "/renting/opel",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "27"
+    },
+    {
+      "url": "/renting-jaecoo-7-alicante.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/7",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "26"
+    },
+    {
+      "url": "/renting/byd/atto-2/sin-entrada",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "26"
+    },
+    {
+      "url": "/renting-mini-countryman.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "26"
+    },
+    {
+      "url": "/renting-volvo-xc60.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "26"
+    },
+    {
+      "url": "/renting-bmw-series-3.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "25"
+    },
+    {
+      "url": "/coches/bmw-ix1-edrive20-204-cv-electrico",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "25"
+    },
+    {
+      "url": "/renting-suv-menos-300.html",
+      "action": "301",
+      "destination": "/renting/suv",
+      "reason": "taxonomía o presupuesto equivalente",
+      "clicks": "0",
+      "impressions": "25"
+    },
+    {
+      "url": "/renting-opel-madrid.html",
+      "action": "301",
+      "destination": "/renting/opel",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "25"
+    },
+    {
+      "url": "/renting-bmw-520d.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "24"
+    },
+    {
+      "url": "/renting-volvo-xc90.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "0",
+      "impressions": "24"
+    },
+    {
+      "url": "/renting-volkswagen-taigo.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "24"
+    },
+    {
+      "url": "/renting/renault/espace",
+      "action": "301_contextual",
+      "destination": "/renting/renault",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "24"
+    },
+    {
+      "url": "/renting-peugeot-madrid.html",
+      "action": "301",
+      "destination": "/renting/peugeot",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "24"
+    },
+    {
+      "url": "/renting-volkswagen-t-roc-barcelona.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "23"
+    },
+    {
+      "url": "/renting-byd-dolphin-surf.html",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "23"
+    },
+    {
+      "url": "/renting-ford-ranger.html",
+      "action": "301_contextual",
+      "destination": "/renting/ford",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "22"
+    },
+    {
+      "url": "/renting-skoda-kodiaq.html",
+      "action": "301_contextual",
+      "destination": "/renting/skoda",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "22"
+    },
+    {
+      "url": "/renting-byd-dolphin-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "3",
+      "impressions": "21"
+    },
+    {
+      "url": "/renting-audi-a3.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "21"
+    },
+    {
+      "url": "/renting-fiat-panda.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "21"
+    },
+    {
+      "url": "/renting-mercedes-benz-a-class.html",
+      "action": "301_contextual",
+      "destination": "/renting/mercedes-benz",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "21"
+    },
+    {
+      "url": "/renting-mercedes-benz-cla.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz/cla",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "21"
+    },
+    {
+      "url": "/renting-opel-malaga.html",
+      "action": "301",
+      "destination": "/renting/opel",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "21"
+    },
+    {
+      "url": "/coches/quadis-521147",
+      "action": "301",
+      "destination": "/coches/audi-a1-sb-adrenalin-edition-30tfsi-116cv-stronic-116-cv-gasolina",
+      "reason": "ficha canónica del modelo activo",
+      "clicks": "0",
+      "impressions": "21"
+    },
+    {
+      "url": "/renting-ebro-s400-madrid.html",
+      "action": "301",
+      "destination": "/renting/ebro/s400",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "20"
+    },
+    {
+      "url": "/renting-opel-corsa-valencia.html",
+      "action": "301",
+      "destination": "/renting/opel/corsa",
+      "reason": "modelo activo equivalente",
+      "clicks": "0",
+      "impressions": "20"
+    },
+    {
+      "url": "/renting-honda.html",
+      "action": "301",
+      "destination": "/renting/honda",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "20"
+    },
+    {
+      "url": "/renting-citroen-berlingo-van.html",
+      "action": "301_contextual",
+      "destination": "/renting/citroen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "0",
+      "impressions": "20"
+    },
+    {
+      "url": "/renting-opel-valencia.html",
+      "action": "301",
+      "destination": "/renting/opel",
+      "reason": "marca activa equivalente",
+      "clicks": "0",
+      "impressions": "20"
+    },
+    {
+      "url": "/coches/m-autonomo-253",
+      "action": "301",
+      "destination": "/coches/toyota-proace-city-combi-l2-gx-plus-100-cv-0-cv-diesel",
+      "reason": "ficha canónica del modelo activo",
+      "clicks": "0",
+      "impressions": "20"
+    },
+    {
+      "url": "/renting-bmw-420i.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "19"
+    },
+    {
+      "url": "/coches/m-autonomo-336",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "19"
+    },
+    {
+      "url": "/renting-ds-7.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "18"
+    },
+    {
+      "url": "/renting-jaecoo-7-barcelona.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/7",
+      "reason": "modelo activo equivalente",
+      "clicks": "5",
+      "impressions": "17"
+    },
+    {
+      "url": "/renting-jeep-wrangler.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "17"
+    },
+    {
+      "url": "/renting-byd-seal-6-dm-i.html",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "16"
+    },
+    {
+      "url": "/renting-mercedes-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "16"
+    },
+    {
+      "url": "/renting-hibrido-suave.html",
+      "action": "301",
+      "destination": "/renting/hibridos",
+      "reason": "motorización vigente equivalente",
+      "clicks": "1",
+      "impressions": "16"
+    },
+    {
+      "url": "/renting-toyota-yaris-palma.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "15"
+    },
+    {
+      "url": "/renting-toyota-yaris-cross-palma.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris-cross",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "15"
+    },
+    {
+      "url": "/renting-audi-a1-barcelona.html",
+      "action": "301",
+      "destination": "/renting/audi/a1",
+      "reason": "modelo activo equivalente",
+      "clicks": "3",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-volkswagen-t-roc-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-volkswagen-t-roc-sevilla.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-bmw-malaga.html",
+      "action": "301",
+      "destination": "/renting/bmw",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-ford-explorer.html",
+      "action": "301_contextual",
+      "destination": "/renting/ford",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-toyota-hilux-madrid.html",
+      "action": "301",
+      "destination": "/renting/toyota/hilux",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-mini-barcelona.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "14"
+    },
+    {
+      "url": "/renting-toyota-yaris-cross-sevilla.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris-cross",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "13"
+    },
+    {
+      "url": "/renting-toyota-yaris-cross-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "13"
+    },
+    {
+      "url": "/renting-cupra-formentor-valencia.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "2",
+      "impressions": "13"
+    },
+    {
+      "url": "/renting-mini-aceman-e.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "13"
+    },
+    {
+      "url": "/renting-volkswagen-t-roc-madrid.html",
+      "action": "301_contextual",
+      "destination": "/renting/volkswagen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "3",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-omoda-5-malaga.html",
+      "action": "301",
+      "destination": "/renting/omoda/5",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-toyota-yaris-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-toyota-yaris-barcelona.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-toyota-proace-city-verso.html",
+      "action": "301_contextual",
+      "destination": "/renting/toyota",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-ford-kuga-madrid.html",
+      "action": "301",
+      "destination": "/renting/ford/kuga",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-audi-q3-sportback.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-opel-zafira.html",
+      "action": "301_contextual",
+      "destination": "/renting/opel",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "12"
+    },
+    {
+      "url": "/renting-byd-dolphin-palma.html",
+      "action": "301",
+      "destination": "/renting/byd/dolphin",
+      "reason": "modelo activo equivalente",
+      "clicks": "3",
+      "impressions": "11"
+    },
+    {
+      "url": "/renting-cupra-formentor-zaragoza.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "2",
+      "impressions": "11"
+    },
+    {
+      "url": "/renting-dacia-barcelona.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "2",
+      "impressions": "11"
+    },
+    {
+      "url": "/renting-byd-dolphin-barcelona.html",
+      "action": "301",
+      "destination": "/renting/byd/dolphin",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "11"
+    },
+    {
+      "url": "/renting-cupra-formentor-giron.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "11"
+    },
+    {
+      "url": "/renting-hyundai-kona-barcelona.html",
+      "action": "301",
+      "destination": "/renting/hyundai/kona",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "11"
+    },
+    {
+      "url": "/renting-jaecoo-5-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/jaecoo",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "10"
+    },
+    {
+      "url": "/renting-peugeot-rifter-valencia.html",
+      "action": "301",
+      "destination": "/renting/peugeot/rifter",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "10"
+    },
+    {
+      "url": "/renting-ebro-s400-barcelona.html",
+      "action": "301",
+      "destination": "/renting/ebro/s400",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "10"
+    },
+    {
+      "url": "/renting-kia-tarragona.html",
+      "action": "301",
+      "destination": "/renting/kia",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "10"
+    },
+    {
+      "url": "/renting-renault-captur-barcelona.html",
+      "action": "301",
+      "destination": "/renting/renault/captur",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "9"
+    },
+    {
+      "url": "/renting-byd-dolphin-malaga.html",
+      "action": "301",
+      "destination": "/renting/byd/dolphin",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "9"
+    },
+    {
+      "url": "/renting-citroen-berlingo-madrid.html",
+      "action": "301",
+      "destination": "/renting/citroen/berlingo",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "9"
+    },
+    {
+      "url": "/renting-peugeot-208-valencia.html",
+      "action": "301",
+      "destination": "/renting/peugeot/208",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "9"
+    },
+    {
+      "url": "/renting-dacia-murcia.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "9"
+    },
+    {
+      "url": "/renting-toyota-yaris-cross-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/toyota/yaris-cross",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "9"
+    },
+    {
+      "url": "/renting-opel-corsa-vigo.html",
+      "action": "301",
+      "destination": "/renting/opel/corsa",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "8"
+    },
+    {
+      "url": "/renting-bmw-120d.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "8"
+    },
+    {
+      "url": "/renting-mercedes-barcelona.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "8"
+    },
+    {
+      "url": "/renting-lynk-and-co-08.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "8"
+    },
+    {
+      "url": "/renting-bmw-serie-2.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "8"
+    },
+    {
+      "url": "/renting-renault-captur-valencia.html",
+      "action": "301",
+      "destination": "/renting/renault/captur",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-dacia-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "2",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-audi-q5-madrid.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-opel-corsa-barcelona.html",
+      "action": "301",
+      "destination": "/renting/opel/corsa",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-citroen-c4x.html",
+      "action": "301_contextual",
+      "destination": "/renting/citroen",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-volkswagen-murcia.html",
+      "action": "301",
+      "destination": "/renting/volkswagen",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-dacia-malaga.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-dacia-valladolid.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-renault-sevilla.html",
+      "action": "301",
+      "destination": "/renting/renault",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-mercedes-madrid.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "7"
+    },
+    {
+      "url": "/renting-toyota-hilux-murcia.html",
+      "action": "301",
+      "destination": "/renting/toyota/hilux",
+      "reason": "modelo activo equivalente",
+      "clicks": "3",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-seat-arona-murcia.html",
+      "action": "301_contextual",
+      "destination": "/renting/seat",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-audi-q3-valencia.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-dacia-duster-malaga.html",
+      "action": "301_contextual",
+      "destination": "/renting/dacia",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "2",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-renault-austral-valencia.html",
+      "action": "301",
+      "destination": "/renting/renault/austral",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-jaecoo-5-malaga.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/5",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-seat-ibiza-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/seat",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-renault-captur-madrid.html",
+      "action": "301",
+      "destination": "/renting/renault/captur",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-peugeot-valencia.html",
+      "action": "301",
+      "destination": "/renting/peugeot",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-byd-dolphin-surf-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/byd",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-peugeot-expert.html",
+      "action": "301_contextual",
+      "destination": "/renting/peugeot",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-skoda-karoq-palma.html",
+      "action": "301",
+      "destination": "/renting/skoda/karoq",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "6"
+    },
+    {
+      "url": "/renting-audi-a1-valencia.html",
+      "action": "301",
+      "destination": "/renting/audi/a1",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-ford-kuga-sevilla.html",
+      "action": "301",
+      "destination": "/renting/ford/kuga",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-citroen-berlingo-bilbao.html",
+      "action": "301",
+      "destination": "/renting/citroen/berlingo",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-nissan-juke-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/nissan/juke",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-audi-q3-palma.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-opel-frontera-palma.html",
+      "action": "301",
+      "destination": "/renting/opel/frontera",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-audi-q5-valencia.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-cupra-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-seat-arona-valencia.html",
+      "action": "301_contextual",
+      "destination": "/renting/seat",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-bmw-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/bmw",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-seat-arona-alicante.html",
+      "action": "301_contextual",
+      "destination": "/renting/seat",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-cupra-murcia.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-seat-ibiza-madrid.html",
+      "action": "301",
+      "destination": "/renting/seat/ibiza",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-dacia-alicante.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-ford-kuga-malaga.html",
+      "action": "301",
+      "destination": "/renting/ford/kuga",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-renault-symbioz-barcelona.html",
+      "action": "301",
+      "destination": "/renting/renault/symbioz",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-nissan-murcia.html",
+      "action": "301",
+      "destination": "/renting/nissan",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-audi-sevilla.html",
+      "action": "301",
+      "destination": "/renting/audi",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-renault-valladolid.html",
+      "action": "301",
+      "destination": "/renting/renault",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-bmw-sevilla.html",
+      "action": "301",
+      "destination": "/renting/bmw",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "5"
+    },
+    {
+      "url": "/renting-mini-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "3",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-jaecoo-7-malaga.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/7",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-dacia-sandero-murcia.html",
+      "action": "301",
+      "destination": "/renting/dacia/sandero",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-bmw-murcia.html",
+      "action": "301",
+      "destination": "/renting/bmw",
+      "reason": "marca activa equivalente",
+      "clicks": "2",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-ford-puma-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/ford/puma",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-skoda-kamiq-alicante.html",
+      "action": "301",
+      "destination": "/renting/skoda/kamiq",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-omoda-7-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/omoda",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-omoda-9-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/omoda",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-volvo-alicante.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-opel-frontera-murcia.html",
+      "action": "301",
+      "destination": "/renting/opel/frontera",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-audi-q3-lleida.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-hyundai-bilbao.html",
+      "action": "301",
+      "destination": "/renting/hyundai",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-mazda-cx-30-alicante.html",
+      "action": "301",
+      "destination": "/renting/mazda/cx-30",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-volkswagen-tiguan-barcelona.html",
+      "action": "301",
+      "destination": "/renting/volkswagen/tiguan",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-citroen-berlingo-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/citroen/berlingo",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-renault-austral-barcelona.html",
+      "action": "301",
+      "destination": "/renting/renault/austral",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-honda-madrid.html",
+      "action": "301",
+      "destination": "/renting/honda",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-mini-giron.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-dacia-giron.html",
+      "action": "301",
+      "destination": "/renting/dacia",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-cupra-tarragona.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-ford-tarragona.html",
+      "action": "301",
+      "destination": "/renting/ford",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-jaecoo-5-madrid.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/5",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-dacia-sandero-malaga.html",
+      "action": "301",
+      "destination": "/renting/dacia/sandero",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "4"
+    },
+    {
+      "url": "/renting-renault-captur-valladolid.html",
+      "action": "301",
+      "destination": "/renting/renault/captur",
+      "reason": "modelo activo equivalente",
+      "clicks": "2",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-bmw-bilbao.html",
+      "action": "301",
+      "destination": "/renting/bmw",
+      "reason": "marca activa equivalente",
+      "clicks": "2",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-audi-a1-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/audi/a1",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-ebro-s400-valencia.html",
+      "action": "301",
+      "destination": "/renting/ebro/s400",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-cupra-formentor-murcia.html",
+      "action": "301_contextual",
+      "destination": "/renting",
+      "reason": "entidad retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-peugeot-rifter-zaragoza.html",
+      "action": "301",
+      "destination": "/renting/peugeot/rifter",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-bmw-x1-alicante.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-omoda-5-palma.html",
+      "action": "301",
+      "destination": "/renting/omoda/5",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-mercedes-gla-valencia.html",
+      "action": "301",
+      "destination": "/renting/mercedes-benz/gla",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "3"
+    },
+    {
+      "url": "/renting-opel-corsa-alicante.html",
+      "action": "301",
+      "destination": "/renting/opel/corsa",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-ford-puma-bilbao.html",
+      "action": "301",
+      "destination": "/renting/ford/puma",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-nissan-qashqai-las-palmas.html",
+      "action": "301_contextual",
+      "destination": "/renting/nissan",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-nissan-qashqai-sevilla.html",
+      "action": "301",
+      "destination": "/renting/nissan/qashqai",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-bmw-x1-giron.html",
+      "action": "301_contextual",
+      "destination": "/renting/bmw",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-byd-valladolid.html",
+      "action": "301",
+      "destination": "/renting/byd",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-opel-grandland.html",
+      "action": "301_contextual",
+      "destination": "/renting/opel",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-jaecoo-5-murcia.html",
+      "action": "301",
+      "destination": "/renting/jaecoo/5",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/coches/skoda-kamiq-selection-1-0-tsi-115cv-dsg-115-cv-gasolina",
+      "action": "301_contextual",
+      "destination": "/coches",
+      "reason": "ficha retirada; catálogo activo",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-opel-frontera-barcelona.html",
+      "action": "301",
+      "destination": "/renting/opel/frontera",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-ford-sevilla.html",
+      "action": "301",
+      "destination": "/renting/ford",
+      "reason": "marca activa equivalente",
+      "clicks": "1",
+      "impressions": "2"
+    },
+    {
+      "url": "/renting-bmw-serie-1-palma.html",
+      "action": "301",
+      "destination": "/renting/bmw/serie-1",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "1"
+    },
+    {
+      "url": "/renting-hyundai-kona-lleida.html",
+      "action": "301",
+      "destination": "/renting/hyundai/kona",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "1"
+    },
+    {
+      "url": "/renting-mazda-cx-5-bilbao.html",
+      "action": "301",
+      "destination": "/renting/mazda/cx-5",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "1"
+    },
+    {
+      "url": "/renting-peugeot-rifter-valladolid.html",
+      "action": "301",
+      "destination": "/renting/peugeot/rifter",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "1"
+    },
+    {
+      "url": "/renting-audi-q5-alicante.html",
+      "action": "301_contextual",
+      "destination": "/renting/audi",
+      "reason": "modelo retirado; alternativas de la marca",
+      "clicks": "1",
+      "impressions": "1"
+    },
+    {
+      "url": "/renting-ebro-s400-gijon.html",
+      "action": "301",
+      "destination": "/renting/ebro/s400",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "1"
+    },
+    {
+      "url": "/renting-renault-symbioz-murcia.html",
+      "action": "301",
+      "destination": "/renting/renault/symbioz",
+      "reason": "modelo activo equivalente",
+      "clicks": "1",
+      "impressions": "1"
+    }
+  ]
+}

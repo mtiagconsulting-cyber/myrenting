@@ -1,0 +1,1354 @@
+[
+  {
+    "source": "/coches/bmw-ix1-edrive20-204-cv-electrico",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/m-autonomo-253",
+    "destination": "/coches/toyota-proace-city-combi-l2-gx-plus-100-cv-0-cv-diesel"
+  },
+  {
+    "source": "/coches/m-autonomo-336",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/m-empresa-337",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/m-empresa-340",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/m-particular-233",
+    "destination": "/coches/skoda-octavia-combi-selection-2-0-tdi-150cv-dsg-7vel-150-cv-gasolina"
+  },
+  {
+    "source": "/coches/mercedes-benz-glc-glc-400-4matic-con-tecnologia-eq-489-cv-electrico",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/quadis-514005",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/quadis-521147",
+    "destination": "/coches/audi-a1-sb-adrenalin-edition-30tfsi-116cv-stronic-116-cv-gasolina"
+  },
+  {
+    "source": "/coches/quadis-523377",
+    "destination": "/coches"
+  },
+  {
+    "source": "/coches/skoda-kamiq-selection-1-0-tsi-115cv-dsg-115-cv-gasolina",
+    "destination": "/coches"
+  },
+  {
+    "source": "/modelos/mg/zs",
+    "destination": "/renting/mg"
+  },
+  {
+    "source": "/modelos/volkswagen/t-roc",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-200-300.html",
+    "destination": "/renting/menos-de-300-euros"
+  },
+  {
+    "source": "/renting-300-500.html",
+    "destination": "/renting/menos-de-500-euros"
+  },
+  {
+    "source": "/renting-audi-a1-barcelona.html",
+    "destination": "/renting/audi/a1"
+  },
+  {
+    "source": "/renting-audi-a1-malaga.html",
+    "destination": "/renting/audi/a1"
+  },
+  {
+    "source": "/renting-audi-a1-valencia.html",
+    "destination": "/renting/audi/a1"
+  },
+  {
+    "source": "/renting-audi-a1-zaragoza.html",
+    "destination": "/renting/audi/a1"
+  },
+  {
+    "source": "/renting-audi-a1.html",
+    "destination": "/renting/audi/a1"
+  },
+  {
+    "source": "/renting-audi-a3.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-a4.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-a5.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q3-lleida.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q3-palma.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q3-sportback.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q3-valencia.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q3.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q5-alicante.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q5-madrid.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q5-sportback.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q5-valencia.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q5.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-q8.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-audi-sevilla.html",
+    "destination": "/renting/audi"
+  },
+  {
+    "source": "/renting-autonomo.html",
+    "destination": "/renting/autonomos"
+  },
+  {
+    "source": "/renting-barato.html",
+    "destination": "/renting/baratos"
+  },
+  {
+    "source": "/renting-barcelona.html",
+    "destination": "/renting/barcelona"
+  },
+  {
+    "source": "/renting-berlina.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-bilbao.html",
+    "destination": "/renting/bilbao"
+  },
+  {
+    "source": "/renting-bmw-120d.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-420i.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-520d.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-bilbao.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-ix1.html",
+    "destination": "/renting/bmw/ix1"
+  },
+  {
+    "source": "/renting-bmw-malaga.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-murcia.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-serie-1-palma.html",
+    "destination": "/renting/bmw/serie-1"
+  },
+  {
+    "source": "/renting-bmw-serie-2.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-series-3.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-sevilla.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-x1-alicante.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-x1-giron.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-x2.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-x3-20d-xdrive.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-x3.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-x5.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-bmw-zaragoza.html",
+    "destination": "/renting/bmw"
+  },
+  {
+    "source": "/renting-byd-dolphin-barcelona.html",
+    "destination": "/renting/byd/dolphin"
+  },
+  {
+    "source": "/renting-byd-dolphin-las-palmas.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-byd-dolphin-malaga.html",
+    "destination": "/renting/byd/dolphin"
+  },
+  {
+    "source": "/renting-byd-dolphin-palma.html",
+    "destination": "/renting/byd/dolphin"
+  },
+  {
+    "source": "/renting-byd-dolphin-surf-las-palmas.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-byd-dolphin-surf-madrid.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-byd-dolphin-surf.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-byd-seal-6-dm-i.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-byd-seal-u-dm-i.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-byd-valladolid.html",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting-citroen-berlingo-bilbao.html",
+    "destination": "/renting/citroen/berlingo"
+  },
+  {
+    "source": "/renting-citroen-berlingo-madrid.html",
+    "destination": "/renting/citroen/berlingo"
+  },
+  {
+    "source": "/renting-citroen-berlingo-van.html",
+    "destination": "/renting/citroen"
+  },
+  {
+    "source": "/renting-citroen-berlingo-zaragoza.html",
+    "destination": "/renting/citroen/berlingo"
+  },
+  {
+    "source": "/renting-citroen-c3-aircross.html",
+    "destination": "/renting/citroen"
+  },
+  {
+    "source": "/renting-citroen-c4x.html",
+    "destination": "/renting/citroen"
+  },
+  {
+    "source": "/renting-coches-menos-350.html",
+    "destination": "/renting/menos-de-400-euros"
+  },
+  {
+    "source": "/renting-coches-menos-500.html",
+    "destination": "/renting/menos-de-500-euros"
+  },
+  {
+    "source": "/renting-cupra-formentor-giron.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-formentor-murcia.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-formentor-valencia.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-formentor-zaragoza.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-formentor.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-las-palmas.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-murcia.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-tarragona.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra-terramar.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-cupra.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-dacia-alicante.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-barcelona.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-duster-madrid.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-duster-malaga.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-duster.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-giron.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-malaga.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-murcia.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-sandero-malaga.html",
+    "destination": "/renting/dacia/sandero"
+  },
+  {
+    "source": "/renting-dacia-sandero-murcia.html",
+    "destination": "/renting/dacia/sandero"
+  },
+  {
+    "source": "/renting-dacia-valladolid.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia-zaragoza.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-dacia.html",
+    "destination": "/renting/dacia"
+  },
+  {
+    "source": "/renting-ds-7.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-ebro-s400-barcelona.html",
+    "destination": "/renting/ebro/s400"
+  },
+  {
+    "source": "/renting-ebro-s400-gijon.html",
+    "destination": "/renting/ebro/s400"
+  },
+  {
+    "source": "/renting-ebro-s400-madrid.html",
+    "destination": "/renting/ebro/s400"
+  },
+  {
+    "source": "/renting-ebro-s400-valencia.html",
+    "destination": "/renting/ebro/s400"
+  },
+  {
+    "source": "/renting-electrico-menos-400.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-electrico-puro.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-electrico.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-empresa.html",
+    "destination": "/renting/empresas"
+  },
+  {
+    "source": "/renting-fiat-500.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-fiat-doblo.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-fiat-panda.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-fiat-zaragoza.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-fiat.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-ford-explorer.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-ford-kuga-madrid.html",
+    "destination": "/renting/ford/kuga"
+  },
+  {
+    "source": "/renting-ford-kuga-malaga.html",
+    "destination": "/renting/ford/kuga"
+  },
+  {
+    "source": "/renting-ford-kuga-sevilla.html",
+    "destination": "/renting/ford/kuga"
+  },
+  {
+    "source": "/renting-ford-kuga.html",
+    "destination": "/renting/ford/kuga"
+  },
+  {
+    "source": "/renting-ford-malaga.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-ford-puma-5p-todoterreno.html",
+    "destination": "/renting/suv"
+  },
+  {
+    "source": "/renting-ford-puma-bilbao.html",
+    "destination": "/renting/ford/puma"
+  },
+  {
+    "source": "/renting-ford-puma-zaragoza.html",
+    "destination": "/renting/ford/puma"
+  },
+  {
+    "source": "/renting-ford-ranger.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-ford-sevilla.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-ford-tarragona.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-ford-transit-connect.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-ford.html",
+    "destination": "/renting/ford"
+  },
+  {
+    "source": "/renting-hasta-250.html",
+    "destination": "/renting/menos-de-300-euros"
+  },
+  {
+    "source": "/renting-hasta-300.html",
+    "destination": "/renting/menos-de-300-euros"
+  },
+  {
+    "source": "/renting-hasta-400.html",
+    "destination": "/renting/menos-de-400-euros"
+  },
+  {
+    "source": "/renting-hibrido-enchufable.html",
+    "destination": "/renting/hibridos-enchufables"
+  },
+  {
+    "source": "/renting-hibrido-menos-350.html",
+    "destination": "/renting/hibridos"
+  },
+  {
+    "source": "/renting-hibrido-suave.html",
+    "destination": "/renting/hibridos"
+  },
+  {
+    "source": "/renting-hibrido.html",
+    "destination": "/renting/hibridos"
+  },
+  {
+    "source": "/renting-honda-cr-v.html",
+    "destination": "/renting/honda/cr-v"
+  },
+  {
+    "source": "/renting-honda-madrid.html",
+    "destination": "/renting/honda"
+  },
+  {
+    "source": "/renting-honda-valencia.html",
+    "destination": "/renting/honda"
+  },
+  {
+    "source": "/renting-honda.html",
+    "destination": "/renting/honda"
+  },
+  {
+    "source": "/renting-hyundai-barcelona.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-bayon.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-bilbao.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-kona-barcelona.html",
+    "destination": "/renting/hyundai/kona"
+  },
+  {
+    "source": "/renting-hyundai-kona-lleida.html",
+    "destination": "/renting/hyundai/kona"
+  },
+  {
+    "source": "/renting-hyundai-kona.html",
+    "destination": "/renting/hyundai/kona"
+  },
+  {
+    "source": "/renting-hyundai-madrid.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-malaga.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-santa-fe.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-sevilla.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai-tucson-madrid.html",
+    "destination": "/renting/hyundai/tucson"
+  },
+  {
+    "source": "/renting-hyundai-valencia.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-hyundai.html",
+    "destination": "/renting/hyundai"
+  },
+  {
+    "source": "/renting-jaecoo-5-bilbao.html",
+    "destination": "/renting/jaecoo/5"
+  },
+  {
+    "source": "/renting-jaecoo-5-las-palmas.html",
+    "destination": "/renting/jaecoo"
+  },
+  {
+    "source": "/renting-jaecoo-5-madrid.html",
+    "destination": "/renting/jaecoo/5"
+  },
+  {
+    "source": "/renting-jaecoo-5-malaga.html",
+    "destination": "/renting/jaecoo/5"
+  },
+  {
+    "source": "/renting-jaecoo-5-murcia.html",
+    "destination": "/renting/jaecoo/5"
+  },
+  {
+    "source": "/renting-jaecoo-7-alicante.html",
+    "destination": "/renting/jaecoo/7"
+  },
+  {
+    "source": "/renting-jaecoo-7-barcelona.html",
+    "destination": "/renting/jaecoo/7"
+  },
+  {
+    "source": "/renting-jaecoo-7-malaga.html",
+    "destination": "/renting/jaecoo/7"
+  },
+  {
+    "source": "/renting-jeep-wrangler.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-jeep.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-kia-barcelona.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-bilbao.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-ev3.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-kia-madrid.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-malaga.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-sevilla.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-sorento.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-sportage-bilbao.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-sportage-malaga.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-sportage.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-tarragona.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-valencia.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-xceed.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-kia-zaragoza.html",
+    "destination": "/renting/kia"
+  },
+  {
+    "source": "/renting-lancia-ypsilon-madrid.html",
+    "destination": "/renting/lancia/ypsilon"
+  },
+  {
+    "source": "/renting-land-rover-defender.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-land-rover-range-rover-evoque.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-land-rover-range-rover-sport.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-land.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-leapmotor-b10.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-leapmotor.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-lexus-rx.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-lexus.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-lynk-and-co-08.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-madrid.html",
+    "destination": "/renting/madrid"
+  },
+  {
+    "source": "/renting-malaga.html",
+    "destination": "/renting/malaga"
+  },
+  {
+    "source": "/renting-mazda-barcelona.html",
+    "destination": "/renting/mazda"
+  },
+  {
+    "source": "/renting-mazda-cx-30-alicante.html",
+    "destination": "/renting/mazda/cx-30"
+  },
+  {
+    "source": "/renting-mazda-cx-30.html",
+    "destination": "/renting/mazda/cx-30"
+  },
+  {
+    "source": "/renting-mazda-cx-5-bilbao.html",
+    "destination": "/renting/mazda/cx-5"
+  },
+  {
+    "source": "/renting-mazda-madrid.html",
+    "destination": "/renting/mazda"
+  },
+  {
+    "source": "/renting-mazda-malaga.html",
+    "destination": "/renting/mazda"
+  },
+  {
+    "source": "/renting-mazda-sevilla.html",
+    "destination": "/renting/mazda"
+  },
+  {
+    "source": "/renting-menos-200.html",
+    "destination": "/renting/menos-de-300-euros"
+  },
+  {
+    "source": "/renting-mercedes-a-class.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-barcelona.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-benz-a-class.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-benz-citan-furgon.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-benz-cla.html",
+    "destination": "/renting/mercedes-benz/cla"
+  },
+  {
+    "source": "/renting-mercedes-benz-gla.html",
+    "destination": "/renting/mercedes-benz/gla"
+  },
+  {
+    "source": "/renting-mercedes-benz-glc-class.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-benz-vito.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-cla.html",
+    "destination": "/renting/mercedes-benz/cla"
+  },
+  {
+    "source": "/renting-mercedes-gla-valencia.html",
+    "destination": "/renting/mercedes-benz/gla"
+  },
+  {
+    "source": "/renting-mercedes-glb.html",
+    "destination": "/renting/mercedes-benz/glb"
+  },
+  {
+    "source": "/renting-mercedes-glc-class.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-gle.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-madrid.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mercedes-zaragoza.html",
+    "destination": "/renting/mercedes-benz"
+  },
+  {
+    "source": "/renting-mg-hs.html",
+    "destination": "/renting/mg"
+  },
+  {
+    "source": "/renting-mini-aceman-e.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-mini-barcelona.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-mini-cooper-c.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-mini-countryman.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-mini-giron.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-mini-las-palmas.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-mitsubishi.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-murcia.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-nissan-barcelona.html",
+    "destination": "/renting/nissan"
+  },
+  {
+    "source": "/renting-nissan-juke-zaragoza.html",
+    "destination": "/renting/nissan/juke"
+  },
+  {
+    "source": "/renting-nissan-juke.html",
+    "destination": "/renting/nissan/juke"
+  },
+  {
+    "source": "/renting-nissan-madrid.html",
+    "destination": "/renting/nissan"
+  },
+  {
+    "source": "/renting-nissan-malaga.html",
+    "destination": "/renting/nissan"
+  },
+  {
+    "source": "/renting-nissan-murcia.html",
+    "destination": "/renting/nissan"
+  },
+  {
+    "source": "/renting-nissan-qashqai-las-palmas.html",
+    "destination": "/renting/nissan"
+  },
+  {
+    "source": "/renting-nissan-qashqai-sevilla.html",
+    "destination": "/renting/nissan/qashqai"
+  },
+  {
+    "source": "/renting-nissan-zaragoza.html",
+    "destination": "/renting/nissan"
+  },
+  {
+    "source": "/renting-omoda-5-malaga.html",
+    "destination": "/renting/omoda/5"
+  },
+  {
+    "source": "/renting-omoda-5-palma.html",
+    "destination": "/renting/omoda/5"
+  },
+  {
+    "source": "/renting-omoda-7-las-palmas.html",
+    "destination": "/renting/omoda"
+  },
+  {
+    "source": "/renting-omoda-9-las-palmas.html",
+    "destination": "/renting/omoda"
+  },
+  {
+    "source": "/renting-opel-corsa-alicante.html",
+    "destination": "/renting/opel/corsa"
+  },
+  {
+    "source": "/renting-opel-corsa-barcelona.html",
+    "destination": "/renting/opel/corsa"
+  },
+  {
+    "source": "/renting-opel-corsa-valencia.html",
+    "destination": "/renting/opel/corsa"
+  },
+  {
+    "source": "/renting-opel-corsa-vigo.html",
+    "destination": "/renting/opel/corsa"
+  },
+  {
+    "source": "/renting-opel-crossland.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-opel-frontera-barcelona.html",
+    "destination": "/renting/opel/frontera"
+  },
+  {
+    "source": "/renting-opel-frontera-murcia.html",
+    "destination": "/renting/opel/frontera"
+  },
+  {
+    "source": "/renting-opel-frontera-palma.html",
+    "destination": "/renting/opel/frontera"
+  },
+  {
+    "source": "/renting-opel-grandland.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-opel-madrid.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-opel-malaga.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-opel-sevilla.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-opel-valencia.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-opel-zafira.html",
+    "destination": "/renting/opel"
+  },
+  {
+    "source": "/renting-peugeot-208-valencia.html",
+    "destination": "/renting/peugeot/208"
+  },
+  {
+    "source": "/renting-peugeot-3008.html",
+    "destination": "/renting/peugeot"
+  },
+  {
+    "source": "/renting-peugeot-barcelona.html",
+    "destination": "/renting/peugeot"
+  },
+  {
+    "source": "/renting-peugeot-expert.html",
+    "destination": "/renting/peugeot"
+  },
+  {
+    "source": "/renting-peugeot-madrid.html",
+    "destination": "/renting/peugeot"
+  },
+  {
+    "source": "/renting-peugeot-malaga.html",
+    "destination": "/renting/peugeot"
+  },
+  {
+    "source": "/renting-peugeot-rifter-valencia.html",
+    "destination": "/renting/peugeot/rifter"
+  },
+  {
+    "source": "/renting-peugeot-rifter-valladolid.html",
+    "destination": "/renting/peugeot/rifter"
+  },
+  {
+    "source": "/renting-peugeot-rifter-zaragoza.html",
+    "destination": "/renting/peugeot/rifter"
+  },
+  {
+    "source": "/renting-peugeot-valencia.html",
+    "destination": "/renting/peugeot"
+  },
+  {
+    "source": "/renting-renault-arkana.html",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting-renault-austral-barcelona.html",
+    "destination": "/renting/renault/austral"
+  },
+  {
+    "source": "/renting-renault-austral-valencia.html",
+    "destination": "/renting/renault/austral"
+  },
+  {
+    "source": "/renting-renault-captur-barcelona.html",
+    "destination": "/renting/renault/captur"
+  },
+  {
+    "source": "/renting-renault-captur-madrid.html",
+    "destination": "/renting/renault/captur"
+  },
+  {
+    "source": "/renting-renault-captur-valencia.html",
+    "destination": "/renting/renault/captur"
+  },
+  {
+    "source": "/renting-renault-captur-valladolid.html",
+    "destination": "/renting/renault/captur"
+  },
+  {
+    "source": "/renting-renault-megane.html",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting-renault-rafale.html",
+    "destination": "/renting/renault/rafale"
+  },
+  {
+    "source": "/renting-renault-sevilla.html",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting-renault-symbioz-barcelona.html",
+    "destination": "/renting/renault/symbioz"
+  },
+  {
+    "source": "/renting-renault-symbioz-murcia.html",
+    "destination": "/renting/renault/symbioz"
+  },
+  {
+    "source": "/renting-renault-trafic-furgon.html",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting-renault-trafic.html",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting-renault-valladolid.html",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting-seat-arona-alicante.html",
+    "destination": "/renting/seat"
+  },
+  {
+    "source": "/renting-seat-arona-murcia.html",
+    "destination": "/renting/seat"
+  },
+  {
+    "source": "/renting-seat-arona-valencia.html",
+    "destination": "/renting/seat"
+  },
+  {
+    "source": "/renting-seat-arona.html",
+    "destination": "/renting/seat"
+  },
+  {
+    "source": "/renting-seat-ateca.html",
+    "destination": "/renting/seat"
+  },
+  {
+    "source": "/renting-seat-ibiza-las-palmas.html",
+    "destination": "/renting/seat"
+  },
+  {
+    "source": "/renting-seat-ibiza-madrid.html",
+    "destination": "/renting/seat/ibiza"
+  },
+  {
+    "source": "/renting-skoda-fabia.html",
+    "destination": "/renting/skoda"
+  },
+  {
+    "source": "/renting-skoda-kamiq-alicante.html",
+    "destination": "/renting/skoda/kamiq"
+  },
+  {
+    "source": "/renting-skoda-karoq-palma.html",
+    "destination": "/renting/skoda/karoq"
+  },
+  {
+    "source": "/renting-skoda-kodiaq.html",
+    "destination": "/renting/skoda"
+  },
+  {
+    "source": "/renting-skoda-madrid.html",
+    "destination": "/renting/skoda"
+  },
+  {
+    "source": "/renting-suv-menos-300.html",
+    "destination": "/renting/suv"
+  },
+  {
+    "source": "/renting-suv-menos-400.html",
+    "destination": "/renting/suv"
+  },
+  {
+    "source": "/renting-tesla-model-3.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-tesla.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-todoterreno.html",
+    "destination": "/renting/suv"
+  },
+  {
+    "source": "/renting-toyota-aygo-x-cross.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-corolla.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-hilux-madrid.html",
+    "destination": "/renting/toyota/hilux"
+  },
+  {
+    "source": "/renting-toyota-hilux-murcia.html",
+    "destination": "/renting/toyota/hilux"
+  },
+  {
+    "source": "/renting-toyota-hilux-sevilla.html",
+    "destination": "/renting/toyota/hilux"
+  },
+  {
+    "source": "/renting-toyota-madrid.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-proace-city-verso.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-proace-ev-van.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-toyota-proace-verso-ev.html",
+    "destination": "/renting/electricos"
+  },
+  {
+    "source": "/renting-toyota-rav4-plug-in.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-rav4.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-sevilla.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-yaris-barcelona.html",
+    "destination": "/renting/toyota/yaris"
+  },
+  {
+    "source": "/renting-toyota-yaris-cross-barcelona.html",
+    "destination": "/renting/toyota/yaris-cross"
+  },
+  {
+    "source": "/renting-toyota-yaris-cross-las-palmas.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-yaris-cross-palma.html",
+    "destination": "/renting/toyota/yaris-cross"
+  },
+  {
+    "source": "/renting-toyota-yaris-cross-sevilla.html",
+    "destination": "/renting/toyota/yaris-cross"
+  },
+  {
+    "source": "/renting-toyota-yaris-cross-zaragoza.html",
+    "destination": "/renting/toyota/yaris-cross"
+  },
+  {
+    "source": "/renting-toyota-yaris-las-palmas.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-toyota-yaris-madrid.html",
+    "destination": "/renting/toyota/yaris"
+  },
+  {
+    "source": "/renting-toyota-yaris-palma.html",
+    "destination": "/renting/toyota/yaris"
+  },
+  {
+    "source": "/renting-toyota-zaragoza.html",
+    "destination": "/renting/toyota"
+  },
+  {
+    "source": "/renting-valencia.html",
+    "destination": "/renting/valencia"
+  },
+  {
+    "source": "/renting-volkswagen-golf.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-malaga.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-murcia.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-t-cross.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-t-roc-barcelona.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-t-roc-las-palmas.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-t-roc-madrid.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-t-roc-sevilla.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-t-roc.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-taigo.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volkswagen-tiguan-barcelona.html",
+    "destination": "/renting/volkswagen/tiguan"
+  },
+  {
+    "source": "/renting-volkswagen-tiguan-madrid.html",
+    "destination": "/renting/volkswagen/tiguan"
+  },
+  {
+    "source": "/renting-volkswagen-zaragoza.html",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting-volvo-alicante.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-volvo-xc40-madrid.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-volvo-xc60.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-volvo-xc90.html",
+    "destination": "/renting"
+  },
+  {
+    "source": "/renting-zaragoza.html",
+    "destination": "/renting/zaragoza"
+  },
+  {
+    "source": "/renting/byd/atto-2/sin-entrada",
+    "destination": "/renting/byd"
+  },
+  {
+    "source": "/renting/menos-de-250-euros",
+    "destination": "/renting/menos-de-300-euros"
+  },
+  {
+    "source": "/renting/mg/zs",
+    "destination": "/renting/mg"
+  },
+  {
+    "source": "/renting/renault/espace",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting/renault/trafic-combi-diesel",
+    "destination": "/renting/renault"
+  },
+  {
+    "source": "/renting/volkswagen/t-roc",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting/volkswagen/t-roc/barato",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting/volkswagen/t-roc/entrega-inmediata",
+    "destination": "/renting/volkswagen"
+  },
+  {
+    "source": "/renting/volkswagen/t-roc/sin-entrada",
+    "destination": "/renting/volkswagen"
+  }
+]

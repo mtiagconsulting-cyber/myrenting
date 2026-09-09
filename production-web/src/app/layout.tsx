@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
   description: "Compara ofertas reales de renting por cuota, plazo, kilómetros, IVA y coberturas. Vehículos para particulares, autónomos y empresas en España.",
   applicationName: "MyRenting",
-  alternates: { canonical: "/" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   openGraph: { type: "website", locale: "es_ES", url: "/", siteName: "MyRenting", title: "Renting de coches con cuotas y condiciones claras | MyRenting", description: "Compara renting para particulares, autónomos y empresas por precio, plazo, kilómetros, IVA y servicios incluidos." },
   twitter: { card: "summary_large_image", title: "MyRenting — compara renting con datos claros", description: "Ofertas de renting separadas por perfil, cuota, plazo, kilómetros e IVA." },
