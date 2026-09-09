@@ -7,6 +7,7 @@ const readJson = async (path) => JSON.parse(await readFile(new URL(path, root), 
 const slugify = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const p0 = await readJson("src/data/p0-redirects.json");
+const p1 = await readJson("src/data/p1-redirects.json");
 const inventory = await readJson("src/data/imported-inventory.json");
 const configSource = await readFile(new URL("next.config.ts", root), "utf8");
 const middlewareSource = await readFile(new URL("src/middleware.ts", root), "utf8");
@@ -18,7 +19,7 @@ const notFoundSource = await readFile(new URL("src/app/not-found.tsx", root), "u
 
 const canonicalRoutes = new Set([
   "/renting", "/coches",
-  "/renting/baratos", "/renting/suv", "/renting/hibridos", "/renting/electricos", "/renting/hibridos-enchufables",
+  "/renting/baratos", "/renting/suv", "/renting/familiares", "/renting/furgonetas", "/renting/coches-pequenos", "/renting/gasolina", "/renting/diesel", "/renting/hibridos", "/renting/electricos", "/renting/hibridos-enchufables",
   "/renting/menos-de-300-euros", "/renting/menos-de-350-euros", "/renting/menos-de-400-euros", "/renting/menos-de-500-euros",
   "/renting/autonomos", "/renting/empresas", "/renting/particulares",
   ...["madrid", "barcelona", "valencia", "sevilla", "malaga", "zaragoza", "bilbao", "alicante"].map((city) => `/renting/${city}`),
@@ -44,10 +45,11 @@ for (const vehicle of inventory.vehicles) {
 for (const vehicle of representativeByModel.values()) canonicalRoutes.add(`/coches/${slugify(`${vehicle.brand}-${vehicle.model}-${vehicle.version}-${vehicle.power}-cv-${vehicle.fuel}`)}`);
 
 test("el lote P0 no contiene fuentes duplicadas ni cadenas", () => {
-  const sources = p0.map(({ source }) => source);
+  const redirects = [...p0, ...p1];
+  const sources = redirects.map(({ source }) => source);
   assert.equal(new Set(sources).size, sources.length);
   const sourceSet = new Set(sources);
-  for (const { source, destination } of p0) {
+  for (const { source, destination } of redirects) {
     assert.notEqual(source, destination);
     assert.ok(!sourceSet.has(destination), `${source} apunta a otra fuente: ${destination}`);
     assert.ok(!destination.includes("?"), `${source} conserva parámetros innecesarios`);
@@ -55,7 +57,7 @@ test("el lote P0 no contiene fuentes duplicadas ni cadenas", () => {
 });
 
 test("cada destino del lote P0 existe en las rutas o el inventario actuales", () => {
-  for (const { source, destination } of p0) assert.ok(canonicalRoutes.has(destination), `${source} -> ${destination} no existe`);
+  for (const { source, destination } of [...p0, ...p1]) assert.ok(canonicalRoutes.has(destination), `${source} -> ${destination} no existe`);
 });
 
 test("las redirecciones permanentes configuradas responden 301", () => {

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import legacyRedirects from "./src/data/legacy-redirects.json";
 import p0Redirects from "./src/data/p0-redirects.json";
+import p1Redirects from "./src/data/p1-redirects.json";
 import inventory from "./src/data/imported-inventory.json";
 
 function publicVehicleSlug(vehicle: { brand: string; model: string; version: string; power: number; fuel: string }) {
@@ -80,12 +81,12 @@ const nextConfig: NextConfig = {
       ["/combustibles/gasolina", "/renting/gasolina"], ["/combustibles/diesel", "/renting/diesel"], ["/combustibles/hibridos", "/renting/hibridos"], ["/combustibles/hibridos-enchufables", "/renting/hibridos-enchufables"], ["/combustibles/electricos", "/renting/electricos"],
     ].map(([source, destination]) => moved(source, destination));
     const p0Sources = new Set(p0Redirects.map(({ source }) => source));
+    const auditSources = new Set([...p0Sources, ...p1Redirects.map(({ source }) => source)]);
     const directLegacyRedirects = legacyRedirects.flatMap(({ source, destination }) => {
       const direct = directLegacyDestination(destination);
-      return direct && !p0Sources.has(source) ? [moved(source, direct)] : [];
+      return direct && !auditSources.has(source) ? [moved(source, direct)] : [];
     });
-    const directP0Redirects = p0Redirects.map(({ source, destination }) => moved(source, destination));
-    return [...directP0Redirects, ...directLegacyRedirects, ...vehicleRedirects, ...legacyProfileRedirects, ...brandRedirects, ...modelRedirects, ...oldLandingRedirects, ...taxonomyRedirects];
+    return [...directLegacyRedirects, ...vehicleRedirects, ...legacyProfileRedirects, ...brandRedirects, ...modelRedirects, ...oldLandingRedirects, ...taxonomyRedirects];
   },
 };
 
