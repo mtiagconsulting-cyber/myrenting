@@ -18,6 +18,7 @@ const legacyLandings: Record<string, string> = {
   "/renting-menos-500-euros": "/renting/menos-de-500-euros",
   "/renting-menos-600-euros": "/renting/menos-de-500-euros",
   "/renting-menos-700-euros": "/renting/menos-de-500-euros",
+  "/renting/skoda/fabia": "/renting/skoda",
 };
 
 function legacyDestination(pathname: string) {
