@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-26T08:55:35.578Z",
+  "generatedAt": "2026-09-09T06:59:41.261Z",
   "source": "fotos_organizadas.zip",
-  "vehicleCount": 217,
+  "vehicleCount": 213,
   "missing": [],
   "photos": {
     "veh-m-particular-372": {
@@ -187,22 +187,6 @@
       "trunk": "/vehicle-images/mrenting-omoda5-trunk.webp",
       "compare": "/vehicle-images/mrenting-omoda5-card.webp",
       "sourceFolder": "MRenting/OMODA5"
-    },
-    "veh-m-particular-338": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-particular-338-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-particular-338-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-particular-338-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-particular-338-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-particular-338-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Particular_338"
-    },
-    "veh-m-particular-335": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-particular-335-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-particular-335-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-particular-335-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-particular-335-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-particular-335-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Particular_335"
     },
     "veh-m-particular-328": {
       "hero": "/vehicle-images/mrenting-ebros400-particular-328-hero.webp",
@@ -620,22 +604,6 @@
       "compare": "/vehicle-images/mrenting-omoda5-card.webp",
       "sourceFolder": "MRenting/OMODA5"
     },
-    "veh-m-autonomo-339": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-autonomo-339-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Autonomo_339"
-    },
-    "veh-m-autonomo-336": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-autonomo-336-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Autonomo_336"
-    },
     "veh-m-autonomo-327": {
       "hero": "/vehicle-images/mrenting-ebros400-autonomo-327-hero.webp",
       "card": "/vehicle-images/mrenting-ebros400-autonomo-327-card.webp",
@@ -723,6 +691,14 @@
       "trunk": "/vehicle-images/mrenting-bydatto-trunk.webp",
       "compare": "/vehicle-images/mrenting-bydatto-card.webp",
       "sourceFolder": "MRenting/BYDATTO"
+    },
+    "veh-m-autonomo-345": {
+      "hero": "/vehicle-images/mrenting-volkswagentiguan-hero.webp",
+      "card": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
+      "interior": "/vehicle-images/mrenting-volkswagentiguan-interior.webp",
+      "trunk": "/vehicle-images/mrenting-volkswagentiguan-trunk.webp",
+      "compare": "/vehicle-images/mrenting-volkswagentiguan-card.webp",
+      "sourceFolder": "MRenting/VOLKSWAGENTIGUAN"
     },
     "veh-m-autonomo-403": {
       "hero": "/vehicle-images/mrenting-renaultaustral-hero.webp",
@@ -1092,22 +1068,6 @@
       "compare": "/vehicle-images/mrenting-omoda5-card.webp",
       "sourceFolder": "MRenting/OMODA5"
     },
-    "veh-m-empresa-340": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-empresa-340-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-empresa-340-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-empresa-340-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-empresa-340-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-empresa-340-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Empresa_340"
-    },
-    "veh-m-empresa-337": {
-      "hero": "/vehicle-images/mrenting-volkswagentroc-empresa-337-hero.webp",
-      "card": "/vehicle-images/mrenting-volkswagentroc-empresa-337-card.webp",
-      "interior": "/vehicle-images/mrenting-volkswagentroc-empresa-337-interior.webp",
-      "trunk": "/vehicle-images/mrenting-volkswagentroc-empresa-337-trunk.webp",
-      "compare": "/vehicle-images/mrenting-volkswagentroc-empresa-337-card.webp",
-      "sourceFolder": "MRenting/VOLKSWAGENTROC_Empresa_337"
-    },
     "veh-m-empresa-167": {
       "hero": "/vehicle-images/mrenting-ebros400-empresa-167-hero.webp",
       "card": "/vehicle-images/mrenting-ebros400-empresa-167-card.webp",
@@ -1372,14 +1332,6 @@
       "compare": "/vehicle-images/quadis-opelcorsa-card.webp",
       "sourceFolder": "Quadis/OpelCorsa"
     },
-    "veh-quadis-520823": {
-      "hero": "/vehicle-images/quadis-skodafabia-hero.webp",
-      "card": "/vehicle-images/quadis-skodafabia-card.webp",
-      "interior": "/vehicle-images/quadis-skodafabia-interior.webp",
-      "trunk": "/vehicle-images/quadis-skodafabia-trunk.webp",
-      "compare": "/vehicle-images/quadis-skodafabia-card.webp",
-      "sourceFolder": "Quadis/SkodaFabia"
-    },
     "veh-quadis-521147": {
       "hero": "/vehicle-images/quadis-audia1-hero.webp",
       "card": "/vehicle-images/quadis-audia1-card.webp",
@@ -1412,6 +1364,14 @@
       "compare": "/vehicle-images/quadis-mg3-510378-card.webp",
       "sourceFolder": "Quadis/MG3_510378"
     },
+    "veh-quadis-505934": {
+      "hero": "/vehicle-images/quadis-nissanqashqai-hero.webp",
+      "card": "/vehicle-images/quadis-nissanqashqai-card.webp",
+      "interior": "/vehicle-images/quadis-nissanqashqai-interior.webp",
+      "trunk": "/vehicle-images/quadis-nissanqashqai-trunk.webp",
+      "compare": "/vehicle-images/quadis-nissanqashqai-card.webp",
+      "sourceFolder": "Quadis/NissanQashqai"
+    },
     "veh-quadis-522128": {
       "hero": "/vehicle-images/quadis-alfaromeojunior-hero.webp",
       "card": "/vehicle-images/quadis-alfaromeojunior-card.webp",
@@ -1427,14 +1387,6 @@
       "trunk": "/vehicle-images/quadis-mercedesbenzcitan-trunk.webp",
       "compare": "/vehicle-images/quadis-mercedesbenzcitan-card.webp",
       "sourceFolder": "Quadis/MercedesBenzCITAN"
-    },
-    "veh-quadis-522122": {
-      "hero": "/vehicle-images/quadis-bydatto2-hero.webp",
-      "card": "/vehicle-images/quadis-bydatto2-card.webp",
-      "interior": "/vehicle-images/quadis-bydatto2-interior.webp",
-      "trunk": "/vehicle-images/quadis-bydatto2-trunk.webp",
-      "compare": "/vehicle-images/quadis-bydatto2-card.webp",
-      "sourceFolder": "Quadis/BYDAtto2"
     },
     "veh-quadis-516821": {
       "hero": "/vehicle-images/quadis-nissanmicra-hero.webp",
@@ -1524,6 +1476,14 @@
       "compare": "/vehicle-images/quadis-mercedesbenzglc-516829-card.webp",
       "sourceFolder": "Quadis/MercedesBenzGLC_516829"
     },
+    "veh-quadis-524122": {
+      "hero": "/vehicle-images/quadis-maseratigrecale-hero.webp",
+      "card": "/vehicle-images/quadis-maseratigrecale-card.webp",
+      "interior": "/vehicle-images/quadis-maseratigrecale-interior.webp",
+      "trunk": "/vehicle-images/quadis-maseratigrecale-trunk.webp",
+      "compare": "/vehicle-images/quadis-maseratigrecale-card.webp",
+      "sourceFolder": "Quadis/MaseratiGrecale"
+    },
     "veh-quadis-510237": {
       "hero": "/vehicle-images/quadis-mercedesbenzglc-510237-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzglc-510237-card.webp",
@@ -1531,6 +1491,14 @@
       "trunk": "/vehicle-images/quadis-mercedesbenzglc-510237-trunk.webp",
       "compare": "/vehicle-images/quadis-mercedesbenzglc-510237-card.webp",
       "sourceFolder": "Quadis/MercedesBenzGLC_510237"
+    },
+    "veh-quadis-524124": {
+      "hero": "/vehicle-images/quadis-maseratigrecale-hero.webp",
+      "card": "/vehicle-images/quadis-maseratigrecale-card.webp",
+      "interior": "/vehicle-images/quadis-maseratigrecale-interior.webp",
+      "trunk": "/vehicle-images/quadis-maseratigrecale-trunk.webp",
+      "compare": "/vehicle-images/quadis-maseratigrecale-card.webp",
+      "sourceFolder": "Quadis/MaseratiGrecale"
     },
     "veh-quadis-499613": {
       "hero": "/vehicle-images/quadis-mercedesbenzglecoupe-499613-hero.webp",
@@ -1660,15 +1628,7 @@
       "compare": "/vehicle-images/generated-nissan-interstar-card.webp",
       "sourceFolder": "Generada/generated-nissan-interstar"
     },
-    "veh-quadis-paper-skoda-fabia-1-5-tsi-110kw-150cv-dsg-plus-13": {
-      "hero": "/vehicle-images/quadis-skodafabia-hero.webp",
-      "card": "/vehicle-images/quadis-skodafabia-card.webp",
-      "interior": "/vehicle-images/quadis-skodafabia-interior.webp",
-      "trunk": "/vehicle-images/quadis-skodafabia-trunk.webp",
-      "compare": "/vehicle-images/quadis-skodafabia-card.webp",
-      "sourceFolder": "Quadis/SkodaFabia"
-    },
-    "veh-quadis-paper-mercedes-benz-citan-110-cdi-70kw-furgon-base-cargo-14": {
+    "veh-quadis-paper-mercedes-benz-citan-110-cdi-70kw-furgon-base-cargo-13": {
       "hero": "/vehicle-images/quadis-mercedesbenzcitan-hero.webp",
       "card": "/vehicle-images/quadis-mercedesbenzcitan-card.webp",
       "interior": "/vehicle-images/quadis-mercedesbenzcitan-interior.webp",
@@ -1676,7 +1636,7 @@
       "compare": "/vehicle-images/quadis-mercedesbenzcitan-card.webp",
       "sourceFolder": "Quadis/MercedesBenzCITAN"
     },
-    "veh-quadis-paper-audi-a1-sportback-adrenalin-30-tfsi-85kw-s-tronic-15": {
+    "veh-quadis-paper-audi-a1-sportback-adrenalin-30-tfsi-85kw-s-tronic-14": {
       "hero": "/vehicle-images/quadis-audia1-hero.webp",
       "card": "/vehicle-images/quadis-audia1-card.webp",
       "interior": "/vehicle-images/quadis-audia1-interior.webp",
@@ -1684,7 +1644,7 @@
       "compare": "/vehicle-images/quadis-audia1-card.webp",
       "sourceFolder": "Quadis/AudiA1"
     },
-    "veh-quadis-paper-ebro-s800-1-5-tgdi-phev-luxury-e-cvt-gris-16": {
+    "veh-quadis-paper-ebro-s800-1-5-tgdi-phev-luxury-e-cvt-gris-15": {
       "hero": "/vehicle-images/quadis-ebros800-hero.webp",
       "card": "/vehicle-images/quadis-ebros800-card.webp",
       "interior": "/vehicle-images/quadis-ebros800-interior.webp",
@@ -1692,7 +1652,7 @@
       "compare": "/vehicle-images/quadis-ebros800-card.webp",
       "sourceFolder": "Quadis/EBROS800"
     },
-    "veh-quadis-paper-ebro-s800-1-5-tgdi-phev-luxury-e-cvt-blanco-17": {
+    "veh-quadis-paper-ebro-s800-1-5-tgdi-phev-luxury-e-cvt-blanco-16": {
       "hero": "/vehicle-images/quadis-ebros800-hero.webp",
       "card": "/vehicle-images/quadis-ebros800-card.webp",
       "interior": "/vehicle-images/quadis-ebros800-interior.webp",
@@ -1700,7 +1660,7 @@
       "compare": "/vehicle-images/quadis-ebros800-card.webp",
       "sourceFolder": "Quadis/EBROS800"
     },
-    "veh-quadis-paper-honda-cr-v-2-0-i-mmd-phev-4x2-elegance-tech-18": {
+    "veh-quadis-paper-honda-cr-v-2-0-i-mmd-phev-4x2-elegance-tech-17": {
       "hero": "/vehicle-images/quadis-hondacrv-hero.webp",
       "card": "/vehicle-images/quadis-hondacrv-card.webp",
       "interior": "/vehicle-images/quadis-hondacrv-interior.webp",
@@ -1739,6 +1699,383 @@
       "trunk": "/vehicle-images/generated-mercedes-benz-gla-200d-hero.webp",
       "compare": "/vehicle-images/generated-mercedes-benz-gla-200d-card.webp",
       "sourceFolder": "Generada/generated-mercedes-benz-gla-200d"
+    },
+    "veh-quadis-paper-peugeot-boxer-furgon-l2-h2-3-3t-diesel-103kw-140cv-22": {
+      "hero": "/vehicle-images/generated-peugeot-boxer-hero.webp",
+      "card": "/vehicle-images/generated-peugeot-boxer-card.webp",
+      "interior": "/vehicle-images/generated-peugeot-boxer-hero.webp",
+      "trunk": "/vehicle-images/generated-peugeot-boxer-hero.webp",
+      "compare": "/vehicle-images/generated-peugeot-boxer-card.webp",
+      "sourceFolder": "Generada/generated-peugeot-boxer"
+    },
+    "veh-marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs": {
+      "hero": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
+      "card": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
+      "compare": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
+      "interior": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
+      "trunk": "/vehicle-images/marcos-opel-corsa-1-2t-xhl-74kw-100cv-gs-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2301209_699dfc78c1cb0.jpeg"
+    },
+    "veh-marcos-dacia-sandero-stepway-expression-eco-g-120-auto": {
+      "hero": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
+      "card": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
+      "compare": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
+      "interior": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
+      "trunk": "/vehicle-images/marcos-dacia-sandero-stepway-expression-eco-g-120-auto-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2844298_6a2664d8f2bcd.jpeg"
+    },
+    "veh-marcos-hyundai-kona-1-0t-115cv-maxx": {
+      "hero": "/vehicle-images/marcos-hyundai-kona-1-0t-115cv-maxx-card.webp",
+      "card": "/vehicle-images/marcos-hyundai-kona-1-0t-115cv-maxx-card.webp",
+      "compare": "/vehicle-images/marcos-hyundai-kona-1-0t-115cv-maxx-card.webp",
+      "interior": "/vehicle-images/marcos-hyundai-kona-1-0t-115cv-maxx-card.webp",
+      "trunk": "/vehicle-images/marcos-hyundai-kona-1-0t-115cv-maxx-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2790476_69f219c957110.jpeg"
+    },
+    "veh-marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev": {
+      "hero": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
+      "card": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
+      "compare": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
+      "interior": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-puma-1-0-ecoboost-125cv-st-line-mhev-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1973003_677d20ea3d9b6.jpeg"
+    },
+    "veh-marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta": {
+      "hero": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
+      "card": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
+      "compare": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
+      "interior": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
+      "trunk": "/vehicle-images/marcos-nissan-juke-dig-t-84-kw-114-cv-6m-t-n-connecta-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2150384_68c02b3232b2a.jpeg"
+    },
+    "veh-marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept": {
+      "hero": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
+      "card": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
+      "compare": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
+      "interior": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
+      "trunk": "/vehicle-images/marcos-kia-niro-1-6-gdi-hev-101-5kw-138cv-concept-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1927316_6a86bbae6df20.jpeg"
+    },
+    "veh-marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual": {
+      "hero": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
+      "card": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
+      "compare": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
+      "interior": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-transit-courier-kombi-diesel-courier-kombi-1-5-ecoblue-75kw-trend-combi-75kw-5p-manual-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1939229_67f4e83ccc81d.jpeg"
+    },
+    "veh-marcos-peugeot-rifter-active-business-standard-bluehdi-100": {
+      "hero": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
+      "card": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
+      "compare": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
+      "interior": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
+      "trunk": "/vehicle-images/marcos-peugeot-rifter-active-business-standard-bluehdi-100-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2251166_695fae13b601c.jpeg"
+    },
+    "veh-marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line": {
+      "hero": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
+      "card": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
+      "compare": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
+      "interior": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
+      "trunk": "/vehicle-images/marcos-mazda-cx-30-2-5l-e-skyactiv-g-mhev-103kw-140cv-6at-fwd-centre-line-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2887111_6a3e452cea358.jpeg"
+    },
+    "veh-marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend": {
+      "hero": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
+      "card": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
+      "compare": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
+      "interior": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-transit-courier-van-1-5-ecoblue-75kw-trend-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2251093_695f8bac8b976.jpeg"
+    },
+    "veh-marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv": {
+      "hero": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
+      "card": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
+      "compare": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
+      "interior": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
+      "trunk": "/vehicle-images/marcos-renault-symbioz-evolution-e-tech-full-hybr-117kw-160cv-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2304100_6a266aadc398f.jpeg"
+    },
+    "veh-marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta": {
+      "hero": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
+      "card": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
+      "compare": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
+      "interior": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
+      "trunk": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-4x2-acenta-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2905076_6a5dcb2b17c94.jpeg"
+    },
+    "veh-marcos-citroen-berlingo-van-m-diesel-100cv-manual": {
+      "hero": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
+      "card": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
+      "compare": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
+      "interior": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
+      "trunk": "/vehicle-images/marcos-citroen-berlingo-van-m-diesel-100cv-manual-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2894715_6a4b677e511dc.jpeg"
+    },
+    "veh-marcos-seat-leon-2-0-tdi-85kw-style-xl": {
+      "hero": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
+      "card": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
+      "compare": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
+      "interior": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
+      "trunk": "/vehicle-images/marcos-seat-leon-2-0-tdi-85kw-style-xl-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2780629_69e72026d92c2.jpeg"
+    },
+    "veh-marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv": {
+      "hero": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
+      "card": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
+      "compare": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
+      "interior": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
+      "trunk": "/vehicle-images/marcos-renault-captur-techno-full-hybrid-e-tech-117-kw-160cv-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2827524_6a1d4f757ff2e.jpeg"
+    },
+    "veh-marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you": {
+      "hero": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
+      "card": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
+      "compare": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
+      "interior": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
+      "trunk": "/vehicle-images/marcos-citroen-berlingo-talla-m-bluehdi-100-s-s-you-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2043387_67f3ea6be4abf.jpeg"
+    },
+    "veh-marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd": {
+      "hero": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
+      "card": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
+      "compare": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
+      "interior": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-puma-puma-gen-e-43kwh-168cv-fwd-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2234648_6943627352733.jpeg"
+    },
+    "veh-marcos-honda-jazz-1-5-i-mmd-advance": {
+      "hero": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
+      "card": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
+      "compare": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
+      "interior": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
+      "trunk": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-advance-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884428_6a3a52a6ede8e.jpeg"
+    },
+    "veh-marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta": {
+      "hero": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
+      "card": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
+      "compare": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
+      "interior": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
+      "trunk": "/vehicle-images/marcos-nissan-qashqai-dig-t-117kw-158cv-mhev-cvt-acenta-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884543_6a3a6be631ad2.jpeg"
+    },
+    "veh-marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv": {
+      "hero": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
+      "card": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
+      "compare": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
+      "interior": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
+      "trunk": "/vehicle-images/marcos-alfa-romeo-alfa-romeo-junior-ibrida-108kw-145cv-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2044074_67f5107dba2cf.jpeg"
+    },
+    "veh-marcos-honda-jazz-1-5-i-mmd-crosstar": {
+      "hero": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
+      "card": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
+      "compare": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
+      "interior": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
+      "trunk": "/vehicle-images/marcos-honda-jazz-1-5-i-mmd-crosstar-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885759_6a3c404d61409.jpeg"
+    },
+    "veh-marcos-renault-austral-techno-mild-hybrid-110auto": {
+      "hero": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
+      "card": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
+      "compare": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
+      "interior": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
+      "trunk": "/vehicle-images/marcos-renault-austral-techno-mild-hybrid-110auto-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2827534_6a1d526597cf2.jpeg"
+    },
+    "veh-marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto": {
+      "hero": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
+      "card": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
+      "compare": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
+      "interior": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-fhev-132kw-auto-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2920907_6a7ef19a015f2.jpeg"
+    },
+    "veh-marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend": {
+      "hero": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
+      "card": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
+      "compare": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
+      "interior": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-transit-custom-van-2-0-ecoblue-100kw-280-l1-trend-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2800510_69fc5759be60d.jpeg"
+    },
+    "veh-marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line": {
+      "hero": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
+      "card": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
+      "compare": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
+      "interior": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
+      "trunk": "/vehicle-images/marcos-mazda-cx-5-2-5l-e-skyactiv-g-mhev-104-kw-141-cv-at-awd-centre-line-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2881163_6a38e3c1cafcd.jpeg"
+    },
+    "veh-marcos-renault-austral-evolution-e-tech-full-hybrid-147kw": {
+      "hero": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
+      "card": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
+      "compare": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
+      "interior": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
+      "trunk": "/vehicle-images/marcos-renault-austral-evolution-e-tech-full-hybrid-147kw-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2152691_68c405807019a.jpeg"
+    },
+    "veh-marcos-honda-hr-v-1-5-i-mmd-elegance-4x2": {
+      "hero": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
+      "card": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
+      "compare": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
+      "interior": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
+      "trunk": "/vehicle-images/marcos-honda-hr-v-1-5-i-mmd-elegance-4x2-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885996_6a3cc6eabeb74.jpeg"
+    },
+    "veh-marcos-bmw-serie-1-120": {
+      "hero": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
+      "card": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
+      "compare": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
+      "interior": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
+      "trunk": "/vehicle-images/marcos-bmw-serie-1-120-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2908258_6a63441d631f6.jpeg"
+    },
+    "veh-marcos-bmw-serie-1-120d": {
+      "hero": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
+      "card": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
+      "compare": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
+      "interior": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
+      "trunk": "/vehicle-images/marcos-bmw-serie-1-120d-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2908248_6a634085963ab.jpeg"
+    },
+    "veh-marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto": {
+      "hero": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
+      "card": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
+      "compare": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
+      "interior": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
+      "trunk": "/vehicle-images/marcos-ford-kuga-st-line-2-5-duratec-phev-178kw-auto-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2055150_68121d5aee73b.jpeg"
+    },
+    "veh-marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta": {
+      "hero": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
+      "card": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
+      "compare": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
+      "interior": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
+      "trunk": "/vehicle-images/marcos-nissan-primastar-2-0dci-96kw-130cv-l1h1-1t-acenta-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_1954000_67af0a1651f9c.jpeg"
+    },
+    "veh-marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv": {
+      "hero": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
+      "card": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
+      "compare": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
+      "interior": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
+      "trunk": "/vehicle-images/marcos-opel-vivaro-vivaro-1-5-bluehdi-88kw-120cv-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2028268_67d7e67098934.jpeg"
+    },
+    "veh-marcos-renault-rafale-techno-full-hybrid-e-tech-200cv-147kw": {
+      "hero": "/vehicle-images/marcos-renault-rafale-techno-full-hybrid-e-tech-200cv-147kw-card.webp",
+      "card": "/vehicle-images/marcos-renault-rafale-techno-full-hybrid-e-tech-200cv-147kw-card.webp",
+      "compare": "/vehicle-images/marcos-renault-rafale-techno-full-hybrid-e-tech-200cv-147kw-card.webp",
+      "interior": "/vehicle-images/marcos-renault-rafale-techno-full-hybrid-e-tech-200cv-147kw-card.webp",
+      "trunk": "/vehicle-images/marcos-renault-rafale-techno-full-hybrid-e-tech-200cv-147kw-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2893220_6a47755a45325.jpeg"
+    },
+    "veh-marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120": {
+      "hero": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
+      "card": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
+      "compare": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
+      "interior": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
+      "trunk": "/vehicle-images/marcos-opel-vivaro-vivaro-doble-cabina-plegable-1-5-bluehdi-120-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2178133_68f603cb774fd.jpeg"
+    },
+    "veh-marcos-honda-civic-2-0-i-mmd-sport-cvt": {
+      "hero": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
+      "card": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
+      "compare": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
+      "interior": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
+      "trunk": "/vehicle-images/marcos-honda-civic-2-0-i-mmd-sport-cvt-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2885756_6a3c3241d9363.jpeg"
+    },
+    "veh-marcos-kia-pv5-passenger-l2h1-long-range-plus": {
+      "hero": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
+      "card": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
+      "compare": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
+      "interior": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
+      "trunk": "/vehicle-images/marcos-kia-pv5-passenger-l2h1-long-range-plus-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917468_6a75bcb4dbd0f.jpeg"
+    },
+    "veh-marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh": {
+      "hero": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
+      "card": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
+      "compare": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
+      "interior": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
+      "trunk": "/vehicle-images/marcos-opel-combo-electric-cargo-electric-m-800kg-electrico-100kw-bateria-50kwh-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917438_6a75b7ef3f633.jpeg"
+    },
+    "veh-marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica": {
+      "hero": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
+      "card": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
+      "compare": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
+      "interior": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
+      "trunk": "/vehicle-images/marcos-citroen-e-berlingo-e-berlingo-van-m-carga-incrementada-electrico-100kw-50kwh-automatica-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2917414_6a75ae0ccb0a6.jpeg"
+    },
+    "veh-marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt": {
+      "hero": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
+      "card": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
+      "compare": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
+      "interior": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
+      "trunk": "/vehicle-images/marcos-honda-zr-v-2-0-i-mmd-4x2-advance-cvt-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2886067_6a3cebcc83fa6.jpeg"
+    },
+    "veh-marcos-bmw-ix1-edrive20": {
+      "hero": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
+      "card": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
+      "compare": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
+      "interior": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
+      "trunk": "/vehicle-images/marcos-bmw-ix1-edrive20-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2805036_6a02f51f399f4.jpeg"
+    },
+    "veh-marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance": {
+      "hero": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
+      "card": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
+      "compare": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
+      "interior": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
+      "trunk": "/vehicle-images/marcos-honda-cr-v-2-0-i-mmd-hev-4x2-elegance-card.webp",
+      "sourceFolder": "Marcos Automoción",
+      "sourceUrl": "https://d7hye3c1faq21.cloudfront.net/vehiculos/fotos/hd_43-144_2884465_6a3a6139f066d.jpeg"
     }
   }
 }

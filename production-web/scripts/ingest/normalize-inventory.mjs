@@ -7,7 +7,7 @@ const qCatalog = JSON.parse(await fs.readFile("outputs/quadis-catalog.json", "ut
 const slugify = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const fuel = (value="") => /enchuf/i.test(value) ? "Híbrido enchufable" : /híbr|mhev|hev/i.test(value) ? "Híbrido" : /diés|dies/i.test(value) ? "Diésel" : /eléct/i.test(value) ? "Eléctrico" : "Gasolina";
 const label = (value="") => /cero|^0$/i.test(value) ? "0" : /eco/i.test(value) ? "ECO" : "C";
-const body = (value="", model="") => /furg/i.test(value+model) ? "Furgoneta" : /suv|todoterreno/i.test(value) || /niro|qashqai|juke|mokka|grecale|gle|glc|zs|s800|cr-v/i.test(model) ? "SUV" : /berlina/i.test(value) ? "Berlina" : "Compacto";
+const body = (value="", model="") => /furg|boxer/i.test(value+model) ? "Furgoneta" : /suv|todoterreno/i.test(value) || /niro|qashqai|juke|mokka|grecale|gle|glc|zs|s800|cr-v/i.test(model) ? "SUV" : /berlina/i.test(value) ? "Berlina" : "Compacto";
 const availability = (value="") => /stock|inmediata|últimas/i.test(value) ? "Disponible" : /agosto|septiembre|octubre|días/i.test(value) ? "Entrega próxima" : "Consultar";
 const vehicleMap = new Map();
 const offers=[];

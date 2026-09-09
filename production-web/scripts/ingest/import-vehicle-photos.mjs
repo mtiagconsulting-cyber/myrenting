@@ -17,6 +17,7 @@ const folderRows=[...folders].map(([key,files])=>{const [provider,name]=key.spli
 const generatedPhotos={
   "veh-quadis-494501":"generated-mercedes-benz-gla-200d",
   "veh-quadis-paper-nissan-interstar-furgon-n1-l2h2-3-5t-dci-96kw-130cv-6m-t-fwd-acenta-12":"generated-nissan-interstar",
+  "veh-quadis-paper-peugeot-boxer-furgon-l2-h2-3-3t-diesel-103kw-140cv-22":"generated-peugeot-boxer",
   "veh-quadis-paper-mercedes-benz-gla-gla-200-d-amg-line-advanced-plus-ayvens":"generated-mercedes-benz-gla-200d",
 };
 
