@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useId, useState } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
 import { brands } from "@/data/vehicles";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 const fuels = ["Híbrido", "Híbrido enchufable", "Eléctrico", "Gasolina", "Diésel"];
 const bodies = ["SUV", "Compacto", "Berlina", "Furgoneta"];
@@ -22,6 +23,7 @@ export function Filters() {
     } else {
       params.delete(key);
     }
+    trackAnalyticsEvent("filter", { filter_name: key, filter_value: value || "cleared" });
     router.push(`/coches?${params.toString()}`, { scroll: false });
   }
 

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { buildFormSubmitPayload, buildLeadEvent, buildLeadMessage } from "../../src/lib/lead.ts";
 
 const contact = { name: "Ana", lastName: "García", phone: "600123123", email: "ana@example.com", city: "Madrid" };
@@ -22,4 +23,18 @@ assert.equal(payload["URL de la oferta"], "https://myrenting.es/coches/test");
 const event = buildLeadEvent("email", vehicle, offer);
 assert.deepEqual(event, { event: "generate_lead", lead_channel: "email", customer_type: "particular", vehicle_id: "vehicle-test", vehicle_name: "KIA NIRO", offer_id: "offer-test", monthly_price: 381, duration_months: 60, annual_kilometers: 15000, currency: "EUR" });
 
-console.log("Payload de email, mensaje de WhatsApp y evento de lead verificados.");
+const trackedSources = await Promise.all([
+  "../../src/components/vehicles/OfferConfigurator.tsx",
+  "../../src/components/vehicles/Catalogue.tsx",
+  "../../src/components/search/SearchEngine.tsx",
+  "../../src/components/search/Filters.tsx",
+  "../../src/components/analytics/OfferLink.tsx",
+  "../../src/lib/lead.ts",
+].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
+const trackedCode = trackedSources.join("\n");
+for (const trackedEvent of ["view_item", "view_item_list", "search", "filter", "cta_click", "form_start", "form_error", "form_submit", "generate_lead", "lead_recorded"]) {
+  assert.ok(trackedCode.includes(`\"${trackedEvent}\"`), `Falta instrumentar el evento ${trackedEvent}`);
+}
+assert.ok(!trackedCode.includes('"lead_validado"'), "No debe declararse un lead validado desde el navegador sin revisión comercial");
+
+console.log("Payloads y eventos del embudo de lead verificados.");

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
+import { OfferLink } from "@/components/analytics/OfferLink";
 import { Badge } from "@/components/ui/badge";
 import { FavoriteButton } from "@/components/vehicles/FavoriteButton";
 import type { Offer } from "@/types/offer";
@@ -44,9 +44,7 @@ export function VehicleCard({ vehicle, offer, compared = false, onCompare }: { v
 
         <div className="mt-4 flex min-h-5 items-center gap-2 text-[0.6875rem] font-semibold text-positive"><Check size={14} className="shrink-0" aria-hidden="true" />{offer.insurance && offer.maintenance ? "Seguro y mantenimiento incluidos" : "Consulta las coberturas de la oferta"}</div>
 
-        <Link href={`${vehiclePublicPath(vehicle)}?publico=${offer.audience}`} className="mt-auto flex min-h-11 items-center justify-between rounded-lg bg-ink px-4 text-sm font-bold text-white transition-colors hover:bg-copy">
-          Ver oferta y condiciones <ArrowRight size={16} aria-hidden="true" />
-        </Link>
+        <OfferLink href={`${vehiclePublicPath(vehicle)}?publico=${offer.audience}`} vehicle={vehicle} offer={offer} />
       </div>
     </article>
   );

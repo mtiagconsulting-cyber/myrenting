@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { ChevronDown, Search } from "lucide-react";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 const fieldClassName =
   "h-12 w-full appearance-none rounded-lg border border-line bg-surface px-3.5 pr-10 text-sm font-semibold text-ink outline-none transition-colors hover:border-slate-300 focus:border-brand";
@@ -23,6 +24,7 @@ export function SearchEngine({ brands }: { brands: string[] }) {
     if (kilometers) params.set("kilometros", kilometers);
     if (audience) params.set("publico", audience);
 
+    trackAnalyticsEvent("search", { search_type: "home_vehicle_search", brand: brand || "all", customer_type: audience || "all", max_budget: budget ? Number(budget) : null, annual_kilometers: kilometers ? Number(kilometers) : null });
     router.push(`/coches?${params.toString()}`);
   }
 

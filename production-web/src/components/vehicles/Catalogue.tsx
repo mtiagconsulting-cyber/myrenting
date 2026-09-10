@@ -9,6 +9,7 @@ import { VehicleGrid } from "@/components/vehicles/VehicleGrid";
 import { vehicleModelKey } from "@/lib/vehicle-groups";
 import type { Offer } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 type Item = { vehicle: Vehicle; offer: Offer; profileOffers?: Offer[] };
 
@@ -56,6 +57,9 @@ function FilteredCatalogue({ items }: { items: Item[] }) {
     });
   }, [items, params]);
   useEffect(() => setVisibleCount(24), [params]);
+  useEffect(() => {
+    trackAnalyticsEvent("view_item_list", { item_list_name: "vehicle_catalogue", result_count: filtered.length, active_filters: params.toString() });
+  }, [filtered.length, params]);
 
   function toggleCompare(vehicle: Vehicle) {
     setCompared((current) => current.some((item) => item.id === vehicle.id) ? current.filter((item) => item.id !== vehicle.id) : current.length < 2 ? [...current, vehicle] : [current[1], vehicle]);

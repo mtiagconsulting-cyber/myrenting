@@ -1,12 +1,13 @@
 "use client";
 
-import { useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { Check, CheckCircle2, Mail, MessageCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { Offer, OfferAudience } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
 import { buildFormSubmitPayload, buildLeadEvent, buildLeadMessage, type LeadChannel } from "@/lib/lead";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 const audienceLabel: Record<OfferAudience, string> = { particular: "Particular", autonomo: "Autónomo", empresa: "Empresa" };
 const fieldClass = "h-11 w-full rounded-lg border border-line bg-white px-3 text-sm font-semibold text-ink outline-none focus:border-brand";
@@ -25,6 +26,8 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
   const [sendMessage, setSendMessage] = useState("");
   const [leadReference, setLeadReference] = useState("");
   const [honey, setHoney] = useState("");
+  const formStarted = useRef(false);
+  const formErrorTracked = useRef(false);
   const selected = offers.find((offer) => offer.id === selectedId) ?? initialOffer;
   const audiences = useMemo(() => [...new Set(offers.map((offer) => offer.audience))], [offers]);
   const durations = useMemo(() => [...new Set(offers.filter((offer) => offer.audience === selected.audience).map((offer) => offer.duration))].sort((a, b) => a - b), [offers, selected.audience]);
@@ -38,12 +41,19 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     if (match) setSelectedId(match.id);
   }
 
+  useEffect(() => {
+    trackAnalyticsEvent("view_item", { vehicle_id: vehicle.id, vehicle_name: `${vehicle.brand} ${vehicle.model}`, offer_id: selected.id, customer_type: selected.audience, monthly_price: selected.monthlyPrice });
+  }, [vehicle.id, vehicle.brand, vehicle.model, selected.id, selected.audience, selected.monthlyPrice]);
+
+  function startForm() {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    trackAnalyticsEvent("form_start", { form_name: "vehicle_lead", vehicle_id: vehicle.id, offer_id: selected.id });
+  }
+
   function trackLead(channel: LeadChannel) {
-    const dataLayer = (window as typeof window & { dataLayer?: Array<Record<string, unknown>> }).dataLayer ?? [];
-    let attribution: Record<string, unknown> = {};
-    try { attribution = JSON.parse(window.sessionStorage.getItem("myrenting_attribution") ?? "{}"); } catch {}
-    dataLayer.push({ ...buildLeadEvent(channel, vehicle, selected), ...attribution });
-    (window as typeof window & { dataLayer?: Array<Record<string, unknown>> }).dataLayer = dataLayer;
+    const lead = buildLeadEvent(channel, vehicle, selected);
+    trackAnalyticsEvent(lead.event, lead);
   }
 
   async function openChannel(event: FormEvent<HTMLFormElement>) {
@@ -61,9 +71,10 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     try {
       const leadResponse = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ firstName: name, lastName, phone, email, city, customerType: selected.audience, vehicleId: vehicle.id, vehicleName: `${vehicle.brand} ${vehicle.model} ${vehicle.version}`, offerId: selected.id, provider: selected.provider, duration: selected.duration, kilometers: selected.kilometers, monthlyPrice: selected.monthlyPrice, priceIncludesVat: selected.priceIncludesVat, initialPayment: selected.initialPayment, channel, pageUrl: window.location.href, website: honey }) });
       const leadResult = await leadResponse.json().catch(() => null) as { reference?: string } | null;
-      if (leadResponse.ok && leadResult?.reference) { reference = leadResult.reference; setLeadReference(reference); }
+      if (leadResponse.ok && leadResult?.reference) { reference = leadResult.reference; setLeadReference(reference); trackAnalyticsEvent("lead_recorded", { lead_reference: reference, vehicle_id: vehicle.id, offer_id: selected.id, lead_channel: channel }); }
     } catch {}
     if (channel === "whatsapp") {
+      trackAnalyticsEvent("form_submit", { form_name: "vehicle_lead", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
       trackLead("whatsapp");
       window.location.href = `https://wa.me/34691766768?text=${encodeURIComponent(reference ? `${text}\nReferencia MyRenting: ${reference}` : text)}`;
       return;
@@ -79,10 +90,12 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
       });
       const result = await response.json().catch(() => null) as { success?: string | boolean; message?: string } | null;
       if (!response.ok || result?.success === false || result?.success === "false") throw new Error(result?.message || "No se pudo enviar la solicitud.");
+      trackAnalyticsEvent("form_submit", { form_name: "vehicle_lead", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
       trackLead("email");
       setSendState("sent");
       setSendMessage(reference ? `Solicitud enviada correctamente. Referencia: ${reference}. Te contactaremos lo antes posible.` : "Solicitud enviada correctamente. Te contactaremos lo antes posible.");
     } catch {
+      trackAnalyticsEvent("form_error", { form_name: "vehicle_lead", error_type: "submission_failed", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
       setSendState("error");
       setSendMessage("No hemos podido enviar la solicitud. Inténtalo de nuevo o utiliza WhatsApp.");
     }
@@ -104,7 +117,7 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     <div className="mt-5 space-y-2 text-xs font-semibold text-copy"><Included label="Seguro" active={selected.insurance} /><Included label="Mantenimiento" active={selected.maintenance} /><Included label="Neumáticos" active={selected.tyres} /></div>
     <div className="mt-5 rounded-lg bg-slate-50 px-3 py-3 text-[0.6875rem] leading-5 text-muted"><p>Fuente: {selected.sourceUrl ? <a href={selected.sourceUrl} target="_blank" rel="noreferrer noopener nofollow" className="font-bold text-copy underline">oferta del proveedor</a> : <span className="font-semibold text-copy">documentación facilitada por el proveedor</span>}.</p>{selected.verifiedAt ? <p>Verificada el <time dateTime={selected.verifiedAt}>{new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric" }).format(new Date(selected.verifiedAt))}</time>.</p> : null}</div>
 
-    <form className="mt-6 border-t border-line pt-6" onSubmit={openChannel}>
+    <form className="mt-6 border-t border-line pt-6" onSubmit={openChannel} onFocusCapture={startForm} onInvalidCapture={() => { if (!formErrorTracked.current) { formErrorTracked.current = true; trackAnalyticsEvent("form_error", { form_name: "vehicle_lead", error_type: "validation", vehicle_id: vehicle.id, offer_id: selected.id }); } }}>
       <p className="font-display text-xl font-semibold tracking-[-0.03em] text-ink">Solicita esta configuración</p>
       <p className="mt-1 text-xs leading-5 text-muted">La oferta elegida se incluirá automáticamente en el mensaje.</p>
       <div className="mt-4 grid grid-cols-2 gap-3">
