@@ -31,6 +31,13 @@ interface Props {
 }
 
 export function SeoListingPage({ heading, summary, idealFor, canonical, items, faqs, audience, offerFilter, relatedLinks = [], breadcrumbs, stats, landing, geoFacts }: Props) {
+  const editorialLinks: Record<string, { label: string; href: string }> = {
+    "/renting/electricos": { label: "Guía de renting eléctrico 2026", href: "/blog/renting-electrico-2026.html" },
+    "/renting/menos-de-300-euros": { label: "Cómo comparar renting barato", href: "/blog/renting-barato-2026.html" },
+    "/renting/particulares": { label: "Guía de renting para particulares", href: "/blog/renting-particulares-guia-2026.html" },
+    "/renting/suv": { label: "Comparativa de SUV en renting", href: "/blog/mejores-suv-renting-2026.html" },
+  };
+  const editorialLink = editorialLinks[canonical];
   const listings = canonicalVehicles(items).flatMap((vehicle) => {
     const groupedIds = new Set(vehiclesInSameGroup(vehicle, items).map((item) => item.id));
     const offer = offers.filter((item) => groupedIds.has(item.vehicleId) && (!audience || item.audience === audience) && (!offerFilter || offerFilter(item))).sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
@@ -79,6 +86,7 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
       </section>
       {landing?.type === "model" && modelOfferRows.length ? <ModelOfferComparison brand={String(landing.dimensions.brand)} model={String(landing.dimensions.model)} rows={modelOfferRows} /> : geoFacts ? <GeoComparisonTable facts={geoFacts} /> : null}
       {landing?.type !== "model" && geoFacts ? <GeoRanking facts={geoFacts} heading={heading} /> : null}
+      {editorialLink ? <aside className="mb-12 rounded-xl border border-line bg-surface p-6 sm:flex sm:items-center sm:justify-between sm:gap-6"><div><p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Guía relacionada</p><h2 className="font-display mt-2 text-2xl font-semibold text-ink">Consejos antes de elegir</h2></div><a href={editorialLink.href} className="mt-4 inline-flex rounded-lg bg-ink px-5 py-3 text-sm font-bold text-white sm:mt-0">{editorialLink.label}</a></aside> : null}
       <section className="mb-14 grid gap-5 rounded-xl bg-ink p-6 text-white sm:p-8 lg:grid-cols-[0.45fr_1fr]"><p className="text-xs font-bold tracking-[0.1em] text-orange-400 uppercase">Ideal para</p><p className="font-display text-2xl font-semibold tracking-[-0.035em]">{idealFor}</p></section>
       <FAQ items={faqs} />
     </main>

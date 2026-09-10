@@ -3,6 +3,9 @@ import p0Redirects from "@/data/p0-redirects.json";
 import p1Redirects from "@/data/p1-redirects.json";
 
 const auditRedirects = new Map([...p0Redirects, ...p1Redirects].map(({ source, destination }) => [source, destination]));
+const contentConsolidations = new Map([
+  ["/blog/mejores-coches-renting-baratos.html", "/blog/renting-barato-2026.html"],
+]);
 
 const legacyLandings: Record<string, string> = {
   "/renting-suv": "/renting/suv",
@@ -28,6 +31,8 @@ const legacyLandings: Record<string, string> = {
 function legacyDestination(pathname: string) {
   const audited = auditRedirects.get(pathname);
   if (audited) return audited;
+  const consolidated = contentConsolidations.get(pathname);
+  if (consolidated) return consolidated;
   if (legacyLandings[pathname]) return legacyLandings[pathname];
   return null;
 }
@@ -39,5 +44,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/:path*.html", "/renting/:path*", "/renting-:path*", "/coches/:path*", "/marcas/:path*", "/modelos/:path*", "/categorias/:path*", "/combustibles/:path*"],
+  matcher: ["/:path*.html", "/blog/:path*", "/renting/:path*", "/renting-:path*", "/coches/:path*", "/marcas/:path*", "/modelos/:path*", "/categorias/:path*", "/combustibles/:path*"],
 };

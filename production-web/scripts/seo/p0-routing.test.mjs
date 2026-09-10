@@ -16,6 +16,7 @@ const rentingPageSource = await readFile(new URL("src/app/renting/[[...segments]
 const vehiclePageSource = await readFile(new URL("src/app/coches/[slug]/page.tsx", root), "utf8");
 const layoutSource = await readFile(new URL("src/app/layout.tsx", root), "utf8");
 const notFoundSource = await readFile(new URL("src/app/not-found.tsx", root), "utf8");
+const priorityArticleSource = await readFile(new URL("src/components/editorial/PriorityArticleContent.tsx", root), "utf8");
 
 const canonicalRoutes = new Set([
   "/renting", "/coches",
@@ -70,10 +71,21 @@ test("canonicals y sitemap se construyen desde las URLs definitivas", () => {
   assert.match(vehiclePageSource, /alternates: \{ canonical \}/);
   assert.match(sitemapSource, /indexableSeoLandings/);
   assert.match(sitemapSource, /canonicalVehicles\(vehicles\)\.map\(vehiclePublicPath\)/);
-  assert.doesNotMatch(sitemapSource, /legacy-redirects|p0-redirects|\.html/);
+  assert.doesNotMatch(sitemapSource, /legacy-redirects|p0-redirects|p1-redirects/);
 });
 
 test("la respuesta 404 no hereda la canonical de la home y declara noindex", () => {
   assert.doesNotMatch(layoutSource, /alternates:\s*\{\s*canonical:\s*["']\/["']/);
   assert.match(notFoundSource, /robots:\s*\{\s*index:\s*false,\s*follow:\s*false\s*\}/);
+});
+
+test("el artículo duplicado de renting barato se consolida y sale del sitemap", () => {
+  assert.match(middlewareSource, /mejores-coches-renting-baratos\.html[^\n]+renting-barato-2026\.html/);
+  assert.match(sitemapSource, /slug !== "mejores-coches-renting-baratos\.html"/);
+});
+
+test("las páginas editoriales prioritarias muestran inventario vivo y CTA", () => {
+  for (const slug of ["renting-electrico-2026.html", "renting-barato-2026.html", "mejores-coches-renting-2026.html", "que-incluye-renting-coche.html"]) assert.match(priorityArticleSource, new RegExp(slug.replaceAll(".", "\\.")));
+  assert.match(priorityArticleSource, /inventoryUpdatedAt/);
+  assert.match(priorityArticleSource, /VehicleGrid/);
 });

@@ -18,7 +18,7 @@ const familyMap: Record<string, SeoLandingFamily> = {
   "sitemap-ciudades.xml": "cities",
 };
 
-const guidePaths = ["/", "/metodologia", "/blog", "/preguntas-frecuentes", "/respuestas", "/opiniones", "/quienes-somos", "/politica-editorial", "/prensa", "/informes/renting-espana-2026", "/legal/aviso-legal", "/legal/privacidad", "/legal/cookies", ...legacyArticles.articles.map(({ slug }) => `/blog/${slug}`), ...rentingFaqs.map(({ question }) => `/respuestas/${contentSlug(question)}`)];
+const guidePaths = ["/", "/metodologia", "/blog", "/preguntas-frecuentes", "/respuestas", "/opiniones", "/quienes-somos", "/politica-editorial", "/prensa", "/informes/renting-espana-2026", "/legal/aviso-legal", "/legal/privacidad", "/legal/cookies", ...legacyArticles.articles.filter(({ slug }) => slug !== "mejores-coches-renting-baratos.html").map(({ slug }) => `/blog/${slug}`), ...rentingFaqs.map(({ question }) => `/respuestas/${contentSlug(question)}`)];
 
 function escapeXml(value: string) { return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;"); }
 
