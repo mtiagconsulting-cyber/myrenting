@@ -89,6 +89,14 @@ test("las URLs P2 inestables se resuelven directamente a una categoría vigente"
   assert.match(middlewareSource, /"\/renting\/furgonetas\/menos-de-500-euros": "\/renting\/furgonetas"/);
 });
 
+test("las landings históricas de marca, modelo y ciudad no terminan en 404", () => {
+  assert.match(middlewareSource, /function legacyBrandDestination/);
+  for (const brand of ["bmw", "seat", "nissan", "hyundai", "mercedes-benz", "volkswagen", "mazda"]) {
+    assert.match(middlewareSource, new RegExp(`\\"${brand}\\"`));
+  }
+  assert.match(middlewareSource, /return brand \? `\/renting\/\$\{brand\}` : null/);
+});
+
 test("las páginas editoriales prioritarias muestran inventario vivo y CTA", () => {
   for (const slug of ["renting-electrico-2026.html", "renting-barato-2026.html", "mejores-coches-renting-2026.html", "que-incluye-renting-coche.html"]) assert.match(priorityArticleSource, new RegExp(slug.replaceAll(".", "\\.")));
   assert.match(priorityArticleSource, /inventoryUpdatedAt/);

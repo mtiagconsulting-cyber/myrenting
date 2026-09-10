@@ -50,15 +50,15 @@ Estados: `HECHO`, `SIGUIENTE`, `PENDIENTE`. Cada acción debe cerrarse solo desp
 | 044 | P2 | REQUIERE PERFILES | Organization Schema | Identidad legal y contacto añadidos; `sameAs` espera perfiles oficiales | No publicar enlaces no confirmados | Entidad de marca |
 | 045 | P2 | PREPARADO | Autoridad externa | NAP canónico y checklist de elegibilidad documentados | Falta dirección/perfiles confirmados | Confianza local |
 | 046 | P2 | PREPARADO | Digital PR | Sala de prensa, cita sugerida y dataset canónico publicados | Falta distribución externa | Autoridad |
-| 047 | P2 | LISTO PARA DESPLEGAR | GTM/GA4 | Capturar referrer, UTM, fuente IA y landing; heredar en lead | GTM v5 publicado; falta desplegar la aplicación y comprobar producción | Atribución IA |
-| 048 | P2 | HECHO | Analítica | Eventos GA4 y dimensiones personalizadas para canal, fuente IA, landing, referente y campaña | 5 dimensiones creadas; marcar `generate_lead` como evento clave tras su primera recepción | AI leads |
+| 047 | P2 | HECHO | GTM/GA4 | Capturar referrer, UTM, fuente IA y landing; heredar en lead | `traffic_attribution` y `generate_lead` recibidos en producción el 10/09/2026 | Atribución IA |
+| 048 | P2 | HECHO | Analítica | Eventos GA4 y dimensiones personalizadas para canal, fuente IA, landing, referente y campaña | `generate_lead` marcado como evento clave el 10/09/2026 | AI leads |
 | 049 | P2 | PREPARADO | Benchmark | 100 consultas, plantilla y calculadora AI Share of Voice | Faltan 300 observaciones reales | AI Share of Voice |
 | 050 | P3 | PREPARADO | Experimentos | Registro de answer-first, tablas y fuentes por cohortes | Requiere dos ciclos mensuales | Mejora continua |
 
 ## Cierre operativo
 
-1. Desplegar el build de producción ya generado y verificar `traffic_attribution` en `myrenting.es`.
-2. Tras el primer envío de formulario, marcar `generate_lead` como evento clave en GA4.
+1. Despliegue y recepción de `traffic_attribution` verificados en `myrenting.es` el 10/09/2026.
+2. `generate_lead` recibido y marcado como evento clave en GA4 el 10/09/2026.
 3. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
 4. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
 5. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.

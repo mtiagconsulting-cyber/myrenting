@@ -30,13 +30,30 @@ const legacyLandings: Record<string, string> = {
   "/renting/skoda/fabia": "/renting/skoda",
 };
 
+// Google todavía conserva cientos de landings antiguas del tipo
+// /renting-{marca}-{modelo}-{ciudad}.html. Si no hay una equivalencia más
+// específica en P0/P1, la categoría de marca es el destino comercial estable.
+const legacyBrands = [
+  "mercedes-benz", "volkswagen", "alfa-romeo", "maserati", "renault", "hyundai",
+  "lynk-co", "peugeot", "citroen", "toyota", "lancia", "nissan", "jaecoo", "dacia",
+  "mazda", "skoda", "omoda", "honda", "opel", "seat", "audi", "ebro", "ford",
+  "byd", "kia", "bmw", "mg",
+];
+
+function legacyBrandDestination(pathname: string) {
+  const legacySlug = pathname.match(/^\/renting-(.+)\.html$/)?.[1];
+  if (!legacySlug) return null;
+  const brand = legacyBrands.find((candidate) => legacySlug === candidate || legacySlug.startsWith(`${candidate}-`));
+  return brand ? `/renting/${brand}` : null;
+}
+
 function legacyDestination(pathname: string) {
   const audited = auditRedirects.get(pathname);
   if (audited) return audited;
   const consolidated = contentConsolidations.get(pathname);
   if (consolidated) return consolidated;
   if (legacyLandings[pathname]) return legacyLandings[pathname];
-  return null;
+  return legacyBrandDestination(pathname);
 }
 
 export function middleware(request: NextRequest) {
