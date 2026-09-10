@@ -59,6 +59,7 @@ Estados: `HECHO`, `SIGUIENTE`, `PENDIENTE`. Cada acción debe cerrarse solo desp
 
 1. Despliegue y recepción de `traffic_attribution` verificados en `myrenting.es` el 10/09/2026.
 2. `generate_lead` recibido y marcado como evento clave en GA4 el 10/09/2026.
-3. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
-4. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
-5. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.
+3. Validación del grupo de 583 respuestas 404 iniciada en Search Console el 10/09/2026 tras publicar las redirecciones de landings históricas de marca/modelo/ciudad.
+4. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
+5. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
+6. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.
