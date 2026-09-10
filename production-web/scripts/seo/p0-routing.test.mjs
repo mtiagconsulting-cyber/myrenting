@@ -81,7 +81,12 @@ test("la respuesta 404 no hereda la canonical de la home y declara noindex", () 
 
 test("el artículo duplicado de renting barato se consolida y sale del sitemap", () => {
   assert.match(middlewareSource, /mejores-coches-renting-baratos\.html[^\n]+renting-barato-2026\.html/);
-  assert.match(sitemapSource, /slug !== "mejores-coches-renting-baratos\.html"/);
+  assert.match(sitemapSource, /consolidatedArticleSlugs/);
+});
+
+test("las guías editoriales duplicadas se consolidan", () => {
+  assert.match(middlewareSource, /renting-autonomos-guia\.html[^\n]+renting-autonomos-deduccion-2026\.html/);
+  assert.match(middlewareSource, /renting-vs-leasing\.html[^\n]+renting-vs-leasing-diferencias-2026\.html/);
 });
 
 test("las URLs P2 inestables se resuelven directamente a una categoría vigente", () => {
@@ -94,11 +99,11 @@ test("las landings históricas de marca, modelo y ciudad no terminan en 404", ()
   for (const brand of ["bmw", "seat", "nissan", "hyundai", "mercedes-benz", "volkswagen", "mazda"]) {
     assert.match(middlewareSource, new RegExp(`\\"${brand}\\"`));
   }
-  assert.match(middlewareSource, /brand === "mercedes" \? "mercedes-benz" : brand/);
+  for (const destination of ["mercedes-benz", "lynk-co", "electricos", "suv", "hibridos"]) assert.match(middlewareSource, new RegExp(`\\"${destination}\\"`));
 });
 
 test("las páginas editoriales prioritarias muestran inventario vivo y CTA", () => {
-  for (const slug of ["renting-electrico-2026.html", "renting-barato-2026.html", "mejores-coches-renting-2026.html", "que-incluye-renting-coche.html"]) assert.match(priorityArticleSource, new RegExp(slug.replaceAll(".", "\\.")));
+  for (const slug of ["renting-electrico-2026.html", "renting-barato-2026.html", "mejores-coches-renting-2026.html", "que-incluye-renting-coche.html", "renting-autonomos-deduccion-2026.html", "renting-vs-leasing-diferencias-2026.html"]) assert.match(priorityArticleSource, new RegExp(slug.replaceAll(".", "\\.")));
   assert.match(priorityArticleSource, /inventoryUpdatedAt/);
   assert.match(priorityArticleSource, /VehicleGrid/);
 });

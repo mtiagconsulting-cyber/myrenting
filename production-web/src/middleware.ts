@@ -5,6 +5,8 @@ import p1Redirects from "@/data/p1-redirects.json";
 const auditRedirects = new Map([...p0Redirects, ...p1Redirects].map(({ source, destination }) => [source, destination]));
 const contentConsolidations = new Map([
   ["/blog/mejores-coches-renting-baratos.html", "/blog/renting-barato-2026.html"],
+  ["/blog/renting-autonomos-guia.html", "/blog/renting-autonomos-deduccion-2026.html"],
+  ["/blog/renting-vs-leasing.html", "/blog/renting-vs-leasing-diferencias-2026.html"],
 ]);
 
 const legacyLandings: Record<string, string> = {
@@ -37,14 +39,23 @@ const legacyBrands = [
   "mercedes-benz", "volkswagen", "alfa-romeo", "maserati", "renault", "hyundai",
   "lynk-co", "peugeot", "citroen", "toyota", "lancia", "nissan", "jaecoo", "dacia",
   "mazda", "skoda", "omoda", "honda", "opel", "seat", "audi", "ebro", "ford",
-  "byd", "kia", "bmw", "mg", "mercedes",
+  "byd", "kia", "bmw", "mg", "mercedes", "lynk-and-co", "leapmotor", "cupra", "volvo", "lexus",
 ];
+
+const legacyBrandDestinations: Record<string, string> = {
+  mercedes: "mercedes-benz",
+  "lynk-and-co": "lynk-co",
+  leapmotor: "electricos",
+  cupra: "suv",
+  volvo: "suv",
+  lexus: "hibridos",
+};
 
 function legacyBrandDestination(pathname: string) {
   const legacySlug = pathname.match(/^\/renting-(.+)\.html$/)?.[1];
   if (!legacySlug) return null;
   const brand = legacyBrands.find((candidate) => legacySlug === candidate || legacySlug.startsWith(`${candidate}-`));
-  return brand ? `/renting/${brand === "mercedes" ? "mercedes-benz" : brand}` : null;
+  return brand ? `/renting/${legacyBrandDestinations[brand] ?? brand}` : null;
 }
 
 function legacyDestination(pathname: string) {

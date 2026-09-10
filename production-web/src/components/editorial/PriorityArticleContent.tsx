@@ -63,6 +63,22 @@ const targets: Record<string, {
     categoryLabel: "Comparar todos los SUV",
     filter: (vehicle) => vehicle.bodyType === "SUV",
   },
+  "renting-autonomos-deduccion-2026.html": {
+    eyebrow: "Fiscalidad sin promesas absolutas",
+    title: "Renting para autónomos en 2026: IVA, IRPF y requisitos",
+    contentHeading: "Qué puede deducir un autónomo en el renting",
+    description: "La deducción depende de la vinculación del vehículo con la actividad, el impuesto y la documentación disponible. Compara cuotas sin IVA y consulta tu caso con un asesor fiscal.",
+    categoryHref: "/renting/autonomos",
+    categoryLabel: "Ver renting para autónomos",
+  },
+  "renting-vs-leasing-diferencias-2026.html": {
+    eyebrow: "Comparativa de contratación",
+    title: "Renting vs. leasing en 2026: diferencias y cuál elegir",
+    contentHeading: "Diferencias entre renting y leasing",
+    description: "El renting prioriza el uso del vehículo y los servicios asociados; el leasing es una fórmula de financiación. La opción adecuada depende de la propiedad, la contabilidad y las coberturas que necesitas.",
+    categoryHref: "/renting/empresas",
+    categoryLabel: "Comparar renting para empresas",
+  },
 };
 
 export function priorityArticleMetadata(slug: string) {
@@ -99,6 +115,8 @@ export function PriorityArticleContent({ slug }: { slug: string }) {
     {slug === "que-incluye-renting-coche.html" ? <IncludedGuide /> : <>
     {slug === "renting-particulares-guia-2026.html" ? <ParticularGuide /> : null}
     {slug === "mejores-suv-renting-2026.html" ? <SuvGuide /> : null}
+    {slug === "renting-autonomos-deduccion-2026.html" ? <AutonomosGuide /> : null}
+    {slug === "renting-vs-leasing-diferencias-2026.html" ? <LeasingGuide /> : null}
     <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4"><div><h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink">Ofertas reales para comparar</h2><p className="mt-2 text-sm text-muted">Ordenadas por la cuota publicada más baja, sin ocultar el perfil ni el tratamiento del IVA.</p></div><Link href={target.categoryHref} className="rounded-lg bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-brand-hover">{target.categoryLabel}</Link></div>
       <VehicleGrid items={listings} />
@@ -126,6 +144,28 @@ function SuvGuide() {
     <p>Mostramos modelos con oferta activa y los ordenamos por su cuota publicada más baja. El precio final depende del perfil, IVA, plazo, kilometraje, entrada y disponibilidad de cada campaña.</p>
     <h2>Comprobaciones importantes</h2>
     <ul><li>Compara versiones y potencias equivalentes.</li><li>No des por incluida una cobertura si no figura en la oferta.</li><li>Confirma el stock y el plazo de entrega con el proveedor.</li><li>Valora el coste contractual completo, no solo la cuota mensual.</li></ul>
+  </section>;
+}
+
+function AutonomosGuide() {
+  return <section className="legacy-article mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-12">
+    <h2>La deducción no es automática</h2>
+    <p>La cuota puede ser gasto deducible cuando está vinculada a la actividad, correctamente justificada y contabilizada. En IVA, el porcentaje depende del grado de afectación y de la capacidad de acreditarlo. Myrenting no presta asesoramiento fiscal.</p>
+    <h2>Qué documentación conviene conservar</h2>
+    <ul><li>Contrato, facturas y justificantes de pago.</li><li>Registro de desplazamientos y uso profesional cuando sea necesario.</li><li>Documentación que relacione el vehículo con la actividad económica.</li><li>Criterio confirmado por tu asesor para IVA e IRPF.</li></ul>
+    <h2>Cómo comparar ofertas para autónomos</h2>
+    <p>Compara cuotas sin IVA con el mismo plazo, kilometraje y entrada. Revisa también seguro, mantenimiento, neumáticos, cancelación anticipada y coste por exceso de kilómetros.</p>
+  </section>;
+}
+
+function LeasingGuide() {
+  return <section className="legacy-article mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-12">
+    <h2>Renting: uso y servicios</h2>
+    <p>La cuota de renting suele agrupar el uso del vehículo con servicios como mantenimiento, seguro o asistencia, según el contrato. Al finalizar, lo habitual es devolver el vehículo.</p>
+    <h2>Leasing: financiación</h2>
+    <p>El leasing se orienta normalmente a financiar un activo y puede incorporar una opción de compra. Los servicios asociados al uso no tienen por qué estar incluidos.</p>
+    <h2>Qué debes comparar</h2>
+    <ul><li>Coste total y pagos iniciales.</li><li>Servicios y riesgos asumidos por cada parte.</li><li>Tratamiento contable y fiscal aplicable.</li><li>Condiciones de finalización y posible adquisición.</li></ul>
   </section>;
 }
 

@@ -8,7 +8,8 @@ import { inventoryUpdatedAt } from "@/data/offers";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() { return legacy.articles.filter((article) => article.slug !== "mejores-coches-renting-baratos.html").map((article) => ({ slug: article.slug })); }
+const consolidatedSlugs = new Set(["mejores-coches-renting-baratos.html", "renting-autonomos-guia.html", "renting-vs-leasing.html"]);
+export function generateStaticParams() { return legacy.articles.filter((article) => !consolidatedSlugs.has(article.slug)).map((article) => ({ slug: article.slug })); }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
