@@ -37,14 +37,14 @@ const legacyBrands = [
   "mercedes-benz", "volkswagen", "alfa-romeo", "maserati", "renault", "hyundai",
   "lynk-co", "peugeot", "citroen", "toyota", "lancia", "nissan", "jaecoo", "dacia",
   "mazda", "skoda", "omoda", "honda", "opel", "seat", "audi", "ebro", "ford",
-  "byd", "kia", "bmw", "mg",
+  "byd", "kia", "bmw", "mg", "mercedes",
 ];
 
 function legacyBrandDestination(pathname: string) {
   const legacySlug = pathname.match(/^\/renting-(.+)\.html$/)?.[1];
   if (!legacySlug) return null;
   const brand = legacyBrands.find((candidate) => legacySlug === candidate || legacySlug.startsWith(`${candidate}-`));
-  return brand ? `/renting/${brand}` : null;
+  return brand ? `/renting/${brand === "mercedes" ? "mercedes-benz" : brand}` : null;
 }
 
 function legacyDestination(pathname: string) {

@@ -94,7 +94,7 @@ test("las landings históricas de marca, modelo y ciudad no terminan en 404", ()
   for (const brand of ["bmw", "seat", "nissan", "hyundai", "mercedes-benz", "volkswagen", "mazda"]) {
     assert.match(middlewareSource, new RegExp(`\\"${brand}\\"`));
   }
-  assert.match(middlewareSource, /return brand \? `\/renting\/\$\{brand\}` : null/);
+  assert.match(middlewareSource, /brand === "mercedes" \? "mercedes-benz" : brand/);
 });
 
 test("las páginas editoriales prioritarias muestran inventario vivo y CTA", () => {
