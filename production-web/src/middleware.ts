@@ -1,8 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import p0Redirects from "@/data/p0-redirects.json";
 import p1Redirects from "@/data/p1-redirects.json";
+import p2Redirects from "@/data/p2-redirects.json";
 
-const auditRedirects = new Map([...p0Redirects, ...p1Redirects].map(({ source, destination }) => [source, destination]));
+const auditRedirects = new Map([...p0Redirects, ...p1Redirects, ...p2Redirects].map(({ source, destination }) => [source, destination]));
 const contentConsolidations = new Map([
   ["/blog/mejores-coches-renting-baratos.html", "/blog/renting-barato-2026.html"],
   ["/blog/renting-autonomos-guia.html", "/blog/renting-autonomos-deduccion-2026.html"],

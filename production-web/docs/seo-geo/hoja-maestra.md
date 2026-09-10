@@ -54,12 +54,14 @@ Estados: `HECHO`, `SIGUIENTE`, `PENDIENTE`. Cada acción debe cerrarse solo desp
 | 048 | P2 | HECHO | Analítica | Eventos GA4 y dimensiones personalizadas para canal, fuente IA, landing, referente y campaña | `generate_lead` marcado como evento clave el 10/09/2026 | AI leads |
 | 049 | P2 | PREPARADO | Benchmark | 100 consultas, plantilla y calculadora AI Share of Voice | Faltan 300 observaciones reales | AI Share of Voice |
 | 050 | P3 | PREPARADO | Experimentos | Registro de answer-first, tablas y fuentes por cohortes | Requiere dos ciclos mensuales | Mejora continua |
+| 051 | P2 | HECHO | URLs históricas P2 | Consolidar 91 facetas, alias de marca/modelo e IDs antiguos mediante 301 directo | Destinos vigentes, sin parámetros ni cadenas; 11 pruebas superadas | Reduce duplicidad y señales canonical ambiguas |
 
 ## Cierre operativo
 
 1. Despliegue y recepción de `traffic_attribution` verificados en `myrenting.es` el 10/09/2026.
 2. `generate_lead` recibido y marcado como evento clave en GA4 el 10/09/2026.
 3. Validación del grupo de 583 respuestas 404 iniciada en Search Console el 10/09/2026 tras publicar las redirecciones de landings históricas de marca/modelo/ciudad.
-4. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
-5. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
-6. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.
+4. El lote P2 de 91 URLs duplicadas está corregido en código y pendiente de despliegue y validación en Search Console.
+5. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
+6. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
+7. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.

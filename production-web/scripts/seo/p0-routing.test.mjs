@@ -8,6 +8,7 @@ const slugify = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, ""
 
 const p0 = await readJson("src/data/p0-redirects.json");
 const p1 = await readJson("src/data/p1-redirects.json");
+const p2 = await readJson("src/data/p2-redirects.json");
 const inventory = await readJson("src/data/imported-inventory.json");
 const configSource = await readFile(new URL("next.config.ts", root), "utf8");
 const middlewareSource = await readFile(new URL("src/middleware.ts", root), "utf8");
@@ -45,8 +46,8 @@ for (const vehicle of inventory.vehicles) {
 }
 for (const vehicle of representativeByModel.values()) canonicalRoutes.add(`/coches/${slugify(`${vehicle.brand}-${vehicle.model}-${vehicle.version}-${vehicle.power}-cv-${vehicle.fuel}`)}`);
 
-test("el lote P0 no contiene fuentes duplicadas ni cadenas", () => {
-  const redirects = [...p0, ...p1];
+test("los lotes de auditoría no contienen fuentes duplicadas ni cadenas", () => {
+  const redirects = [...p0, ...p1, ...p2];
   const sources = redirects.map(({ source }) => source);
   assert.equal(new Set(sources).size, sources.length);
   const sourceSet = new Set(sources);
@@ -57,8 +58,8 @@ test("el lote P0 no contiene fuentes duplicadas ni cadenas", () => {
   }
 });
 
-test("cada destino del lote P0 existe en las rutas o el inventario actuales", () => {
-  for (const { source, destination } of [...p0, ...p1]) assert.ok(canonicalRoutes.has(destination), `${source} -> ${destination} no existe`);
+test("cada destino de auditoría existe en las rutas o el inventario actuales", () => {
+  for (const { source, destination } of [...p0, ...p1, ...p2]) assert.ok(canonicalRoutes.has(destination), `${source} -> ${destination} no existe`);
 });
 
 test("las redirecciones permanentes configuradas responden 301", () => {
@@ -92,6 +93,14 @@ test("las guías editoriales duplicadas se consolidan", () => {
 test("las URLs P2 inestables se resuelven directamente a una categoría vigente", () => {
   assert.match(middlewareSource, /"\/renting-gasolina\.html": "\/renting\/gasolina"/);
   assert.match(middlewareSource, /"\/renting\/furgonetas\/menos-de-500-euros": "\/renting\/furgonetas"/);
+});
+
+test("las URLs P2 duplicadas redirigen sin parámetros a destinos canónicos vigentes", () => {
+  assert.equal(p2.length, 91);
+  assert.ok(p2.some(({ source, destination }) => source === "/marcas/seat" && destination === "/renting/seat"));
+  assert.ok(p2.some(({ source, destination }) => source === "/modelos/peugeot/208" && destination === "/renting/peugeot/208"));
+  assert.ok(p2.some(({ source, destination }) => source === "/renting/kia/niro/entrega-inmediata" && destination === "/renting/kia/niro"));
+  for (const { destination } of p2) assert.ok(!destination.includes("?"));
 });
 
 test("las landings históricas de marca, modelo y ciudad no terminan en 404", () => {
