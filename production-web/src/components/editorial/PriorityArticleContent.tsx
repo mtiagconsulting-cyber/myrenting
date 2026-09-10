@@ -46,6 +46,23 @@ const targets: Record<string, {
     categoryHref: "/preguntas-frecuentes",
     categoryLabel: "Consultar preguntas frecuentes",
   },
+  "renting-particulares-guia-2026.html": {
+    eyebrow: "Guía para particulares",
+    title: "Renting para particulares en 2026: guía para elegir bien",
+    contentHeading: "Cómo contratar un renting como particular",
+    description: "Compara cuotas con IVA incluido, entrada, duración, kilometraje y coberturas. Esta guía conecta cada decisión con ofertas vigentes para particulares.",
+    categoryHref: "/renting/particulares",
+    categoryLabel: "Ver renting para particulares",
+  },
+  "mejores-suv-renting-2026.html": {
+    eyebrow: "Comparativa actualizada",
+    title: "Mejores SUV de renting en 2026: ofertas y cómo elegir",
+    contentHeading: "Qué SUV conviene comparar en renting",
+    description: "La mejor opción depende del espacio, uso, motorización y presupuesto. La selección se calcula con los SUV que tienen una campaña activa en Myrenting.",
+    categoryHref: "/renting/suv",
+    categoryLabel: "Comparar todos los SUV",
+    filter: (vehicle) => vehicle.bodyType === "SUV",
+  },
 };
 
 export function priorityArticleMetadata(slug: string) {
@@ -79,12 +96,37 @@ export function PriorityArticleContent({ slug }: { slug: string }) {
       </div>
       <p className="mt-4 text-xs text-muted">Ofertas revisadas el <time dateTime={inventoryUpdatedAt}>{updated}</time>.</p>
     </section>
-    {slug === "que-incluye-renting-coche.html" ? <IncludedGuide /> : <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
+    {slug === "que-incluye-renting-coche.html" ? <IncludedGuide /> : <>
+    {slug === "renting-particulares-guia-2026.html" ? <ParticularGuide /> : null}
+    {slug === "mejores-suv-renting-2026.html" ? <SuvGuide /> : null}
+    <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4"><div><h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink">Ofertas reales para comparar</h2><p className="mt-2 text-sm text-muted">Ordenadas por la cuota publicada más baja, sin ocultar el perfil ni el tratamiento del IVA.</p></div><Link href={target.categoryHref} className="rounded-lg bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-brand-hover">{target.categoryLabel}</Link></div>
       <VehicleGrid items={listings} />
-    </section>}
+    </section></>}
     <section className="mx-auto mb-14 max-w-4xl px-5 sm:px-8"><div className="rounded-xl bg-ink p-6 text-white sm:flex sm:items-center sm:justify-between sm:gap-6"><div><h2 className="font-display text-2xl font-semibold">Continúa con ofertas disponibles</h2><p className="mt-2 text-sm text-slate-300">Revisa la versión concreta, cuota, entrada, plazo y kilómetros antes de solicitar información.</p></div><Link href={target.categoryHref} className="mt-5 inline-flex shrink-0 rounded-lg bg-brand px-5 py-3 text-sm font-bold text-white sm:mt-0">{target.categoryLabel}</Link></div></section>
   </>;
+}
+
+function ParticularGuide() {
+  return <section className="legacy-article mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-12">
+    <h2>Qué debe mirar un particular</h2>
+    <p>Para comparar dos ofertas, usa siempre la cuota con IVA incluido y las mismas condiciones de entrada, plazo y kilómetros. Una cuota menor puede terminar siendo más cara si exige un pago inicial o incluye menos kilometraje.</p>
+    <h2>Documentación y aprobación</h2>
+    <p>La gestora suele solicitar identificación, permiso de conducir, justificantes de ingresos y documentación bancaria. La contratación está sujeta a un estudio de solvencia y la aprobación nunca está garantizada.</p>
+    <h2>Antes de firmar</h2>
+    <ul><li>Confirma por escrito el plazo de entrega y la versión exacta.</li><li>Revisa franquicia, neumáticos, vehículo de sustitución y asistencia.</li><li>Comprueba el coste por exceso de kilómetros y la penalización por cancelación.</li><li>Verifica qué se considera desgaste normal al devolver el vehículo.</li></ul>
+  </section>;
+}
+
+function SuvGuide() {
+  return <section className="legacy-article mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-12">
+    <h2>Cómo elegir un SUV de renting</h2>
+    <p>Prioriza el espacio útil y la motorización que encajan con tus recorridos. Para ciudad puede interesar un híbrido o eléctrico; para viajes frecuentes conviene comparar consumo, autonomía, maletero y kilómetros contratados.</p>
+    <h2>Cómo se ordena la selección</h2>
+    <p>Mostramos modelos con oferta activa y los ordenamos por su cuota publicada más baja. El precio final depende del perfil, IVA, plazo, kilometraje, entrada y disponibilidad de cada campaña.</p>
+    <h2>Comprobaciones importantes</h2>
+    <ul><li>Compara versiones y potencias equivalentes.</li><li>No des por incluida una cobertura si no figura en la oferta.</li><li>Confirma el stock y el plazo de entrega con el proveedor.</li><li>Valora el coste contractual completo, no solo la cuota mensual.</li></ul>
+  </section>;
 }
 
 function IncludedGuide() {

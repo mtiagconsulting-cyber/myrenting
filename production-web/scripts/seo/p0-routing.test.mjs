@@ -84,6 +84,11 @@ test("el artículo duplicado de renting barato se consolida y sale del sitemap",
   assert.match(sitemapSource, /slug !== "mejores-coches-renting-baratos\.html"/);
 });
 
+test("las URLs P2 inestables se resuelven directamente a una categoría vigente", () => {
+  assert.match(middlewareSource, /"\/renting-gasolina\.html": "\/renting\/gasolina"/);
+  assert.match(middlewareSource, /"\/renting\/furgonetas\/menos-de-500-euros": "\/renting\/furgonetas"/);
+});
+
 test("las páginas editoriales prioritarias muestran inventario vivo y CTA", () => {
   for (const slug of ["renting-electrico-2026.html", "renting-barato-2026.html", "mejores-coches-renting-2026.html", "que-incluye-renting-coche.html"]) assert.match(priorityArticleSource, new RegExp(slug.replaceAll(".", "\\.")));
   assert.match(priorityArticleSource, /inventoryUpdatedAt/);

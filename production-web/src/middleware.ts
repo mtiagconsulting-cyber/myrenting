@@ -19,6 +19,8 @@ const legacyLandings: Record<string, string> = {
   "/renting-etiqueta-eco": "/renting/etiqueta-eco",
   "/renting-etiqueta-cero": "/renting/etiqueta-cero",
   "/renting-furgonetas": "/renting/furgonetas",
+  "/renting-gasolina.html": "/renting/gasolina",
+  "/renting/furgonetas/menos-de-500-euros": "/renting/furgonetas",
   "/renting-menos-300-euros": "/renting/menos-de-300-euros",
   "/renting-menos-350-euros": "/renting/menos-de-400-euros",
   "/renting-menos-450-euros": "/renting/menos-de-500-euros",
