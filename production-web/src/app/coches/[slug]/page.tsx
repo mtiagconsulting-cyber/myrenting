@@ -15,6 +15,7 @@ import { vehicles } from "@/data/vehicles";
 import { fuelPages } from "@/lib/catalog-taxonomy";
 import { contentSlug } from "@/lib/content-slug";
 import { recommendVehicles } from "@/lib/recommendations";
+import { formatMonthlyPrice, offerPriceExVat, offerPriceIncVat } from "@/lib/offer-pricing";
 import { canonicalVehicle, canonicalVehicles, representativeVehicle, vehicleGroupKey, vehicleModelKey, vehiclePublicPath, vehiclePublicSlug, vehiclesInSameGroup } from "@/lib/vehicle-groups";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -33,12 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const groupedIds = new Set(vehiclesInSameGroup(vehicle, vehicles).map((item) => item.id));
   const offer = offers
     .filter((item) => groupedIds.has(item.vehicleId))
-    .reduce<(typeof offers)[number] | undefined>((cheapest, item) => !cheapest || item.monthlyPrice < cheapest.monthlyPrice ? item : cheapest, undefined);
-  const price = offer?.monthlyPrice.toLocaleString("es-ES", { minimumFractionDigits: offer.monthlyPrice % 1 ? 2 : 0, maximumFractionDigits: 2 }) ?? "--";
-  const audience = offer?.audience === "autonomo" ? "autónomos" : offer?.audience === "empresa" ? "empresas" : "particulares";
-  const vat = offer?.priceIncludesVat ? "IVA incluido" : "más IVA";
-  const title = `${vehicle.brand} ${vehicle.model} de renting para ${audience} desde ${price} €/mes`;
-  const description = `${vehicle.brand} ${vehicle.model} para ${audience} desde ${price} €/mes, ${vat}. ${offer?.duration ?? "—"} meses y ${offer?.kilometers.toLocaleString("es-ES") ?? "—"} km/año.`;
+    .reduce<(typeof offers)[number] | undefined>((cheapest, item) => !cheapest || offerPriceExVat(item) < offerPriceExVat(cheapest) ? item : cheapest, undefined);
+  const priceExVat = offer ? formatMonthlyPrice(offerPriceExVat(offer)) : "--";
+  const priceIncVat = offer ? formatMonthlyPrice(offerPriceIncVat(offer)) : "--";
+  const title = `Renting ${vehicle.brand} ${vehicle.model} desde ${priceExVat} €/mes`;
+  const description = `${vehicle.brand} ${vehicle.model} de renting desde ${priceExVat} €/mes sin IVA y ${priceIncVat} €/mes con IVA. ${offer?.duration ?? "—"} meses, ${offer?.kilometers.toLocaleString("es-ES") ?? "—"} km/año y condiciones verificadas.`;
   const canonical = vehiclePublicPath(vehicle);
   return { title, description, alternates: { canonical }, openGraph: { type: "website", title, description, url: canonical, ...(vehicle.images ? { images: [{ url: vehicle.images.hero, alt: `${vehicle.brand} ${vehicle.model}` }] } : {}) } };
 }
@@ -62,6 +62,8 @@ export default async function VehiclePage({ params }: Props) {
   if (!offer) notFound();
   const recommended = recommendVehicles(vehicle, offer, vehicles, offers);
   const alternatives = recommended.map((item) => item.vehicle);
+  const priceExVat = offerPriceExVat(offer);
+  const priceIncVat = offerPriceIncVat(offer);
 
   return (
     <main id="contenido-principal" className="mx-auto max-w-7xl px-5 py-7 sm:px-8 sm:py-10">
@@ -71,9 +73,10 @@ export default async function VehiclePage({ params }: Props) {
 
       <div className="mt-8 space-y-3">
         <AnswerSummary
-          answer={`${vehicle.brand} ${vehicle.model} es ${editorial.summary.toLowerCase()} La oferta mostrada parte de ${offer.monthlyPrice} € al mes durante ${offer.duration} meses.`}
+          answer={`${vehicle.brand} ${vehicle.model} es ${editorial.summary.toLowerCase()} La oferta mostrada parte de ${formatMonthlyPrice(priceExVat)} € al mes sin IVA y ${formatMonthlyPrice(priceIncVat)} € con IVA durante ${offer.duration} meses.`}
           facts={[
-            { label: "Precio habitual", value: `${offer.monthlyPrice} €/mes` },
+            { label: "Precio sin IVA", value: `${formatMonthlyPrice(priceExVat)} €/mes` },
+            { label: "Precio con IVA", value: `${formatMonthlyPrice(priceIncVat)} €/mes` },
             { label: "Ideal para", value: editorial.idealFor },
             { label: "Alternativas", value: alternatives.length ? alternatives.map((item) => `${item.brand} ${item.model}`).join(", ") : "Consulta el catálogo" },
           ]}

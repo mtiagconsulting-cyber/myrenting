@@ -55,6 +55,10 @@ export default function HomePage() {
 
       <div className="mx-auto max-w-7xl space-y-16 px-5 py-12 sm:px-8 sm:py-16 lg:space-y-22">
         <nav aria-label="Búsquedas frecuentes" className="flex flex-wrap gap-2">{[{label:"Sin entrada",href:"/renting/sin-entrada"},{label:"Menos de 300 €",href:"/renting/menos-de-300-euros"},{label:"Menos de 500 €",href:"/renting/menos-de-500-euros"},{label:"Para autónomos",href:"/renting/autonomos"},{label:"Entrega disponible",href:"/renting/entrega-inmediata"}].map((item)=><Link key={item.href} href={item.href} className="rounded-full border border-line bg-surface px-4 py-2.5 text-xs font-bold text-copy hover:border-brand hover:text-brand">{item.label}</Link>)}</nav>
+        <nav aria-label="Modelos de renting más consultados" className="rounded-xl border border-line bg-surface p-5">
+          <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Modelos más consultados</p>
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold text-ink">{[{label:"Renting Kia Niro",href:"/renting/kia/niro"},{label:"Renting Peugeot 208",href:"/renting/peugeot/208"},{label:"Renting BMW Serie 1",href:"/renting/bmw/serie-1"},{label:"Renting Hyundai Tucson",href:"/renting/hyundai/tucson"},{label:"Renting Volkswagen T-Roc",href:"/renting/volkswagen/t-roc"},{label:"Renting Nissan Qashqai",href:"/renting/nissan/qashqai"}].map((item)=><Link key={item.href} href={item.href} className="inline-flex items-center gap-2 hover:text-brand">{item.label}<ArrowRight size={14} aria-hidden="true" /></Link>)}</div>
+        </nav>
         <section>
           <div className="mb-7 flex items-end justify-between gap-5">
             <div>
@@ -109,7 +113,7 @@ export default function HomePage() {
               <div className="flex items-end justify-between py-5"><span className="text-sm text-slate-300">Combinaciones de cuota</span><strong className="font-data text-3xl tracking-[-0.06em]">{offers.length}</strong></div>
               <div className="flex items-end justify-between py-5"><span className="text-sm text-slate-300">Perfiles diferenciados</span><strong className="font-display text-xl">3</strong></div>
             </div>
-            <p className="mt-5 text-xs leading-5 text-slate-400">Inventario conciliado con M‑Renting, Quadis y la oferta adicional de Kia.</p>
+            <p className="mt-5 text-xs leading-5 text-slate-400">Inventario conciliado con M‑Renting, Marcos Automoción y Quadis Empresas, incluidas sus campañas por gestora.</p>
           </aside>
         </section>
       </div>

@@ -4,6 +4,7 @@ import { SeoListingPage } from "@/components/seo/SeoListingPage";
 import { findSeoLanding, getLandingPairs, indexableSeoLandings, landingVehicles, offerMatchesLanding, preparedNoindexLandings, seoConsolidationDestination } from "@/lib/seo-landing-engine";
 import { contentSlug } from "@/lib/content-slug";
 import { generateGeoFacts } from "@/lib/geo-facts";
+import { formatMonthlyPrice } from "@/lib/offer-pricing";
 
 type Props = { params: Promise<{ segments?: string[] }> };
 
@@ -17,13 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!landing) return {};
   if (landing.type === "model") {
     const pairs = getLandingPairs(landing);
-    const cheapest = [...pairs].sort((a, b) => a.offer.monthlyPrice - b.offer.monthlyPrice)[0];
-    const cheapestParticular = pairs.filter(({ offer }) => offer.audience === "particular").sort((a, b) => a.offer.monthlyPrice - b.offer.monthlyPrice)[0];
     const name = `${landing.dimensions.brand} ${landing.dimensions.model}`;
-    const minimum = cheapest?.offer.monthlyPrice.toLocaleString("es-ES", { maximumFractionDigits: 2 }) ?? "—";
-    const particular = cheapestParticular?.offer.monthlyPriceIncVat?.toLocaleString("es-ES", { maximumFractionDigits: 2 }) ?? cheapestParticular?.offer.monthlyPrice.toLocaleString("es-ES", { maximumFractionDigits: 2 });
-    const title = `Renting ${name} desde ${minimum} €/mes | ${pairs.length} ofertas`;
-    const description = `Compara ${pairs.length} ofertas de renting ${name} desde ${minimum} €/mes sin IVA${particular ? ` y para particulares desde ${particular} €/mes con IVA` : ""}. Versiones, km, plazos y proveedores.`;
+    const minimumExVat = landing.stats ? formatMonthlyPrice(landing.stats.minimumPriceExVat) : "—";
+    const minimumIncVat = landing.stats ? formatMonthlyPrice(landing.stats.minimumPriceIncVat) : "—";
+    const title = `Renting ${name} desde ${minimumExVat} €/mes sin IVA`;
+    const description = `Compara ${pairs.length} ofertas de renting ${name}: desde ${minimumExVat} €/mes sin IVA y ${minimumIncVat} €/mes con IVA. Versiones, plazos, km y proveedores.`;
     return { title, description, alternates: { canonical: landing.canonical }, robots: landing.indexable ? { index: true, follow: true } : { index: false, follow: true }, openGraph: { type: "website", title, description, url: landing.canonical } };
   }
   return {
@@ -43,12 +42,13 @@ export default async function ProgrammaticRentingPage({ params }: Props) {
   if (consolidationDestination) permanentRedirect(consolidationDestination);
   const stats = landing.stats;
   const geoFacts = landing.indexable ? generateGeoFacts(landing) : null;
-  const minimum = stats?.minimumPrice.toLocaleString("es-ES", { maximumFractionDigits: 2 }) ?? "—";
+  const minimum = stats ? formatMonthlyPrice(stats.minimumPriceExVat) : "—";
+  const minimumWithVat = stats ? formatMonthlyPrice(stats.minimumPriceIncVat) : "—";
   const entityName = [landing.dimensions.brand, landing.dimensions.model].filter(Boolean).join(" ") || landing.h1.toLowerCase();
   const faqs = stats && geoFacts ? [
-    { question: `¿Cuánto cuesta ${landing.type === "brand" || landing.type === "model" ? `un ${entityName} de renting` : landing.h1.toLowerCase()}?`, answer: `Las configuraciones publicadas van desde ${minimum} hasta ${stats.maximumPrice.toLocaleString("es-ES")} €/mes. La cuota depende del cliente, duración, kilometraje e IVA.` },
+    { question: `¿Cuánto cuesta ${landing.type === "brand" || landing.type === "model" ? `un ${entityName} de renting` : landing.h1.toLowerCase()}?`, answer: `Las ofertas parten de ${minimum} €/mes sin IVA y ${minimumWithVat} €/mes con IVA. La cuota depende del cliente, duración, kilometraje y entrada.` },
     { question: `¿Cuál es la opción más barata en ${landing.h1.toLowerCase()}?`, answer: `Actualmente, ${stats.cheapestVehicle} es la opción con menor cuota dentro de esta selección, desde ${minimum} €/mes. La vigencia y disponibilidad deben confirmarse antes de contratar.` },
-    { question: "¿Cuántas ofertas y modelos hay disponibles?", answer: `El inventario actual reúne ${stats.offerCount} configuraciones correspondientes a ${stats.vehicleCount} vehículos y ${stats.modelCount} modelos.` },
+    { question: "¿Cuántas ofertas, modelos y proveedores hay disponibles?", answer: `El inventario actual reúne ${stats.offerCount} ofertas correspondientes a ${stats.vehicleCount} vehículos, ${stats.modelCount} modelos y ${stats.providers.length} proveedores.` },
     { question: "¿Hay opciones sin entrada o con entrega disponible?", answer: `${geoFacts.noEntryCount} configuraciones tienen entrada inicial de 0 € y ${geoFacts.immediateDeliveryCount} figuran como disponibles. La fecha efectiva de entrega debe confirmarse con el proveedor.` },
     { question: "¿Qué duración y kilometraje puedo contratar?", answer: `En esta selección existen plazos de ${stats.durations.join(", ")} meses y kilometrajes de ${stats.kilometers.map((value) => value.toLocaleString("es-ES")).join(", ")} km/año. No todas las combinaciones tienen el mismo precio.` },
   ] : [{ question: "¿Hay ofertas disponibles?", answer: "Todavía no existe inventario suficiente y verificable para publicar esta selección en buscadores." }];
@@ -59,7 +59,8 @@ export default async function ProgrammaticRentingPage({ params }: Props) {
     : landingVehicles(landing);
   const baseEntityPath = model ? `/renting/${contentSlug(brand!)}/${contentSlug(model)}` : brand ? `/renting/${contentSlug(brand)}` : "/renting";
   const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Renting", path: "/renting" }, ...(brand ? [{ name: brand, path: `/renting/${contentSlug(brand)}` }] : []), ...(model ? [{ name: model, path: baseEntityPath }] : []), ...(landing.canonical !== baseEntityPath ? [{ name: landing.h1, path: landing.canonical }] : [])];
-  const contextualLinks = indexableSeoLandings.filter((candidate) => candidate.canonical !== landing.canonical && ((brand && candidate.dimensions.brand === brand && (!model || candidate.dimensions.model === model)) || (!brand && landing.dimensions.body && candidate.dimensions.body === landing.dimensions.body) || (!brand && landing.dimensions.fuel && candidate.dimensions.fuel === landing.dimensions.fuel))).slice(0, 12).map((candidate) => ({ label: candidate.h1, href: candidate.canonical }));
+  const opportunityPaths = ["/renting/kia/niro", "/renting/peugeot/208", "/renting/bmw/serie-1", "/renting/hyundai/tucson", "/renting/volkswagen/t-roc", "/renting/nissan/qashqai", "/renting/baratos", "/renting/hibridos"];
+  const contextualLinks = indexableSeoLandings.filter((candidate) => candidate.canonical !== landing.canonical && ((brand && candidate.dimensions.brand === brand && (!model || candidate.type === "model")) || (!brand && landing.dimensions.body && candidate.dimensions.body === landing.dimensions.body) || (!brand && landing.dimensions.fuel && candidate.dimensions.fuel === landing.dimensions.fuel) || (landing.type === "root" && opportunityPaths.includes(candidate.canonical)))).slice(0, 12).map((candidate) => ({ label: candidate.h1, href: candidate.canonical }));
   return <SeoListingPage
     heading={landing.h1}
     summary={landing.summary}

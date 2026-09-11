@@ -59,23 +59,23 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
   return (
     <main id="contenido-principal" className="mx-auto max-w-7xl px-5 py-7 sm:px-8 sm:py-10">
       <Breadcrumb items={breadcrumbs ?? [{ name: "Inicio", path: "/" }, { name: heading, path: canonical }]} />
-      <Schema data={[itemListSchema(heading, listings.map(({ vehicle }) => vehicle)), faqSchema(faqs)]} />
+      <Schema data={[itemListSchema(heading, listings), faqSchema(faqs)]} />
       <section className="border-b border-line pb-8">
         <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Guía y ofertas</p>
         <h1 className="font-display mt-3 text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">{heading}</h1>
         <p className="mt-5 max-w-3xl text-base leading-7 text-muted">{summary}</p>
         {landing && geoFacts ? <QuickAnswer landing={landing} facts={geoFacts} /> : null}
         <dl className="mt-7 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-3">
-          <div><dt className="text-xs text-muted">Ofertas disponibles</dt><dd className="font-data mt-1 text-xl font-semibold text-ink">{listings.length}</dd></div>
-          <div><dt className="text-xs text-muted">Precio habitual</dt><dd className="font-data mt-1 text-xl font-semibold text-ink">{prices.length ? `${Math.min(...prices)}–${Math.max(...prices)} €` : "Sin ofertas"}</dd></div>
+          <div><dt className="text-xs text-muted">Ofertas disponibles</dt><dd className="font-data mt-1 text-xl font-semibold text-ink">{stats?.offerCount ?? listings.length}</dd></div>
+          <div><dt className="text-xs text-muted">Precio desde</dt><dd className="font-data mt-1 text-xl font-semibold text-ink">{stats ? `${stats.minimumPriceExVat.toLocaleString("es-ES", { maximumFractionDigits: 2 })} € sin IVA` : prices.length ? `${Math.min(...prices)} €` : "Sin ofertas"}</dd></div>
           <div className="col-span-2 sm:col-span-1"><dt className="text-xs text-muted">Ofertas actualizadas</dt><dd className="mt-1 text-sm font-bold text-ink"><time dateTime={inventoryUpdatedAt}>{new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric" }).format(new Date(inventoryUpdatedAt))}</time></dd></div>
         </dl>
         <div className="mt-6"><SourceStatus /></div>
         {stats ? <dl className="mt-7 grid gap-3 border-t border-line pt-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div><dt className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Oferta más barata</dt><dd className="mt-1 text-sm font-bold text-ink">{stats.cheapestVehicle}</dd></div>
+          <div><dt className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Desde con IVA</dt><dd className="font-data mt-1 text-sm font-bold text-ink">{stats.minimumPriceIncVat.toLocaleString("es-ES", { maximumFractionDigits: 2 })} €/mes</dd></div>
           <div><dt className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Duraciones</dt><dd className="font-data mt-1 text-sm font-semibold text-ink">{stats.durations.map((value) => `${value} meses`).join(", ")}</dd></div>
           <div><dt className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Kilometrajes</dt><dd className="font-data mt-1 text-sm font-semibold text-ink">{stats.kilometers.map((value) => `${value.toLocaleString("es-ES")} km`).join(", ")}</dd></div>
-          <div><dt className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Tecnologías</dt><dd className="mt-1 text-sm font-bold text-ink">{stats.fuels.join(", ")}</dd></div>
+          <div><dt className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Proveedores</dt><dd className="mt-1 text-sm font-bold text-ink">{stats.providers.length} comparados</dd></div>
         </dl> : null}
         {relatedLinks.length ? <nav aria-label="Explorar esta selección" className="mt-6 flex flex-wrap gap-2">{relatedLinks.map((link) => <a key={link.href} href={link.href} className="rounded-full border border-line bg-surface px-4 py-2 text-xs font-bold text-copy hover:border-slate-300 hover:text-ink">{link.label}</a>)}</nav> : null}
         {geoFacts ? <KeyFacts facts={geoFacts} /> : null}

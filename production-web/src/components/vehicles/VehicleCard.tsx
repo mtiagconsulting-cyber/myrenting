@@ -6,10 +6,11 @@ import { FavoriteButton } from "@/components/vehicles/FavoriteButton";
 import type { Offer } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
 import { vehiclePublicPath } from "@/lib/vehicle-groups";
+import { offerPriceExVat, offerPriceIncVat } from "@/lib/offer-pricing";
 
 export function VehicleCard({ vehicle, offer, compared = false, onCompare }: { vehicle: Vehicle; offer: Offer; profileOffers?: Offer[]; compared?: boolean; onCompare?: (vehicle: Vehicle) => void }) {
-  const priceExVat = offer.monthlyPriceExVat ?? offer.monthlyPrice / (offer.priceIncludesVat ? 1.21 : 1);
-  const priceIncVat = offer.monthlyPriceIncVat ?? offer.monthlyPrice * (offer.priceIncludesVat ? 1 : 1.21);
+  const priceExVat = offerPriceExVat(offer);
+  const priceIncVat = offerPriceIncVat(offer);
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-surface shadow-card transition-shadow hover:shadow-lg">
       <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
@@ -30,7 +31,7 @@ export function VehicleCard({ vehicle, offer, compared = false, onCompare }: { v
 
         <div className="mt-5 grid grid-cols-3 divide-x divide-line border-y border-line py-4">
           <div className="pr-3"><p className="text-[0.625rem] font-bold text-muted uppercase">Motor</p><p className="mt-1 text-xs font-bold text-ink">{vehicle.fuel}</p></div>
-          <div className="px-3"><p className="text-[0.625rem] font-bold text-muted uppercase">Potencia</p><p className="font-data mt-1 text-xs font-semibold text-ink">{vehicle.power} CV</p></div>
+          <div className="px-3"><p className="text-[0.625rem] font-bold text-muted uppercase">Potencia</p><p className="font-data mt-1 text-xs font-semibold text-ink">{vehicle.power > 0 ? `${vehicle.power} CV` : "Consultar"}</p></div>
           <div className="pl-3"><p className="text-[0.625rem] font-bold text-muted uppercase">Cambio</p><p className="font-data mt-1 text-xs font-semibold text-ink">{vehicle.transmission || "Consultar"}</p></div>
         </div>
 

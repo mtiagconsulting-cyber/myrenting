@@ -2,6 +2,7 @@ import { inventoryUpdatedAt, offers } from "@/data/offers";
 import { vehicles } from "@/data/vehicles";
 import { contentSlug } from "@/lib/content-slug";
 import { canonicalVehicles, vehicleGroupKey, vehiclesInSameGroup } from "@/lib/vehicle-groups";
+import { offerPriceExVat, offerPriceIncVat } from "@/lib/offer-pricing";
 import type { Offer, OfferAudience } from "@/types/offer";
 import type { BodyType, DgtLabel, FuelType, Vehicle } from "@/types/vehicle";
 
@@ -43,11 +44,14 @@ export interface SeoLandingStats {
   brandCount: number;
   minimumPrice: number;
   maximumPrice: number;
+  minimumPriceExVat: number;
+  minimumPriceIncVat: number;
   cheapestVehicle: string;
   durations: number[];
   kilometers: number[];
   fuels: string[];
   transmissions: string[];
+  providers: string[];
 }
 
 export interface SeoLanding {
@@ -148,11 +152,14 @@ function getStats(filters: SeoLandingFilters): SeoLandingStats | null {
     brandCount: new Set(pairs.map(({ vehicle }) => vehicle.brand)).size,
     minimumPrice: sorted[0].offer.monthlyPrice,
     maximumPrice: sorted.at(-1)!.offer.monthlyPrice,
+    minimumPriceExVat: Math.min(...pairs.map(({ offer }) => offerPriceExVat(offer))),
+    minimumPriceIncVat: Math.min(...pairs.map(({ offer }) => offerPriceIncVat(offer))),
     cheapestVehicle: `${sorted[0].vehicle.brand} ${sorted[0].vehicle.model}`,
     durations: [...new Set(pairs.map(({ offer }) => offer.duration))].sort((a, b) => a - b),
     kilometers: [...new Set(pairs.map(({ offer }) => offer.kilometers))].sort((a, b) => a - b),
     fuels: [...new Set(pairs.map(({ vehicle }) => vehicle.fuel))].sort((a, b) => a.localeCompare(b, "es")),
     transmissions: [...new Set(pairs.map(({ vehicle }) => vehicle.transmission).filter((value): value is string => Boolean(value)))].sort((a, b) => a.localeCompare(b, "es")),
+    providers: [...new Set(pairs.map(({ offer }) => offer.provider))].sort((a, b) => a.localeCompare(b, "es")),
   };
 }
 
@@ -167,8 +174,9 @@ function price(value: number | null) { return value === null ? "—" : value.toL
 
 function basicLanding({ slug, family, type, dimensions = {}, filters = {}, title, h1, noun, idealFor, authorized, minVehicles }: { slug: string; family: SeoLandingFamily; type: SeoLandingType; dimensions?: Record<string, string | number | boolean>; filters?: SeoLandingFilters; title: string; h1: string; noun: string; idealFor: string; authorized?: boolean; minVehicles?: number }) {
   const stats = getStats(filters);
-  const minimum = price(stats?.minimumPrice ?? null);
-  return makeLanding({ slug, family, type, dimensions, filters, title: `${title} | Ofertas desde ${minimum} €/mes`, h1, description: `Compara ${stats?.offerCount ?? 0} ofertas de ${noun} desde ${minimum} €/mes. Consulta modelos, duración, kilometraje, entrada, IVA y disponibilidad.`, summary: `Compara ${stats?.offerCount ?? 0} configuraciones de ${noun} correspondientes a ${stats?.vehicleCount ?? 0} vehículos y ${stats?.modelCount ?? 0} modelos. La cuota publicada más baja parte de ${minimum} €/mes.`, idealFor, authorized, minVehicles });
+  const minimumExVat = price(stats?.minimumPriceExVat ?? null);
+  const minimumIncVat = price(stats?.minimumPriceIncVat ?? null);
+  return makeLanding({ slug, family, type, dimensions, filters, title: `${title} desde ${minimumExVat} €/mes`, h1, description: `Compara ${stats?.offerCount ?? 0} ofertas de ${noun}: desde ${minimumExVat} €/mes sin IVA y ${minimumIncVat} €/mes con IVA. Cuotas, entrada, plazo, km y disponibilidad.`, summary: `Compara ${stats?.offerCount ?? 0} ofertas de ${noun} correspondientes a ${stats?.modelCount ?? 0} modelos. Precios desde ${minimumExVat} €/mes sin IVA y ${minimumIncVat} €/mes con IVA, con entrada, duración y kilometraje visibles.`, idealFor, authorized, minVehicles });
 }
 
 function preferredName(current: string | undefined, candidate: string) {

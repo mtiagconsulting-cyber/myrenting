@@ -3,6 +3,7 @@ import type { GeoFacts } from "@/lib/geo-facts";
 import type { SeoLanding } from "@/lib/seo-landing-engine";
 import type { Offer } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
+import { offerPriceExVat, offerPriceIncVat } from "@/lib/offer-pricing";
 
 const money = (value: number) => `${value.toLocaleString("es-ES", { maximumFractionDigits: 2 })} €/mes`;
 
@@ -19,14 +20,14 @@ export function QuickAnswer({ landing, facts }: { landing: SeoLanding; facts: Ge
   return <section aria-labelledby="respuesta-rapida" className="mt-7 max-w-4xl rounded-xl border border-orange-200 bg-orange-50 p-5 sm:p-6">
     <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Respuesta rápida</p>
     <h2 id="respuesta-rapida" className="font-display mt-2 text-xl font-semibold text-ink">{questionFor(landing)}</h2>
-    <p className="mt-3 text-sm leading-7 text-copy">Actualmente MyRenting compara <strong>{facts.numberOfOffers} configuraciones</strong> de esta selección desde <strong>{money(facts.minimumPrice)}</strong>. La opción más económica es el <strong>{facts.cheapestModel}</strong>. Los precios dependen del perfil de cliente, duración y kilometraje.</p>
+    <p className="mt-3 text-sm leading-7 text-copy">Actualmente MyRenting compara <strong>{facts.numberOfOffers} ofertas</strong> de esta selección desde <strong>{money(facts.minimumPriceExVat)} sin IVA</strong> y <strong>{money(facts.minimumPriceIncVat)} con IVA</strong>. La opción más económica es el <strong>{facts.cheapestModel}</strong>. El precio final depende del perfil, duración y kilometraje.</p>
   </section>;
 }
 
 export function KeyFacts({ facts }: { facts: GeoFacts }) {
   const items = [
-    ["Precio mínimo", money(facts.minimumPrice)], ["Precio medio", money(facts.averagePrice)],
-    ["Configuraciones", facts.numberOfOffers.toLocaleString("es-ES")], ["Modelos", facts.numberOfModels.toLocaleString("es-ES")],
+    ["Desde sin IVA", money(facts.minimumPriceExVat)], ["Desde con IVA", money(facts.minimumPriceIncVat)],
+    ["Ofertas", facts.numberOfOffers.toLocaleString("es-ES")], ["Modelos", facts.numberOfModels.toLocaleString("es-ES")],
     ["Más económico", facts.cheapestModel], ["Automáticos", facts.automaticCount.toLocaleString("es-ES")],
     ["Híbridos", facts.hybridCount.toLocaleString("es-ES")], ["Eléctricos", facts.electricCount.toLocaleString("es-ES")],
     ["Entrega disponible", facts.immediateDeliveryCount.toLocaleString("es-ES")], ["Sin entrada", facts.noEntryCount.toLocaleString("es-ES")],
@@ -47,9 +48,7 @@ const audienceLabel: Record<Offer["audience"], string> = {
 };
 
 function vatPrices(offer: Offer) {
-  const withoutVat = offer.monthlyPriceExVat ?? (offer.priceIncludesVat ? offer.monthlyPrice / 1.21 : offer.monthlyPrice);
-  const withVat = offer.monthlyPriceIncVat ?? (offer.priceIncludesVat ? offer.monthlyPrice : offer.monthlyPrice * 1.21);
-  return { withoutVat, withVat };
+  return { withoutVat: offerPriceExVat(offer), withVat: offerPriceIncVat(offer) };
 }
 
 export function ModelOfferComparison({ brand, model, rows }: { brand: string; model: string; rows: ModelOfferRow[] }) {
@@ -65,7 +64,7 @@ export function ModelOfferComparison({ brand, model, rows }: { brand: string; mo
         <tbody>{rows.map(({ vehicle, offer }) => {
           const prices = vatPrices(offer);
           return <tr key={`${vehicle.id}-${offer.audience}`} className="border-t border-line align-top">
-            <th className="min-w-64 px-4 py-4 font-semibold text-ink"><span className="block">{vehicle.version}</span><span className="mt-1 block text-xs font-normal text-muted">{vehicle.fuel} · {vehicle.power} CV · {vehicle.transmission || "Cambio por confirmar"}</span></th>
+            <th className="min-w-64 px-4 py-4 font-semibold text-ink"><span className="block">{vehicle.version}</span><span className="mt-1 block text-xs font-normal text-muted">{vehicle.fuel} · {vehicle.power > 0 ? `${vehicle.power} CV` : "potencia por confirmar"} · {vehicle.transmission || "cambio por confirmar"}</span></th>
             <td className="px-4 py-4">{audienceLabel[offer.audience]}</td>
             <td className="font-data whitespace-nowrap px-4 py-4 font-semibold">{money(prices.withoutVat)}</td>
             <td className="font-data whitespace-nowrap px-4 py-4 font-semibold">{money(prices.withVat)}</td>

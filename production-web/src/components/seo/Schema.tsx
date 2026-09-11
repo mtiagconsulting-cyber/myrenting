@@ -64,8 +64,8 @@ export function breadcrumbSchema(items: Array<{ name: string; path: string }>, i
   return { ...(includeContext ? { "@context": "https://schema.org" } : {}), "@type": "BreadcrumbList", itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, item: absoluteUrl(item.path) })) };
 }
 
-export function itemListSchema(name: string, items: Vehicle[]) {
-  return { "@context": "https://schema.org", "@type": "ItemList", name, numberOfItems: items.length, itemListElement: items.map((vehicle, index) => ({ "@type": "ListItem", position: index + 1, url: absoluteUrl(vehiclePublicPath(vehicle)), name: `${vehicle.brand} ${vehicle.model}` })) };
+export function itemListSchema(name: string, items: Array<{ vehicle: Vehicle; offer: Offer }>) {
+  return { "@context": "https://schema.org", "@type": "CollectionPage", name, mainEntity: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map(({ vehicle, offer }, index) => ({ "@type": "ListItem", position: index + 1, url: absoluteUrl(vehiclePublicPath(vehicle)), item: { "@type": "Product", name: `${vehicle.brand} ${vehicle.model} de renting`, image: vehicle.images ? absoluteUrl(vehicle.images.card) : undefined, brand: { "@type": "Brand", name: vehicle.brand }, offers: { "@type": "Offer", price: offer.monthlyPrice, priceCurrency: "EUR", url: absoluteUrl(vehiclePublicPath(vehicle)), availability: offer.availability === "Disponible" ? "https://schema.org/InStock" : "https://schema.org/LimitedAvailability" } } })) } };
 }
 
 export function faqSchema(faqs: Array<{ question: string; answer: string }>) {

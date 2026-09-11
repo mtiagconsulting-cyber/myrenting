@@ -3,6 +3,7 @@ import { VehicleGrid } from "@/components/vehicles/VehicleGrid";
 import { offers, inventoryUpdatedAt } from "@/data/offers";
 import { vehicles } from "@/data/vehicles";
 import { canonicalVehicles, vehiclesInSameGroup } from "@/lib/vehicle-groups";
+import { offerPriceExVat } from "@/lib/offer-pricing";
 
 const targets: Record<string, {
   eyebrow: string;
@@ -96,9 +97,9 @@ export function PriorityArticleContent({ slug }: { slug: string }) {
   const candidates = target.filter ? vehicles.filter(target.filter) : vehicles;
   const listings = canonicalVehicles(candidates).flatMap((vehicle) => {
     const ids = new Set(vehiclesInSameGroup(vehicle, candidates).map((item) => item.id));
-    const offer = offers.filter((item) => ids.has(item.vehicleId)).sort((a, b) => a.monthlyPrice - b.monthlyPrice)[0];
+    const offer = offers.filter((item) => ids.has(item.vehicleId)).sort((a, b) => offerPriceExVat(a) - offerPriceExVat(b))[0];
     return offer ? [{ vehicle, offer }] : [];
-  }).sort((a, b) => a.offer.monthlyPrice - b.offer.monthlyPrice).slice(0, 6);
+  }).sort((a, b) => offerPriceExVat(a.offer) - offerPriceExVat(b.offer)).slice(0, 6);
   const updated = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric" }).format(new Date(inventoryUpdatedAt));
 
   return <>

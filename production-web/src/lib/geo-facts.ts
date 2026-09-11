@@ -4,6 +4,7 @@ import { getLandingPairs, type SeoLanding } from "@/lib/seo-landing-engine";
 import { vehiclePublicPath } from "@/lib/vehicle-groups";
 import type { Offer } from "@/types/offer";
 import type { Vehicle } from "@/types/vehicle";
+import { offerPriceExVat, offerPriceIncVat } from "@/lib/offer-pricing";
 
 export interface GeoRankingRow {
   name: string;
@@ -21,6 +22,8 @@ export interface GeoRankingRow {
 
 export interface GeoFacts {
   minimumPrice: number;
+  minimumPriceExVat: number;
+  minimumPriceIncVat: number;
   maximumPrice: number;
   averagePrice: number;
   cheapestVehicle: string;
@@ -73,6 +76,8 @@ export function generateGeoFacts(landing: Pick<SeoLanding, "filters">): GeoFacts
   const first = sorted[0];
   return {
     minimumPrice: Math.min(...prices),
+    minimumPriceExVat: Math.min(...pairs.map(({ offer }) => offerPriceExVat(offer))),
+    minimumPriceIncVat: Math.min(...pairs.map(({ offer }) => offerPriceIncVat(offer))),
     maximumPrice: Math.max(...prices),
     averagePrice: Math.round(prices.reduce((sum, value) => sum + value, 0) / prices.length),
     cheapestVehicle: `${first.vehicle.brand} ${first.vehicle.model} ${first.vehicle.version}`,

@@ -18,6 +18,12 @@ const vehiclePageSource = await readFile(new URL("src/app/coches/[slug]/page.tsx
 const layoutSource = await readFile(new URL("src/app/layout.tsx", root), "utf8");
 const notFoundSource = await readFile(new URL("src/app/not-found.tsx", root), "utf8");
 const priorityArticleSource = await readFile(new URL("src/components/editorial/PriorityArticleContent.tsx", root), "utf8");
+const homeSource = await readFile(new URL("src/app/page.tsx", root), "utf8");
+const listingSource = await readFile(new URL("src/components/seo/SeoListingPage.tsx", root), "utf8");
+const cardSource = await readFile(new URL("src/components/vehicles/VehicleCard.tsx", root), "utf8");
+const pricingSource = await readFile(new URL("src/lib/offer-pricing.ts", root), "utf8");
+const csvSource = await readFile(new URL("src/app/informes/renting-espana-2026/datos.csv/route.ts", root), "utf8");
+const landingEngineSource = await readFile(new URL("src/lib/seo-landing-engine.ts", root), "utf8");
 
 const canonicalRoutes = new Set([
   "/renting", "/coches",
@@ -122,4 +128,31 @@ test("las páginas editoriales prioritarias muestran inventario vivo y CTA", () 
   for (const slug of ["renting-electrico-2026.html", "renting-barato-2026.html", "mejores-coches-renting-2026.html", "que-incluye-renting-coche.html", "renting-autonomos-deduccion-2026.html", "renting-vs-leasing-diferencias-2026.html"]) assert.match(priorityArticleSource, new RegExp(slug.replaceAll(".", "\\.")));
   assert.match(priorityArticleSource, /inventoryUpdatedAt/);
   assert.match(priorityArticleSource, /VehicleGrid/);
+});
+
+test("los precios SEO se comparan con y sin IVA mediante una única regla", () => {
+  assert.match(pricingSource, /offerPriceExVat/);
+  assert.match(pricingSource, /offerPriceIncVat/);
+  assert.match(rentingPageSource, /sin IVA/);
+  assert.match(rentingPageSource, /con IVA/);
+  assert.match(listingSource, /minimumPriceExVat/);
+  assert.match(listingSource, /minimumPriceIncVat/);
+  assert.doesNotMatch(landingEngineSource, /\$\{title\}[^`]+\| MyRenting/);
+  assert.doesNotMatch(vehiclePageSource, /const title = `[^`]+\| MyRenting/);
+});
+
+test("las tarjetas no publican cero caballos como dato real", () => {
+  assert.match(cardSource, /vehicle\.power > 0/);
+  assert.doesNotMatch(cardSource, />\{vehicle\.power\} CV</);
+});
+
+test("la home enlaza directamente las oportunidades detectadas en Search Console", () => {
+  for (const path of ["/renting/kia/niro", "/renting/peugeot/208", "/renting/bmw/serie-1", "/renting/hyundai/tucson", "/renting/volkswagen/t-roc", "/renting/nissan/qashqai"]) assert.match(homeSource, new RegExp(path));
+  assert.match(homeSource, /Marcos Automoción/);
+});
+
+test("el informe ofrece datos reutilizables y distingue ambos precios", () => {
+  assert.match(csvSource, /precio_sin_iva/);
+  assert.match(csvSource, /precio_con_iva/);
+  assert.match(csvSource, /offer\.provider/);
 });
