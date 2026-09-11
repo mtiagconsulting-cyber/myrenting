@@ -15,7 +15,7 @@ export function VehicleDetail({ vehicle, offer, offers, variants, summary }: { v
         <div className="mb-5 flex flex-wrap items-center gap-2"><Badge tone="brand">{vehicle.fuel}</Badge><Badge>{vehicle.bodyType}</Badge><Badge>{vehicle.label}</Badge></div>
         <p className="text-sm font-bold text-muted">{vehicle.brand}</p>
         <h1 className="font-display mt-1 text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">{vehicle.model}</h1>
-        <p className="mt-3 text-sm font-semibold text-copy">{vehicle.version} · {vehicle.fuel} · {vehicle.power} CV · {vehicle.transmission}</p>
+        <p className="mt-3 text-sm font-semibold text-copy">{vehicle.version} · {vehicle.fuel} · {vehicle.power > 0 ? `${vehicle.power} CV` : "potencia por confirmar"} · {vehicle.transmission || "cambio por confirmar"}</p>
         {variants.length > 1 ? <div className="mt-5"><p className="text-[0.625rem] font-bold tracking-wide text-muted uppercase">Motorizaciones disponibles</p><div className="mt-2 flex flex-wrap gap-2">{variants.map((variant) => <Link key={variant.id} href={vehiclePublicPath(variant)} className={`rounded-full border px-4 py-2 text-xs font-bold ${variant.id === vehicle.id ? "border-ink bg-ink text-white" : "border-line bg-white text-copy hover:border-brand"}`}>{variant.version} · {variant.fuel} · {variant.power} CV</Link>)}</div></div> : null}
         {vehicle.colors?.length ? <p className="mt-4 text-xs text-muted"><strong className="text-copy">Color:</strong> {vehicle.colors.join(", ")}</p> : null}
         <p className="mt-5 max-w-2xl text-base leading-7 text-muted">{summary}</p>

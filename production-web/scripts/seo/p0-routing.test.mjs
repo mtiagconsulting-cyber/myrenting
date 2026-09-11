@@ -21,6 +21,8 @@ const priorityArticleSource = await readFile(new URL("src/components/editorial/P
 const homeSource = await readFile(new URL("src/app/page.tsx", root), "utf8");
 const listingSource = await readFile(new URL("src/components/seo/SeoListingPage.tsx", root), "utf8");
 const cardSource = await readFile(new URL("src/components/vehicles/VehicleCard.tsx", root), "utf8");
+const detailSource = await readFile(new URL("src/components/vehicles/VehicleDetail.tsx", root), "utf8");
+const comparisonSource = await readFile(new URL("src/components/comparison/ComparisonTable.tsx", root), "utf8");
 const pricingSource = await readFile(new URL("src/lib/offer-pricing.ts", root), "utf8");
 const csvSource = await readFile(new URL("src/app/informes/renting-espana-2026/datos.csv/route.ts", root), "utf8");
 const landingEngineSource = await readFile(new URL("src/lib/seo-landing-engine.ts", root), "utf8");
@@ -144,6 +146,8 @@ test("los precios SEO se comparan con y sin IVA mediante una única regla", () =
 test("las tarjetas no publican cero caballos como dato real", () => {
   assert.match(cardSource, /vehicle\.power > 0/);
   assert.doesNotMatch(cardSource, />\{vehicle\.power\} CV</);
+  assert.match(detailSource, /vehicle\.power > 0/);
+  assert.match(comparisonSource, /vehicle\.power > 0/);
 });
 
 test("la home enlaza directamente las oportunidades detectadas en Search Console", () => {

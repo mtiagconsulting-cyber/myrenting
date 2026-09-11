@@ -11,7 +11,7 @@ const rows: Row[] = [
   { group: "Renting", label: "Duración", value: ({ offer }) => `${offer.duration} meses` },
   { group: "Renting", label: "Kilómetros", value: ({ offer }) => `${offer.kilometers.toLocaleString("es-ES")} km/año` },
   { group: "Vehículo", label: "Motor", value: ({ vehicle }) => vehicle.fuel },
-  { group: "Vehículo", label: "Potencia", value: ({ vehicle }) => `${vehicle.power} CV` },
+  { group: "Vehículo", label: "Potencia", value: ({ vehicle }) => vehicle.power > 0 ? `${vehicle.power} CV` : "Consultar" },
   { group: "Vehículo", label: "Consumo", value: ({ vehicle }) => vehicle.consumption === null ? "Consultar" : `${vehicle.consumption.toLocaleString("es-ES")} ${vehicle.consumptionUnit}` },
   { group: "Vehículo", label: "Maletero", value: ({ vehicle }) => vehicle.trunk === null ? "Consultar" : `${vehicle.trunk} litros` },
   { group: "Vehículo", label: "Etiqueta DGT", value: ({ vehicle }) => vehicle.label },
