@@ -103,6 +103,13 @@ test("las URLs P2 duplicadas redirigen sin parámetros a destinos canónicos vig
   for (const { destination } of p2) assert.ok(!destination.includes("?"));
 });
 
+test("las landings geográficas antiguas consolidan autoridad en el catálogo indexable", () => {
+  const redirects = [...p0, ...p1];
+  for (const city of ["madrid", "barcelona", "valencia", "malaga", "bilbao", "zaragoza", "alicante"]) {
+    assert.ok(redirects.some(({ source, destination }) => source === `/renting-${city}.html` && destination === "/renting"));
+  }
+});
+
 test("las landings históricas de marca, modelo y ciudad no terminan en 404", () => {
   assert.match(middlewareSource, /function legacyBrandDestination/);
   for (const brand of ["bmw", "seat", "nissan", "hyundai", "mercedes-benz", "volkswagen", "mazda"]) {

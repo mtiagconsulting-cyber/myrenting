@@ -55,13 +55,16 @@ Estados: `HECHO`, `SIGUIENTE`, `PENDIENTE`. Cada acción debe cerrarse solo desp
 | 049 | P2 | PREPARADO | Benchmark | 100 consultas, plantilla y calculadora AI Share of Voice | Faltan 300 observaciones reales | AI Share of Voice |
 | 050 | P3 | PREPARADO | Experimentos | Registro de answer-first, tablas y fuentes por cohortes | Requiere dos ciclos mensuales | Mejora continua |
 | 051 | P2 | HECHO | URLs históricas P2 | Consolidar 91 facetas, alias de marca/modelo e IDs antiguos mediante 301 directo | Destinos vigentes, sin parámetros ni cadenas; 11 pruebas superadas | Reduce duplicidad y señales canonical ambiguas |
+| 052 | P1 | HECHO | Consulta `renting coches` | Consolidar 7 landings geográficas antiguas en `/renting` y diferenciar la home como comparador | GSC: 4.090 impresiones repartidas entre 6 URLs; 12 pruebas y auditor SEO superadas | Concentrar autoridad en una URL indexable |
 
 ## Cierre operativo
 
 1. Despliegue y recepción de `traffic_attribution` verificados en `myrenting.es` el 10/09/2026.
 2. `generate_lead` recibido y marcado como evento clave en GA4 el 10/09/2026.
 3. Validación del grupo de 583 respuestas 404 iniciada en Search Console el 10/09/2026 tras publicar las redirecciones de landings históricas de marca/modelo/ciudad.
-4. El lote P2 de 91 URLs duplicadas está corregido en código y pendiente de despliegue y validación en Search Console.
-5. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
-6. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
-7. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.
+4. El lote P2 de 91 URLs duplicadas fue desplegado el 11/09/2026 y queda pendiente de que Google renueve sus informes.
+5. Validaciones de canonical distinto (3), bloqueo por robots (7) y `noindex` (5) iniciadas en Search Console el 11/09/2026.
+6. Search Console muestra 4.090 impresiones y 3 clics para `renting coches` en 28 días, posición media 17; la demanda histórica se consolidó en `/renting`.
+7. Completar `sameAs` y NAP cuando existan perfiles oficiales y dirección comercial confirmados.
+8. Ejecutar mensualmente las 100 consultas del benchmark y registrar 300 observaciones reales.
+9. Mantener los experimentos P3 por ciclos; no son un bloqueo para publicar.

@@ -5,16 +5,16 @@
     {
       "url": "/renting-madrid.html",
       "action": "301",
-      "destination": "/renting/madrid",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "3",
       "impressions": "3094"
     },
     {
       "url": "/renting-barcelona.html",
       "action": "301",
-      "destination": "/renting/barcelona",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "5",
       "impressions": "2354"
     },
@@ -37,8 +37,8 @@
     {
       "url": "/renting-valencia.html",
       "action": "301",
-      "destination": "/renting/valencia",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "4",
       "impressions": "1335"
     },
@@ -85,8 +85,8 @@
     {
       "url": "/renting-malaga.html",
       "action": "301",
-      "destination": "/renting/malaga",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "1",
       "impressions": "568"
     },
@@ -605,8 +605,8 @@
     {
       "url": "/renting-bilbao.html",
       "action": "301",
-      "destination": "/renting/bilbao",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "0",
       "impressions": "69"
     },
@@ -1205,8 +1205,8 @@
     {
       "url": "/renting-zaragoza.html",
       "action": "301",
-      "destination": "/renting/zaragoza",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "0",
       "impressions": "29"
     },

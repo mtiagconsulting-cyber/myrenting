@@ -149,7 +149,7 @@
   },
   {
     "source": "/renting-barcelona.html",
-    "destination": "/renting/barcelona"
+    "destination": "/renting"
   },
   {
     "source": "/renting-berlina.html",
@@ -157,7 +157,7 @@
   },
   {
     "source": "/renting-bilbao.html",
-    "destination": "/renting/bilbao"
+    "destination": "/renting"
   },
   {
     "source": "/renting-bmw-120d.html",
@@ -741,11 +741,11 @@
   },
   {
     "source": "/renting-madrid.html",
-    "destination": "/renting/madrid"
+    "destination": "/renting"
   },
   {
     "source": "/renting-malaga.html",
-    "destination": "/renting/malaga"
+    "destination": "/renting"
   },
   {
     "source": "/renting-mazda-barcelona.html",
@@ -1241,7 +1241,7 @@
   },
   {
     "source": "/renting-valencia.html",
-    "destination": "/renting/valencia"
+    "destination": "/renting"
   },
   {
     "source": "/renting-volkswagen-golf.html",
@@ -1313,7 +1313,7 @@
   },
   {
     "source": "/renting-zaragoza.html",
-    "destination": "/renting/zaragoza"
+    "destination": "/renting"
   },
   {
     "source": "/renting/byd/atto-2/sin-entrada",

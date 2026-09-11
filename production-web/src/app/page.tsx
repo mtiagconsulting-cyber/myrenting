@@ -12,8 +12,8 @@ import { getComparison, popularComparisonSlugs } from "@/lib/comparison";
 import { canonicalVehicles, vehicleModelKey } from "@/lib/vehicle-groups";
 
 export const metadata: Metadata = {
-  title: "Renting de coches para particulares, autónomos y empresas | MyRenting",
-  description: `Compara ${vehicles.length} vehículos y ${offers.length.toLocaleString("es-ES")} combinaciones reales de renting por cuota, plazo, kilómetros, IVA y coberturas en España.`,
+  title: "Comparador de renting para particulares y empresas | MyRenting",
+  description: `Compara ${vehicles.length} vehículos y ${offers.length.toLocaleString("es-ES")} cuotas reales de renting para particulares, autónomos y empresas. Precio, plazo, kilómetros, IVA y coberturas.`,
   alternates: { canonical: "/" },
   openGraph: { title: "Renting de coches con cuotas y condiciones claras | MyRenting", description: "Compara ofertas para particulares, autónomos y empresas por precio, plazo, kilómetros, IVA y servicios incluidos.", url: "/" },
 };
@@ -36,9 +36,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14 lg:py-18">
           <div className="max-w-3xl">
             <p className="mb-4 text-xs font-bold tracking-[0.12em] text-brand uppercase">Comparador independiente</p>
-            <h1 className="font-display text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">Encuentra tu renting ideal</h1>
+            <h1 className="font-display text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">Compara ofertas de renting</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-              Comparamos ofertas reales, condiciones y vehículos para ayudarte a elegir mejor.
+              Encuentra el coche que encaja contigo comparando cuota, entrada, plazo, kilómetros, IVA y coberturas.
             </p>
           </div>
 
@@ -62,12 +62,12 @@ export default function HomePage() {
               <h2 className="font-display mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink">Los coches de renting más baratos</h2>
               <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">Las cuotas más competitivas del inventario, ordenadas por precio con IVA y sin IVA.</p>
             </div>
-            <Link href="/coches" className="hidden items-center gap-2 text-sm font-bold text-ink sm:flex">Ver coches <ArrowRight size={16} aria-hidden="true" /></Link>
+            <Link href="/renting" className="hidden items-center gap-2 text-sm font-bold text-ink sm:flex">Comparar renting de coches <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {cheapestVehicles.map((item) => <VehicleCard key={item.vehicle.id} vehicle={item.vehicle} offer={item.offer} />)}
           </div>
-          <Link href="/coches" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-5 text-sm font-bold text-white hover:bg-brand-hover">Ver todos los coches <ArrowRight size={16} aria-hidden="true" /></Link>
+          <Link href="/renting" className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-5 text-sm font-bold text-white hover:bg-brand-hover">Comparar todos los coches de renting <ArrowRight size={16} aria-hidden="true" /></Link>
         </section>
         <section className="grid gap-7 lg:grid-cols-[0.58fr_1fr] lg:items-start">
           <div className="lg:sticky lg:top-26">

@@ -3486,8 +3486,8 @@
     {
       "url": "/renting-alicante.html",
       "action": "301",
-      "destination": "/renting/alicante",
-      "reason": "ciudad canónica existente",
+      "destination": "/renting",
+      "reason": "consolidación de demanda genérica en el catálogo indexable",
       "clicks": "1",
       "impressions": "6"
     },
