@@ -26,6 +26,8 @@ const comparisonSource = await readFile(new URL("src/components/comparison/Compa
 const pricingSource = await readFile(new URL("src/lib/offer-pricing.ts", root), "utf8");
 const csvSource = await readFile(new URL("src/app/informes/renting-espana-2026/datos.csv/route.ts", root), "utf8");
 const landingEngineSource = await readFile(new URL("src/lib/seo-landing-engine.ts", root), "utf8");
+const reportSource = await readFile(new URL("src/app/informes/renting-espana-2026/page.tsx", root), "utf8");
+const snapshotSource = await readFile(new URL("scripts/seo/snapshot-market.mjs", root), "utf8");
 
 const canonicalRoutes = new Set([
   "/renting", "/coches",
@@ -159,4 +161,8 @@ test("el informe ofrece datos reutilizables y distingue ambos precios", () => {
   assert.match(csvSource, /precio_sin_iva/);
   assert.match(csvSource, /precio_con_iva/);
   assert.match(csvSource, /offer\.provider/);
+  assert.match(reportSource, /datos\.csv/);
+  assert.match(reportSource, /providerNames/);
+  assert.doesNotMatch(reportSource, /Datos propios · Agosto de 2026/);
+  assert.match(snapshotSource, /normalizeBrand/);
 });

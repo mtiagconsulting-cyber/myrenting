@@ -235,13 +235,13 @@
           "median": 384.1
         },
         {
-          "brand": "OPEL",
+          "brand": "Opel",
           "offers": 440,
           "minimum": 229,
           "median": 345
         },
         {
-          "brand": "NISSAN",
+          "brand": "Nissan",
           "offers": 380,
           "minimum": 315,
           "median": 427
@@ -253,13 +253,13 @@
           "median": 419.99
         },
         {
-          "brand": "EBRO",
+          "brand": "Ebro",
           "offers": 225,
           "minimum": 362.95,
           "median": 546
         },
         {
-          "brand": "KIA",
+          "brand": "Kia",
           "offers": 202,
           "minimum": 315,
           "median": 552
@@ -307,13 +307,13 @@
           "median": 506
         },
         {
-          "brand": "PEUGEOT",
+          "brand": "Peugeot",
           "offers": 125,
           "minimum": 230,
           "median": 353
         },
         {
-          "brand": "AUDI",
+          "brand": "Audi",
           "offers": 120,
           "minimum": 315,
           "median": 387
@@ -361,16 +361,16 @@
           "median": 405.72
         },
         {
+          "brand": "Alfa Romeo",
+          "offers": 60,
+          "minimum": 365,
+          "median": 473
+        },
+        {
           "brand": "LANCIA",
           "offers": 45,
           "minimum": 309,
           "median": 379
-        },
-        {
-          "brand": "ALFA ROMEO",
-          "offers": 45,
-          "minimum": 365,
-          "median": 456
         },
         {
           "brand": "MG",
@@ -383,12 +383,6 @@
           "offers": 45,
           "minimum": 519,
           "median": 649
-        },
-        {
-          "brand": "ALFA-ROMEO",
-          "offers": 15,
-          "minimum": 442,
-          "median": 512
         }
       ]
     }

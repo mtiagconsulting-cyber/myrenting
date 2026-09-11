@@ -14,10 +14,12 @@ if (!/^\d{4}-\d{2}$/.test(period)) throw new Error("Usa --period=AAAA-MM");
 function median(values) { const sorted = [...values].sort((a, b) => a - b); return sorted.length ? sorted[Math.floor(sorted.length / 2)] : 0; }
 function stats(list) { const values = list.map((offer) => offer.monthlyPrice); return { offers: list.length, minimum: values.length ? Math.min(...values) : 0, median: median(values), maximum: values.length ? Math.max(...values) : 0 }; }
 
+const normalizeBrand = (value) => value.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase().replace(/[^a-z0-9]+/g, "");
 const brandGroups = new Map();
 for (const vehicle of vehicles) {
-  const key = vehicle.brand.toLocaleLowerCase("es");
+  const key = normalizeBrand(vehicle.brand);
   if (!brandGroups.has(key)) brandGroups.set(key, { brand: vehicle.brand, ids: new Set() });
+  else if (brandGroups.get(key).brand === brandGroups.get(key).brand.toUpperCase() && vehicle.brand !== vehicle.brand.toUpperCase()) brandGroups.get(key).brand = vehicle.brand;
   brandGroups.get(key).ids.add(vehicle.id);
 }
 const brands = [...brandGroups.values()].map((group) => {

@@ -12,6 +12,7 @@ const targets: Record<string, {
   description: string;
   categoryHref: string;
   categoryLabel: string;
+  relatedModels?: Array<{ label: string; href: string }>;
   filter?: (vehicle: (typeof vehicles)[number]) => boolean;
 }> = {
   "renting-electrico-2026.html": {
@@ -30,6 +31,7 @@ const targets: Record<string, {
     description: "Una cuota baja solo es realmente barata cuando comparas el mismo perfil, IVA, entrada, duración y kilómetros. Estas son las opciones activas de menor precio.",
     categoryHref: "/renting/menos-de-300-euros",
     categoryLabel: "Ver renting por menos de 300 €",
+    relatedModels: [{ label: "Renting Peugeot 208", href: "/renting/peugeot/208" }, { label: "Renting Opel Corsa", href: "/renting/opel/corsa" }, { label: "Renting Dacia Sandero", href: "/renting/dacia/sandero" }, { label: "Renting SEAT Ibiza", href: "/renting/seat/ibiza" }],
   },
   "mejores-coches-renting-2026.html": {
     eyebrow: "Selección por calidad y precio",
@@ -38,6 +40,7 @@ const targets: Record<string, {
     description: "No existe un único coche mejor para todos. Esta selección prioriza cuotas competitivas y permite continuar hacia el inventario real para revisar versión, plazo, kilometraje e IVA.",
     categoryHref: "/renting",
     categoryLabel: "Comparar todos los coches",
+    relatedModels: [{ label: "Renting Kia Niro", href: "/renting/kia/niro" }, { label: "Renting Peugeot 208", href: "/renting/peugeot/208" }, { label: "Renting Hyundai Tucson", href: "/renting/hyundai/tucson" }, { label: "Renting Nissan Qashqai", href: "/renting/nissan/qashqai" }],
   },
   "que-incluye-renting-coche.html": {
     eyebrow: "Condiciones del contrato",
@@ -62,6 +65,7 @@ const targets: Record<string, {
     description: "La mejor opción depende del espacio, uso, motorización y presupuesto. La selección se calcula con los SUV que tienen una campaña activa en Myrenting.",
     categoryHref: "/renting/suv",
     categoryLabel: "Comparar todos los SUV",
+    relatedModels: [{ label: "Renting Kia Niro", href: "/renting/kia/niro" }, { label: "Renting Hyundai Tucson", href: "/renting/hyundai/tucson" }, { label: "Renting Volkswagen T-Roc", href: "/renting/volkswagen/t-roc" }, { label: "Renting Nissan Qashqai", href: "/renting/nissan/qashqai" }],
     filter: (vehicle) => vehicle.bodyType === "SUV",
   },
   "renting-autonomos-deduccion-2026.html": {
@@ -112,6 +116,7 @@ export function PriorityArticleContent({ slug }: { slug: string }) {
         <p><strong className="text-ink">Confirma la disponibilidad.</strong> El stock y las campañas pueden cambiar antes de formalizar el contrato.</p>
       </div>
       <p className="mt-4 text-xs text-muted">Ofertas revisadas el <time dateTime={inventoryUpdatedAt}>{updated}</time>.</p>
+      {target.relatedModels?.length ? <nav aria-label="Modelos relacionados" className="mt-6 flex flex-wrap gap-2">{target.relatedModels.map((item) => <Link key={item.href} href={item.href} className="rounded-full border border-line bg-surface px-4 py-2 text-xs font-bold text-copy hover:border-brand hover:text-brand">{item.label}</Link>)}</nav> : null}
     </section>
     {slug === "que-incluye-renting-coche.html" ? <IncludedGuide /> : <>
     {slug === "renting-particulares-guia-2026.html" ? <ParticularGuide /> : null}
