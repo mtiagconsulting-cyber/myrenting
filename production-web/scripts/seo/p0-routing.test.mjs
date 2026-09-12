@@ -18,6 +18,7 @@ const vehiclePageSource = await readFile(new URL("src/app/coches/[slug]/page.tsx
 const layoutSource = await readFile(new URL("src/app/layout.tsx", root), "utf8");
 const notFoundSource = await readFile(new URL("src/app/not-found.tsx", root), "utf8");
 const priorityArticleSource = await readFile(new URL("src/components/editorial/PriorityArticleContent.tsx", root), "utf8");
+const blogPageSource = await readFile(new URL("src/app/blog/[slug]/page.tsx", root), "utf8");
 const homeSource = await readFile(new URL("src/app/page.tsx", root), "utf8");
 const listingSource = await readFile(new URL("src/components/seo/SeoListingPage.tsx", root), "utf8");
 const cardSource = await readFile(new URL("src/components/vehicles/VehicleCard.tsx", root), "utf8");
@@ -155,6 +156,15 @@ test("las tarjetas no publican cero caballos como dato real", () => {
 test("la home enlaza directamente las oportunidades detectadas en Search Console", () => {
   for (const path of ["/renting/kia/niro", "/renting/peugeot/208", "/renting/bmw/serie-1", "/renting/hyundai/tucson", "/renting/volkswagen/t-roc", "/renting/nissan/qashqai"]) assert.match(homeSource, new RegExp(path));
   assert.match(homeSource, /Marcos Automoción/);
+});
+
+test("las páginas con oportunidad en Search Console tienen snippets, FAQ y enlaces específicos", () => {
+  for (const path of ["/renting", "/renting/kia/niro", "/renting/peugeot/208", "/renting/suv"]) assert.match(rentingPageSource, new RegExp(path.replaceAll("/", "\\/")));
+  for (const phrase of ["Renting coches desde", "Renting Kia Niro desde", "Renting Peugeot 208 desde", "Renting SUV desde"]) assert.match(rentingPageSource, new RegExp(phrase));
+  assert.match(rentingPageSource, /priorityFaqs/);
+  assert.match(rentingPageSource, /priority\?\.links/);
+  assert.match(priorityArticleSource, /¿Cuál es el coche de renting más barato\?/);
+  assert.match(blogPageSource, /faqSchema\(priorityFaqs\)/);
 });
 
 test("el informe ofrece datos reutilizables y distingue ambos precios", () => {

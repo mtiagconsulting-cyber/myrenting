@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FAQ } from "@/components/seo/FAQ";
 import { VehicleGrid } from "@/components/vehicles/VehicleGrid";
 import { offers, inventoryUpdatedAt } from "@/data/offers";
 import { vehicles } from "@/data/vehicles";
@@ -13,6 +14,7 @@ const targets: Record<string, {
   categoryHref: string;
   categoryLabel: string;
   relatedModels?: Array<{ label: string; href: string }>;
+  faqs?: Array<{ question: string; answer: string }>;
   filter?: (vehicle: (typeof vehicles)[number]) => boolean;
 }> = {
   "renting-electrico-2026.html": {
@@ -32,6 +34,11 @@ const targets: Record<string, {
     categoryHref: "/renting/menos-de-300-euros",
     categoryLabel: "Ver renting por menos de 300 €",
     relatedModels: [{ label: "Renting Peugeot 208", href: "/renting/peugeot/208" }, { label: "Renting Opel Corsa", href: "/renting/opel/corsa" }, { label: "Renting Dacia Sandero", href: "/renting/dacia/sandero" }, { label: "Renting SEAT Ibiza", href: "/renting/seat/ibiza" }],
+    faqs: [
+      { question: "¿Cuál es el coche de renting más barato?", answer: "La oferta más barata cambia con el inventario. Compara siempre cuota con y sin IVA, entrada, plazo y kilómetros antes de decidir." },
+      { question: "¿Un renting barato incluye seguro y mantenimiento?", answer: "Depende de la campaña. Comprueba en la ficha y en el contrato qué seguro, mantenimiento, neumáticos y asistencia están incluidos." },
+      { question: "¿Hay renting barato sin entrada?", answer: "Sí existen campañas sin entrada, pero no todas las cuotas bajas lo son. Revisa el pago inicial y el coste total bajo las mismas condiciones." },
+    ],
   },
   "mejores-coches-renting-2026.html": {
     eyebrow: "Selección por calidad y precio",
@@ -128,7 +135,12 @@ export function PriorityArticleContent({ slug }: { slug: string }) {
       <VehicleGrid items={listings} />
     </section></>}
     <section className="mx-auto mb-14 max-w-4xl px-5 sm:px-8"><div className="rounded-xl bg-ink p-6 text-white sm:flex sm:items-center sm:justify-between sm:gap-6"><div><h2 className="font-display text-2xl font-semibold">Continúa con ofertas disponibles</h2><p className="mt-2 text-sm text-slate-300">Revisa la versión concreta, cuota, entrada, plazo y kilómetros antes de solicitar información.</p></div><Link href={target.categoryHref} className="mt-5 inline-flex shrink-0 rounded-lg bg-brand px-5 py-3 text-sm font-bold text-white sm:mt-0">{target.categoryLabel}</Link></div></section>
+    {target.faqs?.length ? <section className="mx-auto mb-14 max-w-4xl px-5 sm:px-8"><FAQ items={target.faqs} /></section> : null}
   </>;
+}
+
+export function priorityArticleFaqs(slug: string) {
+  return targets[slug]?.faqs ?? [];
 }
 
 function ParticularGuide() {
