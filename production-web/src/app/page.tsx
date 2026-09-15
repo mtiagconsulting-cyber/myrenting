@@ -10,6 +10,8 @@ import { vehicles } from "@/data/vehicles";
 import { brands } from "@/data/vehicles";
 import { getComparison, popularComparisonSlugs } from "@/lib/comparison";
 import { canonicalVehicles, vehicleModelKey } from "@/lib/vehicle-groups";
+import { AssistedSearchCTA } from "@/components/leads/AssistedSearchCTA";
+import { assistedSearchVehicleOptions } from "@/lib/assisted-search";
 
 export const metadata: Metadata = {
   title: "Comparador de renting para particulares y empresas | MyRenting",
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const assistedSearchOptions = assistedSearchVehicleOptions();
   const popularComparisons = popularComparisonSlugs.map((slug) => ({ slug, comparison: getComparison(slug) })).filter((item) => item.comparison !== null);
   const cheapestVehicles = canonicalVehicles(vehicles).flatMap((vehicle) => {
     const modelKey = vehicleModelKey(vehicle);
@@ -54,6 +57,7 @@ export default function HomePage() {
       </section>
 
       <div className="mx-auto max-w-7xl space-y-16 px-5 py-12 sm:px-8 sm:py-16 lg:space-y-22">
+        <AssistedSearchCTA context={{ sourcePage: "/" }} catalogue={assistedSearchOptions} />
         <nav aria-label="Búsquedas frecuentes" className="flex flex-wrap gap-2">{[{label:"Sin entrada",href:"/renting/sin-entrada"},{label:"Menos de 300 €",href:"/renting/menos-de-300-euros"},{label:"Menos de 500 €",href:"/renting/menos-de-500-euros"},{label:"Para autónomos",href:"/renting/autonomos"},{label:"Entrega disponible",href:"/renting/entrega-inmediata"}].map((item)=><Link key={item.href} href={item.href} className="rounded-full border border-line bg-surface px-4 py-2.5 text-xs font-bold text-copy hover:border-brand hover:text-brand">{item.label}</Link>)}</nav>
         <nav aria-label="Modelos de renting más consultados" className="rounded-xl border border-line bg-surface p-5">
           <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Modelos más consultados</p>

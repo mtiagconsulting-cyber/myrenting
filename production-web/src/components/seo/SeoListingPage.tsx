@@ -13,6 +13,8 @@ import type { SeoLandingStats } from "@/lib/seo-landing-engine";
 import type { SeoLanding } from "@/lib/seo-landing-engine";
 import type { GeoFacts } from "@/lib/geo-facts";
 import { inventoryUpdatedAt } from "@/data/offers";
+import { AssistedSearchCTA } from "@/components/leads/AssistedSearchCTA";
+import { assistedSearchVehicleOptions } from "@/lib/assisted-search";
 
 interface Props {
   heading: string;
@@ -31,6 +33,8 @@ interface Props {
 }
 
 export function SeoListingPage({ heading, summary, idealFor, canonical, items, faqs, audience, offerFilter, relatedLinks = [], breadcrumbs, stats, landing, geoFacts }: Props) {
+  const assistedSearchModels = new Set(["/renting/kia/niro", "/renting/peugeot/208", "/renting/bmw/serie-1", "/renting/hyundai/tucson", "/renting/volkswagen/t-roc", "/renting/nissan/qashqai"]);
+  const showAssistedSearch = canonical === "/renting" || assistedSearchModels.has(canonical);
   const editorialLinks: Record<string, { label: string; href: string }> = {
     "/renting/electricos": { label: "Guía de renting eléctrico 2026", href: "/blog/renting-electrico-2026.html" },
     "/renting/menos-de-300-euros": { label: "Cómo comparar renting barato", href: "/blog/renting-barato-2026.html" },
@@ -84,6 +88,7 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
         <div className="mb-6"><h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink">Ofertas para comparar</h2><p className="mt-2 text-xs text-muted">Inventario recopilado de fuentes de proveedor y separado por tipo de cliente.</p></div>
         <VehicleGrid items={listings} />
       </section>
+      {showAssistedSearch ? <section className="mb-14"><AssistedSearchCTA compact context={{ brand: landing?.type === "model" ? String(landing.dimensions.brand) : undefined, model: landing?.type === "model" ? String(landing.dimensions.model) : undefined, sourcePage: canonical }} catalogue={assistedSearchVehicleOptions()} /></section> : null}
       {landing?.type === "model" && modelOfferRows.length ? <ModelOfferComparison brand={String(landing.dimensions.brand)} model={String(landing.dimensions.model)} rows={modelOfferRows} /> : geoFacts ? <GeoComparisonTable facts={geoFacts} /> : null}
       {landing?.type === "model" && stats ? <section className="mb-14 grid gap-6 rounded-xl border border-line bg-surface p-6 sm:p-8 lg:grid-cols-[0.4fr_1fr]"><div><p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Cómo elegir</p><h2 className="font-display mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink">Qué comparar en este modelo</h2></div><div className="space-y-4 text-sm leading-7 text-copy"><p>Hay {stats.offerCount} ofertas de {String(landing.dimensions.brand)} {String(landing.dimensions.model)} de {stats.providers.length} proveedores. Antes de elegir, compara la misma versión, perfil, duración y kilometraje; una cuota inferior puede corresponder a condiciones distintas.</p><p>Las versiones disponibles utilizan {stats.fuels.join(", ").toLowerCase()} y los plazos publicados son de {stats.durations.map((value) => `${value} meses`).join(", ")}. Confirma también la entrega, el color y las coberturas directamente con el proveedor.</p></div></section> : null}
       {landing?.type !== "model" && geoFacts ? <GeoRanking facts={geoFacts} heading={heading} /> : null}
