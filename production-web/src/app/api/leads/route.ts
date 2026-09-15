@@ -55,8 +55,14 @@ async function saveAssistedSearch(body: Record<string, unknown>) {
   const id = `MR-A-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
   try {
     const { REVIEWS_DB } = reviewEnv();
-    await REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url, lead_type, search_type, brand, model, vehicle_type, budget_range, purchase_timing, source_page, referrer, utm_source, utm_medium, utm_campaign, utm_content, utm_term, legal_accepted) VALUES (?, ?, '', ?, ?, '', ?, '', ?, '', '', 0, ?, 0, 0, 0, 'email', ?, 'assisted_search', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)")
-      .bind(id, lead.name, lead.phone, lead.email, lead.customerType, [lead.brand, lead.model].filter(Boolean).join(" "), Number(lead.annualKm.replace(/\D/g, "")) || 0, lead.pageUrl, lead.searchType, lead.brand, lead.model, lead.vehicleType, lead.budgetRange, lead.purchaseTiming, lead.sourcePage, lead.referrer, lead.utmSource, lead.utmMedium, lead.utmCampaign, lead.utmContent, lead.utmTerm).run();
+    try {
+      await REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url, lead_type, search_type, brand, model, vehicle_type, budget_range, purchase_timing, source_page, referrer, utm_source, utm_medium, utm_campaign, utm_content, utm_term, legal_accepted) VALUES (?, ?, '', ?, ?, '', ?, '', ?, '', '', 0, ?, 0, 0, 0, 'email', ?, 'assisted_search', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)")
+        .bind(id, lead.name, lead.phone, lead.email, lead.customerType, [lead.brand, lead.model].filter(Boolean).join(" "), Number(lead.annualKm.replace(/\D/g, "")) || 0, lead.pageUrl, lead.searchType, lead.brand, lead.model, lead.vehicleType, lead.budgetRange, lead.purchaseTiming, lead.sourcePage, lead.referrer, lead.utmSource, lead.utmMedium, lead.utmCampaign, lead.utmContent, lead.utmTerm).run();
+    } catch {
+      const metadata = JSON.stringify({ leadType: "assisted_search", ...lead });
+      await REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url) VALUES (?, ?, '', ?, ?, '', ?, 'assisted_search', ?, 'assisted_search', 'MyRenting', 0, ?, 0, 0, 0, 'email', ?)")
+        .bind(id, lead.name, lead.phone, lead.email, lead.customerType, metadata, Number(lead.annualKm.replace(/\D/g, "")) || 0, lead.pageUrl).run();
+    }
     return NextResponse.json({ ok: true, reference: id, recommendations: assistedRecommendations(lead) });
   } catch {
     return NextResponse.json({ error: "No se pudo registrar la solicitud." }, { status: 503 });
