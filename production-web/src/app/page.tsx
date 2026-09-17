@@ -12,6 +12,7 @@ import { getComparison, popularComparisonSlugs } from "@/lib/comparison";
 import { canonicalVehicles, vehicleModelKey } from "@/lib/vehicle-groups";
 import { AssistedSearchCTA } from "@/components/leads/AssistedSearchCTA";
 import { assistedSearchVehicleOptions } from "@/lib/assisted-search";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Comparador de renting para particulares y empresas | MyRenting",
@@ -43,6 +44,14 @@ export default function HomePage() {
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
               Encuentra el coche que encaja contigo comparando cuota, entrada, plazo, kilómetros, IVA y coberturas.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <TrackedLink ctaName="home_view_all_cars" journeyStage="catalogue_entry" href="/renting" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-ink px-5 text-sm font-bold text-white hover:bg-copy">
+                Ver coches y precios <ArrowRight size={16} aria-hidden="true" />
+              </TrackedLink>
+              <TrackedLink ctaName="home_assisted_search" journeyStage="assisted_search_entry" href="#busqueda-asistida" className="inline-flex min-h-11 items-center rounded-lg border border-line bg-white px-5 text-sm font-bold text-ink hover:border-brand hover:text-brand">
+                Quiero que me ayudéis
+              </TrackedLink>
+            </div>
           </div>
 
           <div className="mt-8 rounded-xl border border-line bg-canvas p-4 shadow-card sm:p-6">
@@ -57,7 +66,7 @@ export default function HomePage() {
       </section>
 
       <div className="mx-auto max-w-7xl space-y-16 px-5 py-12 sm:px-8 sm:py-16 lg:space-y-22">
-        <AssistedSearchCTA context={{ sourcePage: "/" }} catalogue={assistedSearchOptions} />
+        <section id="busqueda-asistida" className="scroll-mt-24"><AssistedSearchCTA context={{ sourcePage: "/" }} catalogue={assistedSearchOptions} /></section>
         <nav aria-label="Búsquedas frecuentes" className="flex flex-wrap gap-2">{[{label:"Sin entrada",href:"/renting/sin-entrada"},{label:"Menos de 300 €",href:"/renting/menos-de-300-euros"},{label:"Menos de 500 €",href:"/renting/menos-de-500-euros"},{label:"Para autónomos",href:"/renting/autonomos"},{label:"Entrega disponible",href:"/renting/entrega-inmediata"}].map((item)=><Link key={item.href} href={item.href} className="rounded-full border border-line bg-surface px-4 py-2.5 text-xs font-bold text-copy hover:border-brand hover:text-brand">{item.label}</Link>)}</nav>
         <nav aria-label="Modelos de renting más consultados" className="rounded-xl border border-line bg-surface p-5">
           <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Modelos más consultados</p>

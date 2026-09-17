@@ -24,7 +24,7 @@ export function SearchEngine({ brands }: { brands: string[] }) {
     if (kilometers) params.set("kilometros", kilometers);
     if (audience) params.set("publico", audience);
 
-    trackAnalyticsEvent("search", { search_type: "home_vehicle_search", brand: brand || "all", customer_type: audience || "all", max_budget: budget ? Number(budget) : null, annual_kilometers: kilometers ? Number(kilometers) : null });
+    trackAnalyticsEvent("search", { journey_stage: "search_submit", search_type: "home_vehicle_search", brand: brand || "all", customer_type: audience || "all", max_budget: budget ? Number(budget) : null, annual_kilometers: kilometers ? Number(kilometers) : null });
     router.push(`/coches?${params.toString()}`);
   }
 

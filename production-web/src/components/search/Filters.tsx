@@ -23,7 +23,7 @@ export function Filters() {
     } else {
       params.delete(key);
     }
-    trackAnalyticsEvent("filter", { filter_name: key, filter_value: value || "cleared" });
+    trackAnalyticsEvent("filter", { journey_stage: "filter_apply", filter_name: key, filter_value: value || "cleared" });
     router.push(`/coches?${params.toString()}`, { scroll: false });
   }
 

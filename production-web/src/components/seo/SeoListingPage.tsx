@@ -15,6 +15,7 @@ import type { GeoFacts } from "@/lib/geo-facts";
 import { inventoryUpdatedAt } from "@/data/offers";
 import { AssistedSearchCTA } from "@/components/leads/AssistedSearchCTA";
 import { assistedSearchVehicleOptions } from "@/lib/assisted-search";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
 
 interface Props {
   heading: string;
@@ -68,6 +69,10 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
         <p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Guía y ofertas</p>
         <h1 className="font-display mt-3 text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">{heading}</h1>
         <p className="mt-5 max-w-3xl text-base leading-7 text-muted">{summary}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <TrackedLink ctaName="renting_view_offers" journeyStage="catalogue_entry" href="#ofertas-renting" className="inline-flex min-h-11 items-center rounded-lg bg-ink px-5 text-sm font-bold text-white hover:bg-copy">Ver coches y precios</TrackedLink>
+          {showAssistedSearch ? <TrackedLink ctaName="renting_assisted_search" journeyStage="assisted_search_entry" href="#busqueda-asistida" className="inline-flex min-h-11 items-center rounded-lg border border-line bg-white px-5 text-sm font-bold text-ink hover:border-brand hover:text-brand">Quiero que me ayudéis</TrackedLink> : null}
+        </div>
         {landing && geoFacts ? <QuickAnswer landing={landing} facts={geoFacts} /> : null}
         <dl className="mt-7 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-3">
           <div><dt className="text-xs text-muted">Ofertas disponibles</dt><dd className="font-data mt-1 text-xl font-semibold text-ink">{stats?.offerCount ?? listings.length}</dd></div>
@@ -84,11 +89,11 @@ export function SeoListingPage({ heading, summary, idealFor, canonical, items, f
         {relatedLinks.length ? <nav aria-label="Explorar esta selección" className="mt-6 flex flex-wrap gap-2">{relatedLinks.map((link) => <a key={link.href} href={link.href} className="rounded-full border border-line bg-surface px-4 py-2 text-xs font-bold text-copy hover:border-slate-300 hover:text-ink">{link.label}</a>)}</nav> : null}
         {geoFacts ? <KeyFacts facts={geoFacts} /> : null}
       </section>
-      <section className="py-12">
+      <section id="ofertas-renting" className="scroll-mt-24 py-12">
         <div className="mb-6"><h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink">Ofertas para comparar</h2><p className="mt-2 text-xs text-muted">Inventario recopilado de fuentes de proveedor y separado por tipo de cliente.</p></div>
         <VehicleGrid items={listings} />
       </section>
-      {showAssistedSearch ? <section className="mb-14"><AssistedSearchCTA compact context={{ brand: landing?.type === "model" ? String(landing.dimensions.brand) : undefined, model: landing?.type === "model" ? String(landing.dimensions.model) : undefined, sourcePage: canonical }} catalogue={assistedSearchVehicleOptions()} /></section> : null}
+      {showAssistedSearch ? <section id="busqueda-asistida" className="mb-14 scroll-mt-24"><AssistedSearchCTA compact context={{ brand: landing?.type === "model" ? String(landing.dimensions.brand) : undefined, model: landing?.type === "model" ? String(landing.dimensions.model) : undefined, sourcePage: canonical }} catalogue={assistedSearchVehicleOptions()} /></section> : null}
       {landing?.type === "model" && modelOfferRows.length ? <ModelOfferComparison brand={String(landing.dimensions.brand)} model={String(landing.dimensions.model)} rows={modelOfferRows} /> : geoFacts ? <GeoComparisonTable facts={geoFacts} /> : null}
       {landing?.type === "model" && stats ? <section className="mb-14 grid gap-6 rounded-xl border border-line bg-surface p-6 sm:p-8 lg:grid-cols-[0.4fr_1fr]"><div><p className="text-xs font-bold tracking-[0.1em] text-brand uppercase">Cómo elegir</p><h2 className="font-display mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink">Qué comparar en este modelo</h2></div><div className="space-y-4 text-sm leading-7 text-copy"><p>Hay {stats.offerCount} ofertas de {String(landing.dimensions.brand)} {String(landing.dimensions.model)} de {stats.providers.length} proveedores. Antes de elegir, compara la misma versión, perfil, duración y kilometraje; una cuota inferior puede corresponder a condiciones distintas.</p><p>Las versiones disponibles utilizan {stats.fuels.join(", ").toLowerCase()} y los plazos publicados son de {stats.durations.map((value) => `${value} meses`).join(", ")}. Confirma también la entrega, el color y las coberturas directamente con el proveedor.</p></div></section> : null}
       {landing?.type !== "model" && geoFacts ? <GeoRanking facts={geoFacts} heading={heading} /> : null}

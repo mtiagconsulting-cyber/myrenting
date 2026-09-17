@@ -85,7 +85,7 @@ export function AssistedSearchCTA({ context, catalogue, compact = false }: { con
 
   function start() {
     setOpen(true);
-    trackAnalyticsEvent("assisted_search_started", eventDetails(context, form));
+    trackAnalyticsEvent("assisted_search_started", { ...eventDetails(context, form), journey_stage: "assisted_search_start" });
   }
 
   function patch(values: Partial<FormState>) { setForm((current) => ({ ...current, ...values })); }
@@ -98,7 +98,7 @@ export function AssistedSearchCTA({ context, catalogue, compact = false }: { con
   }
   function next() {
     if (!canContinue()) return;
-    trackAnalyticsEvent(`assisted_search_step_${step}`, eventDetails(context, form));
+    trackAnalyticsEvent(`assisted_search_step_${step}`, { ...eventDetails(context, form), journey_stage: `assisted_search_step_${step}` });
     const nextStep = Math.min(step + 1, 5);
     setStep(nextStep);
     if (nextStep === 5) trackAnalyticsEvent("assisted_search_contact_view", eventDetails(context, form));
@@ -108,6 +108,7 @@ export function AssistedSearchCTA({ context, catalogue, compact = false }: { con
     event.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.email.includes("@") || !form.legal) return;
     setState("sending"); setMessage("");
+    trackAnalyticsEvent("lead_submit_attempt", { ...eventDetails(context, form), journey_stage: "lead_submit_attempt", form_name: "assisted_search" });
     const params = new URLSearchParams(window.location.search);
     let storedUtm: Record<string, string> = {};
     try { storedUtm = JSON.parse(window.sessionStorage.getItem("myrenting_utm") ?? "{}"); } catch {}
@@ -130,8 +131,14 @@ export function AssistedSearchCTA({ context, catalogue, compact = false }: { con
         _subject: `Nueva búsqueda asistida MyRenting — ${form.name}`, _template: "table", _captcha: "false",
       }) }).catch(() => null);
       setRecommendations(result?.recommendations ?? []); setState("sent");
-      trackAnalyticsEvent("assisted_search_lead", { ...eventDetails(context, form), lead_reference: result?.reference });
-    } catch (error) { setState("error"); setMessage(error instanceof Error ? error.message : "No se pudo registrar la solicitud."); }
+      const successDetails = { ...eventDetails(context, form), journey_stage: "lead_submit_success", form_name: "assisted_search", lead_reference: result?.reference };
+      trackAnalyticsEvent("lead_submit_success", successDetails);
+      trackAnalyticsEvent("assisted_search_lead", successDetails);
+      trackAnalyticsEvent("generate_lead", { ...successDetails, lead_channel: "email" });
+    } catch (error) {
+      trackAnalyticsEvent("lead_submit_error", { ...eventDetails(context, form), journey_stage: "lead_submit_error", form_name: "assisted_search", error_type: "database_failed" });
+      setState("error"); setMessage(error instanceof Error ? error.message : "No se pudo registrar la solicitud.");
+    }
   }
 
   return <>

@@ -27,6 +27,8 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
   const [leadReference, setLeadReference] = useState("");
   const [honey, setHoney] = useState("");
   const formStarted = useRef(false);
+  const formViewed = useRef(false);
+  const formRef = useRef<HTMLFormElement>(null);
   const formErrorTracked = useRef(false);
   const selected = offers.find((offer) => offer.id === selectedId) ?? initialOffer;
   const audiences = useMemo(() => [...new Set(offers.map((offer) => offer.audience))], [offers]);
@@ -38,22 +40,45 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     const match = offers.find((offer) => offer.audience === desired.audience && offer.duration === desired.duration && offer.kilometers === desired.kilometers)
       ?? offers.find((offer) => offer.audience === desired.audience && offer.duration === desired.duration)
       ?? offers.find((offer) => offer.audience === desired.audience);
-    if (match) setSelectedId(match.id);
+    if (match) {
+      setSelectedId(match.id);
+      trackAnalyticsEvent("offer_configure", { journey_stage: "offer_configure", vehicle_id: vehicle.id, offer_id: match.id, customer_type: match.audience, duration_months: match.duration, annual_kilometers: match.kilometers, monthly_price: match.monthlyPrice });
+    }
   }
 
   useEffect(() => {
-    trackAnalyticsEvent("view_item", { vehicle_id: vehicle.id, vehicle_name: `${vehicle.brand} ${vehicle.model}`, offer_id: selected.id, customer_type: selected.audience, monthly_price: selected.monthlyPrice });
+    trackAnalyticsEvent("view_item", { journey_stage: "vehicle_view", vehicle_id: vehicle.id, vehicle_name: `${vehicle.brand} ${vehicle.model}`, offer_id: selected.id, customer_type: selected.audience, monthly_price: selected.monthlyPrice });
   }, [vehicle.id, vehicle.brand, vehicle.model, selected.id, selected.audience, selected.monthlyPrice]);
+
+  useEffect(() => {
+    const node = formRef.current;
+    if (!node || formViewed.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || formViewed.current) return;
+      formViewed.current = true;
+      trackAnalyticsEvent("form_view", { journey_stage: "form_view", form_name: "vehicle_lead", vehicle_id: vehicle.id, offer_id: selected.id });
+      observer.disconnect();
+    }, { threshold: 0.35 });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [vehicle.id, selected.id]);
 
   function startForm() {
     if (formStarted.current) return;
     formStarted.current = true;
-    trackAnalyticsEvent("form_start", { form_name: "vehicle_lead", vehicle_id: vehicle.id, offer_id: selected.id });
+    trackAnalyticsEvent("form_start", { journey_stage: "form_start", form_name: "vehicle_lead", vehicle_id: vehicle.id, offer_id: selected.id });
   }
 
   function trackLead(channel: LeadChannel) {
     const lead = buildLeadEvent(channel, vehicle, selected);
-    trackAnalyticsEvent(lead.event, lead);
+    trackAnalyticsEvent(lead.event, { ...lead, journey_stage: "lead_submit_success" });
+  }
+
+  function trackConfirmedLead(channel: LeadChannel, reference: string) {
+    const details = { journey_stage: "lead_submit_success", form_name: "vehicle_lead", lead_channel: channel, lead_reference: reference, vehicle_id: vehicle.id, offer_id: selected.id };
+    trackAnalyticsEvent("lead_submit_success", details);
+    trackAnalyticsEvent("form_submit", details);
+    trackLead(channel);
   }
 
   async function openChannel(event: FormEvent<HTMLFormElement>) {
@@ -67,16 +92,25 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     }
     const contact = { name, lastName, phone, email, city };
     const text = buildLeadMessage(contact, vehicle, selected);
+    trackAnalyticsEvent("lead_submit_attempt", { journey_stage: "lead_submit_attempt", form_name: "vehicle_lead", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
     let reference = "";
     try {
       const leadResponse = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ firstName: name, lastName, phone, email, city, customerType: selected.audience, vehicleId: vehicle.id, vehicleName: `${vehicle.brand} ${vehicle.model} ${vehicle.version}`, offerId: selected.id, provider: selected.provider, duration: selected.duration, kilometers: selected.kilometers, monthlyPrice: selected.monthlyPrice, priceIncludesVat: selected.priceIncludesVat, initialPayment: selected.initialPayment, channel, pageUrl: window.location.href, website: honey }) });
       const leadResult = await leadResponse.json().catch(() => null) as { reference?: string } | null;
-      if (leadResponse.ok && leadResult?.reference) { reference = leadResult.reference; setLeadReference(reference); trackAnalyticsEvent("lead_recorded", { lead_reference: reference, vehicle_id: vehicle.id, offer_id: selected.id, lead_channel: channel }); }
-    } catch {}
+      if (!leadResponse.ok || !leadResult?.reference) throw new Error("No se pudo registrar la solicitud.");
+      reference = leadResult.reference;
+      setLeadReference(reference);
+      trackAnalyticsEvent("lead_recorded", { journey_stage: "lead_recorded", lead_reference: reference, vehicle_id: vehicle.id, offer_id: selected.id, lead_channel: channel });
+    } catch {
+      trackAnalyticsEvent("lead_submit_error", { journey_stage: "lead_submit_error", form_name: "vehicle_lead", error_type: "database_failed", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
+      trackAnalyticsEvent("form_error", { journey_stage: "lead_submit_error", form_name: "vehicle_lead", error_type: "database_failed", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
+      setSendState("error");
+      setSendMessage("No hemos podido registrar la solicitud. Inténtalo de nuevo.");
+      return;
+    }
     if (channel === "whatsapp") {
-      trackAnalyticsEvent("form_submit", { form_name: "vehicle_lead", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
-      trackLead("whatsapp");
-      window.location.href = `https://wa.me/34691766768?text=${encodeURIComponent(reference ? `${text}\nReferencia MyRenting: ${reference}` : text)}`;
+      trackConfirmedLead("whatsapp", reference);
+      window.location.href = `https://wa.me/34691766768?text=${encodeURIComponent(`${text}\nReferencia MyRenting: ${reference}`)}`;
       return;
     }
 
@@ -90,14 +124,14 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
       });
       const result = await response.json().catch(() => null) as { success?: string | boolean; message?: string } | null;
       if (!response.ok || result?.success === false || result?.success === "false") throw new Error(result?.message || "No se pudo enviar la solicitud.");
-      trackAnalyticsEvent("form_submit", { form_name: "vehicle_lead", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
-      trackLead("email");
+      trackConfirmedLead("email", reference);
       setSendState("sent");
-      setSendMessage(reference ? `Solicitud enviada correctamente. Referencia: ${reference}. Te contactaremos lo antes posible.` : "Solicitud enviada correctamente. Te contactaremos lo antes posible.");
+      setSendMessage(`Solicitud enviada correctamente. Referencia: ${reference}. Te contactaremos lo antes posible.`);
     } catch {
-      trackAnalyticsEvent("form_error", { form_name: "vehicle_lead", error_type: "submission_failed", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
-      setSendState("error");
-      setSendMessage("No hemos podido enviar la solicitud. Inténtalo de nuevo o utiliza WhatsApp.");
+      trackAnalyticsEvent("lead_delivery_error", { journey_stage: "lead_delivery_error", form_name: "vehicle_lead", error_type: "email_delivery_failed", lead_channel: channel, lead_reference: reference, vehicle_id: vehicle.id, offer_id: selected.id });
+      trackConfirmedLead("email", reference);
+      setSendState("sent");
+      setSendMessage(`Solicitud registrada correctamente. Referencia: ${reference}. Te contactaremos lo antes posible.`);
     }
   }
 
@@ -117,7 +151,7 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     <div className="mt-5 space-y-2 text-xs font-semibold text-copy"><Included label="Seguro" active={selected.insurance} /><Included label="Mantenimiento" active={selected.maintenance} /><Included label="Neumáticos" active={selected.tyres} /></div>
     <div className="mt-5 rounded-lg bg-slate-50 px-3 py-3 text-[0.6875rem] leading-5 text-muted"><p>Fuente: {selected.sourceUrl ? <a href={selected.sourceUrl} target="_blank" rel="noreferrer noopener nofollow" className="font-bold text-copy underline">oferta del proveedor</a> : <span className="font-semibold text-copy">documentación facilitada por el proveedor</span>}.</p>{selected.verifiedAt ? <p>Verificada el <time dateTime={selected.verifiedAt}>{new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric" }).format(new Date(selected.verifiedAt))}</time>.</p> : null}</div>
 
-    <form className="mt-6 border-t border-line pt-6" onSubmit={openChannel} onFocusCapture={startForm} onInvalidCapture={() => { if (!formErrorTracked.current) { formErrorTracked.current = true; trackAnalyticsEvent("form_error", { form_name: "vehicle_lead", error_type: "validation", vehicle_id: vehicle.id, offer_id: selected.id }); } }}>
+    <form ref={formRef} className="mt-6 border-t border-line pt-6" onSubmit={openChannel} onFocusCapture={startForm} onInvalidCapture={() => { if (!formErrorTracked.current) { formErrorTracked.current = true; trackAnalyticsEvent("form_error", { journey_stage: "form_validation_error", form_name: "vehicle_lead", error_type: "validation", vehicle_id: vehicle.id, offer_id: selected.id }); } }}>
       <p className="font-display text-xl font-semibold tracking-[-0.03em] text-ink">Solicita esta configuración</p>
       <p className="mt-1 text-xs leading-5 text-muted">La oferta elegida se incluirá automáticamente en el mensaje.</p>
       <div className="mt-4 grid grid-cols-2 gap-3">

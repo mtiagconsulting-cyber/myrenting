@@ -58,7 +58,7 @@ function FilteredCatalogue({ items }: { items: Item[] }) {
   }, [items, params]);
   useEffect(() => setVisibleCount(24), [params]);
   useEffect(() => {
-    trackAnalyticsEvent("view_item_list", { item_list_name: "vehicle_catalogue", result_count: filtered.length, active_filters: params.toString() });
+    trackAnalyticsEvent("view_item_list", { journey_stage: "results_view", item_list_name: "vehicle_catalogue", result_count: filtered.length, has_results: filtered.length > 0, active_filters: params.toString() });
   }, [filtered.length, params]);
 
   function toggleCompare(vehicle: Vehicle) {

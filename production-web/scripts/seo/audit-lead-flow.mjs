@@ -29,12 +29,21 @@ const trackedSources = await Promise.all([
   "../../src/components/search/SearchEngine.tsx",
   "../../src/components/search/Filters.tsx",
   "../../src/components/analytics/OfferLink.tsx",
+  "../../src/components/analytics/JourneyTracker.tsx",
+  "../../src/components/leads/AssistedSearchCTA.tsx",
+  "../../src/lib/analytics.ts",
   "../../src/lib/lead.ts",
 ].map((path) => readFile(new URL(path, import.meta.url), "utf8")));
 const trackedCode = trackedSources.join("\n");
-for (const trackedEvent of ["view_item", "view_item_list", "search", "filter", "cta_click", "form_start", "form_error", "form_submit", "generate_lead", "lead_recorded"]) {
+for (const trackedEvent of ["journey_page_view", "view_item", "view_item_list", "search", "filter", "cta_click", "offer_configure", "form_view", "form_start", "form_error", "lead_submit_attempt", "lead_submit_error", "lead_submit_success", "form_submit", "generate_lead", "lead_recorded"]) {
   assert.ok(trackedCode.includes(`\"${trackedEvent}\"`), `Falta instrumentar el evento ${trackedEvent}`);
 }
 assert.ok(!trackedCode.includes('"lead_validado"'), "No debe declararse un lead validado desde el navegador sin revisión comercial");
+assert.ok(trackedCode.includes("if (analyticsWindow.gtag)"), "El envío debe elegir una sola vía de Analytics");
+assert.ok(!trackedCode.includes('dataLayer.push({ event, ...parameters });\n  analyticsWindow.dataLayer = dataLayer;\n  analyticsWindow.gtag'), "Los eventos no deben enviarse a la vez por dataLayer y gtag");
+
+const offerConfigurator = trackedSources[0];
+assert.ok(offerConfigurator.indexOf('trackAnalyticsEvent("lead_submit_attempt"') < offerConfigurator.indexOf('fetch("/api/leads"'), "El intento debe registrarse antes de llamar a la API");
+assert.ok(offerConfigurator.indexOf('if (!leadResponse.ok || !leadResult?.reference)') < offerConfigurator.indexOf('trackConfirmedLead("whatsapp"'), "WhatsApp solo puede contar como lead tras confirmación del servidor");
 
 console.log("Payloads y eventos del embudo de lead verificados.");
