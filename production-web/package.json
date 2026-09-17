@@ -20,6 +20,7 @@
     "audit:seo": "node scripts/seo/audit-build.mjs",
     "test:seo-p0": "node --test scripts/seo/p0-routing.test.mjs",
     "test:assisted-search": "node --test scripts/seo/assisted-search.test.mjs",
+    "test:crm": "node --test scripts/seo/crm.test.mjs",
     "snapshot:market": "node scripts/seo/snapshot-market.mjs",
     "benchmark:ai": "node scripts/seo/calculate-ai-share.mjs",
     "start": "next start",

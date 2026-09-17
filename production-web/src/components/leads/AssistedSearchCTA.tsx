@@ -38,6 +38,7 @@ export function AssistedSearchCTA({ context, catalogue, compact = false }: { con
   const dialogRef = useRef<HTMLElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const viewed = useRef(false);
+  const submissionKey = useRef("");
   const brandModels = catalogue.find((item) => item.brand === form.brand)?.models ?? [];
   const knownName = [context.brand, context.model].filter(Boolean).join(" ");
   const title = context.model ? `¿No encuentras el ${knownName} que buscas?` : context.brand ? `¿Buscas un ${context.brand}?` : "¿No encuentras el coche que buscas?";
@@ -113,13 +114,14 @@ export function AssistedSearchCTA({ context, catalogue, compact = false }: { con
     let storedUtm: Record<string, string> = {};
     try { storedUtm = JSON.parse(window.sessionStorage.getItem("myrenting_utm") ?? "{}"); } catch {}
     const utm = (key: string) => params.get(key) ?? storedUtm[key] ?? "";
+    if (!submissionKey.current) submissionKey.current = crypto.randomUUID();
     try {
       const response = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({
         leadType: "assisted_search", name: form.name, phone: form.phone, email: form.email, customerType: form.customerType,
         searchType: form.searchType, brand: form.brand, model: form.model, vehicleType: form.vehicleType, budgetRange: form.budgetRange,
         annualKm: form.annualKm, purchaseTiming: form.purchaseTiming, sourcePage: context.sourcePage, pageUrl: window.location.href,
         referrer: document.referrer, utmSource: utm("utm_source"), utmMedium: utm("utm_medium"), utmCampaign: utm("utm_campaign"),
-        utmContent: utm("utm_content"), utmTerm: utm("utm_term"), legalAccepted: form.legal, website: honey,
+        utmContent: utm("utm_content"), utmTerm: utm("utm_term"), legalAccepted: form.legal, website: honey, submissionKey: submissionKey.current,
       }) });
       const result = await response.json().catch(() => null) as { reference?: string; recommendations?: Recommendation[]; error?: string } | null;
       if (!response.ok) throw new Error(result?.error ?? "No se pudo registrar la solicitud.");

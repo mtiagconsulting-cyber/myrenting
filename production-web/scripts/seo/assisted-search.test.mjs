@@ -28,7 +28,9 @@ test("los leads asistidos se validan, guardan y recomiendan hasta tres coches", 
   assert.match(api, /legalAccepted/);
   assert.match(api, /\.slice\(0, 3\)/);
   assert.match(api, /lead_type/);
-  assert.match(api, /const metadata = JSON\.stringify/);
+  assert.match(api, /REVIEWS_DB\.batch/);
+  assert.match(api, /INSERT INTO lead_activities/);
+  assert.match(api, /submission_key/);
   assert.match(api, /vehicle_id, vehicle_name, offer_id/);
   assert.match(component, /formsubmit\.co\/ajax\/mtiagconsulting@gmail\.com/);
   for (const column of ["search_type", "brand", "model", "vehicle_type", "budget_range", "purchase_timing", "source_page", "referrer", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) assert.match(migration, new RegExp(column));

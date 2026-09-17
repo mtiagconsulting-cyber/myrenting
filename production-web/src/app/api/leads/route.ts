@@ -48,6 +48,7 @@ async function saveAssistedSearch(body: Record<string, unknown>) {
     sourcePage: clean(body.sourcePage, 500), pageUrl: clean(body.pageUrl, 500), referrer: clean(body.referrer, 500),
     utmSource: clean(body.utmSource, 160), utmMedium: clean(body.utmMedium, 160), utmCampaign: clean(body.utmCampaign, 160),
     utmContent: clean(body.utmContent, 160), utmTerm: clean(body.utmTerm, 160), legalAccepted: body.legalAccepted === true,
+    submissionKey: clean(body.submissionKey, 100),
   };
   if (!lead.name || !lead.phone || !lead.email.includes("@") || !lead.customerType || !lead.searchType || !lead.budgetRange || !lead.annualKm || !lead.purchaseTiming || !lead.sourcePage || !lead.legalAccepted) {
     return NextResponse.json({ error: "Revisa los datos y acepta la política de privacidad." }, { status: 400 });
@@ -55,16 +56,21 @@ async function saveAssistedSearch(body: Record<string, unknown>) {
   const id = `MR-A-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
   try {
     const { REVIEWS_DB } = reviewEnv();
-    try {
-      await REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url, lead_type, search_type, brand, model, vehicle_type, budget_range, purchase_timing, source_page, referrer, utm_source, utm_medium, utm_campaign, utm_content, utm_term, legal_accepted) VALUES (?, ?, '', ?, ?, '', ?, '', ?, '', '', 0, ?, 0, 0, 0, 'email', ?, 'assisted_search', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)")
-        .bind(id, lead.name, lead.phone, lead.email, lead.customerType, [lead.brand, lead.model].filter(Boolean).join(" "), Number(lead.annualKm.replace(/\D/g, "")) || 0, lead.pageUrl, lead.searchType, lead.brand, lead.model, lead.vehicleType, lead.budgetRange, lead.purchaseTiming, lead.sourcePage, lead.referrer, lead.utmSource, lead.utmMedium, lead.utmCampaign, lead.utmContent, lead.utmTerm).run();
-    } catch {
-      const metadata = JSON.stringify({ leadType: "assisted_search", ...lead });
-      await REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url) VALUES (?, ?, '', ?, ?, '', ?, 'assisted_search', ?, 'assisted_search', 'MyRenting', 0, ?, 0, 0, 0, 'email', ?)")
-        .bind(id, lead.name, lead.phone, lead.email, lead.customerType, metadata, Number(lead.annualKm.replace(/\D/g, "")) || 0, lead.pageUrl).run();
+    if (lead.submissionKey) {
+      const existing = await REVIEWS_DB.prepare("SELECT id FROM leads WHERE submission_key = ?").bind(lead.submissionKey).first<{ id: string }>();
+      if (existing) return NextResponse.json({ ok: true, reference: existing.id, duplicate: true, recommendations: assistedRecommendations(lead) });
     }
+    await REVIEWS_DB.batch([
+      REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url, lead_type, search_type, brand, model, vehicle_type, budget_range, purchase_timing, source_page, referrer, utm_source, utm_medium, utm_campaign, utm_content, utm_term, legal_accepted, submission_key) VALUES (?, ?, '', ?, ?, '', ?, '', ?, '', '', 0, ?, 0, 0, 0, 'email', ?, 'assisted_search', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?)")
+        .bind(id, lead.name, lead.phone, lead.email, lead.customerType, [lead.brand, lead.model].filter(Boolean).join(" "), Number(lead.annualKm.replace(/\D/g, "")) || 0, lead.pageUrl, lead.searchType, lead.brand, lead.model, lead.vehicleType, lead.budgetRange, lead.purchaseTiming, lead.sourcePage, lead.referrer, lead.utmSource, lead.utmMedium, lead.utmCampaign, lead.utmContent, lead.utmTerm, lead.submissionKey || null),
+      REVIEWS_DB.prepare("INSERT INTO lead_activities (lead_id, activity_type, description, actor) VALUES (?, 'lead_received', 'Lead recibido', 'system')").bind(id),
+    ]);
     return NextResponse.json({ ok: true, reference: id, recommendations: assistedRecommendations(lead) });
   } catch {
+    if (lead.submissionKey) {
+      const existing = await reviewEnv().REVIEWS_DB.prepare("SELECT id FROM leads WHERE submission_key = ?").bind(lead.submissionKey).first<{ id: string }>().catch(() => null);
+      if (existing) return NextResponse.json({ ok: true, reference: existing.id, duplicate: true, recommendations: assistedRecommendations(lead) });
+    }
     return NextResponse.json({ error: "No se pudo registrar la solicitud." }, { status: 503 });
   }
 }
@@ -80,6 +86,7 @@ export async function POST(request: Request) {
     provider: clean(body.provider, 100), channel: clean(body.channel, 20), pageUrl: clean(body.pageUrl, 500),
     duration: Number(body.duration), kilometers: Number(body.kilometers), monthlyPrice: Number(body.monthlyPrice),
     initialPayment: Number(body.initialPayment), priceIncludesVat: body.priceIncludesVat === true,
+    submissionKey: clean(body.submissionKey, 100),
   };
   if (!lead.firstName || !lead.lastName || !lead.phone || !lead.email.includes("@") || !lead.city || !lead.vehicleId || !lead.offerId || !["email", "whatsapp"].includes(lead.channel) || !Number.isFinite(lead.monthlyPrice)) {
     return NextResponse.json({ error: "Revisa los datos de contacto y la configuración seleccionada." }, { status: 400 });
@@ -87,10 +94,21 @@ export async function POST(request: Request) {
   const id = `MR-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
   try {
     const { REVIEWS_DB } = reviewEnv();
-    await REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
-      .bind(id, lead.firstName, lead.lastName, lead.phone, lead.email, lead.city, lead.customerType, lead.vehicleId, lead.vehicleName, lead.offerId, lead.provider, lead.duration, lead.kilometers, lead.monthlyPrice, lead.priceIncludesVat ? 1 : 0, lead.initialPayment, lead.channel, lead.pageUrl).run();
+    if (lead.submissionKey) {
+      const existing = await REVIEWS_DB.prepare("SELECT id FROM leads WHERE submission_key = ?").bind(lead.submissionKey).first<{ id: string }>();
+      if (existing) return NextResponse.json({ ok: true, reference: existing.id, duplicate: true });
+    }
+    await REVIEWS_DB.batch([
+      REVIEWS_DB.prepare("INSERT INTO leads (id, first_name, last_name, phone, email, city, customer_type, vehicle_id, vehicle_name, offer_id, provider, duration_months, annual_kilometers, monthly_price, price_includes_vat, initial_payment, channel, page_url, submission_key) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+        .bind(id, lead.firstName, lead.lastName, lead.phone, lead.email, lead.city, lead.customerType, lead.vehicleId, lead.vehicleName, lead.offerId, lead.provider, lead.duration, lead.kilometers, lead.monthlyPrice, lead.priceIncludesVat ? 1 : 0, lead.initialPayment, lead.channel, lead.pageUrl, lead.submissionKey || null),
+      REVIEWS_DB.prepare("INSERT INTO lead_activities (lead_id, activity_type, description, actor) VALUES (?, 'lead_received', 'Lead recibido', 'system')").bind(id),
+    ]);
     return NextResponse.json({ ok: true, reference: id });
   } catch {
+    if (lead.submissionKey) {
+      const existing = await reviewEnv().REVIEWS_DB.prepare("SELECT id FROM leads WHERE submission_key = ?").bind(lead.submissionKey).first<{ id: string }>().catch(() => null);
+      if (existing) return NextResponse.json({ ok: true, reference: existing.id, duplicate: true });
+    }
     return NextResponse.json({ error: "No se pudo registrar la solicitud." }, { status: 503 });
   }
 }

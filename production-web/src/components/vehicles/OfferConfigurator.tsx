@@ -30,6 +30,7 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
   const formViewed = useRef(false);
   const formRef = useRef<HTMLFormElement>(null);
   const formErrorTracked = useRef(false);
+  const submissionKey = useRef("");
   const selected = offers.find((offer) => offer.id === selectedId) ?? initialOffer;
   const audiences = useMemo(() => [...new Set(offers.map((offer) => offer.audience))], [offers]);
   const durations = useMemo(() => [...new Set(offers.filter((offer) => offer.audience === selected.audience).map((offer) => offer.duration))].sort((a, b) => a - b), [offers, selected.audience]);
@@ -92,10 +93,11 @@ export function OfferConfigurator({ vehicle, offers, initialOffer }: { vehicle: 
     }
     const contact = { name, lastName, phone, email, city };
     const text = buildLeadMessage(contact, vehicle, selected);
+    if (!submissionKey.current) submissionKey.current = crypto.randomUUID();
     trackAnalyticsEvent("lead_submit_attempt", { journey_stage: "lead_submit_attempt", form_name: "vehicle_lead", lead_channel: channel, vehicle_id: vehicle.id, offer_id: selected.id });
     let reference = "";
     try {
-      const leadResponse = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ firstName: name, lastName, phone, email, city, customerType: selected.audience, vehicleId: vehicle.id, vehicleName: `${vehicle.brand} ${vehicle.model} ${vehicle.version}`, offerId: selected.id, provider: selected.provider, duration: selected.duration, kilometers: selected.kilometers, monthlyPrice: selected.monthlyPrice, priceIncludesVat: selected.priceIncludesVat, initialPayment: selected.initialPayment, channel, pageUrl: window.location.href, website: honey }) });
+      const leadResponse = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ firstName: name, lastName, phone, email, city, customerType: selected.audience, vehicleId: vehicle.id, vehicleName: `${vehicle.brand} ${vehicle.model} ${vehicle.version}`, offerId: selected.id, provider: selected.provider, duration: selected.duration, kilometers: selected.kilometers, monthlyPrice: selected.monthlyPrice, priceIncludesVat: selected.priceIncludesVat, initialPayment: selected.initialPayment, channel, pageUrl: window.location.href, website: honey, submissionKey: submissionKey.current }) });
       const leadResult = await leadResponse.json().catch(() => null) as { reference?: string } | null;
       if (!leadResponse.ok || !leadResult?.reference) throw new Error("No se pudo registrar la solicitud.");
       reference = leadResult.reference;

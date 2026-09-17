@@ -1,15 +1,15 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 
-interface D1Result<T = Record<string, unknown>> { results?: T[]; success?: boolean; }
-interface D1Statement {
+export interface D1Result<T = Record<string, unknown>> { results?: T[]; success?: boolean; meta?: Record<string, unknown>; }
+export interface D1Statement {
   bind(...values: unknown[]): D1Statement;
   first<T = Record<string, unknown>>(): Promise<T | null>;
   all<T = Record<string, unknown>>(): Promise<D1Result<T>>;
   run(): Promise<D1Result>;
 }
-interface D1Database { prepare(query: string): D1Statement; batch(statements: D1Statement[]): Promise<D1Result[]>; }
+export interface D1Database { prepare(query: string): D1Statement; batch(statements: D1Statement[]): Promise<D1Result[]>; }
 
-interface ReviewEnv { REVIEWS_DB: D1Database; REVIEW_ADMIN_TOKEN?: string; }
+interface ReviewEnv { REVIEWS_DB: D1Database; REVIEW_ADMIN_TOKEN?: string; CRM_ADMIN_TOKEN?: string; }
 
 export function reviewEnv() {
   return getCloudflareContext().env as unknown as ReviewEnv;
